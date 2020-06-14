@@ -1,0 +1,15 @@
+[submodule "Core"]
+	path = Core
+	url = git@github.com:Kube-Engine/Core.git
+[submodule "Meta"]
+	path = Meta
+	url = git@github.com:Kube-Engine/Meta.git
+[submodule "Graphics"]
+	path = Graphics
+	url = git@github.com:Kube-Engine/Graphics.git
+[submodule "App"]
+	path = App
+	url = git@github.com:Kube-Engine/App.git
+[submodule "Interpreter"]
+	path = Interpreter
+	url = git@github.com:Kube-Engine/Interpreter.git
