@@ -1,15 +1,18 @@
 [submodule "Core"]
-	path = Core
+	path = Kube/Core
 	url = git@github.com:Kube-Engine/Core.git
 [submodule "Meta"]
-	path = Meta
+	path = Kube/Meta
 	url = git@github.com:Kube-Engine/Meta.git
 [submodule "Graphics"]
-	path = Graphics
+	path = Kube/Graphics
 	url = git@github.com:Kube-Engine/Graphics.git
 [submodule "App"]
-	path = App
+	path = Kube/App
 	url = git@github.com:Kube-Engine/App.git
 [submodule "Interpreter"]
-	path = Interpreter
+	path = Kube/Interpreter
 	url = git@github.com:Kube-Engine/Interpreter.git
+[submodule "ParallelHashmap"]
+	path = External/parallel-hashmap
+	url = https://github.com/greg7mdp/parallel-hashmap.git
