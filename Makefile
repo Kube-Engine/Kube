@@ -97,6 +97,31 @@ core_benchmarks:
 core_benchmarks_debug:
 	$(MAKE) debug CMAKE_ARGS+="-DKF_CORE=TRUE -DKF_BENCHMARKS=TRUE"
 
+# ECS
+ecs:
+	$(MAKE) release CMAKE_ARGS+=-DKF_ECS=TRUE
+
+ecs_debug:
+	$(MAKE) debug CMAKE_ARGS+=-DKF_ECS=TRUE
+
+ecs_tests:
+	$(MAKE) release CMAKE_ARGS+="-DKF_ECS=TRUE -DKF_TESTS=TRUE"
+
+run_ecs_tests: ecs_tests
+	ninja -C $(RELEASE_DIR) test
+
+ecs_tests_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_ECS=TRUE -DKF_TESTS=TRUE"
+
+run_ecs_tests_debug: ecs_tests_debug
+	ninja -C $(DEBUG_DIR) test
+
+ecs_benchmarks:
+	$(MAKE) release CMAKE_ARGS+="-DKF_ECS=TRUE -DKF_BENCHMARKS=TRUE"
+
+ecs_benchmarks_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_ECS=TRUE -DKF_BENCHMARKS=TRUE"
+
 # Graphics
 graphics:
 	$(MAKE) release CMAKE_ARGS+=-DKF_GRAPHICS=TRUE

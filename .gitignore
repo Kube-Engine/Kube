@@ -1,6 +1,14 @@
 # Prerequisites
 *.d
 
+# Build folders
+Debug
+Release
+
+# IDE
+.vs
+.vscode
+
 # Compiled Object files
 *.slo
 *.lo
