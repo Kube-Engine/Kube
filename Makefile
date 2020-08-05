@@ -197,6 +197,31 @@ meta_benchmarks:
 meta_benchmarks_debug:
 	$(MAKE) debug CMAKE_ARGS+="-DKF_META=TRUE -DKF_BENCHMARKS=TRUE"
 
+# Scheduler
+scheduler:
+	$(MAKE) release CMAKE_ARGS+=-DKF_SCHEDULER=TRUE
+
+scheduler_debug:
+	$(MAKE) debug CMAKE_ARGS+=-DKF_SCHEDULER=TRUE
+
+scheduler_tests:
+	$(MAKE) release CMAKE_ARGS+="-DKF_SCHEDULER=TRUE -DKF_TESTS=TRUE"
+
+run_scheduler_tests: scheduler_tests
+	ninja -C $(RELEASE_DIR) test
+
+scheduler_tests_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_SCHEDULER=TRUE -DKF_TESTS=TRUE"
+
+run_scheduler_tests_debug: scheduler_tests_debug
+	ninja -C $(DEBUG_DIR) test
+
+scheduler_benchmarks:
+	$(MAKE) release CMAKE_ARGS+="-DKF_SCHEDULER=TRUE -DKF_BENCHMARKS=TRUE"
+
+scheduler_benchmarks_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_SCHEDULER=TRUE -DKF_BENCHMARKS=TRUE"
+
 clean:
 	$(RM) ${RELEASE_DIR}
 	$(RM) ${DEBUG_DIR}
@@ -215,5 +240,6 @@ re: clean all
 	graphics graphics_debug graphics_tests run_graphics_tests graphics_tests_debug run_graphics_tests_debug graphics_benchmarks graphics_benchmarks_debug \
 	interpreter interpreter_debug interpreter_tests run_interpreter_tests interpreter_tests_debug run_interpreter_tests_debug interpreter_benchmarks interpreter_benchmarks_debug \
 	meta meta_debug meta_tests run_meta_tests meta_tests_debug run_meta_tests_debug meta_benchmarks meta_benchmarks_debug \
+	scheduler scheduler_debug scheduler_tests run_scheduler_tests scheduler_tests_debug run_scheduler_tests_debug scheduler_benchmarks scheduler_benchmarks_debug \
 	clean fclean \
 	re
