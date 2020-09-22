@@ -83,3 +83,4 @@ The framework aims not to have unecessary dependencies
 * C++ 20 for the meta-programming part
 * SDL2 for the window, user inputs and audio part
 * Vulkan
+
