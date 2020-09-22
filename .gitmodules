@@ -22,3 +22,6 @@
 [submodule "Kube/Scheduler"]
 	path = Kube/Scheduler
 	url = git@github.com:Kube-Engine/Scheduler.git
+[submodule "Flow"]
+	path = Kube/Flow
+	url = git@github.com:Kube-Engine/Flow.git
