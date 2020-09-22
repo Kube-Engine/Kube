@@ -46,14 +46,14 @@ if(NOT DEFINED KF_META)
     set(KF_META FALSE)
 endif()
 
-if(NOT DEFINED KF_SCHEDULER)
-    set(KF_SCHEDULER FALSE)
+if(NOT DEFINED KF_FLOW)
+    set(KF_FLOW FALSE)
 endif()
 
 if(NOT DEFINED KF_ALL
     AND NOT ${KF_EXAMPLES} AND NOT ${KF_APP} AND NOT ${KF_CORE}
     AND NOT ${KF_ECS} AND NOT ${KF_GRAPHICS} AND NOT ${KF_INTERPRETER}
-    AND NOT ${KF_META} AND NOT ${KF_SCHEDULER})
+    AND NOT ${KF_META} AND NOT ${KF_FLOW})
     set(KF_ALL TRUE)
 else()
     set(KF_ALL FALSE)
@@ -70,8 +70,8 @@ if(${KF_ALL} OR ${KF_META})
     include(${KubeSourcesDir}/Meta/Meta.cmake)
 endif()
 
-if(${KF_ALL} OR ${KF_SCHEDULER})
-    include(${KubeSourcesDir}/Scheduler/Scheduler.cmake)
+if(${KF_ALL} OR ${KF_FLOW})
+    include(${KubeSourcesDir}/Flow/Flow.cmake)
 endif()
 
 if(${KF_ALL} OR ${KF_ECS})
