@@ -13,15 +13,9 @@
 [submodule "Interpreter"]
 	path = Kube/Interpreter
 	url = git@github.com:Kube-Engine/Interpreter.git
-[submodule "ParallelHashmap"]
-	path = External/parallel-hashmap
-	url = https://github.com/greg7mdp/parallel-hashmap.git
 [submodule "Kube/ECS"]
 	path = Kube/ECS
 	url = git@github.com:Kube-Engine/ECS.git
-[submodule "Kube/Scheduler"]
-	path = Kube/Scheduler
-	url = git@github.com:Kube-Engine/Scheduler.git
 [submodule "Flow"]
 	path = Kube/Flow
 	url = git@github.com:Kube-Engine/Flow.git
