@@ -18,10 +18,6 @@ elseif(${KF_BENCHMARKS})
     find_package(benchmark REQUIRED)
 endif()
 
-if(NOT DEFINED KF_EXAMPLES)
-    set(KF_EXAMPLES FALSE)
-endif()
-
 if(NOT DEFINED KF_APP)
     set(KF_APP FALSE)
 endif()
@@ -51,7 +47,7 @@ if(NOT DEFINED KF_FLOW)
 endif()
 
 if(NOT DEFINED KF_ALL
-    AND NOT ${KF_EXAMPLES} AND NOT ${KF_APP} AND NOT ${KF_CORE}
+    AND NOT ${KF_APP} AND NOT ${KF_CORE}
     AND NOT ${KF_ECS} AND NOT ${KF_GRAPHICS} AND NOT ${KF_INTERPRETER}
     AND NOT ${KF_META} AND NOT ${KF_FLOW})
     set(KF_ALL TRUE)
@@ -70,9 +66,9 @@ if(${KF_ALL} OR ${KF_META})
     include(${KubeSourcesDir}/Meta/Meta.cmake)
 endif()
 
-if(${KF_ALL} OR ${KF_FLOW})
-    include(${KubeSourcesDir}/Flow/Flow.cmake)
-endif()
+# if(${KF_ALL} OR ${KF_FLOW})
+#     include(${KubeSourcesDir}/Flow/Flow.cmake)
+# endif()
 
 if(${KF_ALL} OR ${KF_ECS})
     include(${KubeSourcesDir}/ECS/ECS.cmake)
@@ -88,8 +84,4 @@ endif()
 
 if(${KF_ALL} OR ${KF_APP})
     include(${KubeSourcesDir}/App/App.cmake)
-endif()
-
-if(${KF_EXAMPLES})
-    include(${KubeSourcesDir}/Examples/Examples.cmake)
 endif()
