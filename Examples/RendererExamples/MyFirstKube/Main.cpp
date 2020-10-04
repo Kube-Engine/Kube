@@ -6,14 +6,14 @@
 #include <iostream>
 
 #include <Kube/App/Application.hpp>
-#include <Kube/Graphics/Maths.hpp>
+#include <Kube/Graphics/Matrixes.hpp>
 #include <Kube/Graphics/RenderModel.hpp>
 #include <Kube/Graphics/LayoutModel.hpp>
 
 struct RenderData
 {
-    kF::V2 pos;
-    kF::V3 color;
+    kF::Graphics::V2 pos;
+    kF::Graphics::V3 color;
 };
 
 const std::vector<RenderData> vertices = {
@@ -26,19 +26,19 @@ class KubeApplication : public kF::Application
 {
 public:
     KubeApplication(void) : kF::Application("MyFirstKube"),
-        _staggingBuffer(getRenderer().getBufferPool().addBuffer(kF::BufferModel::FromVector(vertices))),
+        _staggingBuffer(getRenderer().getBufferPool().addBuffer(kF::Graphics::BufferModel::FromContainer(vertices))),
         // _vertexBuffer(getRenderer().getBufferPool().addBuffer()),
-        _pipeline(getRenderer().getPipelinePool().addPipeline(kF::PipelineModel {
+        _pipeline(getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
             // Pipeline's shaders
             .shaders = {
-                { kF::ShaderType::Vertex, "Shaders/Kube.vert.spv" },
-                { kF::ShaderType::Fragment, "Shaders/Kube.frag.spv" }
+                { kF::Graphics::ShaderType::Vertex, "Shaders/Kube.vert.spv" },
+                { kF::Graphics::ShaderType::Fragment, "Shaders/Kube.frag.spv" }
             },
             // Pipeline's shaders input layout model
-            .layoutModel = kF::LayoutModel {
+            .layoutModel = kF::Graphics::LayoutModel {
                 // A binding describes a data buffer
                 .bindings = {
-                    kF::LayoutBinding {
+                    kF::Graphics::LayoutBinding {
                         .binding = 0, // Buffer index
                         .stride = sizeof(RenderData), // This buffer is filled with RenderData
                         .inputRate = VK_VERTEX_INPUT_RATE_VERTEX
@@ -46,13 +46,13 @@ public:
                 },
                 // Attributes describe how variables are arranged in a buffer
                 .attributes = {
-                    kF::LayoutAttribute {
+                    kF::Graphics::LayoutAttribute {
                         .location = 0, // Location in the shader
                         .binding = 0, // Parent binding index
                         .format = VK_FORMAT_R32G32_SFLOAT, // Contains 2 floats
                         .offset = offsetof(RenderData, pos) // Targeting 'pos' member
                     },
-                    kF::LayoutAttribute {
+                    kF::Graphics::LayoutAttribute {
                         .location = 1, // Location in the shader
                         .binding = 0, // Parent binding index
                         .format = VK_FORMAT_R32G32B32_SFLOAT, // Contains 3 floats
@@ -61,15 +61,15 @@ public:
                 }
             }
         })),
-        _transferCommand(getRenderer().getCommandPool().addCommand(kF::CommandModel {
+        _transferCommand(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
 
         })),
         // Draw command to execute
-        _drawCommand(getRenderer().getCommandPool().addCommand(kF::CommandModel {
+        _drawCommand(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
             // Command's pipeline
             .pipeline = _pipeline,
             // Command's render model
-            .renderModel = kF::RenderModel {
+            .renderModel = kF::Graphics::RenderModel {
                 .vertexCount = 3, // Draw cube's vertexes
                 .instanceCount = 1, // Draw it once
                 .vertexOffset = 0, // No offset in vertex
@@ -84,9 +84,9 @@ public:
     }
 
 private:
-    kF::BufferIndex _staggingBuffer {}, _vertexBuffer {};
-    kF::PipelineIndex _pipeline {};
-    kF::CommandIndex _transferCommand {}, _drawCommand {};
+    kF::Graphics::BufferIndex _staggingBuffer {}, _vertexBuffer {};
+    kF::Graphics::PipelineIndex _pipeline {};
+    kF::Graphics::CommandIndex _transferCommand {}, _drawCommand {};
 };
 
 int main(void)

@@ -66,9 +66,9 @@ if(${KF_ALL} OR ${KF_META})
     include(${KubeSourcesDir}/Meta/Meta.cmake)
 endif()
 
-# if(${KF_ALL} OR ${KF_FLOW})
-#     include(${KubeSourcesDir}/Flow/Flow.cmake)
-# endif()
+if(${KF_ALL} OR ${KF_FLOW})
+    include(${KubeSourcesDir}/Flow/Flow.cmake)
+endif()
 
 if(${KF_ALL} OR ${KF_ECS})
     include(${KubeSourcesDir}/ECS/ECS.cmake)
