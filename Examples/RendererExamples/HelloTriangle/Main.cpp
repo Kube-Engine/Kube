@@ -10,24 +10,25 @@
 class TriangleApplication : public kF::Application
 {
 public:
-    TriangleApplication(void) : kF::Application("HelloTriangle") {
-        _pipeline = getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
+    TriangleApplication(void) : kF::Application("HelloTriangle"),
+        _pipeline(getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
             // Pipeline's shaders
-            .shaders = {
+            shaders: {
                 { kF::Graphics::ShaderType::Vertex, "Shaders/Triangle.vert.spv" },
                 { kF::Graphics::ShaderType::Fragment, "Shaders/Triangle.frag.spv" }
             }
-        });
+        })),
         // Draw command to execute
-        _command = getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
+        _command(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
             // Command's pipeline
-            .pipeline = _pipeline,
+            pipeline: _pipeline,
             // Command's render model
-            .renderModel = kF::Graphics::RenderModel {
-                .vertexCount = 3, // Draw 3 vertexes
-                .instanceCount = 1 // Draw it once
+            renderModel: kF::Graphics::RenderModel {
+                vertexCount: 3, // Draw 3 vertexes
+                instanceCount: 1 // Draw it once
             }
-        });
+        }))
+    {
         // We add the command to the drawer so it'll draw it
         getRenderer().getDrawer().addCommandIndex(_command);
     }

@@ -3,7 +3,42 @@ project(Kube)
 
 get_filename_component(KubeSourcesDir ${CMAKE_CURRENT_LIST_FILE} PATH)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED 20)
+
 include_directories(${KubeSourcesDir}/..)
+
+set(AtLeastOneManualTag FALSE)
+
+function(kube_setup_module Tag Hint)
+    set(${Tag}_PATH "${KubeSourcesDir}/${Hint}/${Hint}.cmake" PARENT_SCOPE)
+    set(${Tag}_COMPILED FALSE PARENT_SCOPE)
+    if(NOT DEFINED ${Tag})
+        message("${Tag} is not manually specified")
+        set(${Tag} FALSE PARENT_SCOPE)
+    else()
+        message("${Tag} is manually specified to ${${Tag}}")
+        set(AtLeastOneManualTag TRUE PARENT_SCOPE)
+    endif()
+endfunction()
+
+function(kube_include_module Tag)
+    if(${Tag}_COMPILED) # Already compiled
+        return()
+    elseif(NOT ${AtLeastOneManualTag}) ## All modules must be compiled
+        set(${Tag}_COMPILED TRUE PARENT_SCOPE)
+        message("-> Including module ${Tag}")
+        include(${${Tag}_PATH})
+    elseif(${Tag}) # If module is manually specified to be compiled
+        set(${Tag}_COMPILED TRUE PARENT_SCOPE)
+        message("-> Including module ${Tag}")
+        foreach(Dependency ${ARGN})
+            set(${Dependency} TRUE)
+            kube_include_module(${Dependency})
+        endforeach()
+        include(${${Tag}_PATH})
+    endif()
+endfunction()
 
 if(NOT DEFINED KF_TESTS)
     set(KF_TESTS FALSE)
@@ -18,70 +53,42 @@ elseif(${KF_BENCHMARKS})
     find_package(benchmark REQUIRED)
 endif()
 
-if(NOT DEFINED KF_APP)
-    set(KF_APP FALSE)
-endif()
+kube_setup_module(KF_APP App)
+kube_setup_module(KF_CORE Core)
+kube_setup_module(KF_ECS ECS)
+kube_setup_module(KF_GRAPHICS Graphics)
+kube_setup_module(KF_INTERPRETER Interpreter)
+kube_setup_module(KF_META Meta)
+kube_setup_module(KF_FLOW Flow)
 
-if(NOT DEFINED KF_CORE)
-    set(KF_CORE FALSE)
-endif()
+kube_include_module(KF_CORE)
 
-if(NOT DEFINED KF_ECS)
-    set(KF_ECS FALSE)
-endif()
+kube_include_module(KF_META
+# Dependencies
+    KF_CORE
+)
 
-if(NOT DEFINED KF_GRAPHICS)
-    set(KF_GRAPHICS FALSE)
-endif()
+kube_include_module(KF_FLOW
+# Dependencies
+    KF_CORE
+)
 
-if(NOT DEFINED KF_INTERPRETER)
-    set(KF_INTERPRETER FALSE)
-endif()
+kube_include_module(KF_GRAPHICS
+# Dependencies
+    KF_CORE
+)
 
-if(NOT DEFINED KF_META)
-    set(KF_META FALSE)
-endif()
+kube_include_module(KF_ECS
+# Dependencies
+    KF_CORE KF_FLOW
+)
 
-if(NOT DEFINED KF_FLOW)
-    set(KF_FLOW FALSE)
-endif()
+kube_include_module(KF_INTERPRETER
+# Dependencies
+    KF_CORE KF_META KF_FLOW KF_ECS
+)
 
-if(NOT DEFINED KF_ALL
-    AND NOT ${KF_APP} AND NOT ${KF_CORE}
-    AND NOT ${KF_ECS} AND NOT ${KF_GRAPHICS} AND NOT ${KF_INTERPRETER}
-    AND NOT ${KF_META} AND NOT ${KF_FLOW})
-    set(KF_ALL TRUE)
-else()
-    set(KF_ALL FALSE)
-endif()
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED 20)
-
-if(${KF_ALL} OR ${KF_CORE})
-    include(${KubeSourcesDir}/Core/Core.cmake)
-endif()
-
-if(${KF_ALL} OR ${KF_META})
-    include(${KubeSourcesDir}/Meta/Meta.cmake)
-endif()
-
-if(${KF_ALL} OR ${KF_FLOW})
-    include(${KubeSourcesDir}/Flow/Flow.cmake)
-endif()
-
-if(${KF_ALL} OR ${KF_ECS})
-    include(${KubeSourcesDir}/ECS/ECS.cmake)
-endif()
-
-if(${KF_ALL} OR ${KF_INTERPRETER})
-    include(${KubeSourcesDir}/Interpreter/Interpreter.cmake)
-endif()
-
-if(${KF_ALL} OR ${KF_GRAPHICS})
-    include(${KubeSourcesDir}/Graphics/Graphics.cmake)
-endif()
-
-if(${KF_ALL} OR ${KF_APP})
-    include(${KubeSourcesDir}/App/App.cmake)
-endif()
+kube_include_module(KF_APP
+# Dependencies
+    KF_CORE KF_META KF_INTERPRETER KF_GRAPHICS KF_FLOW KF_ECS
+)
