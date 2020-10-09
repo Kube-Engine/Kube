@@ -19,3 +19,9 @@
 [submodule "Flow"]
 	path = Kube/Flow
 	url = git@github.com:Kube-Engine/Flow.git
+[submodule "Kube/Object"]
+	path = Kube/Object
+	url = git@github.com:Kube-Engine/Object
+[submodule "Kube/UI"]
+	path = Kube/UI
+	url = git@github.com:Kube-Engine/UI

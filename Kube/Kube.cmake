@@ -3,10 +3,7 @@ project(Kube)
 
 get_filename_component(KubeSourcesDir ${CMAKE_CURRENT_LIST_FILE} PATH)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED 20)
-
-include_directories(${KubeSourcesDir}/..)
+include(${KubeSourcesDir}/CompileOptions.cmake)
 
 set(AtLeastOneManualTag FALSE)
 
