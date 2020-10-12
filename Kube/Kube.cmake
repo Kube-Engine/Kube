@@ -56,6 +56,7 @@ kube_setup_module(KF_ECS ECS)
 kube_setup_module(KF_GRAPHICS Graphics)
 kube_setup_module(KF_INTERPRETER Interpreter)
 kube_setup_module(KF_META Meta)
+kube_setup_module(KF_OBJECT Object)
 kube_setup_module(KF_FLOW Flow)
 
 kube_include_module(KF_CORE)
@@ -73,6 +74,11 @@ kube_include_module(KF_FLOW
 kube_include_module(KF_GRAPHICS
 # Dependencies
     KF_CORE
+)
+
+kube_include_module(KF_OBJECT
+# Dependencies
+    KF_CORE KF_META
 )
 
 kube_include_module(KF_ECS

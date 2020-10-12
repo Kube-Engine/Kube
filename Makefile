@@ -197,6 +197,31 @@ meta_benchmarks:
 meta_benchmarks_debug:
 	$(MAKE) debug CMAKE_ARGS+="-DKF_META=TRUE -DKF_BENCHMARKS=TRUE"
 
+# Object
+object:
+	$(MAKE) release CMAKE_ARGS+=-DKF_OBJECT=TRUE
+
+object_debug:
+	$(MAKE) debug CMAKE_ARGS+=-DKF_OBJECT=TRUE
+
+object_tests:
+	$(MAKE) release CMAKE_ARGS+="-DKF_OBJECT=TRUE -DKF_TESTS=TRUE"
+
+run_object_tests: object_tests
+	ninja -C $(RELEASE_DIR) test
+
+object_tests_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_OBJECT=TRUE -DKF_TESTS=TRUE"
+
+run_object_tests_debug: object_tests_debug
+	ninja -C $(DEBUG_DIR) test
+
+object_benchmarks:
+	$(MAKE) release CMAKE_ARGS+="-DKF_OBJECT=TRUE -DKF_BENCHMARKS=TRUE"
+
+object_benchmarks_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_OBJECT=TRUE -DKF_BENCHMARKS=TRUE"
+
 # Flow
 flow:
 	$(MAKE) release CMAKE_ARGS+=-DKF_FLOW=TRUE

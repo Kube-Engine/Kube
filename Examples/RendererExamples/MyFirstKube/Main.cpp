@@ -30,33 +30,33 @@ public:
         // _vertexBuffer(getRenderer().getBufferPool().addBuffer()),
         _pipeline(getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
             // Pipeline's shaders
-            .shaders = {
+            shaders: {
                 { kF::Graphics::ShaderType::Vertex, "Shaders/Kube.vert.spv" },
                 { kF::Graphics::ShaderType::Fragment, "Shaders/Kube.frag.spv" }
             },
             // Pipeline's shaders input layout model
-            .layoutModel = kF::Graphics::LayoutModel {
+            layoutModel: kF::Graphics::LayoutModel {
                 // A binding describes a data buffer
-                .bindings = {
+                bindings: {
                     kF::Graphics::LayoutBinding {
-                        .binding = 0, // Buffer index
-                        .stride = sizeof(RenderData), // This buffer is filled with RenderData
-                        .inputRate = VK_VERTEX_INPUT_RATE_VERTEX
+                        binding: 0, // Buffer index
+                        stride: sizeof(RenderData), // This buffer is filled with RenderData
+                        inputRate: VK_VERTEX_INPUT_RATE_VERTEX
                     }
                 },
                 // Attributes describe how variables are arranged in a buffer
-                .attributes = {
+                attributes: {
                     kF::Graphics::LayoutAttribute {
-                        .location = 0, // Location in the shader
-                        .binding = 0, // Parent binding index
-                        .format = VK_FORMAT_R32G32_SFLOAT, // Contains 2 floats
-                        .offset = offsetof(RenderData, pos) // Targeting 'pos' member
+                        location: 0, // Location in the shader
+                        binding: 0, // Parent binding index
+                        format: VK_FORMAT_R32G32_SFLOAT, // Contains 2 floats
+                        offset: offsetof(RenderData, pos) // Targeting 'pos' member
                     },
                     kF::Graphics::LayoutAttribute {
-                        .location = 1, // Location in the shader
-                        .binding = 0, // Parent binding index
-                        .format = VK_FORMAT_R32G32B32_SFLOAT, // Contains 3 floats
-                        .offset = offsetof(RenderData, color) // Targeting 'color' member
+                        location: 1, // Location in the shader
+                        binding: 0, // Parent binding index
+                        format: VK_FORMAT_R32G32B32_SFLOAT, // Contains 3 floats
+                        offset: offsetof(RenderData, color) // Targeting 'color' member
                     }
                 }
             }
@@ -67,15 +67,15 @@ public:
         // Draw command to execute
         _drawCommand(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
             // Command's pipeline
-            .pipeline = _pipeline,
+            pipeline: _pipeline,
             // Command's render model
-            .renderModel = kF::Graphics::RenderModel {
-                .vertexCount = 3, // Draw cube's vertexes
-                .instanceCount = 1, // Draw it once
-                .vertexOffset = 0, // No offset in vertex
-                .instanceOffset = 0, // No offset in instance
-                .buffers = { _vertexBuffer }, // Associated vertex buffer
-                .offsets = { 0 } // Vertex buffer offset
+            renderModel: kF::Graphics::RenderModel {
+                vertexCount: 3, // Draw cube's vertexes
+                instanceCount: 1, // Draw it once
+                vertexOffset: 0, // No offset in vertex
+                instanceOffset: 0, // No offset in instance
+                buffers: { _vertexBuffer }, // Associated vertex buffer
+                offsets: { 0 } // Vertex buffer offset
             }
         }))
     {
