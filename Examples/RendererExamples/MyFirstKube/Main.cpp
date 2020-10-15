@@ -26,8 +26,7 @@ class KubeApplication : public kF::Application
 {
 public:
     KubeApplication(void) : kF::Application("MyFirstKube"),
-        _staggingBuffer(getRenderer().getBufferPool().addBuffer(kF::Graphics::BufferModel::FromContainer(vertices))),
-        // _vertexBuffer(getRenderer().getBufferPool().addBuffer()),
+        _vertexBuffer(getRenderer().getBufferPool().addBuffer(kF::Graphics::BufferModel::FromContainer(vertices))),
         _pipeline(getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
             // Pipeline's shaders
             shaders: {
@@ -61,9 +60,6 @@ public:
                 }
             }
         })),
-        _transferCommand(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
-
-        })),
         // Draw command to execute
         _drawCommand(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
             // Command's pipeline
@@ -80,11 +76,11 @@ public:
         }))
     {
         // We add the command to the drawer so it'll draw it
-        // getRenderer().getDrawer().addCommandIndex(_vertexCommand);
+        getRenderer().getDrawer().addCommandIndex(_drawCommand);
     }
 
 private:
-    kF::Graphics::BufferIndex _staggingBuffer {}, _vertexBuffer {};
+    kF::Graphics::BufferIndex _vertexBuffer {};
     kF::Graphics::PipelineIndex _pipeline {};
     kF::Graphics::CommandIndex _transferCommand {}, _drawCommand {};
 };
