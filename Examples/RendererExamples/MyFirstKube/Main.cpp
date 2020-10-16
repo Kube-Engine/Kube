@@ -18,15 +18,21 @@ struct RenderData
 
 const std::vector<RenderData> vertices = {
     {{0.0f, -0.5f}, {1.0f, 0.0f, 0.0f}},
-    {{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
-    {{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
+    {{0.5f, 0.5f}, {1.0f, 1.0f, 0.0f}},
+    {{-0.5f, 0.5f}, {1.0f, 0.0f, 1.0f}}
 };
 
 class KubeApplication : public kF::Application
 {
 public:
     KubeApplication(void) : kF::Application("MyFirstKube"),
-        _vertexBuffer(getRenderer().getBufferPool().addBuffer(kF::Graphics::BufferModel::FromContainer(vertices))),
+        _vertexBuffer(getRenderer().getBufferPool().addBuffer(
+            kF::Graphics::BufferModel::FromContainer(
+                vertices,
+                kF::Graphics::BufferModel::Location::Local,
+                kF::Graphics::BufferModel::Usage::Vertex
+            )
+        )),
         _pipeline(getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
             // Pipeline's shaders
             shaders: {
@@ -62,10 +68,11 @@ public:
         })),
         // Draw command to execute
         _drawCommand(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
-            // Command's pipeline
-            pipeline: _pipeline,
+            // Command's lifecycle
+            lifecycle: kF::Graphics::CommandModel::Lifecycle::Manual,
             // Command's render model
-            renderModel: kF::Graphics::RenderModel {
+            data: kF::Graphics::RenderModel {
+                pipeline: _pipeline,
                 vertexCount: 3, // Draw cube's vertexes
                 instanceCount: 1, // Draw it once
                 vertexOffset: 0, // No offset in vertex

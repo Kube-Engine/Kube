@@ -20,10 +20,10 @@ public:
         })),
         // Draw command to execute
         _command(getRenderer().getCommandPool().addCommand(kF::Graphics::CommandModel {
-            // Command's pipeline
-            pipeline: _pipeline,
+            lifecycle: kF::Graphics::CommandModel::Lifecycle::Manual,
             // Command's render model
-            renderModel: kF::Graphics::RenderModel {
+            data: kF::Graphics::RenderModel {
+                pipeline: _pipeline,
                 vertexCount: 3, // Draw 3 vertexes
                 instanceCount: 1 // Draw it once
             }
