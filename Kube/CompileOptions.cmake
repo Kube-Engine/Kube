@@ -10,4 +10,8 @@ if (UNIX AND NOT APPLE)
     add_compile_options(
         -Wall
     )
+elseif(WIN32)
+    add_compile_options(
+        /Zc:preprocessor
+    )
 endif()
