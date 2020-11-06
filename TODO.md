@@ -2,12 +2,16 @@
 
 ## Core
 
-### Tiny Vector
-The tiny vector is a vector of 16 bytes using 32 bits unsigned integers as size / capacity
-This vector is used when memory constraints are high but we need to retreive size without dereferencing the data (opposed to FlatVector)
+### Vectors alignments
+All vectors must align malloc to type alignment
 
+### Allocator vectors
+Make allocator vectors
 
 ## Meta
+
+### STATIC STORAGE !
+We MUST test static storage though different translation units
 
 ### Type system
 We can reduce type look-up time by having a second vector holding each index or name of all registered types so we lookup on a flat vector instead of dereferencing each type descriptor.

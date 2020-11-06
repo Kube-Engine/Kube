@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED 20)
 
 include_directories(${KubeSourcesDir}/..)
 
-if (UNIX AND NOT APPLE)
+if (UNIX OR APPLE)
     add_compile_options(
         -Wall
     )
