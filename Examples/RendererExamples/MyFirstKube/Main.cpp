@@ -26,14 +26,14 @@ class KubeApplication : public kF::Application
 {
 public:
     KubeApplication(void) : kF::Application("MyFirstKube"),
-        _vertexBuffer(getRenderer().getBufferPool().addBuffer(
+        _vertexBuffer(getRenderer().bufferPool().addBuffer(
             kF::Graphics::BufferModel::FromContainer(
                 vertices,
                 kF::Graphics::BufferModel::Location::Local,
                 kF::Graphics::BufferModel::Usage::Vertex
             )
         )),
-        _pipeline(getRenderer().getPipelinePool().addPipeline(kF::Graphics::PipelineModel {
+        _pipeline(getRenderer().pipelineManager().addPipeline(kF::Graphics::PipelineModel {
             // Pipeline's shaders
             shaders: {
                 { kF::Graphics::ShaderType::Vertex, "Shaders/Kube.vert.spv" },
@@ -83,7 +83,7 @@ public:
         }))
     {
         // We add the command to the drawer so it'll draw it
-        getRenderer().getDrawer().addCommandIndex(_drawCommand);
+        getRenderer().drawer().addCommandIndex(_drawCommand);
     }
 
 private:
