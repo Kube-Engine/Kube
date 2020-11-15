@@ -1,6 +1,8 @@
 # Welcome to the Kube framework
 Kube framework is a cross-platform C++
 
+[Here is the documentation.](https://kube-engine.github.io/Kube/)
+
 ## Context
 This framework has been created to prepare an incoming game studio.
 The goal of this framework is to establish a stable and powerful work environment for video-game development.
