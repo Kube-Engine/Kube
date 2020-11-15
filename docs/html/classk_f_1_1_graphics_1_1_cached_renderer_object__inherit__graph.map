@@ -1,0 +1,9 @@
+<map id="kF::Graphics::CachedRendererObject" name="kF::Graphics::CachedRendererObject">
+<area shape="rect" id="node1" title="This class specializes the RendererObject to hold its parent renderer in its member cache This class ..." alt="" coords="469,145,671,340"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_command_dispatcher.html" title="Command dispatcher collect commands and dispatch them later." alt="" coords="5,388,244,627"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_command_pool_manager.html" title="Manager of every command pool &#39;acquire&#39; and &#39;takeBack&#39; functions are the only thread safe ones." alt="" coords="268,395,459,619"/>
+<area shape="rect" id="node5" href="$classk_f_1_1_graphics_1_1_framebuffer_manager.html" title="A framebuffer handler holds a set of framebuffers." alt="" coords="483,395,657,619"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_pipeline_manager.html" title="Abstraction of a pipeline pool." alt="" coords="681,417,883,597"/>
+<area shape="rect" id="node7" href="$classk_f_1_1_graphics_1_1_queue_manager.html" title="Handles a list of queues." alt="" coords="907,388,1111,627"/>
+<area shape="rect" id="node2" href="$classk_f_1_1_graphics_1_1_renderer_object.html" title="This is the base class of all renderer sub objects This class is not virtual because it is trivially ..." alt="" coords="472,5,668,97"/>
+</map>

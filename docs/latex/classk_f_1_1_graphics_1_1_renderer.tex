@@ -1,0 +1,472 @@
+\hypertarget{classk_f_1_1_graphics_1_1_renderer}{}\doxysection{kF\+::Graphics\+::Renderer Class Reference}
+\label{classk_f_1_1_graphics_1_1_renderer}\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+
+
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} of the renderer tree, used to access the low-\/level G\+PU api.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{Global\+Instance}}
+\begin{DoxyCompactList}\small\item\em A renderer cannot be directly created, you must instead use \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{Global\+Instance}} to handle its lifetime globally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_af67ea3c2697d4308f8859ddb3739ca86}{$\sim$\+Renderer}} (void)=default
+\begin{DoxyCompactList}\small\item\em Destruct the whole renderer tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a489a03fd4f99f57ff76a2523cb1f6757}{backend\+Window}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the assigned backend window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a480492d2f76b44a3dee7348b64ba34c0}{instance}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the internal A\+PI instance. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a6eb4430f489e907efaab75d98b08f841}{instance}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a437504179b044ecd3559180e15d6246d}{surface}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the render surface. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a043f7b8ea371faeb5df9155b4ff325e3}{surface}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a3bb000fdbccc7d85cbde6f2eda70a860}{physical\+Device}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the physical device. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a816db1be5e1afb7a721e2d5f04c55afa}{physical\+Device}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_aada9d85d4f47983b5a546d951c7e129e}{queue\+Manager}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the queue handler. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ac3dcc63989b1bd0ae88721ead25482de}{queue\+Manager}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a76f31c272c77632813236aca2e397373}{logical\+Device}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the logical device. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a2cd322fb9d1134d26b7177e2d9f01cfa}{logical\+Device}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ad0803c323808d08a4aa7904c75cb02c4}{swapchain}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the swapchain. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a49cde74f14fd30c8e48ccea1dc37f1c0}{swapchain}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ae607422edf09afa5e73ea85948ba57f4}{render\+Pass}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the render pass. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a4e3673f29cf5af1799260b0b23bdc1d0}{render\+Pass}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_pipeline_manager}{Pipeline\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ad646a605828c4b3180f2d2225d33dbd0}{pipeline\+Manager}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the pipeline pool. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_pipeline_manager}{Pipeline\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a2dfffdd4d60b71068f5803e48495eee9}{pipeline\+Manager}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a821091acf133ef0a77f0d720a71a2fd5}{framebuffer\+Manager}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the framebuffer handler. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ae7cf32d56e1d52e06d234bc76539e0f6}{framebuffer\+Manager}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_af2443ae0633eb3482c33b1b6d433c82d}{command\+Pool\+Manager}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the command pool manager. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a27992d280b8185138c2b2630e40abe7c}{command\+Pool\+Manager}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a2904550d34bf5fe9c4b767dc1c694b01}{command\+Dispatcher}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the command dispatcher. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ae7ddf954c5594d0e0f619ff24e51f88a}{command\+Dispatcher}} (void) const noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a9eb22e651352943b15c19b19bb961db3}{cached\+Frame\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of cached frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a3f0c36e1dd39c83b374416948b09e5e0}{dispatch\+Frame\+Acquired}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} frame\+Index)
+\begin{DoxyCompactList}\small\item\em Dispatch every known and registered \textquotesingle{}on\+Frame\+Acquired\textquotesingle{} callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ace2ac911ef13f00b0457187bfdf9666a}{dispatch\+View\+Size\+Changed}} (void)
+\begin{DoxyCompactList}\small\item\em Dispatch every known and registered \textquotesingle{}on\+View\+Size\+Changed\textquotesingle{} callback. \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a7486443b4b014feece2d90aacd0fc469}{frame\+Acquired\+Dispatcher}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the \textquotesingle{}on\+Frame\+Acquired\textquotesingle{} dispatcher. \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a4b529facb7eec1981651d1faa3df7c56}{view\+Size\+Dispatcher}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the \textquotesingle{}on\+View\+Size\+Changed\textquotesingle{} dispatcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a85c6b509c2c74a6fea415601844b4647}{Renderer}} (\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$const window, const \mbox{\hyperlink{structk_f_1_1_version}{Version}} application\+Version=\mbox{\hyperlink{structk_f_1_1_version}{Version}}())
+\begin{DoxyCompactList}\small\item\em Construct a renderer using a backend window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_ae93e87aa44571d94d0edfcf4faf4aa09}{\+\_\+window}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_aa10f89dfaa4df4635bae65ba1881220a}{\+\_\+instance}}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a6ab614e4484f949918e956d26626c006}{\+\_\+surface}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a5ac287cf3147819245dd31198e8a966d}{\+\_\+physical\+Device}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a6dc58fe2db8ae6dadd6d4488b454bfd5}{\+\_\+queue\+Manager}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a7b0f3c006d6465c64b74b7f796b1730e}{\+\_\+logical\+Device}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a93f902233c3d7057f34f08d1ea5fd7f3}{\+\_\+swapchain}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a96225d4658ac6ce2064c968a521fb312}{\+\_\+render\+Pass}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_pipeline_manager}{Pipeline\+Manager}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a4b56aada391a8c3bc4f5939008d33b5a}{\+\_\+pipeline\+Manager}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a42e0488a8e4471135bd8255a341b3a2d}{\+\_\+framebuffer\+Manager}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a09f0836565e1e2d198f7d43af5aae385}{\+\_\+command\+Pool\+Manager}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a23defcb30bb02b421ad57608f692b91a}{\+\_\+command\+Dispatcher}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Core\+::\+Trivial\+Dispatcher}}$<$ void(const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}})$>$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a3afeed84130436a56119e24471c46d89}{\+\_\+frame\+Acquired\+Dispatcher}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Core\+::\+Trivial\+Dispatcher}}$<$ void(void)$>$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_a41eacb1a9a6e876d080c9b4a0991cf20}{\+\_\+view\+Size\+Dispatcher}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} of the renderer tree, used to access the low-\/level G\+PU api. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_af67ea3c2697d4308f8859ddb3739ca86}\label{classk_f_1_1_graphics_1_1_renderer_af67ea3c2697d4308f8859ddb3739ca86}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!````~Renderer@{$\sim$Renderer}}
+\index{````~Renderer@{$\sim$Renderer}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Renderer()}{~Renderer()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Renderer\+::$\sim$\+Renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destruct the whole renderer tree. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a85c6b509c2c74a6fea415601844b4647}\label{classk_f_1_1_graphics_1_1_renderer_a85c6b509c2c74a6fea415601844b4647}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Graphics\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$const}]{window,  }\item[{const \mbox{\hyperlink{structk_f_1_1_version}{Version}}}]{application\+Version = {\ttfamily \mbox{\hyperlink{structk_f_1_1_version}{Version}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Construct a renderer using a backend window. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a489a03fd4f99f57ff76a2523cb1f6757}\label{classk_f_1_1_graphics_1_1_renderer_a489a03fd4f99f57ff76a2523cb1f6757}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!backendWindow@{backendWindow}}
+\index{backendWindow@{backendWindow}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{backendWindow()}{backendWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}}$\ast$ k\+F\+::\+Graphics\+::\+Renderer\+::backend\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the assigned backend window. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a9eb22e651352943b15c19b19bb961db3}\label{classk_f_1_1_graphics_1_1_renderer_a9eb22e651352943b15c19b19bb961db3}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!cachedFrameCount@{cachedFrameCount}}
+\index{cachedFrameCount@{cachedFrameCount}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{cachedFrameCount()}{cachedFrameCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Graphics\+::\+Renderer\+::cached\+Frame\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the number of cached frame. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ae7ddf954c5594d0e0f619ff24e51f88a}\label{classk_f_1_1_graphics_1_1_renderer_ae7ddf954c5594d0e0f619ff24e51f88a}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!commandDispatcher@{commandDispatcher}}
+\index{commandDispatcher@{commandDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{commandDispatcher()}{commandDispatcher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}}\& k\+F\+::\+Graphics\+::\+Renderer\+::command\+Dispatcher (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a2904550d34bf5fe9c4b767dc1c694b01}\label{classk_f_1_1_graphics_1_1_renderer_a2904550d34bf5fe9c4b767dc1c694b01}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!commandDispatcher@{commandDispatcher}}
+\index{commandDispatcher@{commandDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{commandDispatcher()}{commandDispatcher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}}\& k\+F\+::\+Graphics\+::\+Renderer\+::command\+Dispatcher (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the command dispatcher. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a27992d280b8185138c2b2630e40abe7c}\label{classk_f_1_1_graphics_1_1_renderer_a27992d280b8185138c2b2630e40abe7c}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!commandPoolManager@{commandPoolManager}}
+\index{commandPoolManager@{commandPoolManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{commandPoolManager()}{commandPoolManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::command\+Pool\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_af2443ae0633eb3482c33b1b6d433c82d}\label{classk_f_1_1_graphics_1_1_renderer_af2443ae0633eb3482c33b1b6d433c82d}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!commandPoolManager@{commandPoolManager}}
+\index{commandPoolManager@{commandPoolManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{commandPoolManager()}{commandPoolManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::command\+Pool\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the command pool manager. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a3f0c36e1dd39c83b374416948b09e5e0}\label{classk_f_1_1_graphics_1_1_renderer_a3f0c36e1dd39c83b374416948b09e5e0}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!dispatchFrameAcquired@{dispatchFrameAcquired}}
+\index{dispatchFrameAcquired@{dispatchFrameAcquired}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{dispatchFrameAcquired()}{dispatchFrameAcquired()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Renderer\+::dispatch\+Frame\+Acquired (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}}}]{frame\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dispatch every known and registered \textquotesingle{}on\+Frame\+Acquired\textquotesingle{} callback. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ace2ac911ef13f00b0457187bfdf9666a}\label{classk_f_1_1_graphics_1_1_renderer_ace2ac911ef13f00b0457187bfdf9666a}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!dispatchViewSizeChanged@{dispatchViewSizeChanged}}
+\index{dispatchViewSizeChanged@{dispatchViewSizeChanged}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{dispatchViewSizeChanged()}{dispatchViewSizeChanged()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Renderer\+::dispatch\+View\+Size\+Changed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dispatch every known and registered \textquotesingle{}on\+View\+Size\+Changed\textquotesingle{} callback. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a7486443b4b014feece2d90aacd0fc469}\label{classk_f_1_1_graphics_1_1_renderer_a7486443b4b014feece2d90aacd0fc469}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!frameAcquiredDispatcher@{frameAcquiredDispatcher}}
+\index{frameAcquiredDispatcher@{frameAcquiredDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{frameAcquiredDispatcher()}{frameAcquiredDispatcher()}}
+{\footnotesize\ttfamily auto\& k\+F\+::\+Graphics\+::\+Renderer\+::frame\+Acquired\+Dispatcher (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the \textquotesingle{}on\+Frame\+Acquired\textquotesingle{} dispatcher. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ae7cf32d56e1d52e06d234bc76539e0f6}\label{classk_f_1_1_graphics_1_1_renderer_ae7cf32d56e1d52e06d234bc76539e0f6}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!framebufferManager@{framebufferManager}}
+\index{framebufferManager@{framebufferManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{framebufferManager()}{framebufferManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::framebuffer\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a821091acf133ef0a77f0d720a71a2fd5}\label{classk_f_1_1_graphics_1_1_renderer_a821091acf133ef0a77f0d720a71a2fd5}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!framebufferManager@{framebufferManager}}
+\index{framebufferManager@{framebufferManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{framebufferManager()}{framebufferManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::framebuffer\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the framebuffer handler. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a6eb4430f489e907efaab75d98b08f841}\label{classk_f_1_1_graphics_1_1_renderer_a6eb4430f489e907efaab75d98b08f841}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!instance@{instance}}
+\index{instance@{instance}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}}\& k\+F\+::\+Graphics\+::\+Renderer\+::instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a480492d2f76b44a3dee7348b64ba34c0}\label{classk_f_1_1_graphics_1_1_renderer_a480492d2f76b44a3dee7348b64ba34c0}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!instance@{instance}}
+\index{instance@{instance}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}}\& k\+F\+::\+Graphics\+::\+Renderer\+::instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the internal A\+PI instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a2cd322fb9d1134d26b7177e2d9f01cfa}\label{classk_f_1_1_graphics_1_1_renderer_a2cd322fb9d1134d26b7177e2d9f01cfa}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!logicalDevice@{logicalDevice}}
+\index{logicalDevice@{logicalDevice}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{logicalDevice()}{logicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}}\& k\+F\+::\+Graphics\+::\+Renderer\+::logical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a76f31c272c77632813236aca2e397373}\label{classk_f_1_1_graphics_1_1_renderer_a76f31c272c77632813236aca2e397373}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!logicalDevice@{logicalDevice}}
+\index{logicalDevice@{logicalDevice}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{logicalDevice()}{logicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}}\& k\+F\+::\+Graphics\+::\+Renderer\+::logical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the logical device. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a816db1be5e1afb7a721e2d5f04c55afa}\label{classk_f_1_1_graphics_1_1_renderer_a816db1be5e1afb7a721e2d5f04c55afa}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!physicalDevice@{physicalDevice}}
+\index{physicalDevice@{physicalDevice}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{physicalDevice()}{physicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}}\& k\+F\+::\+Graphics\+::\+Renderer\+::physical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a3bb000fdbccc7d85cbde6f2eda70a860}\label{classk_f_1_1_graphics_1_1_renderer_a3bb000fdbccc7d85cbde6f2eda70a860}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!physicalDevice@{physicalDevice}}
+\index{physicalDevice@{physicalDevice}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{physicalDevice()}{physicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}}\& k\+F\+::\+Graphics\+::\+Renderer\+::physical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the physical device. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a2dfffdd4d60b71068f5803e48495eee9}\label{classk_f_1_1_graphics_1_1_renderer_a2dfffdd4d60b71068f5803e48495eee9}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!pipelineManager@{pipelineManager}}
+\index{pipelineManager@{pipelineManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{pipelineManager()}{pipelineManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_pipeline_manager}{Pipeline\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::pipeline\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ad646a605828c4b3180f2d2225d33dbd0}\label{classk_f_1_1_graphics_1_1_renderer_ad646a605828c4b3180f2d2225d33dbd0}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!pipelineManager@{pipelineManager}}
+\index{pipelineManager@{pipelineManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{pipelineManager()}{pipelineManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_pipeline_manager}{Pipeline\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::pipeline\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the pipeline pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ac3dcc63989b1bd0ae88721ead25482de}\label{classk_f_1_1_graphics_1_1_renderer_ac3dcc63989b1bd0ae88721ead25482de}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!queueManager@{queueManager}}
+\index{queueManager@{queueManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{queueManager()}{queueManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::queue\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_aada9d85d4f47983b5a546d951c7e129e}\label{classk_f_1_1_graphics_1_1_renderer_aada9d85d4f47983b5a546d951c7e129e}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!queueManager@{queueManager}}
+\index{queueManager@{queueManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{queueManager()}{queueManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}}\& k\+F\+::\+Graphics\+::\+Renderer\+::queue\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the queue handler. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a4e3673f29cf5af1799260b0b23bdc1d0}\label{classk_f_1_1_graphics_1_1_renderer_a4e3673f29cf5af1799260b0b23bdc1d0}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!renderPass@{renderPass}}
+\index{renderPass@{renderPass}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{renderPass()}{renderPass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}}\& k\+F\+::\+Graphics\+::\+Renderer\+::render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ae607422edf09afa5e73ea85948ba57f4}\label{classk_f_1_1_graphics_1_1_renderer_ae607422edf09afa5e73ea85948ba57f4}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!renderPass@{renderPass}}
+\index{renderPass@{renderPass}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{renderPass()}{renderPass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}}\& k\+F\+::\+Graphics\+::\+Renderer\+::render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the render pass. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a043f7b8ea371faeb5df9155b4ff325e3}\label{classk_f_1_1_graphics_1_1_renderer_a043f7b8ea371faeb5df9155b4ff325e3}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!surface@{surface}}
+\index{surface@{surface}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{surface()}{surface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}}\& k\+F\+::\+Graphics\+::\+Renderer\+::surface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a437504179b044ecd3559180e15d6246d}\label{classk_f_1_1_graphics_1_1_renderer_a437504179b044ecd3559180e15d6246d}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!surface@{surface}}
+\index{surface@{surface}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{surface()}{surface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}}\& k\+F\+::\+Graphics\+::\+Renderer\+::surface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the render surface. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a49cde74f14fd30c8e48ccea1dc37f1c0}\label{classk_f_1_1_graphics_1_1_renderer_a49cde74f14fd30c8e48ccea1dc37f1c0}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!swapchain@{swapchain}}
+\index{swapchain@{swapchain}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{swapchain()}{swapchain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}}\& k\+F\+::\+Graphics\+::\+Renderer\+::swapchain (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ad0803c323808d08a4aa7904c75cb02c4}\label{classk_f_1_1_graphics_1_1_renderer_ad0803c323808d08a4aa7904c75cb02c4}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!swapchain@{swapchain}}
+\index{swapchain@{swapchain}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{swapchain()}{swapchain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}}\& k\+F\+::\+Graphics\+::\+Renderer\+::swapchain (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the swapchain. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a4b529facb7eec1981651d1faa3df7c56}\label{classk_f_1_1_graphics_1_1_renderer_a4b529facb7eec1981651d1faa3df7c56}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!viewSizeDispatcher@{viewSizeDispatcher}}
+\index{viewSizeDispatcher@{viewSizeDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{viewSizeDispatcher()}{viewSizeDispatcher()}}
+{\footnotesize\ttfamily auto\& k\+F\+::\+Graphics\+::\+Renderer\+::view\+Size\+Dispatcher (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the \textquotesingle{}on\+View\+Size\+Changed\textquotesingle{} dispatcher. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a23defcb30bb02b421ad57608f692b91a}\label{classk_f_1_1_graphics_1_1_renderer_a23defcb30bb02b421ad57608f692b91a}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_commandDispatcher@{\_commandDispatcher}}
+\index{\_commandDispatcher@{\_commandDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_commandDispatcher}{\_commandDispatcher}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+command\+Dispatcher \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a09f0836565e1e2d198f7d43af5aae385}\label{classk_f_1_1_graphics_1_1_renderer_a09f0836565e1e2d198f7d43af5aae385}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_commandPoolManager@{\_commandPoolManager}}
+\index{\_commandPoolManager@{\_commandPoolManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_commandPoolManager}{\_commandPoolManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+command\+Pool\+Manager \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a3afeed84130436a56119e24471c46d89}\label{classk_f_1_1_graphics_1_1_renderer_a3afeed84130436a56119e24471c46d89}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_frameAcquiredDispatcher@{\_frameAcquiredDispatcher}}
+\index{\_frameAcquiredDispatcher@{\_frameAcquiredDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_frameAcquiredDispatcher}{\_frameAcquiredDispatcher}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Core\+::\+Trivial\+Dispatcher}}$<$void(const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}})$>$ k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+frame\+Acquired\+Dispatcher \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a42e0488a8e4471135bd8255a341b3a2d}\label{classk_f_1_1_graphics_1_1_renderer_a42e0488a8e4471135bd8255a341b3a2d}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_framebufferManager@{\_framebufferManager}}
+\index{\_framebufferManager@{\_framebufferManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_framebufferManager}{\_framebufferManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+framebuffer\+Manager \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_aa10f89dfaa4df4635bae65ba1881220a}\label{classk_f_1_1_graphics_1_1_renderer_aa10f89dfaa4df4635bae65ba1881220a}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_instance@{\_instance}}
+\index{\_instance@{\_instance}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_instance}{\_instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+instance\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a7b0f3c006d6465c64b74b7f796b1730e}\label{classk_f_1_1_graphics_1_1_renderer_a7b0f3c006d6465c64b74b7f796b1730e}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_logicalDevice@{\_logicalDevice}}
+\index{\_logicalDevice@{\_logicalDevice}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_logicalDevice}{\_logicalDevice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+logical\+Device \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a5ac287cf3147819245dd31198e8a966d}\label{classk_f_1_1_graphics_1_1_renderer_a5ac287cf3147819245dd31198e8a966d}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_physicalDevice@{\_physicalDevice}}
+\index{\_physicalDevice@{\_physicalDevice}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_physicalDevice}{\_physicalDevice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+physical\+Device \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a4b56aada391a8c3bc4f5939008d33b5a}\label{classk_f_1_1_graphics_1_1_renderer_a4b56aada391a8c3bc4f5939008d33b5a}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_pipelineManager@{\_pipelineManager}}
+\index{\_pipelineManager@{\_pipelineManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_pipelineManager}{\_pipelineManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_pipeline_manager}{Pipeline\+Manager}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+pipeline\+Manager \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a6dc58fe2db8ae6dadd6d4488b454bfd5}\label{classk_f_1_1_graphics_1_1_renderer_a6dc58fe2db8ae6dadd6d4488b454bfd5}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_queueManager@{\_queueManager}}
+\index{\_queueManager@{\_queueManager}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_queueManager}{\_queueManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+queue\+Manager \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a96225d4658ac6ce2064c968a521fb312}\label{classk_f_1_1_graphics_1_1_renderer_a96225d4658ac6ce2064c968a521fb312}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_renderPass@{\_renderPass}}
+\index{\_renderPass@{\_renderPass}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_renderPass}{\_renderPass}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+render\+Pass \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a6ab614e4484f949918e956d26626c006}\label{classk_f_1_1_graphics_1_1_renderer_a6ab614e4484f949918e956d26626c006}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_surface@{\_surface}}
+\index{\_surface@{\_surface}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_surface}{\_surface}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+surface \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a93f902233c3d7057f34f08d1ea5fd7f3}\label{classk_f_1_1_graphics_1_1_renderer_a93f902233c3d7057f34f08d1ea5fd7f3}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_swapchain@{\_swapchain}}
+\index{\_swapchain@{\_swapchain}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_swapchain}{\_swapchain}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+swapchain \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_a41eacb1a9a6e876d080c9b4a0991cf20}\label{classk_f_1_1_graphics_1_1_renderer_a41eacb1a9a6e876d080c9b4a0991cf20}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_viewSizeDispatcher@{\_viewSizeDispatcher}}
+\index{\_viewSizeDispatcher@{\_viewSizeDispatcher}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_viewSizeDispatcher}{\_viewSizeDispatcher}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Core\+::\+Trivial\+Dispatcher}}$<$void(void)$>$ k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+view\+Size\+Dispatcher \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_ae93e87aa44571d94d0edfcf4faf4aa09}\label{classk_f_1_1_graphics_1_1_renderer_ae93e87aa44571d94d0edfcf4faf4aa09}} 
+\index{kF::Graphics::Renderer@{kF::Graphics::Renderer}!\_window@{\_window}}
+\index{\_window@{\_window}!kF::Graphics::Renderer@{kF::Graphics::Renderer}}
+\doxysubsubsection{\texorpdfstring{\_window}{\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}}$\ast$ k\+F\+::\+Graphics\+::\+Renderer\+::\+\_\+window \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_renderer_8hpp}{Renderer.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_renderer_8ipp}{Renderer.\+ipp}}\end{DoxyCompactItemize}

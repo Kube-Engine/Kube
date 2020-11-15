@@ -1,0 +1,322 @@
+\hypertarget{_vulkan_flags_8hpp}{}\doxysection{Kube/\+Graphics/\+Vulkan\+Flags.hpp File Reference}
+\label{_vulkan_flags_8hpp}\index{Kube/Graphics/VulkanFlags.hpp@{Kube/Graphics/VulkanFlags.hpp}}
+{\ttfamily \#include $<$vulkan/vulkan.\+h$>$}\newline
+{\ttfamily \#include $<$vk\+\_\+mem\+\_\+alloc.\+h$>$}\newline
+{\ttfamily \#include $<$concepts$>$}\newline
+Include dependency graph for Vulkan\+Flags.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{_vulkan_flags_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_vulkan_flags_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_graphics}{k\+F\+::\+Graphics}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_graphics_a9b1b9f3cb7e7ab0ced32ed7562003dbd}{k\+F\+::\+Graphics\+::\+Flags}} = Vk\+Flags
+\begin{DoxyCompactList}\small\item\em Any flag base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415}{k\+F\+::\+Graphics\+::\+Queue\+Flags}} \+: Vk\+Queue\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Queue\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415ad334dfcea59127bedfcdbe0a3ee7f494}{k\+F\+::\+Graphics\+::\+Queue\+Flags\+::\+Graphics}} = V\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415aa623a8d0366bf079411aa30be45b2d10}{k\+F\+::\+Graphics\+::\+Queue\+Flags\+::\+Compute}} = V\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+C\+O\+M\+P\+U\+T\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415a6950810f0d2bba97a6f710c7b965b84e}{k\+F\+::\+Graphics\+::\+Queue\+Flags\+::\+Transfer}} = V\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415a61bb3861c3c9e94fc7ca9c09af3a891a}{k\+F\+::\+Graphics\+::\+Queue\+Flags\+::\+Sparse\+Binding}} = V\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+B\+I\+N\+D\+I\+N\+G\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a18604468267f12f65a2a15decec89415a56f0605c9795b173abd2e34fab7fc164}{k\+F\+::\+Graphics\+::\+Queue\+Flags\+::\+Protected}} = V\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+B\+IT
+ \}
+\begin{DoxyCompactList}\small\item\em Queue flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975}{k\+F\+::\+Graphics\+::\+Pipeline\+Stage\+Flags}} \+: Vk\+Pipeline\+Stage\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a89daa665d7ccdf5a7f48efd5cc6eb015}{k\+F\+::\+Graphics\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a7d5c6cc561bf1819501bbe6988cbd62b}{k\+F\+::\+Graphics\+::\+Top\+Of\+Pipe}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+O\+P\+\_\+\+O\+F\+\_\+\+P\+I\+P\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975ab72ab50125cbf9fcf0bd919237ddef50}{k\+F\+::\+Graphics\+::\+Draw\+Indirect}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+D\+R\+A\+W\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975afee1d014a12be50726c4f19d32e83659}{k\+F\+::\+Graphics\+::\+Vertex\+Input}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+I\+N\+P\+U\+T\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a307bcd535b63e82443e67402ab9d7515}{k\+F\+::\+Graphics\+::\+Vertex\+Shader}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975ac32b6910f8994060104620b7e519c4c1}{k\+F\+::\+Graphics\+::\+Tessellation\+Control\+Shader}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+E\+S\+S\+E\+L\+L\+A\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975ab8efa27720b1d7355f754c620df40b6c}{k\+F\+::\+Graphics\+::\+Tessellation\+Evaluation\+Shader}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+E\+S\+S\+E\+L\+L\+A\+T\+I\+O\+N\+\_\+\+E\+V\+A\+L\+U\+A\+T\+I\+O\+N\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a38514a322735faea315f865cc3a862ab}{k\+F\+::\+Graphics\+::\+Geometry\+Shader}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975aab07b816843d52a3c4a88a73fe296074}{k\+F\+::\+Graphics\+::\+Fragment\+Shader}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975aa772ea7cfef426a380716af485883034}{k\+F\+::\+Graphics\+::\+Early\+Fragment\+Tests}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+E\+A\+R\+L\+Y\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+T\+E\+S\+T\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a2d79a5507c6dcd557306bc520f8bc51a}{k\+F\+::\+Graphics\+::\+Late\+Fragment\+Tests}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+L\+A\+T\+E\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+T\+E\+S\+T\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a6207928f9484efd595c87ef6511d5638}{k\+F\+::\+Graphics\+::\+Color\+Attachment\+Output}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a3060a4360bf6ecc8ce681972608b1a07}{k\+F\+::\+Graphics\+::\+Compute\+Shader}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+O\+M\+P\+U\+T\+E\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a1c047a5d3e45569adb1097e5e0f472c6}{k\+F\+::\+Graphics\+::\+Transfer}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975af6d39b5c331d636701eb91bf26a31d32}{k\+F\+::\+Graphics\+::\+Bottom\+Of\+Pipe}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+O\+F\+\_\+\+P\+I\+P\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975acc8d484b9b5c79f5adabc5e6ee81c3c8}{k\+F\+::\+Graphics\+::\+Host}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+H\+O\+S\+T\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975aa0aebb304dab7806dc1b8777fe78a314}{k\+F\+::\+Graphics\+::\+All\+Graphics}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+L\+L\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a41be1a149338a54d98416c09742072e1}{k\+F\+::\+Graphics\+::\+All\+Commands}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+L\+L\+\_\+\+C\+O\+M\+M\+A\+N\+D\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a5ce6894de521610615d0f59492ab7eb9}{k\+F\+::\+Graphics\+::\+Transform\+Feedback\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+R\+M\+\_\+\+F\+E\+E\+D\+B\+A\+C\+K\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a92e42e18202eebfc7f9128a073a56c38}{k\+F\+::\+Graphics\+::\+Conditional\+Rendering\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a6d13ac34c350ed6fca5fc793d2afd728}{k\+F\+::\+Graphics\+::\+Ray\+Tracing\+Shader\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a3eba59b67d5ebaf667d37faff0ccf9e2}{k\+F\+::\+Graphics\+::\+Acceleration\+Structure\+Build\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+T\+R\+U\+C\+T\+U\+R\+E\+\_\+\+B\+U\+I\+L\+D\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975aab1782047da66e948c37f8a4434641c7}{k\+F\+::\+Graphics\+::\+Shading\+Rate\+Image\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+R\+A\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a5be5ace66701c824e44135ed1de2d10e}{k\+F\+::\+Graphics\+::\+Task\+Shader\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+A\+S\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a9456d2c4d59419802045107b45e8c913}{k\+F\+::\+Graphics\+::\+Mesh\+Shader\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+M\+E\+S\+H\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975aed18cf85bd8cd4b7e227808243e3cba9}{k\+F\+::\+Graphics\+::\+Fragment\+Density\+Process\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975ac31280da85bdc092b70e23d54e6d0feb}{k\+F\+::\+Graphics\+::\+Command\+Preprocess\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a391a395f5fe0de892ed569cbde05c780}{k\+F\+::\+Graphics\+::\+Ray\+Tracing\+Shader\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_abb6ca6c789837c209fcfc7f5b992e975a2f8ce9ebf209e0a9ec539d10a17677e4}{k\+F\+::\+Graphics\+::\+Acceleration\+Structure\+Build\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+T\+R\+U\+C\+T\+U\+R\+E\+\_\+\+B\+U\+I\+L\+D\+\_\+\+B\+I\+T\+\_\+\+NV
+ \}
+\begin{DoxyCompactList}\small\item\em Pipeline stage flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a5a0f799ef134f6526433956ab6dd1cc7}{k\+F\+::\+Graphics\+::\+Pipeline\+Layout\+Create\+Flags}} \+: Vk\+Pipeline\+Layout\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a5a0f799ef134f6526433956ab6dd1cc7a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Pipeline\+Layout\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Pipeline layout creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_acfbb910fd9e1e5caf0515d66aa002703}{k\+F\+::\+Graphics\+::\+Framebuffer\+Create\+Flags}} \+: Vk\+Framebuffer\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_acfbb910fd9e1e5caf0515d66aa002703a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Framebuffer\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_acfbb910fd9e1e5caf0515d66aa002703a45e92f5f912b83224e57f93484f338be}{k\+F\+::\+Graphics\+::\+Framebuffer\+Create\+Flags\+::\+Imageless}} = V\+K\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+M\+A\+G\+E\+L\+E\+S\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_acfbb910fd9e1e5caf0515d66aa002703a182977123f93b411bd7d7692896fe14a}{k\+F\+::\+Graphics\+::\+Framebuffer\+Create\+Flags\+::\+Imageless\+Khr}} = V\+K\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+M\+A\+G\+E\+L\+E\+S\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR
+ \}
+\begin{DoxyCompactList}\small\item\em Frame buffer creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags}} \+: Vk\+Buffer\+Create\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a61bb3861c3c9e94fc7ca9c09af3a891a}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Sparse\+Binding}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+B\+I\+N\+D\+I\+N\+G\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a634086ab40dae252a759f83e5f004e6d}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Sparse\+Residency}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+R\+E\+S\+I\+D\+E\+N\+C\+Y\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a1180fcf887e26973d85f7fc1cd8fc278}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Sparse\+Aliased}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+A\+L\+I\+A\+S\+E\+D\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a56f0605c9795b173abd2e34fab7fc164}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Protected}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a4b7f07a05254e9a4328ecd2200f42dd6}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Device\+Address\+Capture\+Replay}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+P\+L\+A\+Y\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39aa813e6fa08720a223dc26e57cb5b6ef6}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Device\+Address\+Capture\+Replay\+Ext}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+P\+L\+A\+Y\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39a31aed59331ca82293449258c571e02d2}{k\+F\+::\+Graphics\+::\+Buffer\+Create\+Flags\+::\+Device\+Address\+Capture\+Replay\+Khr}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+R\+E\+P\+L\+A\+Y\+\_\+\+B\+I\+T\+\_\+\+K\+HR
+ \}
+\begin{DoxyCompactList}\small\item\em Buffer creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags}} \+: Vk\+Buffer\+Usage\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358ac1b703f2c13fac2fff3e72d3e307d4c0}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Transfer\+Src}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358afc2b74588602de2090079ac53957dfdd}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Transfer\+Dst}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+D\+S\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a4b43da703340c8273da56cf3445c6754}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Uniform\+Texel\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+U\+N\+I\+F\+O\+R\+M\+\_\+\+T\+E\+X\+E\+L\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358aae1f93780c3073aeadaf118d550f0c65}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Storage\+Texel\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+T\+E\+X\+E\+L\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a88f133adfed6c854e5731cdffbf208cf}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Uniform\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+U\+N\+I\+F\+O\+R\+M\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a439f57c2c466c89db942b3de48298b2b}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Storage\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a7c3895116254ff0417e58b6286de27c0}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Index\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+N\+D\+E\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a10461f19cdb5aadba2fc9986be6400bd}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Vertex\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a7e5abafe55b7f7e20d417fe9c967d69e}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Indirect\+Buffer}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358af7e12bb3b87bce2d5338f450d39b3aec}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Shader\+Device\+Address}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358ac1ece59bd8c441a033b7ef18126a435b}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Transform\+Feedback\+Buffer\+Ext}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+R\+M\+\_\+\+F\+E\+E\+D\+B\+A\+C\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358ae667cfd42b43ab50f3bc5a83a22750df}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Transform\+Feedback\+Counter\+Buffer\+Ext}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+O\+R\+M\+\_\+\+F\+E\+E\+D\+B\+A\+C\+K\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358aeb9b2415e66218b8607af6665858faea}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Conditional\+Rendering\+Ext}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a1db1e9b06aab0722f0839915d4e2c418}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Ray\+Tracing\+Khr}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a1e67a5de98e5434625902a3415afe05f}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Ray\+Tracing\+Nv}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358adaf51770dbf6218aa0aa1c5a5d6e4319}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Shader\+Device\+Address\+Ext}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358a3111aab532b31c226dc0441760bb8b42}{k\+F\+::\+Graphics\+::\+Buffer\+Usage\+Flags\+::\+Shader\+Device\+Address\+Khr}} = V\+K\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR
+ \}
+\begin{DoxyCompactList}\small\item\em Buffer usage flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags}} \+: Vk\+Image\+Create\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a61bb3861c3c9e94fc7ca9c09af3a891a}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Sparse\+Binding}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+B\+I\+N\+D\+I\+N\+G\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a634086ab40dae252a759f83e5f004e6d}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Sparse\+Residency}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+R\+E\+S\+I\+D\+E\+N\+C\+Y\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a1180fcf887e26973d85f7fc1cd8fc278}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Sparse\+Aliased}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+A\+R\+S\+E\+\_\+\+A\+L\+I\+A\+S\+E\+D\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a715c4282567434272aaf71c84c808388}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Mutable\+Format}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+M\+U\+T\+A\+B\+L\+E\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a482e20f70800f4e64ea9588e415bd74f}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Cube\+Compatible}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+C\+U\+B\+E\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39aeffdb9ce6c5d44df31b89d7069c8e0fb}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Alias}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+A\+L\+I\+A\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a44ff641905c228a28dd70f657319ea41}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Split\+Instance\+Bind\+Regions}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+L\+I\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+B\+I\+N\+D\+\_\+\+R\+E\+G\+I\+O\+N\+S\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a42a5ded1924f29dc77f7c41bc2e460e2}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Array2\+D\+Compatible}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+2\+D\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a2035c22454410a7a4446861eaf400798}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Block\+Texel\+View\+Compatible}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+X\+E\+L\+\_\+\+V\+I\+E\+W\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39afdc4d80346e7389675d99c9a250466c6}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Extended\+Usage}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a56f0605c9795b173abd2e34fab7fc164}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Protected}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a283bfcf8a8bdcf8394b2b04307cc7896}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Disjoint}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+I\+S\+J\+O\+I\+N\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a456ff2c24de82b0220ae49dbbda4a30a}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Corner\+Sampled\+Nv}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+C\+O\+R\+N\+E\+R\+\_\+\+S\+A\+M\+P\+L\+E\+D\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a337e897435935dd1448e5948ebfb9d58}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Sample\+Locations\+Compatible\+Depth\+Ext}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+L\+O\+C\+A\+T\+I\+O\+N\+S\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+D\+E\+P\+T\+H\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a3127b74d1b7ad924644d8a9391cbc69a}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Subsampled\+Ext}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+U\+B\+S\+A\+M\+P\+L\+E\+D\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39ae8dd8f80549637adb00359e7472a73bd}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Split\+Instance\+Bind\+Regions\+Khr}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+P\+L\+I\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+B\+I\+N\+D\+\_\+\+R\+E\+G\+I\+O\+N\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a9d17a4bbe30c24522f10cd2724cefba6}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Array2\+D\+Compatible\+Khr}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+2\+D\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a895b300f41ca83f9918f43500b946059}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Block\+Texel\+View\+Compatible\+Khr}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+X\+E\+L\+\_\+\+V\+I\+E\+W\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39ac864def07aec87cce88c1c183e500532}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Extended\+Usage\+Khr}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+E\+X\+T\+E\+N\+D\+E\+D\+\_\+\+U\+S\+A\+G\+E\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39ad62b335013d76b93e06d2f5028e6344d}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Disjoint\+Khr}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+I\+S\+J\+O\+I\+N\+T\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a0284da4024cd529d9dbc3ed867f58f39a325500025631d2b0f31560660b544532}{k\+F\+::\+Graphics\+::\+Image\+Create\+Flags\+::\+Alias\+Khr}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+A\+L\+I\+A\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR
+ \}
+\begin{DoxyCompactList}\small\item\em Image creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags}} \+: Vk\+Image\+Usage\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44ac1b703f2c13fac2fff3e72d3e307d4c0}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Transfer\+Src}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+R\+C\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44afc2b74588602de2090079ac53957dfdd}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Transfer\+Dst}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+D\+S\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a4c1d10948179163c80a7b8d23542074b}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Sampled}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+A\+M\+P\+L\+E\+D\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a8c4aa541ee911e8d80451ef8cc304806}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Storage}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44afddd0a8661f380ee89f529eff813b03d}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Color\+Attachment}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+N\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a652fd1408b3de263e32147770a48931e}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Depth\+Stencil\+Attachment}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+D\+E\+P\+T\+H\+\_\+\+S\+T\+E\+N\+C\+I\+L\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+N\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a84dac684e0bfdc126a4c5c12ee7ed88d}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Transient\+Attachment}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+T\+R\+A\+N\+S\+I\+E\+N\+T\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+N\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a261d965f5dd43c6873489b68730dbe57}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Input\+Attachment}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+I\+N\+P\+U\+T\+\_\+\+A\+T\+T\+A\+C\+H\+M\+E\+N\+T\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a467574a67735e40d80f50b3263460004}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Shading\+Rate\+Image\+Nv}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+R\+A\+T\+E\+\_\+\+I\+M\+A\+G\+E\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a547f034c352fce2cad98e409bcc50e44a6669cc87629d9f086f02c6dbdab2324d}{k\+F\+::\+Graphics\+::\+Image\+Usage\+Flags\+::\+Fragment\+Density\+Map\+Ext}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+U\+S\+A\+G\+E\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+M\+A\+P\+\_\+\+B\+I\+T\+\_\+\+E\+XT
+ \}
+\begin{DoxyCompactList}\small\item\em Image usage flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_aa2029b29647f18e63732f3d02d3d2a76}{k\+F\+::\+Graphics\+::\+Image\+View\+Create\+Flags}} \+: Vk\+Image\+View\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_aa2029b29647f18e63732f3d02d3d2a76a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Image\+View\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aa2029b29647f18e63732f3d02d3d2a76a971fd8cc345d8bd9f92e9f7d88fdf20c}{k\+F\+::\+Graphics\+::\+Image\+View\+Create\+Flags\+::\+Dynamic}} = V\+K\+\_\+\+I\+M\+A\+G\+E\+\_\+\+V\+I\+E\+W\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+M\+A\+P\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+B\+I\+T\+\_\+\+E\+XT
+ \}
+\begin{DoxyCompactList}\small\item\em Image view creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a889b28c5fd51744740ddc12991872572}{k\+F\+::\+Graphics\+::\+Sampler\+Create\+Flags}} \+: Vk\+Sampler\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a889b28c5fd51744740ddc12991872572a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Sampler\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a889b28c5fd51744740ddc12991872572a3127b74d1b7ad924644d8a9391cbc69a}{k\+F\+::\+Graphics\+::\+Sampler\+Create\+Flags\+::\+Subsampled\+Ext}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+U\+B\+S\+A\+M\+P\+L\+E\+D\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a889b28c5fd51744740ddc12991872572ad149f45ca4bf1403150b3330fb40078f}{k\+F\+::\+Graphics\+::\+Sampler\+Create\+Flags\+::\+Subsampled\+Coarse\+Reconstruction\+Ext}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+U\+B\+S\+A\+M\+P\+L\+E\+D\+\_\+\+C\+O\+A\+R\+S\+E\+\_\+\+R\+E\+C\+O\+N\+S\+T\+R\+U\+C\+T\+I\+O\+N\+\_\+\+B\+I\+T\+\_\+\+E\+XT
+ \}
+\begin{DoxyCompactList}\small\item\em Sampler creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a524ef5041073465d73dcdc78cec896c1}{k\+F\+::\+Graphics\+::\+Command\+Buffer\+Usage\+Flags}} \+: Vk\+Command\+Buffer\+Usage\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a524ef5041073465d73dcdc78cec896c1a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Command\+Buffer\+Usage\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a524ef5041073465d73dcdc78cec896c1ab5ba1baa2d4b9c106c86bb3159a7d1b1}{k\+F\+::\+Graphics\+::\+Command\+Buffer\+Usage\+Flags\+::\+One\+Time\+Submit}} = V\+K\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+O\+N\+E\+\_\+\+T\+I\+M\+E\+\_\+\+S\+U\+B\+M\+I\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a524ef5041073465d73dcdc78cec896c1a533a21f47350910bcb5bb7f2fa3b99de}{k\+F\+::\+Graphics\+::\+Command\+Buffer\+Usage\+Flags\+::\+Render\+Pass\+Continue}} = V\+K\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+N\+D\+E\+R\+\_\+\+P\+A\+S\+S\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a524ef5041073465d73dcdc78cec896c1aac6d0f960bae99394095800d8f76d5ce}{k\+F\+::\+Graphics\+::\+Command\+Buffer\+Usage\+Flags\+::\+Simultaneous\+Use}} = V\+K\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+I\+M\+U\+L\+T\+A\+N\+E\+O\+U\+S\+\_\+\+U\+S\+E\+\_\+\+B\+IT
+ \}
+\begin{DoxyCompactList}\small\item\em Command buffer usage flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags}} \+: Vk\+Pipeline\+Create\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a04897263f4cea24f2fa8cf6987fe0c5d}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Disable\+Optimization}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a949d113871880be30b243ff4e4c0c62d}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Allow\+Derivatives}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+E\+R\+I\+V\+A\+T\+I\+V\+E\+S\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a70ae6e285cc14c8486e3cf5bec39d1fd}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Derivative}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+R\+I\+V\+A\+T\+I\+V\+E\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a235024257926e7936be79a31bb2c2265}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+View\+Index\+From\+Device\+Index}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+V\+I\+E\+W\+\_\+\+I\+N\+D\+E\+X\+\_\+\+F\+R\+O\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+D\+E\+X\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a9d8e00c9679bca25db7924e3f7b36623}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Dispatch\+Base}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+I\+S\+P\+A\+T\+C\+H\+\_\+\+B\+A\+S\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a264d12d8e6fa4ccf4834074c6e7cdde5}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Ray\+Tracing\+No\+Null\+Any\+Hit\+Shaders\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+N\+O\+\_\+\+N\+U\+L\+L\+\_\+\+A\+N\+Y\+\_\+\+H\+I\+T\+\_\+\+S\+H\+A\+D\+E\+R\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a2efa1cc4a9f1ee60b4f6abc920721437}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Ray\+Tracing\+No\+Null\+Closest\+Hit\+Shaders\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+N\+O\+\_\+\+N\+U\+L\+L\+\_\+\+C\+L\+O\+S\+E\+S\+T\+\_\+\+H\+I\+T\+\_\+\+S\+H\+A\+D\+E\+R\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7ac28a8fefc866d87b5869e6ff767b37f0}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Ray\+Tracing\+No\+Null\+Miss\+Shaders\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+N\+O\+\_\+\+N\+U\+L\+L\+\_\+\+M\+I\+S\+S\+\_\+\+S\+H\+A\+D\+E\+R\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a05f6bdde31e5e9ee07986a67644660f8}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Ray\+Tracing\+No\+Null\+Intersection\+Shaders\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+N\+O\+\_\+\+N\+U\+L\+L\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+H\+A\+D\+E\+R\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a6a73c6c84e73ba270227ce1bc32a521f}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Ray\+Tracing\+Skip\+Triangles\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+S\+K\+I\+P\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a1cc1d81ab023694f2b5663bc9011e424}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Ray\+Tracing\+Skip\+Aabbs\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+A\+Y\+\_\+\+T\+R\+A\+C\+I\+N\+G\+\_\+\+S\+K\+I\+P\+\_\+\+A\+A\+B\+B\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a5a6f774b7b593ae0edb3bae8341ee78b}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Defer\+Compile\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+F\+E\+R\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7ab582cd7c1e116c3f6aa3a78df178d3f2}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Capture\+Statistics\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+S\+T\+A\+T\+I\+S\+T\+I\+C\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a757ae2bbe3fcf2375a3fa7e97019ee5b}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Capture\+Internal\+Representations\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+P\+R\+E\+S\+E\+N\+T\+A\+T\+I\+O\+N\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a011d5839ee8da17feb07f123d384cf3b}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Indirect\+Bindable\+Nv}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+B\+I\+N\+D\+A\+B\+L\+E\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a04c471b69cfc3a422377c7a1b2c7fa21}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Library\+Khr}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7a4d4238fa31f8cf438698b7a2caf51d71}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Fail\+On\+Pipeline\+Compile\+Required\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+A\+I\+L\+\_\+\+O\+N\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad60d1e767f19bcb86e95126e959b0ac7acbfc46eafc34d36a806ae1245e2ff576}{k\+F\+::\+Graphics\+::\+Pipeline\+Create\+Flags\+::\+Early\+Return\+On\+Failure\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+E\+A\+R\+L\+Y\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+O\+N\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+B\+I\+T\+\_\+\+E\+XT
+ \}
+\begin{DoxyCompactList}\small\item\em Pipeline creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ae0e281882da857c86465d0f3d27a6dbe}{k\+F\+::\+Graphics\+::\+Vertex\+Input\+Create\+Flags}} \+: Vk\+Pipeline\+Vertex\+Input\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_ae0e281882da857c86465d0f3d27a6dbea6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Vertex\+Input\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Vertex input state creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ad36c337b007814a58a674b70db1110ba}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Create\+Flags}} \+: Vk\+Pipeline\+Shader\+Stage\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_ad36c337b007814a58a674b70db1110baa6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad36c337b007814a58a674b70db1110baac5e0b452ed08926db00071b8365a0713}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Create\+Flags\+::\+Allow\+Varying\+Subgroup\+Size\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+A\+L\+L\+O\+W\+\_\+\+V\+A\+R\+Y\+I\+N\+G\+\_\+\+S\+U\+B\+G\+R\+O\+U\+P\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+I\+T\+\_\+\+E\+XT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad36c337b007814a58a674b70db1110baa27f465ec42a35c746653781caa9d6574}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Create\+Flags\+::\+Require\+Full\+Subgroups\+Ext}} = V\+K\+\_\+\+P\+I\+P\+E\+L\+I\+N\+E\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+U\+L\+L\+\_\+\+S\+U\+B\+G\+R\+O\+U\+P\+S\+\_\+\+B\+I\+T\+\_\+\+E\+XT
+ \}
+\begin{DoxyCompactList}\small\item\em Shader stage creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags}} \+: Vk\+Shader\+Stage\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989ab22b929ba52471a02d18bb3a4e4472e6}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Vertex}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a91a08ad964ef35c89ae69cd4176cfb4a}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Tessellation\+Control}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+E\+S\+S\+E\+L\+L\+A\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a85a5d743bd284736223e3c1e95c6b952}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Tessellation\+Evaluation}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+E\+S\+S\+E\+L\+L\+A\+T\+I\+O\+N\+\_\+\+E\+V\+A\+L\+U\+A\+T\+I\+O\+N\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989ad9c6333623e6357515fcbf17be806273}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Geometry}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a37d01b98065725fe3a1d30acf3a0064a}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Fragment}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989aa623a8d0366bf079411aa30be45b2d10}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Compute}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+O\+M\+P\+U\+T\+E\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a576ad90e86113d352899b3369a9c5b15}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+All\+Graphics}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+L\+L\+\_\+\+G\+R\+A\+P\+H\+I\+CS, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989ab1c94ca2fbc3e78fc30069c8d0f01680}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+All}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+LL, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989af41f355f85ccba03faa00ab3c00ef16c}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Raygen\+Khr}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+R\+A\+Y\+G\+E\+N\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989ac5b8c4a9a55f2c4d00dd77b2bf45aa66}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Any\+Hit\+Khr}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+A\+N\+Y\+\_\+\+H\+I\+T\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989afeab98a678f6b1c4607f6ba7d473e2da}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Closest\+Hit\+Khr}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+L\+O\+S\+E\+S\+T\+\_\+\+H\+I\+T\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a6728e93b0ce43e9f871d66f17a5c3cd2}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Miss\+Khr}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+M\+I\+S\+S\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a1b9317ba097f57ae7371df69a5e4c10c}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Intersection\+Khr}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+I\+N\+T\+E\+R\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989a49bc17b1360c1b9d6f4fec6bd50d3c6f}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Callable\+Khr}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+C\+A\+L\+L\+A\+B\+L\+E\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989ad347140eb95d4f502c65c37c951254b7}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Task\+Nv}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+T\+A\+S\+K\+\_\+\+B\+I\+T\+\_\+\+NV, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a772ceb42c249e57aaa45b196f835b989aff30ec5e0cacc993bb4b47f069ad4f66}{k\+F\+::\+Graphics\+::\+Shader\+Stage\+Flags\+::\+Mesh\+Nv}} = V\+K\+\_\+\+S\+H\+A\+D\+E\+R\+\_\+\+S\+T\+A\+G\+E\+\_\+\+M\+E\+S\+H\+\_\+\+B\+I\+T\+\_\+\+NV
+ \}
+\begin{DoxyCompactList}\small\item\em Shader stage flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a07e0edd76944adcfbc885d8a8bab1b9c}{k\+F\+::\+Graphics\+::\+Input\+Assembly\+Create\+Flags}} \+: Vk\+Pipeline\+Input\+Assembly\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a07e0edd76944adcfbc885d8a8bab1b9ca6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Input\+Assembly\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Input assembly creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a4118e6b142c084758d39046a15d46d51}{k\+F\+::\+Graphics\+::\+Tessellation\+Create\+Flags}} \+: Vk\+Pipeline\+Tessellation\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a4118e6b142c084758d39046a15d46d51a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Tessellation\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Tessellation state assembly creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ab2ce39cc60a736a3daf1a5d67fa6965c}{k\+F\+::\+Graphics\+::\+Viewport\+Create\+Flags}} \+: Vk\+Pipeline\+Viewport\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_ab2ce39cc60a736a3daf1a5d67fa6965ca6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Viewport\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Viewport creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ac1287cf99f9b7972d68da5d81db3bb26}{k\+F\+::\+Graphics\+::\+Rasterization\+Create\+Flags}} \+: Vk\+Pipeline\+Rasterization\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_ac1287cf99f9b7972d68da5d81db3bb26a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Rasterization\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Rasterization creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a35f9cef45cd08e189d3898b833c2a859}{k\+F\+::\+Graphics\+::\+Cull\+Mode\+Flags}} \+: Vk\+Cull\+Mode\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a35f9cef45cd08e189d3898b833c2a859a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Cull\+Mode\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a35f9cef45cd08e189d3898b833c2a859a5835bab1ade0060909e31a06af2e2cde}{k\+F\+::\+Graphics\+::\+Cull\+Mode\+Flags\+::\+Front}} = V\+K\+\_\+\+C\+U\+L\+L\+\_\+\+M\+O\+D\+E\+\_\+\+F\+R\+O\+N\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a35f9cef45cd08e189d3898b833c2a859a0557fa923dcee4d0f86b1409f5c2167f}{k\+F\+::\+Graphics\+::\+Cull\+Mode\+Flags\+::\+Back}} = V\+K\+\_\+\+C\+U\+L\+L\+\_\+\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a35f9cef45cd08e189d3898b833c2a859a8be41da9b58e32ece35a2b5751f6aeb9}{k\+F\+::\+Graphics\+::\+Cull\+Mode\+Flags\+::\+Front\+And\+Back}} = V\+K\+\_\+\+C\+U\+L\+L\+\_\+\+M\+O\+D\+E\+\_\+\+F\+R\+O\+N\+T\+\_\+\+A\+N\+D\+\_\+\+B\+A\+CK
+ \}
+\begin{DoxyCompactList}\small\item\em Cull mode flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_af1741ab5b256ce7a46f94c68ce423320}{k\+F\+::\+Graphics\+::\+Multisample\+Create\+Flags}} \+: Vk\+Pipeline\+Multisample\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_af1741ab5b256ce7a46f94c68ce423320a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Multisample\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Multisample creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags}} \+: Vk\+Sample\+Count\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946abb7f5ae6220c9828e5ec91faf054197c}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X1}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+1\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946a54105bddbfe3f639d49cbe8f5182c958}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X2}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+2\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946a7d71ed2af4cc5c6a8380324d9bc4a45f}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X4}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+4\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946ab8295fda5d2245c683e47e1137656c78}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X8}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+8\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946a8566d518618cc93194d9e7688e2dafa2}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X16}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+16\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946aaebf1ebe049feaa907e785eeb955ae32}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X32}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+32\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad576939ee1b186c4db6ca9dd9f6dd946af0851da0e02bf22830828822f578dc8f}{k\+F\+::\+Graphics\+::\+Sample\+Count\+Flags\+::\+X64}} = V\+K\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+64\+\_\+\+B\+IT
+ \}
+\begin{DoxyCompactList}\small\item\em Sample count flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_aacff535ca575e40c2f5c4e630e49aaf2}{k\+F\+::\+Graphics\+::\+Depth\+Stencil\+Create\+Flags}} \+: Vk\+Pipeline\+Depth\+Stencil\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_aacff535ca575e40c2f5c4e630e49aaf2a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Depth\+Stencil\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Depth stencil creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a673c9e1ff662d46e0fc19ed73b3a5f88}{k\+F\+::\+Graphics\+::\+Color\+Blend\+Create\+Flags}} \+: Vk\+Pipeline\+Color\+Blend\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a673c9e1ff662d46e0fc19ed73b3a5f88a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Color\+Blend\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Color blend creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758d}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags}} \+: Vk\+Color\+Component\+Flags \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758da6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758dae1e1d3d40573127e9ee0480caf1283d6}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags\+::R}} = V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758dadfcf28d0734569a6a693bc8194de62bf}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags\+::G}} = V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+G\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758da9d5ed678fe57bcca610140957afab571}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags\+::B}} = V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+B\+\_\+\+B\+IT, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758da7fc56270e7a70fa81a5935b72eacbe29}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags\+::A}} = V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+A\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a526b75e5dfbc36c2775e85a73c74758daea3495a278957dc58165e48a8945469f}{k\+F\+::\+Graphics\+::\+Color\+Component\+Flags\+::\+R\+G\+BA}} = V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+\_\+\+B\+IT $\vert$ V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+G\+\_\+\+B\+IT $\vert$ V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+B\+\_\+\+B\+IT $\vert$ V\+K\+\_\+\+C\+O\+L\+O\+R\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+A\+\_\+\+B\+IT
+ \}
+\begin{DoxyCompactList}\small\item\em Color components flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a9ad80b55fbcd60aa49d81ba9d8262ab4}{k\+F\+::\+Graphics\+::\+Dynamic\+State\+Create\+Flags}} \+: Vk\+Pipeline\+Dynamic\+State\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a9ad80b55fbcd60aa49d81ba9d8262ab4a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Dynamic\+State\+Create\+Flags\+::\+None}} = 0x0
+ \}
+\begin{DoxyCompactList}\small\item\em Dynamic state creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_ab1347d10b7ead3a47ccbd28cffd665d9}{k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+Create\+Flags}} \+: Vk\+Descriptor\+Set\+Layout\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_ab1347d10b7ead3a47ccbd28cffd665d9a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab1347d10b7ead3a47ccbd28cffd665d9aaea73e5ae77dbbed7e0a4c992c77d0c2}{k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+Create\+Flags\+::\+Update\+After\+Bind\+Pool}} = V\+K\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+T\+\_\+\+L\+A\+Y\+O\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+A\+F\+T\+E\+R\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+O\+L\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab1347d10b7ead3a47ccbd28cffd665d9aebf5ba45bb1234e6c2f5794363a17446}{k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+Create\+Flags\+::\+Push\+Descriptor\+Khr}} = V\+K\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+T\+\_\+\+L\+A\+Y\+O\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+P\+U\+S\+H\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+B\+I\+T\+\_\+\+K\+HR, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab1347d10b7ead3a47ccbd28cffd665d9af72f17824a5c8ca15ff70810db1c8716}{k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+Create\+Flags\+::\+Update\+After\+Bind\+Pool\+Ext}} = V\+K\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+T\+\_\+\+L\+A\+Y\+O\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+A\+F\+T\+E\+R\+\_\+\+B\+I\+N\+D\+\_\+\+P\+O\+O\+L\+\_\+\+B\+I\+T\+\_\+\+E\+XT
+ \}
+\begin{DoxyCompactList}\small\item\em Descriptor set layout creation flags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_graphics_a3d9e72b917c1399177a5163d98056aa7}{k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+Create\+Flags}} \+: Vk\+Descriptor\+Pool\+Create\+Flags \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a3d9e72b917c1399177a5163d98056aa7a6adf97f83acf6453d4a6a4b1070f3754}{k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+Create\+Flags\+::\+None}} = 0x0, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a3d9e72b917c1399177a5163d98056aa7acbe6dc159c466ff10171251685608cbb}{k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+Create\+Flags\+::\+Free\+Descriptor\+Set}} = V\+K\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+O\+O\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+R\+E\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+T\+\_\+\+B\+IT, 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a3d9e72b917c1399177a5163d98056aa7a4b8308424b6fb4b70803778cfc461015}{k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+Create\+Flags\+::\+Update\+After\+Bind}} = V\+K\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+O\+O\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+A\+F\+T\+E\+R\+\_\+\+B\+I\+N\+D\+\_\+\+B\+IT
+ \}
+\begin{DoxyCompactList}\small\item\em Descriptor pool creation flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Flags\+Type , typename ... Values$>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} constexpr std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+same$<$ Values, Flags\+Type $>$... $>$ Flags\+Type \mbox{\hyperlink{namespacek_f_1_1_graphics_afa5690089b708bc9495ea7cec26811df}{k\+F\+::\+Graphics\+::\+Make\+Flags}} (const Flags\+Type first, Values ...following) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to combine protected enum flags. \end{DoxyCompactList}\item 
+constexpr Flags \mbox{\hyperlink{namespacek_f_1_1_graphics_a7b8e4f28ad5a97e719cba5c8a26a6423}{k\+F\+::\+Graphics\+::\+To\+Flags}} (const Flags\+Type value) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Flags\+Type $>$ }\\requires \mbox{\hyperlink{namespacek_f_1_1_graphics_a5fa832f919b799e3af3ba761acdbfc10}{k\+F\+::\+Graphics\+::requires}} \{ static\+\_\+cast$<$Flags$>$(std\+::declval$<$Flags\+Type$>$())
+\begin{DoxyCompactList}\small\item\em Helper used to combine protected enum flags. \end{DoxyCompactList}\end{DoxyCompactItemize}

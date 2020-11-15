@@ -1,0 +1,206 @@
+\hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager}{}\doxysection{kF\+::Graphics\+::Command\+Pool\+Manager Class Reference}
+\label{classk_f_1_1_graphics_1_1_command_pool_manager}\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+
+
+Manager of every command pool \textquotesingle{}acquire\textquotesingle{} and \textquotesingle{}take\+Back\textquotesingle{} functions are the only thread safe ones.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Pool\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Command\+Pool\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classk_f_1_1_graphics_1_1_command_pool_manager__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Command pool node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node_pool}{Node\+Pool}}
+\begin{DoxyCompactList}\small\item\em An atomic pool node. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}}
+\begin{DoxyCompactList}\small\item\em This class allow to use a command pool in its scope before releasing it in the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a16da292b219a6a498780079acc9e5f49}{Per\+Queue\+Node\+Pool\+Array}} = std\+::array$<$ \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node_pool}{Node\+Pool}}, static\+\_\+cast$<$ std\+::size\+\_\+t $>$(\mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60ad334dfcea59127bedfcdbe0a3ee7f494}{Queue\+Type\+::\+Count}})$>$
+\begin{DoxyCompactList}\small\item\em An array of pools sorted by queue types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_aed85af13a6eedb3dcf475a6243c265d2}{Command\+Pool\+Manager}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Contruct the manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_aa083f55e5a3c7069a6204fd790669a0c}{Command\+Pool\+Manager}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor, not thread safe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_aa0746d9e6cad5f422956dceb1e30610a}{$\sim$\+Command\+Pool\+Manager}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Destruct the manager and every pool, not thread safe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_ab2261f4ed28eb565c2050a63560f8574}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment, not thread safe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_ad74d6f72720555c1118191b9f8171a46}{acquire}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Acquire a scoped command pool in the current frame context, thread safe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a9d7c062d4fb71527ff4f0a764466d18d}{take\+Back}} (\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$node) noexcept
+\begin{DoxyCompactList}\small\item\em Take ownership of a previously acquired node (called in \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}}), thread safe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a25e83db6e84c7925a441a0a307eb1abe}{on\+Frame\+Aquired}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} frame\+Index) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Callback triggered when renderer is processing a new frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a64d1aa4cbeb14d04abed34625573142d}{allocate}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} queue\+Type) noexcept
+\begin{DoxyCompactList}\small\item\em Allocate and construct a new node using allocator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_adc36d11af4e8c32d13b593d843b8e03a}{deallocate}} (\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$const node) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct and deallocate a node using allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a16da292b219a6a498780079acc9e5f49}{Per\+Queue\+Node\+Pool\+Array}} $>$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a63139dd051697eda61d3a674ed790626}{\+\_\+cached\+Frames}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a950d1127224155b99d8e8644ce694805}{\+\_\+\+Allocator}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Manager of every command pool \textquotesingle{}acquire\textquotesingle{} and \textquotesingle{}take\+Back\textquotesingle{} functions are the only thread safe ones. 
+
+Manager is used to acquire access to an auto command pool for a given frame\+: each command is one time submit If you wish to reuse command buffers, please use a \mbox{\hyperlink{classk_f_1_1_graphics_1_1_manual_command_pool}{Manual\+Command\+Pool}} instead of the \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_a16da292b219a6a498780079acc9e5f49}\label{classk_f_1_1_graphics_1_1_command_pool_manager_a16da292b219a6a498780079acc9e5f49}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!PerQueueNodePoolArray@{PerQueueNodePoolArray}}
+\index{PerQueueNodePoolArray@{PerQueueNodePoolArray}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{PerQueueNodePoolArray}{PerQueueNodePoolArray}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a16da292b219a6a498780079acc9e5f49}{k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Per\+Queue\+Node\+Pool\+Array}} =  std\+::array$<$\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node_pool}{Node\+Pool}}, static\+\_\+cast$<$std\+::size\+\_\+t$>$(\mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60ad334dfcea59127bedfcdbe0a3ee7f494}{Queue\+Type\+::\+Count}})$>$}
+
+
+
+An array of pools sorted by queue types. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_aed85af13a6eedb3dcf475a6243c265d2}\label{classk_f_1_1_graphics_1_1_command_pool_manager_aed85af13a6eedb3dcf475a6243c265d2}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!CommandPoolManager@{CommandPoolManager}}
+\index{CommandPoolManager@{CommandPoolManager}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{CommandPoolManager()}{CommandPoolManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graphics\+::\+Command\+Pool\+Manager\+::\+Command\+Pool\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Contruct the manager. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_aa083f55e5a3c7069a6204fd790669a0c}\label{classk_f_1_1_graphics_1_1_command_pool_manager_aa083f55e5a3c7069a6204fd790669a0c}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!CommandPoolManager@{CommandPoolManager}}
+\index{CommandPoolManager@{CommandPoolManager}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{CommandPoolManager()}{CommandPoolManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Command\+Pool\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor, not thread safe. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_aa0746d9e6cad5f422956dceb1e30610a}\label{classk_f_1_1_graphics_1_1_command_pool_manager_aa0746d9e6cad5f422956dceb1e30610a}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!````~CommandPoolManager@{$\sim$CommandPoolManager}}
+\index{````~CommandPoolManager@{$\sim$CommandPoolManager}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$CommandPoolManager()}{~CommandPoolManager()}}
+{\footnotesize\ttfamily Graphics\+::\+Command\+Pool\+Manager\+::$\sim$\+Command\+Pool\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the manager and every pool, not thread safe. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_ad74d6f72720555c1118191b9f8171a46}\label{classk_f_1_1_graphics_1_1_command_pool_manager_ad74d6f72720555c1118191b9f8171a46}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!acquire@{acquire}}
+\index{acquire@{acquire}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool}} Graphics\+::\+Command\+Pool\+Manager\+::acquire (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Acquire a scoped command pool in the current frame context, thread safe. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_a64d1aa4cbeb14d04abed34625573142d}\label{classk_f_1_1_graphics_1_1_command_pool_manager_a64d1aa4cbeb14d04abed34625573142d}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!allocate@{allocate}}
+\index{allocate@{allocate}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Node}} $\ast$ k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::allocate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Allocate and construct a new node using allocator. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_adc36d11af4e8c32d13b593d843b8e03a}\label{classk_f_1_1_graphics_1_1_command_pool_manager_adc36d11af4e8c32d13b593d843b8e03a}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::deallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Destruct and deallocate a node using allocator. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_a25e83db6e84c7925a441a0a307eb1abe}\label{classk_f_1_1_graphics_1_1_command_pool_manager_a25e83db6e84c7925a441a0a307eb1abe}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!onFrameAquired@{onFrameAquired}}
+\index{onFrameAquired@{onFrameAquired}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{onFrameAquired()}{onFrameAquired()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::on\+Frame\+Aquired (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}}}]{frame\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Callback triggered when renderer is processing a new frame. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_ab2261f4ed28eb565c2050a63560f8574}\label{classk_f_1_1_graphics_1_1_command_pool_manager_ab2261f4ed28eb565c2050a63560f8574}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}}\& k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment, not thread safe. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_a9d7c062d4fb71527ff4f0a764466d18d}\label{classk_f_1_1_graphics_1_1_command_pool_manager_a9d7c062d4fb71527ff4f0a764466d18d}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!takeBack@{takeBack}}
+\index{takeBack@{takeBack}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{takeBack()}{takeBack()}}
+{\footnotesize\ttfamily void Graphics\+::\+Command\+Pool\+Manager\+::take\+Back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Take ownership of a previously acquired node (called in \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}}), thread safe. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_a950d1127224155b99d8e8644ce694805}\label{classk_f_1_1_graphics_1_1_command_pool_manager_a950d1127224155b99d8e8644ce694805}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!\_Allocator@{\_Allocator}}
+\index{\_Allocator@{\_Allocator}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{\_Allocator}{\_Allocator}}
+{\footnotesize\ttfamily std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+\_\+\+Allocator \{\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_a63139dd051697eda61d3a674ed790626}\label{classk_f_1_1_graphics_1_1_command_pool_manager_a63139dd051697eda61d3a674ed790626}} 
+\index{kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}!\_cachedFrames@{\_cachedFrames}}
+\index{\_cachedFrames@{\_cachedFrames}!kF::Graphics::CommandPoolManager@{kF::Graphics::CommandPoolManager}}
+\doxysubsubsection{\texorpdfstring{\_cachedFrames}{\_cachedFrames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_a16da292b219a6a498780079acc9e5f49}{Per\+Queue\+Node\+Pool\+Array}}$>$ k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+\_\+cached\+Frames\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_pool_manager_8hpp}{Command\+Pool\+Manager.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_pool_manager_8cpp}{Command\+Pool\+Manager.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_pool_manager_8ipp}{Command\+Pool\+Manager.\+ipp}}\end{DoxyCompactItemize}

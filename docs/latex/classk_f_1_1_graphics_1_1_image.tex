@@ -1,0 +1,102 @@
+\hypertarget{classk_f_1_1_graphics_1_1_image}{}\doxysection{kF\+::Graphics\+::Image Class Reference}
+\label{classk_f_1_1_graphics_1_1_image}\index{kF::Graphics::Image@{kF::Graphics::Image}}
+
+
+Abstract an image.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Image\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_image__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_a92379247945c33bed4c729b6b7ab5842}{Image}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_model}{Image\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} using image model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_a89b127cd5f8bc325944afdbea6ac1bd9}{Image}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_a2bdf372b9ab77f0553cc123ebe8bc5cf}{$\sim$\+Image}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_a7b98eab5ee84cbbba9ad666401b3a4f4}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_ae11b42e1273f3f4555e20ded3ce87cdf}{create\+Image}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_model}{Image\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Create an image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract an image. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_a92379247945c33bed4c729b6b7ab5842}\label{classk_f_1_1_graphics_1_1_image_a92379247945c33bed4c729b6b7ab5842}} 
+\index{kF::Graphics::Image@{kF::Graphics::Image}!Image@{Image}}
+\index{Image@{Image}!kF::Graphics::Image@{kF::Graphics::Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_model}{Image\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} using image model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_a89b127cd5f8bc325944afdbea6ac1bd9}\label{classk_f_1_1_graphics_1_1_image_a89b127cd5f8bc325944afdbea6ac1bd9}} 
+\index{kF::Graphics::Image@{kF::Graphics::Image}!Image@{Image}}
+\index{Image@{Image}!kF::Graphics::Image@{kF::Graphics::Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_a2bdf372b9ab77f0553cc123ebe8bc5cf}\label{classk_f_1_1_graphics_1_1_image_a2bdf372b9ab77f0553cc123ebe8bc5cf}} 
+\index{kF::Graphics::Image@{kF::Graphics::Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!kF::Graphics::Image@{kF::Graphics::Image}}
+\doxysubsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily Graphics\+::\+Image\+::$\sim$\+Image (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_ae11b42e1273f3f4555e20ded3ce87cdf}\label{classk_f_1_1_graphics_1_1_image_ae11b42e1273f3f4555e20ded3ce87cdf}} 
+\index{kF::Graphics::Image@{kF::Graphics::Image}!createImage@{createImage}}
+\index{createImage@{createImage}!kF::Graphics::Image@{kF::Graphics::Image}}
+\doxysubsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily void Graphics\+::\+Image\+::create\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_model}{Image\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create an image. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_a7b98eab5ee84cbbba9ad666401b3a4f4}\label{classk_f_1_1_graphics_1_1_image_a7b98eab5ee84cbbba9ad666401b3a4f4}} 
+\index{kF::Graphics::Image@{kF::Graphics::Image}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Image@{kF::Graphics::Image}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}}\& k\+F\+::\+Graphics\+::\+Image\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image}{Image}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_image_8hpp}{Image.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_image_8cpp}{Image.\+cpp}}\end{DoxyCompactItemize}

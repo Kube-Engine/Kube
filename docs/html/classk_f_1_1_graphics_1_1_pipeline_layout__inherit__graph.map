@@ -1,0 +1,8 @@
+<map id="kF::Graphics::PipelineLayout" name="kF::Graphics::PipelineLayout">
+<area shape="rect" id="node1" title="Abstract a pipeline layout." alt="" coords="45,1113,235,1249"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title=" " alt="" coords="47,972,233,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,224,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="109,5,294,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="169,307,372,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title="Vulkan handle that inherits from RendererObject." alt="" coords="167,817,353,909"/>
+</map>

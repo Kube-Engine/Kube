@@ -1,0 +1,8 @@
+<map id="kF::Graphics::Surface" name="kF::Graphics::Surface">
+<area shape="rect" id="node1" title="Abstraction of a render surface." alt="" coords="76,1113,249,1308"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="68,972,257,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,261,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="155,5,341,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="205,307,451,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title="Vulkan handle that inherits from CachedRendererObject." alt="" coords="193,817,383,909"/>
+</map>

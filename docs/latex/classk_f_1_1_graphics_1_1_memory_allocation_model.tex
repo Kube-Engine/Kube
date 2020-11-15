@@ -1,0 +1,171 @@
+\hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model}{}\doxysection{kF\+::Graphics\+::Memory\+Allocation\+Model Class Reference}
+\label{classk_f_1_1_graphics_1_1_memory_allocation_model}\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+
+
+{\ttfamily \#include $<$Memory\+Allocation\+Model.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionk_f_1_1_graphics_1_1_memory_allocation_model_1_1_data}{Data}}
+\begin{DoxyCompactList}\small\item\em Can either contain a buffer or an image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}{Bind\+Type}} \+: std\+::uint32\+\_\+t \{ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0da7e62bc342f41c946868f0ea6f0b712d8}{Bind\+Type\+::\+Buffer}} = 0u, 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0dabe53a0541a6d36f6ecb879fa2c584b08}{Bind\+Type\+::\+Image}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of internal data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$Memory\+Bindable Type$>$ }\\\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a6fc841932d92557a3c695f768215ffc4}{Memory\+Allocation\+Model}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} usage) noexcept
+\begin{DoxyCompactList}\small\item\em Construct a new memory allocation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_ac2510e5dc10399409f1a56f4ad80d513}{Memory\+Allocation\+Model}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a4842ea44c1eeddb788bc732a3263ec31}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}{Bind\+Type}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a7ed2616c18269b3c0f78ba9e62a8b3e9}{bind\+Type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the type of memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a430efe2684b83d26c93689cc24a9db25}{buffer}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive data as a buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a2fed944594aa0825dd00367658662b6e}{image}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive data as an image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a7cfa68c02a15f3db17868272bf797e0c}{memory\+Usage}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the usage of memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{unionk_f_1_1_graphics_1_1_memory_allocation_model_1_1_data}{Data}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_ae45e6c9ef60b6c45a8e3584c65db46f2}{\+\_\+data}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}{Bind\+Type}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a81b3a7047f3bb62ab1413afc32d23611}{\+\_\+bind\+Type}} \{ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0da7e62bc342f41c946868f0ea6f0b712d8}{Bind\+Type\+::\+Buffer}} \}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_aee04de1627f17cf5c0a0b7f387ab3efe}{\+\_\+usage}} \{ Memory\+Usage\+::\+Unknown \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!BindType@{BindType}}
+\index{BindType@{BindType}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{BindType}{BindType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}{k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Bind\+Type}} \+: std\+::uint32\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Type of internal data. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Buffer@{Buffer}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!Buffer@{Buffer}}}\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0da7e62bc342f41c946868f0ea6f0b712d8}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0da7e62bc342f41c946868f0ea6f0b712d8}} 
+Buffer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Image@{Image}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!Image@{Image}}}\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0dabe53a0541a6d36f6ecb879fa2c584b08}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0dabe53a0541a6d36f6ecb879fa2c584b08}} 
+Image&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a6fc841932d92557a3c695f768215ffc4}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a6fc841932d92557a3c695f768215ffc4}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!MemoryAllocationModel@{MemoryAllocationModel}}
+\index{MemoryAllocationModel@{MemoryAllocationModel}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{MemoryAllocationModel()}{MemoryAllocationModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Graphics\+::\+Memory\+Bindable Type$>$ \\
+k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Memory\+Allocation\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}}}]{usage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Construct a new memory allocation. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_ac2510e5dc10399409f1a56f4ad80d513}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_ac2510e5dc10399409f1a56f4ad80d513}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!MemoryAllocationModel@{MemoryAllocationModel}}
+\index{MemoryAllocationModel@{MemoryAllocationModel}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{MemoryAllocationModel()}{MemoryAllocationModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Memory\+Allocation\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a7ed2616c18269b3c0f78ba9e62a8b3e9}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a7ed2616c18269b3c0f78ba9e62a8b3e9}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!bindType@{bindType}}
+\index{bindType@{bindType}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{bindType()}{bindType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}{Bind\+Type}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::bind\+Type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the type of memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a430efe2684b83d26c93689cc24a9db25}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a430efe2684b83d26c93689cc24a9db25}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!buffer@{buffer}}
+\index{buffer@{buffer}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive data as a buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a2fed944594aa0825dd00367658662b6e}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a2fed944594aa0825dd00367658662b6e}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!image@{image}}
+\index{image@{image}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::image (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive data as an image. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a7cfa68c02a15f3db17868272bf797e0c}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a7cfa68c02a15f3db17868272bf797e0c}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!memoryUsage@{memoryUsage}}
+\index{memoryUsage@{memoryUsage}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{memoryUsage()}{memoryUsage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::memory\+Usage (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the usage of memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a4842ea44c1eeddb788bc732a3263ec31}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a4842ea44c1eeddb788bc732a3263ec31}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}}\& k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a81b3a7047f3bb62ab1413afc32d23611}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a81b3a7047f3bb62ab1413afc32d23611}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!\_bindType@{\_bindType}}
+\index{\_bindType@{\_bindType}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{\_bindType}{\_bindType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0d}{Bind\+Type}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+\_\+bind\+Type \{ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f2356a96c7a538fb82166ba626c0da7e62bc342f41c946868f0ea6f0b712d8}{Bind\+Type\+::\+Buffer}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_ae45e6c9ef60b6c45a8e3584c65db46f2}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_ae45e6c9ef60b6c45a8e3584c65db46f2}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!\_data@{\_data}}
+\index{\_data@{\_data}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionk_f_1_1_graphics_1_1_memory_allocation_model_1_1_data}{Data}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+\_\+data \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_aee04de1627f17cf5c0a0b7f387ab3efe}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_aee04de1627f17cf5c0a0b7f387ab3efe}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!\_usage@{\_usage}}
+\index{\_usage@{\_usage}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{\_usage}{\_usage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+\_\+usage \{ Memory\+Usage\+::\+Unknown \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_model_8hpp}{Memory\+Allocation\+Model.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_model_8ipp}{Memory\+Allocation\+Model.\+ipp}}\end{DoxyCompactItemize}

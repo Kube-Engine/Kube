@@ -1,0 +1,147 @@
+\hypertarget{_type_8ipp}{}\doxysection{Kube/\+Meta/\+Type.ipp File Reference}
+\label{_type_8ipp}\index{Kube/Meta/Type.ipp@{Kube/Meta/Type.ipp}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_type_8ipp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Op\+Type,  Op,  Condition,  Exact)
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Op\+Type,  Op,  Condition,  Exact)
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a6584142e703816114d5285ea9d9abe10}{Make\+Operator\+If\+Unary}}(Op,  Condition)~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Binary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a683b328e864844092711d66ee43ee53b}{Make\+Operator\+If\+Binary}}(Op,  Condition)~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Binary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_af9adda26833f02a46ae295617c9f2cbf}{Make\+Operator\+If\+Assignment}}(Op,  Condition)~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Assignment, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a1d37715025a31bbf3e642431209440d5}{Make\+Operator\+Unary}}(Op)~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Unary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_afdf34bbe0a16ff9953c836054c73dd6b}{Make\+Operator\+Binary}}(Op)~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Binary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_ac7a9bf2dc6628a092a21532c6108b12b}{Make\+Operator\+Assignment}}(Op)~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Assignment, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a2d23fe616c1fcc7133d920aac08422b9}{Make\+Operator\+Pointerable\+Unary}}(Op)~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Unary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a321213574f6435516d64998fd44047e6}{Make\+Operator\+Pointerable\+Binary}}(Op)~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Binary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_af486d4a9a1bab9b9b6bdfeebd514277d}{Make\+Operator\+Pointerable\+Assignment}}(Op)~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Assignment, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a81992cdc47f353b621575c6ed3e56354}{Make\+Operator\+If\+Pointerable\+Unary}}(Op,  Condition)~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Unary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a348fe63e9500053067d489f5eda8f51d}{Make\+Operator\+If\+Pointerable\+Binary}}(Op,  Condition)~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Binary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
+\item 
+\#define \mbox{\hyperlink{_type_8ipp_a93a1c73e0a8d1c59eea8e164f0db7e31}{Make\+Operator\+If\+Pointerable\+Assignment}}(Op,  Condition)~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Assignment, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_type_8ipp_ac7a9bf2dc6628a092a21532c6108b12b}\label{_type_8ipp_ac7a9bf2dc6628a092a21532c6108b12b}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorAssignment@{MakeOperatorAssignment}}
+\index{MakeOperatorAssignment@{MakeOperatorAssignment}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorAssignment}{MakeOperatorAssignment}}
+{\footnotesize\ttfamily \#define Make\+Operator\+Assignment(\begin{DoxyParamCaption}\item[{}]{Op }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Assignment, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)}
+
+\mbox{\Hypertarget{_type_8ipp_afdf34bbe0a16ff9953c836054c73dd6b}\label{_type_8ipp_afdf34bbe0a16ff9953c836054c73dd6b}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorBinary@{MakeOperatorBinary}}
+\index{MakeOperatorBinary@{MakeOperatorBinary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorBinary}{MakeOperatorBinary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+Binary(\begin{DoxyParamCaption}\item[{}]{Op }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Binary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}\label{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIf@{MakeOperatorIf}}
+\index{MakeOperatorIf@{MakeOperatorIf}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIf}{MakeOperatorIf}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If(\begin{DoxyParamCaption}\item[{}]{Op\+Type,  }\item[{}]{Op,  }\item[{}]{Condition,  }\item[{}]{Exact }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}((!std::is\_same\_v<Type, void>), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}((std::is\_integral\_v<Type> || Condition || (std::experimental::is\_detected\_exact\_v<Exact, Internal::OpType\#\#Op\#\#Check, Type>)), \(\backslash\)}
+\DoxyCodeLine{            (\&Internal::Make\#\#OpType\#\#Operator<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, \&Internal::OpType\#\#Op<Type>, OpType\#\#Operator::Op>), \(\backslash\)}
+\DoxyCodeLine{            \textcolor{keyword}{nullptr} \(\backslash\)}
+\DoxyCodeLine{        ), \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr} \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_type_8ipp_af9adda26833f02a46ae295617c9f2cbf}\label{_type_8ipp_af9adda26833f02a46ae295617c9f2cbf}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfAssignment@{MakeOperatorIfAssignment}}
+\index{MakeOperatorIfAssignment@{MakeOperatorIfAssignment}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfAssignment}{MakeOperatorIfAssignment}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Assignment(\begin{DoxyParamCaption}\item[{}]{Op,  }\item[{}]{Condition }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Assignment, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)}
+
+\mbox{\Hypertarget{_type_8ipp_a683b328e864844092711d66ee43ee53b}\label{_type_8ipp_a683b328e864844092711d66ee43ee53b}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfBinary@{MakeOperatorIfBinary}}
+\index{MakeOperatorIfBinary@{MakeOperatorIfBinary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfBinary}{MakeOperatorIfBinary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Binary(\begin{DoxyParamCaption}\item[{}]{Op,  }\item[{}]{Condition }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Binary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}\label{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfPointerable@{MakeOperatorIfPointerable}}
+\index{MakeOperatorIfPointerable@{MakeOperatorIfPointerable}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfPointerable}{MakeOperatorIfPointerable}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Pointerable(\begin{DoxyParamCaption}\item[{}]{Op\+Type,  }\item[{}]{Op,  }\item[{}]{Condition,  }\item[{}]{Exact }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}((std::is\_array\_v<Type> || std::is\_pointer\_v<Type>), \(\backslash\)}
+\DoxyCodeLine{        (\&Internal::Make\#\#OpType\#\#Operator<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, \&Internal::OpType\#\#Op\#\#Pointer<Type>, Meta::OpType\#\#Operator::Op>), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{MakeOperatorIf}}(OpType, Op, Condition, Exact) \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_type_8ipp_a93a1c73e0a8d1c59eea8e164f0db7e31}\label{_type_8ipp_a93a1c73e0a8d1c59eea8e164f0db7e31}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfPointerableAssignment@{MakeOperatorIfPointerableAssignment}}
+\index{MakeOperatorIfPointerableAssignment@{MakeOperatorIfPointerableAssignment}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfPointerableAssignment}{MakeOperatorIfPointerableAssignment}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Pointerable\+Assignment(\begin{DoxyParamCaption}\item[{}]{Op,  }\item[{}]{Condition }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Assignment, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)}
+
+\mbox{\Hypertarget{_type_8ipp_a348fe63e9500053067d489f5eda8f51d}\label{_type_8ipp_a348fe63e9500053067d489f5eda8f51d}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfPointerableBinary@{MakeOperatorIfPointerableBinary}}
+\index{MakeOperatorIfPointerableBinary@{MakeOperatorIfPointerableBinary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfPointerableBinary}{MakeOperatorIfPointerableBinary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Pointerable\+Binary(\begin{DoxyParamCaption}\item[{}]{Op,  }\item[{}]{Condition }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Binary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_a81992cdc47f353b621575c6ed3e56354}\label{_type_8ipp_a81992cdc47f353b621575c6ed3e56354}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfPointerableUnary@{MakeOperatorIfPointerableUnary}}
+\index{MakeOperatorIfPointerableUnary@{MakeOperatorIfPointerableUnary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfPointerableUnary}{MakeOperatorIfPointerableUnary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Pointerable\+Unary(\begin{DoxyParamCaption}\item[{}]{Op,  }\item[{}]{Condition }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Unary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_a6584142e703816114d5285ea9d9abe10}\label{_type_8ipp_a6584142e703816114d5285ea9d9abe10}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorIfUnary@{MakeOperatorIfUnary}}
+\index{MakeOperatorIfUnary@{MakeOperatorIfUnary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorIfUnary}{MakeOperatorIfUnary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+If\+Unary(\begin{DoxyParamCaption}\item[{}]{Op,  }\item[{}]{Condition }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Binary, Op, Condition, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_af486d4a9a1bab9b9b6bdfeebd514277d}\label{_type_8ipp_af486d4a9a1bab9b9b6bdfeebd514277d}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorPointerableAssignment@{MakeOperatorPointerableAssignment}}
+\index{MakeOperatorPointerableAssignment@{MakeOperatorPointerableAssignment}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorPointerableAssignment}{MakeOperatorPointerableAssignment}}
+{\footnotesize\ttfamily \#define Make\+Operator\+Pointerable\+Assignment(\begin{DoxyParamCaption}\item[{}]{Op }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Assignment, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&)}
+
+\mbox{\Hypertarget{_type_8ipp_a321213574f6435516d64998fd44047e6}\label{_type_8ipp_a321213574f6435516d64998fd44047e6}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorPointerableBinary@{MakeOperatorPointerableBinary}}
+\index{MakeOperatorPointerableBinary@{MakeOperatorPointerableBinary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorPointerableBinary}{MakeOperatorPointerableBinary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+Pointerable\+Binary(\begin{DoxyParamCaption}\item[{}]{Op }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Binary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_a2d23fe616c1fcc7133d920aac08422b9}\label{_type_8ipp_a2d23fe616c1fcc7133d920aac08422b9}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorPointerableUnary@{MakeOperatorPointerableUnary}}
+\index{MakeOperatorPointerableUnary@{MakeOperatorPointerableUnary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorPointerableUnary}{MakeOperatorPointerableUnary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+Pointerable\+Unary(\begin{DoxyParamCaption}\item[{}]{Op }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_aae0a05f894ef2acc8bf68ff2d3eec68e}{Make\+Operator\+If\+Pointerable}}(Unary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+
+\mbox{\Hypertarget{_type_8ipp_a1d37715025a31bbf3e642431209440d5}\label{_type_8ipp_a1d37715025a31bbf3e642431209440d5}} 
+\index{Type.ipp@{Type.ipp}!MakeOperatorUnary@{MakeOperatorUnary}}
+\index{MakeOperatorUnary@{MakeOperatorUnary}!Type.ipp@{Type.ipp}}
+\doxysubsubsection{\texorpdfstring{MakeOperatorUnary}{MakeOperatorUnary}}
+{\footnotesize\ttfamily \#define Make\+Operator\+Unary(\begin{DoxyParamCaption}\item[{}]{Op }\end{DoxyParamCaption})~\mbox{\hyperlink{_type_8ipp_a8b60b070d716d72d9d85df52ebd784c9}{Make\+Operator\+If}}(Unary, Op, false, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})}
+

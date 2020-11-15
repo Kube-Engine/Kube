@@ -1,0 +1,167 @@
+\hypertarget{namespacek_f}{}\doxysection{kF Namespace Reference}
+\label{namespacek_f}\index{kF@{kF}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{Core}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_e_c_s}{E\+CS}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_flow}{Flow}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_graphics}{Graphics}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_literal}{Literal}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_application}{Application}}
+\begin{DoxyCompactList}\small\item\em Kube \mbox{\hyperlink{classk_f_1_1_application}{Application}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_application}{E\+C\+S\+Application}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_item}{Item}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_object}{Object}}
+\begin{DoxyCompactList}\small\item\em The object class isan abstraction of the meta reflection library on an arbitrary derived class It can be used to query meta properties or connect / emit meta signals. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_s_d_l_initializer}{S\+D\+L\+Initializer}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_var}{Var}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_var}{Var}} is used as a wrapper for any type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_version}{Version}}
+\begin{DoxyCompactList}\small\item\em Structure representation of a version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em The result type of the hash function. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_a942f746884b429de999e3a1d8ee044e1}{Type\+Handle}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{Hash}} (char const $\ast$str, std\+::size\+\_\+t len) noexcept
+\begin{DoxyCompactList}\small\item\em Compile-\/time string hashing. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_a377b071673e645100ac862ccedb1811f}{Hash}} (const char c) noexcept
+\begin{DoxyCompactList}\small\item\em Compile-\/time char hashing. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_ad04e8e38b5985d710b74d8c80371ab16}{Hash}} (const std\+::string\+\_\+view \&str)
+\begin{DoxyCompactList}\small\item\em Compile-\/time string-\/view hashing. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{structk_f_1_1_version}{Version}} \mbox{\hyperlink{namespacek_f_a501e7174016384df9bba869bafa29e91}{Kube\+Version}} (0, 1, 0)
+\item 
+void \mbox{\hyperlink{namespacek_f_a4958e74fb6e0fcf0c0075c34b5bcd17f}{Register\+Metadata}} (void)
+\begin{DoxyCompactList}\small\item\em Registers all base types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_a3079951102eb5ebf975752a29d0962dc}{Hash\+Offset}} = 4294967291u
+\item 
+constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_a7fb97731993ca42eb836a3ea64d68870}{Make\+Instance\+Function\+Name}} = \mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\char`\"{}\+\_\+\+\_\+make\+Ptr\+\_\+\+\_\+\char`\"{})
+\begin{DoxyCompactList}\small\item\em The named used to register \mbox{\hyperlink{classk_f_1_1_item}{Item}} instantiation helper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_application}{Application}} class of Kube framework
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_e_c_s}{E\+CS}} \mbox{\hyperlink{classk_f_1_1_application}{Application}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_s_d_l_initializer}{S\+D\+L\+Initializer}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Kube hash function
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{structk_f_1_1_version}{Version}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Forward all meta classes
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_item}{Item}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Interpreter \mbox{\hyperlink{classk_f_1_1_object}{Object}} interface 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}\label{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}} 
+\index{kF@{kF}!HashedName@{HashedName}}
+\index{HashedName@{HashedName}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{HashedName}{HashedName}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{k\+F\+::\+Hashed\+Name}} = typedef std\+::uint32\+\_\+t}
+
+
+
+The result type of the hash function. 
+
+\mbox{\Hypertarget{namespacek_f_a942f746884b429de999e3a1d8ee044e1}\label{namespacek_f_a942f746884b429de999e3a1d8ee044e1}} 
+\index{kF@{kF}!TypeHandle@{TypeHandle}}
+\index{TypeHandle@{TypeHandle}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{TypeHandle}{TypeHandle}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_a942f746884b429de999e3a1d8ee044e1}{k\+F\+::\+Type\+Handle}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}\label{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}} 
+\index{kF@{kF}!Hash@{Hash}}
+\index{Hash@{Hash}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{Hash()}{Hash()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Hash (\begin{DoxyParamCaption}\item[{char const $\ast$}]{str,  }\item[{std\+::size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Compile-\/time string hashing. 
+
+\mbox{\Hypertarget{namespacek_f_a377b071673e645100ac862ccedb1811f}\label{namespacek_f_a377b071673e645100ac862ccedb1811f}} 
+\index{kF@{kF}!Hash@{Hash}}
+\index{Hash@{Hash}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{Hash()}{Hash()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Hash (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Compile-\/time char hashing. 
+
+\mbox{\Hypertarget{namespacek_f_ad04e8e38b5985d710b74d8c80371ab16}\label{namespacek_f_ad04e8e38b5985d710b74d8c80371ab16}} 
+\index{kF@{kF}!Hash@{Hash}}
+\index{Hash@{Hash}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{Hash()}{Hash()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Hash (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Compile-\/time string-\/view hashing. 
+
+\mbox{\Hypertarget{namespacek_f_a501e7174016384df9bba869bafa29e91}\label{namespacek_f_a501e7174016384df9bba869bafa29e91}} 
+\index{kF@{kF}!KubeVersion@{KubeVersion}}
+\index{KubeVersion@{KubeVersion}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{KubeVersion()}{KubeVersion()}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{structk_f_1_1_version}{Version}} k\+F\+::\+Kube\+Version (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{1}]{,  }\item[{0}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_a4958e74fb6e0fcf0c0075c34b5bcd17f}\label{namespacek_f_a4958e74fb6e0fcf0c0075c34b5bcd17f}} 
+\index{kF@{kF}!RegisterMetadata@{RegisterMetadata}}
+\index{RegisterMetadata@{RegisterMetadata}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{RegisterMetadata()}{RegisterMetadata()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Register\+Metadata (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Registers all base types. 
+
+Registers all base types, returns false if already loaded.
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Reflection interface for K\+U\+BE 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_a3079951102eb5ebf975752a29d0962dc}\label{namespacek_f_a3079951102eb5ebf975752a29d0962dc}} 
+\index{kF@{kF}!HashOffset@{HashOffset}}
+\index{HashOffset@{HashOffset}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{HashOffset}{HashOffset}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Hash\+Offset = 4294967291u\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_a7fb97731993ca42eb836a3ea64d68870}\label{namespacek_f_a7fb97731993ca42eb836a3ea64d68870}} 
+\index{kF@{kF}!MakeInstanceFunctionName@{MakeInstanceFunctionName}}
+\index{MakeInstanceFunctionName@{MakeInstanceFunctionName}!kF@{kF}}
+\doxysubsubsection{\texorpdfstring{MakeInstanceFunctionName}{MakeInstanceFunctionName}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Make\+Instance\+Function\+Name = \mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\char`\"{}\+\_\+\+\_\+make\+Ptr\+\_\+\+\_\+\char`\"{})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+The named used to register \mbox{\hyperlink{classk_f_1_1_item}{Item}} instantiation helper. 
+

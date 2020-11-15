@@ -1,0 +1,184 @@
+\hypertarget{_reflection2_8hpp}{}\doxysection{Kube/\+Object/\+Reflection2.hpp File Reference}
+\label{_reflection2_8hpp}\index{Kube/Object/Reflection2.hpp@{Kube/Object/Reflection2.hpp}}
+{\ttfamily \#include $<$Kube/\+Meta/\+Meta.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}Make.\+hpp\char`\"{}}\newline
+Include dependency graph for Reflection2.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_reflection2_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a55f356508ed81027cc6fd91c2733e458}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER}}(Class\+Type, ...)
+\begin{DoxyCompactList}\small\item\em Register a type to the reflection system. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a329170eb6655234062fe33d3d810593b}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+B\+LE}}(Class\+Type, ...)
+\begin{DoxyCompactList}\small\item\em Register a new type to be instantied by Interpreter (must bean Item-\/derived class) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a2840fe5dd98eebd57318a7bf86267f38}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}}(Class\+Type, ...)~    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{k\+F\+::\+Meta\+::\+Factory}}$<$Class\+Type$>$().meta\+Register(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#Class\+Type)) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ ;
+\begin{DoxyCompactList}\small\item\em Register a new type (already used by \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER\textquotesingle{} and \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+B\+LE\textquotesingle{}) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_aaaef9b32aefdfb2d178d9d1dabe833e4}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+B\+A\+SE}}(Base\+Type)~    .base$<$Base\+Type$>$()
+\begin{DoxyCompactList}\small\item\em Register a base type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a012403d8461b9d617e84ba08f9477bbf}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR}}(...)~    .constructor$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$();
+\begin{DoxyCompactList}\small\item\em Register a custom constructor (not default / copy / move) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_ab897980baa5e4b2c81ad3ee64f49d466}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY}}(Property\+Type,  name)
+\begin{DoxyCompactList}\small\item\em Register a property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a1487782d06f8c6018f8fb83a8b073b96}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE}}(Property\+Type,  name)
+\begin{DoxyCompactList}\small\item\em Register a move only property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_aadb6dd3997c8c57762752de387bc64bf}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}(name)~    .function$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register a function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a62fa2da6537423bfea1902984dcecdc9}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}(name,  Func\+Type)~    .function$<$static\+\_\+cast$<$Func\+Type$>$(\&\+\_\+\+Meta\+Type\+::name)$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register an overloaded function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_reflection2_8hpp_a372d30b554bc38bd89cd47eba06d5108}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+I\+G\+N\+AL}}(name)~    .signal$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacek_f_a4958e74fb6e0fcf0c0075c34b5bcd17f}{k\+F\+::\+Register\+Metadata}} (void)
+\begin{DoxyCompactList}\small\item\em Registers all base types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_reflection2_8hpp_a55f356508ed81027cc6fd91c2733e458}\label{_reflection2_8hpp_a55f356508ed81027cc6fd91c2733e458}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER@{KUBE\_REGISTER}}
+\index{KUBE\_REGISTER@{KUBE\_REGISTER}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER}{KUBE\_REGISTER}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER(\begin{DoxyParamCaption}\item[{}]{Class\+Type,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{private}: \(\backslash\)}
+\DoxyCodeLine{    using \_MetaType = ClassType; \(\backslash\)}
+\DoxyCodeLine{protected: \(\backslash\)}
+\DoxyCodeLine{    [[nodiscard]] \textcolor{keyword}{virtual} \mbox{\hyperlink{classk_f_1_1_var}{kF::Var}} getTypeHandle(\textcolor{keywordtype}{void}) noexcept \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classk_f_1_1_var_a68d55a87fb41aa83001617bc9a6e08e6}{kF::Var::Assign}}(*\textcolor{keyword}{this}); \} \(\backslash\)}
+\DoxyCodeLine{    [[nodiscard]] \textcolor{keyword}{virtual} \mbox{\hyperlink{classk_f_1_1_var}{kF::Var}} getTypeHandle(\textcolor{keywordtype}{void}) \textcolor{keyword}{const} noexcept \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classk_f_1_1_var_a68d55a87fb41aa83001617bc9a6e08e6}{kF::Var::Assign}}(*\textcolor{keyword}{this}); \} \(\backslash\)}
+\DoxyCodeLine{public: \(\backslash\)}
+\DoxyCodeLine{    [[nodiscard]] \textcolor{keyword}{virtual} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{kF::Meta::Type}} getMetaType(\textcolor{keywordtype}{void}) \textcolor{keyword}{const} noexcept \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a57305e73c72c4a0940eb85e21650c7fb}{kF::Meta::Factory<\_MetaType>::Resolve}}(); \} \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacek_f_1_1_meta_aaf6fda97518179111170b8ee78bb475e}{RegisterMetadata}}(\textcolor{keywordtype}{void}) noexcept \{ \mbox{\hyperlink{_reflection2_8hpp_a2840fe5dd98eebd57318a7bf86267f38}{KUBE\_REGISTER\_TYPE}}(ClassType, \_\_VA\_ARGS\_\_) \} \(\backslash\)}
+\DoxyCodeLine{private:}
+
+\end{DoxyCode}
+
+
+Register a type to the reflection system. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Reflection interface for K\+U\+BE \mbox{\Hypertarget{_reflection2_8hpp_aaaef9b32aefdfb2d178d9d1dabe833e4}\label{_reflection2_8hpp_aaaef9b32aefdfb2d178d9d1dabe833e4}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_BASE@{KUBE\_REGISTER\_BASE}}
+\index{KUBE\_REGISTER\_BASE@{KUBE\_REGISTER\_BASE}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_BASE}{KUBE\_REGISTER\_BASE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+B\+A\+SE(\begin{DoxyParamCaption}\item[{}]{Base\+Type }\end{DoxyParamCaption})~    .base$<$Base\+Type$>$()}
+
+
+
+Register a base type. 
+
+\mbox{\Hypertarget{_reflection2_8hpp_a012403d8461b9d617e84ba08f9477bbf}\label{_reflection2_8hpp_a012403d8461b9d617e84ba08f9477bbf}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_CONSTRUCTOR@{KUBE\_REGISTER\_CONSTRUCTOR}}
+\index{KUBE\_REGISTER\_CONSTRUCTOR@{KUBE\_REGISTER\_CONSTRUCTOR}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_CONSTRUCTOR}{KUBE\_REGISTER\_CONSTRUCTOR}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~    .constructor$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$();}
+
+
+
+Register a custom constructor (not default / copy / move) 
+
+\mbox{\Hypertarget{_reflection2_8hpp_aadb6dd3997c8c57762752de387bc64bf}\label{_reflection2_8hpp_aadb6dd3997c8c57762752de387bc64bf}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_FUNCTION@{KUBE\_REGISTER\_FUNCTION}}
+\index{KUBE\_REGISTER\_FUNCTION@{KUBE\_REGISTER\_FUNCTION}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_FUNCTION}{KUBE\_REGISTER\_FUNCTION}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~    .function$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+
+
+
+Register a function. 
+
+\mbox{\Hypertarget{_reflection2_8hpp_a62fa2da6537423bfea1902984dcecdc9}\label{_reflection2_8hpp_a62fa2da6537423bfea1902984dcecdc9}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_FUNCTION\_OVERLOAD@{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}}
+\index{KUBE\_REGISTER\_FUNCTION\_OVERLOAD@{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{Func\+Type }\end{DoxyParamCaption})~    .function$<$static\+\_\+cast$<$Func\+Type$>$(\&\+\_\+\+Meta\+Type\+::name)$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+
+
+
+Register an overloaded function. 
+
+\mbox{\Hypertarget{_reflection2_8hpp_a329170eb6655234062fe33d3d810593b}\label{_reflection2_8hpp_a329170eb6655234062fe33d3d810593b}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_INSTANTIABLE@{KUBE\_REGISTER\_INSTANTIABLE}}
+\index{KUBE\_REGISTER\_INSTANTIABLE@{KUBE\_REGISTER\_INSTANTIABLE}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_INSTANTIABLE}{KUBE\_REGISTER\_INSTANTIABLE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+B\+LE(\begin{DoxyParamCaption}\item[{}]{Class\+Type,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{static} \mbox{\hyperlink{classk_f_1_1_item}{kF::Item}} *MakeInstance(\textcolor{keywordtype}{void}) \{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} ClassType(); \} \(\backslash\)}
+\DoxyCodeLine{    KUBE\_REGISTER(ClassType, \(\backslash\)}
+\DoxyCodeLine{        .function<\&ClassType::MakeInstance>(\mbox{\hyperlink{namespacek_f_a7fb97731993ca42eb836a3ea64d68870}{kF::MakeInstanceFunctionName}}) \(\backslash\)}
+\DoxyCodeLine{        \_\_VA\_ARGS\_\_ \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Register a new type to be instantied by Interpreter (must bean Item-\/derived class) 
+
+\mbox{\Hypertarget{_reflection2_8hpp_ab897980baa5e4b2c81ad3ee64f49d466}\label{_reflection2_8hpp_ab897980baa5e4b2c81ad3ee64f49d466}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_PROPERTY\_COPY@{KUBE\_REGISTER\_PROPERTY\_COPY}}
+\index{KUBE\_REGISTER\_PROPERTY\_COPY@{KUBE\_REGISTER\_PROPERTY\_COPY}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_COPY}{KUBE\_REGISTER\_PROPERTY\_COPY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    .data< \(\backslash\)}
+\DoxyCodeLine{        static\_cast<const PropertyType \&(\_MetaType::*)(void) const noexcept>(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        static\_cast<bool(\_MetaType::*)(const PropertyType \&)>(\&\_MetaType::name) \(\backslash\)}
+\DoxyCodeLine{    >(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{kF::Hash}}(\#name)) \(\backslash\)}
+\DoxyCodeLine{    \mbox{\hyperlink{_reflection2_8hpp_a372d30b554bc38bd89cd47eba06d5108}{KUBE\_REGISTER\_SIGNAL}}(name\#\#Changed)}
+
+\end{DoxyCode}
+
+
+Register a property. 
+
+\mbox{\Hypertarget{_reflection2_8hpp_a1487782d06f8c6018f8fb83a8b073b96}\label{_reflection2_8hpp_a1487782d06f8c6018f8fb83a8b073b96}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_PROPERTY\_MOVE@{KUBE\_REGISTER\_PROPERTY\_MOVE}}
+\index{KUBE\_REGISTER\_PROPERTY\_MOVE@{KUBE\_REGISTER\_PROPERTY\_MOVE}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_MOVE}{KUBE\_REGISTER\_PROPERTY\_MOVE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    .data< \(\backslash\)}
+\DoxyCodeLine{        static\_cast<const PropertyType \&(\_MetaType::*)(void) const noexcept>(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        static\_cast<bool(\_MetaType::*)(PropertyType \&\&)>(\&\_MetaType::name) \(\backslash\)}
+\DoxyCodeLine{    >(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{kF::Hash}}(\#name)) \(\backslash\)}
+\DoxyCodeLine{    \mbox{\hyperlink{_reflection2_8hpp_a372d30b554bc38bd89cd47eba06d5108}{KUBE\_REGISTER\_SIGNAL}}(name\#\#Changed)}
+
+\end{DoxyCode}
+
+
+Register a move only property. 
+
+\mbox{\Hypertarget{_reflection2_8hpp_a372d30b554bc38bd89cd47eba06d5108}\label{_reflection2_8hpp_a372d30b554bc38bd89cd47eba06d5108}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_SIGNAL@{KUBE\_REGISTER\_SIGNAL}}
+\index{KUBE\_REGISTER\_SIGNAL@{KUBE\_REGISTER\_SIGNAL}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_SIGNAL}{KUBE\_REGISTER\_SIGNAL}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+I\+G\+N\+AL(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~    .signal$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+
+\mbox{\Hypertarget{_reflection2_8hpp_a2840fe5dd98eebd57318a7bf86267f38}\label{_reflection2_8hpp_a2840fe5dd98eebd57318a7bf86267f38}} 
+\index{Reflection2.hpp@{Reflection2.hpp}!KUBE\_REGISTER\_TYPE@{KUBE\_REGISTER\_TYPE}}
+\index{KUBE\_REGISTER\_TYPE@{KUBE\_REGISTER\_TYPE}!Reflection2.hpp@{Reflection2.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_TYPE}{KUBE\_REGISTER\_TYPE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{Class\+Type,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{k\+F\+::\+Meta\+::\+Factory}}$<$Class\+Type$>$().meta\+Register(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#Class\+Type)) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ ;}
+
+
+
+Register a new type (already used by \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER\textquotesingle{} and \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+B\+LE\textquotesingle{}) 
+

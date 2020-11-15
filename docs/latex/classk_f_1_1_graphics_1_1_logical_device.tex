@@ -1,0 +1,144 @@
+\hypertarget{classk_f_1_1_graphics_1_1_logical_device}{}\doxysection{kF\+::Graphics\+::Logical\+Device Class Reference}
+\label{classk_f_1_1_graphics_1_1_logical_device}\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+
+
+The logical device abstracts the communication with a physical device.  
+
+
+
+
+{\ttfamily \#include $<$Logical\+Device.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Logical\+Device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_logical_device__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_a5af62c31b60d912c3e9ba8ddbc5e54b8}{Extensions}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ const char $\ast$ $>$
+\begin{DoxyCompactList}\small\item\em Logical device extension list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_afb8d070a9c1e53983343a9c3fdced679}{Logical\+Device}} (void)
+\begin{DoxyCompactList}\small\item\em Create a logical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_aa6b01c85c1311d6009683a25a6684169}{Logical\+Device}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_a28536f32de11703e7de35e5e23d8d45b}{$\sim$\+Logical\+Device}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the logical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_adccad7479112ebd6c90a631dc668bc83}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_acec15a450ffe8cd0b9ff2184c8622c64}{wait\+Idle}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Wait until logical device is I\+D\+LE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_af1b7aaf7bcd655898e7af468ee777069}{create\+Logical\+Device}} (void)
+\begin{DoxyCompactList}\small\item\em Create a logical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_a5af62c31b60d912c3e9ba8ddbc5e54b8}{Extensions}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_a603055aea607d28dfc79ff0eb8262271}{get\+Extensions}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the supported extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The logical device abstracts the communication with a physical device. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_a5af62c31b60d912c3e9ba8ddbc5e54b8}\label{classk_f_1_1_graphics_1_1_logical_device_a5af62c31b60d912c3e9ba8ddbc5e54b8}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!Extensions@{Extensions}}
+\index{Extensions@{Extensions}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{Extensions}{Extensions}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_a5af62c31b60d912c3e9ba8ddbc5e54b8}{k\+F\+::\+Graphics\+::\+Logical\+Device\+::\+Extensions}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$const char $\ast$$>$}
+
+
+
+Logical device extension list. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_afb8d070a9c1e53983343a9c3fdced679}\label{classk_f_1_1_graphics_1_1_logical_device_afb8d070a9c1e53983343a9c3fdced679}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!LogicalDevice@{LogicalDevice}}
+\index{LogicalDevice@{LogicalDevice}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{LogicalDevice()}{LogicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Logical\+Device\+::\+Logical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a logical device. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_aa6b01c85c1311d6009683a25a6684169}\label{classk_f_1_1_graphics_1_1_logical_device_aa6b01c85c1311d6009683a25a6684169}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!LogicalDevice@{LogicalDevice}}
+\index{LogicalDevice@{LogicalDevice}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{LogicalDevice()}{LogicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Logical\+Device\+::\+Logical\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_a28536f32de11703e7de35e5e23d8d45b}\label{classk_f_1_1_graphics_1_1_logical_device_a28536f32de11703e7de35e5e23d8d45b}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!````~LogicalDevice@{$\sim$LogicalDevice}}
+\index{````~LogicalDevice@{$\sim$LogicalDevice}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogicalDevice()}{~LogicalDevice()}}
+{\footnotesize\ttfamily Graphics\+::\+Logical\+Device\+::$\sim$\+Logical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the logical device. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_af1b7aaf7bcd655898e7af468ee777069}\label{classk_f_1_1_graphics_1_1_logical_device_af1b7aaf7bcd655898e7af468ee777069}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!createLogicalDevice@{createLogicalDevice}}
+\index{createLogicalDevice@{createLogicalDevice}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{createLogicalDevice()}{createLogicalDevice()}}
+{\footnotesize\ttfamily void Graphics\+::\+Logical\+Device\+::create\+Logical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a logical device. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_a603055aea607d28dfc79ff0eb8262271}\label{classk_f_1_1_graphics_1_1_logical_device_a603055aea607d28dfc79ff0eb8262271}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!getExtensions@{getExtensions}}
+\index{getExtensions@{getExtensions}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{getExtensions()}{getExtensions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device_a5af62c31b60d912c3e9ba8ddbc5e54b8}{Graphics\+::\+Logical\+Device\+::\+Extensions}} Graphics\+::\+Logical\+Device\+::get\+Extensions (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the supported extensions. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_adccad7479112ebd6c90a631dc668bc83}\label{classk_f_1_1_graphics_1_1_logical_device_adccad7479112ebd6c90a631dc668bc83}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}}\& k\+F\+::\+Graphics\+::\+Logical\+Device\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_logical_device}{Logical\+Device}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_logical_device_acec15a450ffe8cd0b9ff2184c8622c64}\label{classk_f_1_1_graphics_1_1_logical_device_acec15a450ffe8cd0b9ff2184c8622c64}} 
+\index{kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}!waitIdle@{waitIdle}}
+\index{waitIdle@{waitIdle}!kF::Graphics::LogicalDevice@{kF::Graphics::LogicalDevice}}
+\doxysubsubsection{\texorpdfstring{waitIdle()}{waitIdle()}}
+{\footnotesize\ttfamily void Graphics\+::\+Logical\+Device\+::wait\+Idle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Wait until logical device is I\+D\+LE. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_logical_device_8hpp}{Logical\+Device.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_logical_device_8cpp}{Logical\+Device.\+cpp}}\end{DoxyCompactItemize}

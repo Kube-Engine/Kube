@@ -1,0 +1,326 @@
+\hypertarget{classk_f_1_1_core_1_1_flat_string_base}{}\doxysection{kF\+::Core\+::Flat\+String\+Base$<$ Type $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_flat_string_base}\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+
+
+Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings.  
+
+
+
+
+{\ttfamily \#include $<$Flat\+String.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a0c589d966a2a1af7d27daefcabf65020}{Flat\+String\+Base}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a2391a31683136d1632a44fdabbd9e72c}{Flat\+String\+Base}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a1bbdb464c9c3309c23c5eb23e518a91d}{Flat\+String\+Base}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a7393265a1a103e46c8b0c94ebaeb2a5c}{Flat\+String\+Base}} (const char $\ast$const cstring) noexcept
+\begin{DoxyCompactList}\small\item\em C\+String constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a7115b69bd31e60f50b4627433a288222}{Flat\+String\+Base}} (const char $\ast$const cstring, const std\+::size\+\_\+t length) noexcept
+\begin{DoxyCompactList}\small\item\em C\+String length constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_aa6772d1e650c1308d9e6f5cf5f64e4b2}{Flat\+String\+Base}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a80bb95fba92fd37090d8f3a2333965dc}{Flat\+String\+Base}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string\+\_\+view constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a32a37fe6ebce51653711ddcb2918fb0e}{$\sim$\+Flat\+String\+Base}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_adf8717ca79f1bf18c962a129e0b65b46}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a52af93245d23bc331e858f3dd8149174}{operator=}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_ab61cda3f2b34b2b1cc3a06e45366347e}{operator=}} (const char $\ast$const cstring) noexcept
+\begin{DoxyCompactList}\small\item\em cstring assignment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a7077f21eb43b93686ee9365ae54d8f6d}{operator=}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string assignment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a64e37d90154277bd8476121b13f5e064}{operator=}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string\+\_\+view assignment \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a80b8856231f50af8054336b4d71b2e32}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a0dbaf07dc8b3772845c5194f4d8155b7}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} \&other) const noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_ad0494a68df62ff8e69dcb3f0e4f965ce}{operator==}} (const char $\ast$const cstring) const noexcept
+\begin{DoxyCompactList}\small\item\em cstring comparison operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a2f370cc47dc2859a0c69e512d248ebc9}{operator!=}} (const char $\ast$const cstring) const noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a395d4c3581c0d9301b77428792b4ab2d}{operator==}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string comparison operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a93355a4603468a6112ca738357e58ba6}{operator!=}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a21ad6e577c5a7157eaf5d8af7c2a9a0c}{operator==}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string\+\_\+view comparison operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a5667a3cba951851418a33586bc7494fb}{operator!=}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\item 
+std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_a991afa6cbcad37606dd302ead389640b}{to\+Std\+View}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get a std\+::string from the object. \end{DoxyCompactList}\item 
+std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_ae29fd6cd408f182f4f8e2cf5abf12e35}{to\+Std\+String}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get a std\+::string\+\_\+view of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base_afb7a353e2bbf56323d530557ea9eb4c5}{Safe\+Strlen}} (const char $\ast$const cstring) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+class k\+F\+::\+Core\+::\+Flat\+String\+Base$<$ Type $>$}
+
+Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a0c589d966a2a1af7d27daefcabf65020}\label{classk_f_1_1_core_1_1_flat_string_base_a0c589d966a2a1af7d27daefcabf65020}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a2391a31683136d1632a44fdabbd9e72c}\label{classk_f_1_1_core_1_1_flat_string_base_a2391a31683136d1632a44fdabbd9e72c}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a1bbdb464c9c3309c23c5eb23e518a91d}\label{classk_f_1_1_core_1_1_flat_string_base_a1bbdb464c9c3309c23c5eb23e518a91d}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a7393265a1a103e46c8b0c94ebaeb2a5c}\label{classk_f_1_1_core_1_1_flat_string_base_a7393265a1a103e46c8b0c94ebaeb2a5c}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+C\+String constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a7115b69bd31e60f50b4627433a288222}\label{classk_f_1_1_core_1_1_flat_string_base_a7115b69bd31e60f50b4627433a288222}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring,  }\item[{const std\+::size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+C\+String length constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_aa6772d1e650c1308d9e6f5cf5f64e4b2}\label{classk_f_1_1_core_1_1_flat_string_base_aa6772d1e650c1308d9e6f5cf5f64e4b2}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string constructor 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a80bb95fba92fd37090d8f3a2333965dc}\label{classk_f_1_1_core_1_1_flat_string_base_a80bb95fba92fd37090d8f3a2333965dc}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase()}{FlatStringBase()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string\+\_\+view constructor 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a32a37fe6ebce51653711ddcb2918fb0e}\label{classk_f_1_1_core_1_1_flat_string_base_a32a37fe6ebce51653711ddcb2918fb0e}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!````~FlatStringBase@{$\sim$FlatStringBase}}
+\index{````~FlatStringBase@{$\sim$FlatStringBase}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$FlatStringBase()}{~FlatStringBase()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a2f370cc47dc2859a0c69e512d248ebc9}\label{classk_f_1_1_core_1_1_flat_string_base_a2f370cc47dc2859a0c69e512d248ebc9}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a0dbaf07dc8b3772845c5194f4d8155b7}\label{classk_f_1_1_core_1_1_flat_string_base_a0dbaf07dc8b3772845c5194f4d8155b7}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a93355a4603468a6112ca738357e58ba6}\label{classk_f_1_1_core_1_1_flat_string_base_a93355a4603468a6112ca738357e58ba6}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a5667a3cba951851418a33586bc7494fb}\label{classk_f_1_1_core_1_1_flat_string_base_a5667a3cba951851418a33586bc7494fb}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_ab61cda3f2b34b2b1cc3a06e45366347e}\label{classk_f_1_1_core_1_1_flat_string_base_ab61cda3f2b34b2b1cc3a06e45366347e}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+cstring assignment 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_adf8717ca79f1bf18c962a129e0b65b46}\label{classk_f_1_1_core_1_1_flat_string_base_adf8717ca79f1bf18c962a129e0b65b46}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a7077f21eb43b93686ee9365ae54d8f6d}\label{classk_f_1_1_core_1_1_flat_string_base_a7077f21eb43b93686ee9365ae54d8f6d}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string assignment 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a64e37d90154277bd8476121b13f5e064}\label{classk_f_1_1_core_1_1_flat_string_base_a64e37d90154277bd8476121b13f5e064}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string\+\_\+view assignment 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a52af93245d23bc331e858f3dd8149174}\label{classk_f_1_1_core_1_1_flat_string_base_a52af93245d23bc331e858f3dd8149174}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_ad0494a68df62ff8e69dcb3f0e4f965ce}\label{classk_f_1_1_core_1_1_flat_string_base_ad0494a68df62ff8e69dcb3f0e4f965ce}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+cstring comparison operator 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a80b8856231f50af8054336b4d71b2e32}\label{classk_f_1_1_core_1_1_flat_string_base_a80b8856231f50af8054336b4d71b2e32}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Comparison operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a395d4c3581c0d9301b77428792b4ab2d}\label{classk_f_1_1_core_1_1_flat_string_base_a395d4c3581c0d9301b77428792b4ab2d}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string comparison operator 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a21ad6e577c5a7157eaf5d8af7c2a9a0c}\label{classk_f_1_1_core_1_1_flat_string_base_a21ad6e577c5a7157eaf5d8af7c2a9a0c}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string\+\_\+view comparison operator 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_afb7a353e2bbf56323d530557ea9eb4c5}\label{classk_f_1_1_core_1_1_flat_string_base_afb7a353e2bbf56323d530557ea9eb4c5}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!SafeStrlen@{SafeStrlen}}
+\index{SafeStrlen@{SafeStrlen}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{SafeStrlen()}{SafeStrlen()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+static std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::Safe\+Strlen (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_ae29fd6cd408f182f4f8e2cf5abf12e35}\label{classk_f_1_1_core_1_1_flat_string_base_ae29fd6cd408f182f4f8e2cf5abf12e35}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!toStdString@{toStdString}}
+\index{toStdString@{toStdString}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{toStdString()}{toStdString()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::basic\+\_\+string\+\_\+view$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::to\+Std\+String (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get a std\+::string\+\_\+view of the object. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_flat_string_base_a991afa6cbcad37606dd302ead389640b}\label{classk_f_1_1_core_1_1_flat_string_base_a991afa6cbcad37606dd302ead389640b}} 
+\index{kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}!toStdView@{toStdView}}
+\index{toStdView@{toStdView}!kF::Core::FlatStringBase$<$ Type $>$@{kF::Core::FlatStringBase$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{toStdView()}{toStdView()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::basic\+\_\+string$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::to\+Std\+View (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get a std\+::string from the object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_flat_string_8hpp}{Flat\+String.\+hpp}}\end{DoxyCompactItemize}

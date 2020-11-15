@@ -1,0 +1,8 @@
+<map id="kF::Graphics::Framebuffer" name="kF::Graphics::Framebuffer">
+<area shape="rect" id="node1" title="Abstract a frame buffer." alt="" coords="45,1113,219,1249"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title=" " alt="" coords="39,972,225,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,208,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="93,5,278,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="153,307,356,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title="Vulkan handle that inherits from RendererObject." alt="" coords="155,817,341,909"/>
+</map>

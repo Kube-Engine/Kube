@@ -1,0 +1,30 @@
+\hypertarget{_s_p_s_c_queue_8hpp}{}\doxysection{Kube/\+Core/\+S\+P\+S\+C\+Queue.hpp File Reference}
+\label{_s_p_s_c_queue_8hpp}\index{Kube/Core/SPSCQueue.hpp@{Kube/Core/SPSCQueue.hpp}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+S\+C\+Queue.\+ipp\char`\"{}}\newline
+Include dependency graph for S\+P\+S\+C\+Queue.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_p_s_c_queue_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em The S\+P\+SC queue is a lock-\/free queue that only supports a Single Producer and a Single Consumer The queue is really fast compared to other more flexible implementations because the fact that only two thread can simultaneously read / write means that less synchronization is needed for each operation. The queue supports ranged push / pop to insert multiple elements without performance impact. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_buffer}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue$<$ Type $>$\+::\+Buffer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_buffer}{Buffer}} structure containing all cells. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_cache}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue$<$ Type $>$\+::\+Cache}}
+\begin{DoxyCompactList}\small\item\em Local thread cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}

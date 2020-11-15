@@ -1,0 +1,72 @@
+\hypertarget{_assert_8hpp}{}\doxysection{Kube/\+Core/\+Assert.hpp File Reference}
+\label{_assert_8hpp}\index{Kube/Core/Assert.hpp@{Kube/Core/Assert.hpp}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_assert_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_assert_8hpp_a9f797ea311e45923afc411e8ed641cbb}{K\+U\+B\+E\+\_\+\+D\+E\+B\+U\+G\+\_\+\+B\+U\+I\+LD}}~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+\#define \mbox{\hyperlink{_assert_8hpp_a7c3ac9bc75d48b084396788b131b14e7}{k\+F\+Assert}}(expression,  on\+Error)~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} (!(expression)) on\+Error
+\item 
+\#define \mbox{\hyperlink{_assert_8hpp_a66747ae59db34fbdd160fc98ad7e2acd}{k\+F\+Assert\+Fallback}}(expression,  on\+Fallback,  on\+Error)~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} (!(expression)) \{ on\+Fallback; on\+Error; \}
+\item 
+\#define \mbox{\hyperlink{_assert_8hpp_aceeae49ea7db6f4ab7ef3012f7317b1b}{k\+F\+Debug\+Throw}}(exception)~throw exception;
+\item 
+\#define \mbox{\hyperlink{_assert_8hpp_a80720fe8fbae53fe7abf7aa1775fdc47}{nothrow\+\_\+ndebug}}~!\mbox{\hyperlink{_assert_8hpp_a9f797ea311e45923afc411e8ed641cbb}{K\+U\+B\+E\+\_\+\+D\+E\+B\+U\+G\+\_\+\+B\+U\+I\+LD}}
+\begin{DoxyCompactList}\small\item\em Exception helper. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_assert_8hpp_a2907659acb7f16cc3dba12d59b613d70}{noexcept\+\_\+ndebug}}~noexcept(\mbox{\hyperlink{_assert_8hpp_a80720fe8fbae53fe7abf7aa1775fdc47}{nothrow\+\_\+ndebug}})
+\begin{DoxyCompactList}\small\item\em Helper to make a function noexcept only in release. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_assert_8hpp_a7c3ac9bc75d48b084396788b131b14e7}\label{_assert_8hpp_a7c3ac9bc75d48b084396788b131b14e7}} 
+\index{Assert.hpp@{Assert.hpp}!kFAssert@{kFAssert}}
+\index{kFAssert@{kFAssert}!Assert.hpp@{Assert.hpp}}
+\doxysubsubsection{\texorpdfstring{kFAssert}{kFAssert}}
+{\footnotesize\ttfamily \#define k\+F\+Assert(\begin{DoxyParamCaption}\item[{}]{expression,  }\item[{}]{on\+Error }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} (!(expression)) on\+Error}
+
+\mbox{\Hypertarget{_assert_8hpp_a66747ae59db34fbdd160fc98ad7e2acd}\label{_assert_8hpp_a66747ae59db34fbdd160fc98ad7e2acd}} 
+\index{Assert.hpp@{Assert.hpp}!kFAssertFallback@{kFAssertFallback}}
+\index{kFAssertFallback@{kFAssertFallback}!Assert.hpp@{Assert.hpp}}
+\doxysubsubsection{\texorpdfstring{kFAssertFallback}{kFAssertFallback}}
+{\footnotesize\ttfamily \#define k\+F\+Assert\+Fallback(\begin{DoxyParamCaption}\item[{}]{expression,  }\item[{}]{on\+Fallback,  }\item[{}]{on\+Error }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} (!(expression)) \{ on\+Fallback; on\+Error; \}}
+
+\mbox{\Hypertarget{_assert_8hpp_aceeae49ea7db6f4ab7ef3012f7317b1b}\label{_assert_8hpp_aceeae49ea7db6f4ab7ef3012f7317b1b}} 
+\index{Assert.hpp@{Assert.hpp}!kFDebugThrow@{kFDebugThrow}}
+\index{kFDebugThrow@{kFDebugThrow}!Assert.hpp@{Assert.hpp}}
+\doxysubsubsection{\texorpdfstring{kFDebugThrow}{kFDebugThrow}}
+{\footnotesize\ttfamily \#define k\+F\+Debug\+Throw(\begin{DoxyParamCaption}\item[{}]{exception }\end{DoxyParamCaption})~throw exception;}
+
+\mbox{\Hypertarget{_assert_8hpp_a9f797ea311e45923afc411e8ed641cbb}\label{_assert_8hpp_a9f797ea311e45923afc411e8ed641cbb}} 
+\index{Assert.hpp@{Assert.hpp}!KUBE\_DEBUG\_BUILD@{KUBE\_DEBUG\_BUILD}}
+\index{KUBE\_DEBUG\_BUILD@{KUBE\_DEBUG\_BUILD}!Assert.hpp@{Assert.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_DEBUG\_BUILD}{KUBE\_DEBUG\_BUILD}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+D\+E\+B\+U\+G\+\_\+\+B\+U\+I\+LD~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Assert helper \mbox{\Hypertarget{_assert_8hpp_a2907659acb7f16cc3dba12d59b613d70}\label{_assert_8hpp_a2907659acb7f16cc3dba12d59b613d70}} 
+\index{Assert.hpp@{Assert.hpp}!noexcept\_ndebug@{noexcept\_ndebug}}
+\index{noexcept\_ndebug@{noexcept\_ndebug}!Assert.hpp@{Assert.hpp}}
+\doxysubsubsection{\texorpdfstring{noexcept\_ndebug}{noexcept\_ndebug}}
+{\footnotesize\ttfamily \#define noexcept\+\_\+ndebug~noexcept(\mbox{\hyperlink{_assert_8hpp_a80720fe8fbae53fe7abf7aa1775fdc47}{nothrow\+\_\+ndebug}})}
+
+
+
+Helper to make a function noexcept only in release. 
+
+\mbox{\Hypertarget{_assert_8hpp_a80720fe8fbae53fe7abf7aa1775fdc47}\label{_assert_8hpp_a80720fe8fbae53fe7abf7aa1775fdc47}} 
+\index{Assert.hpp@{Assert.hpp}!nothrow\_ndebug@{nothrow\_ndebug}}
+\index{nothrow\_ndebug@{nothrow\_ndebug}!Assert.hpp@{Assert.hpp}}
+\doxysubsubsection{\texorpdfstring{nothrow\_ndebug}{nothrow\_ndebug}}
+{\footnotesize\ttfamily \#define nothrow\+\_\+ndebug~!\mbox{\hyperlink{_assert_8hpp_a9f797ea311e45923afc411e8ed641cbb}{K\+U\+B\+E\+\_\+\+D\+E\+B\+U\+G\+\_\+\+B\+U\+I\+LD}}}
+
+
+
+Exception helper. 
+

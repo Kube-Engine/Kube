@@ -1,0 +1,41 @@
+\hypertarget{_flat_string_8hpp}{}\doxysection{Kube/\+Core/\+Flat\+String.hpp File Reference}
+\label{_flat_string_8hpp}\index{Kube/Core/FlatString.hpp@{Kube/Core/FlatString.hpp}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}Flat\+Vector.\+hpp\char`\"{}}\newline
+Include dependency graph for Flat\+String.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_flat_string_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_flat_string_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{k\+F\+::\+Core\+::\+Flat\+String}} = Flat\+String\+Base$<$ char $>$
+\end{DoxyCompactItemize}

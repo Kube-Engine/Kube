@@ -1,0 +1,129 @@
+\hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout}{}\doxysection{kF\+::Graphics\+::Descriptor\+Set\+Layout Class Reference}
+\label{classk_f_1_1_graphics_1_1_descriptor_set_layout}\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+
+
+Abstract an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}}.  
+
+
+
+
+{\ttfamily \#include $<$Descriptor\+Set\+Layout.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Descriptor\+Set\+Layout\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_descriptor_set_layout__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Bindings$>$ }\\\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_af41a1083b1621d5f21dd278d7c0259d0}{requires}} (... \&\&std\+::is\+\_\+same\+\_\+v$<$ Bindings, \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_set_layout_binding}{Descriptor\+Set\+Layout\+Binding}} $>$) static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} Make(const \mbox{\hyperlink{namespacek_f_1_1_graphics_ab1347d10b7ead3a47ccbd28cffd665d9}{Descriptor\+Set\+Layout\+Create\+Flags}} flags
+\begin{DoxyCompactList}\small\item\em Helper that construct a descriptor set layout out of descriptor set layout bindings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_aee5f17f598860f3df7b2c539705a7e11}{Descriptor\+Set\+Layout}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_set_layout_model}{Descriptor\+Set\+Layout\+Model}} model)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_ae7e042c5c88ad7678aaddfff86daff19}{Descriptor\+Set\+Layout}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} \&\&other) \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_a05d2d638a86f65e4b741629e095f3efe}{noexcept}}=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_a1c9c8c82f0682dd7baee071bd05c663f}{$\sim$\+Descriptor\+Set\+Layout}} (void) \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_a05d2d638a86f65e4b741629e095f3efe}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_aae703484fdb8ae715e842172802d9ca5}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} \&\&other) \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_a05d2d638a86f65e4b741629e095f3efe}{noexcept}}=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Bindings \&\&bindings \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_a05d2d638a86f65e4b741629e095f3efe}{noexcept}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout_a0c3d07b030e87d42141153380dd8c660}{create\+Descriptor\+Set\+Layout}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_set_layout_model}{Descriptor\+Set\+Layout\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_aee5f17f598860f3df7b2c539705a7e11}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_aee5f17f598860f3df7b2c539705a7e11}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!DescriptorSetLayout@{DescriptorSetLayout}}
+\index{DescriptorSetLayout@{DescriptorSetLayout}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{DescriptorSetLayout()}{DescriptorSetLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+::\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_set_layout_model}{Descriptor\+Set\+Layout\+Model}}}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_ae7e042c5c88ad7678aaddfff86daff19}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_ae7e042c5c88ad7678aaddfff86daff19}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!DescriptorSetLayout@{DescriptorSetLayout}}
+\index{DescriptorSetLayout@{DescriptorSetLayout}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{DescriptorSetLayout()}{DescriptorSetLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+::\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_a1c9c8c82f0682dd7baee071bd05c663f}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_a1c9c8c82f0682dd7baee071bd05c663f}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!````~DescriptorSetLayout@{$\sim$DescriptorSetLayout}}
+\index{````~DescriptorSetLayout@{$\sim$DescriptorSetLayout}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{$\sim$DescriptorSetLayout()}{~DescriptorSetLayout()}}
+{\footnotesize\ttfamily Graphics\+::\+Descriptor\+Set\+Layout\+::$\sim$\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_a0c3d07b030e87d42141153380dd8c660}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_a0c3d07b030e87d42141153380dd8c660}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!createDescriptorSetLayout@{createDescriptorSetLayout}}
+\index{createDescriptorSetLayout@{createDescriptorSetLayout}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{createDescriptorSetLayout()}{createDescriptorSetLayout()}}
+{\footnotesize\ttfamily void Graphics\+::\+Descriptor\+Set\+Layout\+::create\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_set_layout_model}{Descriptor\+Set\+Layout\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_aae703484fdb8ae715e842172802d9ca5}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_aae703484fdb8ae715e842172802d9ca5}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}}\& k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_set_layout}{Descriptor\+Set\+Layout}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_af41a1083b1621d5f21dd278d7c0259d0}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_af41a1083b1621d5f21dd278d7c0259d0}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!requires@{requires}}
+\index{requires@{requires}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}}
+{\footnotesize\ttfamily template$<$typename ... Bindings$>$ \\
+k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+::requires (\begin{DoxyParamCaption}\item[{... \&\&std\+::is\+\_\+same\+\_\+v$<$ Bindings, \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_set_layout_binding}{Descriptor\+Set\+Layout\+Binding}} $>$}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Helper that construct a descriptor set layout out of descriptor set layout bindings. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_set_layout_a05d2d638a86f65e4b741629e095f3efe}\label{classk_f_1_1_graphics_1_1_descriptor_set_layout_a05d2d638a86f65e4b741629e095f3efe}} 
+\index{kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}!noexcept@{noexcept}}
+\index{noexcept@{noexcept}!kF::Graphics::DescriptorSetLayout@{kF::Graphics::DescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{noexcept}{noexcept}}
+{\footnotesize\ttfamily Bindings\&\& bindings k\+F\+::\+Graphics\+::\+Descriptor\+Set\+Layout\+::noexcept}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_descriptor_set_layout_8hpp}{Descriptor\+Set\+Layout.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_descriptor_set_layout_8cpp}{Descriptor\+Set\+Layout.\+cpp}}\end{DoxyCompactItemize}

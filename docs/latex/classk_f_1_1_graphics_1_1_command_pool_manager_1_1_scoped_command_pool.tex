@@ -1,0 +1,167 @@
+\hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{}\doxysection{kF\+::Graphics\+::Command\+Pool\+Manager\+::Scoped\+Command\+Pool Class Reference}
+\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+
+
+This class allow to use a command pool in its scope before releasing it in the manager.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Pool\+Manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a68e988862c80847385e084409684097b}{Scoped\+Command\+Pool}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_afbdd7521ce42115f0d66fdd9db8a1a34}{Scoped\+Command\+Pool}} (\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$const node, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} $\ast$const manager) noexcept
+\begin{DoxyCompactList}\small\item\em Acquire constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a8a438f85afd90b4c4146ce99e5520953}{Scoped\+Command\+Pool}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a3efaca7f7b56f325a87bc5199076d155}{$\sim$\+Scoped\+Command\+Pool}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Release destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_ad404420abf3845f7e7a8ce9d5c267a27}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aaac0a00b9d0272041fab9534198cbfc8}{swap}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a5cc52e8347d2dc00c24417ac18a6410b}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast empty check. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a89246972d158d88488ac9701b90d77d9}{operator-\/$>$}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get internal pool. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a8e9a8c5c35b5b76f3e0eaf667336e65f}{operator-\/$>$}} (void) const noexcept
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aa5e623fbbaf29b3ed1e81b3fc70bf1ce}{release}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Release the acquired pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aa997b824af45c6c3a8b77663366455c9}{\+\_\+node}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_ab023a6c0eb0ac239b13efe73fc4c50bc}{\+\_\+manager}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class allow to use a command pool in its scope before releasing it in the manager. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a68e988862c80847385e084409684097b}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a68e988862c80847385e084409684097b}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!ScopedCommandPool@{ScopedCommandPool}}
+\index{ScopedCommandPool@{ScopedCommandPool}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{ScopedCommandPool()}{ScopedCommandPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::\+Scoped\+Command\+Pool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_afbdd7521ce42115f0d66fdd9db8a1a34}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_afbdd7521ce42115f0d66fdd9db8a1a34}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!ScopedCommandPool@{ScopedCommandPool}}
+\index{ScopedCommandPool@{ScopedCommandPool}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{ScopedCommandPool()}{ScopedCommandPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::\+Scoped\+Command\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}} $\ast$const}]{node,  }\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} $\ast$const}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Acquire constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a8a438f85afd90b4c4146ce99e5520953}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a8a438f85afd90b4c4146ce99e5520953}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!ScopedCommandPool@{ScopedCommandPool}}
+\index{ScopedCommandPool@{ScopedCommandPool}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{ScopedCommandPool()}{ScopedCommandPool()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::\+Scoped\+Command\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a3efaca7f7b56f325a87bc5199076d155}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a3efaca7f7b56f325a87bc5199076d155}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!````~ScopedCommandPool@{$\sim$ScopedCommandPool}}
+\index{````~ScopedCommandPool@{$\sim$ScopedCommandPool}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{$\sim$ScopedCommandPool()}{~ScopedCommandPool()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::$\sim$\+Scoped\+Command\+Pool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Release destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a5cc52e8347d2dc00c24417ac18a6410b}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a5cc52e8347d2dc00c24417ac18a6410b}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast empty check. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a8e9a8c5c35b5b76f3e0eaf667336e65f}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a8e9a8c5c35b5b76f3e0eaf667336e65f}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}}$\ast$ k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::operator-\/$>$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a89246972d158d88488ac9701b90d77d9}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_a89246972d158d88488ac9701b90d77d9}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}}$\ast$ k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::operator-\/$>$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_ad404420abf3845f7e7a8ce9d5c267a27}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_ad404420abf3845f7e7a8ce9d5c267a27}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}}\& k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aa5e623fbbaf29b3ed1e81b3fc70bf1ce}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aa5e623fbbaf29b3ed1e81b3fc70bf1ce}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!release@{release}}
+\index{release@{release}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Release the acquired pool. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aaac0a00b9d0272041fab9534198cbfc8}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aaac0a00b9d0272041fab9534198cbfc8}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!swap@{swap}}
+\index{swap@{swap}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{Scoped\+Command\+Pool}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two instances. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_ab023a6c0eb0ac239b13efe73fc4c50bc}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_ab023a6c0eb0ac239b13efe73fc4c50bc}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!\_manager@{\_manager}}
+\index{\_manager@{\_manager}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{\_manager}{\_manager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{Command\+Pool\+Manager}}$\ast$ k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::\+\_\+manager \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aa997b824af45c6c3a8b77663366455c9}\label{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool_aa997b824af45c6c3a8b77663366455c9}} 
+\index{kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}!\_node@{\_node}}
+\index{\_node@{\_node}!kF::Graphics::CommandPoolManager::ScopedCommandPool@{kF::Graphics::CommandPoolManager::ScopedCommandPool}}
+\doxysubsubsection{\texorpdfstring{\_node}{\_node}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{Node}}$\ast$ k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool\+::\+\_\+node \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_pool_manager_8hpp}{Command\+Pool\+Manager.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_pool_manager_8ipp}{Command\+Pool\+Manager.\+ipp}}\end{DoxyCompactItemize}

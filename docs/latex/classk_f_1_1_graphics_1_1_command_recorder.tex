@@ -1,0 +1,142 @@
+\hypertarget{classk_f_1_1_graphics_1_1_command_recorder}{}\doxysection{kF\+::Graphics\+::Command\+Recorder Class Reference}
+\label{classk_f_1_1_graphics_1_1_command_recorder}\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+
+
+{\ttfamily \#include $<$Command\+Recorder.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_ae4f8f20e9b77b939cfac4a964ecfb2fc}{Command\+Recorder}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} command) noexcept
+\begin{DoxyCompactList}\small\item\em Construct the recorder out of a command (has no ownership) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a60f009504c309312748e7432024a230e}{Command\+Recorder}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&other) noexcept=default
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_addfad6ccedb7517e321e2315abde8af4}{Command\+Recorder}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a166f4c5ece594762696ff42ff97ae3fe}{$\sim$\+Command\+Recorder}} (void) noexcept=default
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a1dac44e7e7be4f25fe37b862bc429e79}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&other) noexcept=default
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a52135fe7ce9ac171be53fba45775bbd8}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&\&other) noexcept=default
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a9c386fbcc0d9348ebe20c67d1827c50f}{begin\+Render\+Pass}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_render_pass_begin_info}{Render\+Pass\+Begin\+Info}} \&render\+Pass\+Begin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_af7956c8ab3ae5d23c37d3390cdf471b2}{Subpass\+Contents}} contents) const noexcept
+\begin{DoxyCompactList}\small\item\em Begin a render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_abc6fa3e6539a09cdfa741e50c042d17c}{end\+Render\+Pass}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em End a render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_af98f06bf16f6889f1650fce0fd56f3b5}{bind\+Pipeline}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a09dce4ef3ef378b011ea6fbbf00c5551}{Pipeline\+Bind\+Point}} pipeline\+Bind\+Point, const \mbox{\hyperlink{namespacek_f_1_1_graphics_af4d848aa3b37ad93f345bae706068304}{Pipeline\+Handle}} pipeline) const noexcept
+\begin{DoxyCompactList}\small\item\em Bind a pipeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_ad6f395186d74765e24e9dfc3257f6a79}{draw}} (const std\+::uint32\+\_\+t vertex\+Count, const std\+::uint32\+\_\+t instance\+Count, const std\+::uint32\+\_\+t first\+Vertex, const std\+::uint32\+\_\+t first\+Instance) const noexcept
+\begin{DoxyCompactList}\small\item\em Draw commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_ad900adc6106b5a99372b18794e0b5d9d}{draw\+Indexed}} (const std\+::uint32\+\_\+t index\+Count, const std\+::uint32\+\_\+t instance\+Count, const std\+::uint32\+\_\+t first\+Index, const std\+::int32\+\_\+t vertex\+Offset, const std\+::uint32\+\_\+t first\+Instance) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_af4f9fa4ea59d1c41c06d1a860e12c689}{\+\_\+command}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_ae4f8f20e9b77b939cfac4a964ecfb2fc}\label{classk_f_1_1_graphics_1_1_command_recorder_ae4f8f20e9b77b939cfac4a964ecfb2fc}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!CommandRecorder@{CommandRecorder}}
+\index{CommandRecorder@{CommandRecorder}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{CommandRecorder()}{CommandRecorder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Recorder\+::\+Command\+Recorder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}}}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct the recorder out of a command (has no ownership) 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a60f009504c309312748e7432024a230e}\label{classk_f_1_1_graphics_1_1_command_recorder_a60f009504c309312748e7432024a230e}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!CommandRecorder@{CommandRecorder}}
+\index{CommandRecorder@{CommandRecorder}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{CommandRecorder()}{CommandRecorder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Recorder\+::\+Command\+Recorder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+P\+OD semantics \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_addfad6ccedb7517e321e2315abde8af4}\label{classk_f_1_1_graphics_1_1_command_recorder_addfad6ccedb7517e321e2315abde8af4}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!CommandRecorder@{CommandRecorder}}
+\index{CommandRecorder@{CommandRecorder}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{CommandRecorder()}{CommandRecorder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Recorder\+::\+Command\+Recorder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a166f4c5ece594762696ff42ff97ae3fe}\label{classk_f_1_1_graphics_1_1_command_recorder_a166f4c5ece594762696ff42ff97ae3fe}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!````~CommandRecorder@{$\sim$CommandRecorder}}
+\index{````~CommandRecorder@{$\sim$CommandRecorder}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{$\sim$CommandRecorder()}{~CommandRecorder()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Recorder\+::$\sim$\+Command\+Recorder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a9c386fbcc0d9348ebe20c67d1827c50f}\label{classk_f_1_1_graphics_1_1_command_recorder_a9c386fbcc0d9348ebe20c67d1827c50f}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!beginRenderPass@{beginRenderPass}}
+\index{beginRenderPass@{beginRenderPass}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{beginRenderPass()}{beginRenderPass()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::begin\+Render\+Pass (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_render_pass_begin_info}{Render\+Pass\+Begin\+Info}} \&}]{render\+Pass\+Begin,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_af7956c8ab3ae5d23c37d3390cdf471b2}{Subpass\+Contents}}}]{contents }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Begin a render pass. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_af98f06bf16f6889f1650fce0fd56f3b5}\label{classk_f_1_1_graphics_1_1_command_recorder_af98f06bf16f6889f1650fce0fd56f3b5}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!bindPipeline@{bindPipeline}}
+\index{bindPipeline@{bindPipeline}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{bindPipeline()}{bindPipeline()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::bind\+Pipeline (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a09dce4ef3ef378b011ea6fbbf00c5551}{Pipeline\+Bind\+Point}}}]{pipeline\+Bind\+Point,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_af4d848aa3b37ad93f345bae706068304}{Pipeline\+Handle}}}]{pipeline }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Bind a pipeline. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_ad6f395186d74765e24e9dfc3257f6a79}\label{classk_f_1_1_graphics_1_1_command_recorder_ad6f395186d74765e24e9dfc3257f6a79}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!draw@{draw}}
+\index{draw@{draw}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::draw (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{vertex\+Count,  }\item[{const std\+::uint32\+\_\+t}]{instance\+Count,  }\item[{const std\+::uint32\+\_\+t}]{first\+Vertex,  }\item[{const std\+::uint32\+\_\+t}]{first\+Instance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Draw commands. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_ad900adc6106b5a99372b18794e0b5d9d}\label{classk_f_1_1_graphics_1_1_command_recorder_ad900adc6106b5a99372b18794e0b5d9d}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!drawIndexed@{drawIndexed}}
+\index{drawIndexed@{drawIndexed}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{drawIndexed()}{drawIndexed()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::draw\+Indexed (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{index\+Count,  }\item[{const std\+::uint32\+\_\+t}]{instance\+Count,  }\item[{const std\+::uint32\+\_\+t}]{first\+Index,  }\item[{const std\+::int32\+\_\+t}]{vertex\+Offset,  }\item[{const std\+::uint32\+\_\+t}]{first\+Instance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_abc6fa3e6539a09cdfa741e50c042d17c}\label{classk_f_1_1_graphics_1_1_command_recorder_abc6fa3e6539a09cdfa741e50c042d17c}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!endRenderPass@{endRenderPass}}
+\index{endRenderPass@{endRenderPass}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{endRenderPass()}{endRenderPass()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::end\+Render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+End a render pass. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a52135fe7ce9ac171be53fba45775bbd8}\label{classk_f_1_1_graphics_1_1_command_recorder_a52135fe7ce9ac171be53fba45775bbd8}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}}\& k\+F\+::\+Graphics\+::\+Command\+Recorder\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a1dac44e7e7be4f25fe37b862bc429e79}\label{classk_f_1_1_graphics_1_1_command_recorder_a1dac44e7e7be4f25fe37b862bc429e79}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}}\& k\+F\+::\+Graphics\+::\+Command\+Recorder\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder}{Command\+Recorder}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_af4f9fa4ea59d1c41c06d1a860e12c689}\label{classk_f_1_1_graphics_1_1_command_recorder_af4f9fa4ea59d1c41c06d1a860e12c689}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!\_command@{\_command}}
+\index{\_command@{\_command}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{\_command}{\_command}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} k\+F\+::\+Graphics\+::\+Command\+Recorder\+::\+\_\+command\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_recorder_8hpp}{Command\+Recorder.\+hpp}}\end{DoxyCompactItemize}

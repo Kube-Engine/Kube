@@ -1,0 +1,8 @@
+<map id="kF::Graphics::PhysicalDevice" name="kF::Graphics::PhysicalDevice">
+<area shape="rect" id="node1" title="A physical device represent a GPU card in the computer." alt="" coords="41,1113,237,1264"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="30,972,249,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,231,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="104,5,289,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="153,307,400,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title="Vulkan handle that inherits from CachedRendererObject." alt="" coords="162,817,351,909"/>
+</map>

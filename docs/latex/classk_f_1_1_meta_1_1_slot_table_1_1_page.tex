@@ -1,0 +1,254 @@
+\hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page}{}\doxysection{kF\+::Meta\+::Slot\+Table\+::Page Class Reference}
+\label{classk_f_1_1_meta_1_1_slot_table_1_1_page}\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+
+
+A page contains an array of slots.  
+
+
+
+
+{\ttfamily \#include $<$Slot\+Table.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}{Array}} = std\+::array$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot}{Slot}}, \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_acda1a2a93c910688baec0333d6d97933}{Page\+Size}} $>$
+\begin{DoxyCompactList}\small\item\em Array containing all slots. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}} = std\+::uint16\+\_\+t
+\begin{DoxyCompactList}\small\item\em Index of a slot in a page. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Packs a slot index and its generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a90dd7e4ae7f571dcbb8a1079128992da}{Page}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Construct a new page. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae4be7545e1349feca13f8e3baf0ab4c5}{Page}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a690e937853384bde9e221110ea610a8c}{$\sim$\+Page}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}{Array}} $>$)=default
+\begin{DoxyCompactList}\small\item\em Destruct the page. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a4e3faed76b0512ed21f1fe7669402692}{operator=}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a2e7e566fc915cc22cbda3c5b9e3f906d}{is\+Insertable}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the queue has enough space to receive another slot. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a2c362e9e38d7a2fe5f1ff8ec8390effa}{insert}} (const void $\ast$receiver, Functor \&\&functor) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Functor $>$))
+\begin{DoxyCompactList}\small\item\em Insert a new slot into the page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a173a22aaf9ac3fb602fd66937730a850}{remove}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} index\+And\+Generation)
+\begin{DoxyCompactList}\small\item\em Remove a slot from the page. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae71f1ba250aef5680ebcd40b5478096c}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} index\+And\+Generation, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)
+\begin{DoxyCompactList}\small\item\em Invoke a slot. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Index\+And\+Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_af49f9473d73ae312342073e7540cae7f}{insert}} (const void $\ast$const receiver, Functor \&\&functor) noexcept \+\_\+forward\+\_\+constructible(Functor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a3d4ec35a8c439916095fcf8ab5d0899b}{Pack\+Index\+And\+Generation}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}} index, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Slot\+::\+Generation}} generation) noexcept
+\begin{DoxyCompactList}\small\item\em Pack an index and a generation. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_aa2f6b3efcd14d0076e4e6c21afc7fabd}{Get\+Index}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} index\+And\+Generation) noexcept
+\begin{DoxyCompactList}\small\item\em Get slot index from packed value. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Slot\+::\+Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a6d62a1a858e86b97ab4c8a0d9fa5340b}{Get\+Generation}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} index\+And\+Generation) noexcept
+\begin{DoxyCompactList}\small\item\em Get slot generation from packed value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}{Array}} $>$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a380cbea86a74d3b4d7e26b5cf87c31eb}{\+\_\+data}} \{\}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a4f4a67718af2aeac327759f18cf02707}{\+\_\+size\+Left}} \{ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_acda1a2a93c910688baec0333d6d97933}{Page\+Size}} \}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a31e414cb63c591ec6214c85a4e6a9e7b}{\+\_\+free\+Count}} \{ 0 \}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}} $>$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a6198d9ce572e79ff7ab478241936415d}{\+\_\+free\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A page contains an array of slots. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!Array@{Array}}
+\index{Array@{Array}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{Array}{Array}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Array}} =  std\+::array$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot}{Slot}}, \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_acda1a2a93c910688baec0333d6d97933}{Page\+Size}}$>$}
+
+
+
+Array containing all slots. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!Index@{Index}}
+\index{Index@{Index}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Index}} =  std\+::uint16\+\_\+t}
+
+
+
+Index of a slot in a page. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!IndexAndGeneration@{IndexAndGeneration}}
+\index{IndexAndGeneration@{IndexAndGeneration}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{IndexAndGeneration}{IndexAndGeneration}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Index\+And\+Generation}} =  std\+::uint32\+\_\+t}
+
+
+
+Packs a slot index and its generation. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a90dd7e4ae7f571dcbb8a1079128992da}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a90dd7e4ae7f571dcbb8a1079128992da}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!Page@{Page}}
+\index{Page@{Page}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{Page()}{Page()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Page (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct a new page. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae4be7545e1349feca13f8e3baf0ab4c5}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae4be7545e1349feca13f8e3baf0ab4c5}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!Page@{Page}}
+\index{Page@{Page}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{Page()}{Page()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a690e937853384bde9e221110ea610a8c}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a690e937853384bde9e221110ea610a8c}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!````~Page@{$\sim$Page}}
+\index{````~Page@{$\sim$Page}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{$\sim$Page()}{~Page()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::$\sim$\+Page (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destruct the page. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a6d62a1a858e86b97ab4c8a0d9fa5340b}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a6d62a1a858e86b97ab4c8a0d9fa5340b}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!GetGeneration@{GetGeneration}}
+\index{GetGeneration@{GetGeneration}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{GetGeneration()}{GetGeneration()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Slot\+::\+Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Get\+Generation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}}}]{index\+And\+Generation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get slot generation from packed value. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_aa2f6b3efcd14d0076e4e6c21afc7fabd}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_aa2f6b3efcd14d0076e4e6c21afc7fabd}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Get\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}}}]{index\+And\+Generation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Get slot index from packed value. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_af49f9473d73ae312342073e7540cae7f}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_af49f9473d73ae312342073e7540cae7f}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!insert@{insert}}
+\index{insert@{insert}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Index\+And\+Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::insert (\begin{DoxyParamCaption}\item[{const void $\ast$const}]{receiver,  }\item[{Functor \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a2c362e9e38d7a2fe5f1ff8ec8390effa}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a2c362e9e38d7a2fe5f1ff8ec8390effa}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!insert@{insert}}
+\index{insert@{insert}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::insert (\begin{DoxyParamCaption}\item[{const void $\ast$}]{receiver,  }\item[{Functor \&\&}]{functor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Insert a new slot into the page. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae71f1ba250aef5680ebcd40b5478096c}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae71f1ba250aef5680ebcd40b5478096c}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}}}]{index\+And\+Generation,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invoke a slot. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a2e7e566fc915cc22cbda3c5b9e3f906d}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a2e7e566fc915cc22cbda3c5b9e3f906d}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!isInsertable@{isInsertable}}
+\index{isInsertable@{isInsertable}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{isInsertable()}{isInsertable()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::is\+Insertable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the queue has enough space to receive another slot. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a4e3faed76b0512ed21f1fe7669402692}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a4e3faed76b0512ed21f1fe7669402692}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}}\& k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a3d4ec35a8c439916095fcf8ab5d0899b}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a3d4ec35a8c439916095fcf8ab5d0899b}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!PackIndexAndGeneration@{PackIndexAndGeneration}}
+\index{PackIndexAndGeneration@{PackIndexAndGeneration}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{PackIndexAndGeneration()}{PackIndexAndGeneration()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+Pack\+Index\+And\+Generation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}}}]{index,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Slot\+::\+Generation}}}]{generation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Pack an index and a generation. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a173a22aaf9ac3fb602fd66937730a850}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a173a22aaf9ac3fb602fd66937730a850}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!remove@{remove}}
+\index{remove@{remove}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_ae5beaca5093580060a4b6cf4a58b54e3}{Index\+And\+Generation}}}]{index\+And\+Generation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a slot from the page. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a380cbea86a74d3b4d7e26b5cf87c31eb}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a380cbea86a74d3b4d7e26b5cf87c31eb}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!\_data@{\_data}}
+\index{\_data@{\_data}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a49fefc9a7546f7f2213eb79a166961f3}{Array}}$>$ k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+\_\+data \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a31e414cb63c591ec6214c85a4e6a9e7b}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a31e414cb63c591ec6214c85a4e6a9e7b}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!\_freeCount@{\_freeCount}}
+\index{\_freeCount@{\_freeCount}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{\_freeCount}{\_freeCount}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+\_\+free\+Count \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a6198d9ce572e79ff7ab478241936415d}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a6198d9ce572e79ff7ab478241936415d}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!\_freeList@{\_freeList}}
+\index{\_freeList@{\_freeList}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{\_freeList}{\_freeList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page_a48d5b4b0d9d4ad1282b9a601c14a4ccd}{Index}}$>$ k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+\_\+free\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_page_a4f4a67718af2aeac327759f18cf02707}\label{classk_f_1_1_meta_1_1_slot_table_1_1_page_a4f4a67718af2aeac327759f18cf02707}} 
+\index{kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}!\_sizeLeft@{\_sizeLeft}}
+\index{\_sizeLeft@{\_sizeLeft}!kF::Meta::SlotTable::Page@{kF::Meta::SlotTable::Page}}
+\doxysubsubsection{\texorpdfstring{\_sizeLeft}{\_sizeLeft}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Page\+::\+\_\+size\+Left \{ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_acda1a2a93c910688baec0333d6d97933}{Page\+Size}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_slot_table_8hpp}{Slot\+Table.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_slot_table_8ipp}{Slot\+Table.\+ipp}}\end{DoxyCompactItemize}

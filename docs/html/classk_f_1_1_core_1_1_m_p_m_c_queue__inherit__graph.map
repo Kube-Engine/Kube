@@ -1,0 +1,4 @@
+<map id="kF::Core::MPMCQueue&lt; Type &gt;" name="kF::Core::MPMCQueue&lt; Type &gt;">
+<area shape="rect" id="node1" title="The MPMC queue is a lock&#45;free queue that only supports a Single Producer but Multiple Consumers." alt="" coords="5,5,165,244"/>
+<area shape="rect" id="node2" href="$classk_f_1_1_core_1_1_m_p_m_c_queue.html" title=" " alt="" coords="5,307,165,545"/>
+</map>

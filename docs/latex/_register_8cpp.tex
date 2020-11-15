@@ -1,0 +1,63 @@
+\hypertarget{_register_8cpp}{}\doxysection{Kube/\+Meta/\+Register.cpp File Reference}
+\label{_register_8cpp}\index{Kube/Meta/Register.cpp@{Kube/Meta/Register.cpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Meta.\+hpp\char`\"{}}\newline
+Include dependency graph for Register.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_register_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_is_static_castable}{Is\+Static\+Castable$<$ From, To, class $>$}}
+\item 
+struct \mbox{\hyperlink{struct_is_static_castable_3_01_from_00_01_to_00_01decltype_07static__cast_3_01_to_01_4_07std_1_194094f53d82e41ddb57eaafa3113d114}{Is\+Static\+Castable$<$ From, To, decltype(static\+\_\+cast$<$ To $>$(std\+::declval$<$ From $>$()))$>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_register_8cpp_a71eeeb072d669635b2abbc2dfe0e4c0d}{Register\+Converter\+Helper}}(From,  To)
+\item 
+\#define \mbox{\hyperlink{_register_8cpp_a7113e19250a3ae3d936696e82ba467fe}{Register\+Type}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  Alias)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_register_8cpp_a71eeeb072d669635b2abbc2dfe0e4c0d}\label{_register_8cpp_a71eeeb072d669635b2abbc2dfe0e4c0d}} 
+\index{Register.cpp@{Register.cpp}!RegisterConverterHelper@{RegisterConverterHelper}}
+\index{RegisterConverterHelper@{RegisterConverterHelper}!Register.cpp@{Register.cpp}}
+\doxysubsubsection{\texorpdfstring{RegisterConverterHelper}{RegisterConverterHelper}}
+{\footnotesize\ttfamily \#define Register\+Converter\+Helper(\begin{DoxyParamCaption}\item[{}]{From,  }\item[{}]{To }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} constexpr (!std::is\_same\_v<From, To> \&\& \mbox{\hyperlink{struct_is_static_castable}{IsStaticCastable<From, To>}}()) \(\backslash\)}
+\DoxyCodeLine{        kF::Meta::Factory<From>::RegisterConverter<To>(); \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_register_8cpp_a7113e19250a3ae3d936696e82ba467fe}\label{_register_8cpp_a7113e19250a3ae3d936696e82ba467fe}} 
+\index{Register.cpp@{Register.cpp}!RegisterType@{RegisterType}}
+\index{RegisterType@{RegisterType}!Register.cpp@{Register.cpp}}
+\doxysubsubsection{\texorpdfstring{RegisterType}{RegisterType}}
+{\footnotesize\ttfamily \#define Register\+Type(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{Alias }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a73a5a8e39b58aaddd9a39de671e60e4a}{kF::Meta::Factory<Type>::Register}}(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{Hash}}(Alias)); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, \textcolor{keywordtype}{bool}); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::int8\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::int16\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::int32\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::int64\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::uint8\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::uint16\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::uint32\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::uint64\_t); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, \textcolor{keywordtype}{float}); \(\backslash\)}
+\DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, \textcolor{keywordtype}{double});}
+
+\end{DoxyCode}

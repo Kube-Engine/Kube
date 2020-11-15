@@ -1,0 +1,248 @@
+\hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache}{}\doxysection{kF\+::Graphics\+::Per\+Frame\+Cache$<$ Type $>$ Class Template Reference}
+\label{classk_f_1_1_graphics_1_1_per_frame_cache}\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Per\+Frame\+Cache.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Per\+Frame\+Cache$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classk_f_1_1_graphics_1_1_per_frame_cache__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}{Cached\+Frames}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a42e74263699f763a50f89e9ded27ccbb}{Per\+Frame\+Cache}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Construct the cache with a given frame count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a670d0aef2cd5ae15393e1253ad4520c0}{Per\+Frame\+Cache}} (const std\+::size\+\_\+t count) noexcept \mbox{\hyperlink{namespacek_f_1_1_graphics_a5fa832f919b799e3af3ba761acdbfc10}{requires}} std
+\begin{DoxyCompactList}\small\item\em Construct the cache with a given frame count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_adf37d56bb6ad4c6832cd81f5bd7c6d8d}{Per\+Frame\+Cache}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a5c004f9690352e4d843405c33a7681b3}{$\sim$\+Per\+Frame\+Cache}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}{Cached\+Frames}} $>$)=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a8b8e329135e3f75782002610a6c8f7e5}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} \&\&other) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}{Cached\+Frames}} $>$)=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ae9ada8cc4549843e726985fa8037ef5b}{swap}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_aab19c5465a020f82daed22175a2442bc}{current\+Frame}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get / Set the current frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a561cfc4984229d8dd8f0b6044b093ef2}{set\+Current\+Frame}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} frame\+Index) noexcept
+\item 
+auto \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_af6ce039c7b0e6ab1300bb5aef115cf62}{caches}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the internal cache list. \end{DoxyCompactList}\item 
+const auto \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_abed19afbf485f9a1e2acd3f7aa2b10b2}{caches}} (void) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_abda3626ac94172fd71afc1782ae6d69a}{cache\+At}} (const std\+::size\+\_\+t index) noexcept
+\begin{DoxyCompactList}\small\item\em Get the cache at given index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a85838372b44c8b7588ce813ce7cba61a}{cache\+At}} (const std\+::size\+\_\+t index) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_af08d776a5ac627066c83fa936ec0cf16}{current\+Cache}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the current cache. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a6a615571f8d5b6916661761803692e0e}{current\+Cache}} (void) const noexcept
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_aba10c9bc322ab5b1d416097bdbc29ea8}{resize}} (const std\+::size\+\_\+t count) noexcept(std\+::is\+\_\+nothrow\+\_\+invocable\+\_\+v$<$ \&Cached\+Frames\+::resize \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) std\+::size\+\_\+t \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$)
+\begin{DoxyCompactList}\small\item\em Resize the number of cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}{Cached\+Frames}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a3498d2f92d3375e9e088679d9ed09837}{\+\_\+caches}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_a6db5d3ebca7fc210a582b6e7211f4308}{\+\_\+current\+Frame}} \{ 0u \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}\label{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!CachedFrames@{CachedFrames}}
+\index{CachedFrames@{CachedFrames}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{CachedFrames}{CachedFrames}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}{Cached\+Frames}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a42e74263699f763a50f89e9ded27ccbb}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a42e74263699f763a50f89e9ded27ccbb}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!PerFrameCache@{PerFrameCache}}
+\index{PerFrameCache@{PerFrameCache}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{PerFrameCache()}{PerFrameCache()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Construct the cache with a given frame count. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a670d0aef2cd5ae15393e1253ad4520c0}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a670d0aef2cd5ae15393e1253ad4520c0}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!PerFrameCache@{PerFrameCache}}
+\index{PerFrameCache@{PerFrameCache}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{PerFrameCache()}{PerFrameCache()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct the cache with a given frame count. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_adf37d56bb6ad4c6832cd81f5bd7c6d8d}\label{classk_f_1_1_graphics_1_1_per_frame_cache_adf37d56bb6ad4c6832cd81f5bd7c6d8d}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!PerFrameCache@{PerFrameCache}}
+\index{PerFrameCache@{PerFrameCache}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{PerFrameCache()}{PerFrameCache()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a5c004f9690352e4d843405c33a7681b3}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a5c004f9690352e4d843405c33a7681b3}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!````~PerFrameCache@{$\sim$PerFrameCache}}
+\index{````~PerFrameCache@{$\sim$PerFrameCache}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$PerFrameCache()}{~PerFrameCache()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a85838372b44c8b7588ce813ce7cba61a}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a85838372b44c8b7588ce813ce7cba61a}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!cacheAt@{cacheAt}}
+\index{cacheAt@{cacheAt}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{cacheAt()}{cacheAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::cache\+At (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_abda3626ac94172fd71afc1782ae6d69a}\label{classk_f_1_1_graphics_1_1_per_frame_cache_abda3626ac94172fd71afc1782ae6d69a}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!cacheAt@{cacheAt}}
+\index{cacheAt@{cacheAt}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{cacheAt()}{cacheAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::cache\+At (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the cache at given index. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_abed19afbf485f9a1e2acd3f7aa2b10b2}\label{classk_f_1_1_graphics_1_1_per_frame_cache_abed19afbf485f9a1e2acd3f7aa2b10b2}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!caches@{caches}}
+\index{caches@{caches}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{caches()}{caches()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const auto\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::caches (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_af6ce039c7b0e6ab1300bb5aef115cf62}\label{classk_f_1_1_graphics_1_1_per_frame_cache_af6ce039c7b0e6ab1300bb5aef115cf62}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!caches@{caches}}
+\index{caches@{caches}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{caches()}{caches()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+auto\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::caches (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the internal cache list. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a6a615571f8d5b6916661761803692e0e}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a6a615571f8d5b6916661761803692e0e}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!currentCache@{currentCache}}
+\index{currentCache@{currentCache}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{currentCache()}{currentCache()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::current\+Cache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_af08d776a5ac627066c83fa936ec0cf16}\label{classk_f_1_1_graphics_1_1_per_frame_cache_af08d776a5ac627066c83fa936ec0cf16}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!currentCache@{currentCache}}
+\index{currentCache@{currentCache}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{currentCache()}{currentCache()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::current\+Cache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the current cache. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_aab19c5465a020f82daed22175a2442bc}\label{classk_f_1_1_graphics_1_1_per_frame_cache_aab19c5465a020f82daed22175a2442bc}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!currentFrame@{currentFrame}}
+\index{currentFrame@{currentFrame}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{currentFrame()}{currentFrame()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::current\+Frame (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get / Set the current frame. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a8b8e329135e3f75782002610a6c8f7e5}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a8b8e329135e3f75782002610a6c8f7e5}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_aba10c9bc322ab5b1d416097bdbc29ea8}\label{classk_f_1_1_graphics_1_1_per_frame_cache_aba10c9bc322ab5b1d416097bdbc29ea8}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::resize (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize the number of cache. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a561cfc4984229d8dd8f0b6044b093ef2}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a561cfc4984229d8dd8f0b6044b093ef2}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!setCurrentFrame@{setCurrentFrame}}
+\index{setCurrentFrame@{setCurrentFrame}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{setCurrentFrame()}{setCurrentFrame()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::set\+Current\+Frame (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}}}]{frame\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_ae9ada8cc4549843e726985fa8037ef5b}\label{classk_f_1_1_graphics_1_1_per_frame_cache_ae9ada8cc4549843e726985fa8037ef5b}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!swap@{swap}}
+\index{swap@{swap}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two instances. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a3498d2f92d3375e9e088679d9ed09837}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a3498d2f92d3375e9e088679d9ed09837}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!\_caches@{\_caches}}
+\index{\_caches@{\_caches}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_caches}{\_caches}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache_ac29f6e3bee4871dafa1e66cf3fc21aa6}{Cached\+Frames}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+caches \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_per_frame_cache_a6db5d3ebca7fc210a582b6e7211f4308}\label{classk_f_1_1_graphics_1_1_per_frame_cache_a6db5d3ebca7fc210a582b6e7211f4308}} 
+\index{kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}!\_currentFrame@{\_currentFrame}}
+\index{\_currentFrame@{\_currentFrame}!kF::Graphics::PerFrameCache$<$ Type $>$@{kF::Graphics::PerFrameCache$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_currentFrame}{\_currentFrame}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{k\+F\+::\+Graphics\+::\+Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+current\+Frame \{ 0u \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_per_frame_cache_8hpp}{Per\+Frame\+Cache.\+hpp}}\end{DoxyCompactItemize}

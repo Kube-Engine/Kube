@@ -1,0 +1,210 @@
+\hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue}{}\doxysection{kF\+::Core\+::M\+P\+M\+C\+Queue$<$ Type $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_m_p_m_c_queue}\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+
+
+The M\+P\+MC queue is a lock-\/free queue that only supports a Single Producer but Multiple Consumers.  
+
+
+
+
+{\ttfamily \#include $<$M\+P\+M\+C\+Queue.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Core\+::M\+P\+M\+C\+Queue$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classk_f_1_1_core_1_1_m_p_m_c_queue__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_buffer}{Buffer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_buffer}{Buffer}} structure containing all cells. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}} of producers or consumers. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cell}{Cell}}
+\begin{DoxyCompactList}\small\item\em Each cell represent the queued type and a sequence index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_a5663b63af49ec22374517d859af28938}{M\+P\+M\+C\+Queue}} (const std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_afa79ae33f763d0506e248e0b1ff69d69}{size}})
+\begin{DoxyCompactList}\small\item\em Default constructor initialize the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_a29f32379dba67ae4908d93c72dd2fc72}{$\sim$\+M\+P\+M\+C\+Queue}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Destruct and release all memory (unsafe) \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_afa79ae33f763d0506e248e0b1ff69d69}{size}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Return the size of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_ad3f98c5e73ed76e29f7d45d6b571c21e}{clear}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Clear all elements of the queue (unsafe) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_a4b630b5e96fdc6ee66000e5d3fe0a4b2}{pop}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(\mbox{\hyperlink{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}{nothrow\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \&\&\mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool Move\+On\+Success = false, typename ... Args$>$ }\\bool push(Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std bool \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_ac4ddf6a237c53e57ee562fc9ae78dbf4}{pop}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Push a single element into the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_adbdc9cb16d8ca58a3414068f73de7309}{M\+P\+M\+C\+Queue}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Copy and move constructors disabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_a8bc587f5b121a020d6fc632994739b0a}{M\+P\+M\+C\+Queue}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}} \&\&other)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_acbcd5391222dc8cdf6ede6b557e29900}{\+\_\+tail}} \{ 0 \}
+\item 
+\mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_a73c5a38093bae638dcd6b36c97dd4b94}{\+\_\+tail\+Cache}}
+\item 
+std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_aa38ef64df4f7487490e5d594aab3a124}{\+\_\+head}} \{ 0 \}
+\item 
+\mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue_a8a828241c82cd6a5204651c7789dfe4a}{\+\_\+head\+Cache}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+class k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue$<$ Type $>$}
+
+The M\+P\+MC queue is a lock-\/free queue that only supports a Single Producer but Multiple Consumers. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & to be inserted \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_a5663b63af49ec22374517d859af28938}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_a5663b63af49ec22374517d859af28938}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!MPMCQueue@{MPMCQueue}}
+\index{MPMCQueue@{MPMCQueue}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{MPMCQueue()}{MPMCQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Default constructor initialize the queue. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: M\+P\+MC Queue \mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_a29f32379dba67ae4908d93c72dd2fc72}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_a29f32379dba67ae4908d93c72dd2fc72}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!````~MPMCQueue@{$\sim$MPMCQueue}}
+\index{````~MPMCQueue@{$\sim$MPMCQueue}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MPMCQueue()}{~MPMCQueue()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct and release all memory (unsafe) 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_adbdc9cb16d8ca58a3414068f73de7309}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_adbdc9cb16d8ca58a3414068f73de7309}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!MPMCQueue@{MPMCQueue}}
+\index{MPMCQueue@{MPMCQueue}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{MPMCQueue()}{MPMCQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+Copy and move constructors disabled. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_a8bc587f5b121a020d6fc632994739b0a}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_a8bc587f5b121a020d6fc632994739b0a}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!MPMCQueue@{MPMCQueue}}
+\index{MPMCQueue@{MPMCQueue}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{MPMCQueue()}{MPMCQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_ad3f98c5e73ed76e29f7d45d6b571c21e}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_ad3f98c5e73ed76e29f7d45d6b571c21e}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!clear@{clear}}
+\index{clear@{clear}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Clear all elements of the queue (unsafe) 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_a4b630b5e96fdc6ee66000e5d3fe0a4b2}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_a4b630b5e96fdc6ee66000e5d3fe0a4b2}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!pop@{pop}}
+\index{pop@{pop}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_afa79ae33f763d0506e248e0b1ff69d69}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_afa79ae33f763d0506e248e0b1ff69d69}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!size@{size}}
+\index{size@{size}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Return the size of the queue. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_aa38ef64df4f7487490e5d594aab3a124}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_aa38ef64df4f7487490e5d594aab3a124}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!\_head@{\_head}}
+\index{\_head@{\_head}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_head}{\_head}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::atomic$<$std\+::size\+\_\+t$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+head \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_a8a828241c82cd6a5204651c7789dfe4a}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_a8a828241c82cd6a5204651c7789dfe4a}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!\_headCache@{\_headCache}}
+\index{\_headCache@{\_headCache}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_headCache}{\_headCache}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+head\+Cache\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_acbcd5391222dc8cdf6ede6b557e29900}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_acbcd5391222dc8cdf6ede6b557e29900}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!\_tail@{\_tail}}
+\index{\_tail@{\_tail}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_tail}{\_tail}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::atomic$<$std\+::size\+\_\+t$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+tail \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_a73c5a38093bae638dcd6b36c97dd4b94}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_a73c5a38093bae638dcd6b36c97dd4b94}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!\_tailCache@{\_tailCache}}
+\index{\_tailCache@{\_tailCache}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_tailCache}{\_tailCache}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+tail\+Cache\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_m_p_m_c_queue_ac4ddf6a237c53e57ee562fc9ae78dbf4}\label{classk_f_1_1_core_1_1_m_p_m_c_queue_ac4ddf6a237c53e57ee562fc9ae78dbf4}} 
+\index{kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}!pop@{pop}}
+\index{pop@{pop}!kF::Core::MPMCQueue$<$ Type $>$@{kF::Core::MPMCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$bool Move\+On\+Success = false, typename ... Args$>$ \\
+bool push (Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std bool \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::pop(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Push a single element into the queue. 
+
+\begin{DoxyReturn}{Returns}
+true if the element has been inserted
+\end{DoxyReturn}
+Pop a single element from the queue \begin{DoxyReturn}{Returns}
+true if an element has been extracted 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_m_p_m_c_queue_8hpp}{M\+P\+M\+C\+Queue.\+hpp}}\item 
+Kube/\+Core/\mbox{\hyperlink{_m_p_m_c_queue_8ipp}{M\+P\+M\+C\+Queue.\+ipp}}\end{DoxyCompactItemize}

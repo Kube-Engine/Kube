@@ -1,0 +1,101 @@
+\hypertarget{classk_f_1_1_graphics_1_1_memory_allocation}{}\doxysection{kF\+::Graphics\+::Memory\+Allocation Class Reference}
+\label{classk_f_1_1_graphics_1_1_memory_allocation}\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+
+
+G\+PU Memory buffer abstraction.  
+
+
+
+
+{\ttfamily \#include $<$Memory\+Allocation.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Memory\+Allocation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_memory_allocation__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_aea440250441f67d3982cddb474ba24b7}{Memory\+Allocation}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Construct a nw buffer using a buffer model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_ad902bc96184bef793f5f8363eba78d8d}{Memory\+Allocation}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a9b62404b02ace26e120a685af4b8f68f}{$\sim$\+Memory\+Allocation}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a067837c3ba30340f0e13f248c3878baa}{create\+Memory\+Allocation}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Create the device buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+G\+PU Memory buffer abstraction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_aea440250441f67d3982cddb474ba24b7}\label{classk_f_1_1_graphics_1_1_memory_allocation_aea440250441f67d3982cddb474ba24b7}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!MemoryAllocation@{MemoryAllocation}}
+\index{MemoryAllocation@{MemoryAllocation}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{MemoryAllocation()}{MemoryAllocation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a nw buffer using a buffer model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_ad902bc96184bef793f5f8363eba78d8d}\label{classk_f_1_1_graphics_1_1_memory_allocation_ad902bc96184bef793f5f8363eba78d8d}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!MemoryAllocation@{MemoryAllocation}}
+\index{MemoryAllocation@{MemoryAllocation}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{MemoryAllocation()}{MemoryAllocation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a9b62404b02ace26e120a685af4b8f68f}\label{classk_f_1_1_graphics_1_1_memory_allocation_a9b62404b02ace26e120a685af4b8f68f}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!````~MemoryAllocation@{$\sim$MemoryAllocation}}
+\index{````~MemoryAllocation@{$\sim$MemoryAllocation}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{$\sim$MemoryAllocation()}{~MemoryAllocation()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::$\sim$\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a067837c3ba30340f0e13f248c3878baa}\label{classk_f_1_1_graphics_1_1_memory_allocation_a067837c3ba30340f0e13f248c3878baa}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!createMemoryAllocation@{createMemoryAllocation}}
+\index{createMemoryAllocation@{createMemoryAllocation}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{createMemoryAllocation()}{createMemoryAllocation()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::create\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the device buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}\label{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}}\& k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_8hpp}{Memory\+Allocation.\+hpp}}\end{DoxyCompactItemize}

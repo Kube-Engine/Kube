@@ -1,0 +1,114 @@
+\hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool}{}\doxysection{kF\+::Graphics\+::Descriptor\+Pool Class Reference}
+\label{classk_f_1_1_graphics_1_1_descriptor_pool}\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+
+
+Abstract an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}}.  
+
+
+
+
+{\ttfamily \#include $<$Descriptor\+Pool.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Descriptor\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_descriptor_pool__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool_ae51153e8486cc5c8989259123391f910}{Descriptor\+Pool}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_pool_model}{Descriptor\+Pool\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool_adee4bc9ef4249eed44dd2f4ed1288734}{Descriptor\+Pool}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool_a52343778503d5ea7f2cf1ff2d347e686}{$\sim$\+Descriptor\+Pool}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool_a831dbc289be623f6fe139aa47ff7d98c}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool_a9fc112c145ca52009fa404315bae0859}{allocate\+Descriptor\+Sets}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a73e31558295a66182b77c1098d64e3aa}{Descriptor\+Set\+Layout\+Handle}} $\ast$const layout\+Bengin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a73e31558295a66182b77c1098d64e3aa}{Descriptor\+Set\+Layout\+Handle}} $\ast$const layout\+End, \mbox{\hyperlink{namespacek_f_1_1_graphics_abc00344f75c657bb4779ce3f3dde9ef5}{Descriptor\+Set\+Handle}} $\ast$const descriptor\+Set\+Begin, \mbox{\hyperlink{namespacek_f_1_1_graphics_abc00344f75c657bb4779ce3f3dde9ef5}{Descriptor\+Set\+Handle}} $\ast$const descriptor\+Set\+End)
+\begin{DoxyCompactList}\small\item\em Allocate descriptor sets from descriptor set layouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool_a18497cbfda9a7f1e0b48c86b989655ca}{create\+Descriptor\+Pool}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_pool_model}{Descriptor\+Pool\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool_ae51153e8486cc5c8989259123391f910}\label{classk_f_1_1_graphics_1_1_descriptor_pool_ae51153e8486cc5c8989259123391f910}} 
+\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}!DescriptorPool@{DescriptorPool}}
+\index{DescriptorPool@{DescriptorPool}!kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+\doxysubsubsection{\texorpdfstring{DescriptorPool()}{DescriptorPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+::\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_pool_model}{Descriptor\+Pool\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool_adee4bc9ef4249eed44dd2f4ed1288734}\label{classk_f_1_1_graphics_1_1_descriptor_pool_adee4bc9ef4249eed44dd2f4ed1288734}} 
+\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}!DescriptorPool@{DescriptorPool}}
+\index{DescriptorPool@{DescriptorPool}!kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+\doxysubsubsection{\texorpdfstring{DescriptorPool()}{DescriptorPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+::\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool_a52343778503d5ea7f2cf1ff2d347e686}\label{classk_f_1_1_graphics_1_1_descriptor_pool_a52343778503d5ea7f2cf1ff2d347e686}} 
+\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}!````~DescriptorPool@{$\sim$DescriptorPool}}
+\index{````~DescriptorPool@{$\sim$DescriptorPool}!kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+\doxysubsubsection{\texorpdfstring{$\sim$DescriptorPool()}{~DescriptorPool()}}
+{\footnotesize\ttfamily Graphics\+::\+Descriptor\+Pool\+::$\sim$\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool_a9fc112c145ca52009fa404315bae0859}\label{classk_f_1_1_graphics_1_1_descriptor_pool_a9fc112c145ca52009fa404315bae0859}} 
+\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}!allocateDescriptorSets@{allocateDescriptorSets}}
+\index{allocateDescriptorSets@{allocateDescriptorSets}!kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+\doxysubsubsection{\texorpdfstring{allocateDescriptorSets()}{allocateDescriptorSets()}}
+{\footnotesize\ttfamily void Graphics\+::\+Descriptor\+Pool\+::allocate\+Descriptor\+Sets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a73e31558295a66182b77c1098d64e3aa}{Descriptor\+Set\+Layout\+Handle}} $\ast$const}]{layout\+Bengin,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a73e31558295a66182b77c1098d64e3aa}{Descriptor\+Set\+Layout\+Handle}} $\ast$const}]{layout\+End,  }\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_abc00344f75c657bb4779ce3f3dde9ef5}{Descriptor\+Set\+Handle}} $\ast$const}]{descriptor\+Set\+Begin,  }\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_abc00344f75c657bb4779ce3f3dde9ef5}{Descriptor\+Set\+Handle}} $\ast$const}]{descriptor\+Set\+End }\end{DoxyParamCaption})}
+
+
+
+Allocate descriptor sets from descriptor set layouts. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool_a18497cbfda9a7f1e0b48c86b989655ca}\label{classk_f_1_1_graphics_1_1_descriptor_pool_a18497cbfda9a7f1e0b48c86b989655ca}} 
+\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}!createDescriptorPool@{createDescriptorPool}}
+\index{createDescriptorPool@{createDescriptorPool}!kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+\doxysubsubsection{\texorpdfstring{createDescriptorPool()}{createDescriptorPool()}}
+{\footnotesize\ttfamily void Graphics\+::\+Descriptor\+Pool\+::create\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_descriptor_pool_model}{Descriptor\+Pool\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create an \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_descriptor_pool_a831dbc289be623f6fe139aa47ff7d98c}\label{classk_f_1_1_graphics_1_1_descriptor_pool_a831dbc289be623f6fe139aa47ff7d98c}} 
+\index{kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::DescriptorPool@{kF::Graphics::DescriptorPool}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}}\& k\+F\+::\+Graphics\+::\+Descriptor\+Pool\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_descriptor_pool}{Descriptor\+Pool}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_descriptor_pool_8hpp}{Descriptor\+Pool.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_descriptor_pool_8cpp}{Descriptor\+Pool.\+cpp}}\end{DoxyCompactItemize}

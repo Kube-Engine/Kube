@@ -1,0 +1,140 @@
+\hypertarget{classk_f_1_1_graphics_1_1_event}{}\doxysection{kF\+::Graphics\+::Event Class Reference}
+\label{classk_f_1_1_graphics_1_1_event}\index{kF::Graphics::Event@{kF::Graphics::Event}}
+
+
+Abstraction of an event.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_event__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_ab16f24630d32a1fbbdbe88847bef5425}{Event}} (void)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a1bff2e11a6f16d6603c8437637607053}{Event}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a219808f1eaeea0fd1f958dc4bff841d6}{$\sim$\+Event}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a9d7264e4222cfe7101afd1318edb3c9c}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a18a74bfa7ccc1d21499b2ca0849d1716}{signal}} (void)
+\begin{DoxyCompactList}\small\item\em Set the state of the event to signaled ~\newline
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a8b2b261fc57ab4524d364da21e56623d}{is\+Signaled}} (void) const
+\begin{DoxyCompactList}\small\item\em Return current event state (signaled / unsignaled) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a03ea22d8f59a0580ca7fcfe9610c1ed5}{reset}} (void)
+\begin{DoxyCompactList}\small\item\em Set the state of the event to unsignaled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event_a6bef835e4273f7b057ae8163965436b4}{create\+Event}} (void)
+\begin{DoxyCompactList}\small\item\em Create the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of an event. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_ab16f24630d32a1fbbdbe88847bef5425}\label{classk_f_1_1_graphics_1_1_event_ab16f24630d32a1fbbdbe88847bef5425}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!Event@{Event}}
+\index{Event@{Event}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Event\+::\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a1bff2e11a6f16d6603c8437637607053}\label{classk_f_1_1_graphics_1_1_event_a1bff2e11a6f16d6603c8437637607053}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!Event@{Event}}
+\index{Event@{Event}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Event\+::\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a219808f1eaeea0fd1f958dc4bff841d6}\label{classk_f_1_1_graphics_1_1_event_a219808f1eaeea0fd1f958dc4bff841d6}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!````~Event@{$\sim$Event}}
+\index{````~Event@{$\sim$Event}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{$\sim$Event()}{~Event()}}
+{\footnotesize\ttfamily Graphics\+::\+Event\+::$\sim$\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a6bef835e4273f7b057ae8163965436b4}\label{classk_f_1_1_graphics_1_1_event_a6bef835e4273f7b057ae8163965436b4}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!createEvent@{createEvent}}
+\index{createEvent@{createEvent}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{createEvent()}{createEvent()}}
+{\footnotesize\ttfamily void Graphics\+::\+Event\+::create\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the event. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a8b2b261fc57ab4524d364da21e56623d}\label{classk_f_1_1_graphics_1_1_event_a8b2b261fc57ab4524d364da21e56623d}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!isSignaled@{isSignaled}}
+\index{isSignaled@{isSignaled}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{isSignaled()}{isSignaled()}}
+{\footnotesize\ttfamily bool Graphics\+::\+Event\+::is\+Signaled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Return current event state (signaled / unsignaled) 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a9d7264e4222cfe7101afd1318edb3c9c}\label{classk_f_1_1_graphics_1_1_event_a9d7264e4222cfe7101afd1318edb3c9c}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}}\& k\+F\+::\+Graphics\+::\+Event\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_event}{Event}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a03ea22d8f59a0580ca7fcfe9610c1ed5}\label{classk_f_1_1_graphics_1_1_event_a03ea22d8f59a0580ca7fcfe9610c1ed5}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!reset@{reset}}
+\index{reset@{reset}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Graphics\+::\+Event\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set the state of the event to unsignaled. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_event_a18a74bfa7ccc1d21499b2ca0849d1716}\label{classk_f_1_1_graphics_1_1_event_a18a74bfa7ccc1d21499b2ca0849d1716}} 
+\index{kF::Graphics::Event@{kF::Graphics::Event}!signal@{signal}}
+\index{signal@{signal}!kF::Graphics::Event@{kF::Graphics::Event}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily void Graphics\+::\+Event\+::signal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set the state of the event to signaled ~\newline
+ 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_event_8hpp}{Event.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_event_8cpp}{Event.\+cpp}}\end{DoxyCompactItemize}

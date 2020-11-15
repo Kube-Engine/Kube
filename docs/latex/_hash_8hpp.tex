@@ -1,0 +1,47 @@
+\hypertarget{_hash_8hpp}{}\doxysection{Kube/\+Core/\+Hash.hpp File Reference}
+\label{_hash_8hpp}\index{Kube/Core/Hash.hpp@{Kube/Core/Hash.hpp}}
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+Include dependency graph for Hash.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{_hash_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hash_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_literal}{k\+F\+::\+Literal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{k\+F\+::\+Hashed\+Name}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em The result type of the hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr Hashed\+Name \mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}} (char const $\ast$str, std\+::size\+\_\+t len) noexcept
+\begin{DoxyCompactList}\small\item\em Compile-\/time string hashing. \end{DoxyCompactList}\item 
+constexpr Hashed\+Name \mbox{\hyperlink{namespacek_f_a377b071673e645100ac862ccedb1811f}{k\+F\+::\+Hash}} (const char c) noexcept
+\begin{DoxyCompactList}\small\item\em Compile-\/time char hashing. \end{DoxyCompactList}\item 
+constexpr Hashed\+Name \mbox{\hyperlink{namespacek_f_ad04e8e38b5985d710b74d8c80371ab16}{k\+F\+::\+Hash}} (const std\+::string\+\_\+view \&str)
+\begin{DoxyCompactList}\small\item\em Compile-\/time string-\/view hashing. \end{DoxyCompactList}\item 
+constexpr Hashed\+Name \mbox{\hyperlink{namespacek_f_1_1_literal_ae0c701a7670126621edb0fddca37d16c}{k\+F\+::\+Literal\+::operator\char`\"{}\char`\"{}\+\_\+hash}} (char const $\ast$str, std\+::size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Compile-\/time string hashing literal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr Hashed\+Name \mbox{\hyperlink{namespacek_f_a3079951102eb5ebf975752a29d0962dc}{k\+F\+::\+Hash\+Offset}} = 4294967291u
+\end{DoxyCompactItemize}

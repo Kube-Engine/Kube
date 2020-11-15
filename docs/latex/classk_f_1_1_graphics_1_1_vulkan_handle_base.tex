@@ -1,0 +1,182 @@
+\hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base}{}\doxysection{kF\+::Graphics\+::Vulkan\+Handle\+Base$<$ Type, Base $>$ Class Template Reference}
+\label{classk_f_1_1_graphics_1_1_vulkan_handle_base}\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+
+
+Abstraction of a vulkan handler.  
+
+
+
+
+{\ttfamily \#include $<$Vulkan\+Handle.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Vulkan\+Handle\+Base$<$ Type, Base $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classk_f_1_1_graphics_1_1_vulkan_handle_base__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a30c522b6625c613815987eb563c9fd55}{Vulkan\+Handle\+Base}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default construct the handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a88aecd9f0b8c071a84e6414b2be617aa}{Vulkan\+Handle\+Base}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a55d0071902600fedc7c06b244f2406fc}{$\sim$\+Vulkan\+Handle\+Base}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor, does not release handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a41349af413d51d16de153c1013386ed0}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a459e25fb0e60b90c90c65998d022eb6c}{swap}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_ac8e5e5e4044946b21cb494d6f74a3acb}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast handle check operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a61f9ae27162ae3639fcac21bba345734}{is\+Null}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the handle is null. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a40a45743113de0681e25f582fc6a4e54}{handle}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the vulkan handle. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_ae97b900c4150cc5f55d71b3acf7f28e0}{handle}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_a834f7fb44dfcead6fb713ad64c640022}{operator Type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Implicit convertion to handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base_ae92042145a7940dba4d19620d811e767}{\+\_\+handle}} \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a9e49706b16635d3b581d8d8448527015}{Null\+Handle}} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type, typename Base$>$\newline
+class k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base$<$ Type, Base $>$}
+
+Abstraction of a vulkan handler. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a30c522b6625c613815987eb563c9fd55}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a30c522b6625c613815987eb563c9fd55}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!VulkanHandleBase@{VulkanHandleBase}}
+\index{VulkanHandleBase@{VulkanHandleBase}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{VulkanHandleBase()}{VulkanHandleBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default construct the handle. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a88aecd9f0b8c071a84e6414b2be617aa}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a88aecd9f0b8c071a84e6414b2be617aa}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!VulkanHandleBase@{VulkanHandleBase}}
+\index{VulkanHandleBase@{VulkanHandleBase}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{VulkanHandleBase()}{VulkanHandleBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a55d0071902600fedc7c06b244f2406fc}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a55d0071902600fedc7c06b244f2406fc}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!````~VulkanHandleBase@{$\sim$VulkanHandleBase}}
+\index{````~VulkanHandleBase@{$\sim$VulkanHandleBase}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$VulkanHandleBase()}{~VulkanHandleBase()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor, does not release handler. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_ae97b900c4150cc5f55d71b3acf7f28e0}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_ae97b900c4150cc5f55d71b3acf7f28e0}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!handle@{handle}}
+\index{handle@{handle}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::handle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a40a45743113de0681e25f582fc6a4e54}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a40a45743113de0681e25f582fc6a4e54}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!handle@{handle}}
+\index{handle@{handle}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::handle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the vulkan handle. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a61f9ae27162ae3639fcac21bba345734}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a61f9ae27162ae3639fcac21bba345734}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!isNull@{isNull}}
+\index{isNull@{isNull}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::is\+Null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the handle is null. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_ac8e5e5e4044946b21cb494d6f74a3acb}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_ac8e5e5e4044946b21cb494d6f74a3acb}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast handle check operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a834f7fb44dfcead6fb713ad64c640022}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a834f7fb44dfcead6fb713ad64c640022}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!operator Type@{operator Type}}
+\index{operator Type@{operator Type}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{operator Type()}{operator Type()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::operator \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Implicit convertion to handle. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a41349af413d51d16de153c1013386ed0}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a41349af413d51d16de153c1013386ed0}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}}\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_a459e25fb0e60b90c90c65998d022eb6c}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_a459e25fb0e60b90c90c65998d022eb6c}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!swap@{swap}}
+\index{swap@{swap}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two instances. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_vulkan_handle_base_ae92042145a7940dba4d19620d811e767}\label{classk_f_1_1_graphics_1_1_vulkan_handle_base_ae92042145a7940dba4d19620d811e767}} 
+\index{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}!\_handle@{\_handle}}
+\index{\_handle@{\_handle}!kF::Graphics::VulkanHandleBase$<$ Type, Base $>$@{kF::Graphics::VulkanHandleBase$<$ Type, Base $>$}}
+\doxysubsubsection{\texorpdfstring{\_handle}{\_handle}}
+{\footnotesize\ttfamily template$<$typename Type , typename Base $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_vulkan_handle_base}{k\+F\+::\+Graphics\+::\+Vulkan\+Handle\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Base $>$\+::\+\_\+handle \{ \mbox{\hyperlink{namespacek_f_1_1_graphics_a9e49706b16635d3b581d8d8448527015}{Null\+Handle}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_vulkan_handle_8hpp}{Vulkan\+Handle.\+hpp}}\end{DoxyCompactItemize}

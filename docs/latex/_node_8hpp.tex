@@ -1,0 +1,48 @@
+\hypertarget{_node_8hpp}{}\doxysection{Kube/\+Flow/\+Node.hpp File Reference}
+\label{_node_8hpp}\index{Kube/Flow/Node.hpp@{Kube/Flow/Node.hpp}}
+{\ttfamily \#include $<$memory\+\_\+resource$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$Kube/\+Core/\+Flat\+Vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$Kube/\+Core/\+Flat\+String.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}Node\+Type.\+hpp\char`\"{}}\newline
+Include dependency graph for Node.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_node_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_node_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_flow_1_1_dynamic_node}{k\+F\+::\+Flow\+::\+Dynamic\+Node}}
+\begin{DoxyCompactList}\small\item\em Dynamic node holds dynamic functor and a graph. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{k\+F\+::\+Flow\+::\+Node}}
+\begin{DoxyCompactList}\small\item\em A node is a P\+OD structure containing all data of a scheduled task in a graph. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{k\+F\+::\+Flow\+::\+Node\+Instance}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_flow}{k\+F\+::\+Flow}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_flow_a339e0bbd0b3b0108f1a8da24640a5a6a}{k\+F\+::\+Flow\+::\+Static\+Node}} = Static\+Func
+\begin{DoxyCompactList}\small\item\em Static node are used to execute independent jobs. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_flow_aa56b9ed07142b47f8753c9e68f892e50}{k\+F\+::\+Flow\+::\+Switch\+Node}} = Switch\+Func
+\begin{DoxyCompactList}\small\item\em Switch node is used to create branches. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_flow_a9df5dfb78ac6955bc4bf653a8a751de4}{k\+F\+::\+Flow\+::\+Graph\+Node}} = Graph
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node is used to construct nested graphs. \end{DoxyCompactList}\end{DoxyCompactItemize}

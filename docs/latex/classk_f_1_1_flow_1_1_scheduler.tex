@@ -1,0 +1,224 @@
+\hypertarget{classk_f_1_1_flow_1_1_scheduler}{}\doxysection{kF\+::Flow\+::Scheduler Class Reference}
+\label{classk_f_1_1_flow_1_1_scheduler}\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+
+
+Schedule graph of tasks using thread workers.  
+
+
+
+
+{\ttfamily \#include $<$Scheduler.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_flow_1_1_scheduler_1_1_cache}{Cache}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_afac1fb16e9bcf722035a6c903dfdf8a6}{Scheduler}} (const std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a52318ee2d36da4bc14d8e2e22e8236d4}{worker\+Count}}=\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a523522f3746d1442e91192286f7f65a4}{Auto\+Worker\+Count}}, const std\+::size\+\_\+t task\+Queue\+Size=\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a8a0f314d396ea305f82209708f93311a}{Default\+Task\+Queue\+Size}}, const std\+::size\+\_\+t notification\+Queue\+Size=\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a7f2687a46f7ccbe8cedb67c995fe7908}{Default\+Notification\+Queue\+Size}})
+\begin{DoxyCompactList}\small\item\em Construct a set of workers and start scheduler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a8081d195d572434c444e7f5e1993bdc2}{$\sim$\+Scheduler}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy and join all workers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_ae4749851d01b8001b7c39b9e17629934}{schedule}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&task)
+\begin{DoxyCompactList}\small\item\em Schedule a graph of tasks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a4fdf6dd6ee4b7a905dd669e71c169f56}{schedule}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} task) noexcept
+\begin{DoxyCompactList}\small\item\em Schedule a task. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_af46b276a9dd6255723beaf92cc4ea783}{steal}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&task) noexcept
+\begin{DoxyCompactList}\small\item\em Tries to steal a task from a busy worker (only used by workers) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a2470db9ee490741dd266acdc3fd0ff14}{notify}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} task) noexcept
+\begin{DoxyCompactList}\small\item\em Tries to add a notification task to be executed on the event processing thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a66cde0ee5c01288b06b3dd9de709d9f6}{process\+Notifications}} (void)
+\begin{DoxyCompactList}\small\item\em Process all pending notifications on the current thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a50ca5d07eb5889390eb342de5b21466b}{wait}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em All job to be terminated. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a52318ee2d36da4bc14d8e2e22e8236d4}{worker\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the count of worker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a523522f3746d1442e91192286f7f65a4}{Auto\+Worker\+Count}} \{ 0ul \}
+\begin{DoxyCompactList}\small\item\em Use this variable to automatically detect hardware thread count. \end{DoxyCompactList}\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a0642ec5aa92d903a3223f5fcf6d481d4}{Default\+Worker\+Count}} \{ 4ul \}
+\begin{DoxyCompactList}\small\item\em This variable is used on hardware thread detection failure. \end{DoxyCompactList}\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a8a0f314d396ea305f82209708f93311a}{Default\+Task\+Queue\+Size}} \{ 4096ul \}
+\begin{DoxyCompactList}\small\item\em Default queue size of tasks. \end{DoxyCompactList}\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a7f2687a46f7ccbe8cedb67c995fe7908}{Default\+Notification\+Queue\+Size}} \{ 4096ul \}
+\begin{DoxyCompactList}\small\item\em Default queue size of notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_scheduler_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_af56da2c1cd17f1e2bbb46a801ec5b001}{\+\_\+cache}} \{\}
+\item 
+std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a54c606a2afbf70f7bbbe4a1f16349227}{\+\_\+last\+Worker\+Id}} \{ 0 \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} $>$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a72c2e9680327d453eaca4118c90c71cb}{\+\_\+notifications}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Schedule graph of tasks using thread workers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_afac1fb16e9bcf722035a6c903dfdf8a6}\label{classk_f_1_1_flow_1_1_scheduler_afac1fb16e9bcf722035a6c903dfdf8a6}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!Scheduler@{Scheduler}}
+\index{Scheduler@{Scheduler}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{Scheduler()}{Scheduler()}}
+{\footnotesize\ttfamily Flow\+::\+Scheduler\+::\+Scheduler (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{worker\+Count = {\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a523522f3746d1442e91192286f7f65a4}{Auto\+Worker\+Count}}},  }\item[{const std\+::size\+\_\+t}]{task\+Queue\+Size = {\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a8a0f314d396ea305f82209708f93311a}{Default\+Task\+Queue\+Size}}},  }\item[{const std\+::size\+\_\+t}]{notification\+Queue\+Size = {\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a7f2687a46f7ccbe8cedb67c995fe7908}{Default\+Notification\+Queue\+Size}}} }\end{DoxyParamCaption})}
+
+
+
+Construct a set of workers and start scheduler. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a8081d195d572434c444e7f5e1993bdc2}\label{classk_f_1_1_flow_1_1_scheduler_a8081d195d572434c444e7f5e1993bdc2}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!````~Scheduler@{$\sim$Scheduler}}
+\index{````~Scheduler@{$\sim$Scheduler}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scheduler()}{~Scheduler()}}
+{\footnotesize\ttfamily Flow\+::\+Scheduler\+::$\sim$\+Scheduler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy and join all workers. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a2470db9ee490741dd266acdc3fd0ff14}\label{classk_f_1_1_flow_1_1_scheduler_a2470db9ee490741dd266acdc3fd0ff14}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!notify@{notify}}
+\index{notify@{notify}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Scheduler\+::notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Tries to add a notification task to be executed on the event processing thread. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a66cde0ee5c01288b06b3dd9de709d9f6}\label{classk_f_1_1_flow_1_1_scheduler_a66cde0ee5c01288b06b3dd9de709d9f6}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!processNotifications@{processNotifications}}
+\index{processNotifications@{processNotifications}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{processNotifications()}{processNotifications()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Scheduler\+::process\+Notifications (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Process all pending notifications on the current thread. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a4fdf6dd6ee4b7a905dd669e71c169f56}\label{classk_f_1_1_flow_1_1_scheduler_a4fdf6dd6ee4b7a905dd669e71c169f56}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!schedule@{schedule}}
+\index{schedule@{schedule}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Scheduler\+::schedule (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Schedule a task. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_ae4749851d01b8001b7c39b9e17629934}\label{classk_f_1_1_flow_1_1_scheduler_ae4749851d01b8001b7c39b9e17629934}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!schedule@{schedule}}
+\index{schedule@{schedule}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Scheduler\+::schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Schedule a graph of tasks. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} \mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_af46b276a9dd6255723beaf92cc4ea783}\label{classk_f_1_1_flow_1_1_scheduler_af46b276a9dd6255723beaf92cc4ea783}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!steal@{steal}}
+\index{steal@{steal}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{steal()}{steal()}}
+{\footnotesize\ttfamily bool Flow\+::\+Scheduler\+::steal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Flow\+::\+Task}} \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Tries to steal a task from a busy worker (only used by workers) 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a50ca5d07eb5889390eb342de5b21466b}\label{classk_f_1_1_flow_1_1_scheduler_a50ca5d07eb5889390eb342de5b21466b}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!wait@{wait}}
+\index{wait@{wait}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily void Flow\+::\+Scheduler\+::wait (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+All job to be terminated. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a52318ee2d36da4bc14d8e2e22e8236d4}\label{classk_f_1_1_flow_1_1_scheduler_a52318ee2d36da4bc14d8e2e22e8236d4}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!workerCount@{workerCount}}
+\index{workerCount@{workerCount}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{workerCount()}{workerCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Scheduler\+::worker\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the count of worker. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_af56da2c1cd17f1e2bbb46a801ec5b001}\label{classk_f_1_1_flow_1_1_scheduler_af56da2c1cd17f1e2bbb46a801ec5b001}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!\_cache@{\_cache}}
+\index{\_cache@{\_cache}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{\_cache}{\_cache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_scheduler_1_1_cache}{Cache}} k\+F\+::\+Flow\+::\+Scheduler\+::\+\_\+cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a54c606a2afbf70f7bbbe4a1f16349227}\label{classk_f_1_1_flow_1_1_scheduler_a54c606a2afbf70f7bbbe4a1f16349227}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!\_lastWorkerId@{\_lastWorkerId}}
+\index{\_lastWorkerId@{\_lastWorkerId}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{\_lastWorkerId}{\_lastWorkerId}}
+{\footnotesize\ttfamily std\+::atomic$<$std\+::size\+\_\+t$>$ k\+F\+::\+Flow\+::\+Scheduler\+::\+\_\+last\+Worker\+Id \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a72c2e9680327d453eaca4118c90c71cb}\label{classk_f_1_1_flow_1_1_scheduler_a72c2e9680327d453eaca4118c90c71cb}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!\_notifications@{\_notifications}}
+\index{\_notifications@{\_notifications}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{\_notifications}{\_notifications}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{Core\+::\+M\+P\+M\+C\+Queue}}$<$\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}$>$ k\+F\+::\+Flow\+::\+Scheduler\+::\+\_\+notifications\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a523522f3746d1442e91192286f7f65a4}\label{classk_f_1_1_flow_1_1_scheduler_a523522f3746d1442e91192286f7f65a4}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!AutoWorkerCount@{AutoWorkerCount}}
+\index{AutoWorkerCount@{AutoWorkerCount}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{AutoWorkerCount}{AutoWorkerCount}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Scheduler\+::\+Auto\+Worker\+Count \{ 0ul \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Use this variable to automatically detect hardware thread count. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a7f2687a46f7ccbe8cedb67c995fe7908}\label{classk_f_1_1_flow_1_1_scheduler_a7f2687a46f7ccbe8cedb67c995fe7908}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!DefaultNotificationQueueSize@{DefaultNotificationQueueSize}}
+\index{DefaultNotificationQueueSize@{DefaultNotificationQueueSize}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{DefaultNotificationQueueSize}{DefaultNotificationQueueSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Scheduler\+::\+Default\+Notification\+Queue\+Size \{ 4096ul \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Default queue size of notifications. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a8a0f314d396ea305f82209708f93311a}\label{classk_f_1_1_flow_1_1_scheduler_a8a0f314d396ea305f82209708f93311a}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!DefaultTaskQueueSize@{DefaultTaskQueueSize}}
+\index{DefaultTaskQueueSize@{DefaultTaskQueueSize}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{DefaultTaskQueueSize}{DefaultTaskQueueSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Scheduler\+::\+Default\+Task\+Queue\+Size \{ 4096ul \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Default queue size of tasks. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a0642ec5aa92d903a3223f5fcf6d481d4}\label{classk_f_1_1_flow_1_1_scheduler_a0642ec5aa92d903a3223f5fcf6d481d4}} 
+\index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!DefaultWorkerCount@{DefaultWorkerCount}}
+\index{DefaultWorkerCount@{DefaultWorkerCount}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
+\doxysubsubsection{\texorpdfstring{DefaultWorkerCount}{DefaultWorkerCount}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Scheduler\+::\+Default\+Worker\+Count \{ 4ul \}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+This variable is used on hardware thread detection failure. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Flow/\mbox{\hyperlink{_scheduler_8hpp}{Scheduler.\+hpp}}\item 
+Kube/\+Flow/\mbox{\hyperlink{_scheduler_8cpp}{Scheduler.\+cpp}}\item 
+Kube/\+Flow/\mbox{\hyperlink{_scheduler_8ipp}{Scheduler.\+ipp}}\end{DoxyCompactItemize}

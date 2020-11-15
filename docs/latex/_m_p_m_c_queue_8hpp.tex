@@ -1,0 +1,40 @@
+\hypertarget{_m_p_m_c_queue_8hpp}{}\doxysection{Kube/\+Core/\+M\+P\+M\+C\+Queue.hpp File Reference}
+\label{_m_p_m_c_queue_8hpp}\index{Kube/Core/MPMCQueue.hpp@{Kube/Core/MPMCQueue.hpp}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}Utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+P\+M\+C\+Queue.\+ipp\char`\"{}}\newline
+Include dependency graph for M\+P\+M\+C\+Queue.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_m_p_m_c_queue_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{_m_p_m_c_queue_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em The M\+P\+MC queue is a lock-\/free queue that only supports a Single Producer but Multiple Consumers. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cell}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue$<$ Type $>$\+::\+Cell}}
+\begin{DoxyCompactList}\small\item\em Each cell represent the queued type and a sequence index. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_buffer}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue$<$ Type $>$\+::\+Buffer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_buffer}{Buffer}} structure containing all cells. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{k\+F\+::\+Core\+::\+M\+P\+M\+C\+Queue$<$ Type $>$\+::\+Cache}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_m_p_m_c_queue_1_1_cache}{Cache}} of producers or consumers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}

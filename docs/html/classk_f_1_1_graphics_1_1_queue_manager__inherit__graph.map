@@ -1,0 +1,5 @@
+<map id="kF::Graphics::QueueManager" name="kF::Graphics::QueueManager">
+<area shape="rect" id="node1" title="Handles a list of queues." alt="" coords="5,388,209,627"/>
+<area shape="rect" id="node2" href="$classk_f_1_1_graphics_1_1_cached_renderer_object.html" title="This class specializes the RendererObject to hold its parent renderer in its member cache This class ..." alt="" coords="6,145,209,340"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_renderer_object.html" title="This is the base class of all renderer sub objects This class is not virtual because it is trivially ..." alt="" coords="9,5,205,97"/>
+</map>

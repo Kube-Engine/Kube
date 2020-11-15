@@ -1,0 +1,758 @@
+\hypertarget{classk_f_1_1_meta_1_1_type}{}\doxysection{kF\+::Meta\+::Type Class Reference}
+\label{classk_f_1_1_meta_1_1_type}\index{kF::Meta::Type@{kF::Meta::Type}}
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} is used to store meta-\/data about a type.  
+
+
+
+
+{\ttfamily \#include $<$Type.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79}{Flags}} \+: std\+::uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a7a4cf04a3717b2ab380ec3e3fedab122}{No\+Flags}} = 0b0, 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a76d55265a38459952dcb74337fc20b09}{Is\+Small\+Optimized}} = 0b1, 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a52a5f653dcb5d5583540c8eedd1c4d3e}{Is\+Void}} = 0b10, 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a406642d2737d7e9147df82ad01a11e46}{Is\+Integral}} = 0b100, 
+\newline
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79aafc0f7cbafc9268094c5c9474604e693}{Is\+Floating}} = 0b1000, 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a808f1ad11c885c5875d4cb375f951686}{Is\+Double}} = 0b10000, 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a98d948fe050628c0cad63deecfcf3eea}{Is\+Pointer}} = 0b100000
+ \}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}{Type\+ID}} = std\+::type\+\_\+index
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a91c91350beff3739ac8fa7a8eb3e7f6b}{Default\+Constructor\+Func}} = void($\ast$)(void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a718254e9cb012ed251011d8b28c57657}{Copy\+Constructor\+Func}} = void($\ast$)(void $\ast$, const void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aa8328c119758fd8ec1fc726cbcf53906}{Move\+Constructor\+Func}} = void($\ast$)(void $\ast$, void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a9f3ad538631d0e4a57dfcd4f0a8f3d69}{Copy\+Assignment\+Func}} = void($\ast$)(void $\ast$, const void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a1d76e4f40fbb28d3aea04d83239ebe62}{Move\+Assignment\+Func}} = void($\ast$)(void $\ast$, void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ab0d4d0e2cc61ef9ea7bc400ac7e41e5e}{Destructor\+Func}} = void($\ast$)(void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae08d6bc4259f37072937b835e6ee49a8}{Unary\+Operator\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a81db0f11aa28b69d2b3c987390b40664}{Binary\+Operator\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7ce21f76cbae9c3a22959b8b9c3f9dbe}{Assignment\+Operator\+Func}} = void($\ast$)(void $\ast$, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a18b922256b35f82c6afadf4d0ac06112}{To\+Bool\+Func}} = bool($\ast$)(const void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a979f96c81b6a24f39000bcdd7edcaa9f}{Type}} (\mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Descriptor}} $\ast$desc=nullptr) noexcept
+\begin{DoxyCompactList}\small\item\em Construct passing a descriptor instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aa8d5da5e8adb6b14df6e9a81d0742d18}{Type}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_acace8707ebdca557214e334e62a7ec6a}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_af8d29392212e8a821fe34816ef9a50ab}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast valid check. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a659b405573b264291574fa76094dfc4f}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ad214e6995d51eb7d888532b6d95e9d28}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&other) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a068b821e25e9738c9b674c97a5a5a3a6}{type\+ID}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive type\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a79a8823edd59c7668fa5ecf2e6b7b103}{name}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive type\textquotesingle{}s name. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae5d512a5a2e2a3e380978b1c6973cb68}{type\+Size}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive type\textquotesingle{} size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7acfcae95372661635ce91f9b299c918}{is\+Small\+Optimized}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is optimized. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ac9cd077aa3d34228212118a867d9bf7b}{is\+Void}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is void. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a640634ba3119750be41ac48a06e8b38b}{is\+Integral}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is an intergral one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a0768253fe771b26e60d220917714d69d}{is\+Floating}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is a floating one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a3ab5a4f267668198a477b795bad63852}{is\+Double}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is double. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a622977a4184261238e2aa01978661ccb}{is\+Pointer}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is pointer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ac5198bd992e6e15e4fcd65f430000e2e}{is\+Default\+Constructible}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is default constructible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_afa6392e487bb486e4c87f0ae9d40194f}{default\+Construct}} (void $\ast$instance) const
+\begin{DoxyCompactList}\small\item\em Default construct the underlying type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aceef737a42b57876212ab8f1652b8f6b}{default\+Construct}} (void) const
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a595d14dda5c8c6e62522a58ae9d2a753}{is\+Copy\+Constructible}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is copy constructible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a930575b01630940e3bf322e8fcbfd2f3}{copy\+Construct}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\begin{DoxyCompactList}\small\item\em Copy construct the underlying type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7952225d2d2bd511336afbf9ea508e64}{copy\+Construct}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a1581d5873e2b280bf6137b81a5d05500}{is\+Move\+Constructible}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is move constructible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ad259e6910297805efb599700765a1e32}{move\+Construct}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\begin{DoxyCompactList}\small\item\em Move construct the underlying type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ada5e3d4d26d3f512967a12e7102f9d7b}{move\+Construct}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a583ddc5f41fce38547090a6d058df4ef}{is\+Copy\+Assignable}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is copy assignable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aab286d5c89d07bbeeebe0c3270941d10}{copy\+Assign}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\begin{DoxyCompactList}\small\item\em Copy assign the underlying type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a645779a7b54769f415f14f4680bc3431}{is\+Move\+Assignable}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is move assignable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a516b7c4d0b98d82d60356703a1857106}{move\+Assign}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\begin{DoxyCompactList}\small\item\em Move assign the underlying type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_af8534f53e8e351c3677b8dc6aa21efef}{is\+Bool\+Convertible}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is convertible to boolean. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aab17757075b83c5cfad90cfe54c1f651}{to\+Bool}} (const void $\ast$instance) const
+\begin{DoxyCompactList}\small\item\em Convert to boolean the underlying type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_addee93b6fa91254faafac48e84e8433e}{destruct}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\begin{DoxyCompactList}\small\item\em Destruct the underlying type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Unary\+Operator Operator$>$ }\\bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}{has\+Operator}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check the existence of a meta given Unary / Binary / Assigment operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Binary\+Operator Operator$>$ }\\bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}{has\+Operator}} (void) const noexcept
+\item 
+{\footnotesize template$<$Assignment\+Operator Operator$>$ }\\bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}{has\+Operator}} (void) const noexcept
+\item 
+{\footnotesize template$<$Unary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a2138ea3d304a995c07adff797a2e4810}{invoke\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\begin{DoxyCompactList}\small\item\em Invoke a meta given Unary / Binary / Assigment operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Binary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a302122cd4814b38497f6d4cdfc3d8cd3}{invoke\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+{\footnotesize template$<$Assignment\+Operator Operator$>$ }\\void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a3b1d4944ef4330eeb631aaeecc816ed6}{invoke\+Operator}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a8ef278a9f5ca2e3778547ad35bc69981}{find\+Base}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} type) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a14a59374a9986e79780607a47aec4265}{find\+Converter}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} type) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta converter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a730bfaae7c0024de6d29c8e610f163d8}{find\+Function}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a79a8823edd59c7668fa5ecf2e6b7b103}{name}}) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a46313774b4df29cb8d3db6275f1d7faa}{find\+Data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a79a8823edd59c7668fa5ecf2e6b7b103}{name}}) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a18c4bc968d4bd510a2f93575a0f0faeb}{find\+Signal}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a79a8823edd59c7668fa5ecf2e6b7b103}{name}}) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta signal by name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aee6fb21b1c957934e3e285e3d50338ca}{find\+Signal}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta signal by address. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a0a5e5fed8fea374d60957ca7cf902019}{find\+Constructor}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta constructor with a list of compile time arguments types. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aceb63d814056ae94ed4769a45e693846}{find\+Constructor}} (const std\+::vector$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$ \&types) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a registered meta constructor with a list runtime meta types. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a6d93580969718652292e619a22dd2ac0}{clear}} (void)
+\begin{DoxyCompactList}\small\item\em Clear the registered type meta-\/data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$k\+F\+::\+Meta\+::\+Unary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a8f18f25b2ceb1dd9c4509ca95c9d0608}{invoke\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) const
+\item 
+{\footnotesize template$<$k\+F\+::\+Meta\+::\+Binary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae00746eda5a3a527c7250fdffedbfbca}{invoke\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{k\+F\+::\+Meta\+::\+Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a2f11714911d41089fb2ed61eece5d289}{find\+Signal}} (void) const noexcept
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{k\+F\+::\+Meta\+::\+Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_abbd77bb00ca053534188f473fbfe3a59}{find\+Constructor}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Descriptor}} $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5065ad58eee7304b9c6e763141c1670b}{\+\_\+desc}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} is used to store meta-\/data about a type. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a7ce21f76cbae9c3a22959b8b9c3f9dbe}\label{classk_f_1_1_meta_1_1_type_a7ce21f76cbae9c3a22959b8b9c3f9dbe}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!AssignmentOperatorFunc@{AssignmentOperatorFunc}}
+\index{AssignmentOperatorFunc@{AssignmentOperatorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{AssignmentOperatorFunc}{AssignmentOperatorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7ce21f76cbae9c3a22959b8b9c3f9dbe}{k\+F\+::\+Meta\+::\+Type\+::\+Assignment\+Operator\+Func}} =  void($\ast$)(void $\ast$, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a81db0f11aa28b69d2b3c987390b40664}\label{classk_f_1_1_meta_1_1_type_a81db0f11aa28b69d2b3c987390b40664}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!BinaryOperatorFunc@{BinaryOperatorFunc}}
+\index{BinaryOperatorFunc@{BinaryOperatorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{BinaryOperatorFunc}{BinaryOperatorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a81db0f11aa28b69d2b3c987390b40664}{k\+F\+::\+Meta\+::\+Type\+::\+Binary\+Operator\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a9f3ad538631d0e4a57dfcd4f0a8f3d69}\label{classk_f_1_1_meta_1_1_type_a9f3ad538631d0e4a57dfcd4f0a8f3d69}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!CopyAssignmentFunc@{CopyAssignmentFunc}}
+\index{CopyAssignmentFunc@{CopyAssignmentFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{CopyAssignmentFunc}{CopyAssignmentFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a9f3ad538631d0e4a57dfcd4f0a8f3d69}{k\+F\+::\+Meta\+::\+Type\+::\+Copy\+Assignment\+Func}} =  void($\ast$)(void $\ast$, const void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a718254e9cb012ed251011d8b28c57657}\label{classk_f_1_1_meta_1_1_type_a718254e9cb012ed251011d8b28c57657}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!CopyConstructorFunc@{CopyConstructorFunc}}
+\index{CopyConstructorFunc@{CopyConstructorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{CopyConstructorFunc}{CopyConstructorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a718254e9cb012ed251011d8b28c57657}{k\+F\+::\+Meta\+::\+Type\+::\+Copy\+Constructor\+Func}} =  void($\ast$)(void $\ast$, const void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a91c91350beff3739ac8fa7a8eb3e7f6b}\label{classk_f_1_1_meta_1_1_type_a91c91350beff3739ac8fa7a8eb3e7f6b}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!DefaultConstructorFunc@{DefaultConstructorFunc}}
+\index{DefaultConstructorFunc@{DefaultConstructorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{DefaultConstructorFunc}{DefaultConstructorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a91c91350beff3739ac8fa7a8eb3e7f6b}{k\+F\+::\+Meta\+::\+Type\+::\+Default\+Constructor\+Func}} =  void($\ast$)(void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ab0d4d0e2cc61ef9ea7bc400ac7e41e5e}\label{classk_f_1_1_meta_1_1_type_ab0d4d0e2cc61ef9ea7bc400ac7e41e5e}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!DestructorFunc@{DestructorFunc}}
+\index{DestructorFunc@{DestructorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{DestructorFunc}{DestructorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ab0d4d0e2cc61ef9ea7bc400ac7e41e5e}{k\+F\+::\+Meta\+::\+Type\+::\+Destructor\+Func}} =  void($\ast$)(void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a1d76e4f40fbb28d3aea04d83239ebe62}\label{classk_f_1_1_meta_1_1_type_a1d76e4f40fbb28d3aea04d83239ebe62}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!MoveAssignmentFunc@{MoveAssignmentFunc}}
+\index{MoveAssignmentFunc@{MoveAssignmentFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{MoveAssignmentFunc}{MoveAssignmentFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a1d76e4f40fbb28d3aea04d83239ebe62}{k\+F\+::\+Meta\+::\+Type\+::\+Move\+Assignment\+Func}} =  void($\ast$)(void $\ast$, void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aa8328c119758fd8ec1fc726cbcf53906}\label{classk_f_1_1_meta_1_1_type_aa8328c119758fd8ec1fc726cbcf53906}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!MoveConstructorFunc@{MoveConstructorFunc}}
+\index{MoveConstructorFunc@{MoveConstructorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{MoveConstructorFunc}{MoveConstructorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_aa8328c119758fd8ec1fc726cbcf53906}{k\+F\+::\+Meta\+::\+Type\+::\+Move\+Constructor\+Func}} =  void($\ast$)(void $\ast$, void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a18b922256b35f82c6afadf4d0ac06112}\label{classk_f_1_1_meta_1_1_type_a18b922256b35f82c6afadf4d0ac06112}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!ToBoolFunc@{ToBoolFunc}}
+\index{ToBoolFunc@{ToBoolFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{ToBoolFunc}{ToBoolFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a18b922256b35f82c6afadf4d0ac06112}{k\+F\+::\+Meta\+::\+Type\+::\+To\+Bool\+Func}} =  bool($\ast$)(const void $\ast$)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}\label{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!TypeID@{TypeID}}
+\index{TypeID@{TypeID}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{TypeID}{TypeID}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}{k\+F\+::\+Meta\+::\+Type\+::\+Type\+ID}} =  std\+::type\+\_\+index}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ae08d6bc4259f37072937b835e6ee49a8}\label{classk_f_1_1_meta_1_1_type_ae08d6bc4259f37072937b835e6ee49a8}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!UnaryOperatorFunc@{UnaryOperatorFunc}}
+\index{UnaryOperatorFunc@{UnaryOperatorFunc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{UnaryOperatorFunc}{UnaryOperatorFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_ae08d6bc4259f37072937b835e6ee49a8}{k\+F\+::\+Meta\+::\+Type\+::\+Unary\+Operator\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$)}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!Flags@{Flags}}
+\index{Flags@{Flags}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79}{k\+F\+::\+Meta\+::\+Type\+::\+Flags}} \+: std\+::uint32\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoFlags@{NoFlags}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!NoFlags@{NoFlags}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a7a4cf04a3717b2ab380ec3e3fedab122}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a7a4cf04a3717b2ab380ec3e3fedab122}} 
+No\+Flags&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsSmallOptimized@{IsSmallOptimized}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!IsSmallOptimized@{IsSmallOptimized}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a76d55265a38459952dcb74337fc20b09}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a76d55265a38459952dcb74337fc20b09}} 
+Is\+Small\+Optimized&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsVoid@{IsVoid}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!IsVoid@{IsVoid}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a52a5f653dcb5d5583540c8eedd1c4d3e}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a52a5f653dcb5d5583540c8eedd1c4d3e}} 
+Is\+Void&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsIntegral@{IsIntegral}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!IsIntegral@{IsIntegral}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a406642d2737d7e9147df82ad01a11e46}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a406642d2737d7e9147df82ad01a11e46}} 
+Is\+Integral&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsFloating@{IsFloating}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!IsFloating@{IsFloating}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79aafc0f7cbafc9268094c5c9474604e693}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79aafc0f7cbafc9268094c5c9474604e693}} 
+Is\+Floating&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsDouble@{IsDouble}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!IsDouble@{IsDouble}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a808f1ad11c885c5875d4cb375f951686}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a808f1ad11c885c5875d4cb375f951686}} 
+Is\+Double&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsPointer@{IsPointer}!kF::Meta::Type@{kF::Meta::Type}}\index{kF::Meta::Type@{kF::Meta::Type}!IsPointer@{IsPointer}}}\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a98d948fe050628c0cad63deecfcf3eea}\label{classk_f_1_1_meta_1_1_type_a5a062fce895d406984e2d90d1147dc79a98d948fe050628c0cad63deecfcf3eea}} 
+Is\+Pointer&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a979f96c81b6a24f39000bcdd7edcaa9f}\label{classk_f_1_1_meta_1_1_type_a979f96c81b6a24f39000bcdd7edcaa9f}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!Type@{Type}}
+\index{Type@{Type}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{Type()}{Type()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Type\+::\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Descriptor}} $\ast$}]{desc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct passing a descriptor instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aa8d5da5e8adb6b14df6e9a81d0742d18}\label{classk_f_1_1_meta_1_1_type_aa8d5da5e8adb6b14df6e9a81d0742d18}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!Type@{Type}}
+\index{Type@{Type}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{Type()}{Type()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Type\+::\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a6d93580969718652292e619a22dd2ac0}\label{classk_f_1_1_meta_1_1_type_a6d93580969718652292e619a22dd2ac0}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!clear@{clear}}
+\index{clear@{clear}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear the registered type meta-\/data. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aab286d5c89d07bbeeebe0c3270941d10}\label{classk_f_1_1_meta_1_1_type_aab286d5c89d07bbeeebe0c3270941d10}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!copyAssign@{copyAssign}}
+\index{copyAssign@{copyAssign}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{copyAssign()}{copyAssign()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::copy\+Assign (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assign the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a7952225d2d2bd511336afbf9ea508e64}\label{classk_f_1_1_meta_1_1_type_a7952225d2d2bd511336afbf9ea508e64}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!copyConstruct@{copyConstruct}}
+\index{copyConstruct@{copyConstruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{copyConstruct()}{copyConstruct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Type\+::copy\+Construct (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a930575b01630940e3bf322e8fcbfd2f3}\label{classk_f_1_1_meta_1_1_type_a930575b01630940e3bf322e8fcbfd2f3}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!copyConstruct@{copyConstruct}}
+\index{copyConstruct@{copyConstruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{copyConstruct()}{copyConstruct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::copy\+Construct (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy construct the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_afa6392e487bb486e4c87f0ae9d40194f}\label{classk_f_1_1_meta_1_1_type_afa6392e487bb486e4c87f0ae9d40194f}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!defaultConstruct@{defaultConstruct}}
+\index{defaultConstruct@{defaultConstruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{defaultConstruct()}{defaultConstruct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::default\+Construct (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default construct the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aceef737a42b57876212ab8f1652b8f6b}\label{classk_f_1_1_meta_1_1_type_aceef737a42b57876212ab8f1652b8f6b}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!defaultConstruct@{defaultConstruct}}
+\index{defaultConstruct@{defaultConstruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{defaultConstruct()}{defaultConstruct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Type\+::default\+Construct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_addee93b6fa91254faafac48e84e8433e}\label{classk_f_1_1_meta_1_1_type_addee93b6fa91254faafac48e84e8433e}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!destruct@{destruct}}
+\index{destruct@{destruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{destruct()}{destruct()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::destruct (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destruct the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a8ef278a9f5ca2e3778547ad35bc69981}\label{classk_f_1_1_meta_1_1_type_a8ef278a9f5ca2e3778547ad35bc69981}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findBase@{findBase}}
+\index{findBase@{findBase}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findBase()}{findBase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{k\+F\+::\+Meta\+::\+Type}} k\+F\+::\+Meta\+::\+Type\+::find\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a registered meta base. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aceb63d814056ae94ed4769a45e693846}\label{classk_f_1_1_meta_1_1_type_aceb63d814056ae94ed4769a45e693846}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findConstructor@{findConstructor}}
+\index{findConstructor@{findConstructor}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findConstructor()}{findConstructor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{k\+F\+::\+Meta\+::\+Constructor}} k\+F\+::\+Meta\+::\+Type\+::find\+Constructor (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$ \&}]{types }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a registered meta constructor with a list runtime meta types. 
+
+This function will search for the best matched constructor, allowing implicit conversion \mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a0a5e5fed8fea374d60957ca7cf902019}\label{classk_f_1_1_meta_1_1_type_a0a5e5fed8fea374d60957ca7cf902019}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findConstructor@{findConstructor}}
+\index{findConstructor@{findConstructor}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findConstructor()}{findConstructor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} k\+F\+::\+Meta\+::\+Type\+::find\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Find a registered meta constructor with a list of compile time arguments types. 
+
+This function will search for the best matched constructor, allowing implicit conversion \mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_abbd77bb00ca053534188f473fbfe3a59}\label{classk_f_1_1_meta_1_1_type_abbd77bb00ca053534188f473fbfe3a59}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findConstructor@{findConstructor}}
+\index{findConstructor@{findConstructor}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findConstructor()}{findConstructor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{k\+F\+::\+Meta\+::\+Constructor}} k\+F\+::\+Meta\+::\+Type\+::find\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a14a59374a9986e79780607a47aec4265}\label{classk_f_1_1_meta_1_1_type_a14a59374a9986e79780607a47aec4265}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findConverter@{findConverter}}
+\index{findConverter@{findConverter}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findConverter()}{findConverter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{k\+F\+::\+Meta\+::\+Converter}} k\+F\+::\+Meta\+::\+Type\+::find\+Converter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a registered meta converter. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a46313774b4df29cb8d3db6275f1d7faa}\label{classk_f_1_1_meta_1_1_type_a46313774b4df29cb8d3db6275f1d7faa}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findData@{findData}}
+\index{findData@{findData}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findData()}{findData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{k\+F\+::\+Meta\+::\+Data}} k\+F\+::\+Meta\+::\+Type\+::find\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a registered meta data. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a730bfaae7c0024de6d29c8e610f163d8}\label{classk_f_1_1_meta_1_1_type_a730bfaae7c0024de6d29c8e610f163d8}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findFunction@{findFunction}}
+\index{findFunction@{findFunction}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findFunction()}{findFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{k\+F\+::\+Meta\+::\+Function}} k\+F\+::\+Meta\+::\+Type\+::find\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a registered meta function. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a18c4bc968d4bd510a2f93575a0f0faeb}\label{classk_f_1_1_meta_1_1_type_a18c4bc968d4bd510a2f93575a0f0faeb}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findSignal@{findSignal}}
+\index{findSignal@{findSignal}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findSignal()}{findSignal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{k\+F\+::\+Meta\+::\+Signal}} k\+F\+::\+Meta\+::\+Type\+::find\+Signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a registered meta signal by name. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aee6fb21b1c957934e3e285e3d50338ca}\label{classk_f_1_1_meta_1_1_type_aee6fb21b1c957934e3e285e3d50338ca}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findSignal@{findSignal}}
+\index{findSignal@{findSignal}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findSignal()}{findSignal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} k\+F\+::\+Meta\+::\+Type\+::find\+Signal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Find a registered meta signal by address. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a2f11714911d41089fb2ed61eece5d289}\label{classk_f_1_1_meta_1_1_type_a2f11714911d41089fb2ed61eece5d289}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!findSignal@{findSignal}}
+\index{findSignal@{findSignal}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{findSignal()}{findSignal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{k\+F\+::\+Meta\+::\+Signal}} k\+F\+::\+Meta\+::\+Type\+::find\+Signal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}\label{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!hasOperator@{hasOperator}}
+\index{hasOperator@{hasOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{hasOperator()}{hasOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$Unary\+Operator Operator$>$ \\
+bool k\+F\+::\+Meta\+::\+Type\+::has\+Operator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check the existence of a meta given Unary / Binary / Assigment operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}\label{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!hasOperator@{hasOperator}}
+\index{hasOperator@{hasOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{hasOperator()}{hasOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$Binary\+Operator Operator$>$ \\
+bool k\+F\+::\+Meta\+::\+Type\+::has\+Operator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}\label{classk_f_1_1_meta_1_1_type_ae22db6ae38f23cb4dc1bd499067693d6}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!hasOperator@{hasOperator}}
+\index{hasOperator@{hasOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{hasOperator()}{hasOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$Assignment\+Operator Operator$>$ \\
+bool k\+F\+::\+Meta\+::\+Type\+::has\+Operator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a2138ea3d304a995c07adff797a2e4810}\label{classk_f_1_1_meta_1_1_type_a2138ea3d304a995c07adff797a2e4810}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!invokeOperator@{invokeOperator}}
+\index{invokeOperator@{invokeOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{invokeOperator()}{invokeOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$Unary\+Operator Operator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Type\+::invoke\+Operator (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Invoke a meta given Unary / Binary / Assigment operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a8f18f25b2ceb1dd9c4509ca95c9d0608}\label{classk_f_1_1_meta_1_1_type_a8f18f25b2ceb1dd9c4509ca95c9d0608}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!invokeOperator@{invokeOperator}}
+\index{invokeOperator@{invokeOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{invokeOperator()}{invokeOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Meta\+::\+Unary\+Operator Operator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Type\+::invoke\+Operator (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a302122cd4814b38497f6d4cdfc3d8cd3}\label{classk_f_1_1_meta_1_1_type_a302122cd4814b38497f6d4cdfc3d8cd3}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!invokeOperator@{invokeOperator}}
+\index{invokeOperator@{invokeOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{invokeOperator()}{invokeOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$Binary\+Operator Operator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Type\+::invoke\+Operator (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ae00746eda5a3a527c7250fdffedbfbca}\label{classk_f_1_1_meta_1_1_type_ae00746eda5a3a527c7250fdffedbfbca}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!invokeOperator@{invokeOperator}}
+\index{invokeOperator@{invokeOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{invokeOperator()}{invokeOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Meta\+::\+Binary\+Operator Operator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Type\+::invoke\+Operator (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a3b1d4944ef4330eeb631aaeecc816ed6}\label{classk_f_1_1_meta_1_1_type_a3b1d4944ef4330eeb631aaeecc816ed6}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!invokeOperator@{invokeOperator}}
+\index{invokeOperator@{invokeOperator}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{invokeOperator()}{invokeOperator()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Meta\+::\+Assignment\+Operator Operator$>$ \\
+void k\+F\+::\+Meta\+::\+Type\+::invoke\+Operator (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_af8534f53e8e351c3677b8dc6aa21efef}\label{classk_f_1_1_meta_1_1_type_af8534f53e8e351c3677b8dc6aa21efef}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isBoolConvertible@{isBoolConvertible}}
+\index{isBoolConvertible@{isBoolConvertible}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isBoolConvertible()}{isBoolConvertible()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Bool\+Convertible (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is convertible to boolean. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a583ddc5f41fce38547090a6d058df4ef}\label{classk_f_1_1_meta_1_1_type_a583ddc5f41fce38547090a6d058df4ef}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isCopyAssignable@{isCopyAssignable}}
+\index{isCopyAssignable@{isCopyAssignable}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isCopyAssignable()}{isCopyAssignable()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Copy\+Assignable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is copy assignable. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a595d14dda5c8c6e62522a58ae9d2a753}\label{classk_f_1_1_meta_1_1_type_a595d14dda5c8c6e62522a58ae9d2a753}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isCopyConstructible@{isCopyConstructible}}
+\index{isCopyConstructible@{isCopyConstructible}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isCopyConstructible()}{isCopyConstructible()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Copy\+Constructible (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is copy constructible. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ac5198bd992e6e15e4fcd65f430000e2e}\label{classk_f_1_1_meta_1_1_type_ac5198bd992e6e15e4fcd65f430000e2e}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isDefaultConstructible@{isDefaultConstructible}}
+\index{isDefaultConstructible@{isDefaultConstructible}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isDefaultConstructible()}{isDefaultConstructible()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Default\+Constructible (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is default constructible. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a3ab5a4f267668198a477b795bad63852}\label{classk_f_1_1_meta_1_1_type_a3ab5a4f267668198a477b795bad63852}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isDouble@{isDouble}}
+\index{isDouble@{isDouble}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isDouble()}{isDouble()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Double (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is double. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a0768253fe771b26e60d220917714d69d}\label{classk_f_1_1_meta_1_1_type_a0768253fe771b26e60d220917714d69d}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isFloating@{isFloating}}
+\index{isFloating@{isFloating}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isFloating()}{isFloating()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Floating (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is a floating one. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a640634ba3119750be41ac48a06e8b38b}\label{classk_f_1_1_meta_1_1_type_a640634ba3119750be41ac48a06e8b38b}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isIntegral@{isIntegral}}
+\index{isIntegral@{isIntegral}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isIntegral()}{isIntegral()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Integral (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is an intergral one. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a645779a7b54769f415f14f4680bc3431}\label{classk_f_1_1_meta_1_1_type_a645779a7b54769f415f14f4680bc3431}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isMoveAssignable@{isMoveAssignable}}
+\index{isMoveAssignable@{isMoveAssignable}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isMoveAssignable()}{isMoveAssignable()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Move\+Assignable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is move assignable. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a1581d5873e2b280bf6137b81a5d05500}\label{classk_f_1_1_meta_1_1_type_a1581d5873e2b280bf6137b81a5d05500}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isMoveConstructible@{isMoveConstructible}}
+\index{isMoveConstructible@{isMoveConstructible}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isMoveConstructible()}{isMoveConstructible()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Move\+Constructible (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is move constructible. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a622977a4184261238e2aa01978661ccb}\label{classk_f_1_1_meta_1_1_type_a622977a4184261238e2aa01978661ccb}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isPointer@{isPointer}}
+\index{isPointer@{isPointer}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isPointer()}{isPointer()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Pointer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is pointer. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a7acfcae95372661635ce91f9b299c918}\label{classk_f_1_1_meta_1_1_type_a7acfcae95372661635ce91f9b299c918}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isSmallOptimized@{isSmallOptimized}}
+\index{isSmallOptimized@{isSmallOptimized}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isSmallOptimized()}{isSmallOptimized()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Small\+Optimized (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is optimized. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ac9cd077aa3d34228212118a867d9bf7b}\label{classk_f_1_1_meta_1_1_type_ac9cd077aa3d34228212118a867d9bf7b}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!isVoid@{isVoid}}
+\index{isVoid@{isVoid}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{isVoid()}{isVoid()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::is\+Void (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is void. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a516b7c4d0b98d82d60356703a1857106}\label{classk_f_1_1_meta_1_1_type_a516b7c4d0b98d82d60356703a1857106}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!moveAssign@{moveAssign}}
+\index{moveAssign@{moveAssign}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{moveAssign()}{moveAssign()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::move\+Assign (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move assign the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ada5e3d4d26d3f512967a12e7102f9d7b}\label{classk_f_1_1_meta_1_1_type_ada5e3d4d26d3f512967a12e7102f9d7b}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!moveConstruct@{moveConstruct}}
+\index{moveConstruct@{moveConstruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{moveConstruct()}{moveConstruct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Type\+::move\+Construct (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ad259e6910297805efb599700765a1e32}\label{classk_f_1_1_meta_1_1_type_ad259e6910297805efb599700765a1e32}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!moveConstruct@{moveConstruct}}
+\index{moveConstruct@{moveConstruct}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{moveConstruct()}{moveConstruct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Type\+::move\+Construct (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move construct the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a79a8823edd59c7668fa5ecf2e6b7b103}\label{classk_f_1_1_meta_1_1_type_a79a8823edd59c7668fa5ecf2e6b7b103}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!name@{name}}
+\index{name@{name}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Meta\+::\+Type\+::name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive type\textquotesingle{}s name. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_af8d29392212e8a821fe34816ef9a50ab}\label{classk_f_1_1_meta_1_1_type_af8d29392212e8a821fe34816ef9a50ab}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Type\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast valid check. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ad214e6995d51eb7d888532b6d95e9d28}\label{classk_f_1_1_meta_1_1_type_ad214e6995d51eb7d888532b6d95e9d28}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_acace8707ebdca557214e334e62a7ec6a}\label{classk_f_1_1_meta_1_1_type_acace8707ebdca557214e334e62a7ec6a}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}\& k\+F\+::\+Meta\+::\+Type\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a659b405573b264291574fa76094dfc4f}\label{classk_f_1_1_meta_1_1_type_a659b405573b264291574fa76094dfc4f}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Compare operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_aab17757075b83c5cfad90cfe54c1f651}\label{classk_f_1_1_meta_1_1_type_aab17757075b83c5cfad90cfe54c1f651}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!toBool@{toBool}}
+\index{toBool@{toBool}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{toBool()}{toBool()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Type\+::to\+Bool (\begin{DoxyParamCaption}\item[{const void $\ast$}]{instance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to boolean the underlying type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a068b821e25e9738c9b674c97a5a5a3a6}\label{classk_f_1_1_meta_1_1_type_a068b821e25e9738c9b674c97a5a5a3a6}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!typeID@{typeID}}
+\index{typeID@{typeID}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{typeID()}{typeID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}{Type\+ID}} k\+F\+::\+Meta\+::\+Type\+::type\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive type\textquotesingle{}s ID. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_ae5d512a5a2e2a3e380978b1c6973cb68}\label{classk_f_1_1_meta_1_1_type_ae5d512a5a2e2a3e380978b1c6973cb68}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!typeSize@{typeSize}}
+\index{typeSize@{typeSize}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{typeSize()}{typeSize()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Meta\+::\+Type\+::type\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive type\textquotesingle{} size. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_type_a5065ad58eee7304b9c6e763141c1670b}\label{classk_f_1_1_meta_1_1_type_a5065ad58eee7304b9c6e763141c1670b}} 
+\index{kF::Meta::Type@{kF::Meta::Type}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!kF::Meta::Type@{kF::Meta::Type}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Descriptor}}$\ast$ k\+F\+::\+Meta\+::\+Type\+::\+\_\+desc = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_type_8hpp}{Type.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_type_8ipp}{Type.\+ipp}}\end{DoxyCompactItemize}

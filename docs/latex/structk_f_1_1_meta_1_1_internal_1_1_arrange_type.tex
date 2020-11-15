@@ -1,0 +1,61 @@
+\hypertarget{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}{}\doxysection{kF\+::Meta\+::Internal\+::Arrange\+Type$<$ Input $>$ Struct Template Reference}
+\label{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}\index{kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}}
+
+
+Helper used to format specific types to other.  
+
+
+
+
+{\ttfamily \#include $<$Base.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_aa772f76d6d12f2500b05fb79acf89741}{Pointer\+Type}} = decltype(\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} constexpr(std\+::is\+\_\+array\+\_\+v$<$ Input $>$) return \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_ad226b3e0787704c7524d5e10edc8707a}{static\+\_\+cast}}$<$ std\+::remove\+\_\+extent\+\_\+t$<$ Input $>$ $\ast$$\ast$ $>$(nullptr)
+\item 
+using \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_a637a8cf605595974312c39473fb00b68}{Type}} = std\+::remove\+\_\+pointer\+\_\+t$<$ \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_aa772f76d6d12f2500b05fb79acf89741}{Pointer\+Type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+else return \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_ad226b3e0787704c7524d5e10edc8707a}{static\+\_\+cast}} (nullptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Input$>$\newline
+struct k\+F\+::\+Meta\+::\+Internal\+::\+Arrange\+Type$<$ Input $>$}
+
+Helper used to format specific types to other. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_aa772f76d6d12f2500b05fb79acf89741}\label{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_aa772f76d6d12f2500b05fb79acf89741}} 
+\index{kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}!PointerType@{PointerType}}
+\index{PointerType@{PointerType}!kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}}
+\doxysubsubsection{\texorpdfstring{PointerType}{PointerType}}
+{\footnotesize\ttfamily template$<$typename Input $>$ \\
+using \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}{k\+F\+::\+Meta\+::\+Internal\+::\+Arrange\+Type}}$<$ Input $>$\+::\mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_aa772f76d6d12f2500b05fb79acf89741}{Pointer\+Type}} =  decltype(\mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} constexpr (std\+::is\+\_\+array\+\_\+v$<$Input$>$) return \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_ad226b3e0787704c7524d5e10edc8707a}{static\+\_\+cast}}$<$std\+::remove\+\_\+extent\+\_\+t$<$Input$>$ $\ast$$\ast$$>$(nullptr)}
+
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_a637a8cf605595974312c39473fb00b68}\label{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_a637a8cf605595974312c39473fb00b68}} 
+\index{kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}!Type@{Type}}
+\index{Type@{Type}!kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily template$<$typename Input $>$ \\
+using \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}{k\+F\+::\+Meta\+::\+Internal\+::\+Arrange\+Type}}$<$ Input $>$\+::\mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_a637a8cf605595974312c39473fb00b68}{Type}} =  std\+::remove\+\_\+pointer\+\_\+t$<$\mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_aa772f76d6d12f2500b05fb79acf89741}{Pointer\+Type}}$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_ad226b3e0787704c7524d5e10edc8707a}\label{structk_f_1_1_meta_1_1_internal_1_1_arrange_type_ad226b3e0787704c7524d5e10edc8707a}} 
+\index{kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}!static\_cast@{static\_cast}}
+\index{static\_cast@{static\_cast}!kF::Meta::Internal::ArrangeType$<$ Input $>$@{kF::Meta::Internal::ArrangeType$<$ Input $>$}}
+\doxysubsubsection{\texorpdfstring{static\_cast()}{static\_cast()}}
+{\footnotesize\ttfamily template$<$typename Input $>$ \\
+else return \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}{k\+F\+::\+Meta\+::\+Internal\+::\+Arrange\+Type}}$<$ Input $>$\+::static\+\_\+cast (\begin{DoxyParamCaption}\item[{nullptr}]{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_meta_2_base_8hpp}{Base.\+hpp}}\end{DoxyCompactItemize}

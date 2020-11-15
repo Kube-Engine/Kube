@@ -1,0 +1,70 @@
+\hypertarget{_s_p_s_c_queue_8ipp}{}\doxysection{Kube/\+Core/\+S\+P\+S\+C\+Queue.ipp File Reference}
+\label{_s_p_s_c_queue_8ipp}\index{Kube/Core/SPSCQueue.ipp@{Kube/Core/SPSCQueue.ipp}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{_s_p_s_c_queue_8ipp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a9d4c81de8ea529c3a24a83a188664a6b}{if}} (\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}==\+\_\+tail\+Cache.\+buffer.\+capacity) \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}=0
+\item 
+\mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} (auto head=\+\_\+tail\+Cache.\+value;\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}==head)
+\item 
+\mbox{\hyperlink{_s_p_s_c_queue_8ipp_aabf5525bd47cc85a22156512898631db}{new}} (\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{\+\_\+tail\+Cache.\+buffer.\+data}}+tail) \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}
+\item 
+\+\_\+tail \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a8e060ea6f240be6a20aba874a1c0832b}{store}} (\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}, std\+::memory\+\_\+order\+\_\+release)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}} = tail + 1
+\item 
+return \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}\label{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}} 
+\index{SPSCQueue.ipp@{SPSCQueue.ipp}!if@{if}}
+\index{if@{if}!SPSCQueue.ipp@{SPSCQueue.ipp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{auto}]{head = {\ttfamily \+\_\+tailCache.value;~\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}~==~head} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_p_s_c_queue_8ipp_a9d4c81de8ea529c3a24a83a188664a6b}\label{_s_p_s_c_queue_8ipp_a9d4c81de8ea529c3a24a83a188664a6b}} 
+\index{SPSCQueue.ipp@{SPSCQueue.ipp}!if@{if}}
+\index{if@{if}!SPSCQueue.ipp@{SPSCQueue.ipp}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}}]{ = {\ttfamily =\+\_\+tailCache.buffer.capacity} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{_s_p_s_c_queue_8ipp_aabf5525bd47cc85a22156512898631db}\label{_s_p_s_c_queue_8ipp_aabf5525bd47cc85a22156512898631db}} 
+\index{SPSCQueue.ipp@{SPSCQueue.ipp}!new@{new}}
+\index{new@{new}!SPSCQueue.ipp@{SPSCQueue.ipp}}
+\doxysubsubsection{\texorpdfstring{new()}{new()}}
+{\footnotesize\ttfamily new (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{\+\_\+tail\+Cache.\+buffer.\+data}}+}]{tail }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_p_s_c_queue_8ipp_a8e060ea6f240be6a20aba874a1c0832b}\label{_s_p_s_c_queue_8ipp_a8e060ea6f240be6a20aba874a1c0832b}} 
+\index{SPSCQueue.ipp@{SPSCQueue.ipp}!store@{store}}
+\index{store@{store}!SPSCQueue.ipp@{SPSCQueue.ipp}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \+\_\+tail store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}{next}}}]{,  }\item[{std\+::memory\+\_\+order\+\_\+release}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}\label{_s_p_s_c_queue_8ipp_a994e98661c3a8a037a9b872d0fce4f6b}} 
+\index{SPSCQueue.ipp@{SPSCQueue.ipp}!next@{next}}
+\index{next@{next}!SPSCQueue.ipp@{SPSCQueue.ipp}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily auto next = tail + 1}
+
+\mbox{\Hypertarget{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}\label{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}} 
+\index{SPSCQueue.ipp@{SPSCQueue.ipp}!true@{true}}
+\index{true@{true}!SPSCQueue.ipp@{SPSCQueue.ipp}}
+\doxysubsubsection{\texorpdfstring{true}{true}}
+{\footnotesize\ttfamily return true}
+

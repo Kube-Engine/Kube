@@ -1,0 +1,296 @@
+\hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue}{}\doxysection{kF\+::Core\+::S\+P\+S\+C\+Queue$<$ Type $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_s_p_s_c_queue}\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+
+
+The S\+P\+SC queue is a lock-\/free queue that only supports a Single Producer and a Single Consumer The queue is really fast compared to other more flexible implementations because the fact that only two thread can simultaneously read / write means that less synchronization is needed for each operation. The queue supports ranged push / pop to insert multiple elements without performance impact.  
+
+
+
+
+{\ttfamily \#include $<$S\+P\+S\+C\+Queue.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_buffer}{Buffer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_buffer}{Buffer}} structure containing all cells. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_cache}{Cache}}
+\begin{DoxyCompactList}\small\item\em Local thread cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_abe486c651b50bfab23c5fb298478fd64}{S\+P\+S\+C\+Queue}} (const std\+::size\+\_\+t capacity, const bool used\+As\+Buffer=\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}) noexcept
+\begin{DoxyCompactList}\small\item\em Default constructor initialize the queue If \textquotesingle{}used\+As\+Buffer\textquotesingle{} is true, capacity will be increased by 1 because the queue implementation needs one unused value when the queue is full. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a1ec15752854e2aa747bb730694c328fe}{$\sim$\+S\+P\+S\+C\+Queue}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Destruct and release all memory (unsafe) \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a5f2eafbdf340e78c8f488496a4df7747}{try\+Push\+Range}} (const Input\+Iterator from, const Input\+Iterator to) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Push exactly \textquotesingle{}count\textquotesingle{} elements into the queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Output\+Iterator $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::output\+\_\+iterator$<$ Output\+Iterator, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_aa46dae8c4df1417b4ba3d7a5e70ddddb}{try\+Pop\+Range}} (const Output\+Iterator from, const Output\+Iterator to) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Pop exactly \textquotesingle{}count\textquotesingle{} elements from the queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a04f0444bc55ac37696cf13887080e70b}{push\+Range}} (const Input\+Iterator from, const Input\+Iterator to) noexcept((std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Push up to \textquotesingle{}count\textquotesingle{} elements into the queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Output\+Iterator $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::output\+\_\+iterator$<$ Output\+Iterator, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a4ca3200f1f1647aaf0074388080e3b05}{pop\+Range}} (const Output\+Iterator from, const Output\+Iterator to) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Pop up to \textquotesingle{}count\textquotesingle{} elements from the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_ab464b4256dfc0c5ef94274903fff6deb}{clear}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Clear all elements of the queue (unsafe) \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a7af6c05695d4932668c022e6d6f99e0b}{size}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the size of the queue. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a53e04213b69c3c021673535d8839c201}{pop}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(\mbox{\hyperlink{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}{nothrow\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \&\&\mbox{\hyperlink{_utils_8hpp_ac3aa033c57c8da9ea6325293df73d7f8}{nothrow\+\_\+forward\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\bool push(Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a9daebc3361eb149e6e62fefcd93ce8c4}{pop}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Push a single element into the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a32c02b864595ce1cff34e5a05fafc18c}{S\+P\+S\+C\+Queue}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Copy and move constructors disabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a2c00ae84f7f13e7c6c22ed1beea8caf2}{S\+P\+S\+C\+Queue}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}} \&\&other)=delete
+\item 
+{\footnotesize template$<$bool Allow\+Less, std\+::input\+\_\+iterator Input\+Iterator$>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_ade3b445d0a8e2c8fb89613821254c5d0}{push\+Range\+Impl}} (const Input\+Iterator from, const Input\+Iterator to) noexcept((\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator}{k\+F\+::\+Core\+::\+Utils\+::\+Is\+Move\+Iterator}}$<$ Input\+Iterator $>$\+::Value ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$))
+\item 
+{\footnotesize template$<$bool Allow\+Less, typename Output\+Iterator $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::output\+\_\+iterator$<$ Output\+Iterator, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a4d8c73e4747f7ca5ae548424f857d101}{pop\+Range\+Impl}} (const Output\+Iterator from, const Output\+Iterator to) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ size\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a3a5f3367fc906d6f1be77ca31a06abc9}{\+\_\+tail}} \{ 0 \}
+\item 
+\mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_ae16ea8d6bad03a4a51f7bee3722249a5}{\+\_\+tail\+Cache}} \{\}
+\item 
+std\+::atomic$<$ size\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_af0f67c9d317806112bdd70f00917c659}{\+\_\+head}} \{ 0 \}
+\item 
+\mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue_a375674724005fde2aecc43b61e9e4fd3}{\+\_\+head\+Cache}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+class k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue$<$ Type $>$}
+
+The S\+P\+SC queue is a lock-\/free queue that only supports a Single Producer and a Single Consumer The queue is really fast compared to other more flexible implementations because the fact that only two thread can simultaneously read / write means that less synchronization is needed for each operation. The queue supports ranged push / pop to insert multiple elements without performance impact. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & to be inserted \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_abe486c651b50bfab23c5fb298478fd64}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_abe486c651b50bfab23c5fb298478fd64}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!SPSCQueue@{SPSCQueue}}
+\index{SPSCQueue@{SPSCQueue}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{SPSCQueue()}{SPSCQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{capacity,  }\item[{const bool}]{used\+As\+Buffer = {\ttfamily \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Default constructor initialize the queue If \textquotesingle{}used\+As\+Buffer\textquotesingle{} is true, capacity will be increased by 1 because the queue implementation needs one unused value when the queue is full. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: S\+P\+SC Queue \mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a1ec15752854e2aa747bb730694c328fe}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a1ec15752854e2aa747bb730694c328fe}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!````~SPSCQueue@{$\sim$SPSCQueue}}
+\index{````~SPSCQueue@{$\sim$SPSCQueue}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SPSCQueue()}{~SPSCQueue()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct and release all memory (unsafe) 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a32c02b864595ce1cff34e5a05fafc18c}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a32c02b864595ce1cff34e5a05fafc18c}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!SPSCQueue@{SPSCQueue}}
+\index{SPSCQueue@{SPSCQueue}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{SPSCQueue()}{SPSCQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+Copy and move constructors disabled. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a2c00ae84f7f13e7c6c22ed1beea8caf2}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a2c00ae84f7f13e7c6c22ed1beea8caf2}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!SPSCQueue@{SPSCQueue}}
+\index{SPSCQueue@{SPSCQueue}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{SPSCQueue()}{SPSCQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_ab464b4256dfc0c5ef94274903fff6deb}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_ab464b4256dfc0c5ef94274903fff6deb}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!clear@{clear}}
+\index{clear@{clear}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Clear all elements of the queue (unsafe) 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a53e04213b69c3c021673535d8839c201}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a53e04213b69c3c021673535d8839c201}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!pop@{pop}}
+\index{pop@{pop}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a4ca3200f1f1647aaf0074388080e3b05}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a4ca3200f1f1647aaf0074388080e3b05}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!popRange@{popRange}}
+\index{popRange@{popRange}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{popRange()}{popRange()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename Output\+Iterator $>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::output\+\_\+iterator$<$Output\+Iterator, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::pop\+Range (\begin{DoxyParamCaption}\item[{const Output\+Iterator}]{from,  }\item[{const Output\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Pop up to \textquotesingle{}count\textquotesingle{} elements from the queue. 
+
+\begin{DoxyReturn}{Returns}
+The number of extracted elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a4d8c73e4747f7ca5ae548424f857d101}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a4d8c73e4747f7ca5ae548424f857d101}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!popRangeImpl@{popRangeImpl}}
+\index{popRangeImpl@{popRangeImpl}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{popRangeImpl()}{popRangeImpl()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$bool Allow\+Less, typename Output\+Iterator $>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::output\+\_\+iterator$<$ Output\+Iterator, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::pop\+Range\+Impl (\begin{DoxyParamCaption}\item[{const Output\+Iterator}]{from,  }\item[{const Output\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a04f0444bc55ac37696cf13887080e70b}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a04f0444bc55ac37696cf13887080e70b}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!pushRange@{pushRange}}
+\index{pushRange@{pushRange}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{pushRange()}{pushRange()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::push\+Range (\begin{DoxyParamCaption}\item[{const Input\+Iterator}]{from,  }\item[{const Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Push up to \textquotesingle{}count\textquotesingle{} elements into the queue. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Force\+Copy} & If true, will prevent to move construct elements \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The number of extracted elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_ade3b445d0a8e2c8fb89613821254c5d0}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_ade3b445d0a8e2c8fb89613821254c5d0}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!pushRangeImpl@{pushRangeImpl}}
+\index{pushRangeImpl@{pushRangeImpl}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{pushRangeImpl()}{pushRangeImpl()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$bool Allow\+Less, std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::push\+Range\+Impl (\begin{DoxyParamCaption}\item[{const Input\+Iterator}]{from,  }\item[{const Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a7af6c05695d4932668c022e6d6f99e0b}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a7af6c05695d4932668c022e6d6f99e0b}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!size@{size}}
+\index{size@{size}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the size of the queue. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_aa46dae8c4df1417b4ba3d7a5e70ddddb}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_aa46dae8c4df1417b4ba3d7a5e70ddddb}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!tryPopRange@{tryPopRange}}
+\index{tryPopRange@{tryPopRange}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{tryPopRange()}{tryPopRange()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename Output\+Iterator $>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::output\+\_\+iterator$<$Output\+Iterator, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::try\+Pop\+Range (\begin{DoxyParamCaption}\item[{const Output\+Iterator}]{from,  }\item[{const Output\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Pop exactly \textquotesingle{}count\textquotesingle{} elements from the queue. 
+
+\begin{DoxyReturn}{Returns}
+Success on true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a5f2eafbdf340e78c8f488496a4df7747}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a5f2eafbdf340e78c8f488496a4df7747}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!tryPushRange@{tryPushRange}}
+\index{tryPushRange@{tryPushRange}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{tryPushRange()}{tryPushRange()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::try\+Push\+Range (\begin{DoxyParamCaption}\item[{const Input\+Iterator}]{from,  }\item[{const Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Push exactly \textquotesingle{}count\textquotesingle{} elements into the queue. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Force\+Copy} & If true, will prevent to move construct elements \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Success on true 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_af0f67c9d317806112bdd70f00917c659}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_af0f67c9d317806112bdd70f00917c659}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!\_head@{\_head}}
+\index{\_head@{\_head}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_head}{\_head}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::atomic$<$size\+\_\+t$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+head \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a375674724005fde2aecc43b61e9e4fd3}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a375674724005fde2aecc43b61e9e4fd3}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!\_headCache@{\_headCache}}
+\index{\_headCache@{\_headCache}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_headCache}{\_headCache}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+head\+Cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a3a5f3367fc906d6f1be77ca31a06abc9}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a3a5f3367fc906d6f1be77ca31a06abc9}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!\_tail@{\_tail}}
+\index{\_tail@{\_tail}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_tail}{\_tail}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::atomic$<$size\+\_\+t$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+tail \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_ae16ea8d6bad03a4a51f7bee3722249a5}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_ae16ea8d6bad03a4a51f7bee3722249a5}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!\_tailCache@{\_tailCache}}
+\index{\_tailCache@{\_tailCache}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_tailCache}{\_tailCache}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{structk_f_1_1_core_1_1_s_p_s_c_queue_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+tail\+Cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_s_p_s_c_queue_a9daebc3361eb149e6e62fefcd93ce8c4}\label{classk_f_1_1_core_1_1_s_p_s_c_queue_a9daebc3361eb149e6e62fefcd93ce8c4}} 
+\index{kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}!pop@{pop}}
+\index{pop@{pop}!kF::Core::SPSCQueue$<$ Type $>$@{kF::Core::SPSCQueue$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename ... Args$>$ \\
+bool push (Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std bool \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{k\+F\+::\+Core\+::\+S\+P\+S\+C\+Queue}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::pop(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Push a single element into the queue. 
+
+\begin{DoxyReturn}{Returns}
+true if the element has been inserted
+\end{DoxyReturn}
+Pop a single element from the queue \begin{DoxyReturn}{Returns}
+true if an element has been extracted 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_s_p_s_c_queue_8hpp}{S\+P\+S\+C\+Queue.\+hpp}}\item 
+Kube/\+Core/\mbox{\hyperlink{_s_p_s_c_queue_8ipp}{S\+P\+S\+C\+Queue.\+ipp}}\end{DoxyCompactItemize}

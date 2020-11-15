@@ -1,0 +1,79 @@
+\hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache}{}\doxysection{kF\+::Graphics\+::Command\+Dispatcher\+::Frame\+Cache Struct Reference}
+\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache}\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+
+
+An array of command sorted by queue types.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Dispatcher.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_ad8e8dcdaa59e9ca3977e28fedc0a5af8}{Frame\+Cache}} (void) noexcept=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a85ed6c36d265273bd1641708e87b9868}{Semaphore\+Cache}}, \mbox{\hyperlink{namespacek_f_1_1_graphics_af887c734530fabe72aec1120e2104e03}{Queue\+Count}} $>$ \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a83b29517b53f280305889d731c5ecd8d}{per\+Queue\+Semaphore\+Cache}} \{\}
+\item 
+std\+::array$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_aca24fbc0118d05a1ffb8da4a7b8ad765}{Fence\+Cache}}, \mbox{\hyperlink{namespacek_f_1_1_graphics_af887c734530fabe72aec1120e2104e03}{Queue\+Count}} $>$ \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_aba7788a873bcc928b7aa8d630e019f07}{per\+Queue\+Fence\+Cache}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a85ed6c36d265273bd1641708e87b9868}{Semaphore\+Cache}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_ae09f5599f509b73edb87266d3a16195d}{semaphore\+Cache}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_aca24fbc0118d05a1ffb8da4a7b8ad765}{Fence\+Cache}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a6cf1ac8052c4da2ee060631a2cd3619f}{fence\+Cache}} \{\}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_semaphore}{Semaphore}} $>$ \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a02f11be64088f92e7875c3a27135eaaa}{frame\+Available}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An array of command sorted by queue types. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_ad8e8dcdaa59e9ca3977e28fedc0a5af8}\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_ad8e8dcdaa59e9ca3977e28fedc0a5af8}} 
+\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}!FrameCache@{FrameCache}}
+\index{FrameCache@{FrameCache}!kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+\doxysubsubsection{\texorpdfstring{FrameCache()}{FrameCache()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::\+Frame\+Cache\+::\+Frame\+Cache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a6cf1ac8052c4da2ee060631a2cd3619f}\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a6cf1ac8052c4da2ee060631a2cd3619f}} 
+\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}!fenceCache@{fenceCache}}
+\index{fenceCache@{fenceCache}!kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+\doxysubsubsection{\texorpdfstring{fenceCache}{fenceCache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_aca24fbc0118d05a1ffb8da4a7b8ad765}{Fence\+Cache}} k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::\+Frame\+Cache\+::fence\+Cache \{\}}
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a02f11be64088f92e7875c3a27135eaaa}\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a02f11be64088f92e7875c3a27135eaaa}} 
+\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}!frameAvailable@{frameAvailable}}
+\index{frameAvailable@{frameAvailable}!kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+\doxysubsubsection{\texorpdfstring{frameAvailable}{frameAvailable}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_semaphore}{Semaphore}}$>$ k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::\+Frame\+Cache\+::frame\+Available \{\}}
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_aba7788a873bcc928b7aa8d630e019f07}\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_aba7788a873bcc928b7aa8d630e019f07}} 
+\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}!perQueueFenceCache@{perQueueFenceCache}}
+\index{perQueueFenceCache@{perQueueFenceCache}!kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+\doxysubsubsection{\texorpdfstring{perQueueFenceCache}{perQueueFenceCache}}
+{\footnotesize\ttfamily std\+::array$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_aca24fbc0118d05a1ffb8da4a7b8ad765}{Fence\+Cache}}, \mbox{\hyperlink{namespacek_f_1_1_graphics_af887c734530fabe72aec1120e2104e03}{Queue\+Count}}$>$ k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::\+Frame\+Cache\+::per\+Queue\+Fence\+Cache \{\}}
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a83b29517b53f280305889d731c5ecd8d}\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_a83b29517b53f280305889d731c5ecd8d}} 
+\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}!perQueueSemaphoreCache@{perQueueSemaphoreCache}}
+\index{perQueueSemaphoreCache@{perQueueSemaphoreCache}!kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+\doxysubsubsection{\texorpdfstring{perQueueSemaphoreCache}{perQueueSemaphoreCache}}
+{\footnotesize\ttfamily std\+::array$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a85ed6c36d265273bd1641708e87b9868}{Semaphore\+Cache}}, \mbox{\hyperlink{namespacek_f_1_1_graphics_af887c734530fabe72aec1120e2104e03}{Queue\+Count}}$>$ k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::\+Frame\+Cache\+::per\+Queue\+Semaphore\+Cache \{\}}
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_ae09f5599f509b73edb87266d3a16195d}\label{structk_f_1_1_graphics_1_1_command_dispatcher_1_1_frame_cache_ae09f5599f509b73edb87266d3a16195d}} 
+\index{kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}!semaphoreCache@{semaphoreCache}}
+\index{semaphoreCache@{semaphoreCache}!kF::Graphics::CommandDispatcher::FrameCache@{kF::Graphics::CommandDispatcher::FrameCache}}
+\doxysubsubsection{\texorpdfstring{semaphoreCache}{semaphoreCache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a85ed6c36d265273bd1641708e87b9868}{Semaphore\+Cache}} k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::\+Frame\+Cache\+::semaphore\+Cache \{\}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_dispatcher_8hpp}{Command\+Dispatcher.\+hpp}}\end{DoxyCompactItemize}

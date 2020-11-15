@@ -1,0 +1,309 @@
+\hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{}\doxysection{kF\+::E\+CS\+::Sparse\+Entity\+Set$<$ Entity\+Type, Page\+Size $>$ Class Template Reference}
+\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set}\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+
+
+The sparse index set is a container which provide O(1) look-\/up time at the cost of non-\/efficient memory consumption.  
+
+
+
+
+{\ttfamily \#include $<$Sparse\+Entity\+Set.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_sparse_entity_set_1_1_page_deleter}{Page\+Deleter}}
+\begin{DoxyCompactList}\small\item\em Helper used to delete pages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} = Entity\+Type
+\begin{DoxyCompactList}\small\item\em An index is the same size as an entity. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}{Page}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}}\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_sparse_entity_set_1_1_page_deleter}{Page\+Deleter}} $>$
+\begin{DoxyCompactList}\small\item\em Page containing indexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_af003e46f83c5a0e78f9af5a3831a5ddf}{Sparse\+Entity\+Set}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ab4b3818bf854c50dbafe43e8c41d1a3d}{Sparse\+Entity\+Set}} (\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a1975a25e1a8cb4c7519b93d5b5bc2a88}{$\sim$\+Sparse\+Entity\+Set}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a0971360c50441f502c34c83d4478e382}{operator=}} (\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a97ff7214c972f8a23ed93d9b1f415402}{exists}} (const Entity\+Type entity) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if the page containing index exists. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a3c89a546ea87e54e97a1b416712c1c33}{add}} (const Entity\+Type entity) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Add a new value to the set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_aa2adeec828602bcdd58ad9e4699b3a45}{remove}} (const Entity\+Type entity) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Remove a value from the set and return it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a80de65087a7bf652ca0cff1817e96536}{clear}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Clear the sparse set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a51ed598f396b9fb09b0dccb8cce45783}{at}} (const Entity\+Type entity) const noexcept
+\begin{DoxyCompactList}\small\item\em Access a given element of the set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a20b434a07fa08c156a8a5f6d09d7803d}{at\+Ref}} (const Entity\+Type entity) noexcept
+\item 
+const \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ Entity\+Type, Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ace305a5d17ba3e2ef35e296b0c76a51c}{flatset}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get internal iterable flat set. \end{DoxyCompactList}\item 
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_aa694fc1e2fb4362954e6a38920cfa80a}{entity\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the entity count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a402e3c2bc1a39d941c552925dffa0f50}{Page\+Index}} (const Entity\+Type entity) noexcept
+\begin{DoxyCompactList}\small\item\em Retreive the index of a page. \end{DoxyCompactList}\item 
+static Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a0e5a49406a64bad487144532158c90d7}{Element\+Index}} (const Entity\+Type entity) noexcept
+\begin{DoxyCompactList}\small\item\em Retreive the index of an element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a49286818303918a74ad1ac4fcd541b0b}{Null\+Index}} = \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}{Null\+Entity}}$<$Entity\+Type$>$
+\begin{DoxyCompactList}\small\item\em A null index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}{Page}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a94ac46992b247978070fa8b5f4d6457b}{Make\+Page}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Make a new page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}{Page}}, std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a69e592c88b9c3b8d0e99fe3f0377fbf4}{\+\_\+pages}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ Entity\+Type, Entity\+Type $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a7cca045eea06633bc2647987efeb5c17}{\+\_\+flatset}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$\newline
+class k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set$<$ Entity\+Type, Page\+Size $>$}
+
+The sparse index set is a container which provide O(1) look-\/up time at the cost of non-\/efficient memory consumption. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!Index@{Index}}
+\index{Index@{Index}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} =  Entity\+Type}
+
+
+
+An index is the same size as an entity. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!Page@{Page}}
+\index{Page@{Page}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{Page}{Page}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}{Page}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}}\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_sparse_entity_set_1_1_page_deleter}{Page\+Deleter}}$>$}
+
+
+
+Page containing indexes. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_af003e46f83c5a0e78f9af5a3831a5ddf}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_af003e46f83c5a0e78f9af5a3831a5ddf}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!SparseEntitySet@{SparseEntitySet}}
+\index{SparseEntitySet@{SparseEntitySet}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{SparseEntitySet()}{SparseEntitySet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ab4b3818bf854c50dbafe43e8c41d1a3d}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ab4b3818bf854c50dbafe43e8c41d1a3d}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!SparseEntitySet@{SparseEntitySet}}
+\index{SparseEntitySet@{SparseEntitySet}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{SparseEntitySet()}{SparseEntitySet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a1975a25e1a8cb4c7519b93d5b5bc2a88}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a1975a25e1a8cb4c7519b93d5b5bc2a88}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!````~SparseEntitySet@{$\sim$SparseEntitySet}}
+\index{````~SparseEntitySet@{$\sim$SparseEntitySet}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SparseEntitySet()}{~SparseEntitySet()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a3c89a546ea87e54e97a1b416712c1c33}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a3c89a546ea87e54e97a1b416712c1c33}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!add@{add}}
+\index{add@{add}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::add (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a new value to the set. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a51ed598f396b9fb09b0dccb8cce45783}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a51ed598f396b9fb09b0dccb8cce45783}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!at@{at}}
+\index{at@{at}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::at (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Access a given element of the set. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a20b434a07fa08c156a8a5f6d09d7803d}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a20b434a07fa08c156a8a5f6d09d7803d}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!atRef@{atRef}}
+\index{atRef@{atRef}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{atRef()}{atRef()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::at\+Ref (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a80de65087a7bf652ca0cff1817e96536}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a80de65087a7bf652ca0cff1817e96536}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!clear@{clear}}
+\index{clear@{clear}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Clear the sparse set. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a0e5a49406a64bad487144532158c90d7}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a0e5a49406a64bad487144532158c90d7}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!ElementIndex@{ElementIndex}}
+\index{ElementIndex@{ElementIndex}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{ElementIndex()}{ElementIndex()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+static Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::Element\+Index (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the index of an element. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_aa694fc1e2fb4362954e6a38920cfa80a}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_aa694fc1e2fb4362954e6a38920cfa80a}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!entityCount@{entityCount}}
+\index{entityCount@{entityCount}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{entityCount()}{entityCount()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::entity\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the entity count. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a97ff7214c972f8a23ed93d9b1f415402}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a97ff7214c972f8a23ed93d9b1f415402}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!exists@{exists}}
+\index{exists@{exists}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::exists (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns true if the page containing index exists. 
+
+@ Author\+: Léo Lhuile @ Description\+: \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}} \mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ace305a5d17ba3e2ef35e296b0c76a51c}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ace305a5d17ba3e2ef35e296b0c76a51c}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!flatset@{flatset}}
+\index{flatset@{flatset}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{flatset()}{flatset()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+const \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$Entity\+Type, Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::flatset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal iterable flat set. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a94ac46992b247978070fa8b5f4d6457b}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a94ac46992b247978070fa8b5f4d6457b}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!MakePage@{MakePage}}
+\index{MakePage@{MakePage}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{MakePage()}{MakePage()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}{Page}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::Make\+Page (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Make a new page. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a0971360c50441f502c34c83d4478e382}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a0971360c50441f502c34c83d4478e382}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a402e3c2bc1a39d941c552925dffa0f50}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a402e3c2bc1a39d941c552925dffa0f50}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!PageIndex@{PageIndex}}
+\index{PageIndex@{PageIndex}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{PageIndex()}{PageIndex()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+static Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::Page\+Index (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the index of a page. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_aa2adeec828602bcdd58ad9e4699b3a45}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_aa2adeec828602bcdd58ad9e4699b3a45}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!remove@{remove}}
+\index{remove@{remove}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_ad53f2dbcb480cad64a91aab2be185491}{Index}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::remove (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a value from the set and return it. 
+
+\begin{DoxyReturn}{Returns}
+The position of the destroyed entity in the flat set 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a7cca045eea06633bc2647987efeb5c17}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a7cca045eea06633bc2647987efeb5c17}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!\_flatset@{\_flatset}}
+\index{\_flatset@{\_flatset}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{\_flatset}{\_flatset}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$Entity\+Type, Entity\+Type$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\+\_\+flatset \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a69e592c88b9c3b8d0e99fe3f0377fbf4}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a69e592c88b9c3b8d0e99fe3f0377fbf4}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!\_pages@{\_pages}}
+\index{\_pages@{\_pages}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{\_pages}{\_pages}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a327b141f9ee7a52020da3dbbcb044292}{Page}}, std\+::uint32\+\_\+t$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::\+\_\+pages \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a49286818303918a74ad1ac4fcd541b0b}\label{classk_f_1_1_e_c_s_1_1_sparse_entity_set_a49286818303918a74ad1ac4fcd541b0b}} 
+\index{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}!NullIndex@{NullIndex}}
+\index{NullIndex@{NullIndex}!kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$@{kF::ECS::SparseEntitySet$<$ EntityType, PageSize $>$}}
+\doxysubsubsection{\texorpdfstring{NullIndex}{NullIndex}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type, Entity\+Type Page\+Size$>$ \\
+constexpr auto \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{k\+F\+::\+E\+C\+S\+::\+Sparse\+Entity\+Set}}$<$ Entity\+Type, Page\+Size $>$\+::Null\+Index = \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}{Null\+Entity}}$<$Entity\+Type$>$\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+A null index. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_sparse_entity_set_8hpp}{Sparse\+Entity\+Set.\+hpp}}\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_sparse_entity_set_8ipp}{Sparse\+Entity\+Set.\+ipp}}\end{DoxyCompactItemize}

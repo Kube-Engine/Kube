@@ -1,0 +1,304 @@
+\hypertarget{classk_f_1_1_flow_1_1_task}{}\doxysection{kF\+::Flow\+::Task Class Reference}
+\label{classk_f_1_1_flow_1_1_task}\index{kF::Flow::Task@{kF::Flow::Task}}
+
+
+A task is composed of two functors\+: \textquotesingle{}work\textquotesingle{} and \textquotesingle{}notify\textquotesingle{} The \textquotesingle{}work\textquotesingle{} is to be called on a worker thread of \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} The \textquotesingle{}notify\textquotesingle{} is to be called on the main thread to after \textquotesingle{}work\textquotesingle{} processed.  
+
+
+
+
+{\ttfamily \#include $<$Task.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a2a072ac8c4159373b87f335589c1aeed}{Task}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a8cfc2fb6c7ed63100e84b6196e25ca4e}{Task}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a5d3b9815f7cb1b16ff79f4019acb4872}{node}}) noexcept
+\begin{DoxyCompactList}\small\item\em Construct with existing node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a7caae830ade14e354801a76c414007e4}{Task}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_aaf97ca71313f6b69d9ec020147d6416e}{Task}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_abd77112b4fc1f6e845d620cfb8720189}{$\sim$\+Task}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \& \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a47a7fa6bc8f339615abe71650c31d34a}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \& \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a29219464440ac81d981df805fe175d79}{operator=}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_adca16b42cee112805ae70d93cd5ca3d3}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast check if node is assigned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a5d3b9815f7cb1b16ff79f4019acb4872}{node}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the internal node pointer. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a129c9578eb7091839c99af73b1ab4ad1}{node}} (void) const noexcept
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_flow_a8510ae421b52c6182e9cafea1468fda6}{Node\+Type}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a43f9ddc9c938b0fab7227a49f6f94a92}{type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive the type of the task. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Work $>$ }\\void \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_af40784893c2dd70b8581da9da4bf81e4}{set\+Work}} (Work \&\&work) noexcept
+\begin{DoxyCompactList}\small\item\em Set the work event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a9836173109b6baf8c17c061a17865c43}{has\+Notification}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} has a notification event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_ae30ea6b9a108ada23fd6e09a877a2ad6}{notify}} (void)
+\begin{DoxyCompactList}\small\item\em Execute the notification event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_aef134e3921454b1c57c0bd2e84525ee6}{set\+Notify}} (\mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}} \&\&notify\+Func) noexcept
+\begin{DoxyCompactList}\small\item\em Set the notification event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a1d0d4bcf27e6d3341d98a4093854f36f}{root}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get root graph. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a50f91a5c0b6a8a9756f884bbc0bbb70a}{root}} (void) const noexcept
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a79aae5e6f15c646572f7ee0f986ad05a}{name}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get / Set the name property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_af9267b26651ebc94c6df06a3fe65a060}{set\+Name}} (const std\+::string\+\_\+view \&\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a79aae5e6f15c646572f7ee0f986ad05a}{name}}) noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_abb2af02d8afbb2235a57670c97de2f73}{bypass}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get / Set the name property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a865efaa212f852f5cf5c06701e6b68f5}{set\+Bypass}} (const bool \&\mbox{\hyperlink{classk_f_1_1_flow_1_1_task_abb2af02d8afbb2235a57670c97de2f73}{bypass}}) noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \& \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a29b972e9e04e7340205e19981cd33761}{precede}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&task) noexcept
+\begin{DoxyCompactList}\small\item\em Add a task linked to this instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \& \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_ac19fdc2eb7747594e685b4ba3dc62478}{succeed}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&task) noexcept
+\begin{DoxyCompactList}\small\item\em Add a task linked from this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task_a95d2c8e3151b2bf23bf0040909dcb682}{\+\_\+node}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A task is composed of two functors\+: \textquotesingle{}work\textquotesingle{} and \textquotesingle{}notify\textquotesingle{} The \textquotesingle{}work\textquotesingle{} is to be called on a worker thread of \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} The \textquotesingle{}notify\textquotesingle{} is to be called on the main thread to after \textquotesingle{}work\textquotesingle{} processed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a2a072ac8c4159373b87f335589c1aeed}\label{classk_f_1_1_flow_1_1_task_a2a072ac8c4159373b87f335589c1aeed}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!Task@{Task}}
+\index{Task@{Task}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Task\+::\+Task (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a8cfc2fb6c7ed63100e84b6196e25ca4e}\label{classk_f_1_1_flow_1_1_task_a8cfc2fb6c7ed63100e84b6196e25ca4e}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!Task@{Task}}
+\index{Task@{Task}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Task\+::\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct with existing node. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a7caae830ade14e354801a76c414007e4}\label{classk_f_1_1_flow_1_1_task_a7caae830ade14e354801a76c414007e4}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!Task@{Task}}
+\index{Task@{Task}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Task\+::\+Task (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default copy constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_aaf97ca71313f6b69d9ec020147d6416e}\label{classk_f_1_1_flow_1_1_task_aaf97ca71313f6b69d9ec020147d6416e}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!Task@{Task}}
+\index{Task@{Task}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Task\+::\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_abd77112b4fc1f6e845d620cfb8720189}\label{classk_f_1_1_flow_1_1_task_abd77112b4fc1f6e845d620cfb8720189}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!````~Task@{$\sim$Task}}
+\index{````~Task@{$\sim$Task}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{$\sim$Task()}{~Task()}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Task\+::$\sim$\+Task (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_abb2af02d8afbb2235a57670c97de2f73}\label{classk_f_1_1_flow_1_1_task_abb2af02d8afbb2235a57670c97de2f73}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!bypass@{bypass}}
+\index{bypass@{bypass}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{bypass()}{bypass()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Task\+::bypass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get / Set the name property. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a9836173109b6baf8c17c061a17865c43}\label{classk_f_1_1_flow_1_1_task_a9836173109b6baf8c17c061a17865c43}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!hasNotification@{hasNotification}}
+\index{hasNotification@{hasNotification}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{hasNotification()}{hasNotification()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Task\+::has\+Notification (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} has a notification event. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a79aae5e6f15c646572f7ee0f986ad05a}\label{classk_f_1_1_flow_1_1_task_a79aae5e6f15c646572f7ee0f986ad05a}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!name@{name}}
+\index{name@{name}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view k\+F\+::\+Flow\+::\+Task\+::name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get / Set the name property. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a129c9578eb7091839c99af73b1ab4ad1}\label{classk_f_1_1_flow_1_1_task_a129c9578eb7091839c99af73b1ab4ad1}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!node@{node}}
+\index{node@{node}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Task\+::node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a5d3b9815f7cb1b16ff79f4019acb4872}\label{classk_f_1_1_flow_1_1_task_a5d3b9815f7cb1b16ff79f4019acb4872}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!node@{node}}
+\index{node@{node}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Task\+::node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the internal node pointer. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_ae30ea6b9a108ada23fd6e09a877a2ad6}\label{classk_f_1_1_flow_1_1_task_ae30ea6b9a108ada23fd6e09a877a2ad6}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!notify@{notify}}
+\index{notify@{notify}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Task\+::notify (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Execute the notification event. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_adca16b42cee112805ae70d93cd5ca3d3}\label{classk_f_1_1_flow_1_1_task_adca16b42cee112805ae70d93cd5ca3d3}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Task\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast check if node is assigned. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a47a7fa6bc8f339615abe71650c31d34a}\label{classk_f_1_1_flow_1_1_task_a47a7fa6bc8f339615abe71650c31d34a}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}\& k\+F\+::\+Flow\+::\+Task\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a29219464440ac81d981df805fe175d79}\label{classk_f_1_1_flow_1_1_task_a29219464440ac81d981df805fe175d79}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}\& k\+F\+::\+Flow\+::\+Task\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a29b972e9e04e7340205e19981cd33761}\label{classk_f_1_1_flow_1_1_task_a29b972e9e04e7340205e19981cd33761}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!precede@{precede}}
+\index{precede@{precede}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{precede()}{precede()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}} \& k\+F\+::\+Flow\+::\+Task\+::precede (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a task linked to this instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a50f91a5c0b6a8a9756f884bbc0bbb70a}\label{classk_f_1_1_flow_1_1_task_a50f91a5c0b6a8a9756f884bbc0bbb70a}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!root@{root}}
+\index{root@{root}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} $\ast$ k\+F\+::\+Flow\+::\+Task\+::root (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a1d0d4bcf27e6d3341d98a4093854f36f}\label{classk_f_1_1_flow_1_1_task_a1d0d4bcf27e6d3341d98a4093854f36f}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!root@{root}}
+\index{root@{root}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} $\ast$ k\+F\+::\+Flow\+::\+Task\+::root (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get root graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a865efaa212f852f5cf5c06701e6b68f5}\label{classk_f_1_1_flow_1_1_task_a865efaa212f852f5cf5c06701e6b68f5}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!setBypass@{setBypass}}
+\index{setBypass@{setBypass}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{setBypass()}{setBypass()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Task\+::set\+Bypass (\begin{DoxyParamCaption}\item[{const bool \&}]{bypass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_af9267b26651ebc94c6df06a3fe65a060}\label{classk_f_1_1_flow_1_1_task_af9267b26651ebc94c6df06a3fe65a060}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!setName@{setName}}
+\index{setName@{setName}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Task\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_aef134e3921454b1c57c0bd2e84525ee6}\label{classk_f_1_1_flow_1_1_task_aef134e3921454b1c57c0bd2e84525ee6}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!setNotify@{setNotify}}
+\index{setNotify@{setNotify}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{setNotify()}{setNotify()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Task\+::set\+Notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}} \&\&}]{notify\+Func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the notification event. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_af40784893c2dd70b8581da9da4bf81e4}\label{classk_f_1_1_flow_1_1_task_af40784893c2dd70b8581da9da4bf81e4}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!setWork@{setWork}}
+\index{setWork@{setWork}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{setWork()}{setWork()}}
+{\footnotesize\ttfamily template$<$typename Work $>$ \\
+void k\+F\+::\+Flow\+::\+Task\+::set\+Work (\begin{DoxyParamCaption}\item[{Work \&\&}]{work }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the work event. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_ac19fdc2eb7747594e685b4ba3dc62478}\label{classk_f_1_1_flow_1_1_task_ac19fdc2eb7747594e685b4ba3dc62478}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!succeed@{succeed}}
+\index{succeed@{succeed}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{succeed()}{succeed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}\& k\+F\+::\+Flow\+::\+Task\+::succeed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a task linked from this instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a43f9ddc9c938b0fab7227a49f6f94a92}\label{classk_f_1_1_flow_1_1_task_a43f9ddc9c938b0fab7227a49f6f94a92}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!type@{type}}
+\index{type@{type}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_flow_a8510ae421b52c6182e9cafea1468fda6}{k\+F\+::\+Flow\+::\+Node\+Type}} k\+F\+::\+Flow\+::\+Task\+::type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the type of the task. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_task_a95d2c8e3151b2bf23bf0040909dcb682}\label{classk_f_1_1_flow_1_1_task_a95d2c8e3151b2bf23bf0040909dcb682}} 
+\index{kF::Flow::Task@{kF::Flow::Task}!\_node@{\_node}}
+\index{\_node@{\_node}!kF::Flow::Task@{kF::Flow::Task}}
+\doxysubsubsection{\texorpdfstring{\_node}{\_node}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Task\+::\+\_\+node \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Flow/\mbox{\hyperlink{_task_8hpp}{Task.\+hpp}}\item 
+Kube/\+Flow/\mbox{\hyperlink{_task_8ipp}{Task.\+ipp}}\end{DoxyCompactItemize}

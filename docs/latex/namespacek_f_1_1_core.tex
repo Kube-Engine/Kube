@@ -1,0 +1,170 @@
+\hypertarget{namespacek_f_1_1_core}{}\doxysection{kF\+::Core Namespace Reference}
+\label{namespacek_f_1_1_core}\index{kF::Core@{kF::Core}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils}{Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4}{Dispatcher\+Details$<$ Return(\+Args...), Cache\+Size, Template\+Functor $>$}}
+\begin{DoxyCompactList}\small\item\em Fast event dispatcher. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}
+\begin{DoxyCompactList}\small\item\em Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}}
+\begin{DoxyCompactList}\small\item\em The M\+P\+MC queue is a lock-\/free queue that only supports a Single Producer but Multiple Consumers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_s_p_s_c_queue}{S\+P\+S\+C\+Queue}}
+\begin{DoxyCompactList}\small\item\em The S\+P\+SC queue is a lock-\/free queue that only supports a Single Producer and a Single Consumer The queue is really fast compared to other more flexible implementations because the fact that only two thread can simultaneously read / write means that less synchronization is needed for each operation. The queue supports ranged push / pop to insert multiple elements without performance impact. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4}{Trivial\+Functor$<$ Return(\+Args...), Cache\+Size $>$}}
+\begin{DoxyCompactList}\small\item\em Very fast opaque functor but only takes trivial types less or equal sized than cacheline eighth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{Flat\+String}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ char $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\item 
+{\footnotesize template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Eighth\+Size$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Trivial\+Dispatcher}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$ Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}} $>$
+\begin{DoxyCompactList}\small\item\em Specialization of dispatcher with trivial functors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}{Trivial\+Functor\+Requirements}}
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. \end{DoxyCompactList}\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} = sizeof(std\+::size\+\_\+t) $\ast$ 8
+\begin{DoxyCompactList}\small\item\em Theorical cacheline size. \end{DoxyCompactList}\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_abb5b5db4b3b817aaab1aea3c64523dd5}{Cache\+Line\+Double\+Size}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} $\ast$ 2
+\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a8dc49a6577816ab36a507d1b268b83df}{Cache\+Line\+Half\+Size}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} / 2
+\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}{Cache\+Line\+Quarter\+Size}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} / 4
+\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}{Cache\+Line\+Eighth\+Size}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} / 8
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@ Author\+: Matthieu Moinvaziri @ Description\+: Dispatcher
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Flat\+String
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Flat\+Vector @ Author\+: Matthieu Moinvaziri @ Description\+: Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: A dead simple runtime array
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: M\+P\+MC Queue
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: S\+P\+SC Queue
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Trivial dispatcher
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Trivial opaque functor holder
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Vector 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}\label{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}} 
+\index{kF::Core@{kF::Core}!FlatString@{FlatString}}
+\index{FlatString@{FlatString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{FlatString}{FlatString}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{k\+F\+::\+Core\+::\+Flat\+String}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$char$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}\label{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}} 
+\index{kF::Core@{kF::Core}!FlatVector@{FlatVector}}
+\index{FlatVector@{FlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{FlatVector}{FlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{k\+F\+::\+Core\+::\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}\label{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}} 
+\index{kF::Core@{kF::Core}!TinyVector@{TinyVector}}
+\index{TinyVector@{TinyVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinyVector}{TinyVector}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{k\+F\+::\+Core\+::\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}\label{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}} 
+\index{kF::Core@{kF::Core}!TrivialDispatcher@{TrivialDispatcher}}
+\index{TrivialDispatcher@{TrivialDispatcher}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TrivialDispatcher}{TrivialDispatcher}}
+{\footnotesize\ttfamily template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Eighth\+Size$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{k\+F\+::\+Core\+::\+Trivial\+Dispatcher}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}$>$}
+
+
+
+Specialization of dispatcher with trivial functors. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}\label{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}} 
+\index{kF::Core@{kF::Core}!Vector@{Vector}}
+\index{Vector@{Vector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{Vector}{Vector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{k\+F\+::\+Core\+::\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_abb5b5db4b3b817aaab1aea3c64523dd5}\label{namespacek_f_1_1_core_abb5b5db4b3b817aaab1aea3c64523dd5}} 
+\index{kF::Core@{kF::Core}!CacheLineDoubleSize@{CacheLineDoubleSize}}
+\index{CacheLineDoubleSize@{CacheLineDoubleSize}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{CacheLineDoubleSize}{CacheLineDoubleSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Core\+::\+Cache\+Line\+Double\+Size = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} $\ast$ 2\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}\label{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}} 
+\index{kF::Core@{kF::Core}!CacheLineEighthSize@{CacheLineEighthSize}}
+\index{CacheLineEighthSize@{CacheLineEighthSize}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{CacheLineEighthSize}{CacheLineEighthSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Core\+::\+Cache\+Line\+Eighth\+Size = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} / 8\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a8dc49a6577816ab36a507d1b268b83df}\label{namespacek_f_1_1_core_a8dc49a6577816ab36a507d1b268b83df}} 
+\index{kF::Core@{kF::Core}!CacheLineHalfSize@{CacheLineHalfSize}}
+\index{CacheLineHalfSize@{CacheLineHalfSize}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{CacheLineHalfSize}{CacheLineHalfSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Core\+::\+Cache\+Line\+Half\+Size = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} / 2\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}\label{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}} 
+\index{kF::Core@{kF::Core}!CacheLineQuarterSize@{CacheLineQuarterSize}}
+\index{CacheLineQuarterSize@{CacheLineQuarterSize}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{CacheLineQuarterSize}{CacheLineQuarterSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Core\+::\+Cache\+Line\+Quarter\+Size = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} / 4\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}\label{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}} 
+\index{kF::Core@{kF::Core}!CacheLineSize@{CacheLineSize}}
+\index{CacheLineSize@{CacheLineSize}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{CacheLineSize}{CacheLineSize}}
+{\footnotesize\ttfamily constexpr std\+::size\+\_\+t k\+F\+::\+Core\+::\+Cache\+Line\+Size = sizeof(std\+::size\+\_\+t) $\ast$ 8\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Theorical cacheline size. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}\label{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}} 
+\index{kF::Core@{kF::Core}!TrivialFunctorRequirements@{TrivialFunctorRequirements}}
+\index{TrivialFunctorRequirements@{TrivialFunctorRequirements}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TrivialFunctorRequirements}{TrivialFunctorRequirements}}
+{\footnotesize\ttfamily template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ \\
+concept k\+F\+::\+Core\+::\+Trivial\+Functor\+Requirements}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        std::conjunction\_v<std::is\_trivial<Functor>, std::bool\_constant<\textcolor{keyword}{sizeof}(Functor) <= CacheSize>>}
+
+\end{DoxyCode}
+
+
+Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. 
+

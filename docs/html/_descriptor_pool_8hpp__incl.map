@@ -1,0 +1,26 @@
+<map id="Kube/Graphics/DescriptorPool.hpp" name="Kube/Graphics/DescriptorPool.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="349,5,521,47"/>
+<area shape="rect" id="node2" href="$_vulkan_handle_8hpp.html" title=" " alt="" coords="187,244,314,271"/>
+<area shape="rect" id="node18" href="$_descriptor_pool_model_8hpp.html" title=" " alt="" coords="747,169,915,196"/>
+<area shape="rect" id="node20" href="$_descriptor_set_layout_8hpp.html" title=" " alt="" coords="351,95,518,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,468,59,495"/>
+<area shape="rect" id="node4" href="$_vulkan_8hpp.html" title=" " alt="" coords="574,319,661,345"/>
+<area shape="rect" id="node17" href="$_renderer_object_8hpp.html" title=" " alt="" coords="181,319,320,345"/>
+<area shape="rect" id="node5" href="$_utils_8hpp.html" title=" " alt="" coords="263,393,403,420"/>
+<area shape="rect" id="node13" href="$_vulkan_enums_8hpp.html" title=" " alt="" coords="627,393,754,420"/>
+<area shape="rect" id="node6" title=" " alt="" coords="439,468,521,495"/>
+<area shape="rect" id="node7" title=" " alt="" coords="545,468,620,495"/>
+<area shape="rect" id="node8" title=" " alt="" coords="615,543,689,569"/>
+<area shape="rect" id="node9" title=" " alt="" coords="83,468,149,495"/>
+<area shape="rect" id="node10" title=" " alt="" coords="173,468,235,495"/>
+<area shape="rect" id="node11" title=" " alt="" coords="259,468,319,495"/>
+<area shape="rect" id="node12" href="$_utils_8ipp.html" title=" " alt="" coords="343,468,414,495"/>
+<area shape="rect" id="node14" href="$_vulkan_flags_8hpp.html" title=" " alt="" coords="706,468,825,495"/>
+<area shape="rect" id="node15" title=" " alt="" coords="714,543,827,569"/>
+<area shape="rect" id="node16" title=" " alt="" coords="852,543,969,569"/>
+<area shape="rect" id="node19" href="$_descriptor_pool_size_8hpp.html" title=" " alt="" coords="631,244,790,271"/>
+<area shape="rect" id="node21" href="$_descriptor_set_layout_model_8hpp.html" title=" " alt="" coords="334,169,535,196"/>
+<area shape="rect" id="node24" href="$_descriptor_set_layout_8ipp.html" title=" " alt="" coords="560,169,723,196"/>
+<area shape="rect" id="node22" href="$_descriptor_set_layout_binding_8hpp.html" title=" " alt="" coords="342,244,551,271"/>
+<area shape="rect" id="node23" href="$_descriptor_set_layout_binding_8ipp.html" title=" " alt="" coords="344,319,549,345"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="kF::Graphics::DescriptorPool" name="kF::Graphics::DescriptorPool">
+<area shape="rect" id="node1" title="Abstract an DescriptorPool." alt="" coords="42,1113,233,1264"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="43,972,232,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,200,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="95,5,281,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="145,307,391,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title="Vulkan handle that inherits from CachedRendererObject." alt="" coords="159,817,348,909"/>
+</map>

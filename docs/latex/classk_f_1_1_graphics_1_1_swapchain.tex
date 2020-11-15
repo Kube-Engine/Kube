@@ -1,0 +1,297 @@
+\hypertarget{classk_f_1_1_graphics_1_1_swapchain}{}\doxysection{kF\+::Graphics\+::Swapchain Class Reference}
+\label{classk_f_1_1_graphics_1_1_swapchain}\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+
+
+Abstraction of renderer swapchain.  
+
+
+
+
+{\ttfamily \#include $<$Swapchain.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Swapchain\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_swapchain__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_aa2d760525fce4545b2c183f6abfb8437}{Swapchain}} (void)
+\begin{DoxyCompactList}\small\item\em Construct the swapchain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_ade2afae40ae68d75de4cf0f8206bb983}{Swapchain}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a5659882a72848d8881ee9807ee8bad3f}{$\sim$\+Swapchain}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destrut the swapchain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a729864d316edc3c7b31fd21af5507d4a}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a9639ee45616f16f3cd43f009ee78caaf}{swap}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two swapchains. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a6cc1ad1e390fb72beda851d6d482533f}{surface\+Format}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the surface format. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_ad46af9576db15827e0b6808341fcc6e5}{surface\+Format}} (void) const noexcept
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a9a2ef72534a72f95800544566bab32cf}{present\+Mode}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the surface presentationmode. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a249168f5459d78f1431c8454018120b1}{present\+Mode}} (void) const noexcept
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_abdfa627401c2ddf0510c71b62de562cd}{extent}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the extent. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a03940bd516e9cf128e5050c230ef36a7}{extent}} (void) const noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a279332658ced34d0387d106d12c84326}{image\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of cached image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_ac1edfd6f3ef4e899ffab8c309503dcca}{image\+At}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} frame\+Index) const noexcept
+\begin{DoxyCompactList}\small\item\em Get an image of the swapchain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a28088983caa021995cc889f9bdc890ea}{Image\+View\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a632d038511163ee6bb9f22cca5fc4288}{image\+View\+At}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} frame\+Index) const noexcept
+\begin{DoxyCompactList}\small\item\em Get an image of the swapchain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_aa6a07bc774215b4b56622b962ff66cd2}{on\+View\+Size\+Changed}} (void)
+\begin{DoxyCompactList}\small\item\em Callback on render view size changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a3024d4abd00bcd2b4f8a12bf5371b1b4}{create\+Swapchain}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a0d49f7ce09de7e54399bb23c3bf664b4}{Swapchain\+Handle}} old\+Swapchain)
+\begin{DoxyCompactList}\small\item\em Create the swapchain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a5cf720b404ac2229655e61b5878b0f7e}{destroy\+Swapchain}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the swapchain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} $>$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a513b068e8f57f79d81e1a97a092fd11e}{retreive\+Images}} (void)
+\begin{DoxyCompactList}\small\item\em Create swapchain images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_ae650e104464660fcaccfacacd7bb321e}{create\+Image\+Views}} (\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} $>$ \&\&images)
+\begin{DoxyCompactList}\small\item\em Create swapchain image views. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ std\+::pair$<$ \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} $>$ $>$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a79c2813b739e51ca038a6d28336175f8}{\+\_\+image\+Pairs}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_ab6f6fbc2f7be3ca78f0fe84e33c5247e}{\+\_\+extent}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_aba2b9757d15d001582ca1f1c646398d0}{\+\_\+surface\+Format}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain_a85ec0e3f092b38c4f30159ca4dad754c}{\+\_\+present\+Mode}} \{ Present\+Mode\+::\+Immediate\+Khr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of renderer swapchain. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_aa2d760525fce4545b2c183f6abfb8437}\label{classk_f_1_1_graphics_1_1_swapchain_aa2d760525fce4545b2c183f6abfb8437}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!Swapchain@{Swapchain}}
+\index{Swapchain@{Swapchain}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{Swapchain()}{Swapchain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Swapchain\+::\+Swapchain (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct the swapchain. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_ade2afae40ae68d75de4cf0f8206bb983}\label{classk_f_1_1_graphics_1_1_swapchain_ade2afae40ae68d75de4cf0f8206bb983}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!Swapchain@{Swapchain}}
+\index{Swapchain@{Swapchain}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{Swapchain()}{Swapchain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Swapchain\+::\+Swapchain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a5659882a72848d8881ee9807ee8bad3f}\label{classk_f_1_1_graphics_1_1_swapchain_a5659882a72848d8881ee9807ee8bad3f}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!````~Swapchain@{$\sim$Swapchain}}
+\index{````~Swapchain@{$\sim$Swapchain}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{$\sim$Swapchain()}{~Swapchain()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Swapchain\+::$\sim$\+Swapchain (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destrut the swapchain. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_ae650e104464660fcaccfacacd7bb321e}\label{classk_f_1_1_graphics_1_1_swapchain_ae650e104464660fcaccfacacd7bb321e}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!createImageViews@{createImageViews}}
+\index{createImageViews@{createImageViews}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{createImageViews()}{createImageViews()}}
+{\footnotesize\ttfamily void Graphics\+::\+Swapchain\+::create\+Image\+Views (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} $>$ \&\&}]{images }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create swapchain image views. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a3024d4abd00bcd2b4f8a12bf5371b1b4}\label{classk_f_1_1_graphics_1_1_swapchain_a3024d4abd00bcd2b4f8a12bf5371b1b4}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!createSwapchain@{createSwapchain}}
+\index{createSwapchain@{createSwapchain}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{createSwapchain()}{createSwapchain()}}
+{\footnotesize\ttfamily void Graphics\+::\+Swapchain\+::create\+Swapchain (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a0d49f7ce09de7e54399bb23c3bf664b4}{Swapchain\+Handle}}}]{old\+Swapchain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the swapchain. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a5cf720b404ac2229655e61b5878b0f7e}\label{classk_f_1_1_graphics_1_1_swapchain_a5cf720b404ac2229655e61b5878b0f7e}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!destroySwapchain@{destroySwapchain}}
+\index{destroySwapchain@{destroySwapchain}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{destroySwapchain()}{destroySwapchain()}}
+{\footnotesize\ttfamily void Graphics\+::\+Swapchain\+::destroy\+Swapchain (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy the swapchain. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a03940bd516e9cf128e5050c230ef36a7}\label{classk_f_1_1_graphics_1_1_swapchain_a03940bd516e9cf128e5050c230ef36a7}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!extent@{extent}}
+\index{extent@{extent}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{extent()}{extent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::extent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_abdfa627401c2ddf0510c71b62de562cd}\label{classk_f_1_1_graphics_1_1_swapchain_abdfa627401c2ddf0510c71b62de562cd}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!extent@{extent}}
+\index{extent@{extent}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{extent()}{extent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::extent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the extent. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_ac1edfd6f3ef4e899ffab8c309503dcca}\label{classk_f_1_1_graphics_1_1_swapchain_ac1edfd6f3ef4e899ffab8c309503dcca}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!imageAt@{imageAt}}
+\index{imageAt@{imageAt}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{imageAt()}{imageAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}} k\+F\+::\+Graphics\+::\+Swapchain\+::image\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}}}]{frame\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get an image of the swapchain. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a279332658ced34d0387d106d12c84326}\label{classk_f_1_1_graphics_1_1_swapchain_a279332658ced34d0387d106d12c84326}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!imageCount@{imageCount}}
+\index{imageCount@{imageCount}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{imageCount()}{imageCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Graphics\+::\+Swapchain\+::image\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the number of cached image. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a632d038511163ee6bb9f22cca5fc4288}\label{classk_f_1_1_graphics_1_1_swapchain_a632d038511163ee6bb9f22cca5fc4288}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!imageViewAt@{imageViewAt}}
+\index{imageViewAt@{imageViewAt}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{imageViewAt()}{imageViewAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a28088983caa021995cc889f9bdc890ea}{Image\+View\+Handle}} k\+F\+::\+Graphics\+::\+Swapchain\+::image\+View\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}}}]{frame\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get an image of the swapchain. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_aa6a07bc774215b4b56622b962ff66cd2}\label{classk_f_1_1_graphics_1_1_swapchain_aa6a07bc774215b4b56622b962ff66cd2}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!onViewSizeChanged@{onViewSizeChanged}}
+\index{onViewSizeChanged@{onViewSizeChanged}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{onViewSizeChanged()}{onViewSizeChanged()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Swapchain\+::on\+View\+Size\+Changed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Callback on render view size changed. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a729864d316edc3c7b31fd21af5507d4a}\label{classk_f_1_1_graphics_1_1_swapchain_a729864d316edc3c7b31fd21af5507d4a}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a249168f5459d78f1431c8454018120b1}\label{classk_f_1_1_graphics_1_1_swapchain_a249168f5459d78f1431c8454018120b1}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!presentMode@{presentMode}}
+\index{presentMode@{presentMode}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{presentMode()}{presentMode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::present\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a9a2ef72534a72f95800544566bab32cf}\label{classk_f_1_1_graphics_1_1_swapchain_a9a2ef72534a72f95800544566bab32cf}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!presentMode@{presentMode}}
+\index{presentMode@{presentMode}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{presentMode()}{presentMode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::present\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the surface presentationmode. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a513b068e8f57f79d81e1a97a092fd11e}\label{classk_f_1_1_graphics_1_1_swapchain_a513b068e8f57f79d81e1a97a092fd11e}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!retreiveImages@{retreiveImages}}
+\index{retreiveImages@{retreiveImages}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{retreiveImages()}{retreiveImages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Graphics\+::\+Image\+Handle}} $>$ Graphics\+::\+Swapchain\+::retreive\+Images (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create swapchain images. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_ad46af9576db15827e0b6808341fcc6e5}\label{classk_f_1_1_graphics_1_1_swapchain_ad46af9576db15827e0b6808341fcc6e5}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!surfaceFormat@{surfaceFormat}}
+\index{surfaceFormat@{surfaceFormat}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{surfaceFormat()}{surfaceFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::surface\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a6cc1ad1e390fb72beda851d6d482533f}\label{classk_f_1_1_graphics_1_1_swapchain_a6cc1ad1e390fb72beda851d6d482533f}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!surfaceFormat@{surfaceFormat}}
+\index{surfaceFormat@{surfaceFormat}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{surfaceFormat()}{surfaceFormat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}}\& k\+F\+::\+Graphics\+::\+Swapchain\+::surface\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the surface format. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a9639ee45616f16f3cd43f009ee78caaf}\label{classk_f_1_1_graphics_1_1_swapchain_a9639ee45616f16f3cd43f009ee78caaf}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!swap@{swap}}
+\index{swap@{swap}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Swapchain\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two swapchains. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_swapchain}{Swapchain}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_ab6f6fbc2f7be3ca78f0fe84e33c5247e}\label{classk_f_1_1_graphics_1_1_swapchain_ab6f6fbc2f7be3ca78f0fe84e33c5247e}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!\_extent@{\_extent}}
+\index{\_extent@{\_extent}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{\_extent}{\_extent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}} k\+F\+::\+Graphics\+::\+Swapchain\+::\+\_\+extent \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a79c2813b739e51ca038a6d28336175f8}\label{classk_f_1_1_graphics_1_1_swapchain_a79c2813b739e51ca038a6d28336175f8}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!\_imagePairs@{\_imagePairs}}
+\index{\_imagePairs@{\_imagePairs}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{\_imagePairs}{\_imagePairs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$std\+::pair$<$\mbox{\hyperlink{namespacek_f_1_1_graphics_a5ffc1ed4de2f254fd4609a6442e5d3f8}{Image\+Handle}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}}$>$ $>$ k\+F\+::\+Graphics\+::\+Swapchain\+::\+\_\+image\+Pairs \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_a85ec0e3f092b38c4f30159ca4dad754c}\label{classk_f_1_1_graphics_1_1_swapchain_a85ec0e3f092b38c4f30159ca4dad754c}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!\_presentMode@{\_presentMode}}
+\index{\_presentMode@{\_presentMode}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{\_presentMode}{\_presentMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}} k\+F\+::\+Graphics\+::\+Swapchain\+::\+\_\+present\+Mode \{ Present\+Mode\+::\+Immediate\+Khr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_swapchain_aba2b9757d15d001582ca1f1c646398d0}\label{classk_f_1_1_graphics_1_1_swapchain_aba2b9757d15d001582ca1f1c646398d0}} 
+\index{kF::Graphics::Swapchain@{kF::Graphics::Swapchain}!\_surfaceFormat@{\_surfaceFormat}}
+\index{\_surfaceFormat@{\_surfaceFormat}!kF::Graphics::Swapchain@{kF::Graphics::Swapchain}}
+\doxysubsubsection{\texorpdfstring{\_surfaceFormat}{\_surfaceFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}} k\+F\+::\+Graphics\+::\+Swapchain\+::\+\_\+surface\+Format \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_swapchain_8hpp}{Swapchain.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_swapchain_8cpp}{Swapchain.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_swapchain_8ipp}{Swapchain.\+ipp}}\end{DoxyCompactItemize}

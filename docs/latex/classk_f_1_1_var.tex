@@ -1,0 +1,848 @@
+\hypertarget{classk_f_1_1_var}{}\doxysection{kF\+::Var Class Reference}
+\label{classk_f_1_1_var}\index{kF::Var@{kF::Var}}
+
+
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} is used as a wrapper for any type.  
+
+
+
+
+{\ttfamily \#include $<$Var.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionk_f_1_1_var_1_1_cache}{Cache}}
+\begin{DoxyCompactList}\small\item\em Small optimisation of \mbox{\hyperlink{classk_f_1_1_var}{Var}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}{Storage\+Type}} \+: std\+::uint32\+\_\+t \{ \newline
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aec0fc0100c4fc1ce4eea230c3dc10360}{Storage\+Type\+::\+Undefined}}, 
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a689202409e48743b914713f96d93947c}{Storage\+Type\+::\+Value}}, 
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aab186d3db74a0473afa302cf25f0bf0d}{Storage\+Type\+::\+Value\+Optimized}}, 
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aa1579ccdb716430c0a161e7e91ffe56f}{Storage\+Type\+::\+Reference\+Volatile}}, 
+\newline
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a70a711eb2d24d598a9b8e6ae4cf1910b}{Storage\+Type\+::\+Reference\+Constant}}
+ \}
+\begin{DoxyCompactList}\small\item\em Describes how the internal instance is stored. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6}{Use\+Small\+Optimization}} \+: bool \{ \mbox{\hyperlink{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6abafd7322c6e97d25b6299b5d6fe8920b}{Use\+Small\+Optimization\+::\+No}} = false, 
+\mbox{\hyperlink{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6a93cba07454f06a4a960172bbd6e2a435}{Use\+Small\+Optimization\+::\+Yes}} = true
+ \}
+\begin{DoxyCompactList}\small\item\em A bunch of enum helpers for better template readability. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94c}{Should\+Reset\+Members}} \+: bool \{ \mbox{\hyperlink{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94cabafd7322c6e97d25b6299b5d6fe8920b}{Should\+Reset\+Members\+::\+No}} = false, 
+\mbox{\hyperlink{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94ca93cba07454f06a4a960172bbd6e2a435}{Should\+Reset\+Members\+::\+Yes}} = true
+ \}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28}{Should\+Check\+If\+Assignable}} \+: bool \{ \mbox{\hyperlink{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28abafd7322c6e97d25b6299b5d6fe8920b}{Should\+Check\+If\+Assignable\+::\+No}} = false, 
+\mbox{\hyperlink{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28a93cba07454f06a4a960172bbd6e2a435}{Should\+Check\+If\+Assignable\+::\+Yes}} = true
+ \}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99}{Should\+Destruct\+Instance}} \+: bool \{ \mbox{\hyperlink{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99abafd7322c6e97d25b6299b5d6fe8920b}{Should\+Destruct\+Instance\+::\+No}} = false, 
+\mbox{\hyperlink{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99a93cba07454f06a4a960172bbd6e2a435}{Should\+Destruct\+Instance\+::\+Yes}} = true
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_var_a9c49ba439a29771aafb6d9c51eeb6670}{Var}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor, instance is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var_a177bdc791ab6c33c17446257c5b82f95}{Var}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor, deep copy ! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var_a8e0ae3f253bdc27a2aaccfbcbb461e17}{Var}} (\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ Type $>$, Var $>$$>$ $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_var_a0c073a9a7b10e9faacdf9bd9d9788286}{Var}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&value) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$)
+\begin{DoxyCompactList}\small\item\em Emplace constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var_a20d3665fe35957b82c2a4a005beb616b}{$\sim$\+Var}} (void)
+\begin{DoxyCompactList}\small\item\em If not empty, will destruct the internal value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_a68ff7e158078d7d5e38ea005148d585c}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment, deep copy ! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_a0eb7a13690e130ff75a2cee3d887e8a4}{operator=}} (\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assignment, either call constructor or move pointers if not small optimized. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Should\+Reset\+Members Reset\+Members = Should\+Reset\+Members\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_a886d0e7fac37579dd30f437467d99757}{release}} (void)
+\begin{DoxyCompactList}\small\item\em Destruct the instance and its internal memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var_a74f44076d5711235790c30a9a8264519}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if the instance is not empty. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , Should\+Destruct\+Instance Destruct\+Instance = Should\+Destruct\+Instance\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_aeca88d3e27cd3703adf89b96c9640324}{assign}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&other)
+\begin{DoxyCompactList}\small\item\em Assigns a variable internally. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Should\+Check\+If\+Assignable Check\+If\+Assignable = Should\+Check\+If\+Assignable\+::\+Yes, Should\+Destruct\+Instance Destruct\+Instance = Should\+Destruct\+Instance\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_a8f75c07d6fc3c6fdf2f89abc41abc5d4}{deep\+Copy}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&other)
+\begin{DoxyCompactList}\small\item\em Deep copy another variable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , Should\+Destruct\+Instance Destruct\+Instance = Should\+Destruct\+Instance\+::\+Yes, typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_af9ee0a91864a5821e043bd485cdc3baa}{emplace}} (Args \&\&...args) noexcept(Destruct\+Instance==\mbox{\hyperlink{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99abafd7322c6e97d25b6299b5d6fe8920b}{Should\+Destruct\+Instance\+::\+No}} \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$)
+\begin{DoxyCompactList}\small\item\em Emplaces a type into the current instance. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Should\+Destruct\+Instance Destruct\+Instance = Should\+Destruct\+Instance\+::\+Yes, typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_a518c717e954057a062ae4cd57d1ef88f}{construct}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Construct semantic. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Should\+Reset\+Members Reset\+Members = Should\+Reset\+Members\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_aecab284738659e4772cbba0a7e856b46}{destruct}} (void)
+\begin{DoxyCompactList}\small\item\em Release internal type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get internal type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}{Storage\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a6a2c1cd5db0588dff029de4bbc9ca14a}{storage\+Type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get internal storage type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_var_a180322589e524e77f6573c269b7d96a5}{is\+Constant}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get internal constness. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_var_ad7ce6954a813678f53c372956ffd0993}{is\+Small\+Optimized\+Value}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast check of \textquotesingle{}\mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type()}}.is\+Trivial() \&\& storage\+Type == \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a689202409e48743b914713f96d93947c}{Storage\+Type\+::\+Value}}\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_var_ae8da56cdbb4cdab2e8f58c353d0b26c9}{is\+Void}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if type is void. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classk_f_1_1_var_af1b4f2c4f1b548230fc24bd84c80d880}{data}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive opaque internal data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Use\+Small\+Optimization Is\+Small\+Optimized$>$ }\\void $\ast$ \mbox{\hyperlink{classk_f_1_1_var_a9423d7e66b1718c8d8d3512fabcbb000}{data}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive opaque internal data knowing small optimization state at compile time. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_var_a6dcfd18f452e894a672af94d731705ef}{as}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Retreive internal type as given Type reference (unsafe) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_var_ab908745bb8b63246cd14e731e78fa690}{as}} (void) const noexcept
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_var_a164ad0fad6bcfd6b16a2d4597b639e7f}{cast}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Tries to cast internal to himself or base type (If impossible, will throw in debug or crash in release. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_var_ace200cc68bcdfddd94628203ada2b41a}{cast}} (void) const noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_var_afc930742c762e41312c40f4463acf952}{try\+Cast}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Tries to cast internal to himself or base type (If impossible, will return nullptr. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_var_a7388ebf6cb05d91c686eabecfd4d4241}{try\+Cast}} (void) const noexcept
+\item 
+{\footnotesize template$<$typename Type $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_var_a21866b752319cceb346eba6bddf2aab5}{is\+Cast\+Able}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if internal is castable to given type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_var_a780301463e3194feb35afe48bd7b8392}{convert}} (void)
+\begin{DoxyCompactList}\small\item\em Tries to convert current instance into given type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_var_a651cbd27e70dec95e4c30e42589997cb}{convert}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type}})
+\begin{DoxyCompactList}\small\item\em Tries to convert current instance into given meta type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To $>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_aa2a9d6bce8af283daecad4152459128d}{convert\+Opaque}} (void) const
+\begin{DoxyCompactList}\small\item\em Tries to create an opaque converted value to given type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_aec881805c31248dc1f142f49f743a204}{convert\+Opaque}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type}}) const
+\begin{DoxyCompactList}\small\item\em Tries to get an opaque converted value of given meta type name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To $>$ }\\To \mbox{\hyperlink{classk_f_1_1_var_af771725a69a40e418b2e4abf7c92ee48}{convert\+Explicit}} (void) const
+\begin{DoxyCompactList}\small\item\em Tries to convert internal directly to given type (If impossible, will throw in debug or crash in release) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_var_a7effd6cba363cd51c3ae04c472dd3d4c}{to\+Bool}} (void) const
+\begin{DoxyCompactList}\small\item\em Tries to convert internal to boolean. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_a825de8843be96b54e38f2965739df0bc}{operator+}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Various opaque operators helpers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_a3083f623e9f3c41aa58ab8b4acaf3768}{operator-\/}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_ae96425a095d5b40c13a9fb2fa8011fa5}{operator$\ast$}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_ad075afd8b0e94b684c390c86f032ae8f}{operator/}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_a44c0bacf30367053c24ce1b2cf94974b}{operator\%}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs) const
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_a1ddb36d0d6260cc87ab1fbf70fff6ae0}{operator+=}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs)
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_a42eb0fc6d9eb75d6eab5626e6cb586a9}{operator-\/=}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs)
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_a878c3c7ea062ea947a73cdb2e0a0f631}{operator$\ast$=}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs)
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_adc37747c5d1784193bc39a89b017c1b4}{operator/=}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs)
+\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \& \mbox{\hyperlink{classk_f_1_1_var_abdfd088e11ce2c626f24efbc67ae7029}{operator\%=}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&rhs)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_var_a5a8955a9a43facf57d09a9276e82fe78}{operator==}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&rhs) const noexcept
+\begin{DoxyCompactList}\small\item\em Various non-\/opaque operators helpers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_var_a79f8efc3df5e21ad175328b6dfc8207e}{operator!=}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&rhs) const noexcept
+\item 
+{\footnotesize template$<$Should\+Destruct\+Instance Destruct\+Instance = Should\+Destruct\+Instance\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_ae5ff739fc605bf4055f98551d1124696}{reserve}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type}}) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Reserves a non-\/initialized memory block to allow further construction. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Use\+Small\+Optimization Is\+Small\+Optimized, Should\+Destruct\+Instance Destruct\+Instance$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_acc2af0322708778df4db253aa18b9c00}{reserve}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type}}) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Same as \textquotesingle{}reserve\textquotesingle{} but with compile time knowledge of type triviallity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type $>$ }\\static \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_a68d55a87fb41aa83001617bc9a6e08e6}{Assign}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&\mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type}})
+\begin{DoxyCompactList}\small\item\em Assigns a type value to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , typename ... Args$>$ }\\static \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_af38e603361d3a1e492bcd889457ba244}{Emplace}} (Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emplaces a type value to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\static \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_var_a2ce6fb0a130579f6a96fab7358ecec3b}{Construct}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emplaces a type value to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$\& \mbox{\hyperlink{classk_f_1_1_var_adf7a22dcbc467d195e52d4d5e10dcf2b}{data\+Ref}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Unsafe reference getter used internally. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Should\+Destruct\+Instance Destruct\+Instance = Should\+Destruct\+Instance\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_a93fb2ef24ac7a9d8663da00a3381b1eb}{move}} (\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&other)
+\begin{DoxyCompactList}\small\item\em Move helper. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_var_ade85216a7fd4aaf4974f038a1bb924ec}{alloc}} (const std\+::uint32\+\_\+t capacity) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Allocate a given capacity on the heap. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Should\+Destruct\+Instance Destruct\+Instance$>$ }\\void \mbox{\hyperlink{classk_f_1_1_var_af657deb62579efaff6d13d21aea26785}{release\+Alloc}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Release the current allocation if there is any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a3ecebf000ade1ebcd668bc0ff232c2d9}{\+\_\+type}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}{Storage\+Type}} \mbox{\hyperlink{classk_f_1_1_var_a355c9bd9bb8e7f4d257c0c92c7fb4494}{\+\_\+storage\+Type}} \{ \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aec0fc0100c4fc1ce4eea230c3dc10360}{Storage\+Type\+::\+Undefined}} \}
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{classk_f_1_1_var_a54191df45ee876f785764fc1bd281dd9}{\+\_\+capacity}} \{ 0 \}
+\item 
+\mbox{\hyperlink{unionk_f_1_1_var_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_var_a011c27f8da50c8b3bbd4085bb6e67701}{\+\_\+data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} is used as a wrapper for any type. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Variable
+
+It can hold a value, a reference or a rvalue reference. Value that are $<$= to size of a pointer are cheaply copied. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28}\label{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28}} 
+\index{kF::Var@{kF::Var}!ShouldCheckIfAssignable@{ShouldCheckIfAssignable}}
+\index{ShouldCheckIfAssignable@{ShouldCheckIfAssignable}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{ShouldCheckIfAssignable}{ShouldCheckIfAssignable}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28}{k\+F\+::\+Var\+::\+Should\+Check\+If\+Assignable}} \+: bool\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No@{No}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!No@{No}}}\mbox{\Hypertarget{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28abafd7322c6e97d25b6299b5d6fe8920b}\label{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28abafd7322c6e97d25b6299b5d6fe8920b}} 
+No&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yes@{Yes}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!Yes@{Yes}}}\mbox{\Hypertarget{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28a93cba07454f06a4a960172bbd6e2a435}\label{classk_f_1_1_var_a597f0f9fa819dbc713b8624b078b0c28a93cba07454f06a4a960172bbd6e2a435}} 
+Yes&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99}\label{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99}} 
+\index{kF::Var@{kF::Var}!ShouldDestructInstance@{ShouldDestructInstance}}
+\index{ShouldDestructInstance@{ShouldDestructInstance}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{ShouldDestructInstance}{ShouldDestructInstance}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99}{k\+F\+::\+Var\+::\+Should\+Destruct\+Instance}} \+: bool\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No@{No}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!No@{No}}}\mbox{\Hypertarget{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99abafd7322c6e97d25b6299b5d6fe8920b}\label{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99abafd7322c6e97d25b6299b5d6fe8920b}} 
+No&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yes@{Yes}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!Yes@{Yes}}}\mbox{\Hypertarget{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99a93cba07454f06a4a960172bbd6e2a435}\label{classk_f_1_1_var_a1ed5584e5569dc25c96d0b276d12dc99a93cba07454f06a4a960172bbd6e2a435}} 
+Yes&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94c}\label{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94c}} 
+\index{kF::Var@{kF::Var}!ShouldResetMembers@{ShouldResetMembers}}
+\index{ShouldResetMembers@{ShouldResetMembers}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{ShouldResetMembers}{ShouldResetMembers}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94c}{k\+F\+::\+Var\+::\+Should\+Reset\+Members}} \+: bool\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No@{No}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!No@{No}}}\mbox{\Hypertarget{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94cabafd7322c6e97d25b6299b5d6fe8920b}\label{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94cabafd7322c6e97d25b6299b5d6fe8920b}} 
+No&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yes@{Yes}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!Yes@{Yes}}}\mbox{\Hypertarget{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94ca93cba07454f06a4a960172bbd6e2a435}\label{classk_f_1_1_var_ad95eb7d18d9bfb17cf552dce5552c94ca93cba07454f06a4a960172bbd6e2a435}} 
+Yes&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}\label{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}} 
+\index{kF::Var@{kF::Var}!StorageType@{StorageType}}
+\index{StorageType@{StorageType}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{StorageType}{StorageType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}{k\+F\+::\+Var\+::\+Storage\+Type}} \+: std\+::uint32\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Describes how the internal instance is stored. 
+
+Value and Value\+Optimized are for copied or moved instances Reference\+Volatile and Reference\+Constant are for assigned references \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!Undefined@{Undefined}}}\mbox{\Hypertarget{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aec0fc0100c4fc1ce4eea230c3dc10360}\label{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aec0fc0100c4fc1ce4eea230c3dc10360}} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Value@{Value}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!Value@{Value}}}\mbox{\Hypertarget{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a689202409e48743b914713f96d93947c}\label{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a689202409e48743b914713f96d93947c}} 
+Value&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ValueOptimized@{ValueOptimized}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!ValueOptimized@{ValueOptimized}}}\mbox{\Hypertarget{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aab186d3db74a0473afa302cf25f0bf0d}\label{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aab186d3db74a0473afa302cf25f0bf0d}} 
+Value\+Optimized&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReferenceVolatile@{ReferenceVolatile}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!ReferenceVolatile@{ReferenceVolatile}}}\mbox{\Hypertarget{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aa1579ccdb716430c0a161e7e91ffe56f}\label{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aa1579ccdb716430c0a161e7e91ffe56f}} 
+Reference\+Volatile&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReferenceConstant@{ReferenceConstant}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!ReferenceConstant@{ReferenceConstant}}}\mbox{\Hypertarget{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a70a711eb2d24d598a9b8e6ae4cf1910b}\label{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a70a711eb2d24d598a9b8e6ae4cf1910b}} 
+Reference\+Constant&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6}\label{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6}} 
+\index{kF::Var@{kF::Var}!UseSmallOptimization@{UseSmallOptimization}}
+\index{UseSmallOptimization@{UseSmallOptimization}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{UseSmallOptimization}{UseSmallOptimization}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6}{k\+F\+::\+Var\+::\+Use\+Small\+Optimization}} \+: bool\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+A bunch of enum helpers for better template readability. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No@{No}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!No@{No}}}\mbox{\Hypertarget{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6abafd7322c6e97d25b6299b5d6fe8920b}\label{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6abafd7322c6e97d25b6299b5d6fe8920b}} 
+No&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yes@{Yes}!kF::Var@{kF::Var}}\index{kF::Var@{kF::Var}!Yes@{Yes}}}\mbox{\Hypertarget{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6a93cba07454f06a4a960172bbd6e2a435}\label{classk_f_1_1_var_aad407e633b5ce1d9abeba143995ecca6a93cba07454f06a4a960172bbd6e2a435}} 
+Yes&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_var_a9c49ba439a29771aafb6d9c51eeb6670}\label{classk_f_1_1_var_a9c49ba439a29771aafb6d9c51eeb6670}} 
+\index{kF::Var@{kF::Var}!Var@{Var}}
+\index{Var@{Var}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Var()}{Var()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Var\+::\+Var (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor, instance is empty. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a177bdc791ab6c33c17446257c5b82f95}\label{classk_f_1_1_var_a177bdc791ab6c33c17446257c5b82f95}} 
+\index{kF::Var@{kF::Var}!Var@{Var}}
+\index{Var@{Var}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Var()}{Var()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Var\+::\+Var (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor, deep copy ! 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a8e0ae3f253bdc27a2aaccfbcbb461e17}\label{classk_f_1_1_var_a8e0ae3f253bdc27a2aaccfbcbb461e17}} 
+\index{kF::Var@{kF::Var}!Var@{Var}}
+\index{Var@{Var}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Var()}{Var()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily k\+F\+::\+Var\+::\+Var (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a0c073a9a7b10e9faacdf9bd9d9788286}\label{classk_f_1_1_var_a0c073a9a7b10e9faacdf9bd9d9788286}} 
+\index{kF::Var@{kF::Var}!Var@{Var}}
+\index{Var@{Var}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Var()}{Var()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ Type $>$, Var $>$$>$ $\ast$  = nullptr$>$ \\
+k\+F\+::\+Var\+::\+Var (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Emplace constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a20d3665fe35957b82c2a4a005beb616b}\label{classk_f_1_1_var_a20d3665fe35957b82c2a4a005beb616b}} 
+\index{kF::Var@{kF::Var}!````~Var@{$\sim$Var}}
+\index{````~Var@{$\sim$Var}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{$\sim$Var()}{~Var()}}
+{\footnotesize\ttfamily k\+F\+::\+Var\+::$\sim$\+Var (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If not empty, will destruct the internal value. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_var_ade85216a7fd4aaf4974f038a1bb924ec}\label{classk_f_1_1_var_ade85216a7fd4aaf4974f038a1bb924ec}} 
+\index{kF::Var@{kF::Var}!alloc@{alloc}}
+\index{alloc@{alloc}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily void k\+F\+::\+Var\+::alloc (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Allocate a given capacity on the heap. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_ab908745bb8b63246cd14e731e78fa690}\label{classk_f_1_1_var_ab908745bb8b63246cd14e731e78fa690}} 
+\index{kF::Var@{kF::Var}!as@{as}}
+\index{as@{as}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{as()}{as()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& k\+F\+::\+Var\+::as (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a6dcfd18f452e894a672af94d731705ef}\label{classk_f_1_1_var_a6dcfd18f452e894a672af94d731705ef}} 
+\index{kF::Var@{kF::Var}!as@{as}}
+\index{as@{as}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{as()}{as()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& k\+F\+::\+Var\+::as (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive internal type as given Type reference (unsafe) 
+
+\mbox{\Hypertarget{classk_f_1_1_var_aeca88d3e27cd3703adf89b96c9640324}\label{classk_f_1_1_var_aeca88d3e27cd3703adf89b96c9640324}} 
+\index{kF::Var@{kF::Var}!assign@{assign}}
+\index{assign@{assign}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily template$<$typename Type , k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Var\+::assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns a variable internally. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a68d55a87fb41aa83001617bc9a6e08e6}\label{classk_f_1_1_var_a68d55a87fb41aa83001617bc9a6e08e6}} 
+\index{kF::Var@{kF::Var}!Assign@{Assign}}
+\index{Assign@{Assign}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Assign()}{Assign()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+static \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Var\+::\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Assigns a type value to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_ace200cc68bcdfddd94628203ada2b41a}\label{classk_f_1_1_var_ace200cc68bcdfddd94628203ada2b41a}} 
+\index{kF::Var@{kF::Var}!cast@{cast}}
+\index{cast@{cast}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& k\+F\+::\+Var\+::cast (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a164ad0fad6bcfd6b16a2d4597b639e7f}\label{classk_f_1_1_var_a164ad0fad6bcfd6b16a2d4597b639e7f}} 
+\index{kF::Var@{kF::Var}!cast@{cast}}
+\index{cast@{cast}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{cast()}{cast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& k\+F\+::\+Var\+::cast (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Tries to cast internal to himself or base type (If impossible, will throw in debug or crash in release. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a2ce6fb0a130579f6a96fab7358ecec3b}\label{classk_f_1_1_var_a2ce6fb0a130579f6a96fab7358ecec3b}} 
+\index{kF::Var@{kF::Var}!Construct@{Construct}}
+\index{Construct@{Construct}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Var\+::\+Construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Emplaces a type value to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a518c717e954057a062ae4cd57d1ef88f}\label{classk_f_1_1_var_a518c717e954057a062ae4cd57d1ef88f}} 
+\index{kF::Var@{kF::Var}!construct@{construct}}
+\index{construct@{construct}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance, typename ... Args$>$ \\
+void k\+F\+::\+Var\+::construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct semantic. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a651cbd27e70dec95e4c30e42589997cb}\label{classk_f_1_1_var_a651cbd27e70dec95e4c30e42589997cb}} 
+\index{kF::Var@{kF::Var}!convert@{convert}}
+\index{convert@{convert}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool k\+F\+::\+Var\+::convert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to convert current instance into given meta type. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a780301463e3194feb35afe48bd7b8392}\label{classk_f_1_1_var_a780301463e3194feb35afe48bd7b8392}} 
+\index{kF::Var@{kF::Var}!convert@{convert}}
+\index{convert@{convert}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename To $>$ \\
+bool k\+F\+::\+Var\+::convert (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to convert current instance into given type. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_af771725a69a40e418b2e4abf7c92ee48}\label{classk_f_1_1_var_af771725a69a40e418b2e4abf7c92ee48}} 
+\index{kF::Var@{kF::Var}!convertExplicit@{convertExplicit}}
+\index{convertExplicit@{convertExplicit}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{convertExplicit()}{convertExplicit()}}
+{\footnotesize\ttfamily template$<$typename To $>$ \\
+To k\+F\+::\+Var\+::convert\+Explicit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to convert internal directly to given type (If impossible, will throw in debug or crash in release) 
+
+\mbox{\Hypertarget{classk_f_1_1_var_aec881805c31248dc1f142f49f743a204}\label{classk_f_1_1_var_aec881805c31248dc1f142f49f743a204}} 
+\index{kF::Var@{kF::Var}!convertOpaque@{convertOpaque}}
+\index{convertOpaque@{convertOpaque}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{convertOpaque()}{convertOpaque()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Var\+::convert\+Opaque (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to get an opaque converted value of given meta type name. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_aa2a9d6bce8af283daecad4152459128d}\label{classk_f_1_1_var_aa2a9d6bce8af283daecad4152459128d}} 
+\index{kF::Var@{kF::Var}!convertOpaque@{convertOpaque}}
+\index{convertOpaque@{convertOpaque}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{convertOpaque()}{convertOpaque()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename To $>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Var\+::convert\+Opaque (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to create an opaque converted value to given type. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_af1b4f2c4f1b548230fc24bd84c80d880}\label{classk_f_1_1_var_af1b4f2c4f1b548230fc24bd84c80d880}} 
+\index{kF::Var@{kF::Var}!data@{data}}
+\index{data@{data}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void$\ast$ k\+F\+::\+Var\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive opaque internal data. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a9423d7e66b1718c8d8d3512fabcbb000}\label{classk_f_1_1_var_a9423d7e66b1718c8d8d3512fabcbb000}} 
+\index{kF::Var@{kF::Var}!data@{data}}
+\index{data@{data}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Use\+Small\+Optimization Is\+Small\+Optimized$>$ \\
+void $\ast$ k\+F\+::\+Var\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive opaque internal data knowing small optimization state at compile time. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_adf7a22dcbc467d195e52d4d5e10dcf2b}\label{classk_f_1_1_var_adf7a22dcbc467d195e52d4d5e10dcf2b}} 
+\index{kF::Var@{kF::Var}!dataRef@{dataRef}}
+\index{dataRef@{dataRef}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{dataRef()}{dataRef()}}
+{\footnotesize\ttfamily void$\ast$\& k\+F\+::\+Var\+::data\+Ref (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Unsafe reference getter used internally. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a8f75c07d6fc3c6fdf2f89abc41abc5d4}\label{classk_f_1_1_var_a8f75c07d6fc3c6fdf2f89abc41abc5d4}} 
+\index{kF::Var@{kF::Var}!deepCopy@{deepCopy}}
+\index{deepCopy@{deepCopy}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{deepCopy()}{deepCopy()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Check\+If\+Assignable Check\+If\+Assignable, k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Var\+::deep\+Copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deep copy another variable. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_aecab284738659e4772cbba0a7e856b46}\label{classk_f_1_1_var_aecab284738659e4772cbba0a7e856b46}} 
+\index{kF::Var@{kF::Var}!destruct@{destruct}}
+\index{destruct@{destruct}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{destruct()}{destruct()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Reset\+Members Reset\+Members$>$ \\
+void k\+F\+::\+Var\+::destruct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Release internal type. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_af38e603361d3a1e492bcd889457ba244}\label{classk_f_1_1_var_af38e603361d3a1e492bcd889457ba244}} 
+\index{kF::Var@{kF::Var}!Emplace@{Emplace}}
+\index{Emplace@{Emplace}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{Emplace()}{Emplace()}}
+{\footnotesize\ttfamily template$<$typename Type , typename ... Args$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Var\+::\+Emplace (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Emplaces a type value to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_af9ee0a91864a5821e043bd485cdc3baa}\label{classk_f_1_1_var_af9ee0a91864a5821e043bd485cdc3baa}} 
+\index{kF::Var@{kF::Var}!emplace@{emplace}}
+\index{emplace@{emplace}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily template$<$typename Unarranged\+Type , k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance, typename ... Args$>$ \\
+void k\+F\+::\+Var\+::emplace (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Emplaces a type into the current instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a21866b752319cceb346eba6bddf2aab5}\label{classk_f_1_1_var_a21866b752319cceb346eba6bddf2aab5}} 
+\index{kF::Var@{kF::Var}!isCastAble@{isCastAble}}
+\index{isCastAble@{isCastAble}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{isCastAble()}{isCastAble()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool k\+F\+::\+Var\+::is\+Cast\+Able (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if internal is castable to given type. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a180322589e524e77f6573c269b7d96a5}\label{classk_f_1_1_var_a180322589e524e77f6573c269b7d96a5}} 
+\index{kF::Var@{kF::Var}!isConstant@{isConstant}}
+\index{isConstant@{isConstant}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{isConstant()}{isConstant()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Var\+::is\+Constant (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal constness. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_ad7ce6954a813678f53c372956ffd0993}\label{classk_f_1_1_var_ad7ce6954a813678f53c372956ffd0993}} 
+\index{kF::Var@{kF::Var}!isSmallOptimizedValue@{isSmallOptimizedValue}}
+\index{isSmallOptimizedValue@{isSmallOptimizedValue}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{isSmallOptimizedValue()}{isSmallOptimizedValue()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Var\+::is\+Small\+Optimized\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast check of \textquotesingle{}\mbox{\hyperlink{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}{type()}}.is\+Trivial() \&\& storage\+Type == \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089a689202409e48743b914713f96d93947c}{Storage\+Type\+::\+Value}}\textquotesingle{}. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_ae8da56cdbb4cdab2e8f58c353d0b26c9}\label{classk_f_1_1_var_ae8da56cdbb4cdab2e8f58c353d0b26c9}} 
+\index{kF::Var@{kF::Var}!isVoid@{isVoid}}
+\index{isVoid@{isVoid}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{isVoid()}{isVoid()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Var\+::is\+Void (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if type is void. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a93fb2ef24ac7a9d8663da00a3381b1eb}\label{classk_f_1_1_var_a93fb2ef24ac7a9d8663da00a3381b1eb}} 
+\index{kF::Var@{kF::Var}!move@{move}}
+\index{move@{move}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Var\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Move helper. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a74f44076d5711235790c30a9a8264519}\label{classk_f_1_1_var_a74f44076d5711235790c30a9a8264519}} 
+\index{kF::Var@{kF::Var}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Var\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if the instance is not empty. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a79f8efc3df5e21ad175328b6dfc8207e}\label{classk_f_1_1_var_a79f8efc3df5e21ad175328b6dfc8207e}} 
+\index{kF::Var@{kF::Var}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool k\+F\+::\+Var\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a44c0bacf30367053c24ce1b2cf94974b}\label{classk_f_1_1_var_a44c0bacf30367053c24ce1b2cf94974b}} 
+\index{kF::Var@{kF::Var}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Var\+::operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_abdfd088e11ce2c626f24efbc67ae7029}\label{classk_f_1_1_var_abdfd088e11ce2c626f24efbc67ae7029}} 
+\index{kF::Var@{kF::Var}!operator\%=@{operator\%=}}
+\index{operator\%=@{operator\%=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator\%=()}{operator\%=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \& k\+F\+::\+Var\+::operator\%= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_ae96425a095d5b40c13a9fb2fa8011fa5}\label{classk_f_1_1_var_ae96425a095d5b40c13a9fb2fa8011fa5}} 
+\index{kF::Var@{kF::Var}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Var\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a878c3c7ea062ea947a73cdb2e0a0f631}\label{classk_f_1_1_var_a878c3c7ea062ea947a73cdb2e0a0f631}} 
+\index{kF::Var@{kF::Var}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \& k\+F\+::\+Var\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a825de8843be96b54e38f2965739df0bc}\label{classk_f_1_1_var_a825de8843be96b54e38f2965739df0bc}} 
+\index{kF::Var@{kF::Var}!operator+@{operator+}}
+\index{operator+@{operator+}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Var\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Various opaque operators helpers. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a1ddb36d0d6260cc87ab1fbf70fff6ae0}\label{classk_f_1_1_var_a1ddb36d0d6260cc87ab1fbf70fff6ae0}} 
+\index{kF::Var@{kF::Var}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \& k\+F\+::\+Var\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a3083f623e9f3c41aa58ab8b4acaf3768}\label{classk_f_1_1_var_a3083f623e9f3c41aa58ab8b4acaf3768}} 
+\index{kF::Var@{kF::Var}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Var\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a42eb0fc6d9eb75d6eab5626e6cb586a9}\label{classk_f_1_1_var_a42eb0fc6d9eb75d6eab5626e6cb586a9}} 
+\index{kF::Var@{kF::Var}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \& k\+F\+::\+Var\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_ad075afd8b0e94b684c390c86f032ae8f}\label{classk_f_1_1_var_ad075afd8b0e94b684c390c86f032ae8f}} 
+\index{kF::Var@{kF::Var}!operator/@{operator/}}
+\index{operator/@{operator/}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Var\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_adc37747c5d1784193bc39a89b017c1b4}\label{classk_f_1_1_var_adc37747c5d1784193bc39a89b017c1b4}} 
+\index{kF::Var@{kF::Var}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \& k\+F\+::\+Var\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a68ff7e158078d7d5e38ea005148d585c}\label{classk_f_1_1_var_a68ff7e158078d7d5e38ea005148d585c}} 
+\index{kF::Var@{kF::Var}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{Var}}\& k\+F\+::\+Var\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy assignment, deep copy ! 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a0eb7a13690e130ff75a2cee3d887e8a4}\label{classk_f_1_1_var_a0eb7a13690e130ff75a2cee3d887e8a4}} 
+\index{kF::Var@{kF::Var}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{Var}}\& k\+F\+::\+Var\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move assignment, either call constructor or move pointers if not small optimized. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a5a8955a9a43facf57d09a9276e82fe78}\label{classk_f_1_1_var_a5a8955a9a43facf57d09a9276e82fe78}} 
+\index{kF::Var@{kF::Var}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool k\+F\+::\+Var\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Various non-\/opaque operators helpers. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a886d0e7fac37579dd30f437467d99757}\label{classk_f_1_1_var_a886d0e7fac37579dd30f437467d99757}} 
+\index{kF::Var@{kF::Var}!release@{release}}
+\index{release@{release}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Reset\+Members Reset\+Members$>$ \\
+void k\+F\+::\+Var\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destruct the instance and its internal memory. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Variable \mbox{\Hypertarget{classk_f_1_1_var_af657deb62579efaff6d13d21aea26785}\label{classk_f_1_1_var_af657deb62579efaff6d13d21aea26785}} 
+\index{kF::Var@{kF::Var}!releaseAlloc@{releaseAlloc}}
+\index{releaseAlloc@{releaseAlloc}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{releaseAlloc()}{releaseAlloc()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Var\+::release\+Alloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Release the current allocation if there is any. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_ae5ff739fc605bf4055f98551d1124696}\label{classk_f_1_1_var_ae5ff739fc605bf4055f98551d1124696}} 
+\index{kF::Var@{kF::Var}!reserve@{reserve}}
+\index{reserve@{reserve}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Var\+::reserve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Reserves a non-\/initialized memory block to allow further construction. 
+
+This function makes access to the instance unsafe You must construct the type manually before trying to use the instance \mbox{\Hypertarget{classk_f_1_1_var_acc2af0322708778df4db253aa18b9c00}\label{classk_f_1_1_var_acc2af0322708778df4db253aa18b9c00}} 
+\index{kF::Var@{kF::Var}!reserve@{reserve}}
+\index{reserve@{reserve}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Use\+Small\+Optimization Is\+Small\+Optimized, k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Var\+::reserve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Same as \textquotesingle{}reserve\textquotesingle{} but with compile time knowledge of type triviallity. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a6a2c1cd5db0588dff029de4bbc9ca14a}\label{classk_f_1_1_var_a6a2c1cd5db0588dff029de4bbc9ca14a}} 
+\index{kF::Var@{kF::Var}!storageType@{storageType}}
+\index{storageType@{storageType}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{storageType()}{storageType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}{Storage\+Type}} k\+F\+::\+Var\+::storage\+Type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal storage type. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a7effd6cba363cd51c3ae04c472dd3d4c}\label{classk_f_1_1_var_a7effd6cba363cd51c3ae04c472dd3d4c}} 
+\index{kF::Var@{kF::Var}!toBool@{toBool}}
+\index{toBool@{toBool}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{toBool()}{toBool()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Var\+::to\+Bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to convert internal to boolean. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a7388ebf6cb05d91c686eabecfd4d4241}\label{classk_f_1_1_var_a7388ebf6cb05d91c686eabecfd4d4241}} 
+\index{kF::Var@{kF::Var}!tryCast@{tryCast}}
+\index{tryCast@{tryCast}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{tryCast()}{tryCast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ k\+F\+::\+Var\+::try\+Cast (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_afc930742c762e41312c40f4463acf952}\label{classk_f_1_1_var_afc930742c762e41312c40f4463acf952}} 
+\index{kF::Var@{kF::Var}!tryCast@{tryCast}}
+\index{tryCast@{tryCast}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{tryCast()}{tryCast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ k\+F\+::\+Var\+::try\+Cast (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Tries to cast internal to himself or base type (If impossible, will return nullptr. 
+
+\mbox{\Hypertarget{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}\label{classk_f_1_1_var_a264df6899ab33ded7310e795a56fc644}} 
+\index{kF::Var@{kF::Var}!type@{type}}
+\index{type@{type}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} k\+F\+::\+Var\+::type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal type. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_var_a54191df45ee876f785764fc1bd281dd9}\label{classk_f_1_1_var_a54191df45ee876f785764fc1bd281dd9}} 
+\index{kF::Var@{kF::Var}!\_capacity@{\_capacity}}
+\index{\_capacity@{\_capacity}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{\_capacity}{\_capacity}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t k\+F\+::\+Var\+::\+\_\+capacity \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a011c27f8da50c8b3bbd4085bb6e67701}\label{classk_f_1_1_var_a011c27f8da50c8b3bbd4085bb6e67701}} 
+\index{kF::Var@{kF::Var}!\_data@{\_data}}
+\index{\_data@{\_data}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unionk_f_1_1_var_1_1_cache}{Cache}} k\+F\+::\+Var\+::\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a355c9bd9bb8e7f4d257c0c92c7fb4494}\label{classk_f_1_1_var_a355c9bd9bb8e7f4d257c0c92c7fb4494}} 
+\index{kF::Var@{kF::Var}!\_storageType@{\_storageType}}
+\index{\_storageType@{\_storageType}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{\_storageType}{\_storageType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089}{Storage\+Type}} k\+F\+::\+Var\+::\+\_\+storage\+Type \{ \mbox{\hyperlink{classk_f_1_1_var_a7f2a4c3c5a8d4c7be7125a932515d089aec0fc0100c4fc1ce4eea230c3dc10360}{Storage\+Type\+::\+Undefined}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_var_a3ecebf000ade1ebcd668bc0ff232c2d9}\label{classk_f_1_1_var_a3ecebf000ade1ebcd668bc0ff232c2d9}} 
+\index{kF::Var@{kF::Var}!\_type@{\_type}}
+\index{\_type@{\_type}!kF::Var@{kF::Var}}
+\doxysubsubsection{\texorpdfstring{\_type}{\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} k\+F\+::\+Var\+::\+\_\+type \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_var_8hpp}{Var.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_var_8ipp}{Var.\+ipp}}\end{DoxyCompactItemize}

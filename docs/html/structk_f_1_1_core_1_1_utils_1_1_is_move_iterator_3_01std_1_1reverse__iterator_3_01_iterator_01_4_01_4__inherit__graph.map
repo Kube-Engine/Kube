@@ -1,0 +1,5 @@
+<map id="kF::Core::Utils::IsMoveIterator&lt; std::reverse_iterator&lt; Iterator &gt; &gt;" name="kF::Core::Utils::IsMoveIterator&lt; std::reverse_iterator&lt; Iterator &gt; &gt;">
+<area shape="rect" id="node1" title="Helper that match reverse iterators." alt="" coords="5,301,232,393"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_core_1_1_utils_1_1_is_move_iterator.html" title=" " alt="" coords="19,160,219,252"/>
+<area shape="rect" id="node3" href="$structk_f_1_1_core_1_1_utils_1_1_is_move_iterator.html" title="Helper to know if a given type is a std::move_iterator." alt="" coords="19,5,219,97"/>
+</map>

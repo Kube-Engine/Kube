@@ -1,0 +1,43 @@
+\hypertarget{_e_c_s_2_base_8hpp}{}\doxysection{Kube/\+E\+C\+S/\+Base.hpp File Reference}
+\label{_e_c_s_2_base_8hpp}\index{Kube/ECS/Base.hpp@{Kube/ECS/Base.hpp}}
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$Kube/\+Core/\+Utils.\+hpp$>$}\newline
+Include dependency graph for Base.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e_c_s_2_base_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e_c_s_2_base_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_e_c_s}{k\+F\+::\+E\+CS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a4e49a41cde00df8ea962c6c544e8c9d5}{k\+F\+::\+E\+C\+S\+::\+Short\+Entity}} = std\+::uint16\+\_\+t
+\begin{DoxyCompactList}\small\item\em A tiny entity that can handle 65536 entities. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_aa176c9854c150786cfe0f642c3bdd953}{k\+F\+::\+E\+C\+S\+::\+Entity}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em A standard entity that can handle 4294967296 entities. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a85e39d1ad9a05e6b87bcfbbc19e504d4}{k\+F\+::\+E\+C\+S\+::\+Long\+Entity}} = std\+::uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em A large entity that can handle an indecent amount of pow(1.\+8, 19) entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Entity\+Type $>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a5ddca7847c8b54aa9b711176b3795082}{k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements}}
+\begin{DoxyCompactList}\small\item\em Entity concept requirements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Entity\+Requirements Entity\+Type$>$ }\\constexpr auto \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}{k\+F\+::\+E\+C\+S\+::\+Null\+Entity}} = std\+::numeric\+\_\+limits$<$Entity\+Type$>$\+::max()
+\begin{DoxyCompactList}\small\item\em Null entityt. \end{DoxyCompactList}\end{DoxyCompactItemize}

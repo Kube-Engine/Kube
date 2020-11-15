@@ -1,0 +1,152 @@
+\hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object}{}\doxysection{kF\+::Graphics\+::Cached\+Renderer\+Object Class Reference}
+\label{classk_f_1_1_graphics_1_1_cached_renderer_object}\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+
+
+This class specializes the \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_object}{Renderer\+Object}} to hold its parent renderer in its member cache This class is not virtual because it is trivially destructible.  
+
+
+
+
+{\ttfamily \#include $<$Renderer\+Object.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Cached\+Renderer\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classk_f_1_1_graphics_1_1_cached_renderer_object__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_a497520b6a843878815616bd64a14ef11}{Cached\+Renderer\+Object}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_aae7807af44b5c005c48d3393bf3d22f4}{Cached\+Renderer\+Object}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_a70d441124ed70355e4c66da3be4d4627}{Cached\+Renderer\+Object}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_a446608b54aff3002fa7b652b23c97369}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_a2dbe69b3bfd33dce9b92178754470227}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_aef04acc59c870c64bf234a9977ab6050}{swap}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_a326d3d4b4226bddcc22c8a5147a239a1}{parent}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get cached parent renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_a94a206009bb832754d2ae587b3576700}{parent}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get global parent renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object_ae6909dab7383914f1092f1bc486e1ec4}{\+\_\+parent}} \{ nullptr \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class specializes the \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_object}{Renderer\+Object}} to hold its parent renderer in its member cache This class is not virtual because it is trivially destructible. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_a497520b6a843878815616bd64a14ef11}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_a497520b6a843878815616bd64a14ef11}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!CachedRendererObject@{CachedRendererObject}}
+\index{CachedRendererObject@{CachedRendererObject}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{CachedRendererObject()}{CachedRendererObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::\+Cached\+Renderer\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_aae7807af44b5c005c48d3393bf3d22f4}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_aae7807af44b5c005c48d3393bf3d22f4}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!CachedRendererObject@{CachedRendererObject}}
+\index{CachedRendererObject@{CachedRendererObject}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{CachedRendererObject()}{CachedRendererObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::\+Cached\+Renderer\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_a70d441124ed70355e4c66da3be4d4627}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_a70d441124ed70355e4c66da3be4d4627}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!CachedRendererObject@{CachedRendererObject}}
+\index{CachedRendererObject@{CachedRendererObject}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{CachedRendererObject()}{CachedRendererObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::\+Cached\+Renderer\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_a2dbe69b3bfd33dce9b92178754470227}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_a2dbe69b3bfd33dce9b92178754470227}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}}\& k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_a446608b54aff3002fa7b652b23c97369}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_a446608b54aff3002fa7b652b23c97369}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}}\& k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_a326d3d4b4226bddcc22c8a5147a239a1}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_a326d3d4b4226bddcc22c8a5147a239a1}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!parent@{parent}}
+\index{parent@{parent}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}\& k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::parent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get cached parent renderer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_a94a206009bb832754d2ae587b3576700}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_a94a206009bb832754d2ae587b3576700}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!parent@{parent}}
+\index{parent@{parent}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}\& k\+F\+::\+Graphics\+::\+Renderer\+Object\+::parent (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Get global parent renderer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_aef04acc59c870c64bf234a9977ab6050}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_aef04acc59c870c64bf234a9977ab6050}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!swap@{swap}}
+\index{swap@{swap}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_cached_renderer_object}{Cached\+Renderer\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two instances. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_cached_renderer_object_ae6909dab7383914f1092f1bc486e1ec4}\label{classk_f_1_1_graphics_1_1_cached_renderer_object_ae6909dab7383914f1092f1bc486e1ec4}} 
+\index{kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}!\_parent@{\_parent}}
+\index{\_parent@{\_parent}!kF::Graphics::CachedRendererObject@{kF::Graphics::CachedRendererObject}}
+\doxysubsubsection{\texorpdfstring{\_parent}{\_parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}$\ast$ k\+F\+::\+Graphics\+::\+Cached\+Renderer\+Object\+::\+\_\+parent \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_renderer_object_8hpp}{Renderer\+Object.\+hpp}}\end{DoxyCompactItemize}

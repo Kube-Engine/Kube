@@ -1,0 +1,156 @@
+\hypertarget{classk_f_1_1_graphics_1_1_instance}{}\doxysection{kF\+::Graphics\+::Instance Class Reference}
+\label{classk_f_1_1_graphics_1_1_instance}\index{kF::Graphics::Instance@{kF::Graphics::Instance}}
+
+
+Abstraction of the low-\/level A\+PI instance.  
+
+
+
+
+{\ttfamily \#include $<$Instance.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_instance__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a5aaf630bb52b965b3c4a0461a53c1410}{Extensions}} = std\+::vector$<$ const char $\ast$ $>$
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} extension list. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a454b57c03bad56076e38456e41a313a8}{Layers}} = std\+::vector$<$ const char $\ast$ $>$
+\begin{DoxyCompactList}\small\item\em Debug layers list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_ae838ef46238007f85c927442ba9e8eba}{Instance}} (const \mbox{\hyperlink{structk_f_1_1_version}{Version}} application\+Version)
+\begin{DoxyCompactList}\small\item\em Construct an instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_aabf4ef0d50aa53e3397eb50f842edd68}{Instance}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_ad40ade915bc7d17bb31b90c9843a857d}{$\sim$\+Instance}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_ab09dd9649e50e01f91194196b99f7581}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a60d8c20fd2a60f4a3a82953f4a7478bd}{create\+Instance}} (const \mbox{\hyperlink{structk_f_1_1_version}{Version}} application\+Version)
+\begin{DoxyCompactList}\small\item\em Create an instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a454b57c03bad56076e38456e41a313a8}{Layers}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a8bbca4792fedb0a80a04fa53fdb84c50}{get\+Layers}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the list of debug layers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a5aaf630bb52b965b3c4a0461a53c1410}{Extensions}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a3bd3bfe38575189ef04918e93685d26a}{get\+Extensions}} (\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$window) const
+\begin{DoxyCompactList}\small\item\em Get the list of instance extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of the low-\/level A\+PI instance. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_a5aaf630bb52b965b3c4a0461a53c1410}\label{classk_f_1_1_graphics_1_1_instance_a5aaf630bb52b965b3c4a0461a53c1410}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!Extensions@{Extensions}}
+\index{Extensions@{Extensions}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{Extensions}{Extensions}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a5aaf630bb52b965b3c4a0461a53c1410}{k\+F\+::\+Graphics\+::\+Instance\+::\+Extensions}} =  std\+::vector$<$const char $\ast$$>$}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} extension list. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_a454b57c03bad56076e38456e41a313a8}\label{classk_f_1_1_graphics_1_1_instance_a454b57c03bad56076e38456e41a313a8}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!Layers@{Layers}}
+\index{Layers@{Layers}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{Layers}{Layers}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a454b57c03bad56076e38456e41a313a8}{k\+F\+::\+Graphics\+::\+Instance\+::\+Layers}} =  std\+::vector$<$const char $\ast$$>$}
+
+
+
+Debug layers list. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_ae838ef46238007f85c927442ba9e8eba}\label{classk_f_1_1_graphics_1_1_instance_ae838ef46238007f85c927442ba9e8eba}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!Instance@{Instance}}
+\index{Instance@{Instance}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Instance\+::\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_version}{Version}}}]{application\+Version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct an instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_aabf4ef0d50aa53e3397eb50f842edd68}\label{classk_f_1_1_graphics_1_1_instance_aabf4ef0d50aa53e3397eb50f842edd68}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!Instance@{Instance}}
+\index{Instance@{Instance}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Instance\+::\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_ad40ade915bc7d17bb31b90c9843a857d}\label{classk_f_1_1_graphics_1_1_instance_ad40ade915bc7d17bb31b90c9843a857d}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!````~Instance@{$\sim$Instance}}
+\index{````~Instance@{$\sim$Instance}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{$\sim$Instance()}{~Instance()}}
+{\footnotesize\ttfamily Graphics\+::\+Instance\+::$\sim$\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destroy the instance. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_a60d8c20fd2a60f4a3a82953f4a7478bd}\label{classk_f_1_1_graphics_1_1_instance_a60d8c20fd2a60f4a3a82953f4a7478bd}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!createInstance@{createInstance}}
+\index{createInstance@{createInstance}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{createInstance()}{createInstance()}}
+{\footnotesize\ttfamily void Graphics\+::\+Instance\+::create\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_version}{Version}}}]{application\+Version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create an instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_a3bd3bfe38575189ef04918e93685d26a}\label{classk_f_1_1_graphics_1_1_instance_a3bd3bfe38575189ef04918e93685d26a}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!getExtensions@{getExtensions}}
+\index{getExtensions@{getExtensions}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{getExtensions()}{getExtensions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a5aaf630bb52b965b3c4a0461a53c1410}{Graphics\+::\+Instance\+::\+Extensions}} Graphics\+::\+Instance\+::get\+Extensions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the list of instance extensions. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_a8bbca4792fedb0a80a04fa53fdb84c50}\label{classk_f_1_1_graphics_1_1_instance_a8bbca4792fedb0a80a04fa53fdb84c50}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!getLayers@{getLayers}}
+\index{getLayers@{getLayers}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{getLayers()}{getLayers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance_a454b57c03bad56076e38456e41a313a8}{Graphics\+::\+Instance\+::\+Layers}} Graphics\+::\+Instance\+::get\+Layers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the list of debug layers. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_instance_ab09dd9649e50e01f91194196b99f7581}\label{classk_f_1_1_graphics_1_1_instance_ab09dd9649e50e01f91194196b99f7581}} 
+\index{kF::Graphics::Instance@{kF::Graphics::Instance}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Instance@{kF::Graphics::Instance}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}}\& k\+F\+::\+Graphics\+::\+Instance\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_instance}{Instance}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_instance_8hpp}{Instance.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_instance_8cpp}{Instance.\+cpp}}\end{DoxyCompactItemize}

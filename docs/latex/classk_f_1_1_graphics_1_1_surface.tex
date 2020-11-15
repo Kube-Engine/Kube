@@ -1,0 +1,150 @@
+\hypertarget{classk_f_1_1_graphics_1_1_surface}{}\doxysection{kF\+::Graphics\+::Surface Class Reference}
+\label{classk_f_1_1_graphics_1_1_surface}\index{kF::Graphics::Surface@{kF::Graphics::Surface}}
+
+
+Abstraction of a render surface.  
+
+
+
+
+{\ttfamily \#include $<$Surface.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Surface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_surface__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_ac8f00f01072cdbdc4b28b911b073705f}{Surface}} (void)
+\begin{DoxyCompactList}\small\item\em Construct a surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_a11e83863cb85961035f20cffac786a51}{Surface}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_adbad0d7d779b541c52cfaea5e051d79e}{$\sim$\+Surface}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_a208a6d14485fdf5e0a5b4bdba8fdbcd9}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Surface\+Format}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_a92afb2cc546ae758fd7c3e5a29af328d}{get\+Surface\+Format}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the surface format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Present\+Mode}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_a53bc227bcea4b8448d4824abdbd54dcb}{get\+Present\+Mode}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the presentation mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_ab324aba5e052615f18604c0e3b1799b4}{Surface\+Capabilities}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_a9268e58e6ca5fe7d22632a82491376c4}{get\+Surface\+Capabilities}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the surface capabilities. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Extent2D}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_af51ff65a199e14b1cc8abf7cc5c91255}{get\+Extent}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ab324aba5e052615f18604c0e3b1799b4}{Surface\+Capabilities}} \&capabilities) const
+\begin{DoxyCompactList}\small\item\em Get the extent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface_a6e31041804864559f1e635954ad5f403}{create\+Surface}} (void)
+\begin{DoxyCompactList}\small\item\em Create a surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of a render surface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_ac8f00f01072cdbdc4b28b911b073705f}\label{classk_f_1_1_graphics_1_1_surface_ac8f00f01072cdbdc4b28b911b073705f}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a surface. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_a11e83863cb85961035f20cffac786a51}\label{classk_f_1_1_graphics_1_1_surface_a11e83863cb85961035f20cffac786a51}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_adbad0d7d779b541c52cfaea5e051d79e}\label{classk_f_1_1_graphics_1_1_surface_adbad0d7d779b541c52cfaea5e051d79e}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!````~Surface@{$\sim$Surface}}
+\index{````~Surface@{$\sim$Surface}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{$\sim$Surface()}{~Surface()}}
+{\footnotesize\ttfamily Graphics\+::\+Surface\+::$\sim$\+Surface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the surface. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_a6e31041804864559f1e635954ad5f403}\label{classk_f_1_1_graphics_1_1_surface_a6e31041804864559f1e635954ad5f403}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!createSurface@{createSurface}}
+\index{createSurface@{createSurface}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{createSurface()}{createSurface()}}
+{\footnotesize\ttfamily void Graphics\+::\+Surface\+::create\+Surface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a surface. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_af51ff65a199e14b1cc8abf7cc5c91255}\label{classk_f_1_1_graphics_1_1_surface_af51ff65a199e14b1cc8abf7cc5c91255}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!getExtent@{getExtent}}
+\index{getExtent@{getExtent}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{getExtent()}{getExtent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a57414ff610d46edc625cd5bdfe1f4597}{Graphics\+::\+Extent2D}} Graphics\+::\+Surface\+::get\+Extent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ab324aba5e052615f18604c0e3b1799b4}{Surface\+Capabilities}} \&}]{capabilities }\end{DoxyParamCaption}) const}
+
+
+
+Get the extent. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_a53bc227bcea4b8448d4824abdbd54dcb}\label{classk_f_1_1_graphics_1_1_surface_a53bc227bcea4b8448d4824abdbd54dcb}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!getPresentMode@{getPresentMode}}
+\index{getPresentMode@{getPresentMode}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{getPresentMode()}{getPresentMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a414df60935ac390ab8f86a20cadf8178}{Graphics\+::\+Present\+Mode}} Graphics\+::\+Surface\+::get\+Present\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the presentation mode. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_a9268e58e6ca5fe7d22632a82491376c4}\label{classk_f_1_1_graphics_1_1_surface_a9268e58e6ca5fe7d22632a82491376c4}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!getSurfaceCapabilities@{getSurfaceCapabilities}}
+\index{getSurfaceCapabilities@{getSurfaceCapabilities}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{getSurfaceCapabilities()}{getSurfaceCapabilities()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_ab324aba5e052615f18604c0e3b1799b4}{Graphics\+::\+Surface\+Capabilities}} Graphics\+::\+Surface\+::get\+Surface\+Capabilities (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the surface capabilities. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_a92afb2cc546ae758fd7c3e5a29af328d}\label{classk_f_1_1_graphics_1_1_surface_a92afb2cc546ae758fd7c3e5a29af328d}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!getSurfaceFormat@{getSurfaceFormat}}
+\index{getSurfaceFormat@{getSurfaceFormat}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{getSurfaceFormat()}{getSurfaceFormat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_ab10863dd76a563ebf76f80ff6d027e2a}{Graphics\+::\+Surface\+Format}} Graphics\+::\+Surface\+::get\+Surface\+Format (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the surface format. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_surface_a208a6d14485fdf5e0a5b4bdba8fdbcd9}\label{classk_f_1_1_graphics_1_1_surface_a208a6d14485fdf5e0a5b4bdba8fdbcd9}} 
+\index{kF::Graphics::Surface@{kF::Graphics::Surface}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Surface@{kF::Graphics::Surface}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}}\& k\+F\+::\+Graphics\+::\+Surface\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_surface}{Surface}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_surface_8hpp}{Surface.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_surface_8cpp}{Surface.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+\hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4}{}\doxysection{kF\+::Core\+::Dispatcher\+Details$<$ Return(Args...), Cache\+Size, Template\+Functor $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4}\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+
+
+Fast event dispatcher.  
+
+
+
+
+{\ttfamily \#include $<$Dispatcher\+Details.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_af3932bcd9bbbc7f4502e6067438df2c6}{Internal\+Functor}} = Template\+Functor$<$ Return(Args...), Cache\+Size $>$
+\begin{DoxyCompactList}\small\item\em Deduced internal functor type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Functor $>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a2785004805a0ab94744b3db160a2a047}{add}} (Functor \&\&functor) noexcept
+\begin{DoxyCompactList}\small\item\em Add a functor to dispatch list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member\+Function, typename Class\+Type $>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a2e0ebd9ac4dba52b2bdbf8c26853ecf1}{add}} (Class\+Type $\ast$const instance) noexcept
+\begin{DoxyCompactList}\small\item\em Add a member function to dispatch list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member\+Function, typename Class\+Type $>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_acaf34507581d3e76ce471d1e984ebc2e}{add}} (const Class\+Type $\ast$const instance) noexcept
+\begin{DoxyCompactList}\small\item\em Add a const member function to dispatch list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Free\+Function$>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a38d08a2c3d04404fec45f9e0167bde83}{add}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Add a free function to dispatch list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ac04a6379d58905134e0f6b9179310604}{dispatch}} (Args ...\mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a31f7190f7ee102756c491a2f2640b345}{args}})
+\begin{DoxyCompactList}\small\item\em Dispatch every internal functors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Callback $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ae6e947b54429a31719f4c3ca60d44568}{requires}} (!std\+::is\+\_\+same\+\_\+v$<$ Return, void $>$ \&\&std\+::invocable$<$ Callback, Return $>$) void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ac04a6379d58905134e0f6b9179310604}{dispatch}}(Callback \&\&callback
+\begin{DoxyCompactList}\small\item\em Dispatch every internal functors with a given callback to receive the return value of each functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Args \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a31f7190f7ee102756c491a2f2640b345}{args}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Return, typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$\newline
+class k\+F\+::\+Core\+::\+Dispatcher\+Details$<$ Return(\+Args...), Cache\+Size, Template\+Functor $>$}
+
+Fast event dispatcher. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_af3932bcd9bbbc7f4502e6067438df2c6}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_af3932bcd9bbbc7f4502e6067438df2c6}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!InternalFunctor@{InternalFunctor}}
+\index{InternalFunctor@{InternalFunctor}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{InternalFunctor}{InternalFunctor}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_af3932bcd9bbbc7f4502e6067438df2c6}{Internal\+Functor}} =  Template\+Functor$<$Return(Args...), Cache\+Size$>$}
+
+
+
+Deduced internal functor type. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a2e0ebd9ac4dba52b2bdbf8c26853ecf1}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a2e0ebd9ac4dba52b2bdbf8c26853ecf1}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!add@{add}}
+\index{add@{add}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+template$<$auto Member\+Function, typename Class\+Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::add (\begin{DoxyParamCaption}\item[{Class\+Type $\ast$const}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a member function to dispatch list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_acaf34507581d3e76ce471d1e984ebc2e}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_acaf34507581d3e76ce471d1e984ebc2e}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!add@{add}}
+\index{add@{add}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+template$<$auto Member\+Function, typename Class\+Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::add (\begin{DoxyParamCaption}\item[{const Class\+Type $\ast$const}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a const member function to dispatch list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a2785004805a0ab94744b3db160a2a047}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a2785004805a0ab94744b3db160a2a047}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!add@{add}}
+\index{add@{add}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+template$<$typename Functor $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::add (\begin{DoxyParamCaption}\item[{Functor \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a functor to dispatch list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a38d08a2c3d04404fec45f9e0167bde83}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a38d08a2c3d04404fec45f9e0167bde83}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!add@{add}}
+\index{add@{add}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+template$<$auto Free\+Function$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::add (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a free function to dispatch list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ac04a6379d58905134e0f6b9179310604}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ac04a6379d58905134e0f6b9179310604}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::dispatch (\begin{DoxyParamCaption}\item[{Args ...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dispatch every internal functors. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ae6e947b54429a31719f4c3ca60d44568}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_ae6e947b54429a31719f4c3ca60d44568}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!requires@{requires}}
+\index{requires@{requires}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+template$<$typename Callback $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::requires (\begin{DoxyParamCaption}\item[{!std\+::is\+\_\+same\+\_\+v$<$ Return, void $>$ \&\&std\+::invocable$<$ Callback, Return $>$}]{ }\end{DoxyParamCaption}) \&\&}
+
+
+
+Dispatch every internal functors with a given callback to receive the return value of each functor. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a31f7190f7ee102756c491a2f2640b345}\label{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a31f7190f7ee102756c491a2f2640b345}} 
+\index{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}!args@{args}}
+\index{args@{args}!kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$@{kF::Core::DispatcherDetails$<$ Return(Args...), CacheSize, TemplateFunctor $>$}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily template$<$typename Return , typename... Args, std\+::size\+\_\+t Cache\+Size, template$<$ typename, std\+::size\+\_\+t $>$ typename Template\+Functor$>$ \\
+Args \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{k\+F\+::\+Core\+::\+Dispatcher\+Details}}$<$ Return(Args...), Cache\+Size, Template\+Functor $>$\+::args}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&functor : \_functors) \{}
+\DoxyCodeLine{            callback(functor(std::forward<Args>(\mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4_a31f7190f7ee102756c491a2f2640b345}{args}})...));}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{     \textcolor{keyword}{auto} count(\textcolor{keywordtype}{void}) \textcolor{keyword}{const} noexcept \{ \textcolor{keywordflow}{return} \_functors.size(); \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{keywordtype}{void} clear(\textcolor{keywordtype}{void}) noexcept(std::is\_nothrow\_destructible\_v< InternalFunctor >) \{ \_functors.clear(); \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}:}
+\DoxyCodeLine{    TinyVector<InternalFunctor> \_functors \{\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_dispatcher_details_8hpp}{Dispatcher\+Details.\+hpp}}\end{DoxyCompactItemize}

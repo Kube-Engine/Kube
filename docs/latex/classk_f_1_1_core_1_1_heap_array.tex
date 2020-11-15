@@ -1,0 +1,318 @@
+\hypertarget{classk_f_1_1_core_1_1_heap_array}{}\doxysection{kF\+::Core\+::Heap\+Array$<$ Type $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_heap_array}\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$Heap\+Array.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Core\+::Heap\+Array$<$ Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classk_f_1_1_core_1_1_heap_array__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}{Iterator}} = \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$
+\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}{Const\+Iterator}} = const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ab4f6803b7b4ac2e4bbe810150aef667c}{Heap\+Array}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default construct an empty array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ae4053199d2c19f4f65fd2b0b18394fe6}{Heap\+Array}} (const std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a7dae52726a554b2a2c016d992c8b4e76}{size}}, Args \&\&...args) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$)
+\begin{DoxyCompactList}\small\item\em Construct an array of a given size with given arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ae8debe1cb603e192df2f06ac5239a28c}{Heap\+Array}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a98d7278d7dfc99f70f5de8e3a122eccf}{$\sim$\+Heap\+Array}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the array and all elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ac43552cac5fb5292eb0da49086ce07a8}{operator=}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a99ea86577c48e5090dddc2701db965fc}{swap}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ae8ab070e866ff69290f11cbc84743a62}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast check if array contains data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a1dcd2c5b0677237ccf2e3d92e26b966e}{empty}} (void) const noexcept
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_aed77bc1cfe9bd7c52e3f3df442f12de7}{allocate}} (const std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a7dae52726a554b2a2c016d992c8b4e76}{size}}, Args \&\&...args) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Allocate a new array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a5b679309a694f946c5ec476aad02ba39}{release}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Clear the array and release memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a9db26303e09a60aa9efb64133d515d49}{data}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get internal data. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ac06ec846859f9837fde1465b51560516}{data}} (void) const noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a7dae52726a554b2a2c016d992c8b4e76}{size}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get array length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_af4aa7ee32035cec9081f8fad9093fc95}{at}} (const std\+::size\+\_\+t index) noexcept
+\begin{DoxyCompactList}\small\item\em Helpers to access data. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ac5a4d30186119fa7bca788cfb7dc3d40}{at}} (const std\+::size\+\_\+t index) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30898070cf2cac46e4aac799d8462740}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::size\+\_\+t index) noexcept
+\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a44b90225ac39f64fc9a09e7b844a937b}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::size\+\_\+t index) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a87cdcdcd6339ab869f8f201e3a693cb6}{begin}} (void) noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_aea2c97ee910463455dff7c8d10ed91ea}{end}} (void) noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ac26ff66d190d71b0c654058f37b06950}{begin}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_af647934c8a67309f1121296a50577692}{end}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_adbed016bbd453fef5a5634820124da0f}{\+\_\+data}} \{ nullptr \}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_ab04aa014789c3e13ab2a533f5bc3e43a}{\+\_\+size}} \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}\label{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}{Const\+Iterator}} =  const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}\label{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}{Iterator}} =  \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ab4f6803b7b4ac2e4bbe810150aef667c}\label{classk_f_1_1_core_1_1_heap_array_ab4f6803b7b4ac2e4bbe810150aef667c}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!HeapArray@{HeapArray}}
+\index{HeapArray@{HeapArray}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{HeapArray()}{HeapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default construct an empty array. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ae4053199d2c19f4f65fd2b0b18394fe6}\label{classk_f_1_1_core_1_1_heap_array_ae4053199d2c19f4f65fd2b0b18394fe6}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!HeapArray@{HeapArray}}
+\index{HeapArray@{HeapArray}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{HeapArray()}{HeapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{size,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an array of a given size with given arguments. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ae8debe1cb603e192df2f06ac5239a28c}\label{classk_f_1_1_core_1_1_heap_array_ae8debe1cb603e192df2f06ac5239a28c}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!HeapArray@{HeapArray}}
+\index{HeapArray@{HeapArray}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{HeapArray()}{HeapArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a98d7278d7dfc99f70f5de8e3a122eccf}\label{classk_f_1_1_core_1_1_heap_array_a98d7278d7dfc99f70f5de8e3a122eccf}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!````~HeapArray@{$\sim$HeapArray}}
+\index{````~HeapArray@{$\sim$HeapArray}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$HeapArray()}{~HeapArray()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destruct the array and all elements. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_aed77bc1cfe9bd7c52e3f3df442f12de7}\label{classk_f_1_1_core_1_1_heap_array_aed77bc1cfe9bd7c52e3f3df442f12de7}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!allocate@{allocate}}
+\index{allocate@{allocate}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::allocate (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{size,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Allocate a new array. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}} \mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ac5a4d30186119fa7bca788cfb7dc3d40}\label{classk_f_1_1_core_1_1_heap_array_ac5a4d30186119fa7bca788cfb7dc3d40}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!at@{at}}
+\index{at@{at}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::at (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_af4aa7ee32035cec9081f8fad9093fc95}\label{classk_f_1_1_core_1_1_heap_array_af4aa7ee32035cec9081f8fad9093fc95}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!at@{at}}
+\index{at@{at}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::at (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Helpers to access data. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ac26ff66d190d71b0c654058f37b06950}\label{classk_f_1_1_core_1_1_heap_array_ac26ff66d190d71b0c654058f37b06950}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!begin@{begin}}
+\index{begin@{begin}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a87cdcdcd6339ab869f8f201e3a693cb6}\label{classk_f_1_1_core_1_1_heap_array_a87cdcdcd6339ab869f8f201e3a693cb6}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!begin@{begin}}
+\index{begin@{begin}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Iterators \mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ac06ec846859f9837fde1465b51560516}\label{classk_f_1_1_core_1_1_heap_array_ac06ec846859f9837fde1465b51560516}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!data@{data}}
+\index{data@{data}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a9db26303e09a60aa9efb64133d515d49}\label{classk_f_1_1_core_1_1_heap_array_a9db26303e09a60aa9efb64133d515d49}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!data@{data}}
+\index{data@{data}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal data. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a1dcd2c5b0677237ccf2e3d92e26b966e}\label{classk_f_1_1_core_1_1_heap_array_a1dcd2c5b0677237ccf2e3d92e26b966e}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!empty@{empty}}
+\index{empty@{empty}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_af647934c8a67309f1121296a50577692}\label{classk_f_1_1_core_1_1_heap_array_af647934c8a67309f1121296a50577692}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!end@{end}}
+\index{end@{end}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_acd2d0b8f371016ed9dff9f2f21e89bce}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_aea2c97ee910463455dff7c8d10ed91ea}\label{classk_f_1_1_core_1_1_heap_array_aea2c97ee910463455dff7c8d10ed91ea}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!end@{end}}
+\index{end@{end}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array_a30c8ca8db514b3b41e417e898a3ab3cb}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ae8ab070e866ff69290f11cbc84743a62}\label{classk_f_1_1_core_1_1_heap_array_ae8ab070e866ff69290f11cbc84743a62}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast check if array contains data. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ac43552cac5fb5292eb0da49086ce07a8}\label{classk_f_1_1_core_1_1_heap_array_ac43552cac5fb5292eb0da49086ce07a8}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a44b90225ac39f64fc9a09e7b844a937b}\label{classk_f_1_1_core_1_1_heap_array_a44b90225ac39f64fc9a09e7b844a937b}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a30898070cf2cac46e4aac799d8462740}\label{classk_f_1_1_core_1_1_heap_array_a30898070cf2cac46e4aac799d8462740}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a5b679309a694f946c5ec476aad02ba39}\label{classk_f_1_1_core_1_1_heap_array_a5b679309a694f946c5ec476aad02ba39}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!release@{release}}
+\index{release@{release}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Clear the array and release memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a7dae52726a554b2a2c016d992c8b4e76}\label{classk_f_1_1_core_1_1_heap_array_a7dae52726a554b2a2c016d992c8b4e76}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!size@{size}}
+\index{size@{size}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get array length. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_a99ea86577c48e5090dddc2701db965fc}\label{classk_f_1_1_core_1_1_heap_array_a99ea86577c48e5090dddc2701db965fc}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!swap@{swap}}
+\index{swap@{swap}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two instances. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_adbed016bbd453fef5a5634820124da0f}\label{classk_f_1_1_core_1_1_heap_array_adbed016bbd453fef5a5634820124da0f}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!\_data@{\_data}}
+\index{\_data@{\_data}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+data \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_heap_array_ab04aa014789c3e13ab2a533f5bc3e43a}\label{classk_f_1_1_core_1_1_heap_array_ab04aa014789c3e13ab2a533f5bc3e43a}} 
+\index{kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}!\_size@{\_size}}
+\index{\_size@{\_size}!kF::Core::HeapArray$<$ Type $>$@{kF::Core::HeapArray$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{k\+F\+::\+Core\+::\+Heap\+Array}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$\+::\+\_\+size \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_heap_array_8hpp}{Heap\+Array.\+hpp}}\item 
+Kube/\+Core/\mbox{\hyperlink{_heap_array_8ipp}{Heap\+Array.\+ipp}}\end{DoxyCompactItemize}

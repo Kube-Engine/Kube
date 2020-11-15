@@ -1,0 +1,174 @@
+\hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager}{}\doxysection{kF\+::Graphics\+::Framebuffer\+Manager Class Reference}
+\label{classk_f_1_1_graphics_1_1_framebuffer_manager}\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+
+
+A framebuffer handler holds a set of framebuffers.  
+
+
+
+
+{\ttfamily \#include $<$Framebuffer\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Framebuffer\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classk_f_1_1_graphics_1_1_framebuffer_manager__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_abb643845e7700aac13cff9f729fb3b1b}{Framebuffer\+Manager}} (void)
+\begin{DoxyCompactList}\small\item\em Construct a framebuffer handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_ab25e2a5414ecd4ae659b4ba8a0ec0db1}{Framebuffer\+Manager}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_a55b5754a8d96ba4196647488c0c47956}{$\sim$\+Framebuffer\+Manager}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destoy the handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_a25d4a8a165266a5eb731905ab55a6a11}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_a5097b9ca4e7c89ff2c32087247b51c6c}{framebuffers}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the framebuffer list. \end{DoxyCompactList}\item 
+const auto \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_a08ecf0eee13949c3803c92d6f9610c9c}{framebuffers}} (void) const noexcept
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_acc31d1bc353553853546953fa071913c}{Framebuffer\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_a4ba4a5c048137a18126a12e305c4cea8}{current\+Framebuffer}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive the current frame buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_ae5c9da45dc00722de4e86268a16d9a1e}{on\+Frame\+Aquired}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}} frame\+Index) noexcept
+\begin{DoxyCompactList}\small\item\em Callback triggered when renderer is processing a new frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_ac3bd062c2546220903953190ed453d20}{on\+View\+Size\+Changed}} (void)
+\begin{DoxyCompactList}\small\item\em Callback on render view size changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_a4683ad694d75ae605ae88f47d7627ea3}{create\+Framebuffers}} (void)
+\begin{DoxyCompactList}\small\item\em Create a set of framebuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer}{Framebuffer}} $>$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager_ad2598224dfd4727166cdb42b55e07190}{\+\_\+cached\+Frames}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A framebuffer handler holds a set of framebuffers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_abb643845e7700aac13cff9f729fb3b1b}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_abb643845e7700aac13cff9f729fb3b1b}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!FramebufferManager@{FramebufferManager}}
+\index{FramebufferManager@{FramebufferManager}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{FramebufferManager()}{FramebufferManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graphics\+::\+Framebuffer\+Manager\+::\+Framebuffer\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Construct a framebuffer handler. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_ab25e2a5414ecd4ae659b4ba8a0ec0db1}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_ab25e2a5414ecd4ae659b4ba8a0ec0db1}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!FramebufferManager@{FramebufferManager}}
+\index{FramebufferManager@{FramebufferManager}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{FramebufferManager()}{FramebufferManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::\+Framebuffer\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_a55b5754a8d96ba4196647488c0c47956}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_a55b5754a8d96ba4196647488c0c47956}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!````~FramebufferManager@{$\sim$FramebufferManager}}
+\index{````~FramebufferManager@{$\sim$FramebufferManager}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$FramebufferManager()}{~FramebufferManager()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::$\sim$\+Framebuffer\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destoy the handler. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_a4683ad694d75ae605ae88f47d7627ea3}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_a4683ad694d75ae605ae88f47d7627ea3}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!createFramebuffers@{createFramebuffers}}
+\index{createFramebuffers@{createFramebuffers}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{createFramebuffers()}{createFramebuffers()}}
+{\footnotesize\ttfamily void Graphics\+::\+Framebuffer\+Manager\+::create\+Framebuffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a set of framebuffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_a4ba4a5c048137a18126a12e305c4cea8}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_a4ba4a5c048137a18126a12e305c4cea8}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!currentFramebuffer@{currentFramebuffer}}
+\index{currentFramebuffer@{currentFramebuffer}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{currentFramebuffer()}{currentFramebuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_acc31d1bc353553853546953fa071913c}{Framebuffer\+Handle}} k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::current\+Framebuffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the current frame buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_a08ecf0eee13949c3803c92d6f9610c9c}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_a08ecf0eee13949c3803c92d6f9610c9c}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!framebuffers@{framebuffers}}
+\index{framebuffers@{framebuffers}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{framebuffers()}{framebuffers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const auto\& k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::framebuffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_a5097b9ca4e7c89ff2c32087247b51c6c}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_a5097b9ca4e7c89ff2c32087247b51c6c}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!framebuffers@{framebuffers}}
+\index{framebuffers@{framebuffers}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{framebuffers()}{framebuffers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto\& k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::framebuffers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the framebuffer list. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_ae5c9da45dc00722de4e86268a16d9a1e}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_ae5c9da45dc00722de4e86268a16d9a1e}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!onFrameAquired@{onFrameAquired}}
+\index{onFrameAquired@{onFrameAquired}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{onFrameAquired()}{onFrameAquired()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::on\+Frame\+Aquired (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad0bfe047d8326938f4908862a5cbfeb7}{Frame\+Index}}}]{frame\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Callback triggered when renderer is processing a new frame. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_ac3bd062c2546220903953190ed453d20}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_ac3bd062c2546220903953190ed453d20}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!onViewSizeChanged@{onViewSizeChanged}}
+\index{onViewSizeChanged@{onViewSizeChanged}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{onViewSizeChanged()}{onViewSizeChanged()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::on\+View\+Size\+Changed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Callback on render view size changed. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_a25d4a8a165266a5eb731905ab55a6a11}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_a25d4a8a165266a5eb731905ab55a6a11}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}}\& k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer_manager}{Framebuffer\+Manager}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_framebuffer_manager_ad2598224dfd4727166cdb42b55e07190}\label{classk_f_1_1_graphics_1_1_framebuffer_manager_ad2598224dfd4727166cdb42b55e07190}} 
+\index{kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}!\_cachedFrames@{\_cachedFrames}}
+\index{\_cachedFrames@{\_cachedFrames}!kF::Graphics::FramebufferManager@{kF::Graphics::FramebufferManager}}
+\doxysubsubsection{\texorpdfstring{\_cachedFrames}{\_cachedFrames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_per_frame_cache}{Per\+Frame\+Cache}}$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_framebuffer}{Framebuffer}}$>$ k\+F\+::\+Graphics\+::\+Framebuffer\+Manager\+::\+\_\+cached\+Frames \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_framebuffer_manager_8hpp}{Framebuffer\+Manager.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_framebuffer_manager_8cpp}{Framebuffer\+Manager.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_framebuffer_manager_8ipp}{Framebuffer\+Manager.\+ipp}}\end{DoxyCompactItemize}

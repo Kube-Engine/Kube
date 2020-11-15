@@ -1,0 +1,388 @@
+\hypertarget{classk_f_1_1_e_c_s_1_1_registry}{}\doxysection{kF\+::E\+CS\+::Registry$<$ Entity\+Type $>$ Class Template Reference}
+\label{classk_f_1_1_e_c_s_1_1_registry}\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+
+
+Used to create Entities, add Components to them, retrieve Systems etc...  
+
+
+
+
+{\ttfamily \#include $<$Registry.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ab85c38b20941676161e89bdc52135972}{Registry}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}=default
+\begin{DoxyCompactList}\small\item\em Construct the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a0cbff96a8c8b94784ca8e9fd500bf7b3}{$\sim$\+Registry}} (void)=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component $>$ }\\void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a611508e979d0bf2a84b5011aecb6691e}{register\+Component}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Register a component type into the registry. \end{DoxyCompactList}\item 
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ab5c2dd5d10af916d41c1219e385eff63}{add}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Construct an empty entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component , typename ... Args$>$ }\\Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ad5f63736d327349b8ca7c0c964e9b285}{add}} (Args \&\&...args) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ Component \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$)
+\begin{DoxyCompactList}\small\item\em Construct an entity with one component binded. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Components$>$ }\\Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a59634cbeb819f5f6ae7909bd628ab1ec}{add}} (Components \&\&... components) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(... \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Components $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Components $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Components $>$)))
+\begin{DoxyCompactList}\small\item\em Construct an entity with several components binded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_abcf1ddc26a97dea91adacc4c15ee90d4}{remove}} (const Entity\+Type entity) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Slow opaque entity erasure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Components$>$ }\\void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_abcb0ca02139ab866d21929c31c990dbb}{remove}} (const Entity\+Type entity) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Fast explicit entity erasure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component , typename... Args$>$ }\\Component \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aef1bed39cf8c65c83b6f915d80333718}{attach}} (const Entity\+Type entity, Args \&\&... args) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ Component \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$)
+\begin{DoxyCompactList}\small\item\em Add a single component to an entity with a set of predefined arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Components$>$ }\\\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a014d2fff76cd371bce882b9ed69d1333}{requires}} (sizeof...(Components) $>$ 1) void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aef1bed39cf8c65c83b6f915d80333718}{attach}}(const Entity\+Type entity
+\begin{DoxyCompactList}\small\item\em Add a set of components to an entity. \end{DoxyCompactList}\item 
+Components \&\&components \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}} (! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(... \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Components $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Components $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Components $>$)))
+\item 
+{\footnotesize template$<$typename Component $>$ }\\void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a1b8acc00a510fe8229b83846150aeaa4}{detach}} (const Entity\+Type entity) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ Component $>$)
+\begin{DoxyCompactList}\small\item\em Remove a single component from an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Components$>$ }\\\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a78c466c8e397618066499b5151bee136}{requires}} (sizeof...(Components) $>$ 1) void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a1b8acc00a510fe8229b83846150aeaa4}{detach}}(const Entity\+Type entity) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(... \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ Components $>$))
+\begin{DoxyCompactList}\small\item\em Remove a set of components from an entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a5cac4c41959e07f13bc0afab5fbc73c5}{clear}} (void)
+\begin{DoxyCompactList}\small\item\em Clear the whole registry (components, systems, entities) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Components$>$ }\\View$<$ Entity\+Type, Components... $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a97a20c3365ec45585a632a83c79b3a01}{view}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Create a view used to traverse entities matching a set of components. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}$<$ Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_abb9d0b6a4c861c68f729a5075a1003c4}{component\+Tables}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Retreive the component table list. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}$<$ Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ae31fd029289809dc819fa92dc7a97f22}{component\+Tables}} (void) const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Retreive the component table list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}$<$ Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a0af214e0cbbddf3b472821ea1f1a88ac}{system\+Graph}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Retreive the graph of systems. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}$<$ Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ac247963b7a127e27a9b8cea2256215c6}{system\+Graph}} (void) const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Retreive the graph of systems. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_addcf0b6b5f7f1776fef7468d61a56df9}{build\+System\+Graph}} (void)
+\begin{DoxyCompactList}\small\item\em Build system graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ab0a8fb656e8df3bd10a075fa832b893a}{operator Flow\+::\+Graph \&}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\begin{DoxyCompactList}\small\item\em Implicit conversion to \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Flow\+::\+Graph}}, used for Scheduler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_afb56b1a2a6d52cfa8aaeef8a9a84921c}{operator const Flow\+::\+Graph \&}} (void) const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}
+\item 
+{\footnotesize template$<$typename... Components$>$ }\\k\+F\+::\+E\+C\+S\+::\+View$<$ Entity\+Type, Components... $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a0c918b2bbd2aca49660d47319dd4cb7a}{view}} (void) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}} \+\_\+ndebug
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a3f8a3ca3b5530f1fc805d77c1742aef2}{remove\+Entity\+From\+Registry}} (const Entity\+Type entity) \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}{noexcept}}(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Only remove an entity from \+\_\+entities vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}$<$ Entity\+Type $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_ae2c695c8fe24ca4b9092ff49ebf58a21}{\+\_\+component\+Tables}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ Entity\+Type, Entity\+Type $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_aa12f5106da48f451c9e67b02602eaa39}{\+\_\+entities}} \{\}
+\item 
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a929aeede45d97060fdc8def736cff2cb}{\+\_\+last\+Destroyed}} \{ \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}{Null\+Entity}}$<$Entity\+Type$>$ \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}$<$ Entity\+Type $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry_a0a5209a4f20957fa3ec546430172a970}{\+\_\+system\+Graph}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$\newline
+class k\+F\+::\+E\+C\+S\+::\+Registry$<$ Entity\+Type $>$}
+
+Used to create Entities, add Components to them, retrieve Systems etc... 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ab85c38b20941676161e89bdc52135972}\label{classk_f_1_1_e_c_s_1_1_registry_ab85c38b20941676161e89bdc52135972}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!Registry@{Registry}}
+\index{Registry@{Registry}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{Registry()}{Registry()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Construct the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a0cbff96a8c8b94784ca8e9fd500bf7b3}\label{classk_f_1_1_e_c_s_1_1_registry_a0cbff96a8c8b94784ca8e9fd500bf7b3}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!````~Registry@{$\sim$Registry}}
+\index{````~Registry@{$\sim$Registry}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Registry()}{~Registry()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ad5f63736d327349b8ca7c0c964e9b285}\label{classk_f_1_1_e_c_s_1_1_registry_ad5f63736d327349b8ca7c0c964e9b285}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!add@{add}}
+\index{add@{add}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component , typename ... Args$>$ \\
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::add (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an entity with one component binded. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a59634cbeb819f5f6ae7909bd628ab1ec}\label{classk_f_1_1_e_c_s_1_1_registry_a59634cbeb819f5f6ae7909bd628ab1ec}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!add@{add}}
+\index{add@{add}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename... Components$>$ \\
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::add (\begin{DoxyParamCaption}\item[{Components \&\&...}]{components }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an entity with several components binded. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ab5c2dd5d10af916d41c1219e385eff63}\label{classk_f_1_1_e_c_s_1_1_registry_ab5c2dd5d10af916d41c1219e385eff63}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!add@{add}}
+\index{add@{add}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::add (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an empty entity. 
+
+@ Author\+: Léos Julien @ Description\+: Used to create Entities, add Components to them, retrieve Systems etc... \mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_aef1bed39cf8c65c83b6f915d80333718}\label{classk_f_1_1_e_c_s_1_1_registry_aef1bed39cf8c65c83b6f915d80333718}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!attach@{attach}}
+\index{attach@{attach}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component , typename... Args$>$ \\
+Component \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::attach (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a single component to an entity with a set of predefined arguments. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_addcf0b6b5f7f1776fef7468d61a56df9}\label{classk_f_1_1_e_c_s_1_1_registry_addcf0b6b5f7f1776fef7468d61a56df9}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!buildSystemGraph@{buildSystemGraph}}
+\index{buildSystemGraph@{buildSystemGraph}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{buildSystemGraph()}{buildSystemGraph()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::build\+System\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Build system graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a5cac4c41959e07f13bc0afab5fbc73c5}\label{classk_f_1_1_e_c_s_1_1_registry_a5cac4c41959e07f13bc0afab5fbc73c5}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!clear@{clear}}
+\index{clear@{clear}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear the whole registry (components, systems, entities) 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ae31fd029289809dc819fa92dc7a97f22}\label{classk_f_1_1_e_c_s_1_1_registry_ae31fd029289809dc819fa92dc7a97f22}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!componentTables@{componentTables}}
+\index{componentTables@{componentTables}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{componentTables()}{componentTables()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}$<$Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::component\+Tables (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the component table list. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_abb9d0b6a4c861c68f729a5075a1003c4}\label{classk_f_1_1_e_c_s_1_1_registry_abb9d0b6a4c861c68f729a5075a1003c4}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!componentTables@{componentTables}}
+\index{componentTables@{componentTables}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{componentTables()}{componentTables()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}$<$Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::component\+Tables (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the component table list. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a1b8acc00a510fe8229b83846150aeaa4}\label{classk_f_1_1_e_c_s_1_1_registry_a1b8acc00a510fe8229b83846150aeaa4}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!detach@{detach}}
+\index{detach@{detach}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::detach (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a single component from an entity. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}\label{classk_f_1_1_e_c_s_1_1_registry_aafe0a146a734343c0c8460d464076ab3}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!noexcept@{noexcept}}
+\index{noexcept@{noexcept}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{noexcept()}{noexcept()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+Components\&\& components \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::noexcept (\begin{DoxyParamCaption}\item[{! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&}]{... \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Components $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Components $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Components $>$) }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_afb56b1a2a6d52cfa8aaeef8a9a84921c}\label{classk_f_1_1_e_c_s_1_1_registry_afb56b1a2a6d52cfa8aaeef8a9a84921c}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!operator const Flow::Graph \&@{operator const Flow::Graph \&}}
+\index{operator const Flow::Graph \&@{operator const Flow::Graph \&}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{operator const Flow::Graph \&()}{operator const Flow::Graph \&()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::operator const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Flow\+::\+Graph}} \& (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ab0a8fb656e8df3bd10a075fa832b893a}\label{classk_f_1_1_e_c_s_1_1_registry_ab0a8fb656e8df3bd10a075fa832b893a}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!operator Flow::Graph \&@{operator Flow::Graph \&}}
+\index{operator Flow::Graph \&@{operator Flow::Graph \&}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{operator Flow::Graph \&()}{operator Flow::Graph \&()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::operator \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Flow\+::\+Graph}} \& (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Implicit conversion to \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Flow\+::\+Graph}}, used for Scheduler. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a611508e979d0bf2a84b5011aecb6691e}\label{classk_f_1_1_e_c_s_1_1_registry_a611508e979d0bf2a84b5011aecb6691e}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!registerComponent@{registerComponent}}
+\index{registerComponent@{registerComponent}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{registerComponent()}{registerComponent()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::register\+Component (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Register a component type into the registry. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_abcf1ddc26a97dea91adacc4c15ee90d4}\label{classk_f_1_1_e_c_s_1_1_registry_abcf1ddc26a97dea91adacc4c15ee90d4}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!remove@{remove}}
+\index{remove@{remove}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::remove (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Slow opaque entity erasure. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_abcb0ca02139ab866d21929c31c990dbb}\label{classk_f_1_1_e_c_s_1_1_registry_abcb0ca02139ab866d21929c31c990dbb}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!remove@{remove}}
+\index{remove@{remove}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename... Components$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::remove (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Fast explicit entity erasure. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a3f8a3ca3b5530f1fc805d77c1742aef2}\label{classk_f_1_1_e_c_s_1_1_registry_a3f8a3ca3b5530f1fc805d77c1742aef2}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!removeEntityFromRegistry@{removeEntityFromRegistry}}
+\index{removeEntityFromRegistry@{removeEntityFromRegistry}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{removeEntityFromRegistry()}{removeEntityFromRegistry()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::remove\+Entity\+From\+Registry (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Only remove an entity from \+\_\+entities vector. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a014d2fff76cd371bce882b9ed69d1333}\label{classk_f_1_1_e_c_s_1_1_registry_a014d2fff76cd371bce882b9ed69d1333}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!requires@{requires}}
+\index{requires@{requires}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename... Components$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::requires (\begin{DoxyParamCaption}\item[{sizeof...}]{Components,  }\item[{1}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Add a set of components to an entity. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a78c466c8e397618066499b5151bee136}\label{classk_f_1_1_e_c_s_1_1_registry_a78c466c8e397618066499b5151bee136}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!requires@{requires}}
+\index{requires@{requires}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename... Components$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::requires (\begin{DoxyParamCaption}\item[{sizeof...}]{Components,  }\item[{1}]{ }\end{DoxyParamCaption}) const \&\&\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Remove a set of components from an entity. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ac247963b7a127e27a9b8cea2256215c6}\label{classk_f_1_1_e_c_s_1_1_registry_ac247963b7a127e27a9b8cea2256215c6}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!systemGraph@{systemGraph}}
+\index{systemGraph@{systemGraph}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{systemGraph()}{systemGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}$<$Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::system\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the graph of systems. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a0af214e0cbbddf3b472821ea1f1a88ac}\label{classk_f_1_1_e_c_s_1_1_registry_a0af214e0cbbddf3b472821ea1f1a88ac}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!systemGraph@{systemGraph}}
+\index{systemGraph@{systemGraph}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{systemGraph()}{systemGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}$<$Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::system\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive the graph of systems. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a0c918b2bbd2aca49660d47319dd4cb7a}\label{classk_f_1_1_e_c_s_1_1_registry_a0c918b2bbd2aca49660d47319dd4cb7a}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!view@{view}}
+\index{view@{view}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename... Components$>$ \\
+k\+F\+::\+E\+C\+S\+::\+View$<$Entity\+Type, Components...$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::view (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a97a20c3365ec45585a632a83c79b3a01}\label{classk_f_1_1_e_c_s_1_1_registry_a97a20c3365ec45585a632a83c79b3a01}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!view@{view}}
+\index{view@{view}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename... Components$>$ \\
+View$<$Entity\+Type, Components...$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::view (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Create a view used to traverse entities matching a set of components. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_ae2c695c8fe24ca4b9092ff49ebf58a21}\label{classk_f_1_1_e_c_s_1_1_registry_ae2c695c8fe24ca4b9092ff49ebf58a21}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!\_componentTables@{\_componentTables}}
+\index{\_componentTables@{\_componentTables}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_componentTables}{\_componentTables}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}$<$Entity\+Type$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::\+\_\+component\+Tables \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_aa12f5106da48f451c9e67b02602eaa39}\label{classk_f_1_1_e_c_s_1_1_registry_aa12f5106da48f451c9e67b02602eaa39}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!\_entities@{\_entities}}
+\index{\_entities@{\_entities}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_entities}{\_entities}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$Entity\+Type, Entity\+Type$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::\+\_\+entities \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a929aeede45d97060fdc8def736cff2cb}\label{classk_f_1_1_e_c_s_1_1_registry_a929aeede45d97060fdc8def736cff2cb}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!\_lastDestroyed@{\_lastDestroyed}}
+\index{\_lastDestroyed@{\_lastDestroyed}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_lastDestroyed}{\_lastDestroyed}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+Entity\+Type \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::\+\_\+last\+Destroyed \{ \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}{Null\+Entity}}$<$Entity\+Type$>$ \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_registry_a0a5209a4f20957fa3ec546430172a970}\label{classk_f_1_1_e_c_s_1_1_registry_a0a5209a4f20957fa3ec546430172a970}} 
+\index{kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}!\_systemGraph@{\_systemGraph}}
+\index{\_systemGraph@{\_systemGraph}!kF::ECS::Registry$<$ EntityType $>$@{kF::ECS::Registry$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_systemGraph}{\_systemGraph}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}$<$Entity\+Type$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{k\+F\+::\+E\+C\+S\+::\+Registry}}$<$ Entity\+Type $>$\+::\+\_\+system\+Graph \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_a_system_8hpp}{A\+System.\+hpp}}\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_registry_8hpp}{Registry.\+hpp}}\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_registry_8ipp}{Registry.\+ipp}}\end{DoxyCompactItemize}

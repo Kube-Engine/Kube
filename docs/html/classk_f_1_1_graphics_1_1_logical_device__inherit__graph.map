@@ -1,0 +1,8 @@
+<map id="kF::Graphics::LogicalDevice" name="kF::Graphics::LogicalDevice">
+<area shape="rect" id="node1" title="The logical device abstracts the communication with a physical device." alt="" coords="47,1113,233,1279"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="45,972,235,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,232,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="118,5,303,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="167,307,414,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title="Vulkan handle that inherits from CachedRendererObject." alt="" coords="165,817,355,909"/>
+</map>

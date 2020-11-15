@@ -1,0 +1,295 @@
+\hypertarget{_make_8hpp}{}\doxysection{Kube/\+Object/\+Make.hpp File Reference}
+\label{_make_8hpp}\index{Kube/Object/Make.hpp@{Kube/Object/Make.hpp}}
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$Kube/\+Core/\+Macro\+Utils.\+hpp$>$}\newline
+Include dependency graph for Make.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{_make_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_make_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_make_8hpp_a51bf2d0968998483154a1cbdf052bb35}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+B\+A\+SE}}(...)
+\begin{DoxyCompactList}\small\item\em Dummy generators, not used. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_ae248f7c6f5c8fd48c47d294a101526ef}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR}}(...)
+\item 
+\#define \mbox{\hyperlink{_make_8hpp_a04a7cb39f562a2d33ce9800b4052a6de}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}(...)
+\item 
+\#define \mbox{\hyperlink{_make_8hpp_a87dede3820285e815688f7e96ed39c28}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}(...)
+\item 
+\#define \mbox{\hyperlink{_make_8hpp_ae4525330fd77caf803006df3c89c39eb}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+S\+I\+G\+L\+E\+SS}}(...)
+\item 
+\#define \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(G\+E\+T\+T\+E\+R\+\_\+\+S\+C\+O\+PE,  G\+E\+T\+T\+E\+R\+\_\+\+T\+Y\+PE,  S\+E\+T\+T\+E\+R\+\_\+\+S\+C\+O\+PE,  S\+E\+T\+T\+E\+R\+\_\+\+T\+Y\+PE,  S\+I\+G\+N\+A\+L\+\_\+\+S\+C\+O\+PE,  \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)
+\begin{DoxyCompactList}\small\item\em Generate a property with given parameters (used internally) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_a53ecfa3840452f128fbb76075bef0606}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, public, S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Generate a property with a move setter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_abc468236b2e7c79e1f372d2f762e4345}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+EF}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+E\+R\+\_\+\+R\+EF, public, S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Generate a property with a volatile reference getter and a move setter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_a5cd98cd8cd2b0467f54393a727a3e606}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, private, S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Generate a readonly property with a copy setter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_ae6a702eaf24351caeab1afe532ba7e35}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, public, S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Generate a property with a move setter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_a3c3daf9164192cf07c1f937b0bdc5705}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+EF}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+E\+R\+\_\+\+R\+EF, public, S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Generate a property with a volatile reference getter and a move setter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_ae9864d301c9272db12c68475d2a61b59}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, private, S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Generate a readonly property with a move setter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_a5047935933ce37499bb50547efcdcf27}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+OM}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~    \mbox{\hyperlink{_make_8hpp_a7aec4c9a2d8c81fe828c2771badb81b4}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+AL}}(name\#\#Changed)
+\begin{DoxyCompactList}\small\item\em Generate the signal of a custom property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_abdb659d6fad86b79bb27f3fcf2e949d4}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+G\+E\+T\+T\+ER}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name)~    \mbox{[}\mbox{[}nodiscard\mbox{]}\mbox{]} const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&name(void) const noexcept \{ return \+\_\+\#\#name; \}
+\begin{DoxyCompactList}\small\item\em Const reference getter for any type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_ace72c37732310411d2a5206f5e3669e8}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+G\+E\+T\+T\+E\+R\+\_\+\+R\+EF}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name)
+\begin{DoxyCompactList}\small\item\em Either const and volatiele getter for any type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_ad9ff0521f37eb6ae86a1514126c09a17}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name)
+\begin{DoxyCompactList}\small\item\em Copy setter for any type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_a3ac60294bd9dd096ce7873ba6d6a56bc}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name)
+\begin{DoxyCompactList}\small\item\em Move setter for any type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_aa5349a3cb0fbdf8fdc8af4c78e7966a5}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+I\+M\+PL}}(S\+C\+O\+PE,  name, ...)
+\begin{DoxyCompactList}\small\item\em Declare a signal (used internal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_a7aec4c9a2d8c81fe828c2771badb81b4}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+AL}}(name, ...)~\mbox{\hyperlink{_make_8hpp_aa5349a3cb0fbdf8fdc8af4c78e7966a5}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+I\+M\+PL}}(public, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Declare a public signal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_make_8hpp_aaf9c42c42aaf20a0f9cde9983ef72f9b}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  name, ...)~\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\#\#name \{ \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ \};
+\begin{DoxyCompactList}\small\item\em Defines a variable and initialize it with variadic arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_make_8hpp_a51bf2d0968998483154a1cbdf052bb35}\label{_make_8hpp_a51bf2d0968998483154a1cbdf052bb35}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_BASE@{KUBE\_MAKE\_BASE}}
+\index{KUBE\_MAKE\_BASE@{KUBE\_MAKE\_BASE}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_BASE}{KUBE\_MAKE\_BASE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+B\+A\+SE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Dummy generators, not used. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Code generation helpers \mbox{\Hypertarget{_make_8hpp_ae248f7c6f5c8fd48c47d294a101526ef}\label{_make_8hpp_ae248f7c6f5c8fd48c47d294a101526ef}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_CONSTRUCTOR@{KUBE\_MAKE\_CONSTRUCTOR}}
+\index{KUBE\_MAKE\_CONSTRUCTOR@{KUBE\_MAKE\_CONSTRUCTOR}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_CONSTRUCTOR}{KUBE\_MAKE\_CONSTRUCTOR}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_make_8hpp_a04a7cb39f562a2d33ce9800b4052a6de}\label{_make_8hpp_a04a7cb39f562a2d33ce9800b4052a6de}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_FUNCTION@{KUBE\_MAKE\_FUNCTION}}
+\index{KUBE\_MAKE\_FUNCTION@{KUBE\_MAKE\_FUNCTION}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_FUNCTION}{KUBE\_MAKE\_FUNCTION}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_make_8hpp_a87dede3820285e815688f7e96ed39c28}\label{_make_8hpp_a87dede3820285e815688f7e96ed39c28}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_FUNCTION\_OVERLOAD@{KUBE\_MAKE\_FUNCTION\_OVERLOAD}}
+\index{KUBE\_MAKE\_FUNCTION\_OVERLOAD@{KUBE\_MAKE\_FUNCTION\_OVERLOAD}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_FUNCTION\_OVERLOAD}{KUBE\_MAKE\_FUNCTION\_OVERLOAD}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_make_8hpp_abdb659d6fad86b79bb27f3fcf2e949d4}\label{_make_8hpp_abdb659d6fad86b79bb27f3fcf2e949d4}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_GETTER@{KUBE\_MAKE\_GETTER}}
+\index{KUBE\_MAKE\_GETTER@{KUBE\_MAKE\_GETTER}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_GETTER}{KUBE\_MAKE\_GETTER}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+G\+E\+T\+T\+ER(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name }\end{DoxyParamCaption})~    \mbox{[}\mbox{[}nodiscard\mbox{]}\mbox{]} const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&name(void) const noexcept \{ return \+\_\+\#\#name; \}}
+
+
+
+Const reference getter for any type. 
+
+\mbox{\Hypertarget{_make_8hpp_ace72c37732310411d2a5206f5e3669e8}\label{_make_8hpp_ace72c37732310411d2a5206f5e3669e8}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_GETTER\_REF@{KUBE\_MAKE\_GETTER\_REF}}
+\index{KUBE\_MAKE\_GETTER\_REF@{KUBE\_MAKE\_GETTER\_REF}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_GETTER\_REF}{KUBE\_MAKE\_GETTER\_REF}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+G\+E\+T\+T\+E\+R\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_make_8hpp_abdb659d6fad86b79bb27f3fcf2e949d4}{KUBE\_MAKE\_GETTER}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name) \(\backslash\)}
+\DoxyCodeLine{    [[nodiscard]] \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&name(\textcolor{keywordtype}{void}) noexcept \{ \textcolor{keywordflow}{return} \_\#\#name; \}}
+
+\end{DoxyCode}
+
+
+Either const and volatiele getter for any type. 
+
+\mbox{\Hypertarget{_make_8hpp_a53ecfa3840452f128fbb76075bef0606}\label{_make_8hpp_a53ecfa3840452f128fbb76075bef0606}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_COPY@{KUBE\_MAKE\_PROPERTY\_COPY}}
+\index{KUBE\_MAKE\_PROPERTY\_COPY@{KUBE\_MAKE\_PROPERTY\_COPY}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_COPY}{KUBE\_MAKE\_PROPERTY\_COPY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, public, S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Generate a property with a move setter. 
+
+\mbox{\Hypertarget{_make_8hpp_a5cd98cd8cd2b0467f54393a727a3e606}\label{_make_8hpp_a5cd98cd8cd2b0467f54393a727a3e606}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_COPY\_READONLY@{KUBE\_MAKE\_PROPERTY\_COPY\_READONLY}}
+\index{KUBE\_MAKE\_PROPERTY\_COPY\_READONLY@{KUBE\_MAKE\_PROPERTY\_COPY\_READONLY}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_COPY\_READONLY}{KUBE\_MAKE\_PROPERTY\_COPY\_READONLY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+A\+D\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, private, S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Generate a readonly property with a copy setter. 
+
+\mbox{\Hypertarget{_make_8hpp_abc468236b2e7c79e1f372d2f762e4345}\label{_make_8hpp_abc468236b2e7c79e1f372d2f762e4345}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_COPY\_REF@{KUBE\_MAKE\_PROPERTY\_COPY\_REF}}
+\index{KUBE\_MAKE\_PROPERTY\_COPY\_REF@{KUBE\_MAKE\_PROPERTY\_COPY\_REF}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_COPY\_REF}{KUBE\_MAKE\_PROPERTY\_COPY\_REF}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+E\+R\+\_\+\+R\+EF, public, S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Generate a property with a volatile reference getter and a move setter. 
+
+\mbox{\Hypertarget{_make_8hpp_a5047935933ce37499bb50547efcdcf27}\label{_make_8hpp_a5047935933ce37499bb50547efcdcf27}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_CUSTOM@{KUBE\_MAKE\_PROPERTY\_CUSTOM}}
+\index{KUBE\_MAKE\_PROPERTY\_CUSTOM@{KUBE\_MAKE\_PROPERTY\_CUSTOM}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_CUSTOM}{KUBE\_MAKE\_PROPERTY\_CUSTOM}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+OM(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a7aec4c9a2d8c81fe828c2771badb81b4}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+AL}}(name\#\#Changed)}
+
+
+
+Generate the signal of a custom property. 
+
+\mbox{\Hypertarget{_make_8hpp_ae4525330fd77caf803006df3c89c39eb}\label{_make_8hpp_ae4525330fd77caf803006df3c89c39eb}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_CUSTOM\_SIGLESS@{KUBE\_MAKE\_PROPERTY\_CUSTOM\_SIGLESS}}
+\index{KUBE\_MAKE\_PROPERTY\_CUSTOM\_SIGLESS@{KUBE\_MAKE\_PROPERTY\_CUSTOM\_SIGLESS}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_CUSTOM\_SIGLESS}{KUBE\_MAKE\_PROPERTY\_CUSTOM\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}\label{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_IMPL@{KUBE\_MAKE\_PROPERTY\_IMPL}}
+\index{KUBE\_MAKE\_PROPERTY\_IMPL@{KUBE\_MAKE\_PROPERTY\_IMPL}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_IMPL}{KUBE\_MAKE\_PROPERTY\_IMPL}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{G\+E\+T\+T\+E\+R\+\_\+\+S\+C\+O\+PE,  }\item[{}]{G\+E\+T\+T\+E\+R\+\_\+\+T\+Y\+PE,  }\item[{}]{S\+E\+T\+T\+E\+R\+\_\+\+S\+C\+O\+PE,  }\item[{}]{S\+E\+T\+T\+E\+R\+\_\+\+T\+Y\+PE,  }\item[{}]{S\+I\+G\+N\+A\+L\+\_\+\+S\+C\+O\+PE,  }\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_make_8hpp_aa5349a3cb0fbdf8fdc8af4c78e7966a5}{KUBE\_MAKE\_SIGNAL\_IMPL}}(SIGNAL\_SCOPE, name\#\#Changed) \(\backslash\)}
+\DoxyCodeLine{GETTER\_SCOPE: \(\backslash\)}
+\DoxyCodeLine{    KUBE\_MAKE\_\#\#GETTER\_TYPE(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name) \(\backslash\)}
+\DoxyCodeLine{SETTER\_SCOPE: \(\backslash\)}
+\DoxyCodeLine{    KUBE\_MAKE\_\#\#SETTER\_TYPE(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name) \(\backslash\)}
+\DoxyCodeLine{private: \(\backslash\)}
+\DoxyCodeLine{    KUBE\_MAKE\_VARIABLE(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \_\_VA\_ARGS\_\_) \(\backslash\)}
+
+\end{DoxyCode}
+
+
+Generate a property with given parameters (used internally) 
+
+\mbox{\Hypertarget{_make_8hpp_ae6a702eaf24351caeab1afe532ba7e35}\label{_make_8hpp_ae6a702eaf24351caeab1afe532ba7e35}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_MOVE@{KUBE\_MAKE\_PROPERTY\_MOVE}}
+\index{KUBE\_MAKE\_PROPERTY\_MOVE@{KUBE\_MAKE\_PROPERTY\_MOVE}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_MOVE}{KUBE\_MAKE\_PROPERTY\_MOVE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, public, S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Generate a property with a move setter. 
+
+\mbox{\Hypertarget{_make_8hpp_ae9864d301c9272db12c68475d2a61b59}\label{_make_8hpp_ae9864d301c9272db12c68475d2a61b59}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_MOVE\_READONLY@{KUBE\_MAKE\_PROPERTY\_MOVE\_READONLY}}
+\index{KUBE\_MAKE\_PROPERTY\_MOVE\_READONLY@{KUBE\_MAKE\_PROPERTY\_MOVE\_READONLY}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_MOVE\_READONLY}{KUBE\_MAKE\_PROPERTY\_MOVE\_READONLY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+A\+D\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+ER, private, S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Generate a readonly property with a move setter. 
+
+\mbox{\Hypertarget{_make_8hpp_a3c3daf9164192cf07c1f937b0bdc5705}\label{_make_8hpp_a3c3daf9164192cf07c1f937b0bdc5705}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_PROPERTY\_MOVE\_REF@{KUBE\_MAKE\_PROPERTY\_MOVE\_REF}}
+\index{KUBE\_MAKE\_PROPERTY\_MOVE\_REF@{KUBE\_MAKE\_PROPERTY\_MOVE\_REF}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_PROPERTY\_MOVE\_REF}{KUBE\_MAKE\_PROPERTY\_MOVE\_REF}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_make_8hpp_a3a9bdb6248660d5ec68862c448dba439}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+M\+PL}}(public, G\+E\+T\+T\+E\+R\+\_\+\+R\+EF, public, S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE, public, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Generate a property with a volatile reference getter and a move setter. 
+
+\mbox{\Hypertarget{_make_8hpp_ad9ff0521f37eb6ae86a1514126c09a17}\label{_make_8hpp_ad9ff0521f37eb6ae86a1514126c09a17}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_SETTER\_COPY@{KUBE\_MAKE\_SETTER\_COPY}}
+\index{KUBE\_MAKE\_SETTER\_COPY@{KUBE\_MAKE\_SETTER\_COPY}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_SETTER\_COPY}{KUBE\_MAKE\_SETTER\_COPY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+E\+T\+T\+E\+R\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} name(\textcolor{keyword}{const} \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) \{ \(\backslash\)}
+\DoxyCodeLine{        if (\_\#\#name == value) \(\backslash\)}
+\DoxyCodeLine{            return \textcolor{keyword}{false}; \(\backslash\)}
+\DoxyCodeLine{        \_\#\#name = value; \(\backslash\)}
+\DoxyCodeLine{        emit<\&\_MetaType::name\#\#Changed>(); \(\backslash\)}
+\DoxyCodeLine{        return \textcolor{keyword}{true}; \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Copy setter for any type. 
+
+\mbox{\Hypertarget{_make_8hpp_a3ac60294bd9dd096ce7873ba6d6a56bc}\label{_make_8hpp_a3ac60294bd9dd096ce7873ba6d6a56bc}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_SETTER\_MOVE@{KUBE\_MAKE\_SETTER\_MOVE}}
+\index{KUBE\_MAKE\_SETTER\_MOVE@{KUBE\_MAKE\_SETTER\_MOVE}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_SETTER\_MOVE}{KUBE\_MAKE\_SETTER\_MOVE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+E\+T\+T\+E\+R\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} name(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&value) \{ \(\backslash\)}
+\DoxyCodeLine{        if (\_\#\#name == value) \(\backslash\)}
+\DoxyCodeLine{            return \textcolor{keyword}{false}; \(\backslash\)}
+\DoxyCodeLine{        \_\#\#name = std::move(value); \(\backslash\)}
+\DoxyCodeLine{        emit<\&\_MetaType::name\#\#Changed>(); \(\backslash\)}
+\DoxyCodeLine{        return \textcolor{keyword}{true}; \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Move setter for any type. 
+
+\mbox{\Hypertarget{_make_8hpp_a7aec4c9a2d8c81fe828c2771badb81b4}\label{_make_8hpp_a7aec4c9a2d8c81fe828c2771badb81b4}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_SIGNAL@{KUBE\_MAKE\_SIGNAL}}
+\index{KUBE\_MAKE\_SIGNAL@{KUBE\_MAKE\_SIGNAL}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_SIGNAL}{KUBE\_MAKE\_SIGNAL}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+AL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~\mbox{\hyperlink{_make_8hpp_aa5349a3cb0fbdf8fdc8af4c78e7966a5}{K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+I\+M\+PL}}(public, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Declare a public signal. 
+
+\mbox{\Hypertarget{_make_8hpp_aa5349a3cb0fbdf8fdc8af4c78e7966a5}\label{_make_8hpp_aa5349a3cb0fbdf8fdc8af4c78e7966a5}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_SIGNAL\_IMPL@{KUBE\_MAKE\_SIGNAL\_IMPL}}
+\index{KUBE\_MAKE\_SIGNAL\_IMPL@{KUBE\_MAKE\_SIGNAL\_IMPL}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_SIGNAL\_IMPL}{KUBE\_MAKE\_SIGNAL\_IMPL}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{S\+C\+O\+PE,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SCOPE: \(\backslash\)}
+\DoxyCodeLine{    void name(\mbox{\hyperlink{_macro_utils_8hpp_ab5134c3c067af7ca2ecfe47d549e144c}{NAME\_EACH}}(\_\_VA\_ARGS\_\_)) \{ emit<\&\_MetaType::name>(\mbox{\hyperlink{_macro_utils_8hpp_a1eedbb3a91bd5581279e8a3a25f41244}{FORWARD\_NAME\_EACH}}(\_\_VA\_ARGS\_\_)); \}}
+
+\end{DoxyCode}
+
+
+Declare a signal (used internal) 
+
+\mbox{\Hypertarget{_make_8hpp_aaf9c42c42aaf20a0f9cde9983ef72f9b}\label{_make_8hpp_aaf9c42c42aaf20a0f9cde9983ef72f9b}} 
+\index{Make.hpp@{Make.hpp}!KUBE\_MAKE\_VARIABLE@{KUBE\_MAKE\_VARIABLE}}
+\index{KUBE\_MAKE\_VARIABLE@{KUBE\_MAKE\_VARIABLE}!Make.hpp@{Make.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_MAKE\_VARIABLE}{KUBE\_MAKE\_VARIABLE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\#\#name \{ \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ \};}
+
+
+
+Defines a variable and initialize it with variadic arguments. 
+

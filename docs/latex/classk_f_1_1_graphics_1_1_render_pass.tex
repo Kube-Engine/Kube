@@ -1,0 +1,127 @@
+\hypertarget{classk_f_1_1_graphics_1_1_render_pass}{}\doxysection{kF\+::Graphics\+::Render\+Pass Class Reference}
+\label{classk_f_1_1_graphics_1_1_render_pass}\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+
+
+Abstraction of a render pass.  
+
+
+
+
+{\ttfamily \#include $<$Render\+Pass.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Render\+Pass\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_render_pass__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_a978b1ea5c7dc15880c61bcbb5940fe11}{Render\+Pass}} (void)
+\begin{DoxyCompactList}\small\item\em Construct a render pass. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_a735926e79395a2038a91314fb626015d}{Render\+Pass}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_a43f32f5266fbe46f419d3e6b5dc4113c}{$\sim$\+Render\+Pass}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the render pass. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_a2dc87e815ef6bf5285860b80f3d5a485}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_a8f317b0bb2df8f92885b1f17abb27a9b}{on\+View\+Size\+Changed}} (void)
+\begin{DoxyCompactList}\small\item\em Callback on render view size changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_a37d019424eeb555a8f5d08cd957a992c}{create\+Render\+Pass}} (void)
+\begin{DoxyCompactList}\small\item\em Create a render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass_ad58825f7023f23b0d766e1ebb7ba7242}{destroy\+Render\+Pass}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destroy render pass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of a render pass. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_a978b1ea5c7dc15880c61bcbb5940fe11}\label{classk_f_1_1_graphics_1_1_render_pass_a978b1ea5c7dc15880c61bcbb5940fe11}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!RenderPass@{RenderPass}}
+\index{RenderPass@{RenderPass}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{RenderPass()}{RenderPass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Render\+Pass\+::\+Render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a render pass. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_a735926e79395a2038a91314fb626015d}\label{classk_f_1_1_graphics_1_1_render_pass_a735926e79395a2038a91314fb626015d}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!RenderPass@{RenderPass}}
+\index{RenderPass@{RenderPass}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{RenderPass()}{RenderPass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Render\+Pass\+::\+Render\+Pass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_a43f32f5266fbe46f419d3e6b5dc4113c}\label{classk_f_1_1_graphics_1_1_render_pass_a43f32f5266fbe46f419d3e6b5dc4113c}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!````~RenderPass@{$\sim$RenderPass}}
+\index{````~RenderPass@{$\sim$RenderPass}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{$\sim$RenderPass()}{~RenderPass()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Render\+Pass\+::$\sim$\+Render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destruct the render pass. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_a37d019424eeb555a8f5d08cd957a992c}\label{classk_f_1_1_graphics_1_1_render_pass_a37d019424eeb555a8f5d08cd957a992c}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!createRenderPass@{createRenderPass}}
+\index{createRenderPass@{createRenderPass}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{createRenderPass()}{createRenderPass()}}
+{\footnotesize\ttfamily void Graphics\+::\+Render\+Pass\+::create\+Render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a render pass. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_ad58825f7023f23b0d766e1ebb7ba7242}\label{classk_f_1_1_graphics_1_1_render_pass_ad58825f7023f23b0d766e1ebb7ba7242}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!destroyRenderPass@{destroyRenderPass}}
+\index{destroyRenderPass@{destroyRenderPass}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{destroyRenderPass()}{destroyRenderPass()}}
+{\footnotesize\ttfamily void Graphics\+::\+Render\+Pass\+::destroy\+Render\+Pass (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy render pass. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_a8f317b0bb2df8f92885b1f17abb27a9b}\label{classk_f_1_1_graphics_1_1_render_pass_a8f317b0bb2df8f92885b1f17abb27a9b}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!onViewSizeChanged@{onViewSizeChanged}}
+\index{onViewSizeChanged@{onViewSizeChanged}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{onViewSizeChanged()}{onViewSizeChanged()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Render\+Pass\+::on\+View\+Size\+Changed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Callback on render view size changed. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_render_pass_a2dc87e815ef6bf5285860b80f3d5a485}\label{classk_f_1_1_graphics_1_1_render_pass_a2dc87e815ef6bf5285860b80f3d5a485}} 
+\index{kF::Graphics::RenderPass@{kF::Graphics::RenderPass}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::RenderPass@{kF::Graphics::RenderPass}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}}\& k\+F\+::\+Graphics\+::\+Render\+Pass\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_render_pass}{Render\+Pass}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_render_pass_8hpp}{Render\+Pass.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_render_pass_8cpp}{Render\+Pass.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_render_pass_8ipp}{Render\+Pass.\+ipp}}\end{DoxyCompactItemize}

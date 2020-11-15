@@ -1,0 +1,131 @@
+\hypertarget{classk_f_1_1_graphics_1_1_shader}{}\doxysection{kF\+::Graphics\+::Shader Class Reference}
+\label{classk_f_1_1_graphics_1_1_shader}\index{kF::Graphics::Shader@{kF::Graphics::Shader}}
+
+
+Abstraction of a G\+PU shader.  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Shader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_shader__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_ac79ab3863a48d8f4a7231d65f73ffc13}{Binary\+Code}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em A vector containing binary data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_a3c85912d25b3bfbf24ce93c5fe72dbc2}{Shader}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Construct a shader from a path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_added0cfdbbd8031fb2e1f315387620d0}{Shader}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader}{Shader}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_a918c673de521f042961f9af3c0f1efe5}{$\sim$\+Shader}} (void) noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader}{Shader}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_af06c15cd7b6114f8d8dd9f44971b19d4}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader}{Shader}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_ac79ab3863a48d8f4a7231d65f73ffc13}{Binary\+Code}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_ad0aa3842ed96223863262e07513a156f}{Get\+Binary\+Code}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Get the binary code of a shader from its path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_a378056553e03904c0bdb78460058e8b1}{create\+Shader\+Module}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Create a shader module from a path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of a G\+PU shader. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_ac79ab3863a48d8f4a7231d65f73ffc13}\label{classk_f_1_1_graphics_1_1_shader_ac79ab3863a48d8f4a7231d65f73ffc13}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!BinaryCode@{BinaryCode}}
+\index{BinaryCode@{BinaryCode}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{BinaryCode}{BinaryCode}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_ac79ab3863a48d8f4a7231d65f73ffc13}{k\+F\+::\+Graphics\+::\+Shader\+::\+Binary\+Code}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$std\+::uint32\+\_\+t$>$}
+
+
+
+A vector containing binary data. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_a3c85912d25b3bfbf24ce93c5fe72dbc2}\label{classk_f_1_1_graphics_1_1_shader_a3c85912d25b3bfbf24ce93c5fe72dbc2}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a shader from a path. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_added0cfdbbd8031fb2e1f315387620d0}\label{classk_f_1_1_graphics_1_1_shader_added0cfdbbd8031fb2e1f315387620d0}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader}{Shader}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_a918c673de521f042961f9af3c0f1efe5}\label{classk_f_1_1_graphics_1_1_shader_a918c673de521f042961f9af3c0f1efe5}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!````~Shader@{$\sim$Shader}}
+\index{````~Shader@{$\sim$Shader}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shader()}{~Shader()}}
+{\footnotesize\ttfamily Graphics\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+$^\wedge$brief Destruct the shader 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_a378056553e03904c0bdb78460058e8b1}\label{classk_f_1_1_graphics_1_1_shader_a378056553e03904c0bdb78460058e8b1}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!createShaderModule@{createShaderModule}}
+\index{createShaderModule@{createShaderModule}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{createShaderModule()}{createShaderModule()}}
+{\footnotesize\ttfamily void Graphics\+::\+Shader\+::create\+Shader\+Module (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a shader module from a path. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_ad0aa3842ed96223863262e07513a156f}\label{classk_f_1_1_graphics_1_1_shader_ad0aa3842ed96223863262e07513a156f}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!GetBinaryCode@{GetBinaryCode}}
+\index{GetBinaryCode@{GetBinaryCode}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{GetBinaryCode()}{GetBinaryCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader_ac79ab3863a48d8f4a7231d65f73ffc13}{Graphics\+::\+Shader\+::\+Binary\+Code}} Graphics\+::\+Shader\+::\+Get\+Binary\+Code (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the binary code of a shader from its path. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_shader_af06c15cd7b6114f8d8dd9f44971b19d4}\label{classk_f_1_1_graphics_1_1_shader_af06c15cd7b6114f8d8dd9f44971b19d4}} 
+\index{kF::Graphics::Shader@{kF::Graphics::Shader}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Shader@{kF::Graphics::Shader}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader}{Shader}}\& k\+F\+::\+Graphics\+::\+Shader\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_shader}{Shader}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_shader_8hpp}{Shader.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,204 @@
+\hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool}{}\doxysection{kF\+::Graphics\+::Auto\+Command\+Pool Class Reference}
+\label{classk_f_1_1_graphics_1_1_auto_command_pool}\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+
+
+A command pool that can only create one time submit commands.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Pool.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Auto\+Command\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_auto_command_pool__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a838c75cba406a624e3d13a786b9f6c8c}{Auto\+Command\+Pool}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_afda7e4f6eeff885f33beac062158365d}{queue\+Type}})
+\begin{DoxyCompactList}\small\item\em Construct the command pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a8249f2598fafd0785c08f0857c37e9d5}{Auto\+Command\+Pool}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a4b07f2ad026ed36a7638b11307b46c74}{$\sim$\+Auto\+Command\+Pool}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destruct the command pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a8bdc01f7e3014f2f47406597a081fae0}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Recorder\+Requirements Recorder$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a7d87fd689ddaf1a552fde80715ce82bb}{add}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a70cb4c0c1a90e8cf83315ee705faa03a}{Command\+Level}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_ab69c75fb527fda3f8c05706f25d1ba89}{level}}, Recorder \&\&recorder)
+\begin{DoxyCompactList}\small\item\em Add a one time submit command. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Recorders$>$ }\\\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a666916762564987d25e25685795d1f4d}{requires}} (... \&\&\mbox{\hyperlink{namespacek_f_1_1_graphics_a67f658e98a56440053cbd55fac8225fb}{Recorder\+Requirements}}$<$ Recorders $>$) void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a7d87fd689ddaf1a552fde80715ce82bb}{add}}(const \mbox{\hyperlink{namespacek_f_1_1_graphics_a70cb4c0c1a90e8cf83315ee705faa03a}{Command\+Level}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_ab69c75fb527fda3f8c05706f25d1ba89}{level}}
+\begin{DoxyCompactList}\small\item\em Adds a range of one time submit commands to the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a8b0b62f28f071797f5521b8cba15a1bf}{clear}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Clear every commands at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_af58a669b65ba57679228342f173b9bb8}{command\+From}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a80a4997f85854282575799fe94c163f8}{command\+To}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const Recorders \&\& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a187ec06014c63ca325fdcd90ef0cea0b}{recorders}} \{ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_a9ebb003165ee08fb844455ec1a435306}{Command\+Pool\+::add}}(\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_a52248a79c617403eef4e926178dd9dcfa06b9281e396db002010bde1de57262eb}{Lifecycle\+::\+Auto}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_ab69c75fb527fda3f8c05706f25d1ba89}{level}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_af58a669b65ba57679228342f173b9bb8}{command\+From}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a80a4997f85854282575799fe94c163f8}{command\+To}}, std\+::forward$<$Recorders$>$(recorders)...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$Recorder\+Requirements Recorder$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a9ebb003165ee08fb844455ec1a435306}{add}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_a52248a79c617403eef4e926178dd9dcf}{Lifecycle}} lifecycle, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a70cb4c0c1a90e8cf83315ee705faa03a}{Command\+Level}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_ab69c75fb527fda3f8c05706f25d1ba89}{level}}, Recorder \&\&recorder)
+\begin{DoxyCompactList}\small\item\em Adds a command to the pool. \end{DoxyCompactList}\item 
+{\footnotesize template$<$k\+F\+::\+Graphics\+::\+Recorder\+Requirements Recorder$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{k\+F\+::\+Graphics\+::\+Command\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a7515992e3845873c014d8290f08668a2}{add}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_a52248a79c617403eef4e926178dd9dcf}{Lifecycle}} lifecycle, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a70cb4c0c1a90e8cf83315ee705faa03a}{Command\+Level}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_ab69c75fb527fda3f8c05706f25d1ba89}{level}}, Recorder \&\&recorder)
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a05197e6e163b5f4589b0eebf419cb878}{remove}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} command) noexcept
+\begin{DoxyCompactList}\small\item\em Remove a command from the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a1ebd36b365038a04add12e9448238350}{remove}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const command\+Begin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} $\ast$const command\+End) noexcept
+\begin{DoxyCompactList}\small\item\em Remove a range commands from the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A command pool that can only create one time submit commands. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a838c75cba406a624e3d13a786b9f6c8c}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a838c75cba406a624e3d13a786b9f6c8c}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!AutoCommandPool@{AutoCommandPool}}
+\index{AutoCommandPool@{AutoCommandPool}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{AutoCommandPool()}{AutoCommandPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::\+Auto\+Command\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct the command pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a8249f2598fafd0785c08f0857c37e9d5}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a8249f2598fafd0785c08f0857c37e9d5}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!AutoCommandPool@{AutoCommandPool}}
+\index{AutoCommandPool@{AutoCommandPool}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{AutoCommandPool()}{AutoCommandPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::\+Auto\+Command\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a4b07f2ad026ed36a7638b11307b46c74}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a4b07f2ad026ed36a7638b11307b46c74}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!````~AutoCommandPool@{$\sim$AutoCommandPool}}
+\index{````~AutoCommandPool@{$\sim$AutoCommandPool}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{$\sim$AutoCommandPool()}{~AutoCommandPool()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::$\sim$\+Auto\+Command\+Pool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destruct the command pool. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a7d87fd689ddaf1a552fde80715ce82bb}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a7d87fd689ddaf1a552fde80715ce82bb}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!add@{add}}
+\index{add@{add}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$Recorder\+Requirements Recorder$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a70cb4c0c1a90e8cf83315ee705faa03a}{Command\+Level}}}]{level,  }\item[{Recorder \&\&}]{recorder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a one time submit command. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a9ebb003165ee08fb844455ec1a435306}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a9ebb003165ee08fb844455ec1a435306}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!add@{add}}
+\index{add@{add}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$Recorder\+Requirements Recorder$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}} k\+F\+::\+Graphics\+::\+Command\+Pool\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a67f658e98a56440053cbd55fac8225fb}{Recorder\+Requirements}}}]{Recorder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds a command to the pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a7515992e3845873c014d8290f08668a2}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a7515992e3845873c014d8290f08668a2}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!add@{add}}
+\index{add@{add}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Graphics\+::\+Recorder\+Requirements Recorder$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{k\+F\+::\+Graphics\+::\+Command\+Handle}} k\+F\+::\+Graphics\+::\+Command\+Pool\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a67f658e98a56440053cbd55fac8225fb}{k\+F\+::\+Graphics\+::\+Recorder\+Requirements}}}]{Recorder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool}{Command\+Pool}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a8b0b62f28f071797f5521b8cba15a1bf}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a8b0b62f28f071797f5521b8cba15a1bf}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!clear@{clear}}
+\index{clear@{clear}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Graphics\+::\+Command\+Pool\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Clear every commands at once. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a8bdc01f7e3014f2f47406597a081fae0}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a8bdc01f7e3014f2f47406597a081fae0}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}}\& k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool}{Auto\+Command\+Pool}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a1ebd36b365038a04add12e9448238350}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a1ebd36b365038a04add12e9448238350}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!remove@{remove}}
+\index{remove@{remove}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Graphics\+::\+Command\+Pool\+::remove\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a range commands from the pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a05197e6e163b5f4589b0eebf419cb878}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a05197e6e163b5f4589b0eebf419cb878}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!remove@{remove}}
+\index{remove@{remove}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Pool\+::remove\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a command from the pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a666916762564987d25e25685795d1f4d}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a666916762564987d25e25685795d1f4d}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!requires@{requires}}
+\index{requires@{requires}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}}
+{\footnotesize\ttfamily template$<$typename ... Recorders$>$ \\
+k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::requires (\begin{DoxyParamCaption}\item[{... \&\&\mbox{\hyperlink{namespacek_f_1_1_graphics_a67f658e98a56440053cbd55fac8225fb}{Recorder\+Requirements}}$<$ Recorders $>$}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Adds a range of one time submit commands to the pool. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_af58a669b65ba57679228342f173b9bb8}\label{classk_f_1_1_graphics_1_1_auto_command_pool_af58a669b65ba57679228342f173b9bb8}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!commandFrom@{commandFrom}}
+\index{commandFrom@{commandFrom}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{commandFrom}{commandFrom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}}$\ast$ const k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::command\+From}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a80a4997f85854282575799fe94c163f8}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a80a4997f85854282575799fe94c163f8}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!commandTo@{commandTo}}
+\index{commandTo@{commandTo}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{commandTo}{commandTo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}}$\ast$ const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}}$\ast$ const k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::command\+To}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_auto_command_pool_a187ec06014c63ca325fdcd90ef0cea0b}\label{classk_f_1_1_graphics_1_1_auto_command_pool_a187ec06014c63ca325fdcd90ef0cea0b}} 
+\index{kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}!recorders@{recorders}}
+\index{recorders@{recorders}!kF::Graphics::AutoCommandPool@{kF::Graphics::AutoCommandPool}}
+\doxysubsubsection{\texorpdfstring{recorders}{recorders}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}}$\ast$ const \mbox{\hyperlink{namespacek_f_1_1_graphics_aeeccd0338fa94ca7aa21bd0c77308ff4}{Command\+Handle}}$\ast$ const Recorders\&\& k\+F\+::\+Graphics\+::\+Auto\+Command\+Pool\+::recorders \{ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_a9ebb003165ee08fb844455ec1a435306}{Command\+Pool\+::add}}(\mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_a52248a79c617403eef4e926178dd9dcfa06b9281e396db002010bde1de57262eb}{Lifecycle\+::\+Auto}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_ab69c75fb527fda3f8c05706f25d1ba89}{level}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_af58a669b65ba57679228342f173b9bb8}{command\+From}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_auto_command_pool_a80a4997f85854282575799fe94c163f8}{command\+To}}, std\+::forward$<$Recorders$>$(recorders)...)}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_command_pool_8hpp}{Command\+Pool.\+hpp}}\end{DoxyCompactItemize}

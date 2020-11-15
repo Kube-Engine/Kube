@@ -1,0 +1,22 @@
+<map id="Kube/Graphics/Instance.hpp" name="Kube/Graphics/Instance.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="293,5,480,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="240,80,299,107"/>
+<area shape="rect" id="node3" href="$_version_8hpp.html" title=" " alt="" coords="91,155,247,181"/>
+<area shape="rect" id="node5" href="$_vulkan_handle_8hpp.html" title=" " alt="" coords="374,80,501,107"/>
+<area shape="rect" id="node20" href="$_backend_window_8hpp.html" title=" " alt="" coords="525,80,669,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,304,80,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="617,304,671,331"/>
+<area shape="rect" id="node7" href="$_vulkan_8hpp.html" title=" " alt="" coords="529,155,615,181"/>
+<area shape="rect" id="node19" href="$_renderer_object_8hpp.html" title=" " alt="" coords="315,155,453,181"/>
+<area shape="rect" id="node8" href="$_utils_8hpp.html" title=" " alt="" coords="313,229,453,256"/>
+<area shape="rect" id="node15" href="$_vulkan_enums_8hpp.html" title=" " alt="" coords="610,229,737,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="155,304,237,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="339,379,413,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="262,304,327,331"/>
+<area shape="rect" id="node12" title=" " alt="" coords="351,304,414,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="438,304,498,331"/>
+<area shape="rect" id="node14" href="$_utils_8ipp.html" title=" " alt="" coords="522,304,593,331"/>
+<area shape="rect" id="node16" href="$_vulkan_flags_8hpp.html" title=" " alt="" coords="695,304,814,331"/>
+<area shape="rect" id="node17" title=" " alt="" coords="627,379,741,405"/>
+<area shape="rect" id="node18" title=" " alt="" coords="765,379,883,405"/>
+</map>

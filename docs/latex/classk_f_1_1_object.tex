@@ -1,0 +1,790 @@
+\hypertarget{classk_f_1_1_object}{}\doxysection{kF\+::Object Class Reference}
+\label{classk_f_1_1_object}\index{kF::Object@{kF::Object}}
+
+
+The object class isan abstraction of the meta reflection library on an arbitrary derived class It can be used to query meta properties or connect / emit meta signals.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_object__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_object_1_1_connection_table}{Connection\+Table}}
+\begin{DoxyCompactList}\small\item\em Connection table of an object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{k\+F\+::\+Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_object_a6b777ebd6a1d84446e1f1323e06c7cdd}{get\+Meta\+Type}} (void) const noexcept
+\item 
+\+\_\+\+A\+D\+D\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+E\+A\+C\+H\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+C\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+0 \mbox{\hyperlink{classk_f_1_1_object_a2259ae8e3c844ef69127e2408134d683}{p}} ()(K\+U\+B\+E\+\_\+\+M\+A\+K\+E\+\_\+ \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_object_a66968e050c32a0840bb25e176f3e703f}{invoke}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Args \&\&...args)
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_object_a050acc3c1b36aaf78bf4352c606fc51b}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Meta\+::\+Function}} meta\+Func, Args \&\&...args)
+\item 
+{\footnotesize template$<$k\+F\+::\+Object\+::\+Is\+Ensure\+Connection Ensure\+Connection\+Table$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{k\+F\+::\+Meta\+::\+Slot\+Table}} \& \mbox{\hyperlink{classk_f_1_1_object_a49cf6261c4c514325bdba027856b07a1}{get\+Default\+Slot\+Table}} (void) noexcept \+\_\+ndebug
+\item 
+{\footnotesize template$<$k\+F\+::\+Object\+::\+Is\+Ensure\+Connection Ensure\+Connection\+Table, typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{k\+F\+::\+Object\+::\+Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a4abc74b2451ec36f7cd1fe950947d095}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const void $\ast$const receiver, Slot \&\&slot) noexcept(\mbox{\hyperlink{_assert_8hpp_a80720fe8fbae53fe7abf7aa1775fdc47}{nothrow\+\_\+ndebug}} \&\&\mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(Slot))
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classk_f_1_1_object_a056adfddc35be544f1588b3a83ec0770}{Register\+Metadata}} (void) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_object_a83e34b9d6d127fabcb17680959461486}{get\+Type\+Handle}} (void) noexcept
+\item 
+virtual \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_object_ae65a2763c20baf8ec06c1aed8dd92d03}{get\+Type\+Handle}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_object_a0efec4973fc6979ed963b0a249be60a3}{\+\_\+\+Meta\+Type}} = \mbox{\hyperlink{classk_f_1_1_object}{Object}}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} = \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Meta\+::\+Slot\+Table\+::\+Opaque\+Index}}
+\begin{DoxyCompactList}\small\item\em Handle used to manipulate slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_object_ad2828db9a5890671e76337395bd254d5}{Object}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor (very cheap) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classk_f_1_1_object_a33624648f0ce56a111191b3b4c6839ef}{$\sim$\+Object}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Virtual destructor (time vary upon connection count) \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classk_f_1_1_object_a56f2e7ff89d1e229180b5dc80c04fe7c}{var\+Exists}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) const noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a meta-\/variable exists. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_object_aab1183c52c57de630af349c05c615ad8}{get\+Var}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) const
+\begin{DoxyCompactList}\small\item\em Get an opaque meta-\/variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_object_a63182938d94db9fbb8e13b12fb319647}{get\+Var}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Meta\+::\+Data}} meta\+Data) const
+\begin{DoxyCompactList}\small\item\em Get an opaque meta-\/variable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename As $>$ }\\As \& \mbox{\hyperlink{classk_f_1_1_object_a4e334dc953a07d5605e4f0c8334f08f9}{get\+Var\+As}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name)
+\begin{DoxyCompactList}\small\item\em Get a casted meta-\/variable\textquotesingle{}s reference. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename As $>$ }\\const As \& \mbox{\hyperlink{classk_f_1_1_object_a874d618a8d5e3bff31e0a17f2dcb2e9e}{get\+Var\+As}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) const
+\begin{DoxyCompactList}\small\item\em Get a casted meta-\/variable\textquotesingle{}s const reference. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classk_f_1_1_object_a740fd7b60125b0d860eaafe08c193b5f}{set\+Var}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
+\begin{DoxyCompactList}\small\item\em Set internal \textquotesingle{}name\textquotesingle{} property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_a61b930739b419d1174a9fb161ce4b7a7}{set\+Var}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Meta\+::\+Data}} meta\+Data, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
+\begin{DoxyCompactList}\small\item\em Set internal \textquotesingle{}name\textquotesingle{} property directly using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Meta\+::\+Data}} (faster) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_object_a5a3cfdb7eacd945ae3fd2725946687a4}{invoke}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Invoke a meta-\/function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_object_ae2036571ece797348624fad6c7041238}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Meta\+::\+Function}} meta\+Func, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Invoke a meta-\/function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_ac1aa1bca1bcb9c7acf3da8451868ab37}{connect}} (Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\begin{DoxyCompactList}\small\item\em Register a slot into an owned signal using signal pointer (may take a custom Slot\+Table if needed) Be careful, if you pass a custom Slot\+Table, you will have to disconnect it manually If you wish to change the default Slot\+Table, you can use the function \textquotesingle{}set\+Slot\+Table\textquotesingle{}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_aa2ee7d28dd9c5c6361722d9ac95c28d8}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a64572631930cfa7d0859ac218a4997d8}{connect}} (Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_add87393988b80efa98b32f949788f5fb}{connect}} (const Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_aa6486c3d872c1cf4340ab23921b58d6b}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a8ce20615a9bd54585ad4ff249530dd6a}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_ac24286ce0c37528dad9c75a8eb6895b6}{connect}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\begin{DoxyCompactList}\small\item\em Register a slot into an owned signal using a signal hashed name (may take a custom Slot\+Table if needed) Be careful, if you pass a custom Slot\+Table, you will have to disconnect it manually If you wish to change the default Slot\+Table, you can use the function \textquotesingle{}set\+Slot\+Table\textquotesingle{}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_aabf2cb85e6732d82adbf537f8146c42b}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a774c433bb1a4934308a0c99eeaa7e420}{connect}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a594d4452626af9fe0fa0defe5e45a4a2}{connect}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_af5ec722733deeea0ff2a5676f0f49945}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a9213c5ed85116511ea25eb744fbf7d50}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a07c0455cb292776b5e0a15cd093f5599}{connect}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\begin{DoxyCompactList}\small\item\em Register a slot into an owned signal using a raw signal (may take a custom Slot\+Table if needed) Be careful, if you pass a custom Slot\+Table, you will have to disconnect it manually If you wish to change the default Slot\+Table, you can use the function \textquotesingle{}set\+Default\+Slot\+Table\textquotesingle{}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_affed09f657b182252d6bf4f816aba352}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a5c72eb2c94e6b9c80b6f4c058f656454}{connect}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_abe5cd462323868b3e4e1194a56719c5b}{connect}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a6885b81b028f91fdd813a0486cb0b1a0}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_abc8697abae3ab665172f820f377991e9}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const Receiver \&receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_aa51758f8cbdc1d44f2f5c4fa7b4b6e85}{disconnect}} (const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a slot using a signal function ptr and a connection handle (may take custom Slot\+Table) \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_af192ebce519fd601b99d8ca1ff69d205}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\item 
+void \mbox{\hyperlink{classk_f_1_1_object_a415ffd15e47cecb67966567429244fbf}{disconnect}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a slot using a signal name and a connection handle (may take custom Slot\+Table) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_a09a71b882b9b943c2378bdb78b551b72}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\item 
+void \mbox{\hyperlink{classk_f_1_1_object_a1d1490c3b8a963476752bd814d2289c9}{disconnect}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a slot using a signal and a connection handle (may take custom Slot\+Table) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_ae6c8b7b2d793af19338f95e0d57cba5f}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a43624e4e06b2f33cda52d1a9ef05c2d6}{disconnect}} (const Receiver \&receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a slot using a signal name, a receiver and a connection handle (may take custom Slot\+Table) \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a316b10bd37bd5dfc20fe42ce5d58134b}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const Receiver \&receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\item 
+{\footnotesize template$<$typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_aaa723552df3b46905ee7a54c8b5ae400}{disconnect}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const Receiver \&receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a slot using a signal name, a receiver and a connection handle (may take custom Slot\+Table) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a5200b6b449260949a688409216f47252}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const Receiver \&receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\item 
+{\footnotesize template$<$typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_afb5ce76093aa2c83d06ad1e6de8a5af5}{disconnect}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const Receiver \&receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a slot using a signal, a receiver and a connection handle (may take custom Slot\+Table) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a85b2278ab735633a66cb55a96ae490b6}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const Receiver \&receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a6a4b5d84114d345340b3049569290f2a}{emit}} (Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit signal matching \textquotesingle{}Signal\+Ptr\textquotesingle{} using default slot table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a3f0fdd04d667767d5cf01fc09702860c}{emit}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit signal matching \textquotesingle{}name\textquotesingle{} using default slot table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a22d600f74a3ad323067e5e2b20508c0e}{emit}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit a signal using default slot table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr, typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a19797ba63cb6ad398c388277d2b48528}{emit}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit signal matching \textquotesingle{}Signal\+Ptr\textquotesingle{} using a specific slot table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a4d5b82bf07ffc9c850bf4d102daa69a4}{emit}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit signal matching \textquotesingle{}name\textquotesingle{} using a specific slot table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_a14779ea7844627eb0b601292d1949c22}{emit}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit a signal using a specific slot table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Is\+Ensure\+Connection Ensure\+Connection\+Table = Is\+Ensure\+Connection\+::\+Yes$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \& \mbox{\hyperlink{classk_f_1_1_object_a22479785d28cae5c1610b9347f8ee8f7}{get\+Default\+Slot\+Table}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Get the default slot table used for connection / disconnection. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Is\+Ensure\+Connection Ensure\+Connection\+Table = Is\+Ensure\+Connection\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_ac5de1bd2ec35e1d668281d1ddcf6d37a}{set\+Default\+Slot\+Table}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Set a custom slot table used for connection / disconnection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_a66b940fcf14484e509d20fc6237da4fa}{ensure\+Connection\+Table}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Ensure that object has a connection table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Is\+Ensure\+Connection Ensure\+Connection\+Table, typename Receiver , typename Slot $>$ }\\\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} \mbox{\hyperlink{classk_f_1_1_object_a0ee6bef999fdf1a89eda98c75df13be7}{connect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const void $\ast$const receiver, Slot \&\&slot) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Slot $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Slot $>$))
+\begin{DoxyCompactList}\small\item\em Connection implementation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Receiver $>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_acebf71d26c59737b536e9539d1036f70}{disconnect}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, const void $\ast$const receiver, const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} handle)
+\begin{DoxyCompactList}\small\item\em Disconnect a member slot implementation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Is\+Ensure\+Connection Ensure\+Connection\+Table, typename ... Args$>$ }\\void \mbox{\hyperlink{classk_f_1_1_object_aa208e200aad6dee2e725c4091cc1442a}{emit}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&slot\+Table, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}} signal, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Emit a signal using a specific slot table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pppublic \mbox{\hyperlink{classk_f_1_1_object_a1fbc89dc4057e89a5e937167df5cb8a2}{\+\_\+\+\_\+pad0\+\_\+\+\_\+}}\+: enum class Is\+Ensure\+Connection \+: bool \{ No
+\item 
+pppublic \mbox{\hyperlink{classk_f_1_1_object_a9387bccc832d376b77df8c60adca51ba}{Yes}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structk_f_1_1_object_1_1_connection_table}{Connection\+Table}} $>$ \mbox{\hyperlink{classk_f_1_1_object_a44b735d5fca4ed137406327766ff7b55}{\+\_\+connection\+Table}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The object class isan abstraction of the meta reflection library on an arbitrary derived class It can be used to query meta properties or connect / emit meta signals. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_a0efec4973fc6979ed963b0a249be60a3}\label{classk_f_1_1_object_a0efec4973fc6979ed963b0a249be60a3}} 
+\index{kF::Object@{kF::Object}!\_MetaType@{\_MetaType}}
+\index{\_MetaType@{\_MetaType}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{\_MetaType}{\_MetaType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_object_a0efec4973fc6979ed963b0a249be60a3}{k\+F\+::\+Object\+::\+\_\+\+Meta\+Type}} =  \mbox{\hyperlink{classk_f_1_1_object}{Object}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a56863aaebff597001625a659b046228c}\label{classk_f_1_1_object_a56863aaebff597001625a659b046228c}} 
+\index{kF::Object@{kF::Object}!ConnectionHandle@{ConnectionHandle}}
+\index{ConnectionHandle@{ConnectionHandle}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{ConnectionHandle}{ConnectionHandle}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{k\+F\+::\+Object\+::\+Connection\+Handle}} =  \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Meta\+::\+Slot\+Table\+::\+Opaque\+Index}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handle used to manipulate slots. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_ad2828db9a5890671e76337395bd254d5}\label{classk_f_1_1_object_ad2828db9a5890671e76337395bd254d5}} 
+\index{kF::Object@{kF::Object}!Object@{Object}}
+\index{Object@{Object}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily k\+F\+::\+Object\+::\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor (very cheap) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_a594d4452626af9fe0fa0defe5e45a4a2}\label{classk_f_1_1_object_a594d4452626af9fe0fa0defe5e45a4a2}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a774c433bb1a4934308a0c99eeaa7e420}\label{classk_f_1_1_object_a774c433bb1a4934308a0c99eeaa7e420}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_ac24286ce0c37528dad9c75a8eb6895b6}\label{classk_f_1_1_object_ac24286ce0c37528dad9c75a8eb6895b6}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/20]}}
+{\footnotesize\ttfamily template$<$typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Register a slot into an owned signal using a signal hashed name (may take a custom Slot\+Table if needed) Be careful, if you pass a custom Slot\+Table, you will have to disconnect it manually If you wish to change the default Slot\+Table, you can use the function \textquotesingle{}set\+Slot\+Table\textquotesingle{}. 
+
+If\+: no receiver is passed, the slot is owned by the calling instance Else If\+: receiver is an Object-\/derived class, it will own the connection (and will release it when destroyed) If\+: the given slot is a member function, receiver must be the instance used to perform the call \mbox{\Hypertarget{classk_f_1_1_object_abe5cd462323868b3e4e1194a56719c5b}\label{classk_f_1_1_object_abe5cd462323868b3e4e1194a56719c5b}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a5c72eb2c94e6b9c80b6f4c058f656454}\label{classk_f_1_1_object_a5c72eb2c94e6b9c80b6f4c058f656454}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [5/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a07c0455cb292776b5e0a15cd093f5599}\label{classk_f_1_1_object_a07c0455cb292776b5e0a15cd093f5599}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [6/20]}}
+{\footnotesize\ttfamily template$<$typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Register a slot into an owned signal using a raw signal (may take a custom Slot\+Table if needed) Be careful, if you pass a custom Slot\+Table, you will have to disconnect it manually If you wish to change the default Slot\+Table, you can use the function \textquotesingle{}set\+Default\+Slot\+Table\textquotesingle{}. 
+
+If\+: no receiver is passed, the slot is owned by the calling instance Else If\+: receiver is an Object-\/derived class, it will own the connection (and will release it when destroyed) If\+: the given slot is a member function, receiver must be the instance used to perform the call \mbox{\Hypertarget{classk_f_1_1_object_add87393988b80efa98b32f949788f5fb}\label{classk_f_1_1_object_add87393988b80efa98b32f949788f5fb}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [7/20]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{const Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a9213c5ed85116511ea25eb744fbf7d50}\label{classk_f_1_1_object_a9213c5ed85116511ea25eb744fbf7d50}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [8/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_af5ec722733deeea0ff2a5676f0f49945}\label{classk_f_1_1_object_af5ec722733deeea0ff2a5676f0f49945}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [9/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_aabf2cb85e6732d82adbf537f8146c42b}\label{classk_f_1_1_object_aabf2cb85e6732d82adbf537f8146c42b}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [10/20]}}
+{\footnotesize\ttfamily template$<$typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_abc8697abae3ab665172f820f377991e9}\label{classk_f_1_1_object_abc8697abae3ab665172f820f377991e9}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [11/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a0ee6bef999fdf1a89eda98c75df13be7}\label{classk_f_1_1_object_a0ee6bef999fdf1a89eda98c75df13be7}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [12/20]}}
+{\footnotesize\ttfamily template$<$Is\+Ensure\+Connection Ensure\+Connection\+Table, typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const void $\ast$const}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption}) const \&\&\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Connection implementation. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a4abc74b2451ec36f7cd1fe950947d095}\label{classk_f_1_1_object_a4abc74b2451ec36f7cd1fe950947d095}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [13/20]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Object\+::\+Is\+Ensure\+Connection Ensure\+Connection\+Table, typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{k\+F\+::\+Object\+::\+Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const void $\ast$const}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a6885b81b028f91fdd813a0486cb0b1a0}\label{classk_f_1_1_object_a6885b81b028f91fdd813a0486cb0b1a0}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [14/20]}}
+{\footnotesize\ttfamily template$<$typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_affed09f657b182252d6bf4f816aba352}\label{classk_f_1_1_object_affed09f657b182252d6bf4f816aba352}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [15/20]}}
+{\footnotesize\ttfamily template$<$typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a8ce20615a9bd54585ad4ff249530dd6a}\label{classk_f_1_1_object_a8ce20615a9bd54585ad4ff249530dd6a}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [16/20]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_aa6486c3d872c1cf4340ab23921b58d6b}\label{classk_f_1_1_object_aa6486c3d872c1cf4340ab23921b58d6b}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [17/20]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_aa2ee7d28dd9c5c6361722d9ac95c28d8}\label{classk_f_1_1_object_aa2ee7d28dd9c5c6361722d9ac95c28d8}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [18/20]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a64572631930cfa7d0859ac218a4997d8}\label{classk_f_1_1_object_a64572631930cfa7d0859ac218a4997d8}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [19/20]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Receiver , typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{Receiver \&}]{receiver,  }\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_ac1aa1bca1bcb9c7acf3da8451868ab37}\label{classk_f_1_1_object_ac1aa1bca1bcb9c7acf3da8451868ab37}} 
+\index{kF::Object@{kF::Object}!connect@{connect}}
+\index{connect@{connect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [20/20]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Slot $>$ \\
+\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} k\+F\+::\+Object\+::connect (\begin{DoxyParamCaption}\item[{Slot \&\&}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Register a slot into an owned signal using signal pointer (may take a custom Slot\+Table if needed) Be careful, if you pass a custom Slot\+Table, you will have to disconnect it manually If you wish to change the default Slot\+Table, you can use the function \textquotesingle{}set\+Slot\+Table\textquotesingle{}. 
+
+If\+: no receiver is passed, the slot is owned by the calling instance Else If\+: receiver is an Object-\/derived class, it will own the connection (and will release it when destroyed) If\+: the given slot is a member function, receiver must be the instance used to perform the call \mbox{\Hypertarget{classk_f_1_1_object_aa51758f8cbdc1d44f2f5c4fa7b4b6e85}\label{classk_f_1_1_object_aa51758f8cbdc1d44f2f5c4fa7b4b6e85}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/13]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr$>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a slot using a signal function ptr and a connection handle (may take custom Slot\+Table) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a415ffd15e47cecb67966567429244fbf}\label{classk_f_1_1_object_a415ffd15e47cecb67966567429244fbf}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/13]}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a slot using a signal name and a connection handle (may take custom Slot\+Table) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_aaa723552df3b46905ee7a54c8b5ae400}\label{classk_f_1_1_object_aaa723552df3b46905ee7a54c8b5ae400}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/13]}}
+{\footnotesize\ttfamily template$<$typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const Receiver \&}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a slot using a signal name, a receiver and a connection handle (may take custom Slot\+Table) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a1d1490c3b8a963476752bd814d2289c9}\label{classk_f_1_1_object_a1d1490c3b8a963476752bd814d2289c9}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/13]}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a slot using a signal and a connection handle (may take custom Slot\+Table) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_afb5ce76093aa2c83d06ad1e6de8a5af5}\label{classk_f_1_1_object_afb5ce76093aa2c83d06ad1e6de8a5af5}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [5/13]}}
+{\footnotesize\ttfamily template$<$typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const Receiver \&}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a slot using a signal, a receiver and a connection handle (may take custom Slot\+Table) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a43624e4e06b2f33cda52d1a9ef05c2d6}\label{classk_f_1_1_object_a43624e4e06b2f33cda52d1a9ef05c2d6}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [6/13]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{const Receiver \&}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a slot using a signal name, a receiver and a connection handle (may take custom Slot\+Table) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_af192ebce519fd601b99d8ca1ff69d205}\label{classk_f_1_1_object_af192ebce519fd601b99d8ca1ff69d205}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [7/13]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr$>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a09a71b882b9b943c2378bdb78b551b72}\label{classk_f_1_1_object_a09a71b882b9b943c2378bdb78b551b72}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [8/13]}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a5200b6b449260949a688409216f47252}\label{classk_f_1_1_object_a5200b6b449260949a688409216f47252}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [9/13]}}
+{\footnotesize\ttfamily template$<$typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const Receiver \&}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_ae6c8b7b2d793af19338f95e0d57cba5f}\label{classk_f_1_1_object_ae6c8b7b2d793af19338f95e0d57cba5f}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [10/13]}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a85b2278ab735633a66cb55a96ae490b6}\label{classk_f_1_1_object_a85b2278ab735633a66cb55a96ae490b6}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [11/13]}}
+{\footnotesize\ttfamily template$<$typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const Receiver \&}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_acebf71d26c59737b536e9539d1036f70}\label{classk_f_1_1_object_acebf71d26c59737b536e9539d1036f70}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [12/13]}}
+{\footnotesize\ttfamily template$<$typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{const void $\ast$const}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Disconnect a member slot implementation. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a316b10bd37bd5dfc20fe42ce5d58134b}\label{classk_f_1_1_object_a316b10bd37bd5dfc20fe42ce5d58134b}} 
+\index{kF::Object@{kF::Object}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [13/13]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename Receiver $>$ \\
+void k\+F\+::\+Object\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const Receiver \&}]{receiver,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a6a4b5d84114d345340b3049569290f2a}\label{classk_f_1_1_object_a6a4b5d84114d345340b3049569290f2a}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit signal matching \textquotesingle{}Signal\+Ptr\textquotesingle{} using default slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a3f0fdd04d667767d5cf01fc09702860c}\label{classk_f_1_1_object_a3f0fdd04d667767d5cf01fc09702860c}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit signal matching \textquotesingle{}name\textquotesingle{} using default slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a22d600f74a3ad323067e5e2b20508c0e}\label{classk_f_1_1_object_a22d600f74a3ad323067e5e2b20508c0e}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit a signal using default slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a19797ba63cb6ad398c388277d2b48528}\label{classk_f_1_1_object_a19797ba63cb6ad398c388277d2b48528}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$auto Signal\+Ptr, typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit signal matching \textquotesingle{}Signal\+Ptr\textquotesingle{} using a specific slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a4d5b82bf07ffc9c850bf4d102daa69a4}\label{classk_f_1_1_object_a4d5b82bf07ffc9c850bf4d102daa69a4}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit signal matching \textquotesingle{}name\textquotesingle{} using a specific slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a14779ea7844627eb0b601292d1949c22}\label{classk_f_1_1_object_a14779ea7844627eb0b601292d1949c22}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit a signal using a specific slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_aa208e200aad6dee2e725c4091cc1442a}\label{classk_f_1_1_object_aa208e200aad6dee2e725c4091cc1442a}} 
+\index{kF::Object@{kF::Object}!emit@{emit}}
+\index{emit@{emit}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Object\+::\+Is\+Ensure\+Connection Ensure\+Connection\+Table, typename ... Args$>$ \\
+void k\+F\+::\+Object\+::emit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}}]{signal,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emit a signal using a specific slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a66b940fcf14484e509d20fc6237da4fa}\label{classk_f_1_1_object_a66b940fcf14484e509d20fc6237da4fa}} 
+\index{kF::Object@{kF::Object}!ensureConnectionTable@{ensureConnectionTable}}
+\index{ensureConnectionTable@{ensureConnectionTable}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{ensureConnectionTable()}{ensureConnectionTable()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::ensure\+Connection\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Ensure that object has a connection table. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a49cf6261c4c514325bdba027856b07a1}\label{classk_f_1_1_object_a49cf6261c4c514325bdba027856b07a1}} 
+\index{kF::Object@{kF::Object}!getDefaultSlotTable@{getDefaultSlotTable}}
+\index{getDefaultSlotTable@{getDefaultSlotTable}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getDefaultSlotTable()}{getDefaultSlotTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Object\+::\+Is\+Ensure\+Connection Ensure\+Connection\+Table$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{k\+F\+::\+Meta\+::\+Slot\+Table}}\& k\+F\+::\+Object\+::get\+Default\+Slot\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a22479785d28cae5c1610b9347f8ee8f7}\label{classk_f_1_1_object_a22479785d28cae5c1610b9347f8ee8f7}} 
+\index{kF::Object@{kF::Object}!getDefaultSlotTable@{getDefaultSlotTable}}
+\index{getDefaultSlotTable@{getDefaultSlotTable}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getDefaultSlotTable()}{getDefaultSlotTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$Is\+Ensure\+Connection Ensure\+Connection\+Table = Is\+Ensure\+Connection\+::\+Yes$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}}\& k\+F\+::\+Object\+::get\+Default\+Slot\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Get the default slot table used for connection / disconnection. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a6b777ebd6a1d84446e1f1323e06c7cdd}\label{classk_f_1_1_object_a6b777ebd6a1d84446e1f1323e06c7cdd}} 
+\index{kF::Object@{kF::Object}!getMetaType@{getMetaType}}
+\index{getMetaType@{getMetaType}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getMetaType()}{getMetaType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{k\+F\+::\+Meta\+::\+Type}} k\+F\+::\+Object\+::get\+Meta\+Type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_item_a0657b7ac0c4d20d038e713aae92cc7e7}{k\+F\+::\+Item}}.
+
+\mbox{\Hypertarget{classk_f_1_1_object_ae65a2763c20baf8ec06c1aed8dd92d03}\label{classk_f_1_1_object_ae65a2763c20baf8ec06c1aed8dd92d03}} 
+\index{kF::Object@{kF::Object}!getTypeHandle@{getTypeHandle}}
+\index{getTypeHandle@{getTypeHandle}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getTypeHandle()}{getTypeHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Object\+::get\+Type\+Handle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_item_af5c2c98c83f135c62a75e2300091f448}{k\+F\+::\+Item}}.
+
+\mbox{\Hypertarget{classk_f_1_1_object_a83e34b9d6d127fabcb17680959461486}\label{classk_f_1_1_object_a83e34b9d6d127fabcb17680959461486}} 
+\index{kF::Object@{kF::Object}!getTypeHandle@{getTypeHandle}}
+\index{getTypeHandle@{getTypeHandle}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getTypeHandle()}{getTypeHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Object\+::get\+Type\+Handle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_item_aa5ee887bacef5521513ec6077a812f2e}{k\+F\+::\+Item}}.
+
+\mbox{\Hypertarget{classk_f_1_1_object_aab1183c52c57de630af349c05c615ad8}\label{classk_f_1_1_object_aab1183c52c57de630af349c05c615ad8}} 
+\index{kF::Object@{kF::Object}!getVar@{getVar}}
+\index{getVar@{getVar}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getVar()}{getVar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Object\+::get\+Var (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Get an opaque meta-\/variable. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a63182938d94db9fbb8e13b12fb319647}\label{classk_f_1_1_object_a63182938d94db9fbb8e13b12fb319647}} 
+\index{kF::Object@{kF::Object}!getVar@{getVar}}
+\index{getVar@{getVar}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getVar()}{getVar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Object\+::get\+Var (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Meta\+::\+Data}}}]{meta\+Data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get an opaque meta-\/variable. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a4e334dc953a07d5605e4f0c8334f08f9}\label{classk_f_1_1_object_a4e334dc953a07d5605e4f0c8334f08f9}} 
+\index{kF::Object@{kF::Object}!getVarAs@{getVarAs}}
+\index{getVarAs@{getVarAs}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getVarAs()}{getVarAs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename As $>$ \\
+As\& k\+F\+::\+Object\+::get\+Var\+As (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get a casted meta-\/variable\textquotesingle{}s reference. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a874d618a8d5e3bff31e0a17f2dcb2e9e}\label{classk_f_1_1_object_a874d618a8d5e3bff31e0a17f2dcb2e9e}} 
+\index{kF::Object@{kF::Object}!getVarAs@{getVarAs}}
+\index{getVarAs@{getVarAs}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{getVarAs()}{getVarAs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename As $>$ \\
+const As\& k\+F\+::\+Object\+::get\+Var\+As (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get a casted meta-\/variable\textquotesingle{}s const reference. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a5a3cfdb7eacd945ae3fd2725946687a4}\label{classk_f_1_1_object_a5a3cfdb7eacd945ae3fd2725946687a4}} 
+\index{kF::Object@{kF::Object}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Object\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Invoke a meta-\/function. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a66968e050c32a0840bb25e176f3e703f}\label{classk_f_1_1_object_a66968e050c32a0840bb25e176f3e703f}} 
+\index{kF::Object@{kF::Object}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Object\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_ae2036571ece797348624fad6c7041238}\label{classk_f_1_1_object_ae2036571ece797348624fad6c7041238}} 
+\index{kF::Object@{kF::Object}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Object\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Meta\+::\+Function}}}]{meta\+Func,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Invoke a meta-\/function. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a050acc3c1b36aaf78bf4352c606fc51b}\label{classk_f_1_1_object_a050acc3c1b36aaf78bf4352c606fc51b}} 
+\index{kF::Object@{kF::Object}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Object\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Meta\+::\+Function}}}]{meta\+Func,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a2259ae8e3c844ef69127e2408134d683}\label{classk_f_1_1_object_a2259ae8e3c844ef69127e2408134d683}} 
+\index{kF::Object@{kF::Object}!p@{p}}
+\index{p@{p}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{p()}{p()}}
+{\footnotesize\ttfamily \+\_\+\+A\+D\+D\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+E\+A\+C\+H\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+C\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+0 k\+F\+::\+Object\+::p (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a056adfddc35be544f1588b3a83ec0770}\label{classk_f_1_1_object_a056adfddc35be544f1588b3a83ec0770}} 
+\index{kF::Object@{kF::Object}!RegisterMetadata@{RegisterMetadata}}
+\index{RegisterMetadata@{RegisterMetadata}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{RegisterMetadata()}{RegisterMetadata()}}
+{\footnotesize\ttfamily static void k\+F\+::\+Object\+::\+Register\+Metadata (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_ac5de1bd2ec35e1d668281d1ddcf6d37a}\label{classk_f_1_1_object_ac5de1bd2ec35e1d668281d1ddcf6d37a}} 
+\index{kF::Object@{kF::Object}!setDefaultSlotTable@{setDefaultSlotTable}}
+\index{setDefaultSlotTable@{setDefaultSlotTable}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{setDefaultSlotTable()}{setDefaultSlotTable()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Object\+::\+Is\+Ensure\+Connection Ensure\+Connection\+Table$>$ \\
+void k\+F\+::\+Object\+::set\+Default\+Slot\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} \&}]{slot\+Table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Set a custom slot table used for connection / disconnection. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a740fd7b60125b0d860eaafe08c193b5f}\label{classk_f_1_1_object_a740fd7b60125b0d860eaafe08c193b5f}} 
+\index{kF::Object@{kF::Object}!setVar@{setVar}}
+\index{setVar@{setVar}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{setVar()}{setVar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::set\+Var (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Set internal \textquotesingle{}name\textquotesingle{} property. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a61b930739b419d1174a9fb161ce4b7a7}\label{classk_f_1_1_object_a61b930739b419d1174a9fb161ce4b7a7}} 
+\index{kF::Object@{kF::Object}!setVar@{setVar}}
+\index{setVar@{setVar}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{setVar()}{setVar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+::set\+Var (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Meta\+::\+Data}}}]{meta\+Data,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Set internal \textquotesingle{}name\textquotesingle{} property directly using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Meta\+::\+Data}} (faster) 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a56f2e7ff89d1e229180b5dc80c04fe7c}\label{classk_f_1_1_object_a56f2e7ff89d1e229180b5dc80c04fe7c}} 
+\index{kF::Object@{kF::Object}!varExists@{varExists}}
+\index{varExists@{varExists}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{varExists()}{varExists()}}
+{\footnotesize\ttfamily virtual bool k\+F\+::\+Object\+::var\+Exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Checks if a meta-\/variable exists. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_a33624648f0ce56a111191b3b4c6839ef}\label{classk_f_1_1_object_a33624648f0ce56a111191b3b4c6839ef}} 
+\index{kF::Object@{kF::Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily k\+F\+::\+Object\+::$\sim$\+Object (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Virtual destructor (time vary upon connection count) 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Interpreter \mbox{\hyperlink{classk_f_1_1_object}{Object}} interface 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_a1fbc89dc4057e89a5e937167df5cb8a2}\label{classk_f_1_1_object_a1fbc89dc4057e89a5e937167df5cb8a2}} 
+\index{kF::Object@{kF::Object}!\_\_pad0\_\_@{\_\_pad0\_\_}}
+\index{\_\_pad0\_\_@{\_\_pad0\_\_}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{\_\_pad0\_\_}{\_\_pad0\_\_}}
+{\footnotesize\ttfamily pppublic k\+F\+::\+Object\+::\+\_\+\+\_\+pad0\+\_\+\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a44b735d5fca4ed137406327766ff7b55}\label{classk_f_1_1_object_a44b735d5fca4ed137406327766ff7b55}} 
+\index{kF::Object@{kF::Object}!\_connectionTable@{\_connectionTable}}
+\index{\_connectionTable@{\_connectionTable}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{\_connectionTable}{\_connectionTable}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structk_f_1_1_object_1_1_connection_table}{Connection\+Table}}$>$ k\+F\+::\+Object\+::\+\_\+connection\+Table \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_a9387bccc832d376b77df8c60adca51ba}\label{classk_f_1_1_object_a9387bccc832d376b77df8c60adca51ba}} 
+\index{kF::Object@{kF::Object}!Yes@{Yes}}
+\index{Yes@{Yes}!kF::Object@{kF::Object}}
+\doxysubsubsection{\texorpdfstring{Yes}{Yes}}
+{\footnotesize\ttfamily pppublic k\+F\+::\+Object\+::\+Yes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Object/\mbox{\hyperlink{_object_8hpp}{Object.\+hpp}}\item 
+Kube/\+Object/\mbox{\hyperlink{_object_8ipp}{Object.\+ipp}}\end{DoxyCompactItemize}

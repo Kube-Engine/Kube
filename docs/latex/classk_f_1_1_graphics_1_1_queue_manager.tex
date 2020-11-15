@@ -1,0 +1,271 @@
+\hypertarget{classk_f_1_1_graphics_1_1_queue_manager}{}\doxysection{kF\+::Graphics\+::Queue\+Manager Class Reference}
+\label{classk_f_1_1_graphics_1_1_queue_manager}\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+
+
+Handles a list of queues.  
+
+
+
+
+{\ttfamily \#include $<$Queue\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Queue\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classk_f_1_1_graphics_1_1_queue_manager__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_graphics_1_1_queue_manager_1_1_queue_descriptor}{Queue\+Descriptor}}
+\begin{DoxyCompactList}\small\item\em Describes a queue family and handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a94da0e9d40bfb222bb886c55c5d7ea8d}{Queues\+Array}} = std\+::array$<$ \mbox{\hyperlink{structk_f_1_1_graphics_1_1_queue_manager_1_1_queue_descriptor}{Queue\+Descriptor}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}{Queue\+Count}} $>$
+\begin{DoxyCompactList}\small\item\em An array containing available queue descriptors. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a995cd5e50a89adc6f9cb87e9c2cd1b52}{Queue\+Candidates}} = \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ std\+::pair$<$ std\+::uint32\+\_\+t, std\+::size\+\_\+t $>$ $>$
+\begin{DoxyCompactList}\small\item\em All candidates of a queue family. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a5fe3c33cc18b27a0370a889243430529}{Queue\+Candidate\+Map}} = std\+::array$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a995cd5e50a89adc6f9cb87e9c2cd1b52}{Queue\+Candidates}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}{Queue\+Count}} $>$
+\begin{DoxyCompactList}\small\item\em An array containing all available queue candidates. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a430d4e64dcc6863f9d0c5b871bc28303}{Queue\+Create\+Info}} = Vk\+Device\+Queue\+Create\+Info
+\begin{DoxyCompactList}\small\item\em Describe how to create a queue. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a71af7413a23762b2b2cd57870d3cec13}{Queue\+Create\+Infos}} = \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a430d4e64dcc6863f9d0c5b871bc28303}{Queue\+Create\+Info}} $>$
+\begin{DoxyCompactList}\small\item\em Describe how to multiple queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a01da378d6dcd85dc9b65ff8e4115e2ab}{Queue\+Manager}} (void)
+\begin{DoxyCompactList}\small\item\em Construct queue handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a2c75dd564547b5165ad13ad8bfe78a65}{Queue\+Manager}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_aeb636870f4e52c7a5b5087e5e14626d2}{$\sim$\+Queue\+Manager}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destroy queue handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a261a4a2d50a084454286022d931a8f36}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_queue_manager_1_1_queue_descriptor}{Queue\+Descriptor}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a4894413ecfb1688fa2ccfbaf16f8e2ee}{queue\+Descriptor}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} type) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive a queue descriptor that match given type and index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacek_f_1_1_graphics_a4e6321f43d6ef4935e945cc70b858990}{Queue\+Handle}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_af4b7f327030cd638a25b9609788229df}{queue}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} type) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive a queue that match given type and index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a71b1ea603684bdcf52d5c93c16318a06}{wait\+Queue\+Idle}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} queue\+Type) noexcept
+\begin{DoxyCompactList}\small\item\em Wait until a queue is I\+D\+LE. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a71af7413a23762b2b2cd57870d3cec13}{Queue\+Create\+Infos}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_adcf131e9d6fdcc58b9d56f83a4bc7408}{register\+Queues}} (void)
+\begin{DoxyCompactList}\small\item\em Get a create info list of queues This function tries to give as much different queues as the hardware can manage If there isn\textquotesingle{}t enough different queues, it\textquotesingle{}ll use the same queue to assume different queue command types. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a9a61a904ac0438f0992c116bbdd1dd72}{retreive\+Queues\+Handlers}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Fill internal queues handler using registered queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}{Queue\+Count}} = static\+\_\+cast$<$std\+::size\+\_\+t$>$(\mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60ad334dfcea59127bedfcdbe0a3ee7f494}{Queue\+Type\+::\+Count}})
+\begin{DoxyCompactList}\small\item\em The number of different familly queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a0337526d23c5efee3c05426e8dbf16b4}{retreive\+Family\+Queue\+Indexes}} (void)
+\begin{DoxyCompactList}\small\item\em Retreive every family queue and indexes that the hardware is capable of. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a94da0e9d40bfb222bb886c55c5d7ea8d}{Queues\+Array}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_ae7bb71c4a643827b97d18c8acfe0ecb2}{\+\_\+array}}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a5fe3c33cc18b27a0370a889243430529}{Queue\+Candidate\+Map}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a09f9e1f1e3b4b2c77bee83e2a445293c}{\+\_\+candidates}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Handles a list of queues. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a5fe3c33cc18b27a0370a889243430529}\label{classk_f_1_1_graphics_1_1_queue_manager_a5fe3c33cc18b27a0370a889243430529}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueCandidateMap@{QueueCandidateMap}}
+\index{QueueCandidateMap@{QueueCandidateMap}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueCandidateMap}{QueueCandidateMap}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a5fe3c33cc18b27a0370a889243430529}{k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queue\+Candidate\+Map}} =  std\+::array$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a995cd5e50a89adc6f9cb87e9c2cd1b52}{Queue\+Candidates}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}{Queue\+Count}}$>$}
+
+
+
+An array containing all available queue candidates. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a995cd5e50a89adc6f9cb87e9c2cd1b52}\label{classk_f_1_1_graphics_1_1_queue_manager_a995cd5e50a89adc6f9cb87e9c2cd1b52}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueCandidates@{QueueCandidates}}
+\index{QueueCandidates@{QueueCandidates}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueCandidates}{QueueCandidates}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a995cd5e50a89adc6f9cb87e9c2cd1b52}{k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queue\+Candidates}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$std\+::pair$<$std\+::uint32\+\_\+t, std\+::size\+\_\+t$>$ $>$}
+
+
+
+All candidates of a queue family. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a430d4e64dcc6863f9d0c5b871bc28303}\label{classk_f_1_1_graphics_1_1_queue_manager_a430d4e64dcc6863f9d0c5b871bc28303}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueCreateInfo@{QueueCreateInfo}}
+\index{QueueCreateInfo@{QueueCreateInfo}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueCreateInfo}{QueueCreateInfo}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a430d4e64dcc6863f9d0c5b871bc28303}{k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queue\+Create\+Info}} =  Vk\+Device\+Queue\+Create\+Info}
+
+
+
+Describe how to create a queue. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a71af7413a23762b2b2cd57870d3cec13}\label{classk_f_1_1_graphics_1_1_queue_manager_a71af7413a23762b2b2cd57870d3cec13}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueCreateInfos@{QueueCreateInfos}}
+\index{QueueCreateInfos@{QueueCreateInfos}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueCreateInfos}{QueueCreateInfos}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a71af7413a23762b2b2cd57870d3cec13}{k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queue\+Create\+Infos}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a430d4e64dcc6863f9d0c5b871bc28303}{Queue\+Create\+Info}}$>$}
+
+
+
+Describe how to multiple queues. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a94da0e9d40bfb222bb886c55c5d7ea8d}\label{classk_f_1_1_graphics_1_1_queue_manager_a94da0e9d40bfb222bb886c55c5d7ea8d}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueuesArray@{QueuesArray}}
+\index{QueuesArray@{QueuesArray}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueuesArray}{QueuesArray}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a94da0e9d40bfb222bb886c55c5d7ea8d}{k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queues\+Array}} =  std\+::array$<$\mbox{\hyperlink{structk_f_1_1_graphics_1_1_queue_manager_1_1_queue_descriptor}{Queue\+Descriptor}}, \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}{Queue\+Count}}$>$}
+
+
+
+An array containing available queue descriptors. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a01da378d6dcd85dc9b65ff8e4115e2ab}\label{classk_f_1_1_graphics_1_1_queue_manager_a01da378d6dcd85dc9b65ff8e4115e2ab}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueManager@{QueueManager}}
+\index{QueueManager@{QueueManager}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueManager()}{QueueManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graphics\+::\+Queue\+Manager\+::\+Queue\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Construct queue handler. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a2c75dd564547b5165ad13ad8bfe78a65}\label{classk_f_1_1_graphics_1_1_queue_manager_a2c75dd564547b5165ad13ad8bfe78a65}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueManager@{QueueManager}}
+\index{QueueManager@{QueueManager}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueManager()}{QueueManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queue\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_aeb636870f4e52c7a5b5087e5e14626d2}\label{classk_f_1_1_graphics_1_1_queue_manager_aeb636870f4e52c7a5b5087e5e14626d2}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!````~QueueManager@{$\sim$QueueManager}}
+\index{````~QueueManager@{$\sim$QueueManager}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$QueueManager()}{~QueueManager()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Queue\+Manager\+::$\sim$\+Queue\+Manager (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy queue handler. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a261a4a2d50a084454286022d931a8f36}\label{classk_f_1_1_graphics_1_1_queue_manager_a261a4a2d50a084454286022d931a8f36}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}}\& k\+F\+::\+Graphics\+::\+Queue\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager}{Queue\+Manager}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_af4b7f327030cd638a25b9609788229df}\label{classk_f_1_1_graphics_1_1_queue_manager_af4b7f327030cd638a25b9609788229df}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!queue@{queue}}
+\index{queue@{queue}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{queue()}{queue()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacek_f_1_1_graphics_a4e6321f43d6ef4935e945cc70b858990}{Queue\+Handle}}\& k\+F\+::\+Graphics\+::\+Queue\+Manager\+::queue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive a queue that match given type and index. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a4894413ecfb1688fa2ccfbaf16f8e2ee}\label{classk_f_1_1_graphics_1_1_queue_manager_a4894413ecfb1688fa2ccfbaf16f8e2ee}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!queueDescriptor@{queueDescriptor}}
+\index{queueDescriptor@{queueDescriptor}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{queueDescriptor()}{queueDescriptor()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_queue_manager_1_1_queue_descriptor}{Queue\+Descriptor}}\& k\+F\+::\+Graphics\+::\+Queue\+Manager\+::queue\+Descriptor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive a queue descriptor that match given type and index. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_adcf131e9d6fdcc58b9d56f83a4bc7408}\label{classk_f_1_1_graphics_1_1_queue_manager_adcf131e9d6fdcc58b9d56f83a4bc7408}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!registerQueues@{registerQueues}}
+\index{registerQueues@{registerQueues}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{registerQueues()}{registerQueues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a71af7413a23762b2b2cd57870d3cec13}{Graphics\+::\+Queue\+Manager\+::\+Queue\+Create\+Infos}} Graphics\+::\+Queue\+Manager\+::register\+Queues (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get a create info list of queues This function tries to give as much different queues as the hardware can manage If there isn\textquotesingle{}t enough different queues, it\textquotesingle{}ll use the same queue to assume different queue command types. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a0337526d23c5efee3c05426e8dbf16b4}\label{classk_f_1_1_graphics_1_1_queue_manager_a0337526d23c5efee3c05426e8dbf16b4}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!retreiveFamilyQueueIndexes@{retreiveFamilyQueueIndexes}}
+\index{retreiveFamilyQueueIndexes@{retreiveFamilyQueueIndexes}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{retreiveFamilyQueueIndexes()}{retreiveFamilyQueueIndexes()}}
+{\footnotesize\ttfamily void Graphics\+::\+Queue\+Manager\+::retreive\+Family\+Queue\+Indexes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Retreive every family queue and indexes that the hardware is capable of. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a9a61a904ac0438f0992c116bbdd1dd72}\label{classk_f_1_1_graphics_1_1_queue_manager_a9a61a904ac0438f0992c116bbdd1dd72}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!retreiveQueuesHandlers@{retreiveQueuesHandlers}}
+\index{retreiveQueuesHandlers@{retreiveQueuesHandlers}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{retreiveQueuesHandlers()}{retreiveQueuesHandlers()}}
+{\footnotesize\ttfamily void Graphics\+::\+Queue\+Manager\+::retreive\+Queues\+Handlers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Fill internal queues handler using registered queues. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a71b1ea603684bdcf52d5c93c16318a06}\label{classk_f_1_1_graphics_1_1_queue_manager_a71b1ea603684bdcf52d5c93c16318a06}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!waitQueueIdle@{waitQueueIdle}}
+\index{waitQueueIdle@{waitQueueIdle}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{waitQueueIdle()}{waitQueueIdle()}}
+{\footnotesize\ttfamily void Graphics\+::\+Queue\+Manager\+::wait\+Queue\+Idle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Wait until a queue is I\+D\+LE. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_ae7bb71c4a643827b97d18c8acfe0ecb2}\label{classk_f_1_1_graphics_1_1_queue_manager_ae7bb71c4a643827b97d18c8acfe0ecb2}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!\_array@{\_array}}
+\index{\_array@{\_array}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{\_array}{\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a94da0e9d40bfb222bb886c55c5d7ea8d}{Queues\+Array}} k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+\_\+array\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_a09f9e1f1e3b4b2c77bee83e2a445293c}\label{classk_f_1_1_graphics_1_1_queue_manager_a09f9e1f1e3b4b2c77bee83e2a445293c}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!\_candidates@{\_candidates}}
+\index{\_candidates@{\_candidates}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{\_candidates}{\_candidates}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_queue_manager_a5fe3c33cc18b27a0370a889243430529}{Queue\+Candidate\+Map}} k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+\_\+candidates\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}\label{classk_f_1_1_graphics_1_1_queue_manager_ad68c47904a81b48ef489708cf19701e6}} 
+\index{kF::Graphics::QueueManager@{kF::Graphics::QueueManager}!QueueCount@{QueueCount}}
+\index{QueueCount@{QueueCount}!kF::Graphics::QueueManager@{kF::Graphics::QueueManager}}
+\doxysubsubsection{\texorpdfstring{QueueCount}{QueueCount}}
+{\footnotesize\ttfamily constexpr auto k\+F\+::\+Graphics\+::\+Queue\+Manager\+::\+Queue\+Count = static\+\_\+cast$<$std\+::size\+\_\+t$>$(\mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60ad334dfcea59127bedfcdbe0a3ee7f494}{Queue\+Type\+::\+Count}})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The number of different familly queues. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_queue_manager_8hpp}{Queue\+Manager.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_queue_manager_8cpp}{Queue\+Manager.\+cpp}}\end{DoxyCompactItemize}

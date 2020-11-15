@@ -1,0 +1,143 @@
+\hypertarget{classk_f_1_1_graphics_1_1_memory_allocator}{}\doxysection{kF\+::Graphics\+::Memory\+Allocator Class Reference}
+\label{classk_f_1_1_graphics_1_1_memory_allocator}\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+
+
+{\ttfamily \#include $<$Memory\+Allocator.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Memory\+Allocator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_memory_allocator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_ae2be643ecd701b5462b1ad8f56e5abdc}{Memory\+Allocator}} (void)
+\begin{DoxyCompactList}\small\item\em Construct a new memory allocator using V\+MA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_a90b7fecb85a32b427e56e655b2c1f18b}{Memory\+Allocator}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_ae9fc60944cfc594f9898621e171c7b57}{$\sim$\+Memory\+Allocator}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_a9bfe06236000c3798ac27b358bc38b67}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_a9407959f2a25a2a8f3c51172b1405f75}{allocate}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Allocate memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_afdd6a0652194b5b03129d6dcd3663853}{allocate}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} $\ast$const model\+From, const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} $\ast$const model\+To, \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const allocation\+From, \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const allocation\+To)
+\begin{DoxyCompactList}\small\item\em Allocate a list of memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_ac59657ab5e213e070566dc72bb7ed996}{deallocate}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} allocation)
+\begin{DoxyCompactList}\small\item\em Deallocate memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_abadf4de5084b9829a57e3bb8cfd0136e}{deallocate}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const allocation\+From, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const allocation\+To)
+\begin{DoxyCompactList}\small\item\em Deallocate a list of memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator_ad1b380ec0b96e88e4b4c06f9614ca19b}{create\+Memory\+Allocator}} (void)
+\begin{DoxyCompactList}\small\item\em Create a memory allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_ae2be643ecd701b5462b1ad8f56e5abdc}\label{classk_f_1_1_graphics_1_1_memory_allocator_ae2be643ecd701b5462b1ad8f56e5abdc}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!MemoryAllocator@{MemoryAllocator}}
+\index{MemoryAllocator@{MemoryAllocator}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{MemoryAllocator()}{MemoryAllocator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocator\+::\+Memory\+Allocator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new memory allocator using V\+MA. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_a90b7fecb85a32b427e56e655b2c1f18b}\label{classk_f_1_1_graphics_1_1_memory_allocator_a90b7fecb85a32b427e56e655b2c1f18b}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!MemoryAllocator@{MemoryAllocator}}
+\index{MemoryAllocator@{MemoryAllocator}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{MemoryAllocator()}{MemoryAllocator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocator\+::\+Memory\+Allocator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_ae9fc60944cfc594f9898621e171c7b57}\label{classk_f_1_1_graphics_1_1_memory_allocator_ae9fc60944cfc594f9898621e171c7b57}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!````~MemoryAllocator@{$\sim$MemoryAllocator}}
+\index{````~MemoryAllocator@{$\sim$MemoryAllocator}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{$\sim$MemoryAllocator()}{~MemoryAllocator()}}
+{\footnotesize\ttfamily Graphics\+::\+Memory\+Allocator\+::$\sim$\+Memory\+Allocator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_a9407959f2a25a2a8f3c51172b1405f75}\label{classk_f_1_1_graphics_1_1_memory_allocator_a9407959f2a25a2a8f3c51172b1405f75}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!allocate@{allocate}}
+\index{allocate@{allocate}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Handle}} k\+F\+::\+Graphics\+::\+Memory\+Allocator\+::allocate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate memory. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_afdd6a0652194b5b03129d6dcd3663853}\label{classk_f_1_1_graphics_1_1_memory_allocator_afdd6a0652194b5b03129d6dcd3663853}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!allocate@{allocate}}
+\index{allocate@{allocate}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Graphics\+::\+Memory\+Allocator\+::allocate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} $\ast$const}]{model\+From,  }\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} $\ast$const}]{model\+To,  }\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const}]{allocation\+From,  }\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const}]{allocation\+To }\end{DoxyParamCaption})}
+
+
+
+Allocate a list of memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_ad1b380ec0b96e88e4b4c06f9614ca19b}\label{classk_f_1_1_graphics_1_1_memory_allocator_ad1b380ec0b96e88e4b4c06f9614ca19b}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!createMemoryAllocator@{createMemoryAllocator}}
+\index{createMemoryAllocator@{createMemoryAllocator}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{createMemoryAllocator()}{createMemoryAllocator()}}
+{\footnotesize\ttfamily void Graphics\+::\+Memory\+Allocator\+::create\+Memory\+Allocator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a memory allocator. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_abadf4de5084b9829a57e3bb8cfd0136e}\label{classk_f_1_1_graphics_1_1_memory_allocator_abadf4de5084b9829a57e3bb8cfd0136e}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Graphics\+::\+Memory\+Allocator\+::deallocate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const}]{allocation\+From,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}} $\ast$const}]{allocation\+To }\end{DoxyParamCaption})}
+
+
+
+Deallocate a list of memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_ac59657ab5e213e070566dc72bb7ed996}\label{classk_f_1_1_graphics_1_1_memory_allocator_ac59657ab5e213e070566dc72bb7ed996}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Memory\+Allocator\+::deallocate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a67bece96ae0280ff33374f2b818df78b}{Memory\+Allocation\+Handle}}}]{allocation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deallocate memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocator_a9bfe06236000c3798ac27b358bc38b67}\label{classk_f_1_1_graphics_1_1_memory_allocator_a9bfe06236000c3798ac27b358bc38b67}} 
+\index{kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::MemoryAllocator@{kF::Graphics::MemoryAllocator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}}\& k\+F\+::\+Graphics\+::\+Memory\+Allocator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocator}{Memory\+Allocator}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocator_8hpp}{Memory\+Allocator.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocator_8cpp}{Memory\+Allocator.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocator_8ipp}{Memory\+Allocator.\+ipp}}\end{DoxyCompactItemize}

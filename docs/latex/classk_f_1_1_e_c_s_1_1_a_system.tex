@@ -1,0 +1,205 @@
+\hypertarget{classk_f_1_1_e_c_s_1_1_a_system}{}\doxysection{kF\+::E\+CS\+::A\+System$<$ Entity\+Type $>$ Class Template Reference}
+\label{classk_f_1_1_e_c_s_1_1_a_system}\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+
+
+An opaque system.  
+
+
+
+
+{\ttfamily \#include $<$A\+System.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} = std\+::type\+\_\+index
+\item 
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a0c8afd93bc1707cb610fbf9324c0ec09}{A\+System}} (const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a277985bfc90b6ab4efc11fa7336bd8fe}{type\+ID}}) noexcept
+\begin{DoxyCompactList}\small\item\em Construct a new system using a Type\+ID. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a5938ca9acae90db5638bbe01a923c925}{$\sim$\+A\+System}} (void)=default
+\begin{DoxyCompactList}\small\item\em Destruct the system. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7d7fd335df94f5fbecf54ec4ec252b9b}{setup}} (\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}$<$ Entity\+Type $>$ \&registry)=0
+\begin{DoxyCompactList}\small\item\em Setup the system. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_ad777ec9ec60e988ffd8b05bf2f7d2cde}{dependencies}} (void)=0
+\begin{DoxyCompactList}\small\item\em Get dependecies of the system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a277985bfc90b6ab4efc11fa7336bd8fe}{type\+ID}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s Type\+ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a875394e1ead1c90df6af0175d995e95c}{graph}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s internal Graph. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a0f2298bc7b2f97d7efd7c6d8b2cb8631}{graph}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s internal Graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a678a7faeeed088d914b6eaca4e7b5989}{task}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s internal Task. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_ab36016669ddf80864b3903475851922f}{task}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s internal Task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aaae6c2b33751c4ad7b682beffbdabf89}{\+\_\+type\+ID}}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a168eb1558467aaeb58416ce01e8446e5}{\+\_\+graph}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_ad4b74d63f6c4b7a938b420cec85b0ffb}{\+\_\+task}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$\newline
+class k\+F\+::\+E\+C\+S\+::\+A\+System$<$ Entity\+Type $>$}
+
+An opaque system. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}\label{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!Dependencies@{Dependencies}}
+\index{Dependencies@{Dependencies}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{Dependencies}{Dependencies}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}}$>$}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}\label{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!TypeID@{TypeID}}
+\index{TypeID@{TypeID}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{TypeID}{TypeID}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} =  std\+::type\+\_\+index}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a0c8afd93bc1707cb610fbf9324c0ec09}\label{classk_f_1_1_e_c_s_1_1_a_system_a0c8afd93bc1707cb610fbf9324c0ec09}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!ASystem@{ASystem}}
+\index{ASystem@{ASystem}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{ASystem()}{ASystem()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}}}]{type\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct a new system using a Type\+ID. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a5938ca9acae90db5638bbe01a923c925}\label{classk_f_1_1_e_c_s_1_1_a_system_a5938ca9acae90db5638bbe01a923c925}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!````~ASystem@{$\sim$ASystem}}
+\index{````~ASystem@{$\sim$ASystem}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ASystem()}{~ASystem()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destruct the system. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_ad777ec9ec60e988ffd8b05bf2f7d2cde}\label{classk_f_1_1_e_c_s_1_1_a_system_ad777ec9ec60e988ffd8b05bf2f7d2cde}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{dependencies()}{dependencies()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::dependencies (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get dependecies of the system. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a0f2298bc7b2f97d7efd7c6d8b2cb8631}\label{classk_f_1_1_e_c_s_1_1_a_system_a0f2298bc7b2f97d7efd7c6d8b2cb8631}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!graph@{graph}}
+\index{graph@{graph}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s internal Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a875394e1ead1c90df6af0175d995e95c}\label{classk_f_1_1_e_c_s_1_1_a_system_a875394e1ead1c90df6af0175d995e95c}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!graph@{graph}}
+\index{graph@{graph}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s internal Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a7d7fd335df94f5fbecf54ec4ec252b9b}\label{classk_f_1_1_e_c_s_1_1_a_system_a7d7fd335df94f5fbecf54ec4ec252b9b}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!setup@{setup}}
+\index{setup@{setup}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+virtual void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}$<$ Entity\+Type $>$ \&}]{registry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Setup the system. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_ab36016669ddf80864b3903475851922f}\label{classk_f_1_1_e_c_s_1_1_a_system_ab36016669ddf80864b3903475851922f}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!task@{task}}
+\index{task@{task}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{task()}{task()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::task (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s internal Task. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a678a7faeeed088d914b6eaca4e7b5989}\label{classk_f_1_1_e_c_s_1_1_a_system_a678a7faeeed088d914b6eaca4e7b5989}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!task@{task}}
+\index{task@{task}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{task()}{task()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::task (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s internal Task. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a277985bfc90b6ab4efc11fa7336bd8fe}\label{classk_f_1_1_e_c_s_1_1_a_system_a277985bfc90b6ab4efc11fa7336bd8fe}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!typeID@{typeID}}
+\index{typeID@{typeID}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{typeID()}{typeID()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::type\+ID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s Type\+ID. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a168eb1558467aaeb58416ce01e8446e5}\label{classk_f_1_1_e_c_s_1_1_a_system_a168eb1558467aaeb58416ce01e8446e5}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!\_graph@{\_graph}}
+\index{\_graph@{\_graph}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_graph}{\_graph}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\+\_\+graph \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_ad4b74d63f6c4b7a938b420cec85b0ffb}\label{classk_f_1_1_e_c_s_1_1_a_system_ad4b74d63f6c4b7a938b420cec85b0ffb}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!\_task@{\_task}}
+\index{\_task@{\_task}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_task}{\_task}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\+\_\+task \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_aaae6c2b33751c4ad7b682beffbdabf89}\label{classk_f_1_1_e_c_s_1_1_a_system_aaae6c2b33751c4ad7b682beffbdabf89}} 
+\index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!\_typeID@{\_typeID}}
+\index{\_typeID@{\_typeID}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_typeID}{\_typeID}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\+\_\+type\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_a_system_8hpp}{A\+System.\+hpp}}\end{DoxyCompactItemize}

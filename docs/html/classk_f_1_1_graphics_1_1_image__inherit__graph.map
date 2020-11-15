@@ -1,0 +1,8 @@
+<map id="kF::Graphics::Image" name="kF::Graphics::Image">
+<area shape="rect" id="node1" title="Abstract an image." alt="" coords="90,1084,231,1220"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title=" " alt="" coords="68,943,253,1035"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,540,257,764"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="112,5,297,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="210,292,413,516"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title="Vulkan handle that inherits from RendererObject." alt="" coords="192,788,377,880"/>
+</map>

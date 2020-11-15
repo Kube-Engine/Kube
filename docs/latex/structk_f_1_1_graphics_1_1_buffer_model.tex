@@ -1,0 +1,150 @@
+\hypertarget{structk_f_1_1_graphics_1_1_buffer_model}{}\doxysection{kF\+::Graphics\+::Buffer\+Model Struct Reference}
+\label{structk_f_1_1_graphics_1_1_buffer_model}\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+
+
+Describe how to create a buffer.  
+
+
+
+
+{\ttfamily \#include $<$Buffer\+Model.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Buffer\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structk_f_1_1_graphics_1_1_buffer_model__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a2d22270c64defa4c73376bd45b5f697d}{Buffer\+Model}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39}{Buffer\+Create\+Flags}} flags\+\_\+, const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size\+\_\+, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358}{Buffer\+Usage\+Flags}} usage\+\_\+, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a1f06a206e3467fb0d66cf5005fb51fbb}{Sharing\+Mode}} sharing\+Mode\+\_\+, const std\+::uint32\+\_\+t $\ast$const queue\+Family\+Index\+Begin, const std\+::uint32\+\_\+t $\ast$const queue\+Family\+Index\+End) noexcept
+\begin{DoxyCompactList}\small\item\em Initialize constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a11cdfebab16bd51fe0ed230d152a2f68}{Buffer\+Model}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em P\+OD semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a6044a614bf098e48b7c7486bcb1022da}{Buffer\+Model}} (\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \& \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a5459bacd5d1dbc481925244078b214cb}{operator=}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&other) noexcept=default
+\item 
+\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \& \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a9acdbd9180a539aad1b264feb022f196}{operator=}} (\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&\&other) noexcept=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a65e0b9b6a1b39d237a147228983e5b9c}{Make\+Staging}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to create a staging buffer model. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_af5a68fd331c1936def46a713c62b9f15}{Make\+Vertex\+Local}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to create a local (G\+PU only) vertex buffer model. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_aaade778f5b35b89e94ee31e0011d651a}{Make\+Vertex\+Shared}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to create a shared (C\+PU \& G\+PU) vertex buffer model. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a2817da791802392179bc9fb352662209}{Make\+Index\+Local}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to create a local (G\+PU only) index buffer model. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model_a7cf91dc2300e04e30534591c463d19b1}{Make\+Index\+Shared}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to create a shared (C\+PU \& G\+PU) index buffer model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describe how to create a buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a2d22270c64defa4c73376bd45b5f697d}\label{structk_f_1_1_graphics_1_1_buffer_model_a2d22270c64defa4c73376bd45b5f697d}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!BufferModel@{BufferModel}}
+\index{BufferModel@{BufferModel}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{BufferModel()}{BufferModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Buffer\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a5bd6e49cbe5099bb6037cd15f5f6eb39}{Buffer\+Create\+Flags}}}]{flags\+\_\+,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size\+\_\+,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a82562261891632685e8c55878521e358}{Buffer\+Usage\+Flags}}}]{usage\+\_\+,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a1f06a206e3467fb0d66cf5005fb51fbb}{Sharing\+Mode}}}]{sharing\+Mode\+\_\+,  }\item[{const std\+::uint32\+\_\+t $\ast$const}]{queue\+Family\+Index\+Begin,  }\item[{const std\+::uint32\+\_\+t $\ast$const}]{queue\+Family\+Index\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Initialize constructor. 
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a11cdfebab16bd51fe0ed230d152a2f68}\label{structk_f_1_1_graphics_1_1_buffer_model_a11cdfebab16bd51fe0ed230d152a2f68}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!BufferModel@{BufferModel}}
+\index{BufferModel@{BufferModel}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{BufferModel()}{BufferModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Buffer\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+P\+OD semantics. 
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a6044a614bf098e48b7c7486bcb1022da}\label{structk_f_1_1_graphics_1_1_buffer_model_a6044a614bf098e48b7c7486bcb1022da}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!BufferModel@{BufferModel}}
+\index{BufferModel@{BufferModel}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{BufferModel()}{BufferModel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Buffer\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a2817da791802392179bc9fb352662209}\label{structk_f_1_1_graphics_1_1_buffer_model_a2817da791802392179bc9fb352662209}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!MakeIndexLocal@{MakeIndexLocal}}
+\index{MakeIndexLocal@{MakeIndexLocal}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{MakeIndexLocal()}{MakeIndexLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{k\+F\+::\+Graphics\+::\+Buffer\+Model}} k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Make\+Index\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to create a local (G\+PU only) index buffer model. 
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a7cf91dc2300e04e30534591c463d19b1}\label{structk_f_1_1_graphics_1_1_buffer_model_a7cf91dc2300e04e30534591c463d19b1}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!MakeIndexShared@{MakeIndexShared}}
+\index{MakeIndexShared@{MakeIndexShared}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{MakeIndexShared()}{MakeIndexShared()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{k\+F\+::\+Graphics\+::\+Buffer\+Model}} k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Make\+Index\+Shared (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to create a shared (C\+PU \& G\+PU) index buffer model. 
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a65e0b9b6a1b39d237a147228983e5b9c}\label{structk_f_1_1_graphics_1_1_buffer_model_a65e0b9b6a1b39d237a147228983e5b9c}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!MakeStaging@{MakeStaging}}
+\index{MakeStaging@{MakeStaging}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{MakeStaging()}{MakeStaging()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{k\+F\+::\+Graphics\+::\+Buffer\+Model}} k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Make\+Staging (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to create a staging buffer model. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_af5a68fd331c1936def46a713c62b9f15}\label{structk_f_1_1_graphics_1_1_buffer_model_af5a68fd331c1936def46a713c62b9f15}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!MakeVertexLocal@{MakeVertexLocal}}
+\index{MakeVertexLocal@{MakeVertexLocal}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{MakeVertexLocal()}{MakeVertexLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{k\+F\+::\+Graphics\+::\+Buffer\+Model}} k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Make\+Vertex\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to create a local (G\+PU only) vertex buffer model. 
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_aaade778f5b35b89e94ee31e0011d651a}\label{structk_f_1_1_graphics_1_1_buffer_model_aaade778f5b35b89e94ee31e0011d651a}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!MakeVertexShared@{MakeVertexShared}}
+\index{MakeVertexShared@{MakeVertexShared}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{MakeVertexShared()}{MakeVertexShared()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{k\+F\+::\+Graphics\+::\+Buffer\+Model}} k\+F\+::\+Graphics\+::\+Buffer\+Model\+::\+Make\+Vertex\+Shared (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to create a shared (C\+PU \& G\+PU) vertex buffer model. 
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a9acdbd9180a539aad1b264feb022f196}\label{structk_f_1_1_graphics_1_1_buffer_model_a9acdbd9180a539aad1b264feb022f196}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}}\& k\+F\+::\+Graphics\+::\+Buffer\+Model\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{structk_f_1_1_graphics_1_1_buffer_model_a5459bacd5d1dbc481925244078b214cb}\label{structk_f_1_1_graphics_1_1_buffer_model_a5459bacd5d1dbc481925244078b214cb}} 
+\index{kF::Graphics::BufferModel@{kF::Graphics::BufferModel}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::BufferModel@{kF::Graphics::BufferModel}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}}\& k\+F\+::\+Graphics\+::\+Buffer\+Model\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_buffer_model_8hpp}{Buffer\+Model.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_buffer_model_8ipp}{Buffer\+Model.\+ipp}}\end{DoxyCompactItemize}

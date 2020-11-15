@@ -1,0 +1,102 @@
+\hypertarget{classk_f_1_1_graphics_1_1_buffer}{}\doxysection{kF\+::Graphics\+::Buffer Class Reference}
+\label{classk_f_1_1_graphics_1_1_buffer}\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+
+
+G\+PU Memory buffer abstraction.  
+
+
+
+
+{\ttfamily \#include $<$Buffer.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_buffer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_a85e9233badc2d54755d3b7e3b04f8857}{Buffer}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Construct a nw buffer using a buffer model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_a46421065f0ce14edeab9c9bf86d14b51}{Buffer}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_a6f2ddede7edd0a3740871c8cf99c44fd}{$\sim$\+Buffer}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_adbafcfe5c5cd8a69b787a2fc5783c0f7}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_a72c6133563809461751e49a01455b289}{create\+Buffer}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Create the device buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+G\+PU Memory buffer abstraction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_a85e9233badc2d54755d3b7e3b04f8857}\label{classk_f_1_1_graphics_1_1_buffer_a85e9233badc2d54755d3b7e3b04f8857}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a nw buffer using a buffer model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_a46421065f0ce14edeab9c9bf86d14b51}\label{classk_f_1_1_graphics_1_1_buffer_a46421065f0ce14edeab9c9bf86d14b51}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_a6f2ddede7edd0a3740871c8cf99c44fd}\label{classk_f_1_1_graphics_1_1_buffer_a6f2ddede7edd0a3740871c8cf99c44fd}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!````~Buffer@{$\sim$Buffer}}
+\index{````~Buffer@{$\sim$Buffer}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Buffer()}{~Buffer()}}
+{\footnotesize\ttfamily Graphics\+::\+Buffer\+::$\sim$\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_a72c6133563809461751e49a01455b289}\label{classk_f_1_1_graphics_1_1_buffer_a72c6133563809461751e49a01455b289}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!createBuffer@{createBuffer}}
+\index{createBuffer@{createBuffer}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{createBuffer()}{createBuffer()}}
+{\footnotesize\ttfamily void Graphics\+::\+Buffer\+::create\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_model}{Buffer\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the device buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_adbafcfe5c5cd8a69b787a2fc5783c0f7}\label{classk_f_1_1_graphics_1_1_buffer_adbafcfe5c5cd8a69b787a2fc5783c0f7}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}}\& k\+F\+::\+Graphics\+::\+Buffer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_buffer_8hpp}{Buffer.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_buffer_8cpp}{Buffer.\+cpp}}\end{DoxyCompactItemize}

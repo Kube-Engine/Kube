@@ -1,0 +1,269 @@
+\hypertarget{classk_f_1_1_application}{}\doxysection{kF\+::Application Class Reference}
+\label{classk_f_1_1_application}\index{kF::Application@{kF::Application}}
+
+
+Kube \mbox{\hyperlink{classk_f_1_1_application}{Application}}.  
+
+
+
+
+{\ttfamily \#include $<$Application.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Application\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classk_f_1_1_application__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_application_a6055c15e826d3a748d9f7de48979fd09}{Application}} (const char $\ast$name=\char`\"{}Kube \mbox{\hyperlink{classk_f_1_1_application}{Application}}\char`\"{}, const \mbox{\hyperlink{structk_f_1_1_version}{Version}} version=\mbox{\hyperlink{structk_f_1_1_version}{Version}}(0, 1, 0))
+\begin{DoxyCompactList}\small\item\em Construct the application. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_application_a9fad9fa3bba75c0c580bed48bfa0b9f5}{Application}} (\mbox{\hyperlink{classk_f_1_1_application}{Application}} \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classk_f_1_1_application_a3ae7e81534c6ca594339e3e098183df4}{$\sim$\+Application}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_application_aaf489cd96a237fb6b9b9c71d7791b3f5}{run}} (void)
+\begin{DoxyCompactList}\small\item\em Run the application in blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_application_a0554596b9cf945dc8e941407600adb93}{tick}} (void)
+\begin{DoxyCompactList}\small\item\em Tick the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_application_a7a9e487106abcd163331ad98910cc48f}{stop}} (void)
+\begin{DoxyCompactList}\small\item\em Stop the application. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer}} \& \mbox{\hyperlink{classk_f_1_1_application_a46db4dd4e90634c04fe57faa6065822c}{renderer}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get renderer. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer}} \& \mbox{\hyperlink{classk_f_1_1_application_ab77eb2f62758b66779fd2d5c6e4438f7}{renderer}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classk_f_1_1_application_a524d0b1b26c2c99ef5cd33bb8ba1011f}{on\+About\+To\+Run}} (void)
+\begin{DoxyCompactList}\small\item\em Virtual callback when application is about to run. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classk_f_1_1_application_af5f31c1abb23024f9121767a843e0d5e}{on\+About\+To\+Close}} (void)
+\begin{DoxyCompactList}\small\item\em Virtual callback when application is about to close. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classk_f_1_1_application_a9f3f9c6a578dee52d6e48774a626441d}{on\+Render}} (void)
+\begin{DoxyCompactList}\small\item\em Virtual callback when application is rendering a frame. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classk_f_1_1_application_a6f931f0ed05519899130b8662b42b1a9}{on\+Rendered}} (void)
+\begin{DoxyCompactList}\small\item\em Virtual callback when application frame is rendered (but still not presented) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_application_a03ececb9a69ce9af998f370468e0a034}{process\+Events}} (void)
+\begin{DoxyCompactList}\small\item\em Process application events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Graphics\+::\+Backend\+Window}} $\ast$ \mbox{\hyperlink{classk_f_1_1_application_a804eebe5518567148a27ed5a90dff961}{Create\+Backend\+Window}} (const char $\ast$application\+Name, const std\+::uint32\+\_\+t width, const std\+::uint32\+\_\+t height, const bool resizable)
+\begin{DoxyCompactList}\small\item\em Create a backend window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_s_d_l_initializer}{S\+D\+L\+Initializer}} \mbox{\hyperlink{classk_f_1_1_application_acf3ca90bfe035209d34f0053643aa49b}{\+\_\+sdl\+Initializer}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Graphics\+::\+Backend\+Window}} $\ast$ \mbox{\hyperlink{classk_f_1_1_application_a611dfe54647615918c6dec91659e5469}{\+\_\+window}} = nullptr
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{Graphics\+::\+Renderer\+::\+Global\+Instance}} \mbox{\hyperlink{classk_f_1_1_application_a494c1b6b0497a5ccfa9c8633f82d4592}{\+\_\+renderer}}
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_application_ada18721f9587b1219e5fade7088c7b3a}{\+\_\+running}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kube \mbox{\hyperlink{classk_f_1_1_application}{Application}}. 
+
+This class prepares and run at a high level of abstraction, a graphical application. As the Kube framework aims to be cross-\/platform, only a signle surface window can be instantied with it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_application_a6055c15e826d3a748d9f7de48979fd09}\label{classk_f_1_1_application_a6055c15e826d3a748d9f7de48979fd09}} 
+\index{kF::Application@{kF::Application}!Application@{Application}}
+\index{Application@{Application}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name = {\ttfamily \char`\"{}Kube~\mbox{\hyperlink{classk_f_1_1_application}{Application}}\char`\"{}},  }\item[{const \mbox{\hyperlink{structk_f_1_1_version}{Version}}}]{version = {\ttfamily \mbox{\hyperlink{structk_f_1_1_version}{Version}}(0,~1,~0)} }\end{DoxyParamCaption})}
+
+
+
+Construct the application. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_a9fad9fa3bba75c0c580bed48bfa0b9f5}\label{classk_f_1_1_application_a9fad9fa3bba75c0c580bed48bfa0b9f5}} 
+\index{kF::Application@{kF::Application}!Application@{Application}}
+\index{Application@{Application}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Application\+::\+Application (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_application}{Application}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_a3ae7e81534c6ca594339e3e098183df4}\label{classk_f_1_1_application_a3ae7e81534c6ca594339e3e098183df4}} 
+\index{kF::Application@{kF::Application}!````~Application@{$\sim$Application}}
+\index{````~Application@{$\sim$Application}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{$\sim$Application()}{~Application()}}
+{\footnotesize\ttfamily Application\+::$\sim$\+Application (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the application. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_application_a804eebe5518567148a27ed5a90dff961}\label{classk_f_1_1_application_a804eebe5518567148a27ed5a90dff961}} 
+\index{kF::Application@{kF::Application}!CreateBackendWindow@{CreateBackendWindow}}
+\index{CreateBackendWindow@{CreateBackendWindow}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{CreateBackendWindow()}{CreateBackendWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Graphics\+::\+Backend\+Window}} $\ast$ Application\+::\+Create\+Backend\+Window (\begin{DoxyParamCaption}\item[{const char $\ast$}]{application\+Name,  }\item[{const std\+::uint32\+\_\+t}]{width,  }\item[{const std\+::uint32\+\_\+t}]{height,  }\item[{const bool}]{resizable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Create a backend window. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_af5f31c1abb23024f9121767a843e0d5e}\label{classk_f_1_1_application_af5f31c1abb23024f9121767a843e0d5e}} 
+\index{kF::Application@{kF::Application}!onAboutToClose@{onAboutToClose}}
+\index{onAboutToClose@{onAboutToClose}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{onAboutToClose()}{onAboutToClose()}}
+{\footnotesize\ttfamily virtual void k\+F\+::\+Application\+::on\+About\+To\+Close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual callback when application is about to close. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_e_c_s_application_afcb8a36cb76c7af0b437a29d1fc52117}{k\+F\+::\+E\+C\+S\+Application}}.
+
+\mbox{\Hypertarget{classk_f_1_1_application_a524d0b1b26c2c99ef5cd33bb8ba1011f}\label{classk_f_1_1_application_a524d0b1b26c2c99ef5cd33bb8ba1011f}} 
+\index{kF::Application@{kF::Application}!onAboutToRun@{onAboutToRun}}
+\index{onAboutToRun@{onAboutToRun}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{onAboutToRun()}{onAboutToRun()}}
+{\footnotesize\ttfamily virtual void k\+F\+::\+Application\+::on\+About\+To\+Run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual callback when application is about to run. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_e_c_s_application_ad74395bc6dc2a84e191bd79aeff42c8d}{k\+F\+::\+E\+C\+S\+Application}}.
+
+\mbox{\Hypertarget{classk_f_1_1_application_a9f3f9c6a578dee52d6e48774a626441d}\label{classk_f_1_1_application_a9f3f9c6a578dee52d6e48774a626441d}} 
+\index{kF::Application@{kF::Application}!onRender@{onRender}}
+\index{onRender@{onRender}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{onRender()}{onRender()}}
+{\footnotesize\ttfamily virtual void k\+F\+::\+Application\+::on\+Render (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual callback when application is rendering a frame. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_e_c_s_application_ad5e44c20a57c9490b41b30ef84c3f9e2}{k\+F\+::\+E\+C\+S\+Application}}.
+
+\mbox{\Hypertarget{classk_f_1_1_application_a6f931f0ed05519899130b8662b42b1a9}\label{classk_f_1_1_application_a6f931f0ed05519899130b8662b42b1a9}} 
+\index{kF::Application@{kF::Application}!onRendered@{onRendered}}
+\index{onRendered@{onRendered}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{onRendered()}{onRendered()}}
+{\footnotesize\ttfamily virtual void k\+F\+::\+Application\+::on\+Rendered (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual callback when application frame is rendered (but still not presented) 
+
+
+
+Reimplemented in \mbox{\hyperlink{classk_f_1_1_e_c_s_application_a5237f57030ecff1c37e986065cac2c62}{k\+F\+::\+E\+C\+S\+Application}}.
+
+\mbox{\Hypertarget{classk_f_1_1_application_a03ececb9a69ce9af998f370468e0a034}\label{classk_f_1_1_application_a03ececb9a69ce9af998f370468e0a034}} 
+\index{kF::Application@{kF::Application}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}}
+{\footnotesize\ttfamily void Application\+::process\+Events (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Process application events. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_ab77eb2f62758b66779fd2d5c6e4438f7}\label{classk_f_1_1_application_ab77eb2f62758b66779fd2d5c6e4438f7}} 
+\index{kF::Application@{kF::Application}!renderer@{renderer}}
+\index{renderer@{renderer}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{renderer()}{renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer}}\& k\+F\+::\+Application\+::renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_application_a46db4dd4e90634c04fe57faa6065822c}\label{classk_f_1_1_application_a46db4dd4e90634c04fe57faa6065822c}} 
+\index{kF::Application@{kF::Application}!renderer@{renderer}}
+\index{renderer@{renderer}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{renderer()}{renderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Graphics\+::\+Renderer}}\& k\+F\+::\+Application\+::renderer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get renderer. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_aaf489cd96a237fb6b9b9c71d7791b3f5}\label{classk_f_1_1_application_aaf489cd96a237fb6b9b9c71d7791b3f5}} 
+\index{kF::Application@{kF::Application}!run@{run}}
+\index{run@{run}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Application\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Run the application in blocking mode. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_a7a9e487106abcd163331ad98910cc48f}\label{classk_f_1_1_application_a7a9e487106abcd163331ad98910cc48f}} 
+\index{kF::Application@{kF::Application}!stop@{stop}}
+\index{stop@{stop}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Application\+::stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Stop the application. 
+
+\mbox{\Hypertarget{classk_f_1_1_application_a0554596b9cf945dc8e941407600adb93}\label{classk_f_1_1_application_a0554596b9cf945dc8e941407600adb93}} 
+\index{kF::Application@{kF::Application}!tick@{tick}}
+\index{tick@{tick}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void k\+F\+::\+Application\+::tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tick the application. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_application}{Application}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_application_a494c1b6b0497a5ccfa9c8633f82d4592}\label{classk_f_1_1_application_a494c1b6b0497a5ccfa9c8633f82d4592}} 
+\index{kF::Application@{kF::Application}!\_renderer@{\_renderer}}
+\index{\_renderer@{\_renderer}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{\_renderer}{\_renderer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{Graphics\+::\+Renderer\+::\+Global\+Instance}} k\+F\+::\+Application\+::\+\_\+renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_application_ada18721f9587b1219e5fade7088c7b3a}\label{classk_f_1_1_application_ada18721f9587b1219e5fade7088c7b3a}} 
+\index{kF::Application@{kF::Application}!\_running@{\_running}}
+\index{\_running@{\_running}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
+{\footnotesize\ttfamily bool k\+F\+::\+Application\+::\+\_\+running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_application_acf3ca90bfe035209d34f0053643aa49b}\label{classk_f_1_1_application_acf3ca90bfe035209d34f0053643aa49b}} 
+\index{kF::Application@{kF::Application}!\_sdlInitializer@{\_sdlInitializer}}
+\index{\_sdlInitializer@{\_sdlInitializer}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{\_sdlInitializer}{\_sdlInitializer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_s_d_l_initializer}{S\+D\+L\+Initializer}} k\+F\+::\+Application\+::\+\_\+sdl\+Initializer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_application_a611dfe54647615918c6dec91659e5469}\label{classk_f_1_1_application_a611dfe54647615918c6dec91659e5469}} 
+\index{kF::Application@{kF::Application}!\_window@{\_window}}
+\index{\_window@{\_window}!kF::Application@{kF::Application}}
+\doxysubsubsection{\texorpdfstring{\_window}{\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Graphics\+::\+Backend\+Window}}$\ast$ k\+F\+::\+Application\+::\+\_\+window = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+App/\mbox{\hyperlink{_application_8hpp}{Application.\+hpp}}\item 
+Kube/\+App/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\item 
+Kube/\+App/\mbox{\hyperlink{_application_8ipp}{Application.\+ipp}}\end{DoxyCompactItemize}

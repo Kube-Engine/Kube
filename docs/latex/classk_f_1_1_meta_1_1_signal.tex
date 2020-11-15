@@ -1,0 +1,181 @@
+\hypertarget{classk_f_1_1_meta_1_1_signal}{}\doxysection{kF\+::Meta\+::Signal Class Reference}
+\label{classk_f_1_1_meta_1_1_signal}\index{kF::Meta::Signal@{kF::Meta::Signal}}
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} is used to store meta-\/data about a free / member / static function.  
+
+
+
+
+{\ttfamily \#include $<$Signal.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_signal_1_1_descriptor}{Descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a4428b2b1223b64d003bf25a017fc3d32}{Signal}} (\mbox{\hyperlink{structk_f_1_1_meta_1_1_signal_1_1_descriptor}{Descriptor}} $\ast$desc=nullptr) noexcept
+\begin{DoxyCompactList}\small\item\em Construct passing a descriptor instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a30005cadad03765fd285f2f07c511cb1}{Signal}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a0aa7711ca7f01b140e20768ffe78ce3f}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a2759369b1e5c53f3ba9e6a992f39a608}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast valid check. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a91c5529e62422f918900b0dfd6d51018}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_ae3e05bc1573141fb3ec361c417ed09a6}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&other) const noexcept
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}{Internal\+::\+Opaque\+Function}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a6b1e3c4721256ca42c67a4a241eb2549}{signal\+Ptr}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive signal\textquotesingle{}s pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_abb9a0e533002346f97b4812b8949226e}{name}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive signal\textquotesingle{}s name. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a1a22a3e83c4fa084222eec65cf2e6404}{args\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive signal\textquotesingle{}s argument count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_ac52ba037a1f1f2833f5af85ee5d4c3ed}{Get\+Slot\+Table}} (void)
+\begin{DoxyCompactList}\small\item\em Get the unique default slot table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_meta_1_1_signal_1_1_descriptor}{Descriptor}} $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_a32b95522c5e7bae11e527c35c7d4eac7}{\+\_\+desc}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_acd4608b186e1a51598c87da41356011e}{\+\_\+\+Slot\+Table}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} is used to store meta-\/data about a free / member / static function. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}
+
+Each signal is attached to a class. \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} aren\textquotesingle{}t thread safe. However, each class is separated from others\+: you can use two classes\textquotesingle{} signals on two different threads 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a4428b2b1223b64d003bf25a017fc3d32}\label{classk_f_1_1_meta_1_1_signal_a4428b2b1223b64d003bf25a017fc3d32}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!Signal@{Signal}}
+\index{Signal@{Signal}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{Signal()}{Signal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Signal\+::\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_meta_1_1_signal_1_1_descriptor}{Descriptor}} $\ast$}]{desc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct passing a descriptor instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a30005cadad03765fd285f2f07c511cb1}\label{classk_f_1_1_meta_1_1_signal_a30005cadad03765fd285f2f07c511cb1}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!Signal@{Signal}}
+\index{Signal@{Signal}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{Signal()}{Signal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Signal\+::\+Signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a1a22a3e83c4fa084222eec65cf2e6404}\label{classk_f_1_1_meta_1_1_signal_a1a22a3e83c4fa084222eec65cf2e6404}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!argsCount@{argsCount}}
+\index{argsCount@{argsCount}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{argsCount()}{argsCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Meta\+::\+Signal\+::args\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive signal\textquotesingle{}s argument count. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_ac52ba037a1f1f2833f5af85ee5d4c3ed}\label{classk_f_1_1_meta_1_1_signal_ac52ba037a1f1f2833f5af85ee5d4c3ed}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!GetSlotTable@{GetSlotTable}}
+\index{GetSlotTable@{GetSlotTable}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{GetSlotTable()}{GetSlotTable()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}}\& k\+F\+::\+Meta\+::\+Signal\+::\+Get\+Slot\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the unique default slot table. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_abb9a0e533002346f97b4812b8949226e}\label{classk_f_1_1_meta_1_1_signal_abb9a0e533002346f97b4812b8949226e}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!name@{name}}
+\index{name@{name}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Meta\+::\+Signal\+::name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive signal\textquotesingle{}s name. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a2759369b1e5c53f3ba9e6a992f39a608}\label{classk_f_1_1_meta_1_1_signal_a2759369b1e5c53f3ba9e6a992f39a608}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Signal\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast valid check. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_ae3e05bc1573141fb3ec361c417ed09a6}\label{classk_f_1_1_meta_1_1_signal_ae3e05bc1573141fb3ec361c417ed09a6}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Signal\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a0aa7711ca7f01b140e20768ffe78ce3f}\label{classk_f_1_1_meta_1_1_signal_a0aa7711ca7f01b140e20768ffe78ce3f}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}\& k\+F\+::\+Meta\+::\+Signal\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a91c5529e62422f918900b0dfd6d51018}\label{classk_f_1_1_meta_1_1_signal_a91c5529e62422f918900b0dfd6d51018}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Signal\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Compare operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a6b1e3c4721256ca42c67a4a241eb2549}\label{classk_f_1_1_meta_1_1_signal_a6b1e3c4721256ca42c67a4a241eb2549}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!signalPtr@{signalPtr}}
+\index{signalPtr@{signalPtr}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{signalPtr()}{signalPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}{Internal\+::\+Opaque\+Function}} k\+F\+::\+Meta\+::\+Signal\+::signal\+Ptr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive signal\textquotesingle{}s pointer. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_a32b95522c5e7bae11e527c35c7d4eac7}\label{classk_f_1_1_meta_1_1_signal_a32b95522c5e7bae11e527c35c7d4eac7}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_meta_1_1_signal_1_1_descriptor}{Descriptor}}$\ast$ k\+F\+::\+Meta\+::\+Signal\+::\+\_\+desc = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_signal_acd4608b186e1a51598c87da41356011e}\label{classk_f_1_1_meta_1_1_signal_acd4608b186e1a51598c87da41356011e}} 
+\index{kF::Meta::Signal@{kF::Meta::Signal}!\_SlotTable@{\_SlotTable}}
+\index{\_SlotTable@{\_SlotTable}!kF::Meta::Signal@{kF::Meta::Signal}}
+\doxysubsubsection{\texorpdfstring{\_SlotTable}{\_SlotTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}} k\+F\+::\+Meta\+::\+Signal\+::\+\_\+\+Slot\+Table \{\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_signal_8hpp}{Signal.\+hpp}}\end{DoxyCompactItemize}

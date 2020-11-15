@@ -1,0 +1,132 @@
+\hypertarget{classk_f_1_1_graphics_1_1_physical_device}{}\doxysection{kF\+::Graphics\+::Physical\+Device Class Reference}
+\label{classk_f_1_1_graphics_1_1_physical_device}\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+
+
+A physical device represent a G\+PU card in the computer.  
+
+
+
+
+{\ttfamily \#include $<$Physical\+Device.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Physical\+Device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_physical_device__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}{Devices}} = \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ \mbox{\hyperlink{namespacek_f_1_1_graphics_a1ca71c5b9ed26e7e29df8192df3b68ef}{Physical\+Device\+Handle}} $>$
+\begin{DoxyCompactList}\small\item\em A list of vulkan devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a374150a3dfc384c20e8a1929193674e3}{Physical\+Device}} (void)
+\begin{DoxyCompactList}\small\item\em Construct a physical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a5b990e71af097ba30eb15fe8f64d7f9d}{Physical\+Device}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a703c2276a7e96c1cf0339e4dd0a05c0c}{$\sim$\+Physical\+Device}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destruct the physical device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_af42a93d38fc531aab02402874bf33c0c}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}{Devices}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a0af4de042f977666a4fc557841840cf9}{get\+Devices}} (void) const
+\begin{DoxyCompactList}\small\item\em Get the list of physical devices available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a0ec27675e13b8bcd53844ca351eb7d91}{select\+Device}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}{Devices}} \&devices)
+\begin{DoxyCompactList}\small\item\em Select the best physical device to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A physical device represent a G\+PU card in the computer. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}\label{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!Devices@{Devices}}
+\index{Devices@{Devices}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{Devices}{Devices}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}{k\+F\+::\+Graphics\+::\+Physical\+Device\+::\+Devices}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$\mbox{\hyperlink{namespacek_f_1_1_graphics_a1ca71c5b9ed26e7e29df8192df3b68ef}{Physical\+Device\+Handle}}$>$}
+
+
+
+A list of vulkan devices. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_a374150a3dfc384c20e8a1929193674e3}\label{classk_f_1_1_graphics_1_1_physical_device_a374150a3dfc384c20e8a1929193674e3}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!PhysicalDevice@{PhysicalDevice}}
+\index{PhysicalDevice@{PhysicalDevice}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{PhysicalDevice()}{PhysicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graphics\+::\+Physical\+Device\+::\+Physical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Construct a physical device. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_a5b990e71af097ba30eb15fe8f64d7f9d}\label{classk_f_1_1_graphics_1_1_physical_device_a5b990e71af097ba30eb15fe8f64d7f9d}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!PhysicalDevice@{PhysicalDevice}}
+\index{PhysicalDevice@{PhysicalDevice}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{PhysicalDevice()}{PhysicalDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Physical\+Device\+::\+Physical\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_a703c2276a7e96c1cf0339e4dd0a05c0c}\label{classk_f_1_1_graphics_1_1_physical_device_a703c2276a7e96c1cf0339e4dd0a05c0c}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!````~PhysicalDevice@{$\sim$PhysicalDevice}}
+\index{````~PhysicalDevice@{$\sim$PhysicalDevice}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{$\sim$PhysicalDevice()}{~PhysicalDevice()}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Physical\+Device\+::$\sim$\+Physical\+Device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destruct the physical device. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_a0af4de042f977666a4fc557841840cf9}\label{classk_f_1_1_graphics_1_1_physical_device_a0af4de042f977666a4fc557841840cf9}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!getDevices@{getDevices}}
+\index{getDevices@{getDevices}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{getDevices()}{getDevices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}{Graphics\+::\+Physical\+Device\+::\+Devices}} Graphics\+::\+Physical\+Device\+::get\+Devices (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get the list of physical devices available. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_af42a93d38fc531aab02402874bf33c0c}\label{classk_f_1_1_graphics_1_1_physical_device_af42a93d38fc531aab02402874bf33c0c}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}}\& k\+F\+::\+Graphics\+::\+Physical\+Device\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device}{Physical\+Device}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_physical_device_a0ec27675e13b8bcd53844ca351eb7d91}\label{classk_f_1_1_graphics_1_1_physical_device_a0ec27675e13b8bcd53844ca351eb7d91}} 
+\index{kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}!selectDevice@{selectDevice}}
+\index{selectDevice@{selectDevice}!kF::Graphics::PhysicalDevice@{kF::Graphics::PhysicalDevice}}
+\doxysubsubsection{\texorpdfstring{selectDevice()}{selectDevice()}}
+{\footnotesize\ttfamily void Graphics\+::\+Physical\+Device\+::select\+Device (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_physical_device_a037c773e90bb96f77a3aba2675fdb9fe}{Devices}} \&}]{devices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Select the best physical device to use. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_physical_device_8hpp}{Physical\+Device.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_physical_device_8cpp}{Physical\+Device.\+cpp}}\end{DoxyCompactItemize}

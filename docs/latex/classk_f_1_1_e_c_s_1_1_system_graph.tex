@@ -1,0 +1,210 @@
+\hypertarget{classk_f_1_1_e_c_s_1_1_system_graph}{}\doxysection{kF\+::E\+CS\+::System\+Graph$<$ Entity\+Type $>$ Class Template Reference}
+\label{classk_f_1_1_e_c_s_1_1_system_graph}\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+
+
+A \mbox{\hyperlink{namespacek_f_1_1_flow}{Flow}} Graph of system(s)  
+
+
+
+
+{\ttfamily \#include $<$System\+Graph.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a80349478fe896f9dfdf262fe9abf0f03}{System\+Graph}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Construct the System Graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a6e6127f66bc6abb56e36cc8daffc528c}{$\sim$\+System\+Graph}} (void)=default
+\begin{DoxyCompactList}\small\item\em Destruct the System Graph. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename System , typename... Args$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$ Entity\+Type $>$ $>$ \&\&std\+::constructible\+\_\+from$<$ System, Args... $>$ System \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a7a6229a13177b3961ebb56de02ad5028}{add}} (Args \&\&... args) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ System \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$)
+\begin{DoxyCompactList}\small\item\em Add a System to the Graph. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename System $>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$ Entity\+Type $>$ $>$ bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a150a879f664fb64dece938f56696c19b}{exists}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if a system is registered. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename System $>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$ Entity\+Type $>$ $>$ System \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a03a24875f2df32681c6206be6d97d37f}{get}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Retrieve a System in the Graph. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename System $>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$ Entity\+Type $>$ $>$ const System \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a7cc99f9423be2087ac15a147be831a1f}{get}} (void) const noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Retrieve a System in the Graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a8abcffa530ccbe7022b84ad75b2598a8}{build}} (\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}$<$ Entity\+Type $>$ \&registry)
+\begin{DoxyCompactList}\small\item\em Setup and build the system graph according to internal system dependencies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a8cc5721db3fa7eff12e6578d987291b9}{clear}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Clear all Systems from the Graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a69c66589d744233bec552ca2db40b69c}{graph}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s internal Graph. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a7f6a1fc47a05ceb2c8bb62e2e4708f73}{graph}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s internal Graph. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename System $>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$ $>$ bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a0eaad77b2a1522a5ea6420f5a67c8503}{exists}} (void) const noexcept
+\item 
+{\footnotesize template$<$typename System $>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$ $>$ const System \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a6a6ba9734064728cd19f35992c253562}{get}} (void) const \mbox{\hyperlink{_assert_8hpp_a2907659acb7f16cc3dba12d59b613d70}{noexcept\+\_\+ndebug}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a2c1286bf087795ee870af85d64aa284a}{\+\_\+graph}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a19cc5c433595e9c0d97251c048cbdb90}{k\+F\+::\+E\+C\+S\+::\+System\+Ptr}}$<$ Entity\+Type $>$ $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph_a26897564ccd1630c216646cdf827cf8a}{\+\_\+systems}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$\newline
+class k\+F\+::\+E\+C\+S\+::\+System\+Graph$<$ Entity\+Type $>$}
+
+A \mbox{\hyperlink{namespacek_f_1_1_flow}{Flow}} Graph of system(s) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a80349478fe896f9dfdf262fe9abf0f03}\label{classk_f_1_1_e_c_s_1_1_system_graph_a80349478fe896f9dfdf262fe9abf0f03}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!SystemGraph@{SystemGraph}}
+\index{SystemGraph@{SystemGraph}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{SystemGraph()}{SystemGraph()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Construct the System Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a6e6127f66bc6abb56e36cc8daffc528c}\label{classk_f_1_1_e_c_s_1_1_system_graph_a6e6127f66bc6abb56e36cc8daffc528c}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!````~SystemGraph@{$\sim$SystemGraph}}
+\index{````~SystemGraph@{$\sim$SystemGraph}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SystemGraph()}{~SystemGraph()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destruct the System Graph. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a7a6229a13177b3961ebb56de02ad5028}\label{classk_f_1_1_e_c_s_1_1_system_graph_a7a6229a13177b3961ebb56de02ad5028}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!add@{add}}
+\index{add@{add}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename System , typename... Args$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$ System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$ $>$ \&\&std\+::constructible\+\_\+from$<$ System, Args... $>$ System \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::add (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add a System to the Graph. 
+
+@ Author\+: Léos Julien @ Description\+: A \mbox{\hyperlink{namespacek_f_1_1_flow}{Flow}} Graph of System(s) \mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a8abcffa530ccbe7022b84ad75b2598a8}\label{classk_f_1_1_e_c_s_1_1_system_graph_a8abcffa530ccbe7022b84ad75b2598a8}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!build@{build}}
+\index{build@{build}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}$<$ Entity\+Type $>$ \&}]{registry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setup and build the system graph according to internal system dependencies. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a8cc5721db3fa7eff12e6578d987291b9}\label{classk_f_1_1_e_c_s_1_1_system_graph_a8cc5721db3fa7eff12e6578d987291b9}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!clear@{clear}}
+\index{clear@{clear}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Clear all Systems from the Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a150a879f664fb64dece938f56696c19b}\label{classk_f_1_1_e_c_s_1_1_system_graph_a150a879f664fb64dece938f56696c19b}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!exists@{exists}}
+\index{exists@{exists}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename System $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$Entity\+Type$>$ $>$ bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::exists (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Check if a system is registered. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a0eaad77b2a1522a5ea6420f5a67c8503}\label{classk_f_1_1_e_c_s_1_1_system_graph_a0eaad77b2a1522a5ea6420f5a67c8503}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!exists@{exists}}
+\index{exists@{exists}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename System $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$Entity\+Type$>$ $>$ bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::exists (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a7cc99f9423be2087ac15a147be831a1f}\label{classk_f_1_1_e_c_s_1_1_system_graph_a7cc99f9423be2087ac15a147be831a1f}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!get@{get}}
+\index{get@{get}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename System $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$Entity\+Type$>$ $>$ const System\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Retrieve a System in the Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a6a6ba9734064728cd19f35992c253562}\label{classk_f_1_1_e_c_s_1_1_system_graph_a6a6ba9734064728cd19f35992c253562}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!get@{get}}
+\index{get@{get}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename System $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$Entity\+Type$>$ $>$ const System\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a03a24875f2df32681c6206be6d97d37f}\label{classk_f_1_1_e_c_s_1_1_system_graph_a03a24875f2df32681c6206be6d97d37f}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!get@{get}}
+\index{get@{get}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename System $>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} std\+::derived\+\_\+from$<$System, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$Entity\+Type$>$ $>$ System\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retrieve a System in the Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a7f6a1fc47a05ceb2c8bb62e2e4708f73}\label{classk_f_1_1_e_c_s_1_1_system_graph_a7f6a1fc47a05ceb2c8bb62e2e4708f73}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!graph@{graph}}
+\index{graph@{graph}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s internal Graph. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a69c66589d744233bec552ca2db40b69c}\label{classk_f_1_1_e_c_s_1_1_system_graph_a69c66589d744233bec552ca2db40b69c}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!graph@{graph}}
+\index{graph@{graph}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}}\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get system\textquotesingle{}s internal Graph. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a2c1286bf087795ee870af85d64aa284a}\label{classk_f_1_1_e_c_s_1_1_system_graph_a2c1286bf087795ee870af85d64aa284a}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!\_graph@{\_graph}}
+\index{\_graph@{\_graph}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_graph}{\_graph}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{k\+F\+::\+Flow\+::\+Graph}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::\+\_\+graph \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_system_graph_a26897564ccd1630c216646cdf827cf8a}\label{classk_f_1_1_e_c_s_1_1_system_graph_a26897564ccd1630c216646cdf827cf8a}} 
+\index{kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}!\_systems@{\_systems}}
+\index{\_systems@{\_systems}!kF::ECS::SystemGraph$<$ EntityType $>$@{kF::ECS::SystemGraph$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_systems}{\_systems}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a19cc5c433595e9c0d97251c048cbdb90}{k\+F\+::\+E\+C\+S\+::\+System\+Ptr}}$<$Entity\+Type$>$ $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{k\+F\+::\+E\+C\+S\+::\+System\+Graph}}$<$ Entity\+Type $>$\+::\+\_\+systems \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_system_graph_8hpp}{System\+Graph.\+hpp}}\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_system_graph_8ipp}{System\+Graph.\+ipp}}\end{DoxyCompactItemize}

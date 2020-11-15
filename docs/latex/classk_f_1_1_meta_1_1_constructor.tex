@@ -1,0 +1,206 @@
+\hypertarget{classk_f_1_1_meta_1_1_constructor}{}\doxysection{kF\+::Meta\+::Constructor Class Reference}
+\label{classk_f_1_1_meta_1_1_constructor}\index{kF::Meta::Constructor@{kF::Meta::Constructor}}
+
+
+{\ttfamily \#include $<$Constructor.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_constructor_1_1_descriptor}{Descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a8132dbe1cd68d52adc0ffb41e69ae2bc}{Invoke\+Func}} = bool($\ast$)(void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_ad9285a1a2c71d78e90ca7ebe82fcfeb3}{Arg\+Type\+Func}} = \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}($\ast$)(const std\+::size\+\_\+t) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a38b8a46281de0c49c25e903090eed6ac}{Constructor}} (const \mbox{\hyperlink{structk_f_1_1_meta_1_1_constructor_1_1_descriptor}{Descriptor}} $\ast$desc=nullptr) noexcept
+\begin{DoxyCompactList}\small\item\em Construct passing a descriptor instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a5bac1a59423e887d7a4506b5a6792a42}{Constructor}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a0ec5bece4b6fe1037ffb28d5dd10e06a}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_aae0815e34aff0261af4e8df017407ea4}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast valid check. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a0bbde0fcc2fb08959373449ec84487f5}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a5376703d8a0269226f45a7c8af4a83e1}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&other) const noexcept
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a279f2354d92a1111722949b43e5f6c4f}{args\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive arguments count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a66b7bbbcb78e9466bd20d30f652114ce}{arg\+Type}} (const std\+::size\+\_\+t index) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive an argument type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a2b06f39c2dc94c20d852c4ca35f0efa2}{type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Underlying constructor type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a9ebf35067dea26d68e852a1f905432c9}{invoke}} (Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em Invoke a constructor into a var instance. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a05204e9ba7729ee350c66e3f09625a99}{invoke}} (void $\ast$instance, Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em Invoke a constructor on the given instance ~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a3accc33b890b31ae82254d99e60bfd87}{invoke}} (Args \&\&...args) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structk_f_1_1_meta_1_1_constructor_1_1_descriptor}{Descriptor}} $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_aedb68c72958f3543feb634e02e9b3267}{\+\_\+desc}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} custom constructor 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_ad9285a1a2c71d78e90ca7ebe82fcfeb3}\label{classk_f_1_1_meta_1_1_constructor_ad9285a1a2c71d78e90ca7ebe82fcfeb3}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!ArgTypeFunc@{ArgTypeFunc}}
+\index{ArgTypeFunc@{ArgTypeFunc}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{ArgTypeFunc}{ArgTypeFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_ad9285a1a2c71d78e90ca7ebe82fcfeb3}{k\+F\+::\+Meta\+::\+Constructor\+::\+Arg\+Type\+Func}} =  \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}($\ast$)(const std\+::size\+\_\+t) noexcept}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a8132dbe1cd68d52adc0ffb41e69ae2bc}\label{classk_f_1_1_meta_1_1_constructor_a8132dbe1cd68d52adc0ffb41e69ae2bc}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!InvokeFunc@{InvokeFunc}}
+\index{InvokeFunc@{InvokeFunc}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{InvokeFunc}{InvokeFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor_a8132dbe1cd68d52adc0ffb41e69ae2bc}{k\+F\+::\+Meta\+::\+Constructor\+::\+Invoke\+Func}} =  bool($\ast$)(void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$)}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a38b8a46281de0c49c25e903090eed6ac}\label{classk_f_1_1_meta_1_1_constructor_a38b8a46281de0c49c25e903090eed6ac}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!Constructor@{Constructor}}
+\index{Constructor@{Constructor}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{Constructor()}{Constructor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Constructor\+::\+Constructor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_meta_1_1_constructor_1_1_descriptor}{Descriptor}} $\ast$}]{desc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct passing a descriptor instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a5bac1a59423e887d7a4506b5a6792a42}\label{classk_f_1_1_meta_1_1_constructor_a5bac1a59423e887d7a4506b5a6792a42}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!Constructor@{Constructor}}
+\index{Constructor@{Constructor}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{Constructor()}{Constructor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Constructor\+::\+Constructor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a279f2354d92a1111722949b43e5f6c4f}\label{classk_f_1_1_meta_1_1_constructor_a279f2354d92a1111722949b43e5f6c4f}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!argsCount@{argsCount}}
+\index{argsCount@{argsCount}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{argsCount()}{argsCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Meta\+::\+Constructor\+::args\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive arguments count. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a66b7bbbcb78e9466bd20d30f652114ce}\label{classk_f_1_1_meta_1_1_constructor_a66b7bbbcb78e9466bd20d30f652114ce}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!argType@{argType}}
+\index{argType@{argType}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{argType()}{argType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Constructor\+::arg\+Type (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive an argument type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a9ebf35067dea26d68e852a1f905432c9}\label{classk_f_1_1_meta_1_1_constructor_a9ebf35067dea26d68e852a1f905432c9}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Constructor\+::invoke (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const}
+
+
+
+Invoke a constructor into a var instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a3accc33b890b31ae82254d99e60bfd87}\label{classk_f_1_1_meta_1_1_constructor_a3accc33b890b31ae82254d99e60bfd87}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Constructor\+::invoke (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a05204e9ba7729ee350c66e3f09625a99}\label{classk_f_1_1_meta_1_1_constructor_a05204e9ba7729ee350c66e3f09625a99}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+bool k\+F\+::\+Meta\+::\+Constructor\+::invoke (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invoke a constructor on the given instance ~\newline
+ 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_aae0815e34aff0261af4e8df017407ea4}\label{classk_f_1_1_meta_1_1_constructor_aae0815e34aff0261af4e8df017407ea4}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Constructor\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast valid check. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a5376703d8a0269226f45a7c8af4a83e1}\label{classk_f_1_1_meta_1_1_constructor_a5376703d8a0269226f45a7c8af4a83e1}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Constructor\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a0ec5bece4b6fe1037ffb28d5dd10e06a}\label{classk_f_1_1_meta_1_1_constructor_a0ec5bece4b6fe1037ffb28d5dd10e06a}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}}\& k\+F\+::\+Meta\+::\+Constructor\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a0bbde0fcc2fb08959373449ec84487f5}\label{classk_f_1_1_meta_1_1_constructor_a0bbde0fcc2fb08959373449ec84487f5}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Constructor\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Compare operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_a2b06f39c2dc94c20d852c4ca35f0efa2}\label{classk_f_1_1_meta_1_1_constructor_a2b06f39c2dc94c20d852c4ca35f0efa2}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!type@{type}}
+\index{type@{type}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Constructor\+::type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Underlying constructor type. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_constructor_aedb68c72958f3543feb634e02e9b3267}\label{classk_f_1_1_meta_1_1_constructor_aedb68c72958f3543feb634e02e9b3267}} 
+\index{kF::Meta::Constructor@{kF::Meta::Constructor}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!kF::Meta::Constructor@{kF::Meta::Constructor}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_meta_1_1_constructor_1_1_descriptor}{Descriptor}}$\ast$ k\+F\+::\+Meta\+::\+Constructor\+::\+\_\+desc = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_constructor_8hpp}{Constructor.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_constructor_8ipp}{Constructor.\+ipp}}\end{DoxyCompactItemize}

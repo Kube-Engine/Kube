@@ -1,0 +1,248 @@
+\hypertarget{classk_f_1_1_meta_1_1_function}{}\doxysection{kF\+::Meta\+::Function Class Reference}
+\label{classk_f_1_1_meta_1_1_function}\index{kF::Meta::Function@{kF::Meta::Function}}
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} is used to store meta-\/data about a free / member / static function.  
+
+
+
+
+{\ttfamily \#include $<$Function.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_function_1_1_descriptor}{Descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a084d47f7561e70b4b67929cf0d8d90e1}{Invoke\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_af24018dc0733f82eecfce631fb717ce2}{Arg\+Type\+Func}} = \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}($\ast$)(const std\+::size\+\_\+t) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function_ae57b2d03014ec65636001ebec50a2b0f}{Function}} (const \mbox{\hyperlink{structk_f_1_1_meta_1_1_function_1_1_descriptor}{Descriptor}} $\ast$desc=nullptr) noexcept
+\begin{DoxyCompactList}\small\item\em Construct passing a descriptor instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function_ae695fa4d1865be636e1622ff2189d353}{Function}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a47b9c3d24000a7ae0ab8d81acace85b4}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a3f5a877c1d3b439f4601334e1986c048}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast valid check. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a2e608533dc9c70b101a7e990bda4498f}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a3db40d5997a887e6ae1a0d53c0120625}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&other) const noexcept
+\item 
+\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_abcd45c8ebe966026b45b97b2b16b1b09}{name}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive function\textquotesingle{}s name. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_ab37f40b3316d8be093cdc5ece7f44dba}{args\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive arguments count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a7bd7557e98237932ff4c80dd58566366}{arg\+Type}} (const std\+::size\+\_\+t index) const noexcept
+\begin{DoxyCompactList}\small\item\em Retreive an argument type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a51b3b59beb2710739a34e640257a610f}{is\+Static}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the underlying function is static. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_adc497706b4567ab5bc5811ee035089dc}{is\+Const}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the underlying function is a const-\/member. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a3b8dd004d7b9a318953244f27d220b46}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&instance, Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em Invoke a member function using a var instance. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a52877b3d56d3c4958de0b2af84960331}{invoke}} (const void $\ast$instance, Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em Invoke a member function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a8f39ef8e67f601111530c1cb3b2fced7}{invoke}} (Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em Invoke a static function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_ad81da7439f0dce46d6014afa3fb9850a}{invoke}} (const void $\ast$instance, Args \&\&...args) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structk_f_1_1_meta_1_1_function_1_1_descriptor}{Descriptor}} $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a726838a21378be28e3ad33e35f2574cd}{\+\_\+desc}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} is used to store meta-\/data about a free / member / static function. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_af24018dc0733f82eecfce631fb717ce2}\label{classk_f_1_1_meta_1_1_function_af24018dc0733f82eecfce631fb717ce2}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!ArgTypeFunc@{ArgTypeFunc}}
+\index{ArgTypeFunc@{ArgTypeFunc}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{ArgTypeFunc}{ArgTypeFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_af24018dc0733f82eecfce631fb717ce2}{k\+F\+::\+Meta\+::\+Function\+::\+Arg\+Type\+Func}} =  \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}($\ast$)(const std\+::size\+\_\+t) noexcept}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a084d47f7561e70b4b67929cf0d8d90e1}\label{classk_f_1_1_meta_1_1_function_a084d47f7561e70b4b67929cf0d8d90e1}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!InvokeFunc@{InvokeFunc}}
+\index{InvokeFunc@{InvokeFunc}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{InvokeFunc}{InvokeFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_function_a084d47f7561e70b4b67929cf0d8d90e1}{k\+F\+::\+Meta\+::\+Function\+::\+Invoke\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$)}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_ae57b2d03014ec65636001ebec50a2b0f}\label{classk_f_1_1_meta_1_1_function_ae57b2d03014ec65636001ebec50a2b0f}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!Function@{Function}}
+\index{Function@{Function}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{Function()}{Function()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Function\+::\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_meta_1_1_function_1_1_descriptor}{Descriptor}} $\ast$}]{desc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct passing a descriptor instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_ae695fa4d1865be636e1622ff2189d353}\label{classk_f_1_1_meta_1_1_function_ae695fa4d1865be636e1622ff2189d353}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!Function@{Function}}
+\index{Function@{Function}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{Function()}{Function()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Function\+::\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_ab37f40b3316d8be093cdc5ece7f44dba}\label{classk_f_1_1_meta_1_1_function_ab37f40b3316d8be093cdc5ece7f44dba}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!argsCount@{argsCount}}
+\index{argsCount@{argsCount}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{argsCount()}{argsCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Meta\+::\+Function\+::args\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive arguments count. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a7bd7557e98237932ff4c80dd58566366}\label{classk_f_1_1_meta_1_1_function_a7bd7557e98237932ff4c80dd58566366}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!argType@{argType}}
+\index{argType@{argType}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{argType()}{argType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Function\+::arg\+Type (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive an argument type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a8f39ef8e67f601111530c1cb3b2fced7}\label{classk_f_1_1_meta_1_1_function_a8f39ef8e67f601111530c1cb3b2fced7}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Function\+::invoke (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invoke a static function. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a3b8dd004d7b9a318953244f27d220b46}\label{classk_f_1_1_meta_1_1_function_a3b8dd004d7b9a318953244f27d220b46}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Function\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{instance,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invoke a member function using a var instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a52877b3d56d3c4958de0b2af84960331}\label{classk_f_1_1_meta_1_1_function_a52877b3d56d3c4958de0b2af84960331}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Function\+::invoke (\begin{DoxyParamCaption}\item[{const void $\ast$}]{instance,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const}
+
+
+
+Invoke a member function. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_ad81da7439f0dce46d6014afa3fb9850a}\label{classk_f_1_1_meta_1_1_function_ad81da7439f0dce46d6014afa3fb9850a}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Function\+::invoke (\begin{DoxyParamCaption}\item[{const void $\ast$}]{instance,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_adc497706b4567ab5bc5811ee035089dc}\label{classk_f_1_1_meta_1_1_function_adc497706b4567ab5bc5811ee035089dc}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!isConst@{isConst}}
+\index{isConst@{isConst}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{isConst()}{isConst()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Function\+::is\+Const (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the underlying function is a const-\/member. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a51b3b59beb2710739a34e640257a610f}\label{classk_f_1_1_meta_1_1_function_a51b3b59beb2710739a34e640257a610f}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!isStatic@{isStatic}}
+\index{isStatic@{isStatic}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{isStatic()}{isStatic()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Function\+::is\+Static (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the underlying function is static. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_abcd45c8ebe966026b45b97b2b16b1b09}\label{classk_f_1_1_meta_1_1_function_abcd45c8ebe966026b45b97b2b16b1b09}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!name@{name}}
+\index{name@{name}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Meta\+::\+Function\+::name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Retreive function\textquotesingle{}s name. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a3f5a877c1d3b439f4601334e1986c048}\label{classk_f_1_1_meta_1_1_function_a3f5a877c1d3b439f4601334e1986c048}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Function\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast valid check. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a3db40d5997a887e6ae1a0d53c0120625}\label{classk_f_1_1_meta_1_1_function_a3db40d5997a887e6ae1a0d53c0120625}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Function\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a47b9c3d24000a7ae0ab8d81acace85b4}\label{classk_f_1_1_meta_1_1_function_a47b9c3d24000a7ae0ab8d81acace85b4}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}}\& k\+F\+::\+Meta\+::\+Function\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a2e608533dc9c70b101a7e990bda4498f}\label{classk_f_1_1_meta_1_1_function_a2e608533dc9c70b101a7e990bda4498f}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Function\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Compare operator. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_function_a726838a21378be28e3ad33e35f2574cd}\label{classk_f_1_1_meta_1_1_function_a726838a21378be28e3ad33e35f2574cd}} 
+\index{kF::Meta::Function@{kF::Meta::Function}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!kF::Meta::Function@{kF::Meta::Function}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_meta_1_1_function_1_1_descriptor}{Descriptor}}$\ast$ k\+F\+::\+Meta\+::\+Function\+::\+\_\+desc = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_function_8hpp}{Function.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_function_8ipp}{Function.\+ipp}}\end{DoxyCompactItemize}

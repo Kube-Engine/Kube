@@ -1,0 +1,5 @@
+<map id="kF::Graphics::CommandPoolManager" name="kF::Graphics::CommandPoolManager">
+<area shape="rect" id="node1" title="Manager of every command pool &#39;acquire&#39; and &#39;takeBack&#39; functions are the only thread safe ones." alt="" coords="11,388,202,612"/>
+<area shape="rect" id="node2" href="$classk_f_1_1_graphics_1_1_cached_renderer_object.html" title="This class specializes the RendererObject to hold its parent renderer in its member cache This class ..." alt="" coords="5,145,208,340"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_renderer_object.html" title="This is the base class of all renderer sub objects This class is not virtual because it is trivially ..." alt="" coords="9,5,205,97"/>
+</map>

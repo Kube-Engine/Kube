@@ -1,0 +1,123 @@
+\hypertarget{classk_f_1_1_meta_1_1_resolver}{}\doxysection{kF\+::Meta\+::Resolver Class Reference}
+\label{classk_f_1_1_meta_1_1_resolver}\index{kF::Meta::Resolver@{kF::Meta::Resolver}}
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} is used to store and retreive meta-\/data at runtime.  
+
+
+
+
+{\ttfamily \#include $<$Resolver.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a849dfc4c03893b360091a280c9c6b1cc}{Descriptors}} = std\+::vector$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a9b8ab347fdfb45c2fa71c6617b1373b7}{Register\+Meta\+Type}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} type) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Register a new type into the resolver. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a02099b9d9f7194b8d0e05dd55a6ae282}{Find\+Type}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}{Type\+::\+Type\+ID}} id) noexcept
+\begin{DoxyCompactList}\small\item\em Resolve a type with its ID. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a9cf0da91d46eaa7e96735d9721df50d7}{Find\+Type}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept
+\begin{DoxyCompactList}\small\item\em Resolve a type with its name. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_ae63abe521e7b6428d2d9fc04a3fda8b7}{Clear}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Clear all stored types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a2b01805a63b323f2609788975cddf35b}{Resolver}} (void)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} is a singleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a849dfc4c03893b360091a280c9c6b1cc}{Descriptors}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_ae8e17299f81cc127353f7c22b4edafd2}{Get\+Descriptors}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get internal list of descriptors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} is used to store and retreive meta-\/data at runtime. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_a849dfc4c03893b360091a280c9c6b1cc}\label{classk_f_1_1_meta_1_1_resolver_a849dfc4c03893b360091a280c9c6b1cc}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!Descriptors@{Descriptors}}
+\index{Descriptors@{Descriptors}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{Descriptors}{Descriptors}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a849dfc4c03893b360091a280c9c6b1cc}{k\+F\+::\+Meta\+::\+Resolver\+::\+Descriptors}} =  std\+::vector$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_a2b01805a63b323f2609788975cddf35b}\label{classk_f_1_1_meta_1_1_resolver_a2b01805a63b323f2609788975cddf35b}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!Resolver@{Resolver}}
+\index{Resolver@{Resolver}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{Resolver()}{Resolver()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Resolver\+::\+Resolver (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} is a singleton. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_ae63abe521e7b6428d2d9fc04a3fda8b7}\label{classk_f_1_1_meta_1_1_resolver_ae63abe521e7b6428d2d9fc04a3fda8b7}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!Clear@{Clear}}
+\index{Clear@{Clear}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Resolver\+::\+Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Clear all stored types. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_a9cf0da91d46eaa7e96735d9721df50d7}\label{classk_f_1_1_meta_1_1_resolver_a9cf0da91d46eaa7e96735d9721df50d7}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!FindType@{FindType}}
+\index{FindType@{FindType}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{FindType()}{FindType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{k\+F\+::\+Meta\+::\+Type}} k\+F\+::\+Meta\+::\+Resolver\+::\+Find\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Resolve a type with its name. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_a02099b9d9f7194b8d0e05dd55a6ae282}\label{classk_f_1_1_meta_1_1_resolver_a02099b9d9f7194b8d0e05dd55a6ae282}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!FindType@{FindType}}
+\index{FindType@{FindType}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{FindType()}{FindType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{k\+F\+::\+Meta\+::\+Type}} k\+F\+::\+Meta\+::\+Resolver\+::\+Find\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type_a7cf110a99a0df5df270a5a047ca25040}{Type\+::\+Type\+ID}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Resolve a type with its ID. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_ae8e17299f81cc127353f7c22b4edafd2}\label{classk_f_1_1_meta_1_1_resolver_ae8e17299f81cc127353f7c22b4edafd2}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!GetDescriptors@{GetDescriptors}}
+\index{GetDescriptors@{GetDescriptors}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{GetDescriptors()}{GetDescriptors()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver_a849dfc4c03893b360091a280c9c6b1cc}{Descriptors}}\& k\+F\+::\+Meta\+::\+Resolver\+::\+Get\+Descriptors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal list of descriptors. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_resolver_a9b8ab347fdfb45c2fa71c6617b1373b7}\label{classk_f_1_1_meta_1_1_resolver_a9b8ab347fdfb45c2fa71c6617b1373b7}} 
+\index{kF::Meta::Resolver@{kF::Meta::Resolver}!RegisterMetaType@{RegisterMetaType}}
+\index{RegisterMetaType@{RegisterMetaType}!kF::Meta::Resolver@{kF::Meta::Resolver}}
+\doxysubsubsection{\texorpdfstring{RegisterMetaType()}{RegisterMetaType()}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Resolver\+::\+Register\+Meta\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Register a new type into the resolver. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_resolver_8hpp}{Resolver.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_resolver_8ipp}{Resolver.\+ipp}}\end{DoxyCompactItemize}

@@ -1,0 +1,299 @@
+\hypertarget{classk_f_1_1_flow_1_1_worker}{}\doxysection{kF\+::Flow\+::Worker Class Reference}
+\label{classk_f_1_1_flow_1_1_worker}\index{kF::Flow::Worker@{kF::Flow::Worker}}
+
+
+{\ttfamily \#include $<$Worker.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_flow_1_1_worker_1_1_cache}{Cache}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}{State}} \{ \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3a5bda814c4aedb126839228f1a3d92f09}{State\+::\+Running}}, 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3a7b7ecb39b9e110c2a31409a1672bad23}{State\+::\+Stopping}}, 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3ac23e2b09ebe6bf4cb5e2a9abe85c0be2}{State\+::\+Stopped}}
+ \}
+\begin{DoxyCompactList}\small\item\em Current state of the worker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a6da7a2b201bad7781602affb56907fea}{Worker}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} $\ast$const parent, const std\+::size\+\_\+t queue\+Size)
+\begin{DoxyCompactList}\small\item\em Construct and start the worker. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ab092e303c682f16439a0099969908f65}{$\sim$\+Worker}} (void)=default
+\begin{DoxyCompactList}\small\item\em Destroy the worker without stopping it ! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a86aaffa2b48a403acdc95f463be288ed}{start}} (void)
+\begin{DoxyCompactList}\small\item\em Start the worker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a7ce79c74a1da7699685edefe42acb868}{stop}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Stop the worker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a71cda1487e7e5d354ee1135d90db5370}{join}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Join the worker. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}{State}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ab5b893fe74ca1242b54a6cbca0ac933b}{state}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get internal state of worker. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ae8d1786bd2c39c6db9a1080f8b8d24ac}{push}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} task) noexcept
+\begin{DoxyCompactList}\small\item\em Push a task to be processed on the worker thread. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ad4839173c28968255b8109521ccf5825}{steal}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&task) noexcept
+\begin{DoxyCompactList}\small\item\em Try to steal a task from worker. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a05212a2364bdaf45f0cb79f958ae72d3}{task\+Count}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the task count of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a7b086091aac6f57689ec589fc335f61d}{run}} (void)
+\begin{DoxyCompactList}\small\item\em Busy loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aa7262ac936dcf231c98a4b0ab3c10400}{work}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&task)
+\begin{DoxyCompactList}\small\item\em Execute a task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a11968cfc67c0c36d70e1fc2d04856512}{blocking\+Graph\+Schedule}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&graph)
+\begin{DoxyCompactList}\small\item\em Work untile given graph finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aa48367501beb213a8a0a8aa1093c76cf}{schedule\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+\begin{DoxyCompactList}\small\item\em Tries to schedule a single node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a0abc37221e20d541fbd27247c79c2548}{dispatch\+Static\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+\begin{DoxyCompactList}\small\item\em Helper used to process a Static node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aec2c001f54cac6321adba63fd5721933}{dispatch\+Dynamic\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+\begin{DoxyCompactList}\small\item\em Helper used to process a Dynamic node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aab9732d611b1c0a5f42d584f1de32aec}{dispatch\+Switch\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+\begin{DoxyCompactList}\small\item\em Helper used to process a Switch node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a11fd6d3aae06e8cb3fa45e57a1fa39e2}{dispatch\+Graph\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+\begin{DoxyCompactList}\small\item\em Helper used to process a \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}{State}} $>$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a3b727603c9d5264edd3b2c834566f7fc}{\+\_\+state}} \{ \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3ac23e2b09ebe6bf4cb5e2a9abe85c0be2}{State\+::\+Stopped}} \}
+\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_worker_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ac67c8c76206be3772fd9d5aaa4e61b6a}{\+\_\+cache}} \{\}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{Core\+::\+M\+P\+M\+C\+Queue}}$<$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} $>$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a627262d67da57bc81fcc1ade08607e64}{\+\_\+queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}\label{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!State@{State}}
+\index{State@{State}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}{k\+F\+::\+Flow\+::\+Worker\+::\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Current state of the worker. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Running@{Running}!kF::Flow::Worker@{kF::Flow::Worker}}\index{kF::Flow::Worker@{kF::Flow::Worker}!Running@{Running}}}\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3a5bda814c4aedb126839228f1a3d92f09}\label{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3a5bda814c4aedb126839228f1a3d92f09}} 
+Running&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stopping@{Stopping}!kF::Flow::Worker@{kF::Flow::Worker}}\index{kF::Flow::Worker@{kF::Flow::Worker}!Stopping@{Stopping}}}\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3a7b7ecb39b9e110c2a31409a1672bad23}\label{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3a7b7ecb39b9e110c2a31409a1672bad23}} 
+Stopping&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stopped@{Stopped}!kF::Flow::Worker@{kF::Flow::Worker}}\index{kF::Flow::Worker@{kF::Flow::Worker}!Stopped@{Stopped}}}\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3ac23e2b09ebe6bf4cb5e2a9abe85c0be2}\label{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3ac23e2b09ebe6bf4cb5e2a9abe85c0be2}} 
+Stopped&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a6da7a2b201bad7781602affb56907fea}\label{classk_f_1_1_flow_1_1_worker_a6da7a2b201bad7781602affb56907fea}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!Worker@{Worker}}
+\index{Worker@{Worker}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{Worker()}{Worker()}}
+{\footnotesize\ttfamily Flow\+::\+Worker\+::\+Worker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} $\ast$const}]{parent,  }\item[{const std\+::size\+\_\+t}]{queue\+Size }\end{DoxyParamCaption})}
+
+
+
+Construct and start the worker. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ab092e303c682f16439a0099969908f65}\label{classk_f_1_1_flow_1_1_worker_ab092e303c682f16439a0099969908f65}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!````~Worker@{$\sim$Worker}}
+\index{````~Worker@{$\sim$Worker}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{$\sim$Worker()}{~Worker()}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Worker\+::$\sim$\+Worker (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the worker without stopping it ! 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a11968cfc67c0c36d70e1fc2d04856512}\label{classk_f_1_1_flow_1_1_worker_a11968cfc67c0c36d70e1fc2d04856512}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!blockingGraphSchedule@{blockingGraphSchedule}}
+\index{blockingGraphSchedule@{blockingGraphSchedule}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{blockingGraphSchedule()}{blockingGraphSchedule()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::blocking\+Graph\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Work untile given graph finished. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_aec2c001f54cac6321adba63fd5721933}\label{classk_f_1_1_flow_1_1_worker_aec2c001f54cac6321adba63fd5721933}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchDynamicNode@{dispatchDynamicNode}}
+\index{dispatchDynamicNode@{dispatchDynamicNode}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{dispatchDynamicNode()}{dispatchDynamicNode()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Dynamic\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Helper used to process a Dynamic node. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a11fd6d3aae06e8cb3fa45e57a1fa39e2}\label{classk_f_1_1_flow_1_1_worker_a11fd6d3aae06e8cb3fa45e57a1fa39e2}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchGraphNode@{dispatchGraphNode}}
+\index{dispatchGraphNode@{dispatchGraphNode}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{dispatchGraphNode()}{dispatchGraphNode()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Graph\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Helper used to process a \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a0abc37221e20d541fbd27247c79c2548}\label{classk_f_1_1_flow_1_1_worker_a0abc37221e20d541fbd27247c79c2548}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchStaticNode@{dispatchStaticNode}}
+\index{dispatchStaticNode@{dispatchStaticNode}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{dispatchStaticNode()}{dispatchStaticNode()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Static\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Helper used to process a Static node. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_aab9732d611b1c0a5f42d584f1de32aec}\label{classk_f_1_1_flow_1_1_worker_aab9732d611b1c0a5f42d584f1de32aec}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchSwitchNode@{dispatchSwitchNode}}
+\index{dispatchSwitchNode@{dispatchSwitchNode}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{dispatchSwitchNode()}{dispatchSwitchNode()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Switch\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Helper used to process a Switch node. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a71cda1487e7e5d354ee1135d90db5370}\label{classk_f_1_1_flow_1_1_worker_a71cda1487e7e5d354ee1135d90db5370}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!join@{join}}
+\index{join@{join}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::join (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Join the worker. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ae8d1786bd2c39c6db9a1080f8b8d24ac}\label{classk_f_1_1_flow_1_1_worker_ae8d1786bd2c39c6db9a1080f8b8d24ac}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!push@{push}}
+\index{push@{push}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Worker\+::push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Push a task to be processed on the worker thread. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a7b086091aac6f57689ec589fc335f61d}\label{classk_f_1_1_flow_1_1_worker_a7b086091aac6f57689ec589fc335f61d}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!run@{run}}
+\index{run@{run}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Flow\+::\+Worker\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Busy loop. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_aa48367501beb213a8a0a8aa1093c76cf}\label{classk_f_1_1_flow_1_1_worker_aa48367501beb213a8a0a8aa1093c76cf}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!scheduleNode@{scheduleNode}}
+\index{scheduleNode@{scheduleNode}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{scheduleNode()}{scheduleNode()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::schedule\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Tries to schedule a single node. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a86aaffa2b48a403acdc95f463be288ed}\label{classk_f_1_1_flow_1_1_worker_a86aaffa2b48a403acdc95f463be288ed}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!start@{start}}
+\index{start@{start}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start the worker. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker}{Worker}} \mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ab5b893fe74ca1242b54a6cbca0ac933b}\label{classk_f_1_1_flow_1_1_worker_ab5b893fe74ca1242b54a6cbca0ac933b}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!state@{state}}
+\index{state@{state}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}{State}} k\+F\+::\+Flow\+::\+Worker\+::state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get internal state of worker. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ad4839173c28968255b8109521ccf5825}\label{classk_f_1_1_flow_1_1_worker_ad4839173c28968255b8109521ccf5825}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!steal@{steal}}
+\index{steal@{steal}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{steal()}{steal()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Worker\+::steal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Try to steal a task from worker. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a7ce79c74a1da7699685edefe42acb868}\label{classk_f_1_1_flow_1_1_worker_a7ce79c74a1da7699685edefe42acb868}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!stop@{stop}}
+\index{stop@{stop}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Stop the worker. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a05212a2364bdaf45f0cb79f958ae72d3}\label{classk_f_1_1_flow_1_1_worker_a05212a2364bdaf45f0cb79f958ae72d3}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!taskCount@{taskCount}}
+\index{taskCount@{taskCount}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{taskCount()}{taskCount()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Worker\+::task\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the task count of the queue. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_aa7262ac936dcf231c98a4b0ab3c10400}\label{classk_f_1_1_flow_1_1_worker_aa7262ac936dcf231c98a4b0ab3c10400}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!work@{work}}
+\index{work@{work}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{work()}{work()}}
+{\footnotesize\ttfamily void Flow\+::\+Worker\+::work (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Execute a task. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ac67c8c76206be3772fd9d5aaa4e61b6a}\label{classk_f_1_1_flow_1_1_worker_ac67c8c76206be3772fd9d5aaa4e61b6a}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!\_cache@{\_cache}}
+\index{\_cache@{\_cache}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{\_cache}{\_cache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_worker_1_1_cache}{Cache}} k\+F\+::\+Flow\+::\+Worker\+::\+\_\+cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a627262d67da57bc81fcc1ade08607e64}\label{classk_f_1_1_flow_1_1_worker_a627262d67da57bc81fcc1ade08607e64}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!\_queue@{\_queue}}
+\index{\_queue@{\_queue}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{\_queue}{\_queue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{Core\+::\+M\+P\+M\+C\+Queue}}$<$\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}}$>$ k\+F\+::\+Flow\+::\+Worker\+::\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a3b727603c9d5264edd3b2c834566f7fc}\label{classk_f_1_1_flow_1_1_worker_a3b727603c9d5264edd3b2c834566f7fc}} 
+\index{kF::Flow::Worker@{kF::Flow::Worker}!\_state@{\_state}}
+\index{\_state@{\_state}!kF::Flow::Worker@{kF::Flow::Worker}}
+\doxysubsubsection{\texorpdfstring{\_state}{\_state}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3}{State}}$>$ k\+F\+::\+Flow\+::\+Worker\+::\+\_\+state \{ \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb03e0b2115718b43e807a0c44c36f3ac23e2b09ebe6bf4cb5e2a9abe85c0be2}{State\+::\+Stopped}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Flow/\mbox{\hyperlink{_worker_8hpp}{Worker.\+hpp}}\item 
+Kube/\+Flow/\mbox{\hyperlink{_worker_8cpp}{Worker.\+cpp}}\item 
+Kube/\+Flow/\mbox{\hyperlink{_worker_8ipp}{Worker.\+ipp}}\end{DoxyCompactItemize}

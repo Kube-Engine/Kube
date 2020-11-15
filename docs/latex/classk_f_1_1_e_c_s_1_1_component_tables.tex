@@ -1,0 +1,249 @@
+\hypertarget{classk_f_1_1_e_c_s_1_1_component_tables}{}\doxysection{kF\+::E\+CS\+::Component\+Tables$<$ Entity\+Type $>$ Class Template Reference}
+\label{classk_f_1_1_e_c_s_1_1_component_tables}\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+
+
+Store all component tables of a registry.  
+
+
+
+
+{\ttfamily \#include $<$Component\+Tables.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}{Opaque\+Table}} = const \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$ Entity\+Type $>$ $\ast$
+\begin{DoxyCompactList}\small\item\em Helper types. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}{Remove\+Func}} = \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}{Remove\+Func}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_aee74774cfa801a8531e90178a973851b}{Component\+Tables}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Construct the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a7ecdbfdb85db869a616155905a80a4a1}{$\sim$\+Component\+Tables}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component $>$ }\\void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_adec048d606ed0955160fd1fbadc4339b}{add}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Add a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} to internal list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component $>$ }\\bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a1b03bcf9a7b43063d7990c061bebcab2}{table\+Exists}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} is registered internally using explicit type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a9fa390b1df19c38ccffccea0d7a675b3}{table\+Exists}} (const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}{Opaque\+Table}} opaque\+Table) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} is registered internally using an opaque type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component $>$ }\\\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$ Component, Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a5a9c438bf6774a971062fec039920ffa}{get\+Table}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Get a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} casted to the right component. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component $>$ }\\const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$ Component, Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ade070c598922d6880b03cb545ff8264a}{get\+Table}} (void) const noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Get a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} casted to the right component. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a9695f1a74b528a1398b89e89e65109a3}{size}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} stored internally. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a11faab7d69523335f61e8df443383bfd}{remove\+Entity}} (const Entity\+Type entity)
+\begin{DoxyCompactList}\small\item\em Removes an entity from every opaque table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ae7ef590ba35b409c9fd700bd04b30b19}{clear}} (void)
+\begin{DoxyCompactList}\small\item\em Clear every table and remove them. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component $>$ }\\const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{k\+F\+::\+E\+C\+S\+::\+Component\+Table}}$<$ Component, Entity\+Type $>$ \& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_abbda548271fa068fc57fee0fe5b60ef6}{get\+Table}} (void) const \mbox{\hyperlink{_assert_8hpp_a2907659acb7f16cc3dba12d59b613d70}{noexcept\+\_\+ndebug}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a4665c9c6ad48f67bac8a85ceaf8c557c}{Component\+Table\+Size}} = sizeof(\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$std\+::nullptr\+\_\+t, Entity\+Type$>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}{Opaque\+Table}} $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_aa12bbb34acb6f0212ce672c3f567670f}{\+\_\+opaque\+Tables}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}{Remove\+Func}}, std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a91ece618a2d891fdf7feebf33340947a}{\+\_\+remove\+Funcs}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$ std\+::array$<$ std\+::byte, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a4665c9c6ad48f67bac8a85ceaf8c557c}{Component\+Table\+Size}} $>$ $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_acce626189b807f31225ab2ab3b798339}{\+\_\+tables}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$\newline
+class k\+F\+::\+E\+C\+S\+::\+Component\+Tables$<$ Entity\+Type $>$}
+
+Store all component tables of a registry. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}\label{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!OpaqueTable@{OpaqueTable}}
+\index{OpaqueTable@{OpaqueTable}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{OpaqueTable}{OpaqueTable}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}{Opaque\+Table}} =  const \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$Entity\+Type$>$ $\ast$}
+
+
+
+Helper types. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}\label{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!RemoveFunc@{RemoveFunc}}
+\index{RemoveFunc@{RemoveFunc}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveFunc}{RemoveFunc}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}{Remove\+Func}} =  \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$Entity\+Type$>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}{Remove\+Func}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_aee74774cfa801a8531e90178a973851b}\label{classk_f_1_1_e_c_s_1_1_component_tables_aee74774cfa801a8531e90178a973851b}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!ComponentTables@{ComponentTables}}
+\index{ComponentTables@{ComponentTables}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{ComponentTables()}{ComponentTables()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Construct the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a7ecdbfdb85db869a616155905a80a4a1}\label{classk_f_1_1_e_c_s_1_1_component_tables_a7ecdbfdb85db869a616155905a80a4a1}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!````~ComponentTables@{$\sim$ComponentTables}}
+\index{````~ComponentTables@{$\sim$ComponentTables}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ComponentTables()}{~ComponentTables()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_adec048d606ed0955160fd1fbadc4339b}\label{classk_f_1_1_e_c_s_1_1_component_tables_adec048d606ed0955160fd1fbadc4339b}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!add@{add}}
+\index{add@{add}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::add (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Add a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} to internal list. 
+
+@ Author\+: Léo Lhuile @ Description\+: \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}} \mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_ae7ef590ba35b409c9fd700bd04b30b19}\label{classk_f_1_1_e_c_s_1_1_component_tables_ae7ef590ba35b409c9fd700bd04b30b19}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!clear@{clear}}
+\index{clear@{clear}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear every table and remove them. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_ade070c598922d6880b03cb545ff8264a}\label{classk_f_1_1_e_c_s_1_1_component_tables_ade070c598922d6880b03cb545ff8264a}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!getTable@{getTable}}
+\index{getTable@{getTable}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$Component, Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::get\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} casted to the right component. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_abbda548271fa068fc57fee0fe5b60ef6}\label{classk_f_1_1_e_c_s_1_1_component_tables_abbda548271fa068fc57fee0fe5b60ef6}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!getTable@{getTable}}
+\index{getTable@{getTable}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{k\+F\+::\+E\+C\+S\+::\+Component\+Table}}$<$Component, Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::get\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a5a9c438bf6774a971062fec039920ffa}\label{classk_f_1_1_e_c_s_1_1_component_tables_a5a9c438bf6774a971062fec039920ffa}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!getTable@{getTable}}
+\index{getTable@{getTable}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$Component, Entity\+Type$>$\& \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::get\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} casted to the right component. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a11faab7d69523335f61e8df443383bfd}\label{classk_f_1_1_e_c_s_1_1_component_tables_a11faab7d69523335f61e8df443383bfd}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!removeEntity@{removeEntity}}
+\index{removeEntity@{removeEntity}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{removeEntity()}{removeEntity()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::remove\+Entity (\begin{DoxyParamCaption}\item[{const Entity\+Type}]{entity }\end{DoxyParamCaption})}
+
+
+
+Removes an entity from every opaque table. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a9695f1a74b528a1398b89e89e65109a3}\label{classk_f_1_1_e_c_s_1_1_component_tables_a9695f1a74b528a1398b89e89e65109a3}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!size@{size}}
+\index{size@{size}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the number of \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} stored internally. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a9fa390b1df19c38ccffccea0d7a675b3}\label{classk_f_1_1_e_c_s_1_1_component_tables_a9fa390b1df19c38ccffccea0d7a675b3}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!tableExists@{tableExists}}
+\index{tableExists@{tableExists}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{tableExists()}{tableExists()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::table\+Exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}{Opaque\+Table}}}]{opaque\+Table }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} is registered internally using an opaque type. 
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a1b03bcf9a7b43063d7990c061bebcab2}\label{classk_f_1_1_e_c_s_1_1_component_tables_a1b03bcf9a7b43063d7990c061bebcab2}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!tableExists@{tableExists}}
+\index{tableExists@{tableExists}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{tableExists()}{tableExists()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+template$<$typename Component $>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::table\+Exists (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if a \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}} is registered internally using explicit type. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_aa12bbb34acb6f0212ce672c3f567670f}\label{classk_f_1_1_e_c_s_1_1_component_tables_aa12bbb34acb6f0212ce672c3f567670f}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!\_opaqueTables@{\_opaqueTables}}
+\index{\_opaqueTables@{\_opaqueTables}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_opaqueTables}{\_opaqueTables}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_ab9849c9b5587c0e9b4ea1c69aa94870e}{Opaque\+Table}}$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::\+\_\+opaque\+Tables \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a91ece618a2d891fdf7feebf33340947a}\label{classk_f_1_1_e_c_s_1_1_component_tables_a91ece618a2d891fdf7feebf33340947a}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!\_removeFuncs@{\_removeFuncs}}
+\index{\_removeFuncs@{\_removeFuncs}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_removeFuncs}{\_removeFuncs}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a6d2996bfa949a0ba0c826f3297509a00}{Remove\+Func}}, std\+::uint32\+\_\+t$>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::\+\_\+remove\+Funcs \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_acce626189b807f31225ab2ab3b798339}\label{classk_f_1_1_e_c_s_1_1_component_tables_acce626189b807f31225ab2ab3b798339}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!\_tables@{\_tables}}
+\index{\_tables@{\_tables}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{\_tables}{\_tables}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$std\+::array$<$std\+::byte, \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables_a4665c9c6ad48f67bac8a85ceaf8c557c}{Component\+Table\+Size}}$>$ $>$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::\+\_\+tables \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_component_tables_a4665c9c6ad48f67bac8a85ceaf8c557c}\label{classk_f_1_1_e_c_s_1_1_component_tables_a4665c9c6ad48f67bac8a85ceaf8c557c}} 
+\index{kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}!ComponentTableSize@{ComponentTableSize}}
+\index{ComponentTableSize@{ComponentTableSize}!kF::ECS::ComponentTables$<$ EntityType $>$@{kF::ECS::ComponentTables$<$ EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{ComponentTableSize}{ComponentTableSize}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{k\+F\+::\+E\+C\+S\+::\+Component\+Tables}}$<$ Entity\+Type $>$\+::Component\+Table\+Size = sizeof(\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$std\+::nullptr\+\_\+t, Entity\+Type$>$)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_component_tables_8hpp}{Component\+Tables.\+hpp}}\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_component_tables_8ipp}{Component\+Tables.\+ipp}}\end{DoxyCompactItemize}

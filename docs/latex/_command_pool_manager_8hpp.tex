@@ -1,0 +1,41 @@
+\hypertarget{_command_pool_manager_8hpp}{}\doxysection{Kube/\+Graphics/\+Command\+Pool\+Manager.hpp File Reference}
+\label{_command_pool_manager_8hpp}\index{Kube/Graphics/CommandPoolManager.hpp@{Kube/Graphics/CommandPoolManager.hpp}}
+{\ttfamily \#include $<$memory\+\_\+resource$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include \char`\"{}Per\+Frame\+Cache.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Command\+Pool.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Command\+Pool\+Manager.\+ipp\char`\"{}}\newline
+Include dependency graph for Command\+Pool\+Manager.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_command_pool_manager_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_command_pool_manager_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager}{k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manager of every command pool \textquotesingle{}acquire\textquotesingle{} and \textquotesingle{}take\+Back\textquotesingle{} functions are the only thread safe ones. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node}{k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Node}}
+\begin{DoxyCompactList}\small\item\em Command pool node. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_graphics_1_1_command_pool_manager_1_1_node_pool}{k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Node\+Pool}}
+\begin{DoxyCompactList}\small\item\em An atomic pool node. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool}{k\+F\+::\+Graphics\+::\+Command\+Pool\+Manager\+::\+Scoped\+Command\+Pool}}
+\begin{DoxyCompactList}\small\item\em This class allow to use a command pool in its scope before releasing it in the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_graphics}{k\+F\+::\+Graphics}}
+\end{DoxyCompactItemize}

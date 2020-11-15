@@ -1,0 +1,8 @@
+<map id="kF::Graphics::Instance" name="kF::Graphics::Instance">
+<area shape="rect" id="node1" title="Abstraction of the low&#45;level API instance." alt="" coords="70,1113,225,1279"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="53,972,242,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,241,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="129,5,315,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="179,307,425,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title="Vulkan handle that inherits from CachedRendererObject." alt="" coords="174,817,363,909"/>
+</map>

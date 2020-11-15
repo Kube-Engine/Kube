@@ -1,0 +1,54 @@
+\hypertarget{structk_f_1_1_e_c_s_1_1_unique_opaque_component}{}\doxysection{kF\+::E\+CS\+::Unique\+Opaque\+Component$<$ Component, Entity\+Type $>$ Struct Template Reference}
+\label{structk_f_1_1_e_c_s_1_1_unique_opaque_component}\index{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$@{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$}}
+
+
+{\ttfamily \#include $<$Opaque\+Table.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}{Table}} = \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$ Component, Entity\+Type $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$ Entity\+Type $>$ \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a70f0608a889b3a9dad7da0175a91ce5d}{Instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}\label{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}} 
+\index{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$@{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$}!Table@{Table}}
+\index{Table@{Table}!kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$@{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{Table}{Table}}
+{\footnotesize\ttfamily template$<$typename Component , Entity\+Requirements Entity\+Type$>$ \\
+using \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component}{k\+F\+::\+E\+C\+S\+::\+Unique\+Opaque\+Component}}$<$ Component, Entity\+Type $>$\+::\mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}{Table}} =  \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}$<$Component, Entity\+Type$>$}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a70f0608a889b3a9dad7da0175a91ce5d}\label{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a70f0608a889b3a9dad7da0175a91ce5d}} 
+\index{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$@{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$}!Instance@{Instance}}
+\index{Instance@{Instance}!kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$@{kF::ECS::UniqueOpaqueComponent$<$ Component, EntityType $>$}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily template$<$typename Component , Entity\+Requirements Entity\+Type$>$ \\
+const \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$Entity\+Type$>$ \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component}{k\+F\+::\+E\+C\+S\+::\+Unique\+Opaque\+Component}}$<$ Component, Entity\+Type $>$\+::Instance\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{            removeFunc: [](\textcolor{keywordtype}{void} *instance, \textcolor{keyword}{const} EntityType entity) \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (\textcolor{keyword}{const} \textcolor{keyword}{auto} table = \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}{Table}} *\textcolor{keyword}{>}(instance); table-\/>exists(entity))}
+\DoxyCodeLine{                    table-\/>remove(entity);}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            destroyFunc: [](\textcolor{keywordtype}{void} *instance) \{}
+\DoxyCodeLine{                \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}{Table}} *\textcolor{keyword}{>}(instance)-\/>\string~\mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component_a6dc6540bcc360e53d6cd0525cf58dad4}{Table}}();}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+E\+C\+S/\mbox{\hyperlink{_opaque_table_8hpp}{Opaque\+Table.\+hpp}}\end{DoxyCompactItemize}

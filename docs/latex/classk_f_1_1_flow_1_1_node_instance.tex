@@ -1,0 +1,178 @@
+\hypertarget{classk_f_1_1_flow_1_1_node_instance}{}\doxysection{kF\+::Flow\+::Node\+Instance Class Reference}
+\label{classk_f_1_1_flow_1_1_node_instance}\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+
+
+{\ttfamily \#include $<$Node.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_adf1ab0088f1c1900554c40f2ebc7be2c}{Node\+Instance}} (void)=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_ab7b3ef67d539c8aea0d61e8705f65c48}{Node\+Instance}} (Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Allocate constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a0e6f1b4340b15db6af080e4c2d877d18}{Node\+Instance}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a13705a9c16c53d77c8fc344272005545}{$\sim$\+Node\+Instance}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $>$)
+\begin{DoxyCompactList}\small\item\em Destroy the instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_ad43874396f6ef493d1f2e7faa5488d2b}{node}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get node pointer. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a6e373bd913115f72e121b37a6efd961b}{node}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \& \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a31ba52ad43826d97d49aee0e9e85565a}{operator=}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_ab5ccec814638a4a3d8717f2a221d355c}{swap}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a82a551a95b10bcf9aeabd330e6bf349c}{operator-\/$>$}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Access operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_ac57d9b3c73a0cb617d8f52ea9a134cc3}{operator-\/$>$}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\static \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a7d805e853c5b17b9b1497708205bc743}{Allocate}} (Args \&\&...args)
+\item 
+static void \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_ae91e8a991a7755c4bbccad095c432ae4}{Deallocate}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_ad43874396f6ef493d1f2e7faa5488d2b}{node}}) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a3a324024ad56e0171a19cd6c63e2f97b}{\+\_\+node}} \{ nullptr \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance_a83002966c3811a97b05400ae47392864}{\+\_\+\+Pool}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_adf1ab0088f1c1900554c40f2ebc7be2c}\label{classk_f_1_1_flow_1_1_node_instance_adf1ab0088f1c1900554c40f2ebc7be2c}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!NodeInstance@{NodeInstance}}
+\index{NodeInstance@{NodeInstance}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{NodeInstance()}{NodeInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Node\+Instance\+::\+Node\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_ab7b3ef67d539c8aea0d61e8705f65c48}\label{classk_f_1_1_flow_1_1_node_instance_ab7b3ef67d539c8aea0d61e8705f65c48}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!NodeInstance@{NodeInstance}}
+\index{NodeInstance@{NodeInstance}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{NodeInstance()}{NodeInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+k\+F\+::\+Flow\+::\+Node\+Instance\+::\+Node\+Instance (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a0e6f1b4340b15db6af080e4c2d877d18}\label{classk_f_1_1_flow_1_1_node_instance_a0e6f1b4340b15db6af080e4c2d877d18}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!NodeInstance@{NodeInstance}}
+\index{NodeInstance@{NodeInstance}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{NodeInstance()}{NodeInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Node\+Instance\+::\+Node\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a13705a9c16c53d77c8fc344272005545}\label{classk_f_1_1_flow_1_1_node_instance_a13705a9c16c53d77c8fc344272005545}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!````~NodeInstance@{$\sim$NodeInstance}}
+\index{````~NodeInstance@{$\sim$NodeInstance}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{$\sim$NodeInstance()}{~NodeInstance()}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Node\+Instance\+::$\sim$\+Node\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy the instance. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a7d805e853c5b17b9b1497708205bc743}\label{classk_f_1_1_flow_1_1_node_instance_a7d805e853c5b17b9b1497708205bc743}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+static \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Node\+Instance\+::\+Allocate (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_ae91e8a991a7755c4bbccad095c432ae4}\label{classk_f_1_1_flow_1_1_node_instance_ae91e8a991a7755c4bbccad095c432ae4}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!Deallocate@{Deallocate}}
+\index{Deallocate@{Deallocate}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{Deallocate()}{Deallocate()}}
+{\footnotesize\ttfamily static void k\+F\+::\+Flow\+::\+Node\+Instance\+::\+Deallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a6e373bd913115f72e121b37a6efd961b}\label{classk_f_1_1_flow_1_1_node_instance_a6e373bd913115f72e121b37a6efd961b}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!node@{node}}
+\index{node@{node}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Node\+Instance\+::node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_ad43874396f6ef493d1f2e7faa5488d2b}\label{classk_f_1_1_flow_1_1_node_instance_ad43874396f6ef493d1f2e7faa5488d2b}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!node@{node}}
+\index{node@{node}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Node\+Instance\+::node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get node pointer. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_ac57d9b3c73a0cb617d8f52ea9a134cc3}\label{classk_f_1_1_flow_1_1_node_instance_ac57d9b3c73a0cb617d8f52ea9a134cc3}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Node\+Instance\+::operator-\/$>$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a82a551a95b10bcf9aeabd330e6bf349c}\label{classk_f_1_1_flow_1_1_node_instance_a82a551a95b10bcf9aeabd330e6bf349c}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Node\+Instance\+::operator-\/$>$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Access operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a31ba52ad43826d97d49aee0e9e85565a}\label{classk_f_1_1_flow_1_1_node_instance_a31ba52ad43826d97d49aee0e9e85565a}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}}\& k\+F\+::\+Flow\+::\+Node\+Instance\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_ab5ccec814638a4a3d8717f2a221d355c}\label{classk_f_1_1_flow_1_1_node_instance_ab5ccec814638a4a3d8717f2a221d355c}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!swap@{swap}}
+\index{swap@{swap}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Node\+Instance\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Swap two instances. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a3a324024ad56e0171a19cd6c63e2f97b}\label{classk_f_1_1_flow_1_1_node_instance_a3a324024ad56e0171a19cd6c63e2f97b}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!\_node@{\_node}}
+\index{\_node@{\_node}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{\_node}{\_node}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}}$\ast$ k\+F\+::\+Flow\+::\+Node\+Instance\+::\+\_\+node \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_node_instance_a83002966c3811a97b05400ae47392864}\label{classk_f_1_1_flow_1_1_node_instance_a83002966c3811a97b05400ae47392864}} 
+\index{kF::Flow::NodeInstance@{kF::Flow::NodeInstance}!\_Pool@{\_Pool}}
+\index{\_Pool@{\_Pool}!kF::Flow::NodeInstance@{kF::Flow::NodeInstance}}
+\doxysubsubsection{\texorpdfstring{\_Pool}{\_Pool}}
+{\footnotesize\ttfamily std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource k\+F\+::\+Flow\+::\+Node\+Instance\+::\+\_\+\+Pool \{\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Flow/\mbox{\hyperlink{_node_8hpp}{Node.\+hpp}}\end{DoxyCompactItemize}

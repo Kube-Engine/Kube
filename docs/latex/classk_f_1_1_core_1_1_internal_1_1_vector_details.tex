@@ -1,0 +1,568 @@
+\hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details}{}\doxysection{kF\+::Core\+::Internal\+::Vector\+Details$<$ Base, Type, Range $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_internal_1_1_vector_details}\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+
+
+{\ttfamily \#include $<$Vector\+Details.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Core\+::Internal\+::Vector\+Details$<$ Base, Type, Range $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classk_f_1_1_core_1_1_internal_1_1_vector_details__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} = decltype(std\+::declval$<$ Base \& $>$().begin())
+\begin{DoxyCompactList}\small\item\em Iterator detectors. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} = decltype(std\+::declval$<$ const Base \& $>$().begin())
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_aaf09f8869811e2e727441f4e2b7cc5af}{Vector\+Details}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a116771e3466133c15b71598fd94acd66}{Vector\+Details}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} \&other) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_aacafa8420943de59ba8a69fc060cd72e}{Vector\+Details}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_ab0966ecc34a60e8fff984ad10e1d78c0}{Vector\+Details}} (const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std
+\begin{DoxyCompactList}\small\item\em Resize with default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_aaeb4a32b217ad1ebabb0641ff7524be4}{Vector\+Details}} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ init) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$))
+\begin{DoxyCompactList}\small\item\em Initializer list constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a724c837a0a5d5adf6970ebf53085bef3}{$\sim$\+Vector\+Details}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Release the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a3e4cff5988de4314195ead86a05dbc92}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast non-\/empty check. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a401cdd45bb79be0848b90dfc89b65bd1}{cbegin}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Begin / End helpers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6e1b00357eb8114ff9358d5c88ddd0fa}{cend}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_af59cd741b1480900a5077f20e03f4ae1}{rbegin}} (void) noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a23af73e275248735543f436534f77625}{rend}} (void) noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_acd991b7c01ddc9eaebb6c699142d3658}{rbegin}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a31f711a3c2bedd96367f2f6f869d6859}{rend}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1c3342d81588f7710719e9c33cfb0aac}{crbegin}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_adb85f06e6b69c5ef44d4f5b447eb4a95}{crend}} (void) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a03c2d9de7c30bb631fda5ad977cbf5f1}{at}} (const Range pos) noexcept
+\begin{DoxyCompactList}\small\item\em Access element at positon. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_adea14c414ef151e7b7d6f433d1d54ff4}{at}} (const Range pos) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1bcd7a37145d276028ff2161d310a5a2}{operator\mbox{[}$\,$\mbox{]}}} (const Range pos) noexcept
+\begin{DoxyCompactList}\small\item\em Access element at positon. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a3f617fd19f70f50fbc010e9f2713545b}{operator\mbox{[}$\,$\mbox{]}}} (const Range pos) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a609798dffdb2aa0d387e1f4efc6b6d26}{front}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get first element. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_ac642778bf48662f00308b36c2a68dd3f}{front}} (void) const noexcept
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_af98d894da829af8b29a8f05930d835de}{back}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get last element. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a908cea728ae1620d015afdb7f9f72c67}{back}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a8007b8240cde43ce5ea02a0b81afd37b}{insert}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} pos, std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&init) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert an initializer list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_aef43595c9827eb2871b1e823bfd9183e}{insert}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} pos, const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a range of copies. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a53191f88fc0dd22662ea57474ab8ddbf}{insert}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} pos, const Range count, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a range of copies. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, decltype($\ast$std\+::declval$<$ Input\+Iterator $>$))$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a7e1be8abee7f67feaf180aaba247cf1c}{insert}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} pos, const Input\+Iterator from, const Input\+Iterator to) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a range of element by iterating over iterators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_af039d5c7febe88414604458034bc0d05}{erase}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} from, const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} to) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Remove a range of elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a5cf577cfec7dd9644ad606279bbab1d0}{erase}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} from, const Range count) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Remove a range of elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_ab223cbd16999bdf480f5b689dd859e7b}{erase}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} pos) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Remove a specific element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_ad774681a8f9d347e6daeab6f842951aa}{resize}} (const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Resize the vector using default constructor to initialize each element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6dc1c2daecbb8e6bdd37710810135080}{resize}} (const Range count, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&type) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Resize the vector by copying given element. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_ad7f8fd775367e1cae0ad0dac217dba62}{resize}} (const Input\+Iterator from, const Input\+Iterator to) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator}{k\+F\+::\+Core\+::\+Utils\+::\+Is\+Move\+Iterator}}$<$ Input\+Iterator $>$\+::Value ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$))
+\begin{DoxyCompactList}\small\item\em Resize the vector with input iterators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_abbae76fde9137901ba22ad41cb66c3e4}{clear}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Destroy all elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9be0e4ea76fd07cd1f3efb7d9c1c8bbe}{clear\+Unsafe}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a122893e187f6140606ef293079375254}{release}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Destroy all elements and release the buffer instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1600ff6c1092181e0b51cd4d05202c36}{release\+Unsafe}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6103ef8466181cd5b42f91ef097ff9f4}{reserve}} (const Range capacity) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Reserve memory for fast emplace only if asked capacity is higher than current capacity The data is either preserved or moved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a62328d8c33308f3103b03529ca280437}{grow}} (const Range minimum=Range()) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Grow internal buffer of a given minimum. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, decltype($\ast$std\+::declval$<$ Input\+Iterator $>$))$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a2bd8580693d2b6321a9b509711149841}{insert}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} pos, const Input\+Iterator from, const Input\+Iterator to) noexcept(\mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \&\&\mbox{\hyperlink{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}{nothrow\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&push(Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9fae90758247f9b91634d578a6b3e630}{pop}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Push an element into the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool Is\+Safe$>$ }\\bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_ade0f57eafe7f7842f150336110a72c36}{reserve\+Unsafe}} (const Range capacity) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Reserve unsafe takes Is\+Safe as template parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} =  decltype(std\+::declval$<$const Base \&$>$().begin())}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} =  decltype(std\+::declval$<$Base \&$>$().begin())}
+
+
+
+Iterator detectors. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_aaf09f8869811e2e727441f4e2b7cc5af}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_aaf09f8869811e2e727441f4e2b7cc5af}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!VectorDetails@{VectorDetails}}
+\index{VectorDetails@{VectorDetails}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDetails()}{VectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a116771e3466133c15b71598fd94acd66}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a116771e3466133c15b71598fd94acd66}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!VectorDetails@{VectorDetails}}
+\index{VectorDetails@{VectorDetails}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDetails()}{VectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_aacafa8420943de59ba8a69fc060cd72e}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_aacafa8420943de59ba8a69fc060cd72e}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!VectorDetails@{VectorDetails}}
+\index{VectorDetails@{VectorDetails}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDetails()}{VectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_ab0966ecc34a60e8fff984ad10e1d78c0}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_ab0966ecc34a60e8fff984ad10e1d78c0}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!VectorDetails@{VectorDetails}}
+\index{VectorDetails@{VectorDetails}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDetails()}{VectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} (\begin{DoxyParamCaption}\item[{const Range}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize with default constructor. 
+
+Resize with copy constructor
+
+Insert constructor \mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_aaeb4a32b217ad1ebabb0641ff7524be4}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_aaeb4a32b217ad1ebabb0641ff7524be4}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!VectorDetails@{VectorDetails}}
+\index{VectorDetails@{VectorDetails}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDetails()}{VectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Initializer list constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a724c837a0a5d5adf6970ebf53085bef3}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a724c837a0a5d5adf6970ebf53085bef3}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!````~VectorDetails@{$\sim$VectorDetails}}
+\index{````~VectorDetails@{$\sim$VectorDetails}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$VectorDetails()}{~VectorDetails()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Release the vector. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_adea14c414ef151e7b7d6f433d1d54ff4}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_adea14c414ef151e7b7d6f433d1d54ff4}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!at@{at}}
+\index{at@{at}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::at (\begin{DoxyParamCaption}\item[{const Range}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a03c2d9de7c30bb631fda5ad977cbf5f1}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a03c2d9de7c30bb631fda5ad977cbf5f1}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!at@{at}}
+\index{at@{at}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::at (\begin{DoxyParamCaption}\item[{const Range}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Access element at positon. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a908cea728ae1620d015afdb7f9f72c67}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a908cea728ae1620d015afdb7f9f72c67}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!back@{back}}
+\index{back@{back}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_af98d894da829af8b29a8f05930d835de}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_af98d894da829af8b29a8f05930d835de}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!back@{back}}
+\index{back@{back}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get last element. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a401cdd45bb79be0848b90dfc89b65bd1}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a401cdd45bb79be0848b90dfc89b65bd1}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::cbegin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Begin / End helpers. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6e1b00357eb8114ff9358d5c88ddd0fa}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6e1b00357eb8114ff9358d5c88ddd0fa}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!cend@{cend}}
+\index{cend@{cend}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::cend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_abbae76fde9137901ba22ad41cb66c3e4}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_abbae76fde9137901ba22ad41cb66c3e4}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!clear@{clear}}
+\index{clear@{clear}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy all elements. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9be0e4ea76fd07cd1f3efb7d9c1c8bbe}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9be0e4ea76fd07cd1f3efb7d9c1c8bbe}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!clearUnsafe@{clearUnsafe}}
+\index{clearUnsafe@{clearUnsafe}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{clearUnsafe()}{clearUnsafe()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::clear\+Unsafe (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1c3342d81588f7710719e9c33cfb0aac}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1c3342d81588f7710719e9c33cfb0aac}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{crbegin()}{crbegin()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::crbegin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_adb85f06e6b69c5ef44d4f5b447eb4a95}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_adb85f06e6b69c5ef44d4f5b447eb4a95}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!crend@{crend}}
+\index{crend@{crend}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{crend()}{crend()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::crend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_af039d5c7febe88414604458034bc0d05}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_af039d5c7febe88414604458034bc0d05}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!erase@{erase}}
+\index{erase@{erase}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::erase (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{from,  }\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a range of elements. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a5cf577cfec7dd9644ad606279bbab1d0}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a5cf577cfec7dd9644ad606279bbab1d0}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!erase@{erase}}
+\index{erase@{erase}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::erase (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{from,  }\item[{const Range}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a range of elements. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_ab223cbd16999bdf480f5b689dd859e7b}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_ab223cbd16999bdf480f5b689dd859e7b}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!erase@{erase}}
+\index{erase@{erase}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::erase (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Remove a specific element. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_ac642778bf48662f00308b36c2a68dd3f}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_ac642778bf48662f00308b36c2a68dd3f}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!front@{front}}
+\index{front@{front}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::front (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a609798dffdb2aa0d387e1f4efc6b6d26}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a609798dffdb2aa0d387e1f4efc6b6d26}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!front@{front}}
+\index{front@{front}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::front (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get first element. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a62328d8c33308f3103b03529ca280437}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a62328d8c33308f3103b03529ca280437}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!grow@{grow}}
+\index{grow@{grow}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{grow()}{grow()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::grow (\begin{DoxyParamCaption}\item[{const Range}]{minimum = {\ttfamily Range()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Grow internal buffer of a given minimum. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a7e1be8abee7f67feaf180aaba247cf1c}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a7e1be8abee7f67feaf180aaba247cf1c}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, decltype($\ast$std\+::declval$<$Input\+Iterator$>$))$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{pos,  }\item[{const Input\+Iterator}]{from,  }\item[{const Input\+Iterator}]{to }\end{DoxyParamCaption}) const \&\&\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Insert a range of element by iterating over iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a2bd8580693d2b6321a9b509711149841}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a2bd8580693d2b6321a9b509711149841}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, decltype($\ast$std\+::declval$<$Input\+Iterator$>$))$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{pos,  }\item[{const Input\+Iterator}]{from,  }\item[{const Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_aef43595c9827eb2871b1e823bfd9183e}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_aef43595c9827eb2871b1e823bfd9183e}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{pos,  }\item[{const Range}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Insert a range of copies. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a53191f88fc0dd22662ea57474ab8ddbf}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a53191f88fc0dd22662ea57474ab8ddbf}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{pos,  }\item[{const Range}]{count,  }\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Insert a range of copies. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a8007b8240cde43ce5ea02a0b81afd37b}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a8007b8240cde43ce5ea02a0b81afd37b}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}}}]{pos,  }\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Insert an initializer list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a3e4cff5988de4314195ead86a05dbc92}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a3e4cff5988de4314195ead86a05dbc92}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast non-\/empty check. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a3f617fd19f70f50fbc010e9f2713545b}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a3f617fd19f70f50fbc010e9f2713545b}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const Range}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1bcd7a37145d276028ff2161d310a5a2}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1bcd7a37145d276028ff2161d310a5a2}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const Range}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Access element at positon. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_acd991b7c01ddc9eaebb6c699142d3658}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_acd991b7c01ddc9eaebb6c699142d3658}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::rbegin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_af59cd741b1480900a5077f20e03f4ae1}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_af59cd741b1480900a5077f20e03f4ae1}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::rbegin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a122893e187f6140606ef293079375254}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a122893e187f6140606ef293079375254}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!release@{release}}
+\index{release@{release}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Destroy all elements and release the buffer instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1600ff6c1092181e0b51cd4d05202c36}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1600ff6c1092181e0b51cd4d05202c36}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!releaseUnsafe@{releaseUnsafe}}
+\index{releaseUnsafe@{releaseUnsafe}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{releaseUnsafe()}{releaseUnsafe()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::release\+Unsafe (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a31f711a3c2bedd96367f2f6f869d6859}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a31f711a3c2bedd96367f2f6f869d6859}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!rend@{rend}}
+\index{rend@{rend}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a1b45e24e2a351bac0e5cdb5c45f5f27b}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::rend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a23af73e275248735543f436534f77625}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a23af73e275248735543f436534f77625}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!rend@{rend}}
+\index{rend@{rend}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6a8fd04b82b79c18d740c0286fe703fa}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::rend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6103ef8466181cd5b42f91ef097ff9f4}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6103ef8466181cd5b42f91ef097ff9f4}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::reserve (\begin{DoxyParamCaption}\item[{const Range}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Reserve memory for fast emplace only if asked capacity is higher than current capacity The data is either preserved or moved. 
+
+\begin{DoxyReturn}{Returns}
+True if the reserve happened and the data has been moved 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_ade0f57eafe7f7842f150336110a72c36}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_ade0f57eafe7f7842f150336110a72c36}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!reserveUnsafe@{reserveUnsafe}}
+\index{reserveUnsafe@{reserveUnsafe}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{reserveUnsafe()}{reserveUnsafe()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+template$<$bool Is\+Safe$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::reserve\+Unsafe (\begin{DoxyParamCaption}\item[{const Range}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Reserve unsafe takes Is\+Safe as template parameter. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_ad7f8fd775367e1cae0ad0dac217dba62}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_ad7f8fd775367e1cae0ad0dac217dba62}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::resize (\begin{DoxyParamCaption}\item[{const Input\+Iterator}]{from,  }\item[{const Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize the vector with input iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_ad774681a8f9d347e6daeab6f842951aa}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_ad774681a8f9d347e6daeab6f842951aa}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::resize (\begin{DoxyParamCaption}\item[{const Range}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize the vector using default constructor to initialize each element. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6dc1c2daecbb8e6bdd37710810135080}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a6dc1c2daecbb8e6bdd37710810135080}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::resize (\begin{DoxyParamCaption}\item[{const Range}]{count,  }\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize the vector by copying given element. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9fae90758247f9b91634d578a6b3e630}\label{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9fae90758247f9b91634d578a6b3e630}} 
+\index{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}!pop@{pop}}
+\index{pop@{pop}!kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::VectorDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{pop}{pop}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}\& push (Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args...$>$ \&\& std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::pop(void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Push an element into the vector. 
+
+Pop the last element of the vector 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_vector_details_8hpp}{Vector\+Details.\+hpp}}\item 
+Kube/\+Core/\mbox{\hyperlink{_vector_details_8ipp}{Vector\+Details.\+ipp}}\end{DoxyCompactItemize}

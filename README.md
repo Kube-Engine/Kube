@@ -19,13 +19,13 @@ After 3 attempts to re-create a Qt-Quick-like framework ([here is the last](http
 Kube framework is divided into modules that encapsulate specific parts of the engine.
 |Name|Description|Version|
 |-|-|-|
-|**Core**|Contains over-optimized basic classes used in multiples modules|Growing with modules needs
-|**Meta**|Implementation of non-intrusive runtime reflection with supports of signal / slots|0.1
-|**Flow**|A high frequency multithreading task scheduler|WIP, early stage
-|**ECS**|An Entity Component System designed to fit in Flow's multithreaded task graph|WIP, early stage
+|**Core**|Contains over-optimized basic classes used in multiples modules|0.2
+|**Meta**|Implementation of non-intrusive runtime reflection with supports of signal / slots|0.2
+|**Flow**|A high frequency multithreading task scheduler|0.1
+|**ECS**|An Entity Component System designed to fit in Flow's multithreaded task graph|0.1
 |**Interpreter**|Kube's language interpreter|WIP, early stage
 |**App**|Kube cross-platform window, inputs and events handling|WIP, early stage
-|**Graphics**|Low level graphic engine|WIP, early stage
+|**Graphics**|Low level graphic engine|0.1
 |**Voxel**|A renderer optimized for voxel graphics|Not started yiet
 |**Audio**|A 3D audio scene processor|Not started yiet
 

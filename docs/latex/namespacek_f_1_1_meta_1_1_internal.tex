@@ -1,0 +1,587 @@
+\hypertarget{namespacek_f_1_1_meta_1_1_internal}{}\doxysection{kF\+::Meta\+::Internal Namespace Reference}
+\label{namespacek_f_1_1_meta_1_1_internal}\index{kF::Meta::Internal@{kF::Meta::Internal}}
+
+
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal}{Internal}} type resolvers and helpers.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}{Arrange\+Type}}
+\begin{DoxyCompactList}\small\item\em Helper used to format specific types to other. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_return_07_args_8_8_8_08_4}{Function\+Decomposer$<$ Return(\+Args...)$>$}}
+\begin{DoxyCompactList}\small\item\em Describes a function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_return_07_class_1_1_5_08_07_args_8_8_8_08_01const_01_4}{Function\+Decomposer$<$ Return(\+Class\+::$\ast$)(\+Args...) const $>$}}
+\begin{DoxyCompactList}\small\item\em Describes a const member function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_return_07_class_1_1_5_08_07_args_8_8_8_08_4}{Function\+Decomposer$<$ Return(\+Class\+::$\ast$)(\+Args...)$>$}}
+\begin{DoxyCompactList}\small\item\em Describes a member function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_type_00_01decltype_07void_07_6_type_1_1operator_07_08_08_08_4}{Function\+Decomposer$<$ Type, decltype(void(\&\+Type\+::operator()))$>$}}
+\begin{DoxyCompactList}\small\item\em Describes an std\+::function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_identifier}{Function\+Identifier}}
+\begin{DoxyCompactList}\small\item\em Helper function used to instantiate a dummy variable for a given function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_type_holder}{Type\+Holder}}
+\begin{DoxyCompactList}\small\item\em Simple structure that holds a type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Function\+Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8b7a9a8ae8d69ae423252f5136ec88da}{Function\+Decomposer\+Helper}} = decltype(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae9a79082b3cba2c718ca7692b10e763f}{To\+Function\+Decomposer}}(std\+::declval$<$ Function\+Type $>$()))
+\begin{DoxyCompactList}\small\item\em Helper that retreive Decomposer of any function signature. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}{Opaque\+Function}} = const void $\ast$
+\begin{DoxyCompactList}\small\item\em Opaque function type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_adb401dae290f66eeed03cc6a17a39109}{Bool\+Operator\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$().operator bool())
+\begin{DoxyCompactList}\small\item\em Helpers to check if an operator is avaible on a \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a04cffcd7121af00d292078d8fb16079b}{Unary\+Minus\+Check}} = decltype(-\/ std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_abdc684064fdb32a978bf639308523acf}{Binary\+Addition\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$()+std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aea201fd3cce7db799e91e6dc710a3295}{Binary\+Substraction\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$() -\/ std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aab38eef0df7cb4a7e2d93215f482d81a}{Binary\+Multiplication\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$() $\ast$std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7dc4da11933973af84251b0ed5543bfa}{Binary\+Division\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$()/std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7041e639df9cbfa087c255f12ea8e09b}{Binary\+Modulo\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$() \% std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a83beab20b303a2ba0cd3ccf059f46663}{Assignment\+Addition\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$()+=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_af24928e1d607e8f68b326acbd4a02bff}{Assignment\+Substraction\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$() -\/=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ac6117eabeafe3c144434d5b5f69549c0}{Assignment\+Multiplication\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$() $\ast$=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a237ee2f389de9dc9f38752ae43f47f9b}{Assignment\+Division\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$()/=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a91e0f3cadad88fdc0ecc81fc6c9b1497}{Assignment\+Modulo\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$() \%=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Class , typename Return , typename ... Args$>$ }\\constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$ Return(Class\+::$\ast$)(Args...)$>$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae9a79082b3cba2c718ca7692b10e763f}{To\+Function\+Decomposer}} (Return(Class\+::$\ast$)(Args...))
+\begin{DoxyCompactList}\small\item\em Helper that catch member functions and get their Decomposer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Class , typename Return , typename ... Args$>$ }\\constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$ Return(Class\+::$\ast$)(Args...) const  $>$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a549b133440b05bb2189bfc09764ca2ab}{To\+Function\+Decomposer}} (Return(Class\+::$\ast$)(Args...) const)
+\begin{DoxyCompactList}\small\item\em Helper that catch const member functions and get their Decomposer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Return , typename ... Args$>$ }\\constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$ Return(Args...)$>$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a6e0f80a83c3c57f21b415cb89d9d04a9}{To\+Function\+Decomposer}} (Return(Args...))
+\begin{DoxyCompactList}\small\item\em Helper that catch free functions and get their Decomposer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, decltype(void(\&Type\+::operator()))$>$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a0ed2f61f59543194666e72d6863ab190}{To\+Function\+Decomposer}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}})
+\begin{DoxyCompactList}\small\item\em Helper that catch functors and get their Decomposer. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a1004016e1f33f090504dcc103ab9498a}{To\+Function\+Decomposer}} (...)
+\item 
+{\footnotesize template$<$auto Function\+Ptr$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}{Opaque\+Function}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae1d2534827916099844a26ca005277b9}{Get\+Function\+Identifier}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to retreive a function identifier. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a2802ba836e767f434245932e7574f5c4}{Make\+Default\+Constructor}} (void $\ast$instance) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a363b8f0f8c9f430ac13340fae71c91fe}{Make\+Copy\+Constructor}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aaeb481c9a295f651f261264f533ff470}{Make\+Move\+Constructor}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a3b2fa2833e15e4f4d97ca55c7802a566}{Make\+Copy\+Assignment}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Helpers used to generate opaque assignment functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_acad3ef0a0a0cc8c2d8aca0ae9eeec138}{Make\+Move\+Assignment}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad0b44c926da1747413c211f76ebc4984}{Make\+Destructor}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Helper used to generate opaque destructor functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ Type, bool $>$$>$ $\ast$  = nullptr$>$ }\\bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae0537eda52eac7f65253d0f8bb55476b}{Make\+To\+Bool}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+convertible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, bool $>$)
+\begin{DoxyCompactList}\small\item\em Helpers used to generate opaque primitive functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Operator\+Func, Unary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a499b1c6387b505eacfd088089f2965dc}{Make\+Unary\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}})
+\begin{DoxyCompactList}\small\item\em Helpers used to generate opaque operators functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Operator\+Func, Binary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad5144a9e2b55534ec80648c5684e651a}{Make\+Binary\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
+\item 
+{\footnotesize template$<$typename Type , auto Operator\+Func, Assignment\+Operator Operator$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a94e06818e5d5a67751c846d196907237}{Make\+Assignment\+Operator}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ab95549118c4a235c6164e75525815718}{Unary\+Minus}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&var) noexcept(noexcept(-\/var))
+\begin{DoxyCompactList}\small\item\em Helpers to generate unary operator functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a18a9f1de998f8d2268b35c0132efb0f2}{Binary\+Addition}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs+rhs))
+\begin{DoxyCompactList}\small\item\em Helpers to generate binary operator functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad36bec92bda52ae756c576251df2d936}{Binary\+Substraction}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs -\/ rhs))
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a3a241e2218b08824be9583dcdb058bff}{Binary\+Multiplication}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs $\ast$rhs))
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a50e04d0bd1e8767d9bfceaa77b461e79}{Binary\+Division}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs/rhs))
+\item 
+{\footnotesize template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ Type $>$$>$ $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_acb2e3ba9c085fee0fae8f1d810df4d48}{Binary\+Modulo}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs \% rhs))
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ac14ad1be901cfc67961d2a5b1bbb90db}{Assignment\+Addition}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs+=rhs))
+\begin{DoxyCompactList}\small\item\em Helpers to generate assignment operator functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a896d6372c0231731b742ca6b55be97e7}{Assignment\+Substraction}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs -\/=rhs))
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a6b1228b408a83064dce7978bbba1287b}{Assignment\+Multiplication}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs $\ast$=rhs))
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a534a8ef5172e5b6562ef6de4021156e0}{Assignment\+Division}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs/=rhs))
+\item 
+{\footnotesize template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ Type $>$$>$ $\ast$  = nullptr$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8d9c7e6e2c97f3d0fa2e017554490d09}{Assignment\+Modulo}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&rhs) noexcept(noexcept(lhs \%=rhs))
+\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_accd5bd35147ad3ea14df09dc8cf90e73}{Binary\+Addition\+Pointer}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} lhs, const std\+::size\+\_\+t rhs) noexcept
+\begin{DoxyCompactList}\small\item\em Helpers to generate pointer operators functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a3de9f69a010964edbf89cdbd5d87ca49}{Binary\+Substraction\+Pointer}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} lhs, const std\+::size\+\_\+t rhs) noexcept
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a9077882058c43a673eed688af5a863cc}{Assignment\+Addition\+Pointer}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const std\+::size\+\_\+t rhs) noexcept
+\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4a589437e400436106473ffd7d945c32}{Assignment\+Substraction\+Pointer}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&lhs, const std\+::size\+\_\+t rhs) noexcept
+\item 
+{\footnotesize template$<$typename Arg\+Type , bool Allow\+Implicit\+Move$>$ }\\decltype(auto) \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_abeb35d5665c80c89a9ef354aa833d9d9}{Forward\+Argument}} (\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$any)
+\begin{DoxyCompactList}\small\item\em Helper used to forward an argument of an invoked function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Function\+Ptr, bool Allow\+Implicit\+Move, typename Decomposer , std\+::size\+\_\+t ... Indexes$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a06a3cc179dbf725eaaa13bf00f5fddc3}{Invoke}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const void $\ast$instance, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$args, std\+::index\+\_\+sequence$<$ Indexes... $>$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} function invoker Will perform different semantics uppon function\textquotesingle{}s arguments R\+Vakue -\/ Perfect forwarding, will move anyway (even references) ! L\+Value volatile -\/ Perfect forwarding L\+Value constant -\/ Forward if possible, else try to convert Value -\/ Forward if possible, else try to convert. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , bool Allow\+Implicit\+Move, typename Decomposer , typename Functor , std\+::size\+\_\+t ... Indexes$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ab63ae81b6fdf73b0fadf254c3329ed75}{Invoke}} (Functor \&functor, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const void $\ast$instance, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$args, std\+::index\+\_\+sequence$<$ Indexes... $>$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} functor invoker. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\static constexpr const void $\ast$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a114adac5953deb8c342152c4f62d0c74}{Retreive\+Opaque\+Ptr}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&input) noexcept
+\begin{DoxyCompactList}\small\item\em Helper used to retreive a void pointer from a reference (either a reference to nullptr or a variable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr auto \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}{Var\+Small\+Optimization\+Size}} = 16ul
+\item 
+{\footnotesize template$<$typename Type $>$ }\\constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7e32ddf900e1a8b24b567613fc603114}{Is\+Var\+Small\+Optimized}} = \mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} constexpr ( (std\+::is\+\_\+same\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, void$>$) ) \{ return false ; \} else \{ return sizeof(\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}) $<$= \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}{Var\+Small\+Optimization\+Size}} ; \} \}()
+\begin{DoxyCompactList}\small\item\em Helper to know if a type is trivial or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal}{Internal}} type resolvers and helpers. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a83beab20b303a2ba0cd3ccf059f46663}\label{namespacek_f_1_1_meta_1_1_internal_a83beab20b303a2ba0cd3ccf059f46663}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentAdditionCheck@{AssignmentAdditionCheck}}
+\index{AssignmentAdditionCheck@{AssignmentAdditionCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentAdditionCheck}{AssignmentAdditionCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a83beab20b303a2ba0cd3ccf059f46663}{k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Addition\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}\&$>$() += std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a237ee2f389de9dc9f38752ae43f47f9b}\label{namespacek_f_1_1_meta_1_1_internal_a237ee2f389de9dc9f38752ae43f47f9b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentDivisionCheck@{AssignmentDivisionCheck}}
+\index{AssignmentDivisionCheck@{AssignmentDivisionCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentDivisionCheck}{AssignmentDivisionCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a237ee2f389de9dc9f38752ae43f47f9b}{k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Division\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}\&$>$() /= std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a91e0f3cadad88fdc0ecc81fc6c9b1497}\label{namespacek_f_1_1_meta_1_1_internal_a91e0f3cadad88fdc0ecc81fc6c9b1497}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentModuloCheck@{AssignmentModuloCheck}}
+\index{AssignmentModuloCheck@{AssignmentModuloCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentModuloCheck}{AssignmentModuloCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a91e0f3cadad88fdc0ecc81fc6c9b1497}{k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Modulo\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}\&$>$() \%= std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ac6117eabeafe3c144434d5b5f69549c0}\label{namespacek_f_1_1_meta_1_1_internal_ac6117eabeafe3c144434d5b5f69549c0}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentMultiplicationCheck@{AssignmentMultiplicationCheck}}
+\index{AssignmentMultiplicationCheck@{AssignmentMultiplicationCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentMultiplicationCheck}{AssignmentMultiplicationCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ac6117eabeafe3c144434d5b5f69549c0}{k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Multiplication\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}\&$>$() $\ast$= std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_af24928e1d607e8f68b326acbd4a02bff}\label{namespacek_f_1_1_meta_1_1_internal_af24928e1d607e8f68b326acbd4a02bff}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentSubstractionCheck@{AssignmentSubstractionCheck}}
+\index{AssignmentSubstractionCheck@{AssignmentSubstractionCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentSubstractionCheck}{AssignmentSubstractionCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_af24928e1d607e8f68b326acbd4a02bff}{k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Substraction\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}\&$>$() -\/= std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_abdc684064fdb32a978bf639308523acf}\label{namespacek_f_1_1_meta_1_1_internal_abdc684064fdb32a978bf639308523acf}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryAdditionCheck@{BinaryAdditionCheck}}
+\index{BinaryAdditionCheck@{BinaryAdditionCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryAdditionCheck}{BinaryAdditionCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_abdc684064fdb32a978bf639308523acf}{k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Addition\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$() + std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a7dc4da11933973af84251b0ed5543bfa}\label{namespacek_f_1_1_meta_1_1_internal_a7dc4da11933973af84251b0ed5543bfa}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryDivisionCheck@{BinaryDivisionCheck}}
+\index{BinaryDivisionCheck@{BinaryDivisionCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryDivisionCheck}{BinaryDivisionCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7dc4da11933973af84251b0ed5543bfa}{k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Division\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$() / std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a7041e639df9cbfa087c255f12ea8e09b}\label{namespacek_f_1_1_meta_1_1_internal_a7041e639df9cbfa087c255f12ea8e09b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryModuloCheck@{BinaryModuloCheck}}
+\index{BinaryModuloCheck@{BinaryModuloCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryModuloCheck}{BinaryModuloCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7041e639df9cbfa087c255f12ea8e09b}{k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Modulo\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$() \% std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aab38eef0df7cb4a7e2d93215f482d81a}\label{namespacek_f_1_1_meta_1_1_internal_aab38eef0df7cb4a7e2d93215f482d81a}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryMultiplicationCheck@{BinaryMultiplicationCheck}}
+\index{BinaryMultiplicationCheck@{BinaryMultiplicationCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryMultiplicationCheck}{BinaryMultiplicationCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aab38eef0df7cb4a7e2d93215f482d81a}{k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Multiplication\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$() $\ast$ std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aea201fd3cce7db799e91e6dc710a3295}\label{namespacek_f_1_1_meta_1_1_internal_aea201fd3cce7db799e91e6dc710a3295}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinarySubstractionCheck@{BinarySubstractionCheck}}
+\index{BinarySubstractionCheck@{BinarySubstractionCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinarySubstractionCheck}{BinarySubstractionCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aea201fd3cce7db799e91e6dc710a3295}{k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Substraction\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$() -\/ std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_adb401dae290f66eeed03cc6a17a39109}\label{namespacek_f_1_1_meta_1_1_internal_adb401dae290f66eeed03cc6a17a39109}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BoolOperatorCheck@{BoolOperatorCheck}}
+\index{BoolOperatorCheck@{BoolOperatorCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BoolOperatorCheck}{BoolOperatorCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_adb401dae290f66eeed03cc6a17a39109}{k\+F\+::\+Meta\+::\+Internal\+::\+Bool\+Operator\+Check}} = typedef decltype(std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$().operator bool())}
+
+
+
+Helpers to check if an operator is avaible on a \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a8b7a9a8ae8d69ae423252f5136ec88da}\label{namespacek_f_1_1_meta_1_1_internal_a8b7a9a8ae8d69ae423252f5136ec88da}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!FunctionDecomposerHelper@{FunctionDecomposerHelper}}
+\index{FunctionDecomposerHelper@{FunctionDecomposerHelper}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{FunctionDecomposerHelper}{FunctionDecomposerHelper}}
+{\footnotesize\ttfamily template$<$typename Function\+Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8b7a9a8ae8d69ae423252f5136ec88da}{k\+F\+::\+Meta\+::\+Internal\+::\+Function\+Decomposer\+Helper}} = typedef decltype(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae9a79082b3cba2c718ca7692b10e763f}{To\+Function\+Decomposer}}(std\+::declval$<$Function\+Type$>$()))}
+
+
+
+Helper that retreive Decomposer of any function signature. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}\label{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!OpaqueFunction@{OpaqueFunction}}
+\index{OpaqueFunction@{OpaqueFunction}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{OpaqueFunction}{OpaqueFunction}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}{k\+F\+::\+Meta\+::\+Internal\+::\+Opaque\+Function}} = typedef const void $\ast$}
+
+
+
+Opaque function type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a04cffcd7121af00d292078d8fb16079b}\label{namespacek_f_1_1_meta_1_1_internal_a04cffcd7121af00d292078d8fb16079b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!UnaryMinusCheck@{UnaryMinusCheck}}
+\index{UnaryMinusCheck@{UnaryMinusCheck}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{UnaryMinusCheck}{UnaryMinusCheck}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a04cffcd7121af00d292078d8fb16079b}{k\+F\+::\+Meta\+::\+Internal\+::\+Unary\+Minus\+Check}} = typedef decltype(-\/ std\+::declval$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}$>$())}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ac14ad1be901cfc67961d2a5b1bbb90db}\label{namespacek_f_1_1_meta_1_1_internal_ac14ad1be901cfc67961d2a5b1bbb90db}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentAddition@{AssignmentAddition}}
+\index{AssignmentAddition@{AssignmentAddition}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentAddition()}{AssignmentAddition()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Addition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helpers to generate assignment operator functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a9077882058c43a673eed688af5a863cc}\label{namespacek_f_1_1_meta_1_1_internal_a9077882058c43a673eed688af5a863cc}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentAdditionPointer@{AssignmentAdditionPointer}}
+\index{AssignmentAdditionPointer@{AssignmentAdditionPointer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentAdditionPointer()}{AssignmentAdditionPointer()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Addition\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const std\+::size\+\_\+t}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a534a8ef5172e5b6562ef6de4021156e0}\label{namespacek_f_1_1_meta_1_1_internal_a534a8ef5172e5b6562ef6de4021156e0}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentDivision@{AssignmentDivision}}
+\index{AssignmentDivision@{AssignmentDivision}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentDivision()}{AssignmentDivision()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Division (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a8d9c7e6e2c97f3d0fa2e017554490d09}\label{namespacek_f_1_1_meta_1_1_internal_a8d9c7e6e2c97f3d0fa2e017554490d09}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentModulo@{AssignmentModulo}}
+\index{AssignmentModulo@{AssignmentModulo}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentModulo()}{AssignmentModulo()}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ Type $>$$>$ $\ast$  = nullptr$>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Modulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a6b1228b408a83064dce7978bbba1287b}\label{namespacek_f_1_1_meta_1_1_internal_a6b1228b408a83064dce7978bbba1287b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentMultiplication@{AssignmentMultiplication}}
+\index{AssignmentMultiplication@{AssignmentMultiplication}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentMultiplication()}{AssignmentMultiplication()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Multiplication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a896d6372c0231731b742ca6b55be97e7}\label{namespacek_f_1_1_meta_1_1_internal_a896d6372c0231731b742ca6b55be97e7}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentSubstraction@{AssignmentSubstraction}}
+\index{AssignmentSubstraction@{AssignmentSubstraction}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentSubstraction()}{AssignmentSubstraction()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Substraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a4a589437e400436106473ffd7d945c32}\label{namespacek_f_1_1_meta_1_1_internal_a4a589437e400436106473ffd7d945c32}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!AssignmentSubstractionPointer@{AssignmentSubstractionPointer}}
+\index{AssignmentSubstractionPointer@{AssignmentSubstractionPointer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{AssignmentSubstractionPointer()}{AssignmentSubstractionPointer()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Assignment\+Substraction\+Pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const std\+::size\+\_\+t}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a18a9f1de998f8d2268b35c0132efb0f2}\label{namespacek_f_1_1_meta_1_1_internal_a18a9f1de998f8d2268b35c0132efb0f2}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryAddition@{BinaryAddition}}
+\index{BinaryAddition@{BinaryAddition}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryAddition()}{BinaryAddition()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Addition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helpers to generate binary operator functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_accd5bd35147ad3ea14df09dc8cf90e73}\label{namespacek_f_1_1_meta_1_1_internal_accd5bd35147ad3ea14df09dc8cf90e73}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryAdditionPointer@{BinaryAdditionPointer}}
+\index{BinaryAdditionPointer@{BinaryAdditionPointer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryAdditionPointer()}{BinaryAdditionPointer()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Addition\+Pointer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}}]{lhs,  }\item[{const std\+::size\+\_\+t}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helpers to generate pointer operators functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a50e04d0bd1e8767d9bfceaa77b461e79}\label{namespacek_f_1_1_meta_1_1_internal_a50e04d0bd1e8767d9bfceaa77b461e79}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryDivision@{BinaryDivision}}
+\index{BinaryDivision@{BinaryDivision}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryDivision()}{BinaryDivision()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Division (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_acb2e3ba9c085fee0fae8f1d810df4d48}\label{namespacek_f_1_1_meta_1_1_internal_acb2e3ba9c085fee0fae8f1d810df4d48}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryModulo@{BinaryModulo}}
+\index{BinaryModulo@{BinaryModulo}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryModulo()}{BinaryModulo()}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ Type $>$$>$ $\ast$  = nullptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Modulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a3a241e2218b08824be9583dcdb058bff}\label{namespacek_f_1_1_meta_1_1_internal_a3a241e2218b08824be9583dcdb058bff}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinaryMultiplication@{BinaryMultiplication}}
+\index{BinaryMultiplication@{BinaryMultiplication}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinaryMultiplication()}{BinaryMultiplication()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Multiplication (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ad36bec92bda52ae756c576251df2d936}\label{namespacek_f_1_1_meta_1_1_internal_ad36bec92bda52ae756c576251df2d936}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinarySubstraction@{BinarySubstraction}}
+\index{BinarySubstraction@{BinarySubstraction}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinarySubstraction()}{BinarySubstraction()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Substraction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a3de9f69a010964edbf89cdbd5d87ca49}\label{namespacek_f_1_1_meta_1_1_internal_a3de9f69a010964edbf89cdbd5d87ca49}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!BinarySubstractionPointer@{BinarySubstractionPointer}}
+\index{BinarySubstractionPointer@{BinarySubstractionPointer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{BinarySubstractionPointer()}{BinarySubstractionPointer()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Binary\+Substraction\+Pointer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}}]{lhs,  }\item[{const std\+::size\+\_\+t}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_abeb35d5665c80c89a9ef354aa833d9d9}\label{namespacek_f_1_1_meta_1_1_internal_abeb35d5665c80c89a9ef354aa833d9d9}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!ForwardArgument@{ForwardArgument}}
+\index{ForwardArgument@{ForwardArgument}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{ForwardArgument()}{ForwardArgument()}}
+{\footnotesize\ttfamily template$<$typename Arg\+Type , bool Allow\+Implicit\+Move$>$ \\
+decltype(auto) k\+F\+::\+Meta\+::\+Internal\+::\+Forward\+Argument (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{any }\end{DoxyParamCaption})}
+
+
+
+Helper used to forward an argument of an invoked function. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ae1d2534827916099844a26ca005277b9}\label{namespacek_f_1_1_meta_1_1_internal_ae1d2534827916099844a26ca005277b9}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!GetFunctionIdentifier@{GetFunctionIdentifier}}
+\index{GetFunctionIdentifier@{GetFunctionIdentifier}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{GetFunctionIdentifier()}{GetFunctionIdentifier()}}
+{\footnotesize\ttfamily template$<$auto Function\+Ptr$>$ \\
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db90fd549d816}{Opaque\+Function}} k\+F\+::\+Meta\+::\+Internal\+::\+Get\+Function\+Identifier (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helper used to retreive a function identifier. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a06a3cc179dbf725eaaa13bf00f5fddc3}\label{namespacek_f_1_1_meta_1_1_internal_a06a3cc179dbf725eaaa13bf00f5fddc3}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type , auto Function\+Ptr, bool Allow\+Implicit\+Move, typename Decomposer , std\+::size\+\_\+t ... Indexes$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Internal\+::\+Invoke (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} const void $\ast$}]{instance,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{args,  }\item[{std\+::index\+\_\+sequence$<$ Indexes... $>$}]{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} function invoker Will perform different semantics uppon function\textquotesingle{}s arguments R\+Vakue -\/ Perfect forwarding, will move anyway (even references) ! L\+Value volatile -\/ Perfect forwarding L\+Value constant -\/ Forward if possible, else try to convert Value -\/ Forward if possible, else try to convert. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ab63ae81b6fdf73b0fadf254c3329ed75}\label{namespacek_f_1_1_meta_1_1_internal_ab63ae81b6fdf73b0fadf254c3329ed75}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Invoke()}{Invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type , bool Allow\+Implicit\+Move, typename Decomposer , typename Functor , std\+::size\+\_\+t ... Indexes$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Internal\+::\+Invoke (\begin{DoxyParamCaption}\item[{Functor \&}]{functor,  }\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} const void $\ast$}]{instance,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{args,  }\item[{std\+::index\+\_\+sequence$<$ Indexes... $>$}]{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} functor invoker. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a94e06818e5d5a67751c846d196907237}\label{namespacek_f_1_1_meta_1_1_internal_a94e06818e5d5a67751c846d196907237}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeAssignmentOperator@{MakeAssignmentOperator}}
+\index{MakeAssignmentOperator@{MakeAssignmentOperator}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeAssignmentOperator()}{MakeAssignmentOperator()}}
+{\footnotesize\ttfamily template$<$typename Type , auto Operator\+Func, Assignment\+Operator Operator$>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Assignment\+Operator (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ad5144a9e2b55534ec80648c5684e651a}\label{namespacek_f_1_1_meta_1_1_internal_ad5144a9e2b55534ec80648c5684e651a}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeBinaryOperator@{MakeBinaryOperator}}
+\index{MakeBinaryOperator@{MakeBinaryOperator}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeBinaryOperator()}{MakeBinaryOperator()}}
+{\footnotesize\ttfamily template$<$typename Type , auto Operator\+Func, Binary\+Operator Operator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Binary\+Operator (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{var }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a3b2fa2833e15e4f4d97ca55c7802a566}\label{namespacek_f_1_1_meta_1_1_internal_a3b2fa2833e15e4f4d97ca55c7802a566}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeCopyAssignment@{MakeCopyAssignment}}
+\index{MakeCopyAssignment@{MakeCopyAssignment}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeCopyAssignment()}{MakeCopyAssignment()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Copy\+Assignment (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Helpers used to generate opaque assignment functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a363b8f0f8c9f430ac13340fae71c91fe}\label{namespacek_f_1_1_meta_1_1_internal_a363b8f0f8c9f430ac13340fae71c91fe}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeCopyConstructor@{MakeCopyConstructor}}
+\index{MakeCopyConstructor@{MakeCopyConstructor}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeCopyConstructor()}{MakeCopyConstructor()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Copy\+Constructor (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a2802ba836e767f434245932e7574f5c4}\label{namespacek_f_1_1_meta_1_1_internal_a2802ba836e767f434245932e7574f5c4}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeDefaultConstructor@{MakeDefaultConstructor}}
+\index{MakeDefaultConstructor@{MakeDefaultConstructor}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeDefaultConstructor()}{MakeDefaultConstructor()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Default\+Constructor (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Helpers used to generate opaque default, copy and move constructor functions \mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ad0b44c926da1747413c211f76ebc4984}\label{namespacek_f_1_1_meta_1_1_internal_ad0b44c926da1747413c211f76ebc4984}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeDestructor@{MakeDestructor}}
+\index{MakeDestructor@{MakeDestructor}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeDestructor()}{MakeDestructor()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Destructor (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to generate opaque destructor functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_acad3ef0a0a0cc8c2d8aca0ae9eeec138}\label{namespacek_f_1_1_meta_1_1_internal_acad3ef0a0a0cc8c2d8aca0ae9eeec138}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeMoveAssignment@{MakeMoveAssignment}}
+\index{MakeMoveAssignment@{MakeMoveAssignment}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeMoveAssignment()}{MakeMoveAssignment()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Move\+Assignment (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aaeb481c9a295f651f261264f533ff470}\label{namespacek_f_1_1_meta_1_1_internal_aaeb481c9a295f651f261264f533ff470}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeMoveConstructor@{MakeMoveConstructor}}
+\index{MakeMoveConstructor@{MakeMoveConstructor}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeMoveConstructor()}{MakeMoveConstructor()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Move\+Constructor (\begin{DoxyParamCaption}\item[{void $\ast$}]{instance,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ae0537eda52eac7f65253d0f8bb55476b}\label{namespacek_f_1_1_meta_1_1_internal_ae0537eda52eac7f65253d0f8bb55476b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeToBool@{MakeToBool}}
+\index{MakeToBool@{MakeToBool}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeToBool()}{MakeToBool()}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ Type, bool $>$$>$ $\ast$  = nullptr$>$ \\
+bool k\+F\+::\+Meta\+::\+Internal\+::\+Make\+To\+Bool (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helpers used to generate opaque primitive functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a499b1c6387b505eacfd088089f2965dc}\label{namespacek_f_1_1_meta_1_1_internal_a499b1c6387b505eacfd088089f2965dc}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!MakeUnaryOperator@{MakeUnaryOperator}}
+\index{MakeUnaryOperator@{MakeUnaryOperator}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{MakeUnaryOperator()}{MakeUnaryOperator()}}
+{\footnotesize\ttfamily template$<$typename Type , auto Operator\+Func, Unary\+Operator Operator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Internal\+::\+Make\+Unary\+Operator (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Helpers used to generate opaque operators functions. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a114adac5953deb8c342152c4f62d0c74}\label{namespacek_f_1_1_meta_1_1_internal_a114adac5953deb8c342152c4f62d0c74}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!RetreiveOpaquePtr@{RetreiveOpaquePtr}}
+\index{RetreiveOpaquePtr@{RetreiveOpaquePtr}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{RetreiveOpaquePtr()}{RetreiveOpaquePtr()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+static constexpr const void$\ast$ k\+F\+::\+Meta\+::\+Internal\+::\+Retreive\+Opaque\+Ptr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Helper used to retreive a void pointer from a reference (either a reference to nullptr or a variable) 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a1004016e1f33f090504dcc103ab9498a}\label{namespacek_f_1_1_meta_1_1_internal_a1004016e1f33f090504dcc103ab9498a}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!ToFunctionDecomposer@{ToFunctionDecomposer}}
+\index{ToFunctionDecomposer@{ToFunctionDecomposer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{ToFunctionDecomposer()}{ToFunctionDecomposer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily constexpr void k\+F\+::\+Meta\+::\+Internal\+::\+To\+Function\+Decomposer (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a6e0f80a83c3c57f21b415cb89d9d04a9}\label{namespacek_f_1_1_meta_1_1_internal_a6e0f80a83c3c57f21b415cb89d9d04a9}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!ToFunctionDecomposer@{ToFunctionDecomposer}}
+\index{ToFunctionDecomposer@{ToFunctionDecomposer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{ToFunctionDecomposer()}{ToFunctionDecomposer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args$>$ \\
+constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$Return(Args...)$>$ k\+F\+::\+Meta\+::\+Internal\+::\+To\+Function\+Decomposer (\begin{DoxyParamCaption}\item[{Return(Args...)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Helper that catch free functions and get their Decomposer. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a549b133440b05bb2189bfc09764ca2ab}\label{namespacek_f_1_1_meta_1_1_internal_a549b133440b05bb2189bfc09764ca2ab}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!ToFunctionDecomposer@{ToFunctionDecomposer}}
+\index{ToFunctionDecomposer@{ToFunctionDecomposer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{ToFunctionDecomposer()}{ToFunctionDecomposer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Class , typename Return , typename ... Args$>$ \\
+constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$Return(Class\+::$\ast$)(Args...) const$>$ k\+F\+::\+Meta\+::\+Internal\+::\+To\+Function\+Decomposer (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Args...) const}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Helper that catch const member functions and get their Decomposer. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ae9a79082b3cba2c718ca7692b10e763f}\label{namespacek_f_1_1_meta_1_1_internal_ae9a79082b3cba2c718ca7692b10e763f}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!ToFunctionDecomposer@{ToFunctionDecomposer}}
+\index{ToFunctionDecomposer@{ToFunctionDecomposer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{ToFunctionDecomposer()}{ToFunctionDecomposer()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Class , typename Return , typename ... Args$>$ \\
+constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$Return(Class\+::$\ast$)(Args...)$>$ k\+F\+::\+Meta\+::\+Internal\+::\+To\+Function\+Decomposer (\begin{DoxyParamCaption}\item[{Return(Class\+::$\ast$)(Args...)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Helper that catch member functions and get their Decomposer. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a0ed2f61f59543194666e72d6863ab190}\label{namespacek_f_1_1_meta_1_1_internal_a0ed2f61f59543194666e72d6863ab190}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!ToFunctionDecomposer@{ToFunctionDecomposer}}
+\index{ToFunctionDecomposer@{ToFunctionDecomposer}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{ToFunctionDecomposer()}{ToFunctionDecomposer()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+constexpr \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, decltype(void(\&Type\+::operator()))$>$ k\+F\+::\+Meta\+::\+Internal\+::\+To\+Function\+Decomposer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Helper that catch functors and get their Decomposer. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ab95549118c4a235c6164e75525815718}\label{namespacek_f_1_1_meta_1_1_internal_ab95549118c4a235c6164e75525815718}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!UnaryMinus@{UnaryMinus}}
+\index{UnaryMinus@{UnaryMinus}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{UnaryMinus()}{UnaryMinus()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Internal\+::\+Unary\+Minus (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Helpers to generate unary operator functions. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a7e32ddf900e1a8b24b567613fc603114}\label{namespacek_f_1_1_meta_1_1_internal_a7e32ddf900e1a8b24b567613fc603114}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!IsVarSmallOptimized@{IsVarSmallOptimized}}
+\index{IsVarSmallOptimized@{IsVarSmallOptimized}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{IsVarSmallOptimized}{IsVarSmallOptimized}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+constexpr bool k\+F\+::\+Meta\+::\+Internal\+::\+Is\+Var\+Small\+Optimized = \mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} constexpr ( (std\+::is\+\_\+same\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, void$>$) ) \{ return false ; \} else \{ return sizeof(\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}) $<$= \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}{Var\+Small\+Optimization\+Size}} ; \} \}()\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Helper to know if a type is trivial or not. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}\label{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!VarSmallOptimizationSize@{VarSmallOptimizationSize}}
+\index{VarSmallOptimizationSize@{VarSmallOptimizationSize}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{VarSmallOptimizationSize}{VarSmallOptimizationSize}}
+{\footnotesize\ttfamily constexpr auto k\+F\+::\+Meta\+::\+Internal\+::\+Var\+Small\+Optimization\+Size = 16ul\hspace{0.3cm}{\ttfamily [constexpr]}}
+

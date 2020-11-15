@@ -1,0 +1,10 @@
+<map id="kF::Graphics::CommandPool" name="kF::Graphics::CommandPool">
+<area shape="rect" id="node1" title="Command pool that allocates command buffers." alt="" coords="145,1113,335,1425"/>
+<area shape="rect" id="node7" href="$classk_f_1_1_graphics_1_1_auto_command_pool.html" title="A command pool that can only create one time submit commands." alt="" coords="5,1475,224,1728"/>
+<area shape="rect" id="node8" href="$classk_f_1_1_graphics_1_1_manual_command_pool.html" title="A command pool that let user manager lifecycle of its commands manually." alt="" coords="249,1475,482,1728"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="145,972,335,1064"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="71,555,343,793"/>
+<area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="241,5,426,229"/>
+<area shape="rect" id="node6" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="290,307,537,531"/>
+<area shape="rect" id="node5" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title="Vulkan handle that inherits from CachedRendererObject." alt="" coords="275,817,464,909"/>
+</map>

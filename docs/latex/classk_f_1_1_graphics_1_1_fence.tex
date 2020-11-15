@@ -1,0 +1,153 @@
+\hypertarget{classk_f_1_1_graphics_1_1_fence}{}\doxysection{kF\+::Graphics\+::Fence Class Reference}
+\label{classk_f_1_1_graphics_1_1_fence}\index{kF::Graphics::Fence@{kF::Graphics::Fence}}
+
+
+Abstraction of a low level system fence.  
+
+
+
+
+{\ttfamily \#include $<$Fence.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Fence\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_fence__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a7c367dc595f9c6c73b84052a62fd2fa6}{Fence}} (void)
+\begin{DoxyCompactList}\small\item\em Construct the fence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a3abf89f4ee9bd86fca1a0ff3cf1a06b9}{Fence}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_ae2090e1668723f62fd718a90af892e3f}{$\sim$\+Fence}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destroy the fence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a5e9709e56ad50038e2e781d29fa0de60}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_ab380e2dcd036476fb2d6752aba033239}{wait}} (const std\+::uint64\+\_\+t timeout=U\+I\+N\+T64\+\_\+\+M\+AX) const
+\begin{DoxyCompactList}\small\item\em Wait the fence to be signaled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a96a3d797555ffd12158a61b9c9de5373}{reset}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Reset the fence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a7f135cba52bbcb8e2423101ad4b3c785}{Wait}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const begin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const end, const bool wait\+All=\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}, const std\+::uint64\+\_\+t timeout=U\+I\+N\+T64\+\_\+\+M\+AX)
+\begin{DoxyCompactList}\small\item\em Wait fences to be signaled. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a244c65cef7161def6a772eaebeaed902}{Reset}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const begin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const end) noexcept
+\begin{DoxyCompactList}\small\item\em Reset fences to be signaled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317f7c5774}{create\+Fence}} (void)
+\begin{DoxyCompactList}\small\item\em Create the fence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstraction of a low level system fence. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a7c367dc595f9c6c73b84052a62fd2fa6}\label{classk_f_1_1_graphics_1_1_fence_a7c367dc595f9c6c73b84052a62fd2fa6}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!Fence@{Fence}}
+\index{Fence@{Fence}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{Fence()}{Fence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Fence\+::\+Fence (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct the fence. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a3abf89f4ee9bd86fca1a0ff3cf1a06b9}\label{classk_f_1_1_graphics_1_1_fence_a3abf89f4ee9bd86fca1a0ff3cf1a06b9}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!Fence@{Fence}}
+\index{Fence@{Fence}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{Fence()}{Fence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Fence\+::\+Fence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_ae2090e1668723f62fd718a90af892e3f}\label{classk_f_1_1_graphics_1_1_fence_ae2090e1668723f62fd718a90af892e3f}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!````~Fence@{$\sim$Fence}}
+\index{````~Fence@{$\sim$Fence}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{$\sim$Fence()}{~Fence()}}
+{\footnotesize\ttfamily Graphics\+::\+Fence\+::$\sim$\+Fence (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destroy the fence. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317f7c5774}\label{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317f7c5774}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!createFence@{createFence}}
+\index{createFence@{createFence}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{createFence()}{createFence()}}
+{\footnotesize\ttfamily void Graphics\+::\+Fence\+::create\+Fence (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create the fence. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a5e9709e56ad50038e2e781d29fa0de60}\label{classk_f_1_1_graphics_1_1_fence_a5e9709e56ad50038e2e781d29fa0de60}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}}\& k\+F\+::\+Graphics\+::\+Fence\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a244c65cef7161def6a772eaebeaed902}\label{classk_f_1_1_graphics_1_1_fence_a244c65cef7161def6a772eaebeaed902}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!Reset@{Reset}}
+\index{Reset@{Reset}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Graphics\+::\+Fence\+::\+Reset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const}]{begin,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Reset fences to be signaled. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a96a3d797555ffd12158a61b9c9de5373}\label{classk_f_1_1_graphics_1_1_fence_a96a3d797555ffd12158a61b9c9de5373}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!reset@{reset}}
+\index{reset@{reset}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Fence\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Reset the fence. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a7f135cba52bbcb8e2423101ad4b3c785}\label{classk_f_1_1_graphics_1_1_fence_a7f135cba52bbcb8e2423101ad4b3c785}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!Wait@{Wait}}
+\index{Wait@{Wait}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{Wait()}{Wait()}}
+{\footnotesize\ttfamily bool Graphics\+::\+Fence\+::\+Wait (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const}]{begin,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const}]{end,  }\item[{const bool}]{wait\+All = {\ttfamily \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}},  }\item[{const std\+::uint64\+\_\+t}]{timeout = {\ttfamily UINT64\+\_\+MAX} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Wait fences to be signaled. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_ab380e2dcd036476fb2d6752aba033239}\label{classk_f_1_1_graphics_1_1_fence_ab380e2dcd036476fb2d6752aba033239}} 
+\index{kF::Graphics::Fence@{kF::Graphics::Fence}!wait@{wait}}
+\index{wait@{wait}!kF::Graphics::Fence@{kF::Graphics::Fence}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Graphics\+::\+Fence\+::wait (\begin{DoxyParamCaption}\item[{const std\+::uint64\+\_\+t}]{timeout = {\ttfamily UINT64\+\_\+MAX} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wait the fence to be signaled. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_fence_8hpp}{Fence.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_fence_8cpp}{Fence.\+cpp}}\end{DoxyCompactItemize}

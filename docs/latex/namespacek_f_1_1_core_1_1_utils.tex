@@ -1,0 +1,113 @@
+\hypertarget{namespacek_f_1_1_core_1_1_utils}{}\doxysection{kF\+::Core\+::Utils Namespace Reference}
+\label{namespacek_f_1_1_core_1_1_utils}\index{kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}} detected invalid expression. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector_3_01_default_00_01std_1_1void__t_3_01_op_3_01_args_8_818ed001a35c332e13ebc42c0a4afbf84}{Detector$<$ Default, std\+::void\+\_\+t$<$ Op$<$ Args... $>$ $>$, Op, Args... $>$}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}} detected valid expression. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator}{Is\+Move\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Helper to know if a given type is a std\+::move\+\_\+iterator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator_3_01std_1_1move__iterator_3_01_iterator_01_4_01_4}{Is\+Move\+Iterator$<$ std\+::move\+\_\+iterator$<$ Iterator $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Helper that match move iterators. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator_3_01std_1_1reverse__iterator_3_01_iterator_01_4_01_4}{Is\+Move\+Iterator$<$ std\+::reverse\+\_\+iterator$<$ Iterator $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Helper that match reverse iterators. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}
+\begin{DoxyCompactList}\small\item\em Default type used when a detection fails. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename... $>$ class Op, typename... Args$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}{Detected\+Type}} = typename \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}$<$ \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}, void, Op, Args... $>$\+::\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}
+\begin{DoxyCompactList}\small\item\em Type of the detected expression, if the detection failed returns \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Default , template$<$ typename... $>$ class Op, typename... Args$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a192f5860d81ae3664e77fee85a71a388}{Detected\+Or\+Type}} = typename \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}$<$ Default, void, Op, Args... $>$\+::\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}
+\begin{DoxyCompactList}\small\item\em Type of the detected expression, if the detection failed returns \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t Required\+Alignment$>$ }\\void $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}{Aligned\+Alloc}} (const std\+::size\+\_\+t bytes) noexcept
+\begin{DoxyCompactList}\small\item\em Forwards to std\+::aligned\+\_\+alloc, but ensure arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename... $>$ class Op, typename... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a0843b6e9d17aa25716002200860d5785}{Is\+Detected}} = \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}$<$\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}, void, Op, Args...$>$\+::Value\+::value
+\begin{DoxyCompactList}\small\item\em Boolean that indicate if detector detected a valid expression or not. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Expected , template$<$ typename... $>$ class Op, typename... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a742f9eb8c092e97e97d1bcadbd3d43e7}{Is\+Detected\+Exact}} = std\+::is\+\_\+same\+\_\+v$<$Expected, \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}{Detected\+Type}}$<$Op, Args...$>$$>$
+\begin{DoxyCompactList}\small\item\em Check if the expression perfectly match a type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Convertible , template$<$ typename... $>$ class Op, typename... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a08415e36e5ef4fa513b089acc45a8c9b}{Is\+Detected\+Convertible}} = std\+::is\+\_\+convertible\+\_\+v$<$Convertible, \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}{Detected\+Type}}$<$Op, Args...$>$$>$
+\begin{DoxyCompactList}\small\item\em Check if the expression is convertible to a type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a192f5860d81ae3664e77fee85a71a388}\label{namespacek_f_1_1_core_1_1_utils_a192f5860d81ae3664e77fee85a71a388}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!DetectedOrType@{DetectedOrType}}
+\index{DetectedOrType@{DetectedOrType}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{DetectedOrType}{DetectedOrType}}
+{\footnotesize\ttfamily template$<$typename Default , template$<$ typename... $>$ class Op, typename... Args$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a192f5860d81ae3664e77fee85a71a388}{k\+F\+::\+Core\+::\+Utils\+::\+Detected\+Or\+Type}} = typedef typename \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}$<$Default, void, Op, Args...$>$\+::\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}}
+
+
+
+Type of the detected expression, if the detection failed returns \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}\label{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!DetectedType@{DetectedType}}
+\index{DetectedType@{DetectedType}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{DetectedType}{DetectedType}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Op, typename... Args$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}{k\+F\+::\+Core\+::\+Utils\+::\+Detected\+Type}} = typedef typename \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}$<$\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}, void, Op, Args...$>$\+::\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}}
+
+
+
+Type of the detected expression, if the detection failed returns \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}\label{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!AlignedAlloc@{AlignedAlloc}}
+\index{AlignedAlloc@{AlignedAlloc}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{AlignedAlloc()}{AlignedAlloc()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t Required\+Alignment$>$ \\
+void $\ast$ k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Forwards to std\+::aligned\+\_\+alloc, but ensure arguments. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils}{Utils}} 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a0843b6e9d17aa25716002200860d5785}\label{namespacek_f_1_1_core_1_1_utils_a0843b6e9d17aa25716002200860d5785}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!IsDetected@{IsDetected}}
+\index{IsDetected@{IsDetected}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{IsDetected}{IsDetected}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ class Op, typename... Args$>$ \\
+constexpr bool k\+F\+::\+Core\+::\+Utils\+::\+Is\+Detected = \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector}{Detector}}$<$\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}, void, Op, Args...$>$\+::Value\+::value\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Boolean that indicate if detector detected a valid expression or not. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a08415e36e5ef4fa513b089acc45a8c9b}\label{namespacek_f_1_1_core_1_1_utils_a08415e36e5ef4fa513b089acc45a8c9b}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!IsDetectedConvertible@{IsDetectedConvertible}}
+\index{IsDetectedConvertible@{IsDetectedConvertible}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{IsDetectedConvertible}{IsDetectedConvertible}}
+{\footnotesize\ttfamily template$<$typename Convertible , template$<$ typename... $>$ class Op, typename... Args$>$ \\
+constexpr bool k\+F\+::\+Core\+::\+Utils\+::\+Is\+Detected\+Convertible = std\+::is\+\_\+convertible\+\_\+v$<$Convertible, \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}{Detected\+Type}}$<$Op, Args...$>$$>$\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Check if the expression is convertible to a type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a742f9eb8c092e97e97d1bcadbd3d43e7}\label{namespacek_f_1_1_core_1_1_utils_a742f9eb8c092e97e97d1bcadbd3d43e7}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!IsDetectedExact@{IsDetectedExact}}
+\index{IsDetectedExact@{IsDetectedExact}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{IsDetectedExact}{IsDetectedExact}}
+{\footnotesize\ttfamily template$<$typename Expected , template$<$ typename... $>$ class Op, typename... Args$>$ \\
+constexpr bool k\+F\+::\+Core\+::\+Utils\+::\+Is\+Detected\+Exact = std\+::is\+\_\+same\+\_\+v$<$Expected, \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a8a29b17a5ade05d86d0f0810833a2f91}{Detected\+Type}}$<$Op, Args...$>$$>$\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Check if the expression perfectly match a type. 
+

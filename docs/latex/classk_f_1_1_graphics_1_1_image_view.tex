@@ -1,0 +1,102 @@
+\hypertarget{classk_f_1_1_graphics_1_1_image_view}{}\doxysection{kF\+::Graphics\+::Image\+View Class Reference}
+\label{classk_f_1_1_graphics_1_1_image_view}\index{kF::Graphics::ImageView@{kF::Graphics::ImageView}}
+
+
+Abstract an image view.  
+
+
+
+
+{\ttfamily \#include $<$Image\+View.\+hpp$>$}
+
+
+
+Inheritance diagram for kF\+::Graphics\+::Image\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_image_view__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view_aa395184ea6e8cb613cbcbf66af31601f}{Image\+View}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_view_model}{Image\+View\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view_ac1002bd91d7d9804db1d59d43742c57c}{Image\+View}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view_a3fdbf77d5283e61c15c4ac19a5fe9190}{$\sim$\+Image\+View}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view_ae5c3007bd4b9c63c31478f693824e559}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view_a19bb992c10a3c81f15f3cf3c84112b6a}{create\+Image\+View}} (const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_view_model}{Image\+View\+Model}} \&model)
+\begin{DoxyCompactList}\small\item\em Create an image view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract an image view. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_view_aa395184ea6e8cb613cbcbf66af31601f}\label{classk_f_1_1_graphics_1_1_image_view_aa395184ea6e8cb613cbcbf66af31601f}} 
+\index{kF::Graphics::ImageView@{kF::Graphics::ImageView}!ImageView@{ImageView}}
+\index{ImageView@{ImageView}!kF::Graphics::ImageView@{kF::Graphics::ImageView}}
+\doxysubsubsection{\texorpdfstring{ImageView()}{ImageView()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Image\+View\+::\+Image\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_view_model}{Image\+View\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_view_ac1002bd91d7d9804db1d59d43742c57c}\label{classk_f_1_1_graphics_1_1_image_view_ac1002bd91d7d9804db1d59d43742c57c}} 
+\index{kF::Graphics::ImageView@{kF::Graphics::ImageView}!ImageView@{ImageView}}
+\index{ImageView@{ImageView}!kF::Graphics::ImageView@{kF::Graphics::ImageView}}
+\doxysubsubsection{\texorpdfstring{ImageView()}{ImageView()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Image\+View\+::\+Image\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_view_a3fdbf77d5283e61c15c4ac19a5fe9190}\label{classk_f_1_1_graphics_1_1_image_view_a3fdbf77d5283e61c15c4ac19a5fe9190}} 
+\index{kF::Graphics::ImageView@{kF::Graphics::ImageView}!````~ImageView@{$\sim$ImageView}}
+\index{````~ImageView@{$\sim$ImageView}!kF::Graphics::ImageView@{kF::Graphics::ImageView}}
+\doxysubsubsection{\texorpdfstring{$\sim$ImageView()}{~ImageView()}}
+{\footnotesize\ttfamily Graphics\+::\+Image\+View\+::$\sim$\+Image\+View (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destruct the buffer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_view_a19bb992c10a3c81f15f3cf3c84112b6a}\label{classk_f_1_1_graphics_1_1_image_view_a19bb992c10a3c81f15f3cf3c84112b6a}} 
+\index{kF::Graphics::ImageView@{kF::Graphics::ImageView}!createImageView@{createImageView}}
+\index{createImageView@{createImageView}!kF::Graphics::ImageView@{kF::Graphics::ImageView}}
+\doxysubsubsection{\texorpdfstring{createImageView()}{createImageView()}}
+{\footnotesize\ttfamily void Graphics\+::\+Image\+View\+::create\+Image\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_image_view_model}{Image\+View\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create an image view. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_image_view_ae5c3007bd4b9c63c31478f693824e559}\label{classk_f_1_1_graphics_1_1_image_view_ae5c3007bd4b9c63c31478f693824e559}} 
+\index{kF::Graphics::ImageView@{kF::Graphics::ImageView}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Graphics::ImageView@{kF::Graphics::ImageView}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}}\& k\+F\+::\+Graphics\+::\+Image\+View\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_graphics_1_1_image_view}{Image\+View}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_image_view_8hpp}{Image\+View.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_image_view_8cpp}{Image\+View.\+cpp}}\end{DoxyCompactItemize}

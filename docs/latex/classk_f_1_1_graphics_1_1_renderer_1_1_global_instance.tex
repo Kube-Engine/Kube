@@ -1,0 +1,118 @@
+\hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{}\doxysection{kF\+::Graphics\+::Renderer\+::Global\+Instance Class Reference}
+\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+
+
+A renderer cannot be directly created, you must instead use \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{Global\+Instance}} to handle its lifetime globally.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a853ae2b244288a0c66dcfe851dcbcecd}{Global\+Instance}} (\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$const window, const \mbox{\hyperlink{structk_f_1_1_version}{Version}} application\+Version=\mbox{\hyperlink{structk_f_1_1_version}{Version}}())
+\begin{DoxyCompactList}\small\item\em Construct a global renderer using a backend window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a2ff355b41fd0d9963e11d452091bd564}{$\sim$\+Global\+Instance}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the global renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_aca9eb2a27a8f252e776c812dabd6c0ee}{operator-\/$>$}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Access operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_af4a5bbcbfee3456b5aa2a4923d4c00fb}{operator-\/$>$}} (void) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_aa8985989fe07df8aeebf43210f80a4fa}{operator$\ast$}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Dereference operator. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a7c485e9c7b7443c5d1fd8e3ccefd950e}{operator$\ast$}} (void) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a6a1b0a36b24993c58249d381ba38e4b3}{\+\_\+renderer}} \{ nullptr \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a91a2a9daa9bed472cd17ec0997d64777}{\+\_\+\+Constructed}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A renderer cannot be directly created, you must instead use \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance}{Global\+Instance}} to handle its lifetime globally. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a853ae2b244288a0c66dcfe851dcbcecd}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a853ae2b244288a0c66dcfe851dcbcecd}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!GlobalInstance@{GlobalInstance}}
+\index{GlobalInstance@{GlobalInstance}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{GlobalInstance()}{GlobalInstance()}}
+{\footnotesize\ttfamily Graphics\+::\+Renderer\+::\+Global\+Instance\+::\+Global\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_1_1_graphics_a7d8012fa4c735f1a308a3f300a276f27}{Backend\+Window}} $\ast$const}]{window,  }\item[{const \mbox{\hyperlink{structk_f_1_1_version}{Version}}}]{application\+Version = {\ttfamily \mbox{\hyperlink{structk_f_1_1_version}{Version}}()} }\end{DoxyParamCaption})}
+
+
+
+Construct a global renderer using a backend window. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a2ff355b41fd0d9963e11d452091bd564}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a2ff355b41fd0d9963e11d452091bd564}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!````~GlobalInstance@{$\sim$GlobalInstance}}
+\index{````~GlobalInstance@{$\sim$GlobalInstance}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{$\sim$GlobalInstance()}{~GlobalInstance()}}
+{\footnotesize\ttfamily Graphics\+::\+Renderer\+::\+Global\+Instance\+::$\sim$\+Global\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the global renderer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a7c485e9c7b7443c5d1fd8e3ccefd950e}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a7c485e9c7b7443c5d1fd8e3ccefd950e}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}\& k\+F\+::\+Graphics\+::\+Renderer\+::\+Global\+Instance\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_aa8985989fe07df8aeebf43210f80a4fa}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_aa8985989fe07df8aeebf43210f80a4fa}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}\& k\+F\+::\+Graphics\+::\+Renderer\+::\+Global\+Instance\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Dereference operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_af4a5bbcbfee3456b5aa2a4923d4c00fb}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_af4a5bbcbfee3456b5aa2a4923d4c00fb}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}$\ast$ k\+F\+::\+Graphics\+::\+Renderer\+::\+Global\+Instance\+::operator-\/$>$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_aca9eb2a27a8f252e776c812dabd6c0ee}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_aca9eb2a27a8f252e776c812dabd6c0ee}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}$\ast$ k\+F\+::\+Graphics\+::\+Renderer\+::\+Global\+Instance\+::operator-\/$>$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Access operator. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a91a2a9daa9bed472cd17ec0997d64777}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a91a2a9daa9bed472cd17ec0997d64777}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!\_Constructed@{\_Constructed}}
+\index{\_Constructed@{\_Constructed}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{\_Constructed}{\_Constructed}}
+{\footnotesize\ttfamily bool k\+F\+::\+Graphics\+::\+Renderer\+::\+Global\+Instance\+::\+\_\+\+Constructed = false\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a6a1b0a36b24993c58249d381ba38e4b3}\label{classk_f_1_1_graphics_1_1_renderer_1_1_global_instance_a6a1b0a36b24993c58249d381ba38e4b3}} 
+\index{kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}!\_renderer@{\_renderer}}
+\index{\_renderer@{\_renderer}!kF::Graphics::Renderer::GlobalInstance@{kF::Graphics::Renderer::GlobalInstance}}
+\doxysubsubsection{\texorpdfstring{\_renderer}{\_renderer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_graphics_1_1_renderer}{Renderer}}$\ast$ k\+F\+::\+Graphics\+::\+Renderer\+::\+Global\+Instance\+::\+\_\+renderer \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Graphics/\mbox{\hyperlink{_renderer_8hpp}{Renderer.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

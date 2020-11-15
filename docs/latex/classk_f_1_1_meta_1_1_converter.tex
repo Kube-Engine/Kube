@@ -1,0 +1,177 @@
+\hypertarget{classk_f_1_1_meta_1_1_converter}{}\doxysection{kF\+::Meta\+::Converter Class Reference}
+\label{classk_f_1_1_meta_1_1_converter}\index{kF::Meta::Converter@{kF::Meta::Converter}}
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} is used to store meta-\/data about a type converter.  
+
+
+
+
+{\ttfamily \#include $<$Converter.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_converter_1_1_descriptor}{Descriptor}}
+\begin{DoxyCompactList}\small\item\em Describe a meta converter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_adb97a6bb1385be0533308215fe977302}{Convert\+Signature}} = void($\ast$)(const void $\ast$from, void $\ast$to)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_ad95cf0f91ee5d5a5f9193927dc93c31e}{Converter}} (const \mbox{\hyperlink{structk_f_1_1_meta_1_1_converter_1_1_descriptor}{Descriptor}} $\ast$desc=nullptr) noexcept
+\begin{DoxyCompactList}\small\item\em Construct passing a descriptor instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a5232cb11e4faeea3f60cc4605bdd69e8}{Converter}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a70aa637e4707169a9199462880912b89}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a481bacb4ded9ea2531ddaf0390acfc0d}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Fast valid check. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a9c301aeaf7bf7c4325ff99d45e183e12}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Compare operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a0640cfece87369a32b9e0981e491e802}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&other) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_ac5a3213efdfce2d08c71ebbf36e78bfb}{convert\+Type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get target converter type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a3046db5155d347b1964e09fd75ab7eec}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&from) const
+\begin{DoxyCompactList}\small\item\em Invoke the converter and return a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Var\+::\+Should\+Destruct\+Instance Destruct\+Instance = Var\+::\+Should\+Destruct\+Instance\+::\+Yes$>$ }\\void \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a8b2ce46d56549389e39bcb6e8de22c85}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&from, \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&to) const
+\begin{DoxyCompactList}\small\item\em Invoke the converter directly to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a7a5398ff4a4c0334789c5c5fe0d2a9dc}{invoke}} (const void $\ast$from, void $\ast$to) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structk_f_1_1_meta_1_1_converter_1_1_descriptor}{Descriptor}} $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_a0d806b373203548548723125e50e8473}{\+\_\+desc}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} is used to store meta-\/data about a type converter. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_adb97a6bb1385be0533308215fe977302}\label{classk_f_1_1_meta_1_1_converter_adb97a6bb1385be0533308215fe977302}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!ConvertSignature@{ConvertSignature}}
+\index{ConvertSignature@{ConvertSignature}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{ConvertSignature}{ConvertSignature}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter_adb97a6bb1385be0533308215fe977302}{k\+F\+::\+Meta\+::\+Converter\+::\+Convert\+Signature}} =  void($\ast$)(const void $\ast$from, void $\ast$to)}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_ad95cf0f91ee5d5a5f9193927dc93c31e}\label{classk_f_1_1_meta_1_1_converter_ad95cf0f91ee5d5a5f9193927dc93c31e}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!Converter@{Converter}}
+\index{Converter@{Converter}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{Converter()}{Converter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Converter\+::\+Converter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structk_f_1_1_meta_1_1_converter_1_1_descriptor}{Descriptor}} $\ast$}]{desc = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct passing a descriptor instance. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a5232cb11e4faeea3f60cc4605bdd69e8}\label{classk_f_1_1_meta_1_1_converter_a5232cb11e4faeea3f60cc4605bdd69e8}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!Converter@{Converter}}
+\index{Converter@{Converter}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{Converter()}{Converter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Converter\+::\+Converter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_ac5a3213efdfce2d08c71ebbf36e78bfb}\label{classk_f_1_1_meta_1_1_converter_ac5a3213efdfce2d08c71ebbf36e78bfb}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!convertType@{convertType}}
+\index{convertType@{convertType}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{convertType()}{convertType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} k\+F\+::\+Meta\+::\+Converter\+::convert\+Type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get target converter type. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a3046db5155d347b1964e09fd75ab7eec}\label{classk_f_1_1_meta_1_1_converter_a3046db5155d347b1964e09fd75ab7eec}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Converter\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{from }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invoke the converter and return a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a8b2ce46d56549389e39bcb6e8de22c85}\label{classk_f_1_1_meta_1_1_converter_a8b2ce46d56549389e39bcb6e8de22c85}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Var\+::\+Should\+Destruct\+Instance Destruct\+Instance$>$ \\
+void k\+F\+::\+Meta\+::\+Converter\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{from,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&}]{to }\end{DoxyParamCaption}) const}
+
+
+
+Invoke the converter directly to a \mbox{\hyperlink{classk_f_1_1_var}{Var}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a7a5398ff4a4c0334789c5c5fe0d2a9dc}\label{classk_f_1_1_meta_1_1_converter_a7a5398ff4a4c0334789c5c5fe0d2a9dc}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!invoke@{invoke}}
+\index{invoke@{invoke}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void k\+F\+::\+Meta\+::\+Converter\+::invoke (\begin{DoxyParamCaption}\item[{const void $\ast$}]{from,  }\item[{void $\ast$}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a481bacb4ded9ea2531ddaf0390acfc0d}\label{classk_f_1_1_meta_1_1_converter_a481bacb4ded9ea2531ddaf0390acfc0d}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Converter\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Fast valid check. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a0640cfece87369a32b9e0981e491e802}\label{classk_f_1_1_meta_1_1_converter_a0640cfece87369a32b9e0981e491e802}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Converter\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a70aa637e4707169a9199462880912b89}\label{classk_f_1_1_meta_1_1_converter_a70aa637e4707169a9199462880912b89}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}}\& k\+F\+::\+Meta\+::\+Converter\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a9c301aeaf7bf7c4325ff99d45e183e12}\label{classk_f_1_1_meta_1_1_converter_a9c301aeaf7bf7c4325ff99d45e183e12}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Converter\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Compare operator. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_converter_a0d806b373203548548723125e50e8473}\label{classk_f_1_1_meta_1_1_converter_a0d806b373203548548723125e50e8473}} 
+\index{kF::Meta::Converter@{kF::Meta::Converter}!\_desc@{\_desc}}
+\index{\_desc@{\_desc}!kF::Meta::Converter@{kF::Meta::Converter}}
+\doxysubsubsection{\texorpdfstring{\_desc}{\_desc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_meta_1_1_converter_1_1_descriptor}{Descriptor}}$\ast$ k\+F\+::\+Meta\+::\+Converter\+::\+\_\+desc = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_converter_8hpp}{Converter.\+hpp}}\item 
+Kube/\+Meta/\mbox{\hyperlink{_converter_8ipp}{Converter.\+ipp}}\end{DoxyCompactItemize}

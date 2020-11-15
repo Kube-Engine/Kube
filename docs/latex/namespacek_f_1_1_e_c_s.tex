@@ -1,0 +1,153 @@
+\hypertarget{namespacek_f_1_1_e_c_s}{}\doxysection{kF\+::E\+CS Namespace Reference}
+\label{namespacek_f_1_1_e_c_s}\index{kF::ECS@{kF::ECS}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}
+\begin{DoxyCompactList}\small\item\em An opaque system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}
+\begin{DoxyCompactList}\small\item\em Store all instances of a component type in a registry. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}
+\begin{DoxyCompactList}\small\item\em Store all component tables of a registry. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}
+\begin{DoxyCompactList}\small\item\em Used to create Entities, add Components to them, retrieve Systems etc... \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}}
+\begin{DoxyCompactList}\small\item\em The sparse index set is a container which provide O(1) look-\/up time at the cost of non-\/efficient memory consumption. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_system_graph}{System\+Graph}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{namespacek_f_1_1_flow}{Flow}} Graph of system(s) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_unique_opaque_component}{Unique\+Opaque\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a4e49a41cde00df8ea962c6c544e8c9d5}{Short\+Entity}} = std\+::uint16\+\_\+t
+\begin{DoxyCompactList}\small\item\em A tiny entity that can handle 65536 entities. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_aa176c9854c150786cfe0f642c3bdd953}{Entity}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em A standard entity that can handle 4294967296 entities. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a85e39d1ad9a05e6b87bcfbbc19e504d4}{Long\+Entity}} = std\+::uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em A large entity that can handle an indecent amount of pow(1.\+8, 19) entities. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Entity\+Requirements Entity\+Type$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a19cc5c433595e9c0d97251c048cbdb90}{System\+Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$ Entity\+Type $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Component , Entity\+Requirements Entity\+Type$>$ }\\static const \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$ Entity\+Type $>$ $\ast$ \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8c28d8be2ca4141d4f0f337f1e438602}{Get\+Opaque\+Component\+Table}} (void) noexcept
+\item 
+{\footnotesize template$<$Entity\+Requirements Entity\+Type, typename ... Components$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}{requires}} (sizeof...(Components) $>$ 0) class View
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Entity\+Type $>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a5ddca7847c8b54aa9b711176b3795082}{Entity\+Requirements}}
+\begin{DoxyCompactList}\small\item\em Entity concept requirements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Entity\+Requirements Entity\+Type$>$ }\\constexpr auto \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}{Null\+Entity}} = std\+::numeric\+\_\+limits$<$Entity\+Type$>$\+::max()
+\begin{DoxyCompactList}\small\item\em Null entityt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@ Author\+: Léos Julien @ Description\+: An opaque system
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_e_c_s}{E\+CS}} Base
+
+@ Author\+: Léo Lhuile @ Description\+: \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_table}{Component\+Table}}
+
+@ Author\+: Léo Lhuile @ Description\+: \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_component_tables}{Component\+Tables}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Helper to get unique opaque instance
+
+@ Author\+: Léos Julien @ Description\+: Used to create Entities, add Components to them, retrieve Systems etc...
+
+@ Author\+: Léo Lhuile @ Description\+: \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_sparse_entity_set}{Sparse\+Entity\+Set}}
+
+@ Author\+: Léos Julien @ Description\+: A \mbox{\hyperlink{namespacek_f_1_1_flow}{Flow}} Graph of System(s)
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_e_c_s}{E\+CS}} View 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_aa176c9854c150786cfe0f642c3bdd953}\label{namespacek_f_1_1_e_c_s_aa176c9854c150786cfe0f642c3bdd953}} 
+\index{kF::ECS@{kF::ECS}!Entity@{Entity}}
+\index{Entity@{Entity}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{Entity}{Entity}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_aa176c9854c150786cfe0f642c3bdd953}{k\+F\+::\+E\+C\+S\+::\+Entity}} = typedef std\+::uint32\+\_\+t}
+
+
+
+A standard entity that can handle 4294967296 entities. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a85e39d1ad9a05e6b87bcfbbc19e504d4}\label{namespacek_f_1_1_e_c_s_a85e39d1ad9a05e6b87bcfbbc19e504d4}} 
+\index{kF::ECS@{kF::ECS}!LongEntity@{LongEntity}}
+\index{LongEntity@{LongEntity}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{LongEntity}{LongEntity}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a85e39d1ad9a05e6b87bcfbbc19e504d4}{k\+F\+::\+E\+C\+S\+::\+Long\+Entity}} = typedef std\+::uint64\+\_\+t}
+
+
+
+A large entity that can handle an indecent amount of pow(1.\+8, 19) entities. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a4e49a41cde00df8ea962c6c544e8c9d5}\label{namespacek_f_1_1_e_c_s_a4e49a41cde00df8ea962c6c544e8c9d5}} 
+\index{kF::ECS@{kF::ECS}!ShortEntity@{ShortEntity}}
+\index{ShortEntity@{ShortEntity}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{ShortEntity}{ShortEntity}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a4e49a41cde00df8ea962c6c544e8c9d5}{k\+F\+::\+E\+C\+S\+::\+Short\+Entity}} = typedef std\+::uint16\+\_\+t}
+
+
+
+A tiny entity that can handle 65536 entities. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a19cc5c433595e9c0d97251c048cbdb90}\label{namespacek_f_1_1_e_c_s_a19cc5c433595e9c0d97251c048cbdb90}} 
+\index{kF::ECS@{kF::ECS}!SystemPtr@{SystemPtr}}
+\index{SystemPtr@{SystemPtr}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{SystemPtr}{SystemPtr}}
+{\footnotesize\ttfamily template$<$Entity\+Requirements Entity\+Type$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_e_c_s_a19cc5c433595e9c0d97251c048cbdb90}{k\+F\+::\+E\+C\+S\+::\+System\+Ptr}} = typedef std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{A\+System}}$<$Entity\+Type$>$ $>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a8c28d8be2ca4141d4f0f337f1e438602}\label{namespacek_f_1_1_e_c_s_a8c28d8be2ca4141d4f0f337f1e438602}} 
+\index{kF::ECS@{kF::ECS}!GetOpaqueComponentTable@{GetOpaqueComponentTable}}
+\index{GetOpaqueComponentTable@{GetOpaqueComponentTable}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{GetOpaqueComponentTable()}{GetOpaqueComponentTable()}}
+{\footnotesize\ttfamily template$<$typename Component , Entity\+Requirements Entity\+Type$>$ \\
+static const \mbox{\hyperlink{structk_f_1_1_e_c_s_1_1_opaque_component_table}{Opaque\+Component\+Table}}$<$Entity\+Type$>$$\ast$ k\+F\+::\+E\+C\+S\+::\+Get\+Opaque\+Component\+Table (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}\label{namespacek_f_1_1_e_c_s_a8025ecc02276489af03117272939f1d7}} 
+\index{kF::ECS@{kF::ECS}!requires@{requires}}
+\index{requires@{requires}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}}
+{\footnotesize\ttfamily template$<$Entity\+Requirements Entity\+Type, typename ... Components$>$ \\
+k\+F\+::\+E\+C\+S\+::requires (\begin{DoxyParamCaption}\item[{sizeof...}]{Components,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a5ddca7847c8b54aa9b711176b3795082}\label{namespacek_f_1_1_e_c_s_a5ddca7847c8b54aa9b711176b3795082}} 
+\index{kF::ECS@{kF::ECS}!EntityRequirements@{EntityRequirements}}
+\index{EntityRequirements@{EntityRequirements}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{EntityRequirements}{EntityRequirements}}
+{\footnotesize\ttfamily template$<$typename Entity\+Type $>$ \\
+concept k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= std::is\_same\_v<EntityType, ShortEntity> ||}
+\DoxyCodeLine{            std::is\_same\_v<EntityType, Entity> || std::is\_same\_v<EntityType, LongEntity>}
+
+\end{DoxyCode}
+
+
+Entity concept requirements. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}\label{namespacek_f_1_1_e_c_s_a3c846cb57ce5df12c33250e70ec6013c}} 
+\index{kF::ECS@{kF::ECS}!NullEntity@{NullEntity}}
+\index{NullEntity@{NullEntity}!kF::ECS@{kF::ECS}}
+\doxysubsubsection{\texorpdfstring{NullEntity}{NullEntity}}
+{\footnotesize\ttfamily template$<$Entity\+Requirements Entity\+Type$>$ \\
+constexpr auto k\+F\+::\+E\+C\+S\+::\+Null\+Entity = std\+::numeric\+\_\+limits$<$Entity\+Type$>$\+::max()\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Null entityt. 
+
