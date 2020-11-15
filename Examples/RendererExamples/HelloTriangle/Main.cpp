@@ -4,7 +4,6 @@
  */
 
 #include <Kube/App/Application.hpp>
-#include <Kube/Graphics/RenderPassBeginInfo.hpp>
 #include <Kube/Graphics/SubmitInfo.hpp>
 #include <Kube/Graphics/Pipeline.hpp>
 #include <Kube/Graphics/PipelineLayout.hpp>
@@ -29,29 +28,36 @@ public:
         Graphics::Pipeline pipeline;
     };
 
+    /** @brief Construct a new application with a single pipeline and two shaders  */
     TriangleApplication(void)
         :   Application("HelloTriangle"),
             _cachedFrames(renderer().cachedFrameCount()),
             _pipelineCache(PipelineCache {
-                vertexShader: Graphics::Shader("Shaders/Triangle.vert"),
-                fragmentShader: Graphics::Shader("Shaders/Triangle.frag"),
+                vertexShader: Graphics::Shader("Shaders/Triangle.vert.spv"),
+                fragmentShader: Graphics::Shader("Shaders/Triangle.frag.spv"),
                 pipelineLayout: makePipelineLayout(),
                 pipeline: makePipeline()
             })
     {
+        // Make sure that we set the current frame when acquired
         renderer().frameAcquiredDispatcher().add([this](const Graphics::FrameIndex frameIndex) {
             _cachedFrames.setCurrentFrame(frameIndex);
         });
+        // Make sure that we recreate viewport dependent ressources on window resize
+        renderer().viewSizeDispatcher().add([this] {
+            _pipelineCache.pipeline = makePipeline();
+        });
     }
 
+    /** @brief Callback when the application starts rendering a new frame */
     virtual void onRender(void) override
     {
         using namespace Graphics;
 
-        // Record a command
+        // Record a command from a scoped pool of the command pool
         auto pool = renderer().commandPoolManager().acquire(QueueType::Graphics);
-        const auto command = pool->add(CommandLevel::Primary, [this](const CommandHandle command) {
-            const ClearValue clear { ClearColorValue { 1.0f, 0.0f, 0.0f, 0.0f } };
+        const auto command = pool->add(CommandLevel::Primary, [this](const CommandRecorder &recorder) {
+            const ClearValue clear { ClearColorValue { 0.0f, 0.0f, 0.0f, 0.0f } };
             const RenderPassBeginInfo renderPassInfo(
                 renderer().renderPass(),
                 renderer().framebufferManager().currentFramebuffer(),
@@ -61,11 +67,13 @@ public:
                 },
                 &clear, &clear + 1
             );
-            Record::BeginRenderPass(command, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
-            Record::EndRenderPass(command);
+            recorder.beginRenderPass(renderPassInfo, SubpassContents::Inline);
+            recorder.bindPipeline(PipelineBindPoint::Graphics, _pipelineCache.pipeline);
+            recorder.draw(3, 1, 0, 0);
+            recorder.endRenderPass();
         });
 
-        // Dispatch the command
+        // Dispatch the created command with the necessary synchronization
         auto &cache = _cachedFrames.currentCache();
         cache.fence.reset();
         const auto signal = cache.semaphore.handle();
@@ -78,6 +86,8 @@ public:
             &waitStage, &waitStage + 1,
             &signal, &signal + 1
         );
+
+        // Dispatch the command and register semaphores / fences into the queue for frame synchronization
         renderer().commandDispatcher().dispatch(QueueType::Graphics, &submitInfo, &submitInfo + 1, fence);
         renderer().commandDispatcher().addPresentDependencies(QueueType::Graphics, &signal, &signal + 1, &fence, &fence + 1);
     }
@@ -86,14 +96,16 @@ private:
     Graphics::PerFrameCache<Cache> _cachedFrames;
     PipelineCache _pipelineCache;
 
-    Graphics::PipelineLayout makePipelineLayout(void) const
+    /** @brief Create the pipeline layout */
+    [[nodiscard]] Graphics::PipelineLayout makePipelineLayout(void) const
     {
         using namespace Graphics;
 
         return PipelineLayout(PipelineLayoutModel(nullptr, nullptr, nullptr, nullptr));
     }
 
-    Graphics::Pipeline makePipeline(void) const
+    /** @brief Create the pipeline */
+    [[nodiscard]] Graphics::Pipeline makePipeline(void) const
     {
         using namespace Graphics;
 
@@ -118,7 +130,7 @@ private:
         return Pipeline(
             PipelineModel(
                 PipelineCreateFlags::None,
-                shaderStageModels, shaderStageModels + sizeof(shaderStageModels),
+                shaderStageModels, shaderStageModels + sizeof(shaderStageModels) / sizeof(*shaderStageModels),
                 VertexInputModel(nullptr, nullptr, nullptr, nullptr),
                 InputAssemblyModel(PrimitiveTopology::TriangleList),
                 TessellationModel(0u),
