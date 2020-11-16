@@ -1,12 +1,13 @@
 <map id="Kube/Graphics/MemoryAllocator.hpp" name="Kube/Graphics/MemoryAllocator.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="245,5,480,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="216,80,275,107"/>
-<area shape="rect" id="node3" href="$_vulkan_handle_8hpp.html" title=" " alt="" coords="299,80,426,107"/>
-<area shape="rect" id="node19" href="$_memory_allocation_model_8hpp.html" title=" " alt="" coords="477,80,664,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="360,5,595,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="240,80,299,107"/>
+<area shape="rect" id="node3" href="$_vulkan_handle_8hpp.html" title=" " alt="" coords="323,80,450,107"/>
+<area shape="rect" id="node19" href="$_memory_allocation_model_8hpp.html" title=" " alt="" coords="475,80,661,107"/>
+<area shape="rect" id="node21" href="$_memory_allocator_8ipp.html" title=" " alt="" coords="685,80,827,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,304,59,331"/>
-<area shape="rect" id="node5" href="$_vulkan_8hpp.html" title=" " alt="" coords="506,155,593,181"/>
-<area shape="rect" id="node18" href="$_renderer_object_8hpp.html" title=" " alt="" coords="287,155,425,181"/>
-<area shape="rect" id="node6" href="$_utils_8hpp.html" title=" " alt="" coords="273,229,413,256"/>
+<area shape="rect" id="node5" href="$_vulkan_8hpp.html" title=" " alt="" coords="503,155,590,181"/>
+<area shape="rect" id="node18" href="$_renderer_object_8hpp.html" title=" " alt="" coords="304,155,443,181"/>
+<area shape="rect" id="node6" href="$_utils_8hpp.html" title=" " alt="" coords="277,229,417,256"/>
 <area shape="rect" id="node14" href="$_vulkan_enums_8hpp.html" title=" " alt="" coords="490,229,617,256"/>
 <area shape="rect" id="node7" title=" " alt="" coords="489,304,572,331"/>
 <area shape="rect" id="node8" title=" " alt="" coords="596,304,671,331"/>

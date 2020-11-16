@@ -1,9 +1,9 @@
 <map id="Kube/Object/Make.hpp" name="Kube/Object/Make.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="315,5,470,32"/>
-<area shape="rect" id="node2" href="$_reflection_8hpp.html" title=" " alt="" coords="196,80,379,107"/>
-<area shape="rect" id="node7" href="$_reflection2_8hpp.html" title=" " alt="" coords="403,80,593,107"/>
-<area shape="rect" id="node3" href="$_object_8hpp.html" title=" " alt="" coords="207,155,368,181"/>
-<area shape="rect" id="node4" href="$_reflection_8cpp.html" title=" " alt="" coords="5,229,188,256"/>
-<area shape="rect" id="node5" href="$_item_8hpp.html" title=" " alt="" coords="213,229,362,256"/>
-<area shape="rect" id="node6" href="$_object_8cpp.html" title=" " alt="" coords="387,229,548,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="128,5,283,32"/>
+<area shape="rect" id="node2" href="$_reflection2_8hpp.html" title=" " alt="" coords="5,80,195,107"/>
+<area shape="rect" id="node3" href="$_reflection_8hpp.html" title=" " alt="" coords="219,80,402,107"/>
+<area shape="rect" id="node4" href="$_object_8hpp.html" title=" " alt="" coords="230,155,391,181"/>
+<area shape="rect" id="node5" href="$_object_8cpp.html" title=" " alt="" coords="50,229,211,256"/>
+<area shape="rect" id="node6" href="$_item_8hpp.html" title=" " alt="" coords="236,229,385,256"/>
+<area shape="rect" id="node7" href="$_reflection_8cpp.html" title=" " alt="" coords="410,229,593,256"/>
 </map>

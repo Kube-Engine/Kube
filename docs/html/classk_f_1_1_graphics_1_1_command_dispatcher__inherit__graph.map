@@ -1,5 +1,5 @@
 <map id="kF::Graphics::CommandDispatcher" name="kF::Graphics::CommandDispatcher">
-<area shape="rect" id="node1" title="Command dispatcher collect commands and dispatch them later." alt="" coords="5,388,244,627"/>
+<area shape="rect" id="node1" title="Command dispatcher collect commands and dispatch them later." alt="" coords="5,388,244,656"/>
 <area shape="rect" id="node2" href="$classk_f_1_1_graphics_1_1_cached_renderer_object.html" title="This class specializes the RendererObject to hold its parent renderer in its member cache This class ..." alt="" coords="23,145,226,340"/>
 <area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_renderer_object.html" title="This is the base class of all renderer sub objects This class is not virtual because it is trivially ..." alt="" coords="27,5,223,97"/>
 </map>

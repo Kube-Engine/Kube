@@ -70,6 +70,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classk_f_1_1_graphics_1_1_buffer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -86,7 +87,7 @@ Inheritance diagram for kF::Graphics::Buffer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classk_f_1_1_graphics_1_1_buffer__inherit__graph.png" border="0" usemap="#ak_f_1_1_graphics_1_1_buffer_inherit__map" alt="Inheritance graph"/></div>
 <map name="k_f_1_1_graphics_1_1_buffer_inherit__map" id="ak_f_1_1_graphics_1_1_buffer_inherit__map">
-<area shape="rect" title="GPU Memory buffer abstraction." alt="" coords="89,1099,228,1235"/>
+<area shape="rect" title="GPU Memory buffer abstraction." alt="" coords="83,1099,235,1308"/>
 <area shape="rect" href="structk_f_1_1_graphics_1_1_vulkan_handle.html" title=" " alt="" coords="66,957,251,1049"/>
 <area shape="rect" href="classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,256,779"/>
 <area shape="rect" href="classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="111,5,297,229"/>
@@ -139,6 +140,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a834f7fb44dfcead6fb713ad64c640022 inherit pub_methods_classk_f_1_1_graphics_1_1_vulkan_handle_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_vulkan_handle_base.html#a834f7fb44dfcead6fb713ad64c640022">operator BufferHandle</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a834f7fb44dfcead6fb713ad64c640022 inherit pub_methods_classk_f_1_1_graphics_1_1_vulkan_handle_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit convertion to handle.  <a href="classk_f_1_1_graphics_1_1_vulkan_handle_base.html#a834f7fb44dfcead6fb713ad64c640022">More...</a><br /></td></tr>
 <tr class="separator:a834f7fb44dfcead6fb713ad64c640022 inherit pub_methods_classk_f_1_1_graphics_1_1_vulkan_handle_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aeaaded62763c8e47327c08c97de79644"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html#aeaaded62763c8e47327c08c97de79644">MakeStaging</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> size) noexcept</td></tr>
+<tr class="memdesc:aeaaded62763c8e47327c08c97de79644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a staging buffer.  <a href="classk_f_1_1_graphics_1_1_buffer.html#aeaaded62763c8e47327c08c97de79644">More...</a><br /></td></tr>
+<tr class="separator:aeaaded62763c8e47327c08c97de79644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9db44a8be7055b361f49ef488e718a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html#abc9db44a8be7055b361f49ef488e718a">MakeVertexLocal</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> size) noexcept</td></tr>
+<tr class="memdesc:abc9db44a8be7055b361f49ef488e718a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a local (GPU only) vertex buffer.  <a href="classk_f_1_1_graphics_1_1_buffer.html#abc9db44a8be7055b361f49ef488e718a">More...</a><br /></td></tr>
+<tr class="separator:abc9db44a8be7055b361f49ef488e718a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe49ef85750702ec424b71454fe858e2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html#afe49ef85750702ec424b71454fe858e2">MakeVertexShared</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> size) noexcept</td></tr>
+<tr class="memdesc:afe49ef85750702ec424b71454fe858e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a shared (CPU &amp; GPU) vertex buffer.  <a href="classk_f_1_1_graphics_1_1_buffer.html#afe49ef85750702ec424b71454fe858e2">More...</a><br /></td></tr>
+<tr class="separator:afe49ef85750702ec424b71454fe858e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3a2ea8a6ddbe7c74f4d4290c4beb34"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html#a7f3a2ea8a6ddbe7c74f4d4290c4beb34">MakeIndexLocal</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> size) noexcept</td></tr>
+<tr class="memdesc:a7f3a2ea8a6ddbe7c74f4d4290c4beb34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a local (GPU only) index buffer.  <a href="classk_f_1_1_graphics_1_1_buffer.html#a7f3a2ea8a6ddbe7c74f4d4290c4beb34">More...</a><br /></td></tr>
+<tr class="separator:a7f3a2ea8a6ddbe7c74f4d4290c4beb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7365dcbc32efd2c266ad6a4f0776a960"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html#a7365dcbc32efd2c266ad6a4f0776a960">MakeIndexShared</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> size) noexcept</td></tr>
+<tr class="memdesc:a7365dcbc32efd2c266ad6a4f0776a960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a shared (CPU &amp; GPU) index buffer.  <a href="classk_f_1_1_graphics_1_1_buffer.html#a7365dcbc32efd2c266ad6a4f0776a960">More...</a><br /></td></tr>
+<tr class="separator:a7365dcbc32efd2c266ad6a4f0776a960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -259,6 +278,146 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create the device buffer. </p>
+
+</div>
+</div>
+<a id="a7f3a2ea8a6ddbe7c74f4d4290c4beb34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f3a2ea8a6ddbe7c74f4d4290c4beb34">&#9670;&nbsp;</a></span>MakeIndexLocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a> kF::Graphics::Buffer::MakeIndexLocal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a local (GPU only) index buffer. </p>
+
+</div>
+</div>
+<a id="a7365dcbc32efd2c266ad6a4f0776a960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7365dcbc32efd2c266ad6a4f0776a960">&#9670;&nbsp;</a></span>MakeIndexShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a> kF::Graphics::Buffer::MakeIndexShared </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a shared (CPU &amp; GPU) index buffer. </p>
+
+</div>
+</div>
+<a id="aeaaded62763c8e47327c08c97de79644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaaded62763c8e47327c08c97de79644">&#9670;&nbsp;</a></span>MakeStaging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a> kF::Graphics::Buffer::MakeStaging </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a staging buffer. </p>
+
+</div>
+</div>
+<a id="abc9db44a8be7055b361f49ef488e718a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9db44a8be7055b361f49ef488e718a">&#9670;&nbsp;</a></span>MakeVertexLocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a> kF::Graphics::Buffer::MakeVertexLocal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a local (GPU only) vertex buffer. </p>
+
+</div>
+</div>
+<a id="afe49ef85750702ec424b71454fe858e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe49ef85750702ec424b71454fe858e2">&#9670;&nbsp;</a></span>MakeVertexShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_graphics_1_1_buffer.html">Buffer</a> kF::Graphics::Buffer::MakeVertexShared </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a shared (CPU &amp; GPU) vertex buffer. </p>
 
 </div>
 </div>

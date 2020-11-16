@@ -26,14 +26,23 @@ Inheritance diagram for kF\+::Graphics\+::Memory\+Allocation\+:
 \begin{DoxyCompactList}\small\item\em Construct a nw buffer using a buffer model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_ad902bc96184bef793f5f8363eba78d8d}{Memory\+Allocation}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \&\&other) noexcept=default
 \begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a9b62404b02ace26e120a685af4b8f68f}{$\sim$\+Memory\+Allocation}} (void) noexcept
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a5f71a7ccdcb8bb3d5a994b3e42970de9}{$\sim$\+Memory\+Allocation}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \&\&other) noexcept=default
-\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$k\+F\+::\+Graphics\+::\+Memory\+Bindable Bindable, std\+::input\+\_\+iterator Iterator$>$ }\\\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{k\+F\+::\+Graphics\+::\+Memory\+Allocation}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a6d58a7cb20bea453d7ccf5c4ce61a954}{Make\+Staging}} (const Bindable to\+Bind, const Iterator data\+Begin, const Iterator data\+End)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$Memory\+Bindable Bindable, std\+::input\+\_\+iterator Iterator$>$ }\\static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_af4228a353f54438b2731b254eeab0d10}{Make\+Staging}} (const Bindable to\+Bind, const Iterator data\+Begin, const Iterator data\+End)
+\begin{DoxyCompactList}\small\item\em Make a memory allocation for a staging buffer and copy its memory. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Memory\+Bindable Bindable$>$ }\\static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a6fd5d7653787c19be2fed88cbb403954}{Make\+Local}} (const Bindable to\+Bind) noexcept
+\begin{DoxyCompactList}\small\item\em Make a local (G\+PU only) memory allocation and bind a vertex buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a067837c3ba30340f0e13f248c3878baa}{create\+Memory\+Allocation}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&model)
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_a51dc61a9efd52df1467025d383c17515}{create\+Memory\+Allocation}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&model)
 \begin{DoxyCompactList}\small\item\em Create the device buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -61,11 +70,11 @@ Construct a nw buffer using a buffer model.
 
 Move constructor. 
 
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a9b62404b02ace26e120a685af4b8f68f}\label{classk_f_1_1_graphics_1_1_memory_allocation_a9b62404b02ace26e120a685af4b8f68f}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a5f71a7ccdcb8bb3d5a994b3e42970de9}\label{classk_f_1_1_graphics_1_1_memory_allocation_a5f71a7ccdcb8bb3d5a994b3e42970de9}} 
 \index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!````~MemoryAllocation@{$\sim$MemoryAllocation}}
 \index{````~MemoryAllocation@{$\sim$MemoryAllocation}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
 \doxysubsubsection{\texorpdfstring{$\sim$MemoryAllocation()}{~MemoryAllocation()}}
-{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::$\sim$\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily Graphics\+::\+Memory\+Allocation\+::$\sim$\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -74,17 +83,46 @@ Destruct the buffer.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a067837c3ba30340f0e13f248c3878baa}\label{classk_f_1_1_graphics_1_1_memory_allocation_a067837c3ba30340f0e13f248c3878baa}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a51dc61a9efd52df1467025d383c17515}\label{classk_f_1_1_graphics_1_1_memory_allocation_a51dc61a9efd52df1467025d383c17515}} 
 \index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!createMemoryAllocation@{createMemoryAllocation}}
 \index{createMemoryAllocation@{createMemoryAllocation}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
 \doxysubsubsection{\texorpdfstring{createMemoryAllocation()}{createMemoryAllocation()}}
-{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::create\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Graphics\+::\+Memory\+Allocation\+::create\+Memory\+Allocation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Create the device buffer. 
 
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}\label{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a6fd5d7653787c19be2fed88cbb403954}\label{classk_f_1_1_graphics_1_1_memory_allocation_a6fd5d7653787c19be2fed88cbb403954}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!MakeLocal@{MakeLocal}}
+\index{MakeLocal@{MakeLocal}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{MakeLocal()}{MakeLocal()}}
+{\footnotesize\ttfamily template$<$Memory\+Bindable Bindable$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::\+Make\+Local (\begin{DoxyParamCaption}\item[{const Bindable}]{to\+Bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a local (G\+PU only) memory allocation and bind a vertex buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_af4228a353f54438b2731b254eeab0d10}\label{classk_f_1_1_graphics_1_1_memory_allocation_af4228a353f54438b2731b254eeab0d10}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!MakeStaging@{MakeStaging}}
+\index{MakeStaging@{MakeStaging}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{MakeStaging()}{MakeStaging()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$Memory\+Bindable Bindable, std\+::input\+\_\+iterator Iterator$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::\+Make\+Staging (\begin{DoxyParamCaption}\item[{const Bindable}]{to\+Bind,  }\item[{const Iterator}]{data\+Begin,  }\item[{const Iterator}]{data\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Make a memory allocation for a staging buffer and copy its memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a6d58a7cb20bea453d7ccf5c4ce61a954}\label{classk_f_1_1_graphics_1_1_memory_allocation_a6d58a7cb20bea453d7ccf5c4ce61a954}} 
+\index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!MakeStaging@{MakeStaging}}
+\index{MakeStaging@{MakeStaging}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
+\doxysubsubsection{\texorpdfstring{MakeStaging()}{MakeStaging()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$k\+F\+::\+Graphics\+::\+Memory\+Bindable Bindable, std\+::input\+\_\+iterator Iterator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{k\+F\+::\+Graphics\+::\+Memory\+Allocation}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+::\+Make\+Staging (\begin{DoxyParamCaption}\item[{const Bindable}]{to\+Bind,  }\item[{const Iterator}]{data\+Begin,  }\item[{const Iterator}]{data\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation}{Memory\+Allocation}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}\label{classk_f_1_1_graphics_1_1_memory_allocation_a6e96a6d6d30aa905e16efdf15e70a37f}} 
 \index{kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}!operator=@{operator=}}
 \index{operator=@{operator=}!kF::Graphics::MemoryAllocation@{kF::Graphics::MemoryAllocation}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
@@ -96,6 +134,8 @@ Move assignment.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_8hpp}{Memory\+Allocation.\+hpp}}\end{DoxyCompactItemize}
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_8hpp}{Memory\+Allocation.\+hpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_8cpp}{Memory\+Allocation.\+cpp}}\item 
+Kube/\+Graphics/\mbox{\hyperlink{_memory_allocation_8ipp}{Memory\+Allocation.\+ipp}}\end{DoxyCompactItemize}

@@ -30,6 +30,19 @@ Inheritance diagram for kF\+::Graphics\+::Buffer\+:
 \begin{DoxyCompactList}\small\item\em Destruct the buffer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \& \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_adbafcfe5c5cd8a69b787a2fc5783c0f7}{operator=}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \&\&other) noexcept=default
 \begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_aeaaded62763c8e47327c08c97de79644}{Make\+Staging}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Make a staging buffer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_abc9db44a8be7055b361f49ef488e718a}{Make\+Vertex\+Local}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Make a local (G\+PU only) vertex buffer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_afe49ef85750702ec424b71454fe858e2}{Make\+Vertex\+Shared}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Make a shared (C\+PU \& G\+PU) vertex buffer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_a7f3a2ea8a6ddbe7c74f4d4290c4beb34}{Make\+Index\+Local}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Make a local (G\+PU only) index buffer. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer_a7365dcbc32efd2c266ad6a4f0776a960}{Make\+Index\+Shared}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} size) noexcept
+\begin{DoxyCompactList}\small\item\em Make a shared (C\+PU \& G\+PU) index buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,6 +96,56 @@ Destruct the buffer.
 
 
 Create the device buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_a7f3a2ea8a6ddbe7c74f4d4290c4beb34}\label{classk_f_1_1_graphics_1_1_buffer_a7f3a2ea8a6ddbe7c74f4d4290c4beb34}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!MakeIndexLocal@{MakeIndexLocal}}
+\index{MakeIndexLocal@{MakeIndexLocal}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{MakeIndexLocal()}{MakeIndexLocal()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} k\+F\+::\+Graphics\+::\+Buffer\+::\+Make\+Index\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a local (G\+PU only) index buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_a7365dcbc32efd2c266ad6a4f0776a960}\label{classk_f_1_1_graphics_1_1_buffer_a7365dcbc32efd2c266ad6a4f0776a960}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!MakeIndexShared@{MakeIndexShared}}
+\index{MakeIndexShared@{MakeIndexShared}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{MakeIndexShared()}{MakeIndexShared()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} k\+F\+::\+Graphics\+::\+Buffer\+::\+Make\+Index\+Shared (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a shared (C\+PU \& G\+PU) index buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_aeaaded62763c8e47327c08c97de79644}\label{classk_f_1_1_graphics_1_1_buffer_aeaaded62763c8e47327c08c97de79644}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!MakeStaging@{MakeStaging}}
+\index{MakeStaging@{MakeStaging}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{MakeStaging()}{MakeStaging()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} k\+F\+::\+Graphics\+::\+Buffer\+::\+Make\+Staging (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a staging buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_abc9db44a8be7055b361f49ef488e718a}\label{classk_f_1_1_graphics_1_1_buffer_abc9db44a8be7055b361f49ef488e718a}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!MakeVertexLocal@{MakeVertexLocal}}
+\index{MakeVertexLocal@{MakeVertexLocal}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{MakeVertexLocal()}{MakeVertexLocal()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} k\+F\+::\+Graphics\+::\+Buffer\+::\+Make\+Vertex\+Local (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a local (G\+PU only) vertex buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_afe49ef85750702ec424b71454fe858e2}\label{classk_f_1_1_graphics_1_1_buffer_afe49ef85750702ec424b71454fe858e2}} 
+\index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!MakeVertexShared@{MakeVertexShared}}
+\index{MakeVertexShared@{MakeVertexShared}!kF::Graphics::Buffer@{kF::Graphics::Buffer}}
+\doxysubsubsection{\texorpdfstring{MakeVertexShared()}{MakeVertexShared()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} k\+F\+::\+Graphics\+::\+Buffer\+::\+Make\+Vertex\+Shared (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a shared (C\+PU \& G\+PU) vertex buffer. 
 
 \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_buffer_adbafcfe5c5cd8a69b787a2fc5783c0f7}\label{classk_f_1_1_graphics_1_1_buffer_adbafcfe5c5cd8a69b787a2fc5783c0f7}} 
 \index{kF::Graphics::Buffer@{kF::Graphics::Buffer}!operator=@{operator=}}

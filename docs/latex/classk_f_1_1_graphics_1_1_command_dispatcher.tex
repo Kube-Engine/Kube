@@ -16,7 +16,7 @@ Inheritance diagram for kF\+::Graphics\+::Command\+Dispatcher\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=259pt]{classk_f_1_1_graphics_1_1_command_dispatcher__inherit__graph}
+\includegraphics[height=550pt]{classk_f_1_1_graphics_1_1_command_dispatcher__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -44,8 +44,12 @@ using \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_aca24fbc0118
 \begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_aebdbecd10de5005b5095cb55c28355d8}{current\+Frame\+Available\+Semaphore}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Get the frame available semaphore of the current frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a190b7a3435539811e357ee9af4a34267}{dispatch}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} queue\+Type, const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_submit_info}{Submit\+Info}} \&submit, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} fence)
+\begin{DoxyCompactList}\small\item\em Dispatch a single command of a given queue (only thread safe if the underlying hardward queue is not already submitting) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a4f36cb7e442956a318d6a4cf77ad6f6a}{dispatch}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} queue\+Type, const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_submit_info}{Submit\+Info}} $\ast$const submit\+Begin, const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_submit_info}{Submit\+Info}} $\ast$const submit\+End, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} fence)
 \begin{DoxyCompactList}\small\item\em Dispatch commands of a given queue (only thread safe if the underlying hardward queue is not already submitting) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a8a31feaed7a61275b8a10243e883f5e1}{add\+Present\+Dependencies}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} queue\+Type, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}} semaphore, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} fence) noexcept
+\begin{DoxyCompactList}\small\item\em Add single semaphore and fence dependencies to presentation of current frame (thread safe for different queue type calls) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_acd86238a88aad43058978a727bebd1fc}{add\+Present\+Dependencies}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}} queue\+Type, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}} $\ast$const semaphore\+Begin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}} $\ast$semaphore\+End, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const fence\+Begin, const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$fence\+End) noexcept
 \begin{DoxyCompactList}\small\item\em Add dependencies to presentation of current frame (thread safe for different queue type calls) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher_a2703800137ad00e804a67959dfc52a17}{try\+Acquire\+Next\+Frame}} (void)
@@ -129,14 +133,24 @@ Destruct the command dispatcher.
 \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_dispatcher_acd86238a88aad43058978a727bebd1fc}\label{classk_f_1_1_graphics_1_1_command_dispatcher_acd86238a88aad43058978a727bebd1fc}} 
 \index{kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}!addPresentDependencies@{addPresentDependencies}}
 \index{addPresentDependencies@{addPresentDependencies}!kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}}
-\doxysubsubsection{\texorpdfstring{addPresentDependencies()}{addPresentDependencies()}}
+\doxysubsubsection{\texorpdfstring{addPresentDependencies()}{addPresentDependencies()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::add\+Present\+Dependencies (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}} $\ast$const}]{semaphore\+Begin,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}} $\ast$}]{semaphore\+End,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$const}]{fence\+Begin,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}} $\ast$}]{fence\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Add dependencies to presentation of current frame (thread safe for different queue type calls) 
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_dispatcher_af05a8b735b94275778be585d01172786}\label{classk_f_1_1_graphics_1_1_command_dispatcher_af05a8b735b94275778be585d01172786}} 
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_dispatcher}{Command\+Dispatcher}} \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_dispatcher_a8a31feaed7a61275b8a10243e883f5e1}\label{classk_f_1_1_graphics_1_1_command_dispatcher_a8a31feaed7a61275b8a10243e883f5e1}} 
+\index{kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}!addPresentDependencies@{addPresentDependencies}}
+\index{addPresentDependencies@{addPresentDependencies}!kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}}
+\doxysubsubsection{\texorpdfstring{addPresentDependencies()}{addPresentDependencies()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::add\+Present\+Dependencies (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2111bf8bcb3b107984fb73d0b9f5bbaf}{Semaphore\+Handle}}}]{semaphore,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}}}]{fence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Add single semaphore and fence dependencies to presentation of current frame (thread safe for different queue type calls) 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_dispatcher_af05a8b735b94275778be585d01172786}\label{classk_f_1_1_graphics_1_1_command_dispatcher_af05a8b735b94275778be585d01172786}} 
 \index{kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}!clear@{clear}}
 \index{clear@{clear}!kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}}
 \doxysubsubsection{\texorpdfstring{clear()}{clear()}}
@@ -156,10 +170,20 @@ Clear everything.
 
 Get the frame available semaphore of the current frame. 
 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_dispatcher_a190b7a3435539811e357ee9af4a34267}\label{classk_f_1_1_graphics_1_1_command_dispatcher_a190b7a3435539811e357ee9af4a34267}} 
+\index{kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Dispatcher\+::dispatch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type,  }\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_submit_info}{Submit\+Info}} \&}]{submit,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}}}]{fence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dispatch a single command of a given queue (only thread safe if the underlying hardward queue is not already submitting) 
+
 \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_dispatcher_a4f36cb7e442956a318d6a4cf77ad6f6a}\label{classk_f_1_1_graphics_1_1_command_dispatcher_a4f36cb7e442956a318d6a4cf77ad6f6a}} 
 \index{kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}!dispatch@{dispatch}}
 \index{dispatch@{dispatch}!kF::Graphics::CommandDispatcher@{kF::Graphics::CommandDispatcher}}
-\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Graphics\+::\+Command\+Dispatcher\+::dispatch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ad65290776ccd867059cb88d4967d1f60}{Queue\+Type}}}]{queue\+Type,  }\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_submit_info}{Submit\+Info}} $\ast$const}]{submit\+Begin,  }\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_submit_info}{Submit\+Info}} $\ast$const}]{submit\+End,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_ac43b81216c7361e5b6d5c4771cc52fd8}{Fence\+Handle}}}]{fence }\end{DoxyParamCaption})}
 
 

@@ -88,7 +88,7 @@ Inheritance diagram for kF::Graphics::CommandDispatcher:</div>
 <div class="dyncontent">
 <div class="center"><img src="classk_f_1_1_graphics_1_1_command_dispatcher__inherit__graph.png" border="0" usemap="#ak_f_1_1_graphics_1_1_command_dispatcher_inherit__map" alt="Inheritance graph"/></div>
 <map name="k_f_1_1_graphics_1_1_command_dispatcher_inherit__map" id="ak_f_1_1_graphics_1_1_command_dispatcher_inherit__map">
-<area shape="rect" title="Command dispatcher collect commands and dispatch them later." alt="" coords="5,388,244,627"/>
+<area shape="rect" title="Command dispatcher collect commands and dispatch them later." alt="" coords="5,388,244,656"/>
 <area shape="rect" href="classk_f_1_1_graphics_1_1_cached_renderer_object.html" title="This class specializes the RendererObject to hold its parent renderer in its member cache This class ..." alt="" coords="23,145,226,340"/>
 <area shape="rect" href="classk_f_1_1_graphics_1_1_renderer_object.html" title="This is the base class of all renderer sub objects This class is not virtual because it is trivially ..." alt="" coords="27,5,223,97"/>
 </map>
@@ -126,9 +126,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aebdbecd10de5005b5095cb55c28355d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacek_f_1_1_graphics.html#a2111bf8bcb3b107984fb73d0b9f5bbaf">SemaphoreHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html#aebdbecd10de5005b5095cb55c28355d8">currentFrameAvailableSemaphore</a> (void) const noexcept</td></tr>
 <tr class="memdesc:aebdbecd10de5005b5095cb55c28355d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the frame available semaphore of the current frame.  <a href="classk_f_1_1_graphics_1_1_command_dispatcher.html#aebdbecd10de5005b5095cb55c28355d8">More...</a><br /></td></tr>
 <tr class="separator:aebdbecd10de5005b5095cb55c28355d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190b7a3435539811e357ee9af4a34267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a190b7a3435539811e357ee9af4a34267">dispatch</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#ad65290776ccd867059cb88d4967d1f60">QueueType</a> queueType, const <a class="el" href="structk_f_1_1_graphics_1_1_submit_info.html">SubmitInfo</a> &amp;submit, const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a> fence)</td></tr>
+<tr class="memdesc:a190b7a3435539811e357ee9af4a34267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch a single command of a given queue (only thread safe if the underlying hardward queue is not already submitting)  <a href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a190b7a3435539811e357ee9af4a34267">More...</a><br /></td></tr>
+<tr class="separator:a190b7a3435539811e357ee9af4a34267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f36cb7e442956a318d6a4cf77ad6f6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a4f36cb7e442956a318d6a4cf77ad6f6a">dispatch</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#ad65290776ccd867059cb88d4967d1f60">QueueType</a> queueType, const <a class="el" href="structk_f_1_1_graphics_1_1_submit_info.html">SubmitInfo</a> *const submitBegin, const <a class="el" href="structk_f_1_1_graphics_1_1_submit_info.html">SubmitInfo</a> *const submitEnd, const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a> fence)</td></tr>
 <tr class="memdesc:a4f36cb7e442956a318d6a4cf77ad6f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch commands of a given queue (only thread safe if the underlying hardward queue is not already submitting)  <a href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a4f36cb7e442956a318d6a4cf77ad6f6a">More...</a><br /></td></tr>
 <tr class="separator:a4f36cb7e442956a318d6a4cf77ad6f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a31feaed7a61275b8a10243e883f5e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a8a31feaed7a61275b8a10243e883f5e1">addPresentDependencies</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#ad65290776ccd867059cb88d4967d1f60">QueueType</a> queueType, const <a class="el" href="namespacek_f_1_1_graphics.html#a2111bf8bcb3b107984fb73d0b9f5bbaf">SemaphoreHandle</a> semaphore, const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a> fence) noexcept</td></tr>
+<tr class="memdesc:a8a31feaed7a61275b8a10243e883f5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add single semaphore and fence dependencies to presentation of current frame (thread safe for different queue type calls)  <a href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a8a31feaed7a61275b8a10243e883f5e1">More...</a><br /></td></tr>
+<tr class="separator:a8a31feaed7a61275b8a10243e883f5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd86238a88aad43058978a727bebd1fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html#acd86238a88aad43058978a727bebd1fc">addPresentDependencies</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#ad65290776ccd867059cb88d4967d1f60">QueueType</a> queueType, const <a class="el" href="namespacek_f_1_1_graphics.html#a2111bf8bcb3b107984fb73d0b9f5bbaf">SemaphoreHandle</a> *const semaphoreBegin, const <a class="el" href="namespacek_f_1_1_graphics.html#a2111bf8bcb3b107984fb73d0b9f5bbaf">SemaphoreHandle</a> *semaphoreEnd, const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a> *const fenceBegin, const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a> *fenceEnd) noexcept</td></tr>
 <tr class="memdesc:acd86238a88aad43058978a727bebd1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add dependencies to presentation of current frame (thread safe for different queue type calls)  <a href="classk_f_1_1_graphics_1_1_command_dispatcher.html#acd86238a88aad43058978a727bebd1fc">More...</a><br /></td></tr>
 <tr class="separator:acd86238a88aad43058978a727bebd1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,7 +313,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="acd86238a88aad43058978a727bebd1fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd86238a88aad43058978a727bebd1fc">&#9670;&nbsp;</a></span>addPresentDependencies()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd86238a88aad43058978a727bebd1fc">&#9670;&nbsp;</a></span>addPresentDependencies() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,6 +366,50 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Add dependencies to presentation of current frame (thread safe for different queue type calls) </p>
 <p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html" title="Command dispatcher collect commands and dispatch them later.">CommandDispatcher</a> </p>
+
+</div>
+</div>
+<a id="a8a31feaed7a61275b8a10243e883f5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a31feaed7a61275b8a10243e883f5e1">&#9670;&nbsp;</a></span>addPresentDependencies() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Graphics::CommandDispatcher::addPresentDependencies </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#ad65290776ccd867059cb88d4967d1f60">QueueType</a>&#160;</td>
+          <td class="paramname"><em>queueType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#a2111bf8bcb3b107984fb73d0b9f5bbaf">SemaphoreHandle</a>&#160;</td>
+          <td class="paramname"><em>semaphore</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a>&#160;</td>
+          <td class="paramname"><em>fence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add single semaphore and fence dependencies to presentation of current frame (thread safe for different queue type calls) </p>
 
 </div>
 </div>
@@ -419,8 +469,52 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a190b7a3435539811e357ee9af4a34267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190b7a3435539811e357ee9af4a34267">&#9670;&nbsp;</a></span>dispatch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Graphics::CommandDispatcher::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#ad65290776ccd867059cb88d4967d1f60">QueueType</a>&#160;</td>
+          <td class="paramname"><em>queueType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structk_f_1_1_graphics_1_1_submit_info.html">SubmitInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>submit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#ac43b81216c7361e5b6d5c4771cc52fd8">FenceHandle</a>&#160;</td>
+          <td class="paramname"><em>fence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dispatch a single command of a given queue (only thread safe if the underlying hardward queue is not already submitting) </p>
+
+</div>
+</div>
 <a id="a4f36cb7e442956a318d6a4cf77ad6f6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f36cb7e442956a318d6a4cf77ad6f6a">&#9670;&nbsp;</a></span>dispatch()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f36cb7e442956a318d6a4cf77ad6f6a">&#9670;&nbsp;</a></span>dispatch() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

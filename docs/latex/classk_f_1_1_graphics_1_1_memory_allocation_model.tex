@@ -19,7 +19,7 @@ enum \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f235
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$Memory\+Bindable Type$>$ }\\\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a6fc841932d92557a3c695f768215ffc4}{Memory\+Allocation\+Model}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} usage) noexcept
+{\footnotesize template$<$Memory\+Bindable Type$>$ }\\\mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_aadaefb480f15e9725adf9799a0b4f968}{Memory\+Allocation\+Model}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} value, const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} usage) noexcept
 \begin{DoxyCompactList}\small\item\em Construct a new memory allocation. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_ac2510e5dc10399409f1a56f4ad80d513}{Memory\+Allocation\+Model}} (const \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \&other) noexcept=default
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
@@ -33,6 +33,13 @@ enum \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a3e6f235
 \begin{DoxyCompactList}\small\item\em Retreive data as an image. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a7cfa68c02a15f3db17868272bf797e0c}{memory\+Usage}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Get the usage of memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$Memory\+Bindable Bindable$>$ }\\static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a4739076ec35c16ac63993b91df4ca3aa}{Make\+Staging}} (const Bindable to\+Bind) noexcept
+\begin{DoxyCompactList}\small\item\em Make a shared memory allocation model. \end{DoxyCompactList}\item 
+{\footnotesize template$<$Memory\+Bindable Bindable$>$ }\\static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model_a947fb2843afefbc31fdab5c03c68d0bb}{Make\+Local}} (const Bindable to\+Bind) noexcept
+\begin{DoxyCompactList}\small\item\em Make a local (G\+PU only) memory allocation model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -68,12 +75,12 @@ Image&\\
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a6fc841932d92557a3c695f768215ffc4}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a6fc841932d92557a3c695f768215ffc4}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_aadaefb480f15e9725adf9799a0b4f968}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_aadaefb480f15e9725adf9799a0b4f968}} 
 \index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!MemoryAllocationModel@{MemoryAllocationModel}}
 \index{MemoryAllocationModel@{MemoryAllocationModel}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
 \doxysubsubsection{\texorpdfstring{MemoryAllocationModel()}{MemoryAllocationModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$k\+F\+::\+Graphics\+::\+Memory\+Bindable Type$>$ \\
-k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Memory\+Allocation\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}}}]{usage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Memory\+Allocation\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}}]{value,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_a2d0aef9448ea647fcabad646a889d24e}{Memory\+Usage}}}]{usage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -121,6 +128,28 @@ Retreive data as a buffer.
 
 
 Retreive data as an image. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a947fb2843afefbc31fdab5c03c68d0bb}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a947fb2843afefbc31fdab5c03c68d0bb}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!MakeLocal@{MakeLocal}}
+\index{MakeLocal@{MakeLocal}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{MakeLocal()}{MakeLocal()}}
+{\footnotesize\ttfamily template$<$Memory\+Bindable Bindable$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Make\+Local (\begin{DoxyParamCaption}\item[{const Bindable}]{to\+Bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a local (G\+PU only) memory allocation model. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a4739076ec35c16ac63993b91df4ca3aa}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a4739076ec35c16ac63993b91df4ca3aa}} 
+\index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!MakeStaging@{MakeStaging}}
+\index{MakeStaging@{MakeStaging}!kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}}
+\doxysubsubsection{\texorpdfstring{MakeStaging()}{MakeStaging()}}
+{\footnotesize\ttfamily template$<$Memory\+Bindable Bindable$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_graphics_1_1_memory_allocation_model}{Memory\+Allocation\+Model}} k\+F\+::\+Graphics\+::\+Memory\+Allocation\+Model\+::\+Make\+Staging (\begin{DoxyParamCaption}\item[{const Bindable}]{to\+Bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Make a shared memory allocation model. 
 
 \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_memory_allocation_model_a7cfa68c02a15f3db17868272bf797e0c}\label{classk_f_1_1_graphics_1_1_memory_allocation_model_a7cfa68c02a15f3db17868272bf797e0c}} 
 \index{kF::Graphics::MemoryAllocationModel@{kF::Graphics::MemoryAllocationModel}!memoryUsage@{memoryUsage}}

@@ -88,8 +88,8 @@ public:
         );
 
         // Dispatch the command and register semaphores / fences into the queue for frame synchronization
-        renderer().commandDispatcher().dispatch(QueueType::Graphics, &submitInfo, &submitInfo + 1, fence);
-        renderer().commandDispatcher().addPresentDependencies(QueueType::Graphics, &signal, &signal + 1, &fence, &fence + 1);
+        renderer().commandDispatcher().dispatch(QueueType::Graphics, submitInfo, fence);
+        renderer().commandDispatcher().addPresentDependencies(QueueType::Graphics, signal, fence);
     }
 
 private:

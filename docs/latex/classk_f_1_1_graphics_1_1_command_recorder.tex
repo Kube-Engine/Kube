@@ -25,10 +25,18 @@ void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_abc6fa3e6539a09
 \begin{DoxyCompactList}\small\item\em End a render pass. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_af98f06bf16f6889f1650fce0fd56f3b5}{bind\+Pipeline}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_a09dce4ef3ef378b011ea6fbbf00c5551}{Pipeline\+Bind\+Point}} pipeline\+Bind\+Point, const \mbox{\hyperlink{namespacek_f_1_1_graphics_af4d848aa3b37ad93f345bae706068304}{Pipeline\+Handle}} pipeline) const noexcept
 \begin{DoxyCompactList}\small\item\em Bind a pipeline. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_ad6f395186d74765e24e9dfc3257f6a79}{draw}} (const std\+::uint32\+\_\+t vertex\+Count, const std\+::uint32\+\_\+t instance\+Count, const std\+::uint32\+\_\+t first\+Vertex, const std\+::uint32\+\_\+t first\+Instance) const noexcept
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a2380510f51e4d1db25790dde93530939}{draw}} (const std\+::uint32\+\_\+t vertex\+Count, const std\+::uint32\+\_\+t instance\+Count, const std\+::uint32\+\_\+t first\+Vertex=0u, const std\+::uint32\+\_\+t first\+Instance=0) const noexcept
 \begin{DoxyCompactList}\small\item\em Draw commands. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_ad900adc6106b5a99372b18794e0b5d9d}{draw\+Indexed}} (const std\+::uint32\+\_\+t index\+Count, const std\+::uint32\+\_\+t instance\+Count, const std\+::uint32\+\_\+t first\+Index, const std\+::int32\+\_\+t vertex\+Offset, const std\+::uint32\+\_\+t first\+Instance) const noexcept
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_ae65f8a939082954ba9ea4b001d66516b}{draw\+Indexed}} (const std\+::uint32\+\_\+t index\+Count, const std\+::uint32\+\_\+t instance\+Count, const std\+::uint32\+\_\+t first\+Index, const std\+::int32\+\_\+t vertex\+Offset=0, const std\+::uint32\+\_\+t first\+Instance=0u) const noexcept
+\begin{DoxyCompactList}\small\item\em Indexed draw commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a430c710691afe0f9cff9fa8603e307a3}{bind\+Vertex\+Buffer}} (const std\+::uint32\+\_\+t binding, const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} buffer, const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} offset=0u) const noexcept
+\begin{DoxyCompactList}\small\item\em Bind a single vertex buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_afb074d730a484a943746764f0c4a1b19}{bind\+Vertex\+Buffers}} (const std\+::uint32\+\_\+t first\+Binding, const std\+::uint32\+\_\+t binding\+Count, const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} $\ast$const p\+Buffers, const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} $\ast$const p\+Offsets) const noexcept
+\begin{DoxyCompactList}\small\item\em Bind vertex buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a0bc35c4bf572ef8f6f5a1c1e4fba32cf}{copy\+Buffer}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} src\+Buffer, const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} dst\+Buffer, const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_copy}{Buffer\+Copy}} \&region) const noexcept
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} copy command with one region. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_command_recorder_a6b353916c0c743c04ab1269a2ed76dc0}{copy\+Buffer}} (const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} src\+Buffer, const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} dst\+Buffer, const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_copy}{Buffer\+Copy}} $\ast$const region\+Begin, const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_copy}{Buffer\+Copy}} $\ast$const region\+End) const noexcept
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} copy command with multiple regions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -88,21 +96,65 @@ Begin a render pass.
 
 Bind a pipeline. 
 
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_ad6f395186d74765e24e9dfc3257f6a79}\label{classk_f_1_1_graphics_1_1_command_recorder_ad6f395186d74765e24e9dfc3257f6a79}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a430c710691afe0f9cff9fa8603e307a3}\label{classk_f_1_1_graphics_1_1_command_recorder_a430c710691afe0f9cff9fa8603e307a3}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!bindVertexBuffer@{bindVertexBuffer}}
+\index{bindVertexBuffer@{bindVertexBuffer}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{bindVertexBuffer()}{bindVertexBuffer()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::bind\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{binding,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}}}]{buffer,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}}}]{offset = {\ttfamily 0u} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Bind a single vertex buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_afb074d730a484a943746764f0c4a1b19}\label{classk_f_1_1_graphics_1_1_command_recorder_afb074d730a484a943746764f0c4a1b19}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!bindVertexBuffers@{bindVertexBuffers}}
+\index{bindVertexBuffers@{bindVertexBuffers}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{bindVertexBuffers()}{bindVertexBuffers()}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::bind\+Vertex\+Buffers (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{first\+Binding,  }\item[{const std\+::uint32\+\_\+t}]{binding\+Count,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}} $\ast$const}]{p\+Buffers,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_aa1676ff5c662dde92d4856f3d5b79d01}{Buffer\+Size}} $\ast$const}]{p\+Offsets }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Bind vertex buffers. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a0bc35c4bf572ef8f6f5a1c1e4fba32cf}\label{classk_f_1_1_graphics_1_1_command_recorder_a0bc35c4bf572ef8f6f5a1c1e4fba32cf}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!copyBuffer@{copyBuffer}}
+\index{copyBuffer@{copyBuffer}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{copyBuffer()}{copyBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::copy\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}}}]{src\+Buffer,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}}}]{dst\+Buffer,  }\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_copy}{Buffer\+Copy}} \&}]{region }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} copy command with one region. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a6b353916c0c743c04ab1269a2ed76dc0}\label{classk_f_1_1_graphics_1_1_command_recorder_a6b353916c0c743c04ab1269a2ed76dc0}} 
+\index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!copyBuffer@{copyBuffer}}
+\index{copyBuffer@{copyBuffer}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
+\doxysubsubsection{\texorpdfstring{copyBuffer()}{copyBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::copy\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}}}]{src\+Buffer,  }\item[{const \mbox{\hyperlink{namespacek_f_1_1_graphics_acae6e7125bc581806d35e9c1c563f403}{Buffer\+Handle}}}]{dst\+Buffer,  }\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_copy}{Buffer\+Copy}} $\ast$const}]{region\+Begin,  }\item[{const \mbox{\hyperlink{structk_f_1_1_graphics_1_1_buffer_copy}{Buffer\+Copy}} $\ast$const}]{region\+End }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_buffer}{Buffer}} copy command with multiple regions. 
+
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_a2380510f51e4d1db25790dde93530939}\label{classk_f_1_1_graphics_1_1_command_recorder_a2380510f51e4d1db25790dde93530939}} 
 \index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!draw@{draw}}
 \index{draw@{draw}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::draw (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{vertex\+Count,  }\item[{const std\+::uint32\+\_\+t}]{instance\+Count,  }\item[{const std\+::uint32\+\_\+t}]{first\+Vertex,  }\item[{const std\+::uint32\+\_\+t}]{first\+Instance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::draw (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{vertex\+Count,  }\item[{const std\+::uint32\+\_\+t}]{instance\+Count,  }\item[{const std\+::uint32\+\_\+t}]{first\+Vertex = {\ttfamily 0u},  }\item[{const std\+::uint32\+\_\+t}]{first\+Instance = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Draw commands. 
 
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_ad900adc6106b5a99372b18794e0b5d9d}\label{classk_f_1_1_graphics_1_1_command_recorder_ad900adc6106b5a99372b18794e0b5d9d}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_ae65f8a939082954ba9ea4b001d66516b}\label{classk_f_1_1_graphics_1_1_command_recorder_ae65f8a939082954ba9ea4b001d66516b}} 
 \index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!drawIndexed@{drawIndexed}}
 \index{drawIndexed@{drawIndexed}!kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}}
 \doxysubsubsection{\texorpdfstring{drawIndexed()}{drawIndexed()}}
-{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::draw\+Indexed (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{index\+Count,  }\item[{const std\+::uint32\+\_\+t}]{instance\+Count,  }\item[{const std\+::uint32\+\_\+t}]{first\+Index,  }\item[{const std\+::int32\+\_\+t}]{vertex\+Offset,  }\item[{const std\+::uint32\+\_\+t}]{first\+Instance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void k\+F\+::\+Graphics\+::\+Command\+Recorder\+::draw\+Indexed (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{index\+Count,  }\item[{const std\+::uint32\+\_\+t}]{instance\+Count,  }\item[{const std\+::uint32\+\_\+t}]{first\+Index,  }\item[{const std\+::int32\+\_\+t}]{vertex\+Offset = {\ttfamily 0},  }\item[{const std\+::uint32\+\_\+t}]{first\+Instance = {\ttfamily 0u} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Indexed draw commands. 
 
 \mbox{\Hypertarget{classk_f_1_1_graphics_1_1_command_recorder_abc6fa3e6539a09cdfa741e50c042d17c}\label{classk_f_1_1_graphics_1_1_command_recorder_abc6fa3e6539a09cdfa741e50c042d17c}} 
 \index{kF::Graphics::CommandRecorder@{kF::Graphics::CommandRecorder}!endRenderPass@{endRenderPass}}

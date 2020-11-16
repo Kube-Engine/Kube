@@ -1,11 +1,11 @@
 <map id="Kube/Graphics/CommandPool.hpp" name="Kube/Graphics/CommandPool.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="273,5,495,32"/>
-<area shape="rect" id="node2" href="$_vulkan_handle_8hpp.html" title=" " alt="" coords="203,155,330,181"/>
-<area shape="rect" id="node18" href="$_command_recorder_8hpp.html" title=" " alt="" coords="304,80,464,107"/>
-<area shape="rect" id="node20" href="$_command_pool_8ipp.html" title=" " alt="" coords="489,80,618,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="309,5,531,32"/>
+<area shape="rect" id="node2" href="$_vulkan_handle_8hpp.html" title=" " alt="" coords="158,155,285,181"/>
+<area shape="rect" id="node18" href="$_command_recorder_8hpp.html" title=" " alt="" coords="340,80,500,107"/>
+<area shape="rect" id="node22" href="$_command_pool_8ipp.html" title=" " alt="" coords="525,80,654,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,379,59,405"/>
-<area shape="rect" id="node4" href="$_vulkan_8hpp.html" title=" " alt="" coords="361,229,447,256"/>
-<area shape="rect" id="node17" href="$_renderer_object_8hpp.html" title=" " alt="" coords="197,229,336,256"/>
+<area shape="rect" id="node4" href="$_vulkan_8hpp.html" title=" " alt="" coords="366,229,453,256"/>
+<area shape="rect" id="node17" href="$_renderer_object_8hpp.html" title=" " alt="" coords="192,229,331,256"/>
 <area shape="rect" id="node5" href="$_utils_8hpp.html" title=" " alt="" coords="266,304,406,331"/>
 <area shape="rect" id="node13" href="$_vulkan_enums_8hpp.html" title=" " alt="" coords="577,304,703,331"/>
 <area shape="rect" id="node6" title=" " alt="" coords="83,379,165,405"/>
@@ -18,5 +18,7 @@
 <area shape="rect" id="node14" href="$_vulkan_flags_8hpp.html" title=" " alt="" coords="694,379,813,405"/>
 <area shape="rect" id="node15" title=" " alt="" coords="626,453,739,480"/>
 <area shape="rect" id="node16" title=" " alt="" coords="764,453,881,480"/>
-<area shape="rect" id="node19" href="$_render_pass_begin_info_8hpp.html" title=" " alt="" coords="414,155,589,181"/>
+<area shape="rect" id="node19" href="$_render_pass_begin_info_8hpp.html" title=" " alt="" coords="361,155,535,181"/>
+<area shape="rect" id="node20" href="$_buffer_copy_8hpp.html" title=" " alt="" coords="559,155,670,181"/>
+<area shape="rect" id="node21" href="$_assert_8hpp.html" title=" " alt="" coords="539,229,690,256"/>
 </map>

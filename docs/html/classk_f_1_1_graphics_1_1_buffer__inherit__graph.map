@@ -1,5 +1,5 @@
 <map id="kF::Graphics::Buffer" name="kF::Graphics::Buffer">
-<area shape="rect" id="node1" title="GPU Memory buffer abstraction." alt="" coords="89,1099,228,1235"/>
+<area shape="rect" id="node1" title="GPU Memory buffer abstraction." alt="" coords="83,1099,235,1308"/>
 <area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title=" " alt="" coords="66,957,251,1049"/>
 <area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,555,256,779"/>
 <area shape="rect" id="node4" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="111,5,297,229"/>

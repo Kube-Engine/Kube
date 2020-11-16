@@ -14,7 +14,7 @@ An opaque system.
 \item 
 using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} = std\+::type\+\_\+index
 \item 
-using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} $>$
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a8c24244f597e7971428841432dfd524c}{Dependencies}} = std\+::vector$<$ \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} $>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -25,7 +25,7 @@ virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a5938ca9acae90db5638bbe
 \begin{DoxyCompactList}\small\item\em Destruct the system. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7d7fd335df94f5fbecf54ec4ec252b9b}{setup}} (\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_registry}{Registry}}$<$ Entity\+Type $>$ \&registry)=0
 \begin{DoxyCompactList}\small\item\em Setup the system. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_ad777ec9ec60e988ffd8b05bf2f7d2cde}{dependencies}} (void)=0
+virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a8c24244f597e7971428841432dfd524c}{Dependencies}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_ad777ec9ec60e988ffd8b05bf2f7d2cde}{dependencies}} (void)=0
 \begin{DoxyCompactList}\small\item\em Get dependecies of the system. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a277985bfc90b6ab4efc11fa7336bd8fe}{type\+ID}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Get system\textquotesingle{}s Type\+ID. \end{DoxyCompactList}\item 
@@ -55,12 +55,12 @@ class k\+F\+::\+E\+C\+S\+::\+A\+System$<$ Entity\+Type $>$}
 An opaque system. 
 
 \doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}\label{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}} 
+\mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a8c24244f597e7971428841432dfd524c}\label{classk_f_1_1_e_c_s_1_1_a_system_a8c24244f597e7971428841432dfd524c}} 
 \index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!Dependencies@{Dependencies}}
 \index{Dependencies@{Dependencies}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
 \doxysubsubsection{\texorpdfstring{Dependencies}{Dependencies}}
 {\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
-using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} =  \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}}$>$}
+using \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a8c24244f597e7971428841432dfd524c}{Dependencies}} =  std\+::vector$<$\mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}{Type\+ID}}$>$}
 
 \mbox{\Hypertarget{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}\label{classk_f_1_1_e_c_s_1_1_a_system_a7cf4041f81a78e1eff40fc222ebc1133}} 
 \index{kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}!TypeID@{TypeID}}
@@ -102,7 +102,7 @@ Destruct the system.
 \index{dependencies@{dependencies}!kF::ECS::ASystem$<$ EntityType $>$@{kF::ECS::ASystem$<$ EntityType $>$}}
 \doxysubsubsection{\texorpdfstring{dependencies()}{dependencies()}}
 {\footnotesize\ttfamily template$<$k\+F\+::\+E\+C\+S\+::\+Entity\+Requirements Entity\+Type$>$ \\
-virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_aacd6189a8c447edce9e90234f145a2d5}{Dependencies}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::dependencies (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system_a8c24244f597e7971428841432dfd524c}{Dependencies}} \mbox{\hyperlink{classk_f_1_1_e_c_s_1_1_a_system}{k\+F\+::\+E\+C\+S\+::\+A\+System}}$<$ Entity\+Type $>$\+::dependencies (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 

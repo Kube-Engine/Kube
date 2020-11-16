@@ -1,7 +1,8 @@
 <map id="Kube/Graphics/CommandRecorder.hpp" name="Kube/Graphics/CommandRecorder.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="336,5,587,32"/>
 <area shape="rect" id="node2" href="$_vulkan_8hpp.html" title=" " alt="" coords="418,155,505,181"/>
-<area shape="rect" id="node16" href="$_render_pass_begin_info_8hpp.html" title=" " alt="" coords="437,80,611,107"/>
+<area shape="rect" id="node16" href="$_render_pass_begin_info_8hpp.html" title=" " alt="" coords="374,80,549,107"/>
+<area shape="rect" id="node17" href="$_buffer_copy_8hpp.html" title=" " alt="" coords="573,80,683,107"/>
 <area shape="rect" id="node3" href="$_utils_8hpp.html" title=" " alt="" coords="313,229,453,256"/>
 <area shape="rect" id="node12" href="$_vulkan_enums_8hpp.html" title=" " alt="" coords="583,229,710,256"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,304,88,331"/>
@@ -15,4 +16,5 @@
 <area shape="rect" id="node13" href="$_vulkan_flags_8hpp.html" title=" " alt="" coords="695,304,814,331"/>
 <area shape="rect" id="node14" title=" " alt="" coords="627,379,741,405"/>
 <area shape="rect" id="node15" title=" " alt="" coords="765,379,883,405"/>
+<area shape="rect" id="node18" href="$_assert_8hpp.html" title=" " alt="" coords="553,155,703,181"/>
 </map>

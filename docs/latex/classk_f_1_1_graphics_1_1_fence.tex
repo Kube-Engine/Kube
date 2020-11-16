@@ -11,8 +11,7 @@ Abstraction of a low level system fence.
 
 
 
-Inheritance diagram for kF\+::Graphics\+::Fence\+:
-\nopagebreak
+Inheritance diagram for kF\+::Graphics\+::Fence\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +21,7 @@ Inheritance diagram for kF\+::Graphics\+::Fence\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a7c367dc595f9c6c73b84052a62fd2fa6}{Fence}} (void)
+\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a40da05d59cf00ca83a4f6467d278749e}{Fence}} (const bool signaled=\mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Construct the fence. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a3abf89f4ee9bd86fca1a0ff3cf1a06b9}{Fence}} (\mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence}{Fence}} \&\&other) noexcept=default
 \begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
@@ -44,7 +43,7 @@ static void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a244c65cef7161def6a
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317f7c5774}{create\+Fence}} (void)
+void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_ae5af6326ddf55c4428096e3992fcb4b5}{create\+Fence}} (const bool signaled)
 \begin{DoxyCompactList}\small\item\em Create the fence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -52,11 +51,11 @@ void \mbox{\hyperlink{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317
 Abstraction of a low level system fence. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a7c367dc595f9c6c73b84052a62fd2fa6}\label{classk_f_1_1_graphics_1_1_fence_a7c367dc595f9c6c73b84052a62fd2fa6}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a40da05d59cf00ca83a4f6467d278749e}\label{classk_f_1_1_graphics_1_1_fence_a40da05d59cf00ca83a4f6467d278749e}} 
 \index{kF::Graphics::Fence@{kF::Graphics::Fence}!Fence@{Fence}}
 \index{Fence@{Fence}!kF::Graphics::Fence@{kF::Graphics::Fence}}
 \doxysubsubsection{\texorpdfstring{Fence()}{Fence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Fence\+::\+Fence (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily k\+F\+::\+Graphics\+::\+Fence\+::\+Fence (\begin{DoxyParamCaption}\item[{const bool}]{signaled = {\ttfamily \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -85,11 +84,11 @@ Destroy the fence.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317f7c5774}\label{classk_f_1_1_graphics_1_1_fence_a6addabc1b001bf3586cd07317f7c5774}} 
+\mbox{\Hypertarget{classk_f_1_1_graphics_1_1_fence_ae5af6326ddf55c4428096e3992fcb4b5}\label{classk_f_1_1_graphics_1_1_fence_ae5af6326ddf55c4428096e3992fcb4b5}} 
 \index{kF::Graphics::Fence@{kF::Graphics::Fence}!createFence@{createFence}}
 \index{createFence@{createFence}!kF::Graphics::Fence@{kF::Graphics::Fence}}
 \doxysubsubsection{\texorpdfstring{createFence()}{createFence()}}
-{\footnotesize\ttfamily void Graphics\+::\+Fence\+::create\+Fence (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Graphics\+::\+Fence\+::create\+Fence (\begin{DoxyParamCaption}\item[{const bool}]{signaled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

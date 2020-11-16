@@ -103,11 +103,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af98f06bf16f6889f1650fce0fd56f3b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#af98f06bf16f6889f1650fce0fd56f3b5">bindPipeline</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#a09dce4ef3ef378b011ea6fbbf00c5551">PipelineBindPoint</a> pipelineBindPoint, const <a class="el" href="namespacek_f_1_1_graphics.html#af4d848aa3b37ad93f345bae706068304">PipelineHandle</a> pipeline) const noexcept</td></tr>
 <tr class="memdesc:af98f06bf16f6889f1650fce0fd56f3b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a pipeline.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#af98f06bf16f6889f1650fce0fd56f3b5">More...</a><br /></td></tr>
 <tr class="separator:af98f06bf16f6889f1650fce0fd56f3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f395186d74765e24e9dfc3257f6a79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#ad6f395186d74765e24e9dfc3257f6a79">draw</a> (const std::uint32_t vertexCount, const std::uint32_t instanceCount, const std::uint32_t firstVertex, const std::uint32_t firstInstance) const noexcept</td></tr>
-<tr class="memdesc:ad6f395186d74765e24e9dfc3257f6a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw commands.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#ad6f395186d74765e24e9dfc3257f6a79">More...</a><br /></td></tr>
-<tr class="separator:ad6f395186d74765e24e9dfc3257f6a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad900adc6106b5a99372b18794e0b5d9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#ad900adc6106b5a99372b18794e0b5d9d">drawIndexed</a> (const std::uint32_t indexCount, const std::uint32_t instanceCount, const std::uint32_t firstIndex, const std::int32_t vertexOffset, const std::uint32_t firstInstance) const noexcept</td></tr>
-<tr class="separator:ad900adc6106b5a99372b18794e0b5d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2380510f51e4d1db25790dde93530939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#a2380510f51e4d1db25790dde93530939">draw</a> (const std::uint32_t vertexCount, const std::uint32_t instanceCount, const std::uint32_t firstVertex=0u, const std::uint32_t firstInstance=0) const noexcept</td></tr>
+<tr class="memdesc:a2380510f51e4d1db25790dde93530939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw commands.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#a2380510f51e4d1db25790dde93530939">More...</a><br /></td></tr>
+<tr class="separator:a2380510f51e4d1db25790dde93530939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65f8a939082954ba9ea4b001d66516b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#ae65f8a939082954ba9ea4b001d66516b">drawIndexed</a> (const std::uint32_t indexCount, const std::uint32_t instanceCount, const std::uint32_t firstIndex, const std::int32_t vertexOffset=0, const std::uint32_t firstInstance=0u) const noexcept</td></tr>
+<tr class="memdesc:ae65f8a939082954ba9ea4b001d66516b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indexed draw commands.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#ae65f8a939082954ba9ea4b001d66516b">More...</a><br /></td></tr>
+<tr class="separator:ae65f8a939082954ba9ea4b001d66516b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a430c710691afe0f9cff9fa8603e307a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#a430c710691afe0f9cff9fa8603e307a3">bindVertexBuffer</a> (const std::uint32_t binding, const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> buffer, const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> offset=0u) const noexcept</td></tr>
+<tr class="memdesc:a430c710691afe0f9cff9fa8603e307a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a single vertex buffer.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#a430c710691afe0f9cff9fa8603e307a3">More...</a><br /></td></tr>
+<tr class="separator:a430c710691afe0f9cff9fa8603e307a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb074d730a484a943746764f0c4a1b19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#afb074d730a484a943746764f0c4a1b19">bindVertexBuffers</a> (const std::uint32_t firstBinding, const std::uint32_t bindingCount, const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> *const pBuffers, const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> *const pOffsets) const noexcept</td></tr>
+<tr class="memdesc:afb074d730a484a943746764f0c4a1b19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind vertex buffers.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#afb074d730a484a943746764f0c4a1b19">More...</a><br /></td></tr>
+<tr class="separator:afb074d730a484a943746764f0c4a1b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc35c4bf572ef8f6f5a1c1e4fba32cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#a0bc35c4bf572ef8f6f5a1c1e4fba32cf">copyBuffer</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> srcBuffer, const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> dstBuffer, const <a class="el" href="structk_f_1_1_graphics_1_1_buffer_copy.html">BufferCopy</a> &amp;region) const noexcept</td></tr>
+<tr class="memdesc:a0bc35c4bf572ef8f6f5a1c1e4fba32cf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html" title="GPU Memory buffer abstraction.">Buffer</a> copy command with one region.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#a0bc35c4bf572ef8f6f5a1c1e4fba32cf">More...</a><br /></td></tr>
+<tr class="separator:a0bc35c4bf572ef8f6f5a1c1e4fba32cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b353916c0c743c04ab1269a2ed76dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#a6b353916c0c743c04ab1269a2ed76dc0">copyBuffer</a> (const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> srcBuffer, const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> dstBuffer, const <a class="el" href="structk_f_1_1_graphics_1_1_buffer_copy.html">BufferCopy</a> *const regionBegin, const <a class="el" href="structk_f_1_1_graphics_1_1_buffer_copy.html">BufferCopy</a> *const regionEnd) const noexcept</td></tr>
+<tr class="memdesc:a6b353916c0c743c04ab1269a2ed76dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html" title="GPU Memory buffer abstraction.">Buffer</a> copy command with multiple regions.  <a href="classk_f_1_1_graphics_1_1_command_recorder.html#a6b353916c0c743c04ab1269a2ed76dc0">More...</a><br /></td></tr>
+<tr class="separator:a6b353916c0c743c04ab1269a2ed76dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -299,8 +312,196 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad6f395186d74765e24e9dfc3257f6a79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6f395186d74765e24e9dfc3257f6a79">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="a430c710691afe0f9cff9fa8603e307a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430c710691afe0f9cff9fa8603e307a3">&#9670;&nbsp;</a></span>bindVertexBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Graphics::CommandRecorder::bindVertexBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a>&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0u</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind a single vertex buffer. </p>
+
+</div>
+</div>
+<a id="afb074d730a484a943746764f0c4a1b19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb074d730a484a943746764f0c4a1b19">&#9670;&nbsp;</a></span>bindVertexBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Graphics::CommandRecorder::bindVertexBuffers </td>
+          <td>(</td>
+          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramname"><em>firstBinding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramname"><em>bindingCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a> *const&#160;</td>
+          <td class="paramname"><em>pBuffers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#aa1676ff5c662dde92d4856f3d5b79d01">BufferSize</a> *const&#160;</td>
+          <td class="paramname"><em>pOffsets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind vertex buffers. </p>
+
+</div>
+</div>
+<a id="a0bc35c4bf572ef8f6f5a1c1e4fba32cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc35c4bf572ef8f6f5a1c1e4fba32cf">&#9670;&nbsp;</a></span>copyBuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Graphics::CommandRecorder::copyBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a>&#160;</td>
+          <td class="paramname"><em>srcBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a>&#160;</td>
+          <td class="paramname"><em>dstBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structk_f_1_1_graphics_1_1_buffer_copy.html">BufferCopy</a> &amp;&#160;</td>
+          <td class="paramname"><em>region</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html" title="GPU Memory buffer abstraction.">Buffer</a> copy command with one region. </p>
+
+</div>
+</div>
+<a id="a6b353916c0c743c04ab1269a2ed76dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b353916c0c743c04ab1269a2ed76dc0">&#9670;&nbsp;</a></span>copyBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Graphics::CommandRecorder::copyBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a>&#160;</td>
+          <td class="paramname"><em>srcBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f_1_1_graphics.html#acae6e7125bc581806d35e9c1c563f403">BufferHandle</a>&#160;</td>
+          <td class="paramname"><em>dstBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structk_f_1_1_graphics_1_1_buffer_copy.html">BufferCopy</a> *const&#160;</td>
+          <td class="paramname"><em>regionBegin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structk_f_1_1_graphics_1_1_buffer_copy.html">BufferCopy</a> *const&#160;</td>
+          <td class="paramname"><em>regionEnd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classk_f_1_1_graphics_1_1_buffer.html" title="GPU Memory buffer abstraction.">Buffer</a> copy command with multiple regions. </p>
+
+</div>
+</div>
+<a id="a2380510f51e4d1db25790dde93530939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2380510f51e4d1db25790dde93530939">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,13 +525,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::uint32_t&#160;</td>
-          <td class="paramname"><em>firstVertex</em>, </td>
+          <td class="paramname"><em>firstVertex</em> = <code>0u</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::uint32_t&#160;</td>
-          <td class="paramname"><em>firstInstance</em>&#160;</td>
+          <td class="paramname"><em>firstInstance</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -349,8 +550,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad900adc6106b5a99372b18794e0b5d9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad900adc6106b5a99372b18794e0b5d9d">&#9670;&nbsp;</a></span>drawIndexed()</h2>
+<a id="ae65f8a939082954ba9ea4b001d66516b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65f8a939082954ba9ea4b001d66516b">&#9670;&nbsp;</a></span>drawIndexed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,13 +581,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::int32_t&#160;</td>
-          <td class="paramname"><em>vertexOffset</em>, </td>
+          <td class="paramname"><em>vertexOffset</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::uint32_t&#160;</td>
-          <td class="paramname"><em>firstInstance</em>&#160;</td>
+          <td class="paramname"><em>firstInstance</em> = <code>0u</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -400,6 +601,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Indexed draw commands. </p>
 
 </div>
 </div>

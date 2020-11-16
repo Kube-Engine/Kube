@@ -11,7 +11,7 @@
 <area shape="rect" id="node22" href="$structk_f_1_1_graphics_1_1_cached_vulkan_handle.html" title=" " alt="" coords="1767,720,1956,812"/>
 <area shape="rect" id="node2" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="853,292,1099,516"/>
 <area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title="Abstraction of a vulkan handler." alt="" coords="883,5,1069,229"/>
-<area shape="rect" id="node5" href="$classk_f_1_1_graphics_1_1_memory_allocator.html" title=" " alt="" coords="5,957,208,1151"/>
+<area shape="rect" id="node5" href="$classk_f_1_1_graphics_1_1_memory_allocator.html" title=" " alt="" coords="5,942,208,1166"/>
 <area shape="rect" id="node7" href="$classk_f_1_1_graphics_1_1_command_pool.html" title="Command pool that allocates command buffers." alt="" coords="233,898,423,1210"/>
 <area shape="rect" id="node8" href="$classk_f_1_1_graphics_1_1_auto_command_pool.html" title="A command pool that can only create one time submit commands." alt="" coords="93,1296,312,1549"/>
 <area shape="rect" id="node9" href="$classk_f_1_1_graphics_1_1_manual_command_pool.html" title="A command pool that let user manager lifecycle of its commands manually." alt="" coords="337,1296,570,1549"/>
