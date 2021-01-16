@@ -222,6 +222,31 @@ object_benchmarks:
 object_benchmarks_debug:
 	$(MAKE) debug CMAKE_ARGS+="-DKF_OBJECT=TRUE -DKF_BENCHMARKS=TRUE"
 
+# UI
+ui:
+	$(MAKE) release CMAKE_ARGS+=-DKF_UI=TRUE
+
+ui_debug:
+	$(MAKE) debug CMAKE_ARGS+=-DKF_UI=TRUE
+
+ui_tests:
+	$(MAKE) release CMAKE_ARGS+="-DKF_UI=TRUE -DKF_TESTS=TRUE"
+
+run_ui_tests: ui_tests
+	ninja -C $(RELEASE_DIR) test
+
+ui_tests_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_UI=TRUE -DKF_TESTS=TRUE"
+
+run_ui_tests_debug: ui_tests_debug
+	ninja -C $(DEBUG_DIR) test
+
+ui_benchmarks:
+	$(MAKE) release CMAKE_ARGS+="-DKF_UI=TRUE -DKF_BENCHMARKS=TRUE"
+
+ui_benchmarks_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_UI=TRUE -DKF_BENCHMARKS=TRUE"
+
 # Flow
 flow:
 	$(MAKE) release CMAKE_ARGS+=-DKF_FLOW=TRUE
@@ -247,6 +272,57 @@ flow_benchmarks:
 flow_benchmarks_debug:
 	$(MAKE) debug CMAKE_ARGS+="-DKF_FLOW=TRUE -DKF_BENCHMARKS=TRUE"
 
+# Voxel
+voxel:
+	$(MAKE) release CMAKE_ARGS+=-DKF_VOXEL=TRUE
+
+voxel_debug:
+	$(MAKE) debug CMAKE_ARGS+=-DKF_VOXEL=TRUE
+
+voxel_tests:
+	$(MAKE) release CMAKE_ARGS+="-DKF_VOXEL=TRUE -DKF_TESTS=TRUE"
+
+run_voxel_tests: voxel_tests
+	ninja -C $(RELEASE_DIR) test
+
+voxel_tests_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_VOXEL=TRUE -DKF_TESTS=TRUE"
+
+run_voxel_tests_debug: voxel_tests_debug
+	ninja -C $(DEBUG_DIR) test
+
+voxel_benchmarks:
+	$(MAKE) release CMAKE_ARGS+="-DKF_VOXEL=TRUE -DKF_BENCHMARKS=TRUE"
+
+voxel_benchmarks_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_VOXEL=TRUE -DKF_BENCHMARKS=TRUE"
+
+# Widgets
+widgets:
+	$(MAKE) release CMAKE_ARGS+=-DKF_WIDGETS=TRUE
+
+widgets_debug:
+	$(MAKE) debug CMAKE_ARGS+=-DKF_WIDGETS=TRUE
+
+widgets_tests:
+	$(MAKE) release CMAKE_ARGS+="-DKF_WIDGETS=TRUE -DKF_TESTS=TRUE"
+
+run_widgets_tests: widgets_tests
+	ninja -C $(RELEASE_DIR) test
+
+widgets_tests_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_WIDGETS=TRUE -DKF_TESTS=TRUE"
+
+run_widgets_tests_debug: widgets_tests_debug
+	ninja -C $(DEBUG_DIR) test
+
+widgets_benchmarks:
+	$(MAKE) release CMAKE_ARGS+="-DKF_WIDGETS=TRUE -DKF_BENCHMARKS=TRUE"
+
+widgets_benchmarks_debug:
+	$(MAKE) debug CMAKE_ARGS+="-DKF_WIDGETS=TRUE -DKF_BENCHMARKS=TRUE"
+
+
 clean:
 	$(RM) ${RELEASE_DIR}
 	$(RM) ${DEBUG_DIR}
@@ -265,6 +341,8 @@ re: clean all
 	graphics graphics_debug graphics_tests run_graphics_tests graphics_tests_debug run_graphics_tests_debug graphics_benchmarks graphics_benchmarks_debug \
 	interpreter interpreter_debug interpreter_tests run_interpreter_tests interpreter_tests_debug run_interpreter_tests_debug interpreter_benchmarks interpreter_benchmarks_debug \
 	meta meta_debug meta_tests run_meta_tests meta_tests_debug run_meta_tests_debug meta_benchmarks meta_benchmarks_debug \
+	ui ui_debug ui_tests run_ui_tests ui_tests_debug run_ui_tests_debug ui_benchmarks ui_benchmarks_debug \
 	flow flow_debug flow_tests run_flow_tests flow_tests_debug run_flow_tests_debug flow_benchmarks flow_benchmarks_debug \
+	widgets widgets_debug widgets_tests run_widgets_tests widgets_tests_debug run_widgets_tests_debug widgets_benchmarks widgets_benchmarks_debug \
 	clean fclean \
 	re

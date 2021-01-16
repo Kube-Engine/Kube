@@ -28,3 +28,9 @@
 [submodule "External/VulkanMemoryAllocator"]
 	path = External/VulkanMemoryAllocator
 	url = git@github.com:GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
+[submodule "Kube/Widgets"]
+	path = Kube/Widgets
+	url = git@github.com:Kube-Engine/Widgets.git
+[submodule "Kube/Voxel"]
+	path = Kube/Voxel
+	url = git@github.com:Kube-Engine/Voxel.git
