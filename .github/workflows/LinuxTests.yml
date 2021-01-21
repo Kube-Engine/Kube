@@ -1,0 +1,48 @@
+name: Linux Tests
+
+on: [push]
+
+jobs:
+  RunCoverage:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: Install ninja toolchain
+      run: sudo apt-get install -y ninja-build
+
+    - name: Install lcov
+      run: sudo apt-get install -y lcov
+
+    - name: Install google test
+      run: sudo apt-get install -y libgtest-dev
+
+    - name: Install SDL2
+      run: sudo apt-get install -y libsdl2 libsdl2-dev
+
+    - name: Install Vulkan
+      run: sudo apt-get install -y vulkan vulkan-utils
+
+    - name: Build
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+       CC:   gcc-10
+       CXX:  g++-10
+      run: make coverage
+
+    - name: Run tests and coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+       CC:   gcc-10
+       CXX:  g++-10
+      run: make run_coverage
+
+    - name: Upload general coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
