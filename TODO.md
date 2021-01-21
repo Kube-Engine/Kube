@@ -1,12 +1,24 @@
 # Non-exhaustive list of things to do in the engine
 
+## Object
+Proxy for structures that doesn't need
+Better use a single signal for multiple data, ex: (x, y, w, h)
+    -> reduce signal explosion
+
+## KML
+Each property / function is not stored in the object but as a form of a temporary expression that is inlined where used
+A function is an syntaxic sugar for an expression with local variables
+
 ## Core
 
-### Vectors alignments
-All vectors must align malloc to type alignment
+## Allocator functor
+Make allocator for functors such as they are passed either at emplace (destructor is guessed and stored perfectly !)
 
 ### Allocator vectors
 Make allocator vectors
+
+### Vector shrink
+Add vector shrink function && add shrink in meta registerer
 
 ## Meta
 

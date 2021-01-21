@@ -15,3 +15,12 @@ elseif(WIN32)
         /Zc:preprocessor
     )
 endif()
+
+# Enable unit testing
+option(KF_TESTS "Build tests" OFF)
+
+# Enable coverage over unit tests
+option(KF_COVERAGE "Build benchmarks" OFF)
+
+# Enable benchmarking
+option(KF_BENCHMARKS "Build benchmarks" OFF)
