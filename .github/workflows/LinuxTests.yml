@@ -27,7 +27,7 @@ jobs:
       run: sudo apt-get install -y libsdl2-2.0-0 libsdl2-dev
 
     - name: Install Vulkan
-      run: sudo apt-get install -y vulkan vulkan-utils
+      run: sudo apt-get install -y libvulkan-dev libvulkan1 vulkan-utils
 
     - name: Build then run test and coverage
       working-directory: ${{github.workspace}}
