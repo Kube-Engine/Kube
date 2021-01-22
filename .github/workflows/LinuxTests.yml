@@ -22,25 +22,47 @@ jobs:
 
     - name: Install google test
       run: sudo apt-get install -y libgtest-dev
- 
+
     - name: Install SDL2
       run: sudo apt-get install -y libsdl2-2.0-0 libsdl2-dev
 
     - name: Install Vulkan
       run: sudo apt-get install -y libvulkan-dev libvulkan1 mesa-vulkan-drivers vulkan-tools vulkan-utils vulkan-validationlayers vulkan-validationlayers-dev
 
-    - name: Debug Vulkan
-      run: cat /usr/include/vulkan/vulkan_core.h
-
-    - name: Build then run test and coverage
+    - name: Build
       working-directory: ${{github.workspace}}
       shell: bash
       env:
-       CC:   gcc-10
-       CXX:  g++-10
-      run: make run_coverage
+        CC:  gcc-10
+        CXX: g++-10
+      run: make coverage
 
-    - name: Upload general coverage
+    - name: Run Core tests
       working-directory: ${{github.workspace}}
       shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_core_coverage
+
+    - name: Upload Core coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: 29207e4e-75b8-4e46-9159-fe33c66f4cb2
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    - name: Run Meta tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_meta_coverage
+
+    - name: Upload Meta coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: b3b12058-0308-4524-badb-7acd6efdcb89
       run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"

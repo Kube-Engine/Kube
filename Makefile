@@ -59,7 +59,7 @@ run_coverage: coverage
 	lcov --list $(COVERAGE_OUTPUT)
 
 run_coverage_extract: coverage
-	ninja -C $(DEBUG_DIR) test
+	./Debug/Kube$(COVERAGE_EXTRACT)Tests
 	lcov --directory . --capture --no-external --output-file $(COVERAGE_OUTPUT)
 	lcov --remove $(COVERAGE_OUTPUT) "*/Tests/*" -o $(COVERAGE_OUTPUT)
 	lcov --extract $(COVERAGE_OUTPUT) "*/$(COVERAGE_EXTRACT)/*" -o $(COVERAGE_OUTPUT)
