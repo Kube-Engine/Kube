@@ -22,12 +22,15 @@ jobs:
 
     - name: Install google test
       run: sudo apt-get install -y libgtest-dev
-
+ 
     - name: Install SDL2
       run: sudo apt-get install -y libsdl2-2.0-0 libsdl2-dev
 
     - name: Install Vulkan
-      run: sudo apt-get install -y libvulkan-dev libvulkan1 vulkan-utils
+      run: sudo apt-get install -y libvulkan-dev libvulkan1 mesa-vulkan-drivers vulkan-tools vulkan-utils vulkan-validationlayers vulkan-validationlayers-dev
+
+    - name: Debug Vulkan
+      run: cat /usr/include/vulkan/vulkan_core.h
 
     - name: Build then run test and coverage
       working-directory: ${{github.workspace}}
