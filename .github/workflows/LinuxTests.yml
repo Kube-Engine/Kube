@@ -86,20 +86,20 @@ jobs:
       run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
 
     # Graphics
-    - name: Run Graphics tests
-      working-directory: ${{github.workspace}}
-      shell: bash
-      env:
-        CC:  gcc-10
-        CXX: g++-10
-      run: make run_graphics_coverage
+#    - name: Run Graphics tests
+#      working-directory: ${{github.workspace}}
+#      shell: bash
+#      env:
+#        CC:  gcc-10
+#        CXX: g++-10
+#      run: make run_graphics_coverage
 
-    - name: Upload Graphics coverage
-      working-directory: ${{github.workspace}}
-      shell: bash
-      env:
-        CODECOV_TOKEN: d690b2c2-63af-460f-9894-0aba1cbb04c2
-      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+#    - name: Upload Graphics coverage
+#      working-directory: ${{github.workspace}}
+#      shell: bash
+#      env:
+#        CODECOV_TOKEN: d690b2c2-63af-460f-9894-0aba1cbb04c2
+#      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
 
     # Object
     - name: Run Object tests
