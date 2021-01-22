@@ -37,6 +37,7 @@ jobs:
         CXX: g++-10
       run: make coverage
 
+    # Core
     - name: Run Core tests
       working-directory: ${{github.workspace}}
       shell: bash
@@ -52,6 +53,7 @@ jobs:
         CODECOV_TOKEN: 29207e4e-75b8-4e46-9159-fe33c66f4cb2
       run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
 
+    # Meta
     - name: Run Meta tests
       working-directory: ${{github.workspace}}
       shell: bash
@@ -65,4 +67,116 @@ jobs:
       shell: bash
       env:
         CODECOV_TOKEN: b3b12058-0308-4524-badb-7acd6efdcb89
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # Flow
+    - name: Run Flow tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_flow_coverage
+
+    - name: Upload Flow coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: 9a541471-c473-4a50-bf35-e14cdde37f17
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # Graphics
+    - name: Run Graphics tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_graphics_coverage
+
+    - name: Upload Graphics coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: d690b2c2-63af-460f-9894-0aba1cbb04c2
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # Object
+    - name: Run Object tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_object_coverage
+
+    - name: Upload Object coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: 3b9c6003-3a03-4d67-94ef-3f5c83b7fe4d
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # ECS
+    - name: Run ECS tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_ecs_coverage
+
+    - name: Upload ECS coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: cc222968-8029-42cf-a406-5e81ea5510a4
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # UI
+    - name: Run UI tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_ui_coverage
+
+    - name: Upload UI coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: 276f7de0-9d3e-42f5-a3ec-0c7d538d2e19
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # Widgets
+    - name: Run Widgets tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_widgets_coverage
+
+    - name: Upload Widgets coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: bb177756-4e29-4430-847e-fd77628e0b9c
+      run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
+
+    # Voxel
+    - name: Run Voxel tests
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: make run_voxel_coverage
+
+    - name: Upload Voxel coverage
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CODECOV_TOKEN: aaff3517-4197-4207-81e5-0e3915f050fc
       run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Error while collecting coverage reports"
