@@ -67,6 +67,36 @@ jobs:
         COLOR: ${{ steps.CoreTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    # Audio
+    - name: Run Audio tests
+      id: AudioTests
+      if: ${{ always() }}
+      working-directory: ${{github.workspace}}
+      shell: bash
+      env:
+        CC:  gcc-10
+        CXX: g++-10
+      run: |
+        if make run_audio_coverage; then
+          echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
+          echo "::set-output name=Color::green"
+          exit 0
+        else
+          echo "::set-output name=Coverage::Failure"
+          echo "::set-output name=Color::red"
+          exit 1
+        fi
+
+    - name: Upload Audio coverage
+      uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
+      with:
+        NAME: AudioCoverage
+        LABEL: 'Linux'
+        STATUS: ${{ steps.AudioTests.outputs.Coverage }}
+        COLOR: ${{ steps.AudioTests.outputs.Color }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     # Meta
     - name: Run Meta tests
       id: MetaTests

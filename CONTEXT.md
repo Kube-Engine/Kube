@@ -1,46 +1,57 @@
-## Context
+# Context
 This section will explain the context and motivations behind the creation of the Kube framework.
+We will take a tour of the different software development environments before concluding what this framework aims to be good at.
 Please note that everything is **only my opinion** and my perception of the software engine market.
 
-First, I'll share my experience with few development environments in order to understand the different types of options available.
+## Inspiration
+After working for 3 years as a software architect, I was very used to [Qt Quick](https://doc.qt.io/qt-5/qtquick-index.html) and its [QML language](https://doc.qt.io/qt-5/qtqml-index.html) in my daily job. Qt is an awesome framework but have too many weakness on intrusiveness, performance and its wide range of ways to accomplish simple tasks.
+After 3 attempts to re-create a Qt-Quick-like framework ([here is the last](https://github.com/MatthieuMv/openApp)) from scratch, I finally got the necessary metaprogramming, multithreading and data-oriented design skills to make a real-world framework using an interpreted language that would mix perfectly with C++.
+
+# Types of software development environments
 
 ## Middle-level frameworks
 
 These frameworks are often simple, efficient and allow you to control the architecture of your software.
 
 ### **SDL**, for 2D applications and games:
-| Pros | Warning | Cons |
-|-|-|-|
-| Good for beginners and advanced programmers: easy to learn, easy to master | C code is old and not safe but encapsulation is very easy | You code more |
-| Build highly efficient 2D application | | For 3D, you must deal with an API like OpenGL / Vulkan which are way harder to learn and master) |
-| You control the game architecture | | You are left to implement a lot of specific / modern features |
-| No specific IDE is required | | |
-| Runs on anything | | |
-| You don't have to understand everthing (even if you can easily) to get great performances | | |
+| Pros | Cons |
+|-|-|
+| Easy to learn and master | C code isn't safe but still easy to encapsulate |
+| Lowest abstraction cost | You will have to code a lot more to get modern features |
+| No specific IDE / editor | For 3D, you must deal with an API like OpenGL / Vulkan |
+| You control the game architecture | |
+| Very efficient | |
+| You can code on anything that can compile C and run a text editor | |
+| Runs on everything capable of 2D graphics on earth | |
+| Good documentation and quality online contents | |
 
 ## High-level frameworks
 
 These frameworks are often a huge collection of high-level systems and classes in order to make developper's job easier for any aspect of a software.
 
 ### **Qt Quick**, for 2D applications and games:
-| Pros | Warning | Cons |
-|-|-|-|
-| Great to design decent applications *quickly* when you master it: you will encounter so many unexpected behavior from a user perspective that the great productivity Qt Quick has on paper is not so quick in practise | Easy to learn, hard to master | You must understand Qt's back-end concepts to make efficient applications |
-| Intuitive abstractions | Qt creator simplifies development but is not as good as VS Code in coding experience, however, you still can compile easily by hand and use another IDE | For 3D, Qt is way behind other engines like Unreal Engine but you can easily integrate OpenGL / Vulkan code |
-| The documentation is very rich and detailed |  | QML's JavaScript engine is very confusing when dealing with C++ code and classes |
-| Signal / Slot is a great but non optimal way to expose functionalities of a class without adding dependencies | | Signals are abused in Qt: they are everywhere and sometimes you really lack an optimal pattern for a high workload |
-| QML philosophy, as a declarative language, is very good for user interface / inputs and non-critical event binding; it also allow a clear separation between front-end (qml), middle-end (QObject / Q... derived) and back-end (non Qt-derived) |
-| | | The framework is very big in memory space |
-## High level engines
-### **Unreal engine**, for 3D ~~FPS~~ games
-| Pros | Warning | Cons |
-|-|-|-|
-| Good for a beginner who doesn't code | A lot of community guide and tutorials of poor educational quality | Poor documentation compared to Qt |
-| Very good to quickly make FPS / TPS games, with a simple **technical** gameplay architecture (like Fortnite) | | Crazy high-level abstractions overhead |
-| There is an abstraction for every aspect of a ~~shooter~~ game | | The worse team working capabilities: very bad github integration due to the fact that most files are non-human readable |
-| Most easiest way to get and play around with good graphics | | The worse editor: it often crash (for example when deleting a file), it has some counter-intuitive features like a global undo / redo instead of per file; you must re-open the editor each time you want to compile C++ code, which is terrible given the fact that if you don't have a very high-end CPU, it can take few minutes; it also has a terrible linux integration and wasn't stable enough to be usable on my i7-7500U integrated graphics laptop. |
-| | | Not good at all for 2D graphics  |
+| Pros | Cons |
+|-|-|
+| Intuitive abstractions | Easy to mess, hard to master |
+| Abstract most common parts of any software | Abstractions doesn't let much control to the user |
+| You can code in your favorite setup since you can avoid QtCreator to compile | QtCreator is buggy and has a very poor user experience compared to VSCode |
+| Can release for a very large variety of old and new devices | User is forced to adopt event driven development pattern for its architecture |
+| QML is very good to manage user interface / inputs and non-critical event binding; it also allow a clear separation between front-end, middle-end and back-end | Gigabytes of libraries to download |
+| Signal / Slot is a great pattern to expose functionalities of a class without adding dependencies (only for non-critical paths) | QML's JavaScript engine is very confusing when dealing with C++ code and classes |
+| Best documentation and a lot of quality online contents | Few unexpected behaviors from an user perspective that slow you down |
 
+## High level environments
 
+These environments are often the combination of a framework and an editor. The framework tries to abstract as many features related to software / game development.
+
+### **Unreal engine**, for 3D games only
+| Pros | Cons |
+|-|-|
+| Good for beginners who wish to have quick results | Easy to mess, hard to master |
+| Abstract most common parts of any 3D game | Very poor editor user experience: crashs, features poorly implemented (ex: global undo), a pain to get it running on linux and don't expect it to run on low-spec computers |
+| Great cross-platform capabilities | You must use a lot of high-level / high-cost intrusive abstractions and have not much control over the architecture of your game |
+| | Very bad for 2D graphics and UI design compared to SDL and Qt Quick |
 
 # What to conclude ?
+
+TODO
