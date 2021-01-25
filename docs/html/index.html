@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -68,59 +68,61 @@ $(function() {
 <div class="title">Welcome to the Kube framework </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a>Kube framework is a cross-platform C++</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a>Kube is a C++ framework that aims building efficient and stable cross-platform application for 2D and 3D rendering.</p>
+<h1><a class="anchor" id="autotoc_md14"></a>
+What can I do with Kube ?</h1>
+<p>Kube was built with the idea of creating 3D voxel games, however, thanks to its modular architecture, the framework can be used only for either small and large 2D and 3D applications without paying the cost of what you don't need.</p>
 <p><a href="https://kube-engine.github.io/Kube/">Here is the documentation.</a></p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Context</h1>
-<p>This framework has been created to prepare an incoming game studio. The goal of this framework is to establish a stable and powerful work environment for video-game development.</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Philosophy</h2>
+<p>The goal of this framework is to establish a stable and powerful work environment for video-game development.</p>
+<h3><a class="anchor" id="autotoc_md15"></a>
+Philosophy</h3>
 <p>The philosophy keywords of the framework are:</p><ul>
 <li>Rigor: Each class is thinked for a long-term API support with latest technologies used right now and future technologies anticipated</li>
 <li>Explicitness: the codebase is as readable and as explicit as possible</li>
 <li>Data: Because of modern CPU weakness in memory IO, the best way to crank the speed up is though smart data modeling</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Inspiration</h2>
-<p>After working for 3 years as a software architect, I was very used to <a href="https://doc.qt.io/qt-5/qtquick-index.html">Qt Quick</a> and its <a href="https://doc.qt.io/qt-5/qtqml-index.html">QML language</a> in my daily job. Qt is an awesome framework but have too many weakness on intrusiveness, performance and its wide range of ways to accomplish simple tasks. After 3 attempts to re-create a Qt-Quick-like framework (<a href="https://github.com/MatthieuMv/openApp">here is the last</a>) from scratch, I finally got the necessary metaprogramming and skills to make a real-world interpreted language that would mix perfectly with C++.</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Modules</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Modules</h2>
 <p>Kube framework is divided into modules that encapsulate specific parts of the engine. </p><table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Version   </th></tr>
+<th class="markdownTableHeadNone">Name  </th><th class="markdownTableHeadNone">Description  </th><th class="markdownTableHeadNone">Version  </th><th class="markdownTableHeadNone">Test Coverage   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Core</b>  </td><td class="markdownTableBodyNone">Contains over-optimized basic classes used in multiples modules  </td><td class="markdownTableBodyNone">0.2   </td></tr>
+<td class="markdownTableBodyNone"><b>Core</b>  </td><td class="markdownTableBodyNone">Introduce low-level independent classes and language concepts to be used across the whole framework  </td><td class="markdownTableBodyNone">0.0.3  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/CoreCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>Meta</b>  </td><td class="markdownTableBodyNone">Implementation of non-intrusive runtime reflection with supports of signal / slots  </td><td class="markdownTableBodyNone">0.2   </td></tr>
+<td class="markdownTableBodyNone"><b>Flow</b>  </td><td class="markdownTableBodyNone">A high frequency multithreading task scheduler  </td><td class="markdownTableBodyNone">0.0.2  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/FlowCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Flow</b>  </td><td class="markdownTableBodyNone">A high frequency multithreading task scheduler  </td><td class="markdownTableBodyNone">0.1   </td></tr>
+<td class="markdownTableBodyNone"><b>Graphics</b>  </td><td class="markdownTableBodyNone">Low level graphic engine  </td><td class="markdownTableBodyNone">0.0.2  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/GraphicsCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>ECS</b>  </td><td class="markdownTableBodyNone">An Entity Component System designed to fit in Flow's multithreaded task graph  </td><td class="markdownTableBodyNone">0.1   </td></tr>
+<td class="markdownTableBodyNone"><b>Meta</b>  </td><td class="markdownTableBodyNone">Implementation of non-intrusive runtime reflection with supports of signal / slots  </td><td class="markdownTableBodyNone">0.0.3  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/MetaCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Interpreter</b>  </td><td class="markdownTableBodyNone">Kube's language interpreter  </td><td class="markdownTableBodyNone">WIP, early stage   </td></tr>
+<td class="markdownTableBodyNone"><b>ECS</b>  </td><td class="markdownTableBodyNone">An Entity Component System designed to fit in Flow's multithreaded task graph  </td><td class="markdownTableBodyNone">0.0.2  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/ECSCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>App</b>  </td><td class="markdownTableBodyNone">Kube cross-platform window, inputs and events handling  </td><td class="markdownTableBodyNone">WIP, early stage   </td></tr>
+<td class="markdownTableBodyNone"><b>Object</b>  </td><td class="markdownTableBodyNone">A high level base class used to bring reflection, signals and object-trees in any custom class  </td><td class="markdownTableBodyNone">0.0.1  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/ObjectCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Graphics</b>  </td><td class="markdownTableBodyNone">Low level graphic engine  </td><td class="markdownTableBodyNone">0.1   </td></tr>
+<td class="markdownTableBodyNone"><b>Interpreter</b>  </td><td class="markdownTableBodyNone">Kube's language interpreter  </td><td class="markdownTableBodyNone">WIP, early stage  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/InterpreterCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>Voxel</b>  </td><td class="markdownTableBodyNone">A renderer optimized for voxel graphics  </td><td class="markdownTableBodyNone">Not started yiet   </td></tr>
+<td class="markdownTableBodyNone"><b>App</b>  </td><td class="markdownTableBodyNone">Kube cross-platform window, inputs and events handling  </td><td class="markdownTableBodyNone">WIP, early stage  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/AppCoverage" alt="" class="inline"/>   </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Audio</b>  </td><td class="markdownTableBodyNone">A 3D audio scene processor  </td><td class="markdownTableBodyNone">Not started yiet   </td></tr>
+<td class="markdownTableBodyNone"><b>UI</b>  </td><td class="markdownTableBodyNone">A renderer optimized for 2D graphics  </td><td class="markdownTableBodyNone">Not started yiet  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/UICoverage" alt="" class="inline"/>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Voxel</b>  </td><td class="markdownTableBodyNone">A graphics renderer optimized for voxel graphics  </td><td class="markdownTableBodyNone">Not started yiet  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/VoxelCoverage" alt="" class="inline"/>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Widgets</b>  </td><td class="markdownTableBodyNone">High level objects used to abstract most common widgets for UI programming  </td><td class="markdownTableBodyNone">Not started yiet  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/WidgetsCoverage" alt="" class="inline"/>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Audio</b>  </td><td class="markdownTableBodyNone">A 3D audio scene processor  </td><td class="markdownTableBodyNone">Not started yiet  </td><td class="markdownTableBodyNone"><img src="https://byob.yarr.is/Kube-Engine/Kube/AudioCoverage" alt="" class="inline"/>   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md5"></a>
-The Kube language</h1>
+<h2><a class="anchor" id="autotoc_md17"></a>
+The Kube language</h2>
 <p>The Kube language can be seen like a remaster of the <a href="https://doc.qt.io/qt-5/qtqml-index.html">QML language</a> language implemented in raw C++ for a much better code integration.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Quick feature showcase</h2>
+<h3><a class="anchor" id="autotoc_md18"></a>
+Quick feature showcase</h3>
 <div class="fragment"><div class="line">import kF.IO</div>
 <div class="line"> </div>
 <div class="line">import My.ObjectLib as My</div>
 <div class="line"> </div>
-<div class="line">Rectangle {</div>
+<div class="line">Rectangle: background {</div>
 <div class="line">    // Register a function with both known and unknown</div>
 <div class="line">    function someFunc(var x, bool state): print(x, &quot; -&gt; &quot;, state)</div>
-<div class="line"> </div>
-<div class="line">    id: background</div>
 <div class="line"> </div>
 <div class="line">    // Special properties to position item relatively to parent</div>
 <div class="line">    relativeSize: 0.5, 0.5</div>
@@ -135,15 +137,12 @@ Quick feature showcase</h2>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Direct call to C++ custom constructor</div>
-<div class="line">    My.CustomObject(&quot;red&quot;, 34) {</div>
+<div class="line">    My.CustomObject(&quot;red&quot;, 34): custom {</div>
 <div class="line">        property bool someProperty: bool(false)</div>
-<div class="line"> </div>
-<div class="line">        id: custom</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    // Empty parenthesis are optionals when no arguments are needed</div>
-<div class="line">    MouseArea() {</div>
-<div class="line">        id: ms</div>
+<div class="line">    MouseArea(): ms {</div>
 <div class="line">        anchors.fill: parent</div>
 <div class="line"> </div>
 <div class="line">        on released: {</div>
@@ -154,13 +153,17 @@ Quick feature showcase</h2>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
-Dependencies</h1>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
+Dependencies</h2>
 <p>The framework aims not to have unecessary dependencies</p><ul>
 <li>C++ 20 for the meta-programming part</li>
-<li>SDL2 for the window, user inputs and audio part</li>
-<li>Vulkan </li>
+<li><a href="https://www.libsdl.org/">SDL2</a> for the window, user inputs and audio part</li>
+<li><a href="https://www.khronos.org/vulkan/">Vulkan</a> for GPU manipulation</li>
+<li><a href="https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator">Vulkan memory allocator</a> to allocate GPU memory</li>
 </ul>
+<h2><a class="anchor" id="autotoc_md20"></a>
+More about Kube's background</h2>
+<p>If you want to know more about why and how this engine was created, please take a look at <a href="https://github.com/Kube-Engine/Kube/blob/master/CONTEXT.md">this context page</a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

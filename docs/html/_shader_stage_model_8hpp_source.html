@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -90,7 +90,7 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        : VkPipelineShaderStageCreateInfo {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            sType: VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO,</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            pNext: <span class="keyword">nullptr</span>,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            flags: <a class="code" href="namespacek_f_1_1_graphics.html#a7b8e4f28ad5a97e719cba5c8a26a6423">ToFlags</a>(<a class="code" href="namespacek_f_1_1_graphics.html#abb6ca6c789837c209fcfc7f5b992e975a89daa665d7ccdf5a7f48efd5cc6eb015">ShaderStageCreateFlags::None</a>),</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            flags: <a class="code" href="namespacek_f_1_1_graphics.html#a7b8e4f28ad5a97e719cba5c8a26a6423">ToFlags</a>(<a class="code" href="namespacek_f_1_1_graphics.html#ad36c337b007814a58a674b70db1110baa6adf97f83acf6453d4a6a4b1070f3754">ShaderStageCreateFlags::None</a>),</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            stage: <span class="keyword">static_cast&lt;</span>VkShaderStageFlagBits<span class="keyword">&gt;</span>(stage_),</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            module: module_,</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            pName: pName_,</div>
@@ -105,6 +105,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructk_f_1_1_graphics_1_1_shader_stage_model_html_a6d44eb342a4c1a30313dddec0ac9917c"><div class="ttname"><a href="structk_f_1_1_graphics_1_1_shader_stage_model.html#a6d44eb342a4c1a30313dddec0ac9917c">kF::Graphics::ShaderStageModel::operator=</a></div><div class="ttdeci">ShaderStageModel &amp; operator=(ShaderStageModel &amp;&amp;other) noexcept=default</div></div>
 <div class="ttc" id="anamespacek_f_1_1_graphics_html_a85241fcce073fe5ce4b53350ec1b30ec"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#a85241fcce073fe5ce4b53350ec1b30ec">kF::Graphics::ShaderModuleHandle</a></div><div class="ttdeci">VkShaderModule ShaderModuleHandle</div><div class="ttdoc">Shader module.</div><div class="ttdef"><b>Definition:</b> Vulkan.hpp:171</div></div>
+<div class="ttc" id="anamespacek_f_1_1_graphics_html_ad36c337b007814a58a674b70db1110baa6adf97f83acf6453d4a6a4b1070f3754"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#ad36c337b007814a58a674b70db1110baa6adf97f83acf6453d4a6a4b1070f3754">kF::Graphics::ShaderStageCreateFlags::None</a></div><div class="ttdeci">@ None</div></div>
 <div class="ttc" id="astructk_f_1_1_graphics_1_1_shader_stage_model_html_a5cb10f5cc83d19783feb7d5b86c2aae5"><div class="ttname"><a href="structk_f_1_1_graphics_1_1_shader_stage_model.html#a5cb10f5cc83d19783feb7d5b86c2aae5">kF::Graphics::ShaderStageModel::ShaderStageModel</a></div><div class="ttdeci">ShaderStageModel(const ShaderStageFlags stage_, const ShaderModuleHandle module_, const char *const pName_=&quot;main&quot;, const ShaderSpecializationTable *const pSpecializationInfo_=nullptr) noexcept</div><div class="ttdoc">Initialize constructor.</div><div class="ttdef"><b>Definition:</b> ShaderStageModel.hpp:19</div></div>
 <div class="ttc" id="astructk_f_1_1_graphics_1_1_shader_stage_model_html_a62c53ca3be45887192cbf8155b8c7244"><div class="ttname"><a href="structk_f_1_1_graphics_1_1_shader_stage_model.html#a62c53ca3be45887192cbf8155b8c7244">kF::Graphics::ShaderStageModel::operator=</a></div><div class="ttdeci">ShaderStageModel &amp; operator=(const ShaderStageModel &amp;other) noexcept=default</div></div>
 <div class="ttc" id="anamespacek_f_1_1_graphics_html"><div class="ttname"><a href="namespacek_f_1_1_graphics.html">kF::Graphics</a></div><div class="ttdef"><b>Definition:</b> BackendWindow.hpp:11</div></div>
@@ -112,9 +113,8 @@ $(function() {
 <div class="ttc" id="anamespacek_f_1_1_graphics_html_a7b8e4f28ad5a97e719cba5c8a26a6423"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#a7b8e4f28ad5a97e719cba5c8a26a6423">kF::Graphics::ToFlags</a></div><div class="ttdeci">constexpr Flags ToFlags(const FlagsType value) noexcept</div><div class="ttdef"><b>Definition:</b> VulkanFlags.hpp:23</div></div>
 <div class="ttc" id="anamespacek_f_1_1_graphics_html_acbc834c92719c7baa24d4dc99746f2a1"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#acbc834c92719c7baa24d4dc99746f2a1">kF::Graphics::ShaderSpecializationTable</a></div><div class="ttdeci">VkSpecializationInfo ShaderSpecializationTable</div><div class="ttdoc">Shader specialization info.</div><div class="ttdef"><b>Definition:</b> Vulkan.hpp:174</div></div>
 <div class="ttc" id="a_vulkan_8hpp_html"><div class="ttname"><a href="_vulkan_8hpp.html">Vulkan.hpp</a></div></div>
-<div class="ttc" id="anamespacek_f_1_1_graphics_html_a772ceb42c249e57aaa45b196f835b989"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#a772ceb42c249e57aaa45b196f835b989">kF::Graphics::ShaderStageFlags</a></div><div class="ttdeci">ShaderStageFlags</div><div class="ttdoc">Shader stage flags.</div><div class="ttdef"><b>Definition:</b> VulkanFlags.hpp:221</div></div>
+<div class="ttc" id="anamespacek_f_1_1_graphics_html_a772ceb42c249e57aaa45b196f835b989"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#a772ceb42c249e57aaa45b196f835b989">kF::Graphics::ShaderStageFlags</a></div><div class="ttdeci">ShaderStageFlags</div><div class="ttdoc">Shader stage flags.</div><div class="ttdef"><b>Definition:</b> VulkanFlags.hpp:174</div></div>
 <div class="ttc" id="astructk_f_1_1_graphics_1_1_shader_stage_model_html_a68d9b658de37d7f4215627913fb44231"><div class="ttname"><a href="structk_f_1_1_graphics_1_1_shader_stage_model.html#a68d9b658de37d7f4215627913fb44231">kF::Graphics::ShaderStageModel::ShaderStageModel</a></div><div class="ttdeci">ShaderStageModel(const ShaderStageModel &amp;other) noexcept=default</div><div class="ttdoc">POD semantics.</div></div>
-<div class="ttc" id="anamespacek_f_1_1_graphics_html_abb6ca6c789837c209fcfc7f5b992e975a89daa665d7ccdf5a7f48efd5cc6eb015"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#abb6ca6c789837c209fcfc7f5b992e975a89daa665d7ccdf5a7f48efd5cc6eb015">kF::Graphics::None</a></div><div class="ttdeci">@ None</div><div class="ttdef"><b>Definition:</b> VulkanFlags.hpp:40</div></div>
 <div class="ttc" id="astructk_f_1_1_graphics_1_1_shader_stage_model_html_a87ffc28b42ff3fe2e4a2bf7fa24e634d"><div class="ttname"><a href="structk_f_1_1_graphics_1_1_shader_stage_model.html#a87ffc28b42ff3fe2e4a2bf7fa24e634d">kF::Graphics::ShaderStageModel::ShaderStageModel</a></div><div class="ttdeci">ShaderStageModel(ShaderStageModel &amp;&amp;other) noexcept=default</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

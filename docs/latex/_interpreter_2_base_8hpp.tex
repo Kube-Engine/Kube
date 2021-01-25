@@ -1,0 +1,98 @@
+\hypertarget{_interpreter_2_base_8hpp}{}\doxysection{Kube/\+Interpreter/\+Base.hpp File Reference}
+\label{_interpreter_2_base_8hpp}\index{Kube/Interpreter/Base.hpp@{Kube/Interpreter/Base.hpp}}
+{\ttfamily \#include $<$Kube/\+Core/\+Utils.\+hpp$>$}\newline
+Include dependency graph for Base.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_interpreter_2_base_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{_interpreter_2_base_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_lang}{k\+F\+::\+Lang}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{k\+F\+::\+Lang\+::\+Byte\+Index}} = std\+::uint32\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_a28070becbb0ce1a0ccd163ce6e4b5663}{k\+F\+::\+Lang\+::\+File\+Index}} = std\+::uint16\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_aeba62f45cf31964112897e45d9f6a9ce}{k\+F\+::\+Lang\+::\+Token}} = std\+::uint32\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627c}{k\+F\+::\+Lang\+::\+Token\+Type}} \+: std\+::uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca72d6d7a1885885bb55a565fd1070581a}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Import}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9bd81329febf6efe22788e03ddeaf0af}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Class}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5ad234cb2cde4266195252a23ca7d84e}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Property}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca86408593c34af77fdd90df932f8b5261}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Function}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa4ecfc70574394990cf17bd83df499f7}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Event}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caf3b92fc0f97f128818cfb44321376bca}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Assignment}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa1a6657be79cc0fc1e9b23b9e108f043}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Expression}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9d980a8ffb775019ce1a8954ca3458c2}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Unary\+Operator}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5251fb21d7c26300b3a281976e839bec}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Binary\+Operator}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca2af6fd9ec72aee193ee7ffe09638e08f}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Statement}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca509820290d57f333403f490dde7316f4}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Local}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca49ee3087348e8d44e1feda1917443987}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Name}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cac3755e61202abd74da5885d2e9c9160e}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Call}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca638c240f35f6743e311d21c79595d9d8}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Emit}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cacb17869fe51048b5a5c4c6106551a255}{k\+F\+::\+Lang\+::\+Token\+Type\+::\+Constant}}
+ \}
+\begin{DoxyCompactList}\small\item\em Command set of contexts (class parsing) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2cae}{k\+F\+::\+Lang\+::\+Instruction\+Type}} \+: std\+::uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea87c80963dae5cd099e3a377e4d314b20}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Unary\+Minus}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea0416e8280b5e83605fba79f378830498}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Binary\+Addition}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea719fae448bc7280aac97b578b3e1f029}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Binary\+Substraction}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caead8efcfb194624c6f35a18c834ac6a39c}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Binary\+Multiplication}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea42fdbeb4900fa11aa21a1c98138a3f17}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Binary\+Division}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaf21350336215949c9ee060f5670c871a}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Binary\+Modulo}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacd7b7da750b3c476625ae14d34e5356a}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Assignment\+Addition}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea6d4c1c6780421a0939d069e42b570995}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Assignment\+Substraction}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8edcae6d375a70677ed91a3d9211f361}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Assignment\+Multiplication}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea4636695fcd72f7522845bfde3d2c9081}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Assignment\+Division}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea1d9383d6cc309b0e9777ef99866032ee}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Assignment\+Modulo}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea509820290d57f333403f490dde7316f4}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Local}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea74accfde3d3f8e8a27c326eba229d16c}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+L\+Value}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac756c8b5e0e5217b000321397a40be7e}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+R\+Value}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeab04b18f810857f7a6c2d6a81ba0121a6}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+L\+Value\+Local}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea48e7c4f94c0e6d2c5d1aa25449fa9ed5}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+R\+Value\+Local}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacb17869fe51048b5a5c4c6106551a255}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Constant}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabf733d8a933c1601697f364223fc7ecb}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Access}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaedbb1228089e177596c76dadc5d27245}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Derefence}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8b753320a1cbbd1582256dc8e5c754de}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Dereference\+Access}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac3755e61202abd74da5885d2e9c9160e}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Call}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea638c240f35f6743e311d21c79595d9d8}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Emit}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac55582518cba2c464f29f5bae1c68def}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Get}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea5d5b78699e57104f2fa03bbdf7b9197b}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Set}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeadacdb83ade6c4e8878717e206175dfd8}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Branch}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabbc155fb2b111bf61c4f5ff892915e6b}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+Switch}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea3cddbb8f43a4e074e2c2ce3e8622f43e}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+While}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea39e61d57e9209611edd4f884e9e47c11}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+For}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaaea410c500ab4bbdc966c58e6bfe2302}{k\+F\+::\+Lang\+::\+Instruction\+Type\+::\+For\+Each}}
+ \}
+\begin{DoxyCompactList}\small\item\em Instruction set of expressions. \end{DoxyCompactList}\end{DoxyCompactItemize}

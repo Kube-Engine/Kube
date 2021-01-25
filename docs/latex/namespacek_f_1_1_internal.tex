@@ -1,0 +1,105 @@
+\hypertarget{namespacek_f_1_1_internal}{}\doxysection{kF\+::Internal Namespace Reference}
+\label{namespacek_f_1_1_internal}\index{kF::Internal@{kF::Internal}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{To\+Const\+Reference}} = std\+::conditional\+\_\+t$<$ std\+::is\+\_\+pointer\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$, const std\+::add\+\_\+const\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& $>$
+\begin{DoxyCompactList}\small\item\em Transform a type to a constant reference (add constant tag to pointers) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Template\+Type $>$ }\\\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_1_1_internal_a41c39a4ec21dec5eee44f98a93030c3a}{Get\+Template\+Specialized\+Name}} (\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} hash)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the name of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Types\+Tuple , std\+::size\+\_\+t Index = 0ul$>$ }\\\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_1_1_internal_acc50d3bf6390006adad08fe8e0ffb57e}{Get\+Template\+Type\+Names}} (\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} hash)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the sum of parameter template type names of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Vars\+Tuple, std\+::size\+\_\+t Index = 0ul$>$ }\\\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{namespacek_f_1_1_internal_a40c2e6d12ef8bb180a45895b36f89740}{Get\+Template\+Variable\+Names}} (\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} hash)
+\begin{DoxyCompactList}\small\item\em Helper used internall to query the sum of parameter template variable value names of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Template\+Type $>$ }\\std\+::string \mbox{\hyperlink{namespacek_f_1_1_internal_a7968ca965c3e473c772de75570da2efa}{Get\+Template\+Specialized\+Literals}} (const std\+::string\+\_\+view \&literal)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the name of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Types\+Tuple , std\+::size\+\_\+t Index = 0ul$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_internal_a74bc39bea41655ae499b768012588a6f}{Get\+Template\+Type\+Literals}} (std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the template type literal name of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Vars\+Tuple, std\+::size\+\_\+t Index = 0ul$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_internal_a7cdf21ba885462f78db55aab7fc98cb0}{Get\+Template\+Variable\+Literals}} (std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the template variable literal name of a specialized template type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}\label{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}} 
+\index{kF::Internal@{kF::Internal}!ToConstReference@{ToConstReference}}
+\index{ToConstReference@{ToConstReference}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{ToConstReference}{ToConstReference}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{k\+F\+::\+Internal\+::\+To\+Const\+Reference}} = typedef std\+::conditional\+\_\+t$<$ std\+::is\+\_\+pointer\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$, const std\+::add\+\_\+const\+\_\+t$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ \&, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& $>$}
+
+
+
+Transform a type to a constant reference (add constant tag to pointers) 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_internal_a7968ca965c3e473c772de75570da2efa}\label{namespacek_f_1_1_internal_a7968ca965c3e473c772de75570da2efa}} 
+\index{kF::Internal@{kF::Internal}!GetTemplateSpecializedLiterals@{GetTemplateSpecializedLiterals}}
+\index{GetTemplateSpecializedLiterals@{GetTemplateSpecializedLiterals}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{GetTemplateSpecializedLiterals()}{GetTemplateSpecializedLiterals()}}
+{\footnotesize\ttfamily template$<$typename Template\+Type $>$ \\
+std\+::string k\+F\+::\+Internal\+::\+Get\+Template\+Specialized\+Literals (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{literal }\end{DoxyParamCaption})}
+
+
+
+Helper used internally to query the name of a specialized template type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_internal_a41c39a4ec21dec5eee44f98a93030c3a}\label{namespacek_f_1_1_internal_a41c39a4ec21dec5eee44f98a93030c3a}} 
+\index{kF::Internal@{kF::Internal}!GetTemplateSpecializedName@{GetTemplateSpecializedName}}
+\index{GetTemplateSpecializedName@{GetTemplateSpecializedName}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{GetTemplateSpecializedName()}{GetTemplateSpecializedName()}}
+{\footnotesize\ttfamily template$<$typename Template\+Type $>$ \\
+\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Internal\+::\+Get\+Template\+Specialized\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{hash }\end{DoxyParamCaption})}
+
+
+
+Helper used internally to query the name of a specialized template type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_internal_a74bc39bea41655ae499b768012588a6f}\label{namespacek_f_1_1_internal_a74bc39bea41655ae499b768012588a6f}} 
+\index{kF::Internal@{kF::Internal}!GetTemplateTypeLiterals@{GetTemplateTypeLiterals}}
+\index{GetTemplateTypeLiterals@{GetTemplateTypeLiterals}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{GetTemplateTypeLiterals()}{GetTemplateTypeLiterals()}}
+{\footnotesize\ttfamily template$<$typename Types\+Tuple , std\+::size\+\_\+t Index = 0ul$>$ \\
+void k\+F\+::\+Internal\+::\+Get\+Template\+Type\+Literals (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Helper used internally to query the template type literal name of a specialized template type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_internal_acc50d3bf6390006adad08fe8e0ffb57e}\label{namespacek_f_1_1_internal_acc50d3bf6390006adad08fe8e0ffb57e}} 
+\index{kF::Internal@{kF::Internal}!GetTemplateTypeNames@{GetTemplateTypeNames}}
+\index{GetTemplateTypeNames@{GetTemplateTypeNames}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{GetTemplateTypeNames()}{GetTemplateTypeNames()}}
+{\footnotesize\ttfamily template$<$typename Types\+Tuple , std\+::size\+\_\+t Index = 0ul$>$ \\
+\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Internal\+::\+Get\+Template\+Type\+Names (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{hash }\end{DoxyParamCaption})}
+
+
+
+Helper used internally to query the sum of parameter template type names of a specialized template type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_internal_a7cdf21ba885462f78db55aab7fc98cb0}\label{namespacek_f_1_1_internal_a7cdf21ba885462f78db55aab7fc98cb0}} 
+\index{kF::Internal@{kF::Internal}!GetTemplateVariableLiterals@{GetTemplateVariableLiterals}}
+\index{GetTemplateVariableLiterals@{GetTemplateVariableLiterals}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{GetTemplateVariableLiterals()}{GetTemplateVariableLiterals()}}
+{\footnotesize\ttfamily template$<$auto Vars\+Tuple, std\+::size\+\_\+t Index = 0ul$>$ \\
+void k\+F\+::\+Internal\+::\+Get\+Template\+Variable\+Literals (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Helper used internally to query the template variable literal name of a specialized template type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_internal_a40c2e6d12ef8bb180a45895b36f89740}\label{namespacek_f_1_1_internal_a40c2e6d12ef8bb180a45895b36f89740}} 
+\index{kF::Internal@{kF::Internal}!GetTemplateVariableNames@{GetTemplateVariableNames}}
+\index{GetTemplateVariableNames@{GetTemplateVariableNames}!kF::Internal@{kF::Internal}}
+\doxysubsubsection{\texorpdfstring{GetTemplateVariableNames()}{GetTemplateVariableNames()}}
+{\footnotesize\ttfamily template$<$auto Vars\+Tuple, std\+::size\+\_\+t Index = 0ul$>$ \\
+\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Internal\+::\+Get\+Template\+Variable\+Names (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{hash }\end{DoxyParamCaption})}
+
+
+
+Helper used internall to query the sum of parameter template variable value names of a specialized template type. 
+

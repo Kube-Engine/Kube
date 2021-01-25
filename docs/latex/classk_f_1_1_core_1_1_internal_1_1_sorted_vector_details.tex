@@ -1,0 +1,519 @@
+\hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{}\doxysection{kF\+::Core\+::Internal\+::Sorted\+Vector\+Details$<$ Base, Type, Range, Compare, Is\+Small\+Optimized $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+
+
+{\ttfamily \#include $<$Sorted\+Vector\+Details.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9c95c5594be7a812ae7adda379522ddd}{Details\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$
+\begin{DoxyCompactList}\small\item\em Type alias to \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} = typename \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9e862e84e29e7e8da88905c69c377d4a}{Details\+Base\+::\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Iterator detectors. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6e218fbfd3aba7b278d14d0c7e6b5281}{Const\+Iterator}} = typename \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a7b839c067c1ca6b1f99f59e820fd62c5}{Details\+Base\+::\+Const\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa918136fac8f368c1061af9cdf6ff575}{Sorted\+Vector\+Details}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9db2f86f8eac58667caa9fbc7e96edd4}{Sorted\+Vector\+Details}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \&other) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa361faff6ec930de5f5d33e2037e2c29}{Sorted\+Vector\+Details}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a88a90149fc6f9a4c3476b76aa9414850}{Sorted\+Vector\+Details}} (const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Resize with default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_af24054828d102a6a0297da39f5deb5f3}{Sorted\+Vector\+Details}} (const Range count, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std
+\begin{DoxyCompactList}\small\item\em Resize with copy constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a829edc342805b034b6ea6ac6ccf77ade}{Sorted\+Vector\+Details}} (Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\begin{DoxyCompactList}\small\item\em Resize map constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a81616d7cfc6484d9ff08234200d164dd}{Sorted\+Vector\+Details}} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&init) noexcept((std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$))
+\begin{DoxyCompactList}\small\item\em Initializer list constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a7940261d860208072e9b28956e7c92d6}{$\sim$\+Sorted\+Vector\+Details}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)=default
+\begin{DoxyCompactList}\small\item\em Release the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a84b972ccb55c66b196c5f83926687f4f}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \&other) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a7411a9d8c9ee2080f16869256b044978}{operator=}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_adf77e2dad97eaa785839073e82e0a718}{push}} (Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Push an element into the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ad2a98546c9ae8955ce67585e9897df21}{insert\+Default}} (const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a range of default initialized values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4050838296e19768d1360bbc913f10ae}{insert\+Copy}} (const Range count, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value)
+\begin{DoxyCompactList}\small\item\em Insert a range of copies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a64337c7ac56421a9ffd1a40f9a9138c4}{insert}} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&init)
+\begin{DoxyCompactList}\small\item\em Insert an initializer list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6eaaa203d274a28250464f181a2adbb0}{insert}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value)
+\begin{DoxyCompactList}\small\item\em Insert an value by copy, returning its iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4adff8da8b584735cdc32258733344a1}{insert}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&value)
+\begin{DoxyCompactList}\small\item\em Insert an value by move, returning its iterator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa2fb274cdd71005d53d55fb8278a4f60}{insert}} (Input\+Iterator from, Input\+Iterator to)
+\begin{DoxyCompactList}\small\item\em Insert a range of element by iterating over iterators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a8b5fc1429092cc45c17c071809d70d1f}{insert}} (Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\begin{DoxyCompactList}\small\item\em Insert a range of element by using a map function over iterators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab023df48ca21c94e93e6d2c9c37c7ecd}{resize}} (Input\+Iterator from, Input\+Iterator to)
+\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a48638ea360d574a5bc4b681cd8faa4bf}{resize}} (Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\void resize(const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a0a77f6f44ef9b212056fc9c01c0008f2}{resize}} (Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\begin{DoxyCompactList}\small\item\em Resize the vector using default constructor to initialize each element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_add377205dab6f86420f6d802ce2e60d3}{sort}} (void)
+\begin{DoxyCompactList}\small\item\em Sort the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a3b17b4875d1c689d8b940d0a4b327489}{find\+Sorted\+Placement}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+invocable\+\_\+v$<$ Compare \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& $>$)
+\begin{DoxyCompactList}\small\item\em Finds where to insert an element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6e218fbfd3aba7b278d14d0c7e6b5281}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a1779f36259139af3b7259982e7b96265}{find\+Sorted\+Placement}} (const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) const noexcept(std\+::is\+\_\+nothrow\+\_\+invocable\+\_\+v$<$ Compare \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a89a9e9fd553c69aff96004c0d84290d9}{push}} (Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... $>$ \&\&(std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Reimplemented functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a97a02c852e8150cb8be53b8a80bf5118}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a value by copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab122c007b6203317232b11ab95211f53}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&value) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a value by move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a2f16ad1a1ab968f17b686d84db7f3038}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&init) noexcept((std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert an initializer list. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab1e0b5059fc94f469eecb616ff651c6e}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, Input\+Iterator from, Input\+Iterator to) noexcept((\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator}{k\+F\+::\+Core\+::\+Utils\+::\+Is\+Move\+Iterator}}$<$ Input\+Iterator $>$\+::Value ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$) \&\&(std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Insert a range of element by iterating over iterators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a382243eac5af9d098f069ddaafeaa8d3}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\begin{DoxyCompactList}\small\item\em Insert a range of element by using a map function over iterators. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_af0bcb76f456d3f93000d38998e571ad6}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, Input\+Iterator from, Input\+Iterator to) noexcept(\mbox{\hyperlink{_utils_8hpp_ac151f42074dd177d7bee208295f9da1a}{nothrow\+\_\+forward\+\_\+iterator\+\_\+constructible}}(Input\+Iterator) \&\&\mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \&\&\mbox{\hyperlink{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}{nothrow\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
+\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a86429f974b410e80b800fe2996a2843a}{insert}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} pos, Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a0c0f3e7bd2d64987d221185afe370594}{resize}} (Input\+Iterator from, Input\+Iterator to, Map \&\&map)
+\begin{DoxyCompactList}\small\item\em Resize the vector using a map function with input iterators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ }\\void resize(const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void resize(const Range count, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&(std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ae4143c558700e44d5c3394a8548d7c9f}{resize}} (Input\+Iterator from, Input\+Iterator to) noexcept((\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator}{k\+F\+::\+Core\+::\+Utils\+::\+Is\+Move\+Iterator}}$<$ Input\+Iterator $>$\+::Value ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$) \&\&(std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$)
+\begin{DoxyCompactList}\small\item\em Resize the vector using default constructor to initialize each element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6e218fbfd3aba7b278d14d0c7e6b5281}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6e218fbfd3aba7b278d14d0c7e6b5281}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6e218fbfd3aba7b278d14d0c7e6b5281}{Const\+Iterator}} =  typename \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a7b839c067c1ca6b1f99f59e820fd62c5}{Details\+Base\+::\+Const\+Iterator}}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9c95c5594be7a812ae7adda379522ddd}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9c95c5594be7a812ae7adda379522ddd}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!DetailsBase@{DetailsBase}}
+\index{DetailsBase@{DetailsBase}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{DetailsBase}{DetailsBase}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9c95c5594be7a812ae7adda379522ddd}{Details\+Base}} =  \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}$<$Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized$>$}
+
+
+
+Type alias to \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} =  typename \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details_a9e862e84e29e7e8da88905c69c377d4a}{Details\+Base\+::\+Iterator}}}
+
+
+
+Iterator detectors. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa918136fac8f368c1061af9cdf6ff575}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa918136fac8f368c1061af9cdf6ff575}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9db2f86f8eac58667caa9fbc7e96edd4}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a9db2f86f8eac58667caa9fbc7e96edd4}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa361faff6ec930de5f5d33e2037e2c29}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa361faff6ec930de5f5d33e2037e2c29}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a88a90149fc6f9a4c3476b76aa9414850}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a88a90149fc6f9a4c3476b76aa9414850}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{const Range}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize with default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_af24054828d102a6a0297da39f5deb5f3}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_af24054828d102a6a0297da39f5deb5f3}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{const Range}]{count,  }\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Resize with copy constructor. 
+
+Resize constructor \mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a829edc342805b034b6ea6ac6ccf77ade}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a829edc342805b034b6ea6ac6ccf77ade}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{from,  }\item[{Input\+Iterator}]{to,  }\item[{Map \&\&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resize map constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a81616d7cfc6484d9ff08234200d164dd}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a81616d7cfc6484d9ff08234200d164dd}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!SortedVectorDetails@{SortedVectorDetails}}
+\index{SortedVectorDetails@{SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{SortedVectorDetails()}{SortedVectorDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Initializer list constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a7940261d860208072e9b28956e7c92d6}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a7940261d860208072e9b28956e7c92d6}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!````~SortedVectorDetails@{$\sim$SortedVectorDetails}}
+\index{````~SortedVectorDetails@{$\sim$SortedVectorDetails}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SortedVectorDetails()}{~SortedVectorDetails()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Release the vector. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a1779f36259139af3b7259982e7b96265}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a1779f36259139af3b7259982e7b96265}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!findSortedPlacement@{findSortedPlacement}}
+\index{findSortedPlacement@{findSortedPlacement}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{findSortedPlacement()}{findSortedPlacement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6e218fbfd3aba7b278d14d0c7e6b5281}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::find\+Sorted\+Placement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a3b17b4875d1c689d8b940d0a4b327489}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a3b17b4875d1c689d8b940d0a4b327489}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!findSortedPlacement@{findSortedPlacement}}
+\index{findSortedPlacement@{findSortedPlacement}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{findSortedPlacement()}{findSortedPlacement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::find\+Sorted\+Placement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+Finds where to insert an element. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6eaaa203d274a28250464f181a2adbb0}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a6eaaa203d274a28250464f181a2adbb0}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert an value by copy, returning its iterator. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa2fb274cdd71005d53d55fb8278a4f60}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_aa2fb274cdd71005d53d55fb8278a4f60}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{from,  }\item[{Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert a range of element by iterating over iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a8b5fc1429092cc45c17c071809d70d1f}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a8b5fc1429092cc45c17c071809d70d1f}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{from,  }\item[{Input\+Iterator}]{to,  }\item[{Map \&\&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert a range of element by using a map function over iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a97a02c852e8150cb8be53b8a80bf5118}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a97a02c852e8150cb8be53b8a80bf5118}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Insert a value by copy. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab1e0b5059fc94f469eecb616ff651c6e}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab1e0b5059fc94f469eecb616ff651c6e}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{std\+::input\+\_\+iterator}]{Input\+Iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Insert a range of element by iterating over iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_af0bcb76f456d3f93000d38998e571ad6}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_af0bcb76f456d3f93000d38998e571ad6}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized$>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{std\+::input\+\_\+iterator}]{Input\+Iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a382243eac5af9d098f069ddaafeaa8d3}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a382243eac5af9d098f069ddaafeaa8d3}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{std\+::input\+\_\+iterator}]{Input\+Iterator,  }\item[{typename Map}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Insert a range of element by using a map function over iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a86429f974b410e80b800fe2996a2843a}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a86429f974b410e80b800fe2996a2843a}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized$>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{std\+::input\+\_\+iterator}]{Input\+Iterator,  }\item[{typename Map}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a2f16ad1a1ab968f17b686d84db7f3038}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a2f16ad1a1ab968f17b686d84db7f3038}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Insert an initializer list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab122c007b6203317232b11ab95211f53}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab122c007b6203317232b11ab95211f53}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::insert\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Insert a value by move. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a64337c7ac56421a9ffd1a40f9a9138c4}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a64337c7ac56421a9ffd1a40f9a9138c4}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\&}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert an initializer list. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4adff8da8b584735cdc32258733344a1}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4adff8da8b584735cdc32258733344a1}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insert@{insert}}
+\index{insert@{insert}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4acd55313b614f32236701c6958cba10}{Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert an value by move, returning its iterator. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4050838296e19768d1360bbc913f10ae}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a4050838296e19768d1360bbc913f10ae}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insertCopy@{insertCopy}}
+\index{insertCopy@{insertCopy}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insertCopy()}{insertCopy()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert\+Copy (\begin{DoxyParamCaption}\item[{const Range}]{count,  }\item[{const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert a range of copies. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ad2a98546c9ae8955ce67585e9897df21}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ad2a98546c9ae8955ce67585e9897df21}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!insertDefault@{insertDefault}}
+\index{insertDefault@{insertDefault}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{insertDefault()}{insertDefault()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::insert\+Default (\begin{DoxyParamCaption}\item[{const Range}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Insert a range of default initialized values. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a84b972ccb55c66b196c5f83926687f4f}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a84b972ccb55c66b196c5f83926687f4f}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a7411a9d8c9ee2080f16869256b044978}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a7411a9d8c9ee2080f16869256b044978}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_adf77e2dad97eaa785839073e82e0a718}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_adf77e2dad97eaa785839073e82e0a718}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!push@{push}}
+\index{push@{push}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::push (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Push an element into the vector. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}} \mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a89a9e9fd553c69aff96004c0d84290d9}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a89a9e9fd553c69aff96004c0d84290d9}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!push@{push}}
+\index{push@{push}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Args... $>$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::push (\begin{DoxyParamCaption}\item[{typename ...}]{Args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Reimplemented functions. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab023df48ca21c94e93e6d2c9c37c7ecd}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ab023df48ca21c94e93e6d2c9c37c7ecd}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::resize (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{from,  }\item[{Input\+Iterator}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a0c0f3e7bd2d64987d221185afe370594}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a0c0f3e7bd2d64987d221185afe370594}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::resize (\begin{DoxyParamCaption}\item[{std\+::input\+\_\+iterator}]{Input\+Iterator,  }\item[{typename Map}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Resize the vector using a map function with input iterators. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a48638ea360d574a5bc4b681cd8faa4bf}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a48638ea360d574a5bc4b681cd8faa4bf}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::resize (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{from,  }\item[{Input\+Iterator}]{to,  }\item[{Map \&\&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_add377205dab6f86420f6d802ce2e60d3}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_add377205dab6f86420f6d802ce2e60d3}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!sort@{sort}}
+\index{sort@{sort}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::sort (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sort the vector. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ae4143c558700e44d5c3394a8548d7c9f}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_ae4143c558700e44d5c3394a8548d7c9f}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{resize}{resize}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator$>$ \\
+void resize (const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\& std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void resize (const Range count, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \&value) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\& ( std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+: std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+: std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+: std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ ) \&\& std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Is\+Small\+Optimized $>$\+::resize(Input\+Iterator from, Input\+Iterator to) noexcept((\mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_is_move_iterator}{k\+F\+::\+Core\+::\+Utils\+::\+Is\+Move\+Iterator}}$<$ Input\+Iterator $>$\+::Value ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Input\+Iterator $>$) \&\&( std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+: std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+: std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ $>$) \&\&std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) (\begin{DoxyParamCaption}\item[{std\+::input\+\_\+iterator}]{Input\+Iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Resize the vector using default constructor to initialize each element. 
+
+Resize the vector by copying given element
+
+Resize the vector with input iterators \mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a0a77f6f44ef9b212056fc9c01c0008f2}\label{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details_a0a77f6f44ef9b212056fc9c01c0008f2}} 
+\index{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}!resize@{resize}}
+\index{resize@{resize}!kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$@{kF::Core::Internal::SortedVectorDetails$<$ Base, Type, Range, Compare, IsSmallOptimized $>$}}
+\doxysubsubsection{\texorpdfstring{resize}{resize}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range, typename Compare , bool Is\+Small\+Optimized$>$ \\
+template$<$std\+::input\+\_\+iterator Input\+Iterator, typename Map $>$ \\
+void resize (const Range count) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&\& std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$) \mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{k\+F\+::\+Core\+::\+Internal\+::\+Sorted\+Vector\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, Is\+Small\+Optimized $>$\+::resize(Input\+Iterator from, Input\+Iterator to, Map \&\&map)\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Resize the vector using default constructor to initialize each element. 
+
+Resize the vector by copying given element
+
+Resize the vector with input iterators
+
+Resize the vector using a map function with input iterators 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_sorted_vector_details_8hpp}{Sorted\+Vector\+Details.\+hpp}}\item 
+Kube/\+Core/\mbox{\hyperlink{_sorted_vector_details_8ipp}{Sorted\+Vector\+Details.\+ipp}}\end{DoxyCompactItemize}

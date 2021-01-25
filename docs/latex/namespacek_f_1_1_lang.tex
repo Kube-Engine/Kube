@@ -1,0 +1,334 @@
+\hypertarget{namespacek_f_1_1_lang}{}\doxysection{kF\+::Lang Namespace Reference}
+\label{namespacek_f_1_1_lang}\index{kF::Lang@{kF::Lang}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_lang_1_1_binary_instruction}{Binary\+Instruction}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression}{Expression}}
+\begin{DoxyCompactList}\small\item\em An expression is an opaque accesser that implement execution of expressions You should call \textquotesingle{}Construct\textquotesingle{} static member function to create a pointer to expression. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_lang_1_1_lexer}{Lexer}}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_lang_1_1_unary_instruction}{Unary\+Instruction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{Byte\+Index}} = std\+::uint32\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_a28070becbb0ce1a0ccd163ce6e4b5663}{File\+Index}} = std\+::uint16\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_aeba62f45cf31964112897e45d9f6a9ce}{Token}} = std\+::uint32\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}{Expression\+Ptr}} = \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression}{Expression}} $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627c}{Token\+Type}} \+: std\+::uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca72d6d7a1885885bb55a565fd1070581a}{Token\+Type\+::\+Import}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9bd81329febf6efe22788e03ddeaf0af}{Token\+Type\+::\+Class}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5ad234cb2cde4266195252a23ca7d84e}{Token\+Type\+::\+Property}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca86408593c34af77fdd90df932f8b5261}{Token\+Type\+::\+Function}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa4ecfc70574394990cf17bd83df499f7}{Token\+Type\+::\+Event}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caf3b92fc0f97f128818cfb44321376bca}{Token\+Type\+::\+Assignment}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa1a6657be79cc0fc1e9b23b9e108f043}{Token\+Type\+::\+Expression}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9d980a8ffb775019ce1a8954ca3458c2}{Token\+Type\+::\+Unary\+Operator}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5251fb21d7c26300b3a281976e839bec}{Token\+Type\+::\+Binary\+Operator}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca2af6fd9ec72aee193ee7ffe09638e08f}{Token\+Type\+::\+Statement}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca509820290d57f333403f490dde7316f4}{Token\+Type\+::\+Local}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca49ee3087348e8d44e1feda1917443987}{Token\+Type\+::\+Name}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cac3755e61202abd74da5885d2e9c9160e}{Token\+Type\+::\+Call}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca638c240f35f6743e311d21c79595d9d8}{Token\+Type\+::\+Emit}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cacb17869fe51048b5a5c4c6106551a255}{Token\+Type\+::\+Constant}}
+ \}
+\begin{DoxyCompactList}\small\item\em Command set of contexts (class parsing) \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2cae}{Instruction\+Type}} \+: std\+::uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea87c80963dae5cd099e3a377e4d314b20}{Instruction\+Type\+::\+Unary\+Minus}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea0416e8280b5e83605fba79f378830498}{Instruction\+Type\+::\+Binary\+Addition}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea719fae448bc7280aac97b578b3e1f029}{Instruction\+Type\+::\+Binary\+Substraction}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caead8efcfb194624c6f35a18c834ac6a39c}{Instruction\+Type\+::\+Binary\+Multiplication}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea42fdbeb4900fa11aa21a1c98138a3f17}{Instruction\+Type\+::\+Binary\+Division}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaf21350336215949c9ee060f5670c871a}{Instruction\+Type\+::\+Binary\+Modulo}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacd7b7da750b3c476625ae14d34e5356a}{Instruction\+Type\+::\+Assignment\+Addition}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea6d4c1c6780421a0939d069e42b570995}{Instruction\+Type\+::\+Assignment\+Substraction}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8edcae6d375a70677ed91a3d9211f361}{Instruction\+Type\+::\+Assignment\+Multiplication}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea4636695fcd72f7522845bfde3d2c9081}{Instruction\+Type\+::\+Assignment\+Division}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea1d9383d6cc309b0e9777ef99866032ee}{Instruction\+Type\+::\+Assignment\+Modulo}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea509820290d57f333403f490dde7316f4}{Instruction\+Type\+::\+Local}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea74accfde3d3f8e8a27c326eba229d16c}{Instruction\+Type\+::\+L\+Value}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac756c8b5e0e5217b000321397a40be7e}{Instruction\+Type\+::\+R\+Value}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeab04b18f810857f7a6c2d6a81ba0121a6}{Instruction\+Type\+::\+L\+Value\+Local}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea48e7c4f94c0e6d2c5d1aa25449fa9ed5}{Instruction\+Type\+::\+R\+Value\+Local}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacb17869fe51048b5a5c4c6106551a255}{Instruction\+Type\+::\+Constant}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabf733d8a933c1601697f364223fc7ecb}{Instruction\+Type\+::\+Access}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaedbb1228089e177596c76dadc5d27245}{Instruction\+Type\+::\+Derefence}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8b753320a1cbbd1582256dc8e5c754de}{Instruction\+Type\+::\+Dereference\+Access}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac3755e61202abd74da5885d2e9c9160e}{Instruction\+Type\+::\+Call}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea638c240f35f6743e311d21c79595d9d8}{Instruction\+Type\+::\+Emit}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac55582518cba2c464f29f5bae1c68def}{Instruction\+Type\+::\+Get}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea5d5b78699e57104f2fa03bbdf7b9197b}{Instruction\+Type\+::\+Set}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeadacdb83ade6c4e8878717e206175dfd8}{Instruction\+Type\+::\+Branch}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabbc155fb2b111bf61c4f5ff892915e6b}{Instruction\+Type\+::\+Switch}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea3cddbb8f43a4e074e2c2ce3e8622f43e}{Instruction\+Type\+::\+While}}, 
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea39e61d57e9209611edd4f884e9e47c11}{Instruction\+Type\+::\+For}}, 
+\newline
+\mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaaea410c500ab4bbdc966c58e6bfe2302}{Instruction\+Type\+::\+For\+Each}}
+ \}
+\begin{DoxyCompactList}\small\item\em Instruction set of expressions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@ Author\+: Matthieu Moinvaziri @ Description\+: Abstract Syntax Tree
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Base
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression}{Expression}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}}
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Specialized Nodes
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_lang_1_1_lexer}{Lexer}} 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}\label{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}} 
+\index{kF::Lang@{kF::Lang}!ByteIndex@{ByteIndex}}
+\index{ByteIndex@{ByteIndex}!kF::Lang@{kF::Lang}}
+\doxysubsubsection{\texorpdfstring{ByteIndex}{ByteIndex}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{k\+F\+::\+Lang\+::\+Byte\+Index}} = typedef std\+::uint32\+\_\+t}
+
+\mbox{\Hypertarget{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}\label{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}} 
+\index{kF::Lang@{kF::Lang}!ExpressionPtr@{ExpressionPtr}}
+\index{ExpressionPtr@{ExpressionPtr}!kF::Lang@{kF::Lang}}
+\doxysubsubsection{\texorpdfstring{ExpressionPtr}{ExpressionPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}{k\+F\+::\+Lang\+::\+Expression\+Ptr}} = typedef \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression}{Expression}} $\ast$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_lang_a28070becbb0ce1a0ccd163ce6e4b5663}\label{namespacek_f_1_1_lang_a28070becbb0ce1a0ccd163ce6e4b5663}} 
+\index{kF::Lang@{kF::Lang}!FileIndex@{FileIndex}}
+\index{FileIndex@{FileIndex}!kF::Lang@{kF::Lang}}
+\doxysubsubsection{\texorpdfstring{FileIndex}{FileIndex}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_lang_a28070becbb0ce1a0ccd163ce6e4b5663}{k\+F\+::\+Lang\+::\+File\+Index}} = typedef std\+::uint16\+\_\+t}
+
+\mbox{\Hypertarget{namespacek_f_1_1_lang_aeba62f45cf31964112897e45d9f6a9ce}\label{namespacek_f_1_1_lang_aeba62f45cf31964112897e45d9f6a9ce}} 
+\index{kF::Lang@{kF::Lang}!Token@{Token}}
+\index{Token@{Token}!kF::Lang@{kF::Lang}}
+\doxysubsubsection{\texorpdfstring{Token}{Token}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_lang_aeba62f45cf31964112897e45d9f6a9ce}{k\+F\+::\+Lang\+::\+Token}} = typedef std\+::uint32\+\_\+t}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2cae}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2cae}} 
+\index{kF::Lang@{kF::Lang}!InstructionType@{InstructionType}}
+\index{InstructionType@{InstructionType}!kF::Lang@{kF::Lang}}
+\doxysubsubsection{\texorpdfstring{InstructionType}{InstructionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2cae}{k\+F\+::\+Lang\+::\+Instruction\+Type}} \+: std\+::uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+\mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}} set of expressions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnaryMinus@{UnaryMinus}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!UnaryMinus@{UnaryMinus}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea87c80963dae5cd099e3a377e4d314b20}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea87c80963dae5cd099e3a377e4d314b20}} 
+Unary\+Minus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BinaryAddition@{BinaryAddition}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!BinaryAddition@{BinaryAddition}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea0416e8280b5e83605fba79f378830498}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea0416e8280b5e83605fba79f378830498}} 
+Binary\+Addition&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BinarySubstraction@{BinarySubstraction}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!BinarySubstraction@{BinarySubstraction}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea719fae448bc7280aac97b578b3e1f029}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea719fae448bc7280aac97b578b3e1f029}} 
+Binary\+Substraction&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BinaryMultiplication@{BinaryMultiplication}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!BinaryMultiplication@{BinaryMultiplication}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caead8efcfb194624c6f35a18c834ac6a39c}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caead8efcfb194624c6f35a18c834ac6a39c}} 
+Binary\+Multiplication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BinaryDivision@{BinaryDivision}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!BinaryDivision@{BinaryDivision}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea42fdbeb4900fa11aa21a1c98138a3f17}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea42fdbeb4900fa11aa21a1c98138a3f17}} 
+Binary\+Division&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BinaryModulo@{BinaryModulo}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!BinaryModulo@{BinaryModulo}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaf21350336215949c9ee060f5670c871a}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaf21350336215949c9ee060f5670c871a}} 
+Binary\+Modulo&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AssignmentAddition@{AssignmentAddition}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!AssignmentAddition@{AssignmentAddition}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacd7b7da750b3c476625ae14d34e5356a}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacd7b7da750b3c476625ae14d34e5356a}} 
+Assignment\+Addition&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AssignmentSubstraction@{AssignmentSubstraction}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!AssignmentSubstraction@{AssignmentSubstraction}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea6d4c1c6780421a0939d069e42b570995}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea6d4c1c6780421a0939d069e42b570995}} 
+Assignment\+Substraction&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AssignmentMultiplication@{AssignmentMultiplication}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!AssignmentMultiplication@{AssignmentMultiplication}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8edcae6d375a70677ed91a3d9211f361}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8edcae6d375a70677ed91a3d9211f361}} 
+Assignment\+Multiplication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AssignmentDivision@{AssignmentDivision}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!AssignmentDivision@{AssignmentDivision}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea4636695fcd72f7522845bfde3d2c9081}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea4636695fcd72f7522845bfde3d2c9081}} 
+Assignment\+Division&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AssignmentModulo@{AssignmentModulo}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!AssignmentModulo@{AssignmentModulo}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea1d9383d6cc309b0e9777ef99866032ee}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea1d9383d6cc309b0e9777ef99866032ee}} 
+Assignment\+Modulo&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Local@{Local}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Local@{Local}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea509820290d57f333403f490dde7316f4}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea509820290d57f333403f490dde7316f4}} 
+Local&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LValue@{LValue}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!LValue@{LValue}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea74accfde3d3f8e8a27c326eba229d16c}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea74accfde3d3f8e8a27c326eba229d16c}} 
+L\+Value&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RValue@{RValue}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!RValue@{RValue}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac756c8b5e0e5217b000321397a40be7e}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac756c8b5e0e5217b000321397a40be7e}} 
+R\+Value&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LValueLocal@{LValueLocal}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!LValueLocal@{LValueLocal}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeab04b18f810857f7a6c2d6a81ba0121a6}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeab04b18f810857f7a6c2d6a81ba0121a6}} 
+L\+Value\+Local&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RValueLocal@{RValueLocal}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!RValueLocal@{RValueLocal}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea48e7c4f94c0e6d2c5d1aa25449fa9ed5}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea48e7c4f94c0e6d2c5d1aa25449fa9ed5}} 
+R\+Value\+Local&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Constant@{Constant}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Constant@{Constant}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacb17869fe51048b5a5c4c6106551a255}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeacb17869fe51048b5a5c4c6106551a255}} 
+Constant&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Access@{Access}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Access@{Access}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabf733d8a933c1601697f364223fc7ecb}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabf733d8a933c1601697f364223fc7ecb}} 
+Access&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Derefence@{Derefence}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Derefence@{Derefence}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaedbb1228089e177596c76dadc5d27245}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaedbb1228089e177596c76dadc5d27245}} 
+Derefence&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DereferenceAccess@{DereferenceAccess}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!DereferenceAccess@{DereferenceAccess}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8b753320a1cbbd1582256dc8e5c754de}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea8b753320a1cbbd1582256dc8e5c754de}} 
+Dereference\+Access&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Call@{Call}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Call@{Call}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac3755e61202abd74da5885d2e9c9160e}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac3755e61202abd74da5885d2e9c9160e}} 
+Call&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Emit@{Emit}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Emit@{Emit}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea638c240f35f6743e311d21c79595d9d8}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea638c240f35f6743e311d21c79595d9d8}} 
+Emit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Get@{Get}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Get@{Get}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac55582518cba2c464f29f5bae1c68def}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeac55582518cba2c464f29f5bae1c68def}} 
+Get&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Set@{Set}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Set@{Set}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea5d5b78699e57104f2fa03bbdf7b9197b}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea5d5b78699e57104f2fa03bbdf7b9197b}} 
+Set&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Branch@{Branch}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Branch@{Branch}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeadacdb83ade6c4e8878717e206175dfd8}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeadacdb83ade6c4e8878717e206175dfd8}} 
+Branch&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Switch@{Switch}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Switch@{Switch}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabbc155fb2b111bf61c4f5ff892915e6b}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeabbc155fb2b111bf61c4f5ff892915e6b}} 
+Switch&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{While@{While}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!While@{While}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea3cddbb8f43a4e074e2c2ce3e8622f43e}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea3cddbb8f43a4e074e2c2ce3e8622f43e}} 
+While&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{For@{For}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!For@{For}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea39e61d57e9209611edd4f884e9e47c11}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caea39e61d57e9209611edd4f884e9e47c11}} 
+For&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ForEach@{ForEach}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!ForEach@{ForEach}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaaea410c500ab4bbdc966c58e6bfe2302}\label{namespacek_f_1_1_lang_a941b9df5883b56a03be7e5a4c85e2caeaaea410c500ab4bbdc966c58e6bfe2302}} 
+For\+Each&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627c}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627c}} 
+\index{kF::Lang@{kF::Lang}!TokenType@{TokenType}}
+\index{TokenType@{TokenType}!kF::Lang@{kF::Lang}}
+\doxysubsubsection{\texorpdfstring{TokenType}{TokenType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627c}{k\+F\+::\+Lang\+::\+Token\+Type}} \+: std\+::uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Command set of contexts (class parsing) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Import@{Import}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Import@{Import}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca72d6d7a1885885bb55a565fd1070581a}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca72d6d7a1885885bb55a565fd1070581a}} 
+Import&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Class@{Class}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Class@{Class}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9bd81329febf6efe22788e03ddeaf0af}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9bd81329febf6efe22788e03ddeaf0af}} 
+Class&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Property@{Property}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Property@{Property}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5ad234cb2cde4266195252a23ca7d84e}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5ad234cb2cde4266195252a23ca7d84e}} 
+Property&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Function@{Function}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Function@{Function}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca86408593c34af77fdd90df932f8b5261}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca86408593c34af77fdd90df932f8b5261}} 
+Function&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Event@{Event}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Event@{Event}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa4ecfc70574394990cf17bd83df499f7}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa4ecfc70574394990cf17bd83df499f7}} 
+Event&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Assignment@{Assignment}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Assignment@{Assignment}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caf3b92fc0f97f128818cfb44321376bca}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caf3b92fc0f97f128818cfb44321376bca}} 
+Assignment&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Expression@{Expression}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Expression@{Expression}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa1a6657be79cc0fc1e9b23b9e108f043}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627caa1a6657be79cc0fc1e9b23b9e108f043}} 
+Expression&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UnaryOperator@{UnaryOperator}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!UnaryOperator@{UnaryOperator}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9d980a8ffb775019ce1a8954ca3458c2}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca9d980a8ffb775019ce1a8954ca3458c2}} 
+Unary\+Operator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BinaryOperator@{BinaryOperator}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!BinaryOperator@{BinaryOperator}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5251fb21d7c26300b3a281976e839bec}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca5251fb21d7c26300b3a281976e839bec}} 
+Binary\+Operator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Statement@{Statement}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Statement@{Statement}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca2af6fd9ec72aee193ee7ffe09638e08f}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca2af6fd9ec72aee193ee7ffe09638e08f}} 
+Statement&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Local@{Local}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Local@{Local}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca509820290d57f333403f490dde7316f4}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca509820290d57f333403f490dde7316f4}} 
+Local&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Name@{Name}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Name@{Name}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca49ee3087348e8d44e1feda1917443987}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca49ee3087348e8d44e1feda1917443987}} 
+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Call@{Call}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Call@{Call}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cac3755e61202abd74da5885d2e9c9160e}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cac3755e61202abd74da5885d2e9c9160e}} 
+Call&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Emit@{Emit}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Emit@{Emit}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca638c240f35f6743e311d21c79595d9d8}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627ca638c240f35f6743e311d21c79595d9d8}} 
+Emit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Constant@{Constant}!kF::Lang@{kF::Lang}}\index{kF::Lang@{kF::Lang}!Constant@{Constant}}}\mbox{\Hypertarget{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cacb17869fe51048b5a5c4c6106551a255}\label{namespacek_f_1_1_lang_a2e249137ed8e6b703ae61926f9a7627cacb17869fe51048b5a5c4c6106551a255}} 
+Constant&\\
+\hline
+
+\end{DoxyEnumFields}

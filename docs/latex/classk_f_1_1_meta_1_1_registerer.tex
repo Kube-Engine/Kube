@@ -1,0 +1,95 @@
+\hypertarget{classk_f_1_1_meta_1_1_registerer}{}\doxysection{kF\+::Meta\+::Registerer Class Reference}
+\label{classk_f_1_1_meta_1_1_registerer}\index{kF::Meta::Registerer@{kF::Meta::Registerer}}
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}} is used to store types that need their meta data to be registered.  
+
+
+
+
+{\ttfamily \#include $<$Registerer.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_registerer_1_1_cache}{Cache}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer_a8d88f8b06ef17883a2a523ca4e7d7121}{Register\+Metadata}} (void)
+\begin{DoxyCompactList}\small\item\em Register every type registered with \textquotesingle{}\mbox{\hyperlink{classk_f_1_1_meta_1_1_register_later}{Register\+Later}}\textquotesingle{} methods. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , typename Functor $>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer_aa1e3d48449a918c541e3242ea78ba9e7}{Register\+Later}} (Functor \&\&functor)
+\begin{DoxyCompactList}\small\item\em Store a functor to be called at class registration time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer_a15f13e635fa27289c5f40da631f5b179}{Registerer}} (void)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}} is a singleton. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer_aa48b60f4ac18d0926449d722c7dab69e}{$\sim$\+Registerer}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structk_f_1_1_meta_1_1_registerer_1_1_cache}{Cache}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer_a3d0eacf454b270f0843bde3ab2bafa07}{\+\_\+\+Cache}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}} is used to store types that need their meta data to be registered. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_registerer_a15f13e635fa27289c5f40da631f5b179}\label{classk_f_1_1_meta_1_1_registerer_a15f13e635fa27289c5f40da631f5b179}} 
+\index{kF::Meta::Registerer@{kF::Meta::Registerer}!Registerer@{Registerer}}
+\index{Registerer@{Registerer}!kF::Meta::Registerer@{kF::Meta::Registerer}}
+\doxysubsubsection{\texorpdfstring{Registerer()}{Registerer()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Registerer\+::\+Registerer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}} is a singleton. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_registerer_aa48b60f4ac18d0926449d722c7dab69e}\label{classk_f_1_1_meta_1_1_registerer_aa48b60f4ac18d0926449d722c7dab69e}} 
+\index{kF::Meta::Registerer@{kF::Meta::Registerer}!````~Registerer@{$\sim$Registerer}}
+\index{````~Registerer@{$\sim$Registerer}!kF::Meta::Registerer@{kF::Meta::Registerer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Registerer()}{~Registerer()}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Registerer\+::$\sim$\+Registerer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_registerer_aa1e3d48449a918c541e3242ea78ba9e7}\label{classk_f_1_1_meta_1_1_registerer_aa1e3d48449a918c541e3242ea78ba9e7}} 
+\index{kF::Meta::Registerer@{kF::Meta::Registerer}!RegisterLater@{RegisterLater}}
+\index{RegisterLater@{RegisterLater}!kF::Meta::Registerer@{kF::Meta::Registerer}}
+\doxysubsubsection{\texorpdfstring{RegisterLater()}{RegisterLater()}}
+{\footnotesize\ttfamily template$<$typename Type , typename Functor $>$ \\
+static void k\+F\+::\+Meta\+::\+Registerer\+::\+Register\+Later (\begin{DoxyParamCaption}\item[{Functor \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Store a functor to be called at class registration time. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_registerer_a8d88f8b06ef17883a2a523ca4e7d7121}\label{classk_f_1_1_meta_1_1_registerer_a8d88f8b06ef17883a2a523ca4e7d7121}} 
+\index{kF::Meta::Registerer@{kF::Meta::Registerer}!RegisterMetadata@{RegisterMetadata}}
+\index{RegisterMetadata@{RegisterMetadata}!kF::Meta::Registerer@{kF::Meta::Registerer}}
+\doxysubsubsection{\texorpdfstring{RegisterMetadata()}{RegisterMetadata()}}
+{\footnotesize\ttfamily static void k\+F\+::\+Meta\+::\+Registerer\+::\+Register\+Metadata (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Register every type registered with \textquotesingle{}\mbox{\hyperlink{classk_f_1_1_meta_1_1_register_later}{Register\+Later}}\textquotesingle{} methods. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_registerer_a3d0eacf454b270f0843bde3ab2bafa07}\label{classk_f_1_1_meta_1_1_registerer_a3d0eacf454b270f0843bde3ab2bafa07}} 
+\index{kF::Meta::Registerer@{kF::Meta::Registerer}!\_Cache@{\_Cache}}
+\index{\_Cache@{\_Cache}!kF::Meta::Registerer@{kF::Meta::Registerer}}
+\doxysubsubsection{\texorpdfstring{\_Cache}{\_Cache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_meta_1_1_registerer_1_1_cache}{Cache}} k\+F\+::\+Meta\+::\+Registerer\+::\+\_\+\+Cache\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Meta/\mbox{\hyperlink{_registerer_8hpp}{Registerer.\+hpp}}\end{DoxyCompactItemize}

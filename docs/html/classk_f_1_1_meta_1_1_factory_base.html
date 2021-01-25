@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kube Framework: kF::Meta::FactoryBase&lt; Type &gt; Class Template Reference</title>
+<title>Kube Framework: kF::Meta::FactoryBase&lt; RegisteredType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -71,122 +71,151 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classk_f_1_1_meta_1_1_factory_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">kF::Meta::FactoryBase&lt; Type &gt; Class Template Reference</div>  </div>
+<div class="title">kF::Meta::FactoryBase&lt; RegisteredType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classk_f_1_1_meta_1_1_factory.html">Factory</a> is used to instantiate meta-data of a given type.  
+<p>Factory is used to instantiate meta-data of a given type.  
  <a href="classk_f_1_1_meta_1_1_factory_base.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_factory_8hpp_source.html">Factory.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for kF::Meta::FactoryBase&lt; Type &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classk_f_1_1_meta_1_1_factory_base__inherit__graph.png" border="0" usemap="#ak_f_1_1_meta_1_1_factory_base_3_01_type_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="k_f_1_1_meta_1_1_factory_base_3_01_type_01_4_inherit__map" id="ak_f_1_1_meta_1_1_factory_base_3_01_type_01_4_inherit__map">
-<area shape="rect" title="Factory is used to instantiate meta&#45;data of a given type." alt="" coords="5,5,164,347"/>
-<area shape="rect" href="classk_f_1_1_meta_1_1_factory_base.html" title=" " alt="" coords="5,424,164,780"/>
-<area shape="rect" href="classk_f_1_1_meta_1_1_factory.html" title=" " alt="" coords="17,829,152,921"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a847b94640152a043a9a5347b6bcc028c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a847b94640152a043a9a5347b6bcc028c">FactoryBase</a> (void) noexcept=default</td></tr>
-<tr class="memdesc:a847b94640152a043a9a5347b6bcc028c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default construct.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a847b94640152a043a9a5347b6bcc028c">More...</a><br /></td></tr>
-<tr class="separator:a847b94640152a043a9a5347b6bcc028c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac650ff9b51c430ca8b3d1f187825fb2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ac650ff9b51c430ca8b3d1f187825fb2b">FactoryBase</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name)</td></tr>
-<tr class="memdesc:ac650ff9b51c430ca8b3d1f187825fb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of Register function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ac650ff9b51c430ca8b3d1f187825fb2b">More...</a><br /></td></tr>
-<tr class="separator:ac650ff9b51c430ca8b3d1f187825fb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae03bc892be1d404688586cc6124fcdd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ae03bc892be1d404688586cc6124fcdd5">metaRegister</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name)</td></tr>
-<tr class="memdesc:ae03bc892be1d404688586cc6124fcdd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of Register function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ae03bc892be1d404688586cc6124fcdd5">More...</a><br /></td></tr>
-<tr class="separator:ae03bc892be1d404688586cc6124fcdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f75b7ca86da6a01a7368087d5badb5"><td class="memTemplParams" colspan="2">template&lt;typename Base &gt; </td></tr>
-<tr class="memitem:ab6f75b7ca86da6a01a7368087d5badb5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ab6f75b7ca86da6a01a7368087d5badb5">base</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:ab6f75b7ca86da6a01a7368087d5badb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterBase function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ab6f75b7ca86da6a01a7368087d5badb5">More...</a><br /></td></tr>
-<tr class="separator:ab6f75b7ca86da6a01a7368087d5badb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c70f198a7d26d123c512edb8e21a03f"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
-<tr class="memitem:a2c70f198a7d26d123c512edb8e21a03f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a2c70f198a7d26d123c512edb8e21a03f">constructor</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a2c70f198a7d26d123c512edb8e21a03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterConstructor function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a2c70f198a7d26d123c512edb8e21a03f">More...</a><br /></td></tr>
-<tr class="separator:a2c70f198a7d26d123c512edb8e21a03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01288678246f494476d934a2dc0ffd3b"><td class="memTemplParams" colspan="2">template&lt;typename To , auto FunctionPtr = nullptr&gt; </td></tr>
-<tr class="memitem:a01288678246f494476d934a2dc0ffd3b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a01288678246f494476d934a2dc0ffd3b">converter</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a01288678246f494476d934a2dc0ffd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterConverter function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a01288678246f494476d934a2dc0ffd3b">More...</a><br /></td></tr>
-<tr class="separator:a01288678246f494476d934a2dc0ffd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad84a8c1bf76b6760de05a975f3f6e3d5"><td class="memTemplParams" colspan="2">template&lt;auto FunctionPtr&gt; </td></tr>
-<tr class="memitem:ad84a8c1bf76b6760de05a975f3f6e3d5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ad84a8c1bf76b6760de05a975f3f6e3d5">function</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:ad84a8c1bf76b6760de05a975f3f6e3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterFunction function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ad84a8c1bf76b6760de05a975f3f6e3d5">More...</a><br /></td></tr>
-<tr class="separator:ad84a8c1bf76b6760de05a975f3f6e3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f3d5365b8ed002e0d319db6246bf7a"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetFunctionPtr = nullptr&gt; </td></tr>
-<tr class="memitem:a47f3d5365b8ed002e0d319db6246bf7a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a47f3d5365b8ed002e0d319db6246bf7a">data</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a079f01d6aa4548f361405fd5d5b27949">signal</a>=<a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>()) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a47f3d5365b8ed002e0d319db6246bf7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterData function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a47f3d5365b8ed002e0d319db6246bf7a">More...</a><br /></td></tr>
-<tr class="separator:a47f3d5365b8ed002e0d319db6246bf7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a079f01d6aa4548f361405fd5d5b27949"><td class="memTemplParams" colspan="2">template&lt;auto SignalPtr&gt; </td></tr>
-<tr class="memitem:a079f01d6aa4548f361405fd5d5b27949"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a079f01d6aa4548f361405fd5d5b27949">signal</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a079f01d6aa4548f361405fd5d5b27949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterSignal function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a079f01d6aa4548f361405fd5d5b27949">More...</a><br /></td></tr>
-<tr class="separator:a079f01d6aa4548f361405fd5d5b27949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a93dfb9cc8cd1c90689034baa72bfd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a9a93dfb9cc8cd1c90689034baa72bfd0">FactoryBase</a> (void) noexcept=default</td></tr>
+<tr class="memdesc:a9a93dfb9cc8cd1c90689034baa72bfd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default construct.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a9a93dfb9cc8cd1c90689034baa72bfd0">More...</a><br /></td></tr>
+<tr class="separator:a9a93dfb9cc8cd1c90689034baa72bfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2dd3c04d32e3a1d1903eba9b6414aa5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ac2dd3c04d32e3a1d1903eba9b6414aa5">FactoryBase</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const std::string_view &amp;literal=std::string_view())</td></tr>
+<tr class="memdesc:ac2dd3c04d32e3a1d1903eba9b6414aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of Register function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ac2dd3c04d32e3a1d1903eba9b6414aa5">More...</a><br /></td></tr>
+<tr class="separator:ac2dd3c04d32e3a1d1903eba9b6414aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd534438fdbaff43ed58d1da6cc5309e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#acd534438fdbaff43ed58d1da6cc5309e">FactoryBase</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> specialization, const std::string_view &amp;literal=std::string_view())</td></tr>
+<tr class="memdesc:acd534438fdbaff43ed58d1da6cc5309e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of Register specialization function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#acd534438fdbaff43ed58d1da6cc5309e">More...</a><br /></td></tr>
+<tr class="separator:acd534438fdbaff43ed58d1da6cc5309e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c83a7a31759c7386285d37e773c557"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ae4c83a7a31759c7386285d37e773c557">~FactoryBase</a> (void) noexcept=default</td></tr>
+<tr class="memdesc:ae4c83a7a31759c7386285d37e773c557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ae4c83a7a31759c7386285d37e773c557">More...</a><br /></td></tr>
+<tr class="separator:ae4c83a7a31759c7386285d37e773c557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8bce886edcd0c6e76b2fced47c2fd0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ab8bce886edcd0c6e76b2fced47c2fd0d">metaRegister</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const std::string_view &amp;literal=std::string_view()) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:ab8bce886edcd0c6e76b2fced47c2fd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of Register function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ab8bce886edcd0c6e76b2fced47c2fd0d">More...</a><br /></td></tr>
+<tr class="separator:ab8bce886edcd0c6e76b2fced47c2fd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f387ac3b2d6282c14a074b64668e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#af8f387ac3b2d6282c14a074b64668e29">metaRegister</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> specialization, const std::string_view &amp;literal=std::string_view()) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:af8f387ac3b2d6282c14a074b64668e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of Register specialization function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#af8f387ac3b2d6282c14a074b64668e29">More...</a><br /></td></tr>
+<tr class="separator:af8f387ac3b2d6282c14a074b64668e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97193f064f07c749a7d796c711ad27b"><td class="memTemplParams" colspan="2">template&lt;typename Base &gt; </td></tr>
+<tr class="memitem:aa97193f064f07c749a7d796c711ad27b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aa97193f064f07c749a7d796c711ad27b">base</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:aa97193f064f07c749a7d796c711ad27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterBase function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#aa97193f064f07c749a7d796c711ad27b">More...</a><br /></td></tr>
+<tr class="separator:aa97193f064f07c749a7d796c711ad27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576193e46bddb4adc24eaf00d2e2d60a"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a576193e46bddb4adc24eaf00d2e2d60a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a576193e46bddb4adc24eaf00d2e2d60a">constructor</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a576193e46bddb4adc24eaf00d2e2d60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterConstructor function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a576193e46bddb4adc24eaf00d2e2d60a">More...</a><br /></td></tr>
+<tr class="separator:a576193e46bddb4adc24eaf00d2e2d60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38064f71f01bec2ce9be6fb8df9745f"><td class="memTemplParams" colspan="2">template&lt;typename To , auto FunctionPtr = nullptr&gt; </td></tr>
+<tr class="memitem:ad38064f71f01bec2ce9be6fb8df9745f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ad38064f71f01bec2ce9be6fb8df9745f">converter</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:ad38064f71f01bec2ce9be6fb8df9745f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterConverter function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ad38064f71f01bec2ce9be6fb8df9745f">More...</a><br /></td></tr>
+<tr class="separator:ad38064f71f01bec2ce9be6fb8df9745f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4aef465abe90f200a8c4249a0974ad"><td class="memTemplParams" colspan="2">template&lt;auto FunctionPtr&gt; </td></tr>
+<tr class="memitem:a5a4aef465abe90f200a8c4249a0974ad"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a5a4aef465abe90f200a8c4249a0974ad">function</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a5a4aef465abe90f200a8c4249a0974ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterFunction function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a5a4aef465abe90f200a8c4249a0974ad">More...</a><br /></td></tr>
+<tr class="separator:a5a4aef465abe90f200a8c4249a0974ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d955d4e5eaaf0bf90424c4b86d39d78"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetFunctionPtr, auto SignalPtr = nullptr&gt; </td></tr>
+<tr class="memitem:a9d955d4e5eaaf0bf90424c4b86d39d78"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a9d955d4e5eaaf0bf90424c4b86d39d78">data</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> signalName=0u) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a9d955d4e5eaaf0bf90424c4b86d39d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterData function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a9d955d4e5eaaf0bf90424c4b86d39d78">More...</a><br /></td></tr>
+<tr class="separator:a9d955d4e5eaaf0bf90424c4b86d39d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c92b8f1004d7600f7ab1c2b0c493773"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr, auto SignalPtr&gt; </td></tr>
+<tr class="memitem:a0c92b8f1004d7600f7ab1c2b0c493773"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a0c92b8f1004d7600f7ab1c2b0c493773">data</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> signalName=0u) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a0c92b8f1004d7600f7ab1c2b0c493773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterData function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a0c92b8f1004d7600f7ab1c2b0c493773">More...</a><br /></td></tr>
+<tr class="separator:a0c92b8f1004d7600f7ab1c2b0c493773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98cfc55b746b53456f72686909126d4"><td class="memTemplParams" colspan="2">template&lt;auto SignalPtr&gt; </td></tr>
+<tr class="memitem:af98cfc55b746b53456f72686909126d4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#af98cfc55b746b53456f72686909126d4">signal</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:af98cfc55b746b53456f72686909126d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of RegisterSignal function.  <a href="classk_f_1_1_meta_1_1_factory_base.html#af98cfc55b746b53456f72686909126d4">More...</a><br /></td></tr>
+<tr class="separator:af98cfc55b746b53456f72686909126d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab321baf5f8a38d695b7435673e565d1"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:aab321baf5f8a38d695b7435673e565d1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_constructor.html">kF::Meta::Constructor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aab321baf5f8a38d695b7435673e565d1">RegisterConstructor</a> (void) noexcept _ndebug</td></tr>
+<tr class="separator:aab321baf5f8a38d695b7435673e565d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781c1c2ced3d2d2784b1d208bc8957ec"><td class="memTemplParams" colspan="2">template&lt;typename To , auto FunctionPtr&gt; </td></tr>
+<tr class="memitem:a781c1c2ced3d2d2784b1d208bc8957ec"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_converter.html">kF::Meta::Converter</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a781c1c2ced3d2d2784b1d208bc8957ec">RegisterConverter</a> (void) noexcept _ndebug</td></tr>
+<tr class="separator:a781c1c2ced3d2d2784b1d208bc8957ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf4989180361da8cae35f760bfe03c9"><td class="memTemplParams" colspan="2">template&lt;auto FunctionPtr&gt; </td></tr>
+<tr class="memitem:a4bf4989180361da8cae35f760bfe03c9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_function.html">kF::Meta::Function</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a4bf4989180361da8cae35f760bfe03c9">RegisterFunction</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept _ndebug</td></tr>
+<tr class="separator:a4bf4989180361da8cae35f760bfe03c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5048dd276040b0eeb4fbde9dbe1a8f3b"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetFunctionPtr, auto SignalPtr&gt; </td></tr>
+<tr class="memitem:a5048dd276040b0eeb4fbde9dbe1a8f3b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_data.html">kF::Meta::Data</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a5048dd276040b0eeb4fbde9dbe1a8f3b">RegisterData</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> signalName) noexcept _ndebug</td></tr>
+<tr class="separator:a5048dd276040b0eeb4fbde9dbe1a8f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f89b1bca42284aeb2fc09f480f173e"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr, auto SignalPtr&gt; </td></tr>
+<tr class="memitem:aa8f89b1bca42284aeb2fc09f480f173e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_data.html">kF::Meta::Data</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aa8f89b1bca42284aeb2fc09f480f173e">RegisterData</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> signalName) noexcept _ndebug</td></tr>
+<tr class="separator:aa8f89b1bca42284aeb2fc09f480f173e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9604caedc37b31fe09841e0b0fc35ab"><td class="memTemplParams" colspan="2">template&lt;auto SignalPtr&gt; </td></tr>
+<tr class="memitem:ab9604caedc37b31fe09841e0b0fc35ab"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_signal.html">kF::Meta::Signal</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ab9604caedc37b31fe09841e0b0fc35ab">RegisterSignal</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept _ndebug</td></tr>
+<tr class="separator:ab9604caedc37b31fe09841e0b0fc35ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a73a5a8e39b58aaddd9a39de671e60e4a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a73a5a8e39b58aaddd9a39de671e60e4a">Register</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a73a5a8e39b58aaddd9a39de671e60e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register templated type's hashed name.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a73a5a8e39b58aaddd9a39de671e60e4a">More...</a><br /></td></tr>
-<tr class="separator:a73a5a8e39b58aaddd9a39de671e60e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39a93a90d923b08cae35cdf8ace25c7e"><td class="memTemplParams" colspan="2">template&lt;typename Base &gt; </td></tr>
-<tr class="memitem:a39a93a90d923b08cae35cdf8ace25c7e"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a39a93a90d923b08cae35cdf8ace25c7e">RegisterBase</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a39a93a90d923b08cae35cdf8ace25c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a base of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a39a93a90d923b08cae35cdf8ace25c7e">More...</a><br /></td></tr>
-<tr class="separator:a39a93a90d923b08cae35cdf8ace25c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50c99f7d2e9e6e9c40149e5e7a49f6d1"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
-<tr class="memitem:a50c99f7d2e9e6e9c40149e5e7a49f6d1"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a50c99f7d2e9e6e9c40149e5e7a49f6d1">RegisterConstructor</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a50c99f7d2e9e6e9c40149e5e7a49f6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom constructor (not a default / copy / move constructor)  <a href="classk_f_1_1_meta_1_1_factory_base.html#a50c99f7d2e9e6e9c40149e5e7a49f6d1">More...</a><br /></td></tr>
-<tr class="separator:a50c99f7d2e9e6e9c40149e5e7a49f6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a093a0c5312dbe35e4cac756b1225b425"><td class="memTemplParams" colspan="2">template&lt;typename To , auto FunctionPtr = nullptr&gt; </td></tr>
-<tr class="memitem:a093a0c5312dbe35e4cac756b1225b425"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a093a0c5312dbe35e4cac756b1225b425">RegisterConverter</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a093a0c5312dbe35e4cac756b1225b425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a converter of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a093a0c5312dbe35e4cac756b1225b425">More...</a><br /></td></tr>
-<tr class="separator:a093a0c5312dbe35e4cac756b1225b425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab747ba26d33183c58c2bfe6e4e705dad"><td class="memTemplParams" colspan="2">template&lt;auto FunctionPtr&gt; </td></tr>
-<tr class="memitem:ab747ba26d33183c58c2bfe6e4e705dad"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ab747ba26d33183c58c2bfe6e4e705dad">RegisterFunction</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:ab747ba26d33183c58c2bfe6e4e705dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ab747ba26d33183c58c2bfe6e4e705dad">More...</a><br /></td></tr>
-<tr class="separator:ab747ba26d33183c58c2bfe6e4e705dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac1f177b732219f492c35b19d0addae"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetFunctionPtr = nullptr&gt; </td></tr>
-<tr class="memitem:a3ac1f177b732219f492c35b19d0addae"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a3ac1f177b732219f492c35b19d0addae">RegisterData</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a079f01d6aa4548f361405fd5d5b27949">signal</a>=<a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>()) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a3ac1f177b732219f492c35b19d0addae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a data of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a3ac1f177b732219f492c35b19d0addae">More...</a><br /></td></tr>
-<tr class="separator:a3ac1f177b732219f492c35b19d0addae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0716f265b69e33dd69656d1ccf661a32"><td class="memTemplParams" colspan="2">template&lt;auto SignalPtr&gt; </td></tr>
-<tr class="memitem:a0716f265b69e33dd69656d1ccf661a32"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a0716f265b69e33dd69656d1ccf661a32">RegisterSignal</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a0716f265b69e33dd69656d1ccf661a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a signal of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a0716f265b69e33dd69656d1ccf661a32">More...</a><br /></td></tr>
-<tr class="separator:a0716f265b69e33dd69656d1ccf661a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57305e73c72c4a0940eb85e21650c7fb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Meta::Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a57305e73c72c4a0940eb85e21650c7fb">Resolve</a> (void) noexcept</td></tr>
-<tr class="memdesc:a57305e73c72c4a0940eb85e21650c7fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve the templated type's meta descriptor.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a57305e73c72c4a0940eb85e21650c7fb">More...</a><br /></td></tr>
-<tr class="separator:a57305e73c72c4a0940eb85e21650c7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bdb5f3c8cfd2016c1e101072c70efb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ad3bdb5f3c8cfd2016c1e101072c70efb">Resolve</a> (void) noexcept</td></tr>
+<tr class="memdesc:ad3bdb5f3c8cfd2016c1e101072c70efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve the templated type's meta descriptor.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ad3bdb5f3c8cfd2016c1e101072c70efb">More...</a><br /></td></tr>
+<tr class="separator:ad3bdb5f3c8cfd2016c1e101072c70efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3ed289a06c3655f17461ea5f86ced8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#adb3ed289a06c3655f17461ea5f86ced8">Register</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const std::string_view &amp;literal=std::string_view()) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:adb3ed289a06c3655f17461ea5f86ced8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register templated type's hashed name.  <a href="classk_f_1_1_meta_1_1_factory_base.html#adb3ed289a06c3655f17461ea5f86ced8">More...</a><br /></td></tr>
+<tr class="separator:adb3ed289a06c3655f17461ea5f86ced8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba058dbb91aecf93d1edaf40621c5785"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aba058dbb91aecf93d1edaf40621c5785">Register</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> specialization, const std::string_view &amp;literal=std::string_view()) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:aba058dbb91aecf93d1edaf40621c5785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register templated type's hashed name with a specialization.  <a href="classk_f_1_1_meta_1_1_factory_base.html#aba058dbb91aecf93d1edaf40621c5785">More...</a><br /></td></tr>
+<tr class="separator:aba058dbb91aecf93d1edaf40621c5785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa875a7a89af7353e13d1a8c43ceb045c"><td class="memTemplParams" colspan="2">template&lt;typename Base &gt; </td></tr>
+<tr class="memitem:aa875a7a89af7353e13d1a8c43ceb045c"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aa875a7a89af7353e13d1a8c43ceb045c">RegisterBase</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:aa875a7a89af7353e13d1a8c43ceb045c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a base of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#aa875a7a89af7353e13d1a8c43ceb045c">More...</a><br /></td></tr>
+<tr class="separator:aa875a7a89af7353e13d1a8c43ceb045c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19afc1c4167132af93af532c1840b80"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:af19afc1c4167132af93af532c1840b80"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_constructor.html">Constructor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#af19afc1c4167132af93af532c1840b80">RegisterConstructor</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:af19afc1c4167132af93af532c1840b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom constructor (not a default / copy / move constructor)  <a href="classk_f_1_1_meta_1_1_factory_base.html#af19afc1c4167132af93af532c1840b80">More...</a><br /></td></tr>
+<tr class="separator:af19afc1c4167132af93af532c1840b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac41cadd8d1268a9a660917bb59c1508"><td class="memTemplParams" colspan="2">template&lt;typename To , auto FunctionPtr = nullptr&gt; </td></tr>
+<tr class="memitem:aac41cadd8d1268a9a660917bb59c1508"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_converter.html">Converter</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aac41cadd8d1268a9a660917bb59c1508">RegisterConverter</a> (void) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:aac41cadd8d1268a9a660917bb59c1508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a converter of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#aac41cadd8d1268a9a660917bb59c1508">More...</a><br /></td></tr>
+<tr class="separator:aac41cadd8d1268a9a660917bb59c1508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de74264e2b4a793f1fa1a1f7ee1325b"><td class="memTemplParams" colspan="2">template&lt;auto FunctionPtr&gt; </td></tr>
+<tr class="memitem:a8de74264e2b4a793f1fa1a1f7ee1325b"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_function.html">Function</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a8de74264e2b4a793f1fa1a1f7ee1325b">RegisterFunction</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a8de74264e2b4a793f1fa1a1f7ee1325b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a8de74264e2b4a793f1fa1a1f7ee1325b">More...</a><br /></td></tr>
+<tr class="separator:a8de74264e2b4a793f1fa1a1f7ee1325b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95266818c62114f32606001df3360027"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetFunctionPtr, auto SignalPtr = nullptr&gt; </td></tr>
+<tr class="memitem:a95266818c62114f32606001df3360027"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_data.html">Data</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a95266818c62114f32606001df3360027">RegisterData</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> signalName=0u) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a95266818c62114f32606001df3360027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a data of templated type with a single setter.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a95266818c62114f32606001df3360027">More...</a><br /></td></tr>
+<tr class="separator:a95266818c62114f32606001df3360027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837a64e9b40e6fc3aefddccdcc34c43d"><td class="memTemplParams" colspan="2">template&lt;auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr, auto SignalPtr&gt; </td></tr>
+<tr class="memitem:a837a64e9b40e6fc3aefddccdcc34c43d"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_data.html">Data</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#a837a64e9b40e6fc3aefddccdcc34c43d">RegisterData</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> signalName=0u) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:a837a64e9b40e6fc3aefddccdcc34c43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a data of templated type with a copy and a move setter.  <a href="classk_f_1_1_meta_1_1_factory_base.html#a837a64e9b40e6fc3aefddccdcc34c43d">More...</a><br /></td></tr>
+<tr class="separator:a837a64e9b40e6fc3aefddccdcc34c43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebfa3c8c5fcda7171fd948280c8596c"><td class="memTemplParams" colspan="2">template&lt;auto SignalPtr&gt; </td></tr>
+<tr class="memitem:acebfa3c8c5fcda7171fd948280c8596c"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#acebfa3c8c5fcda7171fd948280c8596c">RegisterSignal</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:acebfa3c8c5fcda7171fd948280c8596c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a signal of templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#acebfa3c8c5fcda7171fd948280c8596c">More...</a><br /></td></tr>
+<tr class="separator:acebfa3c8c5fcda7171fd948280c8596c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:aed0141a70c73073787fbc02dee04ea86"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structk_f_1_1_meta_1_1_type_1_1_descriptor.html">Meta::Type::Descriptor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#aed0141a70c73073787fbc02dee04ea86">GetDescriptor</a> (void)</td></tr>
-<tr class="memdesc:aed0141a70c73073787fbc02dee04ea86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static helper used to store the descriptor instance of the templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#aed0141a70c73073787fbc02dee04ea86">More...</a><br /></td></tr>
-<tr class="separator:aed0141a70c73073787fbc02dee04ea86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:ad15727bc10aafa5597c91d7f12ed3903"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structk_f_1_1_meta_1_1_type_1_1_descriptor.html">Type::Descriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html#ad15727bc10aafa5597c91d7f12ed3903">_Descriptor</a> { <a class="el" href="structk_f_1_1_meta_1_1_type_1_1_descriptor.html#aadcfacd6624ba188506d4a51538b8e6a">Type::Descriptor::Construct</a>&lt;RegisteredType&gt;() }</td></tr>
+<tr class="memdesc:ad15727bc10aafa5597c91d7f12ed3903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static helper used to store the descriptor instance of the templated type.  <a href="classk_f_1_1_meta_1_1_factory_base.html#ad15727bc10aafa5597c91d7f12ed3903">More...</a><br /></td></tr>
+<tr class="separator:ad15727bc10aafa5597c91d7f12ed3903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Type&gt;<br />
-class kF::Meta::FactoryBase&lt; Type &gt;</h3>
+<div class="textblock"><h3>template&lt;typename RegisteredType&gt;<br />
+class kF::Meta::FactoryBase&lt; RegisteredType &gt;</h3>
 
-<p><a class="el" href="classk_f_1_1_meta_1_1_factory.html">Factory</a> is used to instantiate meta-data of a given type. </p>
+<p>Factory is used to instantiate meta-data of a given type. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="namespacek_f_1_1_meta.html">Meta</a> Factory </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a847b94640152a043a9a5347b6bcc028c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a847b94640152a043a9a5347b6bcc028c">&#9670;&nbsp;</a></span>FactoryBase() <span class="overload">[1/2]</span></h2>
+<a id="a9a93dfb9cc8cd1c90689034baa72bfd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a93dfb9cc8cd1c90689034baa72bfd0">&#9670;&nbsp;</a></span>FactoryBase() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::<a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::<a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -204,23 +233,33 @@ template&lt;typename Type &gt; </div>
 
 </div>
 </div>
-<a id="ac650ff9b51c430ca8b3d1f187825fb2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac650ff9b51c430ca8b3d1f187825fb2b">&#9670;&nbsp;</a></span>FactoryBase() <span class="overload">[2/2]</span></h2>
+<a id="ac2dd3c04d32e3a1d1903eba9b6414aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2dd3c04d32e3a1d1903eba9b6414aa5">&#9670;&nbsp;</a></span>FactoryBase() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::<a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::<a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>literal</em> = <code>std::string_view()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -234,14 +273,90 @@ template&lt;typename Type &gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab6f75b7ca86da6a01a7368087d5badb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f75b7ca86da6a01a7368087d5badb5">&#9670;&nbsp;</a></span>base()</h2>
+<a id="acd534438fdbaff43ed58d1da6cc5309e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd534438fdbaff43ed58d1da6cc5309e">&#9670;&nbsp;</a></span>FactoryBase() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::<a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>specialization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>literal</em> = <code>std::string_view()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Alias of Register specialization function. </p>
+
+</div>
+</div>
+<a id="ae4c83a7a31759c7386285d37e773c557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c83a7a31759c7386285d37e773c557">&#9670;&nbsp;</a></span>~FactoryBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::~<a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa97193f064f07c749a7d796c711ad27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97193f064f07c749a7d796c711ad27b">&#9670;&nbsp;</a></span>base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;typename Base &gt; </div>
 <table class="mlabels">
@@ -249,7 +364,7 @@ template&lt;typename Base &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::base </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::base </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -267,13 +382,13 @@ template&lt;typename Base &gt; </div>
 
 </div>
 </div>
-<a id="a2c70f198a7d26d123c512edb8e21a03f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c70f198a7d26d123c512edb8e21a03f">&#9670;&nbsp;</a></span>constructor()</h2>
+<a id="a576193e46bddb4adc24eaf00d2e2d60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576193e46bddb4adc24eaf00d2e2d60a">&#9670;&nbsp;</a></span>constructor()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;typename ... Args&gt; </div>
 <table class="mlabels">
@@ -281,7 +396,7 @@ template&lt;typename ... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::constructor </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::constructor </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -299,13 +414,13 @@ template&lt;typename ... Args&gt; </div>
 
 </div>
 </div>
-<a id="a01288678246f494476d934a2dc0ffd3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01288678246f494476d934a2dc0ffd3b">&#9670;&nbsp;</a></span>converter()</h2>
+<a id="ad38064f71f01bec2ce9be6fb8df9745f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad38064f71f01bec2ce9be6fb8df9745f">&#9670;&nbsp;</a></span>converter()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;typename To , auto FunctionPtr = nullptr&gt; </div>
 <table class="mlabels">
@@ -313,7 +428,7 @@ template&lt;typename To , auto FunctionPtr = nullptr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::converter </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::converter </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -331,21 +446,21 @@ template&lt;typename To , auto FunctionPtr = nullptr&gt; </div>
 
 </div>
 </div>
-<a id="a47f3d5365b8ed002e0d319db6246bf7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47f3d5365b8ed002e0d319db6246bf7a">&#9670;&nbsp;</a></span>data()</h2>
+<a id="a9d955d4e5eaaf0bf90424c4b86d39d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d955d4e5eaaf0bf90424c4b86d39d78">&#9670;&nbsp;</a></span>data() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
-template&lt;auto GetFunctionPtr, auto SetFunctionPtr = nullptr&gt; </div>
+template&lt;auto GetFunctionPtr, auto SetFunctionPtr, auto SignalPtr = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::data </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::data </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -353,8 +468,8 @@ template&lt;auto GetFunctionPtr, auto SetFunctionPtr = nullptr&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td>
-          <td class="paramname"><em>signal</em> = <code><a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>signalName</em> = <code>0u</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -373,13 +488,55 @@ template&lt;auto GetFunctionPtr, auto SetFunctionPtr = nullptr&gt; </div>
 
 </div>
 </div>
-<a id="ad84a8c1bf76b6760de05a975f3f6e3d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad84a8c1bf76b6760de05a975f3f6e3d5">&#9670;&nbsp;</a></span>function()</h2>
+<a id="a0c92b8f1004d7600f7ab1c2b0c493773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c92b8f1004d7600f7ab1c2b0c493773">&#9670;&nbsp;</a></span>data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr, auto SignalPtr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>signalName</em> = <code>0u</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Alias of RegisterData function. </p>
+
+</div>
+</div>
+<a id="a5a4aef465abe90f200a8c4249a0974ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4aef465abe90f200a8c4249a0974ad">&#9670;&nbsp;</a></span>function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;auto FunctionPtr&gt; </div>
 <table class="mlabels">
@@ -387,7 +544,7 @@ template&lt;auto FunctionPtr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::function </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::function </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -405,58 +562,84 @@ template&lt;auto FunctionPtr&gt; </div>
 
 </div>
 </div>
-<a id="aed0141a70c73073787fbc02dee04ea86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed0141a70c73073787fbc02dee04ea86">&#9670;&nbsp;</a></span>GetDescriptor()</h2>
+<a id="af8f387ac3b2d6282c14a074b64668e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f387ac3b2d6282c14a074b64668e29">&#9670;&nbsp;</a></span>metaRegister() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="structk_f_1_1_meta_1_1_type_1_1_descriptor.html">Meta::Type::Descriptor</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::GetDescriptor </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::metaRegister </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>specialization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>literal</em> = <code>std::string_view()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Static helper used to store the descriptor instance of the templated type. </p>
+<p>Alias of Register specialization function. </p>
 
 </div>
 </div>
-<a id="ae03bc892be1d404688586cc6124fcdd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae03bc892be1d404688586cc6124fcdd5">&#9670;&nbsp;</a></span>metaRegister()</h2>
+<a id="ab8bce886edcd0c6e76b2fced47c2fd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8bce886edcd0c6e76b2fced47c2fd0d">&#9670;&nbsp;</a></span>metaRegister() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::metaRegister </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::metaRegister </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>literal</em> = <code>std::string_view()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -465,23 +648,80 @@ template&lt;typename Type &gt; </div>
 
 </div>
 </div>
-<a id="a73a5a8e39b58aaddd9a39de671e60e4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73a5a8e39b58aaddd9a39de671e60e4a">&#9670;&nbsp;</a></span>Register()</h2>
+<a id="aba058dbb91aecf93d1edaf40621c5785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba058dbb91aecf93d1edaf40621c5785">&#9670;&nbsp;</a></span>Register() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::Register </td>
+          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::Register </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>specialization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>literal</em> = <code>std::string_view()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register templated type's hashed name with a specialization. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="namespacek_f_1_1_meta.html">Meta</a> Factory </p>
+
+</div>
+</div>
+<a id="adb3ed289a06c3655f17461ea5f86ced8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3ed289a06c3655f17461ea5f86ced8">&#9670;&nbsp;</a></span>Register() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::Register </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string_view &amp;&#160;</td>
+          <td class="paramname"><em>literal</em> = <code>std::string_view()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -492,17 +732,16 @@ template&lt;typename Type &gt; </div>
 </div><div class="memdoc">
 
 <p>Register templated type's hashed name. </p>
-<p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="namespacek_f_1_1_meta.html">Meta</a> <a class="el" href="classk_f_1_1_meta_1_1_factory.html">Factory</a> </p>
 
 </div>
 </div>
-<a id="a39a93a90d923b08cae35cdf8ace25c7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39a93a90d923b08cae35cdf8ace25c7e">&#9670;&nbsp;</a></span>RegisterBase()</h2>
+<a id="aa875a7a89af7353e13d1a8c43ceb045c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa875a7a89af7353e13d1a8c43ceb045c">&#9670;&nbsp;</a></span>RegisterBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;typename Base &gt; </div>
 <table class="mlabels">
@@ -510,7 +749,7 @@ template&lt;typename Base &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::RegisterBase </td>
+          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterBase </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -528,13 +767,13 @@ template&lt;typename Base &gt; </div>
 
 </div>
 </div>
-<a id="a50c99f7d2e9e6e9c40149e5e7a49f6d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c99f7d2e9e6e9c40149e5e7a49f6d1">&#9670;&nbsp;</a></span>RegisterConstructor()</h2>
+<a id="aab321baf5f8a38d695b7435673e565d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab321baf5f8a38d695b7435673e565d1">&#9670;&nbsp;</a></span>RegisterConstructor() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;typename ... Args&gt; </div>
 <table class="mlabels">
@@ -542,7 +781,7 @@ template&lt;typename ... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::RegisterConstructor </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_constructor.html">kF::Meta::Constructor</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterConstructor </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -551,7 +790,37 @@ template&lt;typename ... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af19afc1c4167132af93af532c1840b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19afc1c4167132af93af532c1840b80">&#9670;&nbsp;</a></span>RegisterConstructor() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;typename ... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_constructor.html">Constructor</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterConstructor </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -560,13 +829,13 @@ template&lt;typename ... Args&gt; </div>
 
 </div>
 </div>
-<a id="a093a0c5312dbe35e4cac756b1225b425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a093a0c5312dbe35e4cac756b1225b425">&#9670;&nbsp;</a></span>RegisterConverter()</h2>
+<a id="a781c1c2ced3d2d2784b1d208bc8957ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781c1c2ced3d2d2784b1d208bc8957ec">&#9670;&nbsp;</a></span>RegisterConverter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;typename To , auto FunctionPtr&gt; </div>
 <table class="mlabels">
@@ -574,7 +843,7 @@ template&lt;typename To , auto FunctionPtr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::RegisterConverter </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_converter.html">kF::Meta::Converter</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterConverter </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -583,7 +852,37 @@ template&lt;typename To , auto FunctionPtr&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac41cadd8d1268a9a660917bb59c1508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac41cadd8d1268a9a660917bb59c1508">&#9670;&nbsp;</a></span>RegisterConverter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;typename To , auto FunctionPtr = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_converter.html">Converter</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterConverter </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -592,21 +891,21 @@ template&lt;typename To , auto FunctionPtr&gt; </div>
 
 </div>
 </div>
-<a id="a3ac1f177b732219f492c35b19d0addae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ac1f177b732219f492c35b19d0addae">&#9670;&nbsp;</a></span>RegisterData()</h2>
+<a id="a5048dd276040b0eeb4fbde9dbe1a8f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5048dd276040b0eeb4fbde9dbe1a8f3b">&#9670;&nbsp;</a></span>RegisterData() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
-template&lt;auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
+template&lt;auto GetFunctionPtr, auto SetFunctionPtr, auto SignalPtr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::RegisterData </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_data.html">kF::Meta::Data</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterData </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -614,8 +913,8 @@ template&lt;auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td>
-          <td class="paramname"><em>signal</em> = <code><a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>signalName</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -625,22 +924,144 @@ template&lt;auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Register a data of templated type. </p>
-
 </div>
 </div>
-<a id="ab747ba26d33183c58c2bfe6e4e705dad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab747ba26d33183c58c2bfe6e4e705dad">&#9670;&nbsp;</a></span>RegisterFunction()</h2>
+<a id="aa8f89b1bca42284aeb2fc09f480f173e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f89b1bca42284aeb2fc09f480f173e">&#9670;&nbsp;</a></span>RegisterData() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr, auto SignalPtr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_data.html">kF::Meta::Data</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>signalName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95266818c62114f32606001df3360027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95266818c62114f32606001df3360027">&#9670;&nbsp;</a></span>RegisterData() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;auto GetFunctionPtr, auto SetFunctionPtr, auto SignalPtr = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_data.html">Data</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>signalName</em> = <code>0u</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a data of templated type with a single setter. </p>
+
+</div>
+</div>
+<a id="a837a64e9b40e6fc3aefddccdcc34c43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837a64e9b40e6fc3aefddccdcc34c43d">&#9670;&nbsp;</a></span>RegisterData() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr, auto SignalPtr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_data.html">Data</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>signalName</em> = <code>0u</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register a data of templated type with a copy and a move setter. </p>
+
+</div>
+</div>
+<a id="a4bf4989180361da8cae35f760bfe03c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf4989180361da8cae35f760bfe03c9">&#9670;&nbsp;</a></span>RegisterFunction() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;auto FunctionPtr&gt; </div>
 <table class="mlabels">
@@ -648,7 +1069,7 @@ template&lt;auto FunctionPtr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::RegisterFunction </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_function.html">kF::Meta::Function</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterFunction </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -657,7 +1078,37 @@ template&lt;auto FunctionPtr&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de74264e2b4a793f1fa1a1f7ee1325b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de74264e2b4a793f1fa1a1f7ee1325b">&#9670;&nbsp;</a></span>RegisterFunction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;auto FunctionPtr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_function.html">Function</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterFunction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -666,13 +1117,13 @@ template&lt;auto FunctionPtr&gt; </div>
 
 </div>
 </div>
-<a id="a0716f265b69e33dd69656d1ccf661a32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0716f265b69e33dd69656d1ccf661a32">&#9670;&nbsp;</a></span>RegisterSignal()</h2>
+<a id="ab9604caedc37b31fe09841e0b0fc35ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9604caedc37b31fe09841e0b0fc35ab">&#9670;&nbsp;</a></span>RegisterSignal() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;auto SignalPtr&gt; </div>
 <table class="mlabels">
@@ -680,7 +1131,7 @@ template&lt;auto SignalPtr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::RegisterSignal </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_signal.html">kF::Meta::Signal</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterSignal </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -689,7 +1140,37 @@ template&lt;auto SignalPtr&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acebfa3c8c5fcda7171fd948280c8596c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebfa3c8c5fcda7171fd948280c8596c">&#9670;&nbsp;</a></span>RegisterSignal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<div class="memtemplate">
+template&lt;auto SignalPtr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::RegisterSignal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -711,19 +1192,19 @@ template&lt;auto SignalPtr&gt; </div>
 
 </div>
 </div>
-<a id="a57305e73c72c4a0940eb85e21650c7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57305e73c72c4a0940eb85e21650c7fb">&#9670;&nbsp;</a></span>Resolve()</h2>
+<a id="ad3bdb5f3c8cfd2016c1e101072c70efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bdb5f3c8cfd2016c1e101072c70efb">&#9670;&nbsp;</a></span>Resolve()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Meta::Type</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::Resolve </td>
+          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::Resolve </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -741,13 +1222,13 @@ template&lt;typename Type &gt; </div>
 
 </div>
 </div>
-<a id="a079f01d6aa4548f361405fd5d5b27949"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a079f01d6aa4548f361405fd5d5b27949">&#9670;&nbsp;</a></span>signal()</h2>
+<a id="af98cfc55b746b53456f72686909126d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98cfc55b746b53456f72686909126d4">&#9670;&nbsp;</a></span>signal()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type &gt; </div>
+template&lt;typename RegisteredType &gt; </div>
 <div class="memtemplate">
 template&lt;auto SignalPtr&gt; </div>
 <table class="mlabels">
@@ -755,7 +1236,7 @@ template&lt;auto SignalPtr&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;::signal </td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">FactoryBase</a>&amp; <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::signal </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -770,6 +1251,33 @@ template&lt;auto SignalPtr&gt; </div>
 </div><div class="memdoc">
 
 <p>Alias of RegisterSignal function. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad15727bc10aafa5597c91d7f12ed3903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15727bc10aafa5597c91d7f12ed3903">&#9670;&nbsp;</a></span>_Descriptor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RegisteredType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structk_f_1_1_meta_1_1_type_1_1_descriptor.html">Type::Descriptor</a> <a class="el" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a>&lt; RegisteredType &gt;::_Descriptor { <a class="el" href="structk_f_1_1_meta_1_1_type_1_1_descriptor.html#aadcfacd6624ba188506d4a51538b8e6a">Type::Descriptor::Construct</a>&lt;RegisteredType&gt;() }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static helper used to store the descriptor instance of the templated type. </p>
 
 </div>
 </div>

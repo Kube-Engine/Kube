@@ -1,12 +1,13 @@
 \hypertarget{_register_8hpp}{}\doxysection{Kube/\+Object/\+Register.hpp File Reference}
 \label{_register_8hpp}\index{Kube/Object/Register.hpp@{Kube/Object/Register.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$Kube/\+Core/\+Macro\+Utils.\+hpp$>$}\newline
 Include dependency graph for Register.\+hpp\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=212pt]{_register_8hpp__incl}
+\includegraphics[width=284pt]{_register_8hpp__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -17,35 +18,82 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{_register_8hpp__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_internal}{k\+F\+::\+Internal}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{_register_8hpp_a2840fe5dd98eebd57318a7bf86267f38}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}}(Class\+Type, ...)~    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{k\+F\+::\+Meta\+::\+Factory}}$<$Class\+Type$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#Class\+Type))
+\#define \mbox{\hyperlink{_register_8hpp_a2cb079b1b575cc68cc64fd240e239b07}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+A\+T\+ER}}(Class\+Type, ...)
+\begin{DoxyCompactList}\small\item\em Add static registerer for automatic registeration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a8e25b73d3592f894548130de25c00722}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}}(Class\+Type,  Class\+Literal)
 \begin{DoxyCompactList}\small\item\em Register a new type (already used by \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER\textquotesingle{} and \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+B\+LE\textquotesingle{}) \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_aaaef9b32aefdfb2d178d9d1dabe833e4}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+B\+A\+SE}}(Base\+Type)~    .base$<$Base\+Type$>$()
+\#define \mbox{\hyperlink{_register_8hpp_aaaef9b32aefdfb2d178d9d1dabe833e4}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+B\+A\+SE}}(Base\+Type)~    .template base$<$Base\+Type$>$()
 \begin{DoxyCompactList}\small\item\em Register a base type. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_a012403d8461b9d617e84ba08f9477bbf}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR}}(...)~    .constructor$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$();
+\#define \mbox{\hyperlink{_register_8hpp_a012403d8461b9d617e84ba08f9477bbf}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR}}(...)~    .template constructor$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$();
 \begin{DoxyCompactList}\small\item\em Register a custom constructor (not default / copy / move) \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_ada09df313433c110ac78e8674448ae63}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY}}(Property\+Type,  name, ...)
-\begin{DoxyCompactList}\small\item\em Register a copy only property. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_aa84883be05e17cf4e9a29180fb23e6d1}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+EF}}(Property\+Type,  name, ...)~    \mbox{\hyperlink{_register_8hpp_ada09df313433c110ac78e8674448ae63}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY}}(Property\+Type, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
-\item 
-\#define \mbox{\hyperlink{_register_8hpp_ae13315d37e3b7f5b7ec87f925d08789c}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(Property\+Type,  name, ...)
-\begin{DoxyCompactList}\small\item\em Register a read and copy only property. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_a5ec91758e51b7038fe91154ed75d7196}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE}}(Property\+Type,  name, ...)
-\begin{DoxyCompactList}\small\item\em Register a move only property. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_aa6a36c1b8795d30da9a0542d516b0e24}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+EF}}(Property\+Type,  name, ...)~    \mbox{\hyperlink{_register_8hpp_a5ec91758e51b7038fe91154ed75d7196}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE}}(Property\+Type, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
-\item 
-\#define \mbox{\hyperlink{_register_8hpp_a7fee9d445af8e917d989a5f79ed00621}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(Property\+Type,  name, ...)~    \mbox{\hyperlink{_register_8hpp_ae13315d37e3b7f5b7ec87f925d08789c}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(Property\+Type, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
-\begin{DoxyCompactList}\small\item\em Register a read and move only property. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_a333ea323efaa841907c188cb1decacb7}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+OM}}(Property\+Type,  name,  getter,  setter)~    .\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}$<$getter, setter$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
-\begin{DoxyCompactList}\small\item\em Register a custom property using getter and setter. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_aadb6dd3997c8c57762752de387bc64bf}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}(name)~    .function$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
+\#define \mbox{\hyperlink{_register_8hpp_abcb841ec4d7fb41eff911ab59f846788}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+TY}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a constant readable, writable and signalable property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a692c8562c92a48071bf8b87ae0c0ee0b}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a constant readable and writable property (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a0ec54663fd735cc9b4c353c0cae68fda}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+LE}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a volatile readable, writable and signalable property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_ab0f13b54e7948394f0c7f0d876da6c6c}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a volatile readable and writable property (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a0561ddb66ff2f07852eaae76e01d0c53}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+G\+E\+T\+O\+N\+LY}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a const readable and signalable property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a102935aea36a2e06a2ab288e9071e668}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+G\+E\+T\+O\+N\+L\+Y\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a const readable property (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_ab6e6f0afd2f0b823d4f626fab852add1}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E\+\_\+\+G\+E\+T\+O\+N\+LY}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a const readable and signalable property. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a0ce2ba50f4f13dcc9b42d6954aa80a87}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E\+\_\+\+G\+E\+T\+O\+N\+L\+Y\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name, ...)
+\begin{DoxyCompactList}\small\item\em Register a const readable property (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+OM}}(Property\+Type,  name,  getter,  copy\+Setter,  move\+Setter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, move\+Setter, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter, copy setter, move setter and a signal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name,  getter,  copy\+Setter,  move\+Setter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, move\+Setter, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter, copy setter and move setter (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a7a72433cd2cb6969c08ee8e0d98b574d}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+C\+O\+PY}}(Property\+Type,  name,  getter,  copy\+Setter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, nullptr, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter, copy setter and a signal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a7ae4fba9b9684a494baba8460e04fcaa}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+C\+O\+P\+Y\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name,  getter,  copy\+Setter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter and copy setter (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a74dff32de2208139396eb6b3fd0a046f}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+M\+O\+VE}}(Property\+Type,  name,  getter,  move\+Setter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, move\+Setter, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter, move setter and a signal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_acfd84122c8bf54ef3ab70d77e3c51331}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+M\+O\+V\+E\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name,  getter,  move\+Setter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, move\+Setter, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter and move setter (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a71cec8ed7f1387ed0adfebe4f81cbb51}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(Property\+Type,  name,  getter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, nullptr, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter and signal. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_a3dfaf8d4cd1c847fa104b9a4b49bee06}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+R\+E\+A\+D\+O\+N\+L\+Y\+\_\+\+S\+I\+G\+L\+E\+SS}}(Property\+Type,  name,  getter)~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, nullptr, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register a custom property using getter (no signal) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_register_8hpp_aadb6dd3997c8c57762752de387bc64bf}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON}}(name)~    .template function$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
 \begin{DoxyCompactList}\small\item\em Register a function. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_a62fa2da6537423bfea1902984dcecdc9}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}(name,  Func\+Type)~    .function$<$static\+\_\+cast$<$Func\+Type$>$(\&\+\_\+\+Meta\+Type\+::name)$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
+\#define \mbox{\hyperlink{_register_8hpp_a62fa2da6537423bfea1902984dcecdc9}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}(name,  Func\+Type)~    .template function$<$static\+\_\+cast$<$Func\+Type$>$(\&\+\_\+\+Meta\+Type\+::name)$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
 \begin{DoxyCompactList}\small\item\em Register an overloaded function. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_register_8hpp_a9d1444e9f1a4258d8b336584443a3cf4}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+I\+G\+N\+AL}}(name, ...)~    .signal$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))
-\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{_register_8hpp_a9d1444e9f1a4258d8b336584443a3cf4}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+I\+G\+N\+AL}}(name, ...)~    .template signal$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))
+\begin{DoxyCompactList}\small\item\em Register a non-\/property bound signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{k\+F\+::\+Internal\+::\+To\+Const\+Reference}} = std\+::conditional\+\_\+t$<$ std\+::is\+\_\+pointer\+\_\+v$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$, const std\+::add\+\_\+const\+\_\+t$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&, const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \& $>$
+\begin{DoxyCompactList}\small\item\em Transform a type to a constant reference (add constant tag to pointers) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Template\+Type $>$ }\\Hashed\+Name \mbox{\hyperlink{namespacek_f_1_1_internal_a41c39a4ec21dec5eee44f98a93030c3a}{k\+F\+::\+Internal\+::\+Get\+Template\+Specialized\+Name}} (Hashed\+Name hash)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the name of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Types\+Tuple , std\+::size\+\_\+t Index = 0ul$>$ }\\Hashed\+Name \mbox{\hyperlink{namespacek_f_1_1_internal_acc50d3bf6390006adad08fe8e0ffb57e}{k\+F\+::\+Internal\+::\+Get\+Template\+Type\+Names}} (Hashed\+Name hash)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the sum of parameter template type names of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Vars\+Tuple, std\+::size\+\_\+t Index = 0ul$>$ }\\Hashed\+Name \mbox{\hyperlink{namespacek_f_1_1_internal_a40c2e6d12ef8bb180a45895b36f89740}{k\+F\+::\+Internal\+::\+Get\+Template\+Variable\+Names}} (Hashed\+Name hash)
+\begin{DoxyCompactList}\small\item\em Helper used internall to query the sum of parameter template variable value names of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Template\+Type $>$ }\\std\+::string \mbox{\hyperlink{namespacek_f_1_1_internal_a7968ca965c3e473c772de75570da2efa}{k\+F\+::\+Internal\+::\+Get\+Template\+Specialized\+Literals}} (const std\+::string\+\_\+view \&literal)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the name of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Types\+Tuple , std\+::size\+\_\+t Index = 0ul$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_internal_a74bc39bea41655ae499b768012588a6f}{k\+F\+::\+Internal\+::\+Get\+Template\+Type\+Literals}} (std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the template type literal name of a specialized template type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Vars\+Tuple, std\+::size\+\_\+t Index = 0ul$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_internal_a7cdf21ba885462f78db55aab7fc98cb0}{k\+F\+::\+Internal\+::\+Get\+Template\+Variable\+Literals}} (std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Helper used internally to query the template variable literal name of a specialized template type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
@@ -53,7 +101,7 @@ This graph shows which files directly or indirectly include this file\+:
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_BASE@{KUBE\_REGISTER\_BASE}}
 \index{KUBE\_REGISTER\_BASE@{KUBE\_REGISTER\_BASE}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_BASE}{KUBE\_REGISTER\_BASE}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+B\+A\+SE(\begin{DoxyParamCaption}\item[{}]{Base\+Type }\end{DoxyParamCaption})~    .base$<$Base\+Type$>$()}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+B\+A\+SE(\begin{DoxyParamCaption}\item[{}]{Base\+Type }\end{DoxyParamCaption})~    .template base$<$Base\+Type$>$()}
 
 
 
@@ -63,7 +111,7 @@ Register a base type.
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_CONSTRUCTOR@{KUBE\_REGISTER\_CONSTRUCTOR}}
 \index{KUBE\_REGISTER\_CONSTRUCTOR@{KUBE\_REGISTER\_CONSTRUCTOR}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_CONSTRUCTOR}{KUBE\_REGISTER\_CONSTRUCTOR}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~    .constructor$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$();}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+O\+N\+S\+T\+R\+U\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~    .template constructor$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$();}
 
 
 
@@ -73,7 +121,7 @@ Register a custom constructor (not default / copy / move)
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_FUNCTION@{KUBE\_REGISTER\_FUNCTION}}
 \index{KUBE\_REGISTER\_FUNCTION@{KUBE\_REGISTER\_FUNCTION}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_FUNCTION}{KUBE\_REGISTER\_FUNCTION}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~    .function$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~    .template function$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
 
 
 
@@ -83,115 +131,299 @@ Register a function.
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_FUNCTION\_OVERLOAD@{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}}
 \index{KUBE\_REGISTER\_FUNCTION\_OVERLOAD@{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}{KUBE\_REGISTER\_FUNCTION\_OVERLOAD}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{Func\+Type }\end{DoxyParamCaption})~    .function$<$static\+\_\+cast$<$Func\+Type$>$(\&\+\_\+\+Meta\+Type\+::name)$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+O\+V\+E\+R\+L\+O\+AD(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{Func\+Type }\end{DoxyParamCaption})~    .template function$<$static\+\_\+cast$<$Func\+Type$>$(\&\+\_\+\+Meta\+Type\+::name)$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
 
 
 
 Register an overloaded function. 
 
-\mbox{\Hypertarget{_register_8hpp_ada09df313433c110ac78e8674448ae63}\label{_register_8hpp_ada09df313433c110ac78e8674448ae63}} 
-\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_COPY@{KUBE\_REGISTER\_PROPERTY\_COPY}}
-\index{KUBE\_REGISTER\_PROPERTY\_COPY@{KUBE\_REGISTER\_PROPERTY\_COPY}!Register.hpp@{Register.hpp}}
-\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_COPY}{KUBE\_REGISTER\_PROPERTY\_COPY}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_register_8hpp_a2cb079b1b575cc68cc64fd240e239b07}\label{_register_8hpp_a2cb079b1b575cc68cc64fd240e239b07}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_LATER@{KUBE\_REGISTER\_LATER}}
+\index{KUBE\_REGISTER\_LATER@{KUBE\_REGISTER\_LATER}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_LATER}{KUBE\_REGISTER\_LATER}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+A\+T\+ER(\begin{DoxyParamCaption}\item[{}]{Class\+Type,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_a333ea323efaa841907c188cb1decacb7}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}(\_MetaType::*)(\textcolor{keyword}{const }PropertyType \&)\textcolor{keyword}{>}(\&\_MetaType::name) \(\backslash\)}
-\DoxyCodeLine{    ) \(\backslash\)}
-\DoxyCodeLine{    KUBE\_REGISTER\_SIGNAL(name\#\#Changed)}
+\DoxyCodeLine{\textcolor{keyword}{private}: \(\backslash\)}
+\DoxyCodeLine{    using \_MetaType = ClassType; \(\backslash\)}
+\DoxyCodeLine{    ADD\_PREFIX\_EACH(KUBE\_MAKE\_, \_\_VA\_ARGS\_\_) \(\backslash\)}
+\DoxyCodeLine{    [[nodiscard]] \textcolor{keyword}{static} \textcolor{keyword}{inline} \mbox{\hyperlink{classk_f_1_1_meta_1_1_register_later}{kF::Meta::RegisterLater}} RegisterMetaData(\textcolor{keywordtype}{void}) \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        return kF::Meta::RegisterLater::Make<\_MetaType>( \(\backslash\)}
+\DoxyCodeLine{            [] \{ \(\backslash\)}
+\DoxyCodeLine{                std::string literal = kF::Internal::GetTemplateSpecializedLiterals<\_MetaType>(\#ClassType); \(\backslash\)}
+\DoxyCodeLine{                std::cout << \textcolor{stringliteral}{"{}[ Registering meta-\/type '"{}} << literal << \textcolor{stringliteral}{"{}' ]"{}} << std::endl; \(\backslash\)}
+\DoxyCodeLine{                KUBE\_REGISTER\_TYPE(ClassType, literal) \(\backslash\)}
+\DoxyCodeLine{                    ADD\_PREFIX\_EACH(KUBE\_REGISTER\_, \_\_VA\_ARGS\_\_) ; \(\backslash\)}
+\DoxyCodeLine{            \} \(\backslash\)}
+\DoxyCodeLine{        ); \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keyword}{inline} \mbox{\hyperlink{classk_f_1_1_meta_1_1_register_later}{kF::Meta::RegisterLater}} \_RegisterLaterInstance \{ RegisterMetaData() \};}
 
 \end{DoxyCode}
 
 
-Register a copy only property. 
+Add static registerer for automatic registeration. 
 
-\mbox{\Hypertarget{_register_8hpp_ae13315d37e3b7f5b7ec87f925d08789c}\label{_register_8hpp_ae13315d37e3b7f5b7ec87f925d08789c}} 
-\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_COPY\_READONLY@{KUBE\_REGISTER\_PROPERTY\_COPY\_READONLY}}
-\index{KUBE\_REGISTER\_PROPERTY\_COPY\_READONLY@{KUBE\_REGISTER\_PROPERTY\_COPY\_READONLY}!Register.hpp@{Register.hpp}}
-\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_COPY\_READONLY}{KUBE\_REGISTER\_PROPERTY\_COPY\_READONLY}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+A\+D\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+@ Author\+: Matthieu Moinvaziri @ Description\+: Registeres generation helpers \mbox{\Hypertarget{_register_8hpp_abcb841ec4d7fb41eff911ab59f846788}\label{_register_8hpp_abcb841ec4d7fb41eff911ab59f846788}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY@{KUBE\_REGISTER\_PROPERTY}}
+\index{KUBE\_REGISTER\_PROPERTY@{KUBE\_REGISTER\_PROPERTY}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY}{KUBE\_REGISTER\_PROPERTY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+TY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_a333ea323efaa841907c188cb1decacb7}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keyword}{nullptr} \(\backslash\)}
-\DoxyCodeLine{    ) \(\backslash\)}
-\DoxyCodeLine{    KUBE\_REGISTER\_SIGNAL(name\#\#Changed)}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{kF::Internal::ToConstReference<PropertyType>}}(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_copy\_assignable\_v<PropertyType>, \&\_MetaType::name<const PropertyType \&>, \textcolor{keyword}{nullptr}), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_move\_assignable\_v<PropertyType>, \&\_MetaType::name<PropertyType \&\&>, \textcolor{keyword}{nullptr}) \(\backslash\)}
+\DoxyCodeLine{    )}
 
 \end{DoxyCode}
 
 
-Register a read and copy only property. 
+Register a constant readable, writable and signalable property. 
 
-\mbox{\Hypertarget{_register_8hpp_aa84883be05e17cf4e9a29180fb23e6d1}\label{_register_8hpp_aa84883be05e17cf4e9a29180fb23e6d1}} 
-\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_COPY\_REF@{KUBE\_REGISTER\_PROPERTY\_COPY\_REF}}
-\index{KUBE\_REGISTER\_PROPERTY\_COPY\_REF@{KUBE\_REGISTER\_PROPERTY\_COPY\_REF}!Register.hpp@{Register.hpp}}
-\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_COPY\_REF}{KUBE\_REGISTER\_PROPERTY\_COPY\_REF}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_register_8hpp_ada09df313433c110ac78e8674448ae63}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+PY}}(Property\+Type, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
-
-\mbox{\Hypertarget{_register_8hpp_a333ea323efaa841907c188cb1decacb7}\label{_register_8hpp_a333ea323efaa841907c188cb1decacb7}} 
+\mbox{\Hypertarget{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}\label{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}} 
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM@{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}
 \index{KUBE\_REGISTER\_PROPERTY\_CUSTOM@{KUBE\_REGISTER\_PROPERTY\_CUSTOM}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+OM(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{setter }\end{DoxyParamCaption})~    .\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}$<$getter, setter$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+OM(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{copy\+Setter,  }\item[{}]{move\+Setter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, move\+Setter, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))}
 
 
 
-Register a custom property using getter and setter. 
+Register a custom property using getter, copy setter, move setter and a signal. 
 
-\mbox{\Hypertarget{_register_8hpp_a5ec91758e51b7038fe91154ed75d7196}\label{_register_8hpp_a5ec91758e51b7038fe91154ed75d7196}} 
-\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_MOVE@{KUBE\_REGISTER\_PROPERTY\_MOVE}}
-\index{KUBE\_REGISTER\_PROPERTY\_MOVE@{KUBE\_REGISTER\_PROPERTY\_MOVE}!Register.hpp@{Register.hpp}}
-\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_MOVE}{KUBE\_REGISTER\_PROPERTY\_MOVE}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_register_8hpp_a7a72433cd2cb6969c08ee8e0d98b574d}\label{_register_8hpp_a7a72433cd2cb6969c08ee8e0d98b574d}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{copy\+Setter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, nullptr, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))}
+
+
+
+Register a custom property using getter, copy setter and a signal. 
+
+\mbox{\Hypertarget{_register_8hpp_a7ae4fba9b9684a494baba8460e04fcaa}\label{_register_8hpp_a7ae4fba9b9684a494baba8460e04fcaa}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_COPY\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+C\+O\+P\+Y\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{copy\+Setter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
+
+
+
+Register a custom property using getter and copy setter (no signal) 
+
+\mbox{\Hypertarget{_register_8hpp_a74dff32de2208139396eb6b3fd0a046f}\label{_register_8hpp_a74dff32de2208139396eb6b3fd0a046f}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{move\+Setter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, move\+Setter, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))}
+
+
+
+Register a custom property using getter, move setter and a signal. 
+
+\mbox{\Hypertarget{_register_8hpp_acfd84122c8bf54ef3ab70d77e3c51331}\label{_register_8hpp_acfd84122c8bf54ef3ab70d77e3c51331}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_MOVE\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+M\+O\+V\+E\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{move\+Setter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, move\+Setter, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
+
+
+
+Register a custom property using getter and move setter (no signal) 
+
+\mbox{\Hypertarget{_register_8hpp_a71cec8ed7f1387ed0adfebe4f81cbb51}\label{_register_8hpp_a71cec8ed7f1387ed0adfebe4f81cbb51}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+R\+E\+A\+D\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, nullptr, \&\+\_\+\+Meta\+Type\+::name\#\#Changed$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name), \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\mbox{\hyperlink{_macro_utils_8hpp_a210176ec504fd9aa2393fa727fabf965}{\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}}(name\#\#Changed)))}
+
+
+
+Register a custom property using getter and signal. 
+
+\mbox{\Hypertarget{_register_8hpp_a3dfaf8d4cd1c847fa104b9a4b49bee06}\label{_register_8hpp_a3dfaf8d4cd1c847fa104b9a4b49bee06}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_READONLY\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+R\+E\+A\+D\+O\+N\+L\+Y\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, nullptr, nullptr, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
+
+
+
+Register a custom property using getter (no signal) 
+
+\mbox{\Hypertarget{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}\label{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{getter,  }\item[{}]{copy\+Setter,  }\item[{}]{move\+Setter }\end{DoxyParamCaption})~    .template \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}$<$getter, copy\+Setter, move\+Setter, nullptr$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
+
+
+
+Register a custom property using getter, copy setter and move setter (no signal) 
+
+\mbox{\Hypertarget{_register_8hpp_a0561ddb66ff2f07852eaae76e01d0c53}\label{_register_8hpp_a0561ddb66ff2f07852eaae76e01d0c53}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_GETONLY@{KUBE\_REGISTER\_PROPERTY\_GETONLY}}
+\index{KUBE\_REGISTER\_PROPERTY\_GETONLY@{KUBE\_REGISTER\_PROPERTY\_GETONLY}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_GETONLY}{KUBE\_REGISTER\_PROPERTY\_GETONLY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+G\+E\+T\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_a333ea323efaa841907c188cb1decacb7}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
-\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}(\_MetaType::*)(PropertyType \&\&)\textcolor{keyword}{>}(\&\_MetaType::name) \(\backslash\)}
-\DoxyCodeLine{    ) \(\backslash\)}
-\DoxyCodeLine{    KUBE\_REGISTER\_SIGNAL(name\#\#Changed)}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{kF::Internal::ToConstReference<PropertyType>}}(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr}, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr} \(\backslash\)}
+\DoxyCodeLine{    )}
 
 \end{DoxyCode}
 
 
-Register a move only property. 
+Register a const readable and signalable property. 
 
-\mbox{\Hypertarget{_register_8hpp_a7fee9d445af8e917d989a5f79ed00621}\label{_register_8hpp_a7fee9d445af8e917d989a5f79ed00621}} 
-\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_MOVE\_READONLY@{KUBE\_REGISTER\_PROPERTY\_MOVE\_READONLY}}
-\index{KUBE\_REGISTER\_PROPERTY\_MOVE\_READONLY@{KUBE\_REGISTER\_PROPERTY\_MOVE\_READONLY}!Register.hpp@{Register.hpp}}
-\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_MOVE\_READONLY}{KUBE\_REGISTER\_PROPERTY\_MOVE\_READONLY}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+A\+D\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_register_8hpp_ae13315d37e3b7f5b7ec87f925d08789c}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+C\+O\+P\+Y\+\_\+\+R\+E\+A\+D\+O\+N\+LY}}(Property\+Type, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+\mbox{\Hypertarget{_register_8hpp_a102935aea36a2e06a2ab288e9071e668}\label{_register_8hpp_a102935aea36a2e06a2ab288e9071e668}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_GETONLY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_GETONLY\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_GETONLY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_GETONLY\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_GETONLY\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_GETONLY\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+G\+E\+T\+O\+N\+L\+Y\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{kF::Internal::ToConstReference<PropertyType>}}(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr}, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr} \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
 
 
+Register a const readable property (no signal) 
 
-Register a read and move only property. 
+\mbox{\Hypertarget{_register_8hpp_a692c8562c92a48071bf8b87ae0c0ee0b}\label{_register_8hpp_a692c8562c92a48071bf8b87ae0c0ee0b}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{_register_8hpp_aa6a36c1b8795d30da9a0542d516b0e24}\label{_register_8hpp_aa6a36c1b8795d30da9a0542d516b0e24}} 
-\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_MOVE\_REF@{KUBE\_REGISTER\_PROPERTY\_MOVE\_REF}}
-\index{KUBE\_REGISTER\_PROPERTY\_MOVE\_REF@{KUBE\_REGISTER\_PROPERTY\_MOVE\_REF}!Register.hpp@{Register.hpp}}
-\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_MOVE\_REF}{KUBE\_REGISTER\_PROPERTY\_MOVE\_REF}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+V\+E\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_register_8hpp_a5ec91758e51b7038fe91154ed75d7196}{K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+M\+O\+VE}}(Property\+Type, name, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{namespacek_f_1_1_internal_a6607241a8415b6e82d1e7c0818255b53}{kF::Internal::ToConstReference<PropertyType>}}(\_MetaType::*)(\textcolor{keywordtype}{void}) \textcolor{keyword}{const }noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_copy\_assignable\_v<PropertyType>, \&\_MetaType::name<const PropertyType \&>, \textcolor{keyword}{nullptr}), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_move\_assignable\_v<PropertyType>, \&\_MetaType::name<PropertyType \&\&>, \textcolor{keyword}{nullptr}) \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Register a constant readable and writable property (no signal) 
+
+\mbox{\Hypertarget{_register_8hpp_a0ec54663fd735cc9b4c353c0cae68fda}\label{_register_8hpp_a0ec54663fd735cc9b4c353c0cae68fda}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_VOLATILE@{KUBE\_REGISTER\_PROPERTY\_VOLATILE}}
+\index{KUBE\_REGISTER\_PROPERTY\_VOLATILE@{KUBE\_REGISTER\_PROPERTY\_VOLATILE}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_VOLATILE}{KUBE\_REGISTER\_PROPERTY\_VOLATILE}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+LE(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_copy\_assignable\_v<PropertyType>, \&\_MetaType::name<const PropertyType \&>, \textcolor{keyword}{nullptr}), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_move\_assignable\_v<PropertyType>, \&\_MetaType::name<PropertyType \&\&>, \textcolor{keyword}{nullptr}) \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Register a volatile readable, writable and signalable property. 
+
+\mbox{\Hypertarget{_register_8hpp_ab6e6f0afd2f0b823d4f626fab852add1}\label{_register_8hpp_ab6e6f0afd2f0b823d4f626fab852add1}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY@{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY}}
+\index{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY@{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY}{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E\+\_\+\+G\+E\+T\+O\+N\+LY(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aa4ccf37f7f77ccec29b6db530d484764}{KUBE\_REGISTER\_PROPERTY\_CUSTOM}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr}, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr} \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Register a const readable and signalable property. 
+
+\mbox{\Hypertarget{_register_8hpp_a0ce2ba50f4f13dcc9b42d6954aa80a87}\label{_register_8hpp_a0ce2ba50f4f13dcc9b42d6954aa80a87}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_GETONLY\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E\+\_\+\+G\+E\+T\+O\+N\+L\+Y\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr}, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{nullptr} \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Register a const readable property (no signal) 
+
+\mbox{\Hypertarget{_register_8hpp_ab0f13b54e7948394f0c7f0d876da6c6c}\label{_register_8hpp_ab0f13b54e7948394f0c7f0d876da6c6c}} 
+\index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_PROPERTY\_VOLATILE\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_SIGLESS}}
+\index{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_SIGLESS@{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_SIGLESS}!Register.hpp@{Register.hpp}}
+\doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_SIGLESS}{KUBE\_REGISTER\_PROPERTY\_VOLATILE\_SIGLESS}}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+V\+O\+L\+A\+T\+I\+L\+E\+\_\+\+S\+I\+G\+L\+E\+SS(\begin{DoxyParamCaption}\item[{}]{Property\+Type,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{_register_8hpp_aef4ee1e2dc5b094096fcda720337208a}{KUBE\_REGISTER\_PROPERTY\_CUSTOM\_SIGLESS}}(PropertyType, name, \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keyword}{static\_cast<}PropertyType \&(\_MetaType::*)(\textcolor{keywordtype}{void}) noexcept\textcolor{keyword}{>}(\&\_MetaType::name), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_copy\_assignable\_v<PropertyType>, \&\_MetaType::name<const PropertyType \&>, \textcolor{keyword}{nullptr}), \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a5a4725accd3b34da6c550210adaff352}{ConstexprTernary}}(std::is\_move\_assignable\_v<PropertyType>, \&\_MetaType::name<PropertyType \&\&>, \textcolor{keyword}{nullptr}) \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+Register a volatile readable and writable property (no signal) 
 
 \mbox{\Hypertarget{_register_8hpp_a9d1444e9f1a4258d8b336584443a3cf4}\label{_register_8hpp_a9d1444e9f1a4258d8b336584443a3cf4}} 
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_SIGNAL@{KUBE\_REGISTER\_SIGNAL}}
 \index{KUBE\_REGISTER\_SIGNAL@{KUBE\_REGISTER\_SIGNAL}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_SIGNAL}{KUBE\_REGISTER\_SIGNAL}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+I\+G\+N\+AL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    .signal$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#name))}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+I\+G\+N\+AL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~    .template signal$<$\&\+\_\+\+Meta\+Type\+::name$>$(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{k\+F\+::\+Hash}}(\#name))}
 
-\mbox{\Hypertarget{_register_8hpp_a2840fe5dd98eebd57318a7bf86267f38}\label{_register_8hpp_a2840fe5dd98eebd57318a7bf86267f38}} 
+
+
+Register a non-\/property bound signal. 
+
+\mbox{\Hypertarget{_register_8hpp_a8e25b73d3592f894548130de25c00722}\label{_register_8hpp_a8e25b73d3592f894548130de25c00722}} 
 \index{Register.hpp@{Register.hpp}!KUBE\_REGISTER\_TYPE@{KUBE\_REGISTER\_TYPE}}
 \index{KUBE\_REGISTER\_TYPE@{KUBE\_REGISTER\_TYPE}!Register.hpp@{Register.hpp}}
 \doxysubsubsection{\texorpdfstring{KUBE\_REGISTER\_TYPE}{KUBE\_REGISTER\_TYPE}}
-{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{Class\+Type,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{k\+F\+::\+Meta\+::\+Factory}}$<$Class\+Type$>$(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{k\+F\+::\+Hash}}(\#Class\+Type))}
+{\footnotesize\ttfamily \#define K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{Class\+Type,  }\item[{}]{Class\+Literal }\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{kF::Meta::Factory<\_MetaType>}}( \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{kF::Hash}}(\#ClassType), \(\backslash\)}
+\DoxyCodeLine{        kF::Internal::GetTemplateSpecializedName<\_MetaType>(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{kF::Hash}}(\#ClassType)), \(\backslash\)}
+\DoxyCodeLine{        ClassLiteral \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
 
 
 Register a new type (already used by \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+ER\textquotesingle{} and \textquotesingle{}K\+U\+B\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+T\+I\+A\+B\+LE\textquotesingle{}) 
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: Registeres generation helpers 

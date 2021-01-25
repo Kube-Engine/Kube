@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -78,13 +78,25 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;<a class="el" href="_functor_8hpp_source.html">Kube/Core/Functor.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for NodeType.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_node_type_8hpp__incl.png" border="0" usemap="#a_kube_2_flow_2_node_type_8hpp" alt=""/></div>
 <map name="_kube_2_flow_2_node_type_8hpp" id="a_kube_2_flow_2_node_type_8hpp">
-<area shape="rect" title=" " alt="" coords="5,5,177,32"/>
-<area shape="rect" title=" " alt="" coords="52,80,131,107"/>
+<area shape="rect" title=" " alt="" coords="182,5,354,32"/>
+<area shape="rect" title=" " alt="" coords="158,80,237,107"/>
+<area shape="rect" href="_functor_8hpp.html" title=" " alt="" coords="261,80,419,107"/>
+<area shape="rect" title=" " alt="" coords="264,155,325,181"/>
+<area shape="rect" href="_utils_8hpp.html" title=" " alt="" coords="349,155,424,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,88,256"/>
+<area shape="rect" title=" " alt="" coords="112,229,187,256"/>
+<area shape="rect" title=" " alt="" coords="211,229,285,256"/>
+<area shape="rect" title=" " alt="" coords="310,229,375,256"/>
+<area shape="rect" title=" " alt="" coords="399,229,462,256"/>
+<area shape="rect" title=" " alt="" coords="487,229,540,256"/>
+<area shape="rect" title=" " alt="" coords="565,229,625,256"/>
+<area shape="rect" href="_utils_8ipp.html" title=" " alt="" coords="649,229,719,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -92,22 +104,23 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_node_type_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_flow_2_node_type_8hppdep" alt=""/></div>
 <map name="_kube_2_flow_2_node_type_8hppdep" id="a_kube_2_flow_2_node_type_8hppdep">
-<area shape="rect" title=" " alt="" coords="521,5,693,32"/>
-<area shape="rect" href="_node_8hpp.html" title=" " alt="" coords="425,80,569,107"/>
-<area shape="rect" href="_graph_8hpp.html" title=" " alt="" coords="533,155,681,181"/>
-<area shape="rect" href="_task_8hpp.html" title=" " alt="" coords="644,80,785,107"/>
-<area shape="rect" href="_a_system_8hpp.html" title=" " alt="" coords="402,229,569,256"/>
-<area shape="rect" href="_system_graph_8hpp.html" title=" " alt="" coords="403,304,597,331"/>
-<area shape="rect" href="_worker_8hpp.html" title=" " alt="" coords="644,229,799,256"/>
-<area shape="rect" href="_registry_8hpp.html" title=" " alt="" coords="225,379,386,405"/>
-<area shape="rect" href="_system_graph_8cpp.html" title=" " alt="" coords="410,379,603,405"/>
-<area shape="rect" href="_application_8hpp.html" title=" " alt="" coords="125,453,297,480"/>
-<area shape="rect" href="_e_c_s_2_dummy_8cpp.html" title=" " alt="" coords="321,453,479,480"/>
-<area shape="rect" href="_e_c_s_application_8hpp.html" title=" " alt="" coords="5,528,205,555"/>
-<area shape="rect" href="_application_8cpp.html" title=" " alt="" coords="230,528,402,555"/>
-<area shape="rect" href="_scheduler_8hpp.html" title=" " alt="" coords="636,304,807,331"/>
-<area shape="rect" href="_worker_8cpp.html" title=" " alt="" coords="639,379,793,405"/>
-<area shape="rect" href="_scheduler_8cpp.html" title=" " alt="" coords="817,379,988,405"/>
+<area shape="rect" title=" " alt="" coords="528,5,700,32"/>
+<area shape="rect" href="_node_8hpp.html" title=" " alt="" coords="459,80,603,107"/>
+<area shape="rect" href="_task_8hpp.html" title=" " alt="" coords="627,80,769,107"/>
+<area shape="rect" href="_graph_8hpp.html" title=" " alt="" coords="540,155,688,181"/>
+<area shape="rect" href="_a_system_8hpp.html" title=" " alt="" coords="409,229,576,256"/>
+<area shape="rect" href="_system_graph_8hpp.html" title=" " alt="" coords="396,304,589,331"/>
+<area shape="rect" href="_worker_8hpp.html" title=" " alt="" coords="718,229,873,256"/>
+<area shape="rect" href="_registry_8hpp.html" title=" " alt="" coords="211,379,372,405"/>
+<area shape="rect" href="_system_graph_8cpp.html" title=" " alt="" coords="396,379,589,405"/>
+<area shape="rect" href="_application_8hpp.html" title=" " alt="" coords="111,453,283,480"/>
+<area shape="rect" href="_e_c_s_2_dummy_8cpp.html" title=" " alt="" coords="307,453,465,480"/>
+<area shape="rect" href="_application_8cpp.html" title=" " alt="" coords="5,528,177,555"/>
+<area shape="rect" href="_e_c_s_application_8hpp.html" title=" " alt="" coords="202,528,402,555"/>
+<area shape="rect" href="_scheduler_8hpp.html" title=" " alt="" coords="743,304,914,331"/>
+<area shape="rect" href="_graph_8cpp.html" title=" " alt="" coords="613,379,761,405"/>
+<area shape="rect" href="_worker_8cpp.html" title=" " alt="" coords="786,379,941,405"/>
+<area shape="rect" href="_scheduler_8cpp.html" title=" " alt="" coords="965,379,1135,405"/>
 </map>
 </div>
 </div>
@@ -122,18 +135,18 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a52ad24b8e31aa1630b59a4f4972c8ffa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#a52ad24b8e31aa1630b59a4f4972c8ffa">kF::Flow::StaticFunc</a> = std::function&lt; void(void)&gt;</td></tr>
-<tr class="memdesc:a52ad24b8e31aa1630b59a4f4972c8ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static functor.  <a href="namespacek_f_1_1_flow.html#a52ad24b8e31aa1630b59a4f4972c8ffa">More...</a><br /></td></tr>
-<tr class="separator:a52ad24b8e31aa1630b59a4f4972c8ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aac085b5c9217a543ed0df0b0dbce24"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#a0aac085b5c9217a543ed0df0b0dbce24">kF::Flow::SwitchFunc</a> = std::function&lt; std::size_t(void)&gt;</td></tr>
-<tr class="memdesc:a0aac085b5c9217a543ed0df0b0dbce24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch functor.  <a href="namespacek_f_1_1_flow.html#a0aac085b5c9217a543ed0df0b0dbce24">More...</a><br /></td></tr>
-<tr class="separator:a0aac085b5c9217a543ed0df0b0dbce24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49630518815a2370c7a668c3d9e620ca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#a49630518815a2370c7a668c3d9e620ca">kF::Flow::DynamicFunc</a> = std::function&lt; void(Graph &amp;)&gt;</td></tr>
-<tr class="memdesc:a49630518815a2370c7a668c3d9e620ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic functor.  <a href="namespacek_f_1_1_flow.html#a49630518815a2370c7a668c3d9e620ca">More...</a><br /></td></tr>
-<tr class="separator:a49630518815a2370c7a668c3d9e620ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab614af0b6eb145d96ed5c089dd300e22"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#ab614af0b6eb145d96ed5c089dd300e22">kF::Flow::NotifyFunc</a> = std::function&lt; void(void)&gt;</td></tr>
-<tr class="memdesc:ab614af0b6eb145d96ed5c089dd300e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify functor to be called on the event thread.  <a href="namespacek_f_1_1_flow.html#ab614af0b6eb145d96ed5c089dd300e22">More...</a><br /></td></tr>
-<tr class="separator:ab614af0b6eb145d96ed5c089dd300e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fe9c6c68c26e28d8d9c892119c0b308"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#a5fe9c6c68c26e28d8d9c892119c0b308">kF::Flow::StaticFunc</a> = Core::Functor&lt; void(void)&gt;</td></tr>
+<tr class="memdesc:a5fe9c6c68c26e28d8d9c892119c0b308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static functor.  <a href="namespacek_f_1_1_flow.html#a5fe9c6c68c26e28d8d9c892119c0b308">More...</a><br /></td></tr>
+<tr class="separator:a5fe9c6c68c26e28d8d9c892119c0b308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6076cd2de6905c90897505be3c178081"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#a6076cd2de6905c90897505be3c178081">kF::Flow::SwitchFunc</a> = Core::Functor&lt; std::size_t(void)&gt;</td></tr>
+<tr class="memdesc:a6076cd2de6905c90897505be3c178081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch functor.  <a href="namespacek_f_1_1_flow.html#a6076cd2de6905c90897505be3c178081">More...</a><br /></td></tr>
+<tr class="separator:a6076cd2de6905c90897505be3c178081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ecd56b8632ccbed164c5e294bf0bd0f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#a9ecd56b8632ccbed164c5e294bf0bd0f">kF::Flow::DynamicFunc</a> = Core::Functor&lt; void(Graph &amp;)&gt;</td></tr>
+<tr class="memdesc:a9ecd56b8632ccbed164c5e294bf0bd0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic functor.  <a href="namespacek_f_1_1_flow.html#a9ecd56b8632ccbed164c5e294bf0bd0f">More...</a><br /></td></tr>
+<tr class="separator:a9ecd56b8632ccbed164c5e294bf0bd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add5b34d1e31da545cc260d8dca5373e6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_flow.html#add5b34d1e31da545cc260d8dca5373e6">kF::Flow::NotifyFunc</a> = Core::Functor&lt; void(void)&gt;</td></tr>
+<tr class="memdesc:add5b34d1e31da545cc260d8dca5373e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify functor to be called on the event thread.  <a href="namespacek_f_1_1_flow.html#add5b34d1e31da545cc260d8dca5373e6">More...</a><br /></td></tr>
+<tr class="separator:add5b34d1e31da545cc260d8dca5373e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -89,10 +89,10 @@ Public Types</h2></td></tr>
 <tr class="memitem:a193d96cde21920e0e6d5a546098cacd7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#a193d96cde21920e0e6d5a546098cacd7">Components</a> = <a class="el" href="namespacek_f_1_1_core.html#a5a34083f574656e84e168943e48ddcd6">Core::Vector</a>&lt; Component, EntityType &gt;</td></tr>
 <tr class="memdesc:a193d96cde21920e0e6d5a546098cacd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of components.  <a href="classk_f_1_1_e_c_s_1_1_component_table.html#a193d96cde21920e0e6d5a546098cacd7">More...</a><br /></td></tr>
 <tr class="separator:a193d96cde21920e0e6d5a546098cacd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0663333a0b57ad886f212f1f8e68eab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad0663333a0b57ad886f212f1f8e68eab">Iterator</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a6a8fd04b82b79c18d740c0286fe703fa">Components::Iterator</a></td></tr>
+<tr class="memitem:ad0663333a0b57ad886f212f1f8e68eab"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad0663333a0b57ad886f212f1f8e68eab">Iterator</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a9e862e84e29e7e8da88905c69c377d4a">Components::Iterator</a></td></tr>
 <tr class="memdesc:ad0663333a0b57ad886f212f1f8e68eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator over components.  <a href="classk_f_1_1_e_c_s_1_1_component_table.html#ad0663333a0b57ad886f212f1f8e68eab">More...</a><br /></td></tr>
 <tr class="separator:ad0663333a0b57ad886f212f1f8e68eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c108bb66e7ab426d2fa3937165ab5a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad1c108bb66e7ab426d2fa3937165ab5a">ConstIterator</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a1b45e24e2a351bac0e5cdb5c45f5f27b">Components::ConstIterator</a></td></tr>
+<tr class="memitem:ad1c108bb66e7ab426d2fa3937165ab5a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad1c108bb66e7ab426d2fa3937165ab5a">ConstIterator</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a7b839c067c1ca6b1f99f59e820fd62c5">Components::ConstIterator</a></td></tr>
 <tr class="memdesc:ad1c108bb66e7ab426d2fa3937165ab5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Readonly iterator over components.  <a href="classk_f_1_1_e_c_s_1_1_component_table.html#ad1c108bb66e7ab426d2fa3937165ab5a">More...</a><br /></td></tr>
 <tr class="separator:ad1c108bb66e7ab426d2fa3937165ab5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a853dd6911e79bf6f8cd493c71c6de2b6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#a853dd6911e79bf6f8cd493c71c6de2b6">AddDispatcher</a> = <a class="el" href="namespacek_f_1_1_core.html#ab87463c4c51236e14eb4caf724d46e98">Core::TrivialDispatcher</a>&lt; void(EntityType)&gt;</td></tr>
@@ -216,7 +216,7 @@ template&lt;typename Component , kF::ECS::EntityRequirements EntityType&gt; </di
 template&lt;typename Component , kF::ECS::EntityRequirements EntityType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html">kF::ECS::ComponentTable</a>&lt; Component, EntityType &gt;::<a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad1c108bb66e7ab426d2fa3937165ab5a">ConstIterator</a> =  <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a1b45e24e2a351bac0e5cdb5c45f5f27b">Components::ConstIterator</a></td>
+          <td class="memname">using <a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html">kF::ECS::ComponentTable</a>&lt; Component, EntityType &gt;::<a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad1c108bb66e7ab426d2fa3937165ab5a">ConstIterator</a> =  <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a7b839c067c1ca6b1f99f59e820fd62c5">Components::ConstIterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -234,7 +234,7 @@ template&lt;typename Component , kF::ECS::EntityRequirements EntityType&gt; </di
 template&lt;typename Component , kF::ECS::EntityRequirements EntityType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html">kF::ECS::ComponentTable</a>&lt; Component, EntityType &gt;::<a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad0663333a0b57ad886f212f1f8e68eab">Iterator</a> =  <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a6a8fd04b82b79c18d740c0286fe703fa">Components::Iterator</a></td>
+          <td class="memname">using <a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html">kF::ECS::ComponentTable</a>&lt; Component, EntityType &gt;::<a class="el" href="classk_f_1_1_e_c_s_1_1_component_table.html#ad0663333a0b57ad886f212f1f8e68eab">Iterator</a> =  <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a9e862e84e29e7e8da88905c69c377d4a">Components::Iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -81,6 +81,7 @@ $(function() {
 , <a class="el" href="classk_f_1_1_graphics_1_1_auto_command_pool.html#a9ebb003165ee08fb844455ec1a435306">kF::Graphics::AutoCommandPool</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_command_pool.html#a7515992e3845873c014d8290f08668a2">kF::Graphics::CommandPool</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_manual_command_pool.html#af188cfa385c6211ea64a8b937fe420bd">kF::Graphics::ManualCommandPool</a>
+, <a class="el" href="classk_f_1_1_object_utils_1_1_tree.html#a3078d9defea7b55d3a6e4983e6452aa5">kF::ObjectUtils::Tree</a>
 </li>
 <li>addPresentDependencies()
 : <a class="el" href="classk_f_1_1_graphics_1_1_command_dispatcher.html#a8a31feaed7a61275b8a10243e883f5e1">kF::Graphics::CommandDispatcher</a>
@@ -90,7 +91,11 @@ $(function() {
 </li>
 <li>allocate()
 : <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#aed77bc1cfe9bd7c52e3f3df442f12de7">kF::Core::HeapArray&lt; Type &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base.html#a5f1670d285027ccad353fa7a29868e94">kF::Core::Internal::AllocatedFlatVectorBase&lt; Type, Range, AllocateFunc, DeallocateFunc &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base.html#a92cec3f962f2bda3b1ba272f1f5d70b3">kF::Core::Internal::AllocatedSmallVectorBase&lt; Type, OptimizedCapacity, AllocateFunc, DeallocateFunc, Range &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base.html#ad01ea44178fc21b8730cec05dfda9688">kF::Core::Internal::AllocatedVectorBase&lt; Type, Range, AllocateFunc, DeallocateFunc &gt;</a>
 , <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_flat_vector_base.html#ab9f11578d98fafdd3515ffe7feb7ce59">kF::Core::Internal::FlatVectorBase&lt; Type, Range &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_small_vector_base.html#a97f106d84ce31a9e3fa88fd96388d553">kF::Core::Internal::SmallVectorBase&lt; Type, OptimizedCapacity, Range &gt;</a>
 , <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a7c74b3f3281b46b73b2b1c69d9a41fe9">kF::Core::Internal::VectorBase&lt; Type, Range &gt;</a>
 </li>
 <li>Allocate()
@@ -99,6 +104,10 @@ $(function() {
 <li>allocate()
 : <a class="el" href="classk_f_1_1_graphics_1_1_command_pool_manager.html#a64d1aa4cbeb14d04abed34625573142d">kF::Graphics::CommandPoolManager</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_memory_allocator.html#a9407959f2a25a2a8f3c51172b1405f75">kF::Graphics::MemoryAllocator</a>
+</li>
+<li>Allocate()
+: <a class="el" href="classk_f_1_1_lang_1_1_a_s_t.html#a1dd381b7d3e7029ba13dbc83b2c59bc6">kF::Lang::AST</a>
+, <a class="el" href="classk_f_1_1_lang_1_1_expression.html#a5f0069aff189a8d79cf9237f1b3678df">kF::Lang::Expression</a>
 </li>
 <li>allocateCommands()
 : <a class="el" href="classk_f_1_1_graphics_1_1_command_pool.html#aa80612cc7cda66d5bf51b46f79f897d9">kF::Graphics::CommandPool</a>
@@ -125,19 +134,25 @@ $(function() {
 : <a class="el" href="classk_f_1_1_var.html#a6dcfd18f452e894a672af94d731705ef">kF::Var</a>
 </li>
 <li>assign()
-: <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a7b48c258ad2577531177bf0caea8ec2b">kF::Meta::SlotTable::Slot</a>
-, <a class="el" href="classk_f_1_1_var.html#aeca88d3e27cd3703adf89b96c9640324">kF::Var</a>
+: <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#aa9f4434c4a9c2a4a1068fc7da6d780a2">kF::Meta::SlotTable::Slot</a>
 </li>
 <li>Assign()
 : <a class="el" href="classk_f_1_1_var.html#a68d55a87fb41aa83001617bc9a6e08e6">kF::Var</a>
+</li>
+<li>assign()
+: <a class="el" href="classk_f_1_1_var.html#aeca88d3e27cd3703adf89b96c9640324">kF::Var</a>
+</li>
+<li>AST()
+: <a class="el" href="classk_f_1_1_lang_1_1_a_s_t.html#a751b34118076644447226153f47565e6">kF::Lang::AST</a>
 </li>
 <li>ASystem()
 : <a class="el" href="classk_f_1_1_e_c_s_1_1_a_system.html#a0c8afd93bc1707cb610fbf9324c0ec09">kF::ECS::ASystem&lt; EntityType &gt;</a>
 </li>
 <li>at()
 : <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#ac5a4d30186119fa7bca788cfb7dc3d40">kF::Core::HeapArray&lt; Type &gt;</a>
-, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#adea14c414ef151e7b7d6f433d1d54ff4">kF::Core::Internal::VectorDetails&lt; Base, Type, Range &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#af941ff4793b9f0df52c15785f02cdcc1">kF::Core::Internal::VectorDetails&lt; Base, Type, Range, IsSmallOptimized &gt;</a>
 , <a class="el" href="classk_f_1_1_e_c_s_1_1_sparse_entity_set.html#a51ed598f396b9fb09b0dccb8cce45783">kF::ECS::SparseEntitySet&lt; EntityType, PageSize &gt;</a>
+, <a class="el" href="classk_f_1_1_lang_1_1_expression.html#af6bde67d8a8e0dc2ad44ce11dd32e5e5">kF::Lang::Expression</a>
 </li>
 <li>atRef()
 : <a class="el" href="classk_f_1_1_e_c_s_1_1_sparse_entity_set.html#a20b434a07fa08c156a8a5f6d09d7803d">kF::ECS::SparseEntitySet&lt; EntityType, PageSize &gt;</a>
@@ -146,7 +161,7 @@ $(function() {
 : <a class="el" href="classk_f_1_1_e_c_s_1_1_registry.html#aef1bed39cf8c65c83b6f915d80333718">kF::ECS::Registry&lt; EntityType &gt;</a>
 </li>
 <li>AutoCommandPool()
-: <a class="el" href="classk_f_1_1_graphics_1_1_auto_command_pool.html#a838c75cba406a624e3d13a786b9f6c8c">kF::Graphics::AutoCommandPool</a>
+: <a class="el" href="classk_f_1_1_graphics_1_1_auto_command_pool.html#a8249f2598fafd0785c08f0857c37e9d5">kF::Graphics::AutoCommandPool</a>
 </li>
 </ul>
 </div><!-- contents -->

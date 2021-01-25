@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -70,6 +70,15 @@ $(function() {
 <li>Object()
 : <a class="el" href="classk_f_1_1_object.html#ad2828db9a5890671e76337395bd254d5">kF::Object</a>
 </li>
+<li>object
+: <a class="el" href="structk_f_1_1_object_utils_1_1_tree_1_1_node.html#aa42170a71ff874fb4b0095a44e252f66">kF::ObjectUtils::Tree::Node</a>
+</li>
+<li>ObjectFlags
+: <a class="el" href="classk_f_1_1_object.html#a35b77a83ff39d4906e34052d174114a3">kF::Object</a>
+</li>
+<li>ObjectIndex
+: <a class="el" href="classk_f_1_1_object.html#ab21c8e0e21ee3f05c23d831f492f91ef">kF::Object</a>
+</li>
 <li>onAboutToClose()
 : <a class="el" href="classk_f_1_1_application.html#af5f31c1abb23024f9121767a843e0d5e">kF::Application</a>
 , <a class="el" href="classk_f_1_1_e_c_s_application.html#afcb8a36cb76c7af0b437a29d1fc52117">kF::ECSApplication</a>
@@ -78,9 +87,18 @@ $(function() {
 : <a class="el" href="classk_f_1_1_application.html#a524d0b1b26c2c99ef5cd33bb8ba1011f">kF::Application</a>
 , <a class="el" href="classk_f_1_1_e_c_s_application.html#ad74395bc6dc2a84e191bd79aeff42c8d">kF::ECSApplication</a>
 </li>
+<li>onChildAdded()
+: <a class="el" href="classk_f_1_1_object.html#a3800e02b217ceb247384d1bcb730e978">kF::Object</a>
+</li>
+<li>onChildRemoved()
+: <a class="el" href="classk_f_1_1_object.html#a5b863ca77ee3efd4e748bc4c69b9fe75">kF::Object</a>
+</li>
 <li>onFrameAquired()
 : <a class="el" href="classk_f_1_1_graphics_1_1_command_pool_manager.html#a25e83db6e84c7925a441a0a307eb1abe">kF::Graphics::CommandPoolManager</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_framebuffer_manager.html#ae5c9da45dc00722de4e86268a16d9a1e">kF::Graphics::FramebufferManager</a>
+</li>
+<li>onParentChanged()
+: <a class="el" href="classk_f_1_1_object.html#a8db76ee5eb1af8a054aa4ea5e2b349ab">kF::Object</a>
 </li>
 <li>onRender()
 : <a class="el" href="classk_f_1_1_application.html#a9f3f9c6a578dee52d6e48774a626441d">kF::Application</a>
@@ -96,18 +114,23 @@ $(function() {
 , <a class="el" href="classk_f_1_1_graphics_1_1_render_pass.html#a8f317b0bb2df8f92885b1f17abb27a9b">kF::Graphics::RenderPass</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_swapchain.html#aa6a07bc774215b4b56622b962ff66cd2">kF::Graphics::Swapchain</a>
 </li>
+<li>OpaqueDestructor
+: <a class="el" href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a6077c482e921d6b183c847c2aa37c1e2">kF::Core::Functor&lt; Return(Args...), CacheSize &gt;</a>
+</li>
 <li>OpaqueIndex
 : <a class="el" href="classk_f_1_1_meta_1_1_slot_table.html#aac45a1de8006b1c0121c12c6f17787fa">kF::Meta::SlotTable</a>
 </li>
-<li>OpaqueSignature
-: <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a03177b42e1694ba393356b990d8a6647">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
+<li>OpaqueInvoke
+: <a class="el" href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a0ab48702a80583933dc6c5c502af101f">kF::Core::Functor&lt; Return(Args...), CacheSize &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a939d7166a082d2ef2f63924024cc42e4">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
 </li>
 <li>OpaqueTable
 : <a class="el" href="classk_f_1_1_e_c_s_1_1_component_tables.html#ab9849c9b5587c0e9b4ea1c69aa94870e">kF::ECS::ComponentTables&lt; EntityType &gt;</a>
 </li>
 <li>operator bool()
-: <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#ae8ab070e866ff69290f11cbc84743a62">kF::Core::HeapArray&lt; Type &gt;</a>
-, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a3e4cff5988de4314195ead86a05dbc92">kF::Core::Internal::VectorDetails&lt; Base, Type, Range &gt;</a>
+: <a class="el" href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#ab1ff862db03df0c04ec8abb062ab27f0">kF::Core::Functor&lt; Return(Args...), CacheSize &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#ae8ab070e866ff69290f11cbc84743a62">kF::Core::HeapArray&lt; Type &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a2934fc708e67aa8f736c06b6ca8f97be">kF::Core::Internal::VectorDetails&lt; Base, Type, Range, IsSmallOptimized &gt;</a>
 , <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a1a1609d54e1bb1830cab98f81294a7f3">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
 , <a class="el" href="classk_f_1_1_flow_1_1_graph.html#a36e161c986e53bdbb608afe4f101b6e3">kF::Flow::Graph</a>
 , <a class="el" href="classk_f_1_1_flow_1_1_task.html#adca16b42cee112805ae70d93cd5ca3d3">kF::Flow::Task</a>
@@ -147,8 +170,10 @@ $(function() {
 : <a class="el" href="classk_f_1_1_var.html#abdfd088e11ce2c626f24efbc67ae7029">kF::Var</a>
 </li>
 <li>operator()()
-: <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a156e84aa4b4496365bdba5ef04a44d59">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
+: <a class="el" href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a48a71d66e482e2175f1959f59e3113eb">kF::Core::Functor&lt; Return(Args...), CacheSize &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a156e84aa4b4496365bdba5ef04a44d59">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
 , <a class="el" href="structk_f_1_1_e_c_s_1_1_sparse_entity_set_1_1_page_deleter.html#afd4034fcc3e7d8d925a651fffdb23456">kF::ECS::SparseEntitySet&lt; EntityType, PageSize &gt;::PageDeleter</a>
+, <a class="el" href="structk_f_1_1_lang_1_1_a_s_t_1_1_deleter.html#a2be4e569fff8826603b96c1e5fbc3b8e">kF::Lang::AST::Deleter</a>
 </li>
 <li>operator*()
 : <a class="el" href="classk_f_1_1_graphics_1_1_renderer_1_1_global_instance.html#aa8985989fe07df8aeebf43210f80a4fa">kF::Graphics::Renderer::GlobalInstance</a>
@@ -172,7 +197,7 @@ $(function() {
 <li>operator-&gt;()
 : <a class="el" href="classk_f_1_1_flow_1_1_node_instance.html#a82a551a95b10bcf9aeabd330e6bf349c">kF::Flow::NodeInstance</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool.html#a89246972d158d88488ac9701b90d77d9">kF::Graphics::CommandPoolManager::ScopedCommandPool</a>
-, <a class="el" href="classk_f_1_1_graphics_1_1_renderer_1_1_global_instance.html#af4a5bbcbfee3456b5aa2a4923d4c00fb">kF::Graphics::Renderer::GlobalInstance</a>
+, <a class="el" href="classk_f_1_1_graphics_1_1_renderer_1_1_global_instance.html#aca9eb2a27a8f252e776c812dabd6c0ee">kF::Graphics::Renderer::GlobalInstance</a>
 </li>
 <li>operator/()
 : <a class="el" href="classk_f_1_1_var.html#ad075afd8b0e94b684c390c86f032ae8f">kF::Var</a>
@@ -183,9 +208,11 @@ $(function() {
 <li>operator=()
 : <a class="el" href="classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4.html#aee0f4dae03bacecd15a30d3c50a2e262">kF::Core::DispatcherDetails&lt; Return(Args...), CacheSize, TemplateFunctor &gt;</a>
 , <a class="el" href="classk_f_1_1_core_1_1_flat_string_base.html#adf8717ca79f1bf18c962a129e0b65b46">kF::Core::FlatStringBase&lt; Type &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a6f8b90f176ad046e1458106db6ec79ea">kF::Core::Functor&lt; Return(Args...), CacheSize &gt;</a>
 , <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#ac43552cac5fb5292eb0da49086ce07a8">kF::Core::HeapArray&lt; Type &gt;</a>
-, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a9732e272367da3445bd576ecb039b406">kF::Core::Internal::VectorDetails&lt; Base, Type, Range &gt;</a>
-, <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#a492a0fd8afe772c678d51d3704c8c6eb">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html#a84b972ccb55c66b196c5f83926687f4f">kF::Core::Internal::SortedVectorDetails&lt; Base, Type, Range, Compare, IsSmallOptimized &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a1afc38100b8900a4e0df98a1f7a5f2ca">kF::Core::Internal::VectorDetails&lt; Base, Type, Range, IsSmallOptimized &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#ad425996ade811193b1d7ee847fa21771">kF::Core::TrivialFunctor&lt; Return(Args...), CacheSize &gt;</a>
 , <a class="el" href="classk_f_1_1_e_c_s_1_1_sparse_entity_set.html#a0971360c50441f502c34c83d4478e382">kF::ECS::SparseEntitySet&lt; EntityType, PageSize &gt;</a>
 , <a class="el" href="classk_f_1_1_flow_1_1_graph.html#aa9a9caa161dc966b56b5f37dda93a261">kF::Flow::Graph</a>
 , <a class="el" href="classk_f_1_1_flow_1_1_node_instance.html#a31ba52ad43826d97d49aee0e9e85565a">kF::Flow::NodeInstance</a>
@@ -203,7 +230,7 @@ $(function() {
 , <a class="el" href="classk_f_1_1_graphics_1_1_command_pool_manager.html#ab2261f4ed28eb565c2050a63560f8574">kF::Graphics::CommandPoolManager</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_command_pool_manager_1_1_scoped_command_pool.html#ad404420abf3845f7e7a8ce9d5c267a27">kF::Graphics::CommandPoolManager::ScopedCommandPool</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_command_recorder.html#a1dac44e7e7be4f25fe37b862bc429e79">kF::Graphics::CommandRecorder</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_depth_stencil_model.html#a8ab4cf0e281c57ca152a0f68bb958292">kF::Graphics::DepthStencilModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_depth_stencil_model.html#a946b6da98a7610c6cf7a6e5791abb7a2">kF::Graphics::DepthStencilModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_descriptor_pool.html#a831dbc289be623f6fe139aa47ff7d98c">kF::Graphics::DescriptorPool</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_descriptor_pool_model.html#a3cc17e99ba9eaf1bf46f20db2753d9fb">kF::Graphics::DescriptorPoolModel</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_descriptor_pool_size.html#a865b0189f500ffa13bc3003f215c3727">kF::Graphics::DescriptorPoolSize</a>
@@ -212,7 +239,7 @@ $(function() {
 , <a class="el" href="structk_f_1_1_graphics_1_1_descriptor_set_layout_binding.html#a8d839fa2ed7d8b1c5822a208faf427eb">kF::Graphics::DescriptorSetLayoutBinding</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_descriptor_set_layout_model.html#a3c4706aa3436280b0710f05c0dac5236">kF::Graphics::DescriptorSetLayoutModel</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_descriptor_set_write_model.html#ae6a5cb3a463d00d7fe5a2c2927d4a2a3">kF::Graphics::DescriptorSetWriteModel</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_dynamic_state_model.html#ac347c46f5d0492d1070ff52dba751b95">kF::Graphics::DynamicStateModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_dynamic_state_model.html#a9ccbace05b7c51d54e22c0aa020454fe">kF::Graphics::DynamicStateModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_event.html#a9d7264e4222cfe7101afd1318edb3c9c">kF::Graphics::Event</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_fence.html#a5e9709e56ad50038e2e781d29fa0de60">kF::Graphics::Fence</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_framebuffer.html#a7004670747c1e208a2917d11ac9fbb39">kF::Graphics::Framebuffer</a>
@@ -229,31 +256,31 @@ $(function() {
 , <a class="el" href="classk_f_1_1_graphics_1_1_memory_allocation.html#a6e96a6d6d30aa905e16efdf15e70a37f">kF::Graphics::MemoryAllocation</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_memory_allocation_model.html#a4842ea44c1eeddb788bc732a3263ec31">kF::Graphics::MemoryAllocationModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_memory_allocator.html#a9bfe06236000c3798ac27b358bc38b67">kF::Graphics::MemoryAllocator</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_multisample_model.html#aa00749a3dbf66a05c77961b1e7837664">kF::Graphics::MultisampleModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_multisample_model.html#ae77c409fe41569ebc97c1f74c7b1adec">kF::Graphics::MultisampleModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_per_frame_cache.html#a8b8e329135e3f75782002610a6c8f7e5">kF::Graphics::PerFrameCache&lt; Type &gt;</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_physical_device.html#af42a93d38fc531aab02402874bf33c0c">kF::Graphics::PhysicalDevice</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_pipeline.html#a426c321d5a79e7af6df2cd8d168eda06">kF::Graphics::Pipeline</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_pipeline_layout.html#a933a9411779ae327b7caf83fc8c1f113">kF::Graphics::PipelineLayout</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_pipeline_layout_model.html#adff75bc7ba859446aa02ccf802883d24">kF::Graphics::PipelineLayoutModel</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_pipeline_model.html#aee964af141094c5f39108bfe2f83f88e">kF::Graphics::PipelineModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_pipeline_layout_model.html#a6ded7fdb7f0b5ca52e39b6d163200903">kF::Graphics::PipelineLayoutModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_pipeline_model.html#ac334bde4b6580eacdbad01238a274e5c">kF::Graphics::PipelineModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_queue_manager.html#a261a4a2d50a084454286022d931a8f36">kF::Graphics::QueueManager</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_rasterization_model.html#af292c497590fd33de9355de1f4d7fdcb">kF::Graphics::RasterizationModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_render_pass.html#a2dc87e815ef6bf5285860b80f3d5a485">kF::Graphics::RenderPass</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_render_pass_begin_info.html#a6122b1b3ec99a4ebe28eb3946f08f689">kF::Graphics::RenderPassBeginInfo</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_sampler.html#a83aceb060069940abce75548ef0c3abd">kF::Graphics::Sampler</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_sampler_model.html#a1d04bc162a8b98a29d39158e9191191b">kF::Graphics::SamplerModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_sampler_model.html#a6f7723279e079088da7a365755b6b476">kF::Graphics::SamplerModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_semaphore.html#a6a9d2c0ff3e3d8be9f553bfca7b1ed75">kF::Graphics::Semaphore</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_shader.html#af06c15cd7b6114f8d8dd9f44971b19d4">kF::Graphics::Shader</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_shader_stage_model.html#a62c53ca3be45887192cbf8155b8c7244">kF::Graphics::ShaderStageModel</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_stencil_op_state.html#a98a3268cfc71aed3d227ff4e59086532">kF::Graphics::StencilOpState</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_stencil_op_state.html#a095dd182971f7c890e1cb49b33ef9d20">kF::Graphics::StencilOpState</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_submit_info.html#ab98418667006db412a8e14d01532cc07">kF::Graphics::SubmitInfo</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_surface.html#a208a6d14485fdf5e0a5b4bdba8fdbcd9">kF::Graphics::Surface</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_swapchain.html#a729864d316edc3c7b31fd21af5507d4a">kF::Graphics::Swapchain</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_tessellation_model.html#a7b2784ef02af105c841de16d91c91f8b">kF::Graphics::TessellationModel</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_vertex_input_attribute.html#afe5a3826798c376e2bc8c24c0ec02092">kF::Graphics::VertexInputAttribute</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_tessellation_model.html#a5425040c9dea09d4d12198e1ff5cbb0a">kF::Graphics::TessellationModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_vertex_input_attribute.html#a23a6c43c1e08832d7bbb4d97e09ded58">kF::Graphics::VertexInputAttribute</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_vertex_input_binding.html#a17087af9156244af3b16d5d762cebe85">kF::Graphics::VertexInputBinding</a>
 , <a class="el" href="structk_f_1_1_graphics_1_1_vertex_input_model.html#a4898a8edd54ba24488b7a0137a15ab6b">kF::Graphics::VertexInputModel</a>
-, <a class="el" href="structk_f_1_1_graphics_1_1_viewport_model.html#a14713397cd493dd9b96705aa16f8c7d3">kF::Graphics::ViewportModel</a>
+, <a class="el" href="structk_f_1_1_graphics_1_1_viewport_model.html#ad90d9dadb21c16710f093d8423b3bf86">kF::Graphics::ViewportModel</a>
 , <a class="el" href="classk_f_1_1_graphics_1_1_vulkan_handle_base.html#a41349af413d51d16de153c1013386ed0">kF::Graphics::VulkanHandleBase&lt; Type, Base &gt;</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_constructor.html#a0ec5bece4b6fe1037ffb28d5dd10e06a">kF::Meta::Constructor</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_converter.html#a70aa637e4707169a9199462880912b89">kF::Meta::Converter</a>
@@ -263,10 +290,11 @@ $(function() {
 , <a class="el" href="classk_f_1_1_meta_1_1_slot_table.html#a1f0f9d4dcb7a2d686ab2e239048a02c6">kF::Meta::SlotTable</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_page.html#a4e3faed76b0512ed21f1fe7669402692">kF::Meta::SlotTable::Page</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_type.html#acace8707ebdca557214e334e62a7ec6a">kF::Meta::Type</a>
+, <a class="el" href="classk_f_1_1_object_utils_1_1_tree.html#ac47c0b1be97a9835277fa3b3e7b26a98">kF::ObjectUtils::Tree</a>
 , <a class="el" href="classk_f_1_1_var.html#a0eb7a13690e130ff75a2cee3d887e8a4">kF::Var</a>
 </li>
 <li>operator==()
-: <a class="el" href="classk_f_1_1_core_1_1_flat_string_base.html#ad0494a68df62ff8e69dcb3f0e4f965ce">kF::Core::FlatStringBase&lt; Type &gt;</a>
+: <a class="el" href="classk_f_1_1_core_1_1_flat_string_base.html#a80b8856231f50af8054336b4d71b2e32">kF::Core::FlatStringBase&lt; Type &gt;</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_constructor.html#a0bbde0fcc2fb08959373449ec84487f5">kF::Meta::Constructor</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_converter.html#a9c301aeaf7bf7c4325ff99d45e183e12">kF::Meta::Converter</a>
 , <a class="el" href="classk_f_1_1_meta_1_1_data.html#a70672157a2cfe7553e99ad4492028030">kF::Meta::Data</a>
@@ -276,11 +304,14 @@ $(function() {
 , <a class="el" href="classk_f_1_1_var.html#a5a8955a9a43facf57d09a9276e82fe78">kF::Var</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#a44b90225ac39f64fc9a09e7b844a937b">kF::Core::HeapArray&lt; Type &gt;</a>
-, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#a3f617fd19f70f50fbc010e9f2713545b">kF::Core::Internal::VectorDetails&lt; Base, Type, Range &gt;</a>
+: <a class="el" href="classk_f_1_1_core_1_1_heap_array.html#a30898070cf2cac46e4aac799d8462740">kF::Core::HeapArray&lt; Type &gt;</a>
+, <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html#af56c4465cb356a90f9300310c4a184bf">kF::Core::Internal::VectorDetails&lt; Base, Type, Range, IsSmallOptimized &gt;</a>
+</li>
+<li>optimizedData()
+: <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_small_vector_base.html#a3d86664c8d7b407a6ef085d6555c5e79">kF::Core::Internal::SmallVectorBase&lt; Type, OptimizedCapacity, Range &gt;</a>
 </li>
 <li>ownedSlots
-: <a class="el" href="structk_f_1_1_object_1_1_connection_table.html#a5213b067508ca041c0b142a14e5ebe10">kF::Object::ConnectionTable</a>
+: <a class="el" href="structk_f_1_1_object_1_1_cache.html#a965c48d7f0f4ccfb957badea870f905c">kF::Object::Cache</a>
 </li>
 </ul>
 </div><!-- contents -->

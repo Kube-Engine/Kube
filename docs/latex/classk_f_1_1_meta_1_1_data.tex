@@ -19,7 +19,9 @@ struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}}
 \item 
 using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_ae27b66b3fb9d2b0c0792d37382d2cf16}{Get\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$)
 \item 
-using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_aa919372b33e17d81b6801cfbc0efe63a}{Set\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a61223a7c9c36c16a0f0bc3dd84a91f82}{Set\+Copy\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)
+\item 
+using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a47769497beccd8ef928fe9a7198f633a}{Set\+Move\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\&)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -40,20 +42,26 @@ bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a136ba02f6f56aa73f46073b3280412
 \begin{DoxyCompactList}\small\item\em Get data\textquotesingle{}s hashed name. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a21db184769aa2e2a76b589f302d7001c}{is\+Static}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Check if the data is static. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a1b3f974e6d949526ae94eef81428e6a0}{type}} (void) const noexcept
-\begin{DoxyCompactList}\small\item\em Get underlying data type. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a85562d27ae8297799e0fc20572da2c6b}{is\+Read\+Only}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Check if the variable is read-\/only. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_aeec44d07507874d1d5fe7d262a47c40d}{is\+Copy\+Settable}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the variable is copy settable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_abab26082317f39bb02c329760e89a482}{is\+Move\+Settable}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the variable is move settable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a1b3f974e6d949526ae94eef81428e6a0}{type}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get underlying data type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a2cd3bd498228ed474c36af50aa1a9133}{signal}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get underlying signal. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a61cc3c7359cb0f3408ce53e4c264be10}{get}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&instance) const
 \begin{DoxyCompactList}\small\item\em Get the underlying instance. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a93fd76b08cbf43fdd0c8b66e172ffadf}{get}} (const void $\ast$instance=nullptr) const
 \item 
 {\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_ab7c7983a5a85aab25727f4096405263d}{set}} (const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&instance, \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&value) const
-\begin{DoxyCompactList}\small\item\em Set the underlying instance. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a697c9109c0063f61448c052cd52cf8dc}{set}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&value) const
-\item 
+\begin{DoxyCompactList}\small\item\em Call member setter using a opaque variable. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a1b0840fcbafcdc4d290ace4206fd07fe}{set}} (const void $\ast$instance, \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&value) const
-\item 
+\begin{DoxyCompactList}\small\item\em Call member setter using a opaque pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a697c9109c0063f61448c052cd52cf8dc}{set}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&value) const
+\begin{DoxyCompactList}\small\item\em Call static setter. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_ab76425542e95075e25cf850822f04409}{set}} (const void $\ast$instance, \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&value) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
@@ -75,11 +83,17 @@ const \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}} 
 \doxysubsubsection{\texorpdfstring{GetFunc}{GetFunc}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_ae27b66b3fb9d2b0c0792d37382d2cf16}{k\+F\+::\+Meta\+::\+Data\+::\+Get\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$)}
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_aa919372b33e17d81b6801cfbc0efe63a}\label{classk_f_1_1_meta_1_1_data_aa919372b33e17d81b6801cfbc0efe63a}} 
-\index{kF::Meta::Data@{kF::Meta::Data}!SetFunc@{SetFunc}}
-\index{SetFunc@{SetFunc}!kF::Meta::Data@{kF::Meta::Data}}
-\doxysubsubsection{\texorpdfstring{SetFunc}{SetFunc}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_aa919372b33e17d81b6801cfbc0efe63a}{k\+F\+::\+Meta\+::\+Data\+::\+Set\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_a61223a7c9c36c16a0f0bc3dd84a91f82}\label{classk_f_1_1_meta_1_1_data_a61223a7c9c36c16a0f0bc3dd84a91f82}} 
+\index{kF::Meta::Data@{kF::Meta::Data}!SetCopyFunc@{SetCopyFunc}}
+\index{SetCopyFunc@{SetCopyFunc}!kF::Meta::Data@{kF::Meta::Data}}
+\doxysubsubsection{\texorpdfstring{SetCopyFunc}{SetCopyFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a61223a7c9c36c16a0f0bc3dd84a91f82}{k\+F\+::\+Meta\+::\+Data\+::\+Set\+Copy\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&)}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_a47769497beccd8ef928fe9a7198f633a}\label{classk_f_1_1_meta_1_1_data_a47769497beccd8ef928fe9a7198f633a}} 
+\index{kF::Meta::Data@{kF::Meta::Data}!SetMoveFunc@{SetMoveFunc}}
+\index{SetMoveFunc@{SetMoveFunc}!kF::Meta::Data@{kF::Meta::Data}}
+\doxysubsubsection{\texorpdfstring{SetMoveFunc}{SetMoveFunc}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a47769497beccd8ef928fe9a7198f633a}{k\+F\+::\+Meta\+::\+Data\+::\+Set\+Move\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(const void $\ast$, \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\&)}
 
 
 
@@ -122,6 +136,26 @@ Get the underlying instance.
 \index{get@{get}!kF::Meta::Data@{kF::Meta::Data}}
 \doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Data\+::get (\begin{DoxyParamCaption}\item[{const void $\ast$}]{instance = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_aeec44d07507874d1d5fe7d262a47c40d}\label{classk_f_1_1_meta_1_1_data_aeec44d07507874d1d5fe7d262a47c40d}} 
+\index{kF::Meta::Data@{kF::Meta::Data}!isCopySettable@{isCopySettable}}
+\index{isCopySettable@{isCopySettable}!kF::Meta::Data@{kF::Meta::Data}}
+\doxysubsubsection{\texorpdfstring{isCopySettable()}{isCopySettable()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Data\+::is\+Copy\+Settable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the variable is copy settable. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_abab26082317f39bb02c329760e89a482}\label{classk_f_1_1_meta_1_1_data_abab26082317f39bb02c329760e89a482}} 
+\index{kF::Meta::Data@{kF::Meta::Data}!isMoveSettable@{isMoveSettable}}
+\index{isMoveSettable@{isMoveSettable}!kF::Meta::Data@{kF::Meta::Data}}
+\doxysubsubsection{\texorpdfstring{isMoveSettable()}{isMoveSettable()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Data\+::is\+Move\+Settable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the variable is move settable. 
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_a85562d27ae8297799e0fc20572da2c6b}\label{classk_f_1_1_meta_1_1_data_a85562d27ae8297799e0fc20572da2c6b}} 
 \index{kF::Meta::Data@{kF::Meta::Data}!isReadOnly@{isReadOnly}}
@@ -198,7 +232,7 @@ Compare operator.
 
 
 
-Set the underlying instance. 
+Call member setter using a opaque variable. 
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_a1b0840fcbafcdc4d290ace4206fd07fe}\label{classk_f_1_1_meta_1_1_data_a1b0840fcbafcdc4d290ace4206fd07fe}} 
 \index{kF::Meta::Data@{kF::Meta::Data}!set@{set}}
@@ -206,6 +240,10 @@ Set the underlying instance.
 \doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily template$<$typename Type $>$ \\
 \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Data\+::set (\begin{DoxyParamCaption}\item[{const void $\ast$}]{instance,  }\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Call member setter using a opaque pointer. 
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_ab76425542e95075e25cf850822f04409}\label{classk_f_1_1_meta_1_1_data_ab76425542e95075e25cf850822f04409}} 
 \index{kF::Meta::Data@{kF::Meta::Data}!set@{set}}
@@ -220,6 +258,20 @@ Set the underlying instance.
 \doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily template$<$typename Type $>$ \\
 \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Data\+::set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&\&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call static setter. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_a2cd3bd498228ed474c36af50aa1a9133}\label{classk_f_1_1_meta_1_1_data_a2cd3bd498228ed474c36af50aa1a9133}} 
+\index{kF::Meta::Data@{kF::Meta::Data}!signal@{signal}}
+\index{signal@{signal}!kF::Meta::Data@{kF::Meta::Data}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} k\+F\+::\+Meta\+::\+Data\+::signal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get underlying signal. 
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_data_a1b3f974e6d949526ae94eef81428e6a0}\label{classk_f_1_1_meta_1_1_data_a1b3f974e6d949526ae94eef81428e6a0}} 
 \index{kF::Meta::Data@{kF::Meta::Data}!type@{type}}

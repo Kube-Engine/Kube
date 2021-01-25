@@ -20,19 +20,19 @@ class \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker}{Worker}}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespacek_f_1_1_flow_a339e0bbd0b3b0108f1a8da24640a5a6a}{Static\+Node}} = \mbox{\hyperlink{namespacek_f_1_1_flow_a52ad24b8e31aa1630b59a4f4972c8ffa}{Static\+Func}}
+using \mbox{\hyperlink{namespacek_f_1_1_flow_a339e0bbd0b3b0108f1a8da24640a5a6a}{Static\+Node}} = \mbox{\hyperlink{namespacek_f_1_1_flow_a5fe9c6c68c26e28d8d9c892119c0b308}{Static\+Func}}
 \begin{DoxyCompactList}\small\item\em Static node are used to execute independent jobs. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacek_f_1_1_flow_aa56b9ed07142b47f8753c9e68f892e50}{Switch\+Node}} = \mbox{\hyperlink{namespacek_f_1_1_flow_a0aac085b5c9217a543ed0df0b0dbce24}{Switch\+Func}}
+using \mbox{\hyperlink{namespacek_f_1_1_flow_aa56b9ed07142b47f8753c9e68f892e50}{Switch\+Node}} = \mbox{\hyperlink{namespacek_f_1_1_flow_a6076cd2de6905c90897505be3c178081}{Switch\+Func}}
 \begin{DoxyCompactList}\small\item\em Switch node is used to create branches. \end{DoxyCompactList}\item 
 using \mbox{\hyperlink{namespacek_f_1_1_flow_a9df5dfb78ac6955bc4bf653a8a751de4}{Graph\+Node}} = \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node is used to construct nested graphs. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacek_f_1_1_flow_a52ad24b8e31aa1630b59a4f4972c8ffa}{Static\+Func}} = std\+::function$<$ void(void)$>$
+using \mbox{\hyperlink{namespacek_f_1_1_flow_a5fe9c6c68c26e28d8d9c892119c0b308}{Static\+Func}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$ void(void)$>$
 \begin{DoxyCompactList}\small\item\em Static functor. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacek_f_1_1_flow_a0aac085b5c9217a543ed0df0b0dbce24}{Switch\+Func}} = std\+::function$<$ std\+::size\+\_\+t(void)$>$
+using \mbox{\hyperlink{namespacek_f_1_1_flow_a6076cd2de6905c90897505be3c178081}{Switch\+Func}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$ std\+::size\+\_\+t(void)$>$
 \begin{DoxyCompactList}\small\item\em Switch functor. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacek_f_1_1_flow_a49630518815a2370c7a668c3d9e620ca}{Dynamic\+Func}} = std\+::function$<$ void(\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&)$>$
+using \mbox{\hyperlink{namespacek_f_1_1_flow_a9ecd56b8632ccbed164c5e294bf0bd0f}{Dynamic\+Func}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$ void(\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&)$>$
 \begin{DoxyCompactList}\small\item\em Dynamic functor. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}} = std\+::function$<$ void(void)$>$
+using \mbox{\hyperlink{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}{Notify\+Func}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$ void(void)$>$
 \begin{DoxyCompactList}\small\item\em Notify functor to be called on the event thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -64,11 +64,11 @@ constexpr auto \mbox{\hyperlink{namespacek_f_1_1_flow_a528048a7dac8d1111758eda21
 @ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker}{Worker}} thread 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{namespacek_f_1_1_flow_a49630518815a2370c7a668c3d9e620ca}\label{namespacek_f_1_1_flow_a49630518815a2370c7a668c3d9e620ca}} 
+\mbox{\Hypertarget{namespacek_f_1_1_flow_a9ecd56b8632ccbed164c5e294bf0bd0f}\label{namespacek_f_1_1_flow_a9ecd56b8632ccbed164c5e294bf0bd0f}} 
 \index{kF::Flow@{kF::Flow}!DynamicFunc@{DynamicFunc}}
 \index{DynamicFunc@{DynamicFunc}!kF::Flow@{kF::Flow}}
 \doxysubsubsection{\texorpdfstring{DynamicFunc}{DynamicFunc}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a49630518815a2370c7a668c3d9e620ca}{k\+F\+::\+Flow\+::\+Dynamic\+Func}} = typedef std\+::function$<$void(\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&)$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a9ecd56b8632ccbed164c5e294bf0bd0f}{k\+F\+::\+Flow\+::\+Dynamic\+Func}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$void(\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&)$>$}
 
 
 
@@ -84,21 +84,21 @@ Dynamic functor.
 
 \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node is used to construct nested graphs. 
 
-\mbox{\Hypertarget{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}\label{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}} 
+\mbox{\Hypertarget{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}\label{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}} 
 \index{kF::Flow@{kF::Flow}!NotifyFunc@{NotifyFunc}}
 \index{NotifyFunc@{NotifyFunc}!kF::Flow@{kF::Flow}}
 \doxysubsubsection{\texorpdfstring{NotifyFunc}{NotifyFunc}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{k\+F\+::\+Flow\+::\+Notify\+Func}} = typedef std\+::function$<$void(void)$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}{k\+F\+::\+Flow\+::\+Notify\+Func}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$void(void)$>$}
 
 
 
 Notify functor to be called on the event thread. 
 
-\mbox{\Hypertarget{namespacek_f_1_1_flow_a52ad24b8e31aa1630b59a4f4972c8ffa}\label{namespacek_f_1_1_flow_a52ad24b8e31aa1630b59a4f4972c8ffa}} 
+\mbox{\Hypertarget{namespacek_f_1_1_flow_a5fe9c6c68c26e28d8d9c892119c0b308}\label{namespacek_f_1_1_flow_a5fe9c6c68c26e28d8d9c892119c0b308}} 
 \index{kF::Flow@{kF::Flow}!StaticFunc@{StaticFunc}}
 \index{StaticFunc@{StaticFunc}!kF::Flow@{kF::Flow}}
 \doxysubsubsection{\texorpdfstring{StaticFunc}{StaticFunc}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a52ad24b8e31aa1630b59a4f4972c8ffa}{k\+F\+::\+Flow\+::\+Static\+Func}} = typedef std\+::function$<$void(void)$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a5fe9c6c68c26e28d8d9c892119c0b308}{k\+F\+::\+Flow\+::\+Static\+Func}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$void(void)$>$}
 
 
 
@@ -108,17 +108,17 @@ Static functor.
 \index{kF::Flow@{kF::Flow}!StaticNode@{StaticNode}}
 \index{StaticNode@{StaticNode}!kF::Flow@{kF::Flow}}
 \doxysubsubsection{\texorpdfstring{StaticNode}{StaticNode}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a339e0bbd0b3b0108f1a8da24640a5a6a}{k\+F\+::\+Flow\+::\+Static\+Node}} = typedef \mbox{\hyperlink{namespacek_f_1_1_flow_a52ad24b8e31aa1630b59a4f4972c8ffa}{Static\+Func}}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a339e0bbd0b3b0108f1a8da24640a5a6a}{k\+F\+::\+Flow\+::\+Static\+Node}} = typedef \mbox{\hyperlink{namespacek_f_1_1_flow_a5fe9c6c68c26e28d8d9c892119c0b308}{Static\+Func}}}
 
 
 
 Static node are used to execute independent jobs. 
 
-\mbox{\Hypertarget{namespacek_f_1_1_flow_a0aac085b5c9217a543ed0df0b0dbce24}\label{namespacek_f_1_1_flow_a0aac085b5c9217a543ed0df0b0dbce24}} 
+\mbox{\Hypertarget{namespacek_f_1_1_flow_a6076cd2de6905c90897505be3c178081}\label{namespacek_f_1_1_flow_a6076cd2de6905c90897505be3c178081}} 
 \index{kF::Flow@{kF::Flow}!SwitchFunc@{SwitchFunc}}
 \index{SwitchFunc@{SwitchFunc}!kF::Flow@{kF::Flow}}
 \doxysubsubsection{\texorpdfstring{SwitchFunc}{SwitchFunc}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a0aac085b5c9217a543ed0df0b0dbce24}{k\+F\+::\+Flow\+::\+Switch\+Func}} = typedef std\+::function$<$std\+::size\+\_\+t(void)$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_a6076cd2de6905c90897505be3c178081}{k\+F\+::\+Flow\+::\+Switch\+Func}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$std\+::size\+\_\+t(void)$>$}
 
 
 
@@ -128,7 +128,7 @@ Switch functor.
 \index{kF::Flow@{kF::Flow}!SwitchNode@{SwitchNode}}
 \index{SwitchNode@{SwitchNode}!kF::Flow@{kF::Flow}}
 \doxysubsubsection{\texorpdfstring{SwitchNode}{SwitchNode}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_aa56b9ed07142b47f8753c9e68f892e50}{k\+F\+::\+Flow\+::\+Switch\+Node}} = typedef \mbox{\hyperlink{namespacek_f_1_1_flow_a0aac085b5c9217a543ed0df0b0dbce24}{Switch\+Func}}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_flow_aa56b9ed07142b47f8753c9e68f892e50}{k\+F\+::\+Flow\+::\+Switch\+Node}} = typedef \mbox{\hyperlink{namespacek_f_1_1_flow_a6076cd2de6905c90897505be3c178081}{Switch\+Func}}}
 
 
 

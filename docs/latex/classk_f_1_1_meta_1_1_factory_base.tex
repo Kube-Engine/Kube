@@ -1,263 +1,384 @@
-\hypertarget{classk_f_1_1_meta_1_1_factory_base}{}\doxysection{kF\+::Meta\+::Factory\+Base$<$ Type $>$ Class Template Reference}
-\label{classk_f_1_1_meta_1_1_factory_base}\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\hypertarget{classk_f_1_1_meta_1_1_factory_base}{}\doxysection{kF\+::Meta\+::Factory\+Base$<$ Registered\+Type $>$ Class Template Reference}
+\label{classk_f_1_1_meta_1_1_factory_base}\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 
 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{Factory}} is used to instantiate meta-\/data of a given type.  
+Factory is used to instantiate meta-\/data of a given type.  
 
 
 
 
 {\ttfamily \#include $<$Factory.\+hpp$>$}
 
-
-
-Inheritance diagram for kF\+::Meta\+::Factory\+Base$<$ Type $>$\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classk_f_1_1_meta_1_1_factory_base__inherit__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a847b94640152a043a9a5347b6bcc028c}{Factory\+Base}} (void) noexcept=default
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a9a93dfb9cc8cd1c90689034baa72bfd0}{Factory\+Base}} (void) noexcept=default
 \begin{DoxyCompactList}\small\item\em Default construct. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ac650ff9b51c430ca8b3d1f187825fb2b}{Factory\+Base}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name)
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ac2dd3c04d32e3a1d1903eba9b6414aa5}{Factory\+Base}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const std\+::string\+\_\+view \&literal=std\+::string\+\_\+view())
 \begin{DoxyCompactList}\small\item\em Alias of Register function. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ae03bc892be1d404688586cc6124fcdd5}{meta\+Register}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name)
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_acd534438fdbaff43ed58d1da6cc5309e}{Factory\+Base}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} specialization, const std\+::string\+\_\+view \&literal=std\+::string\+\_\+view())
+\begin{DoxyCompactList}\small\item\em Alias of Register specialization function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ae4c83a7a31759c7386285d37e773c557}{$\sim$\+Factory\+Base}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ab8bce886edcd0c6e76b2fced47c2fd0d}{meta\+Register}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const std\+::string\+\_\+view \&literal=std\+::string\+\_\+view()) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Alias of Register function. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Base $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ab6f75b7ca86da6a01a7368087d5badb5}{base}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_af8f387ac3b2d6282c14a074b64668e29}{meta\+Register}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} specialization, const std\+::string\+\_\+view \&literal=std\+::string\+\_\+view()) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Alias of Register specialization function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Base $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aa97193f064f07c749a7d796c711ad27b}{base}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Alias of Register\+Base function. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a2c70f198a7d26d123c512edb8e21a03f}{constructor}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a576193e46bddb4adc24eaf00d2e2d60a}{constructor}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Alias of Register\+Constructor function. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename To , auto Function\+Ptr = nullptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a01288678246f494476d934a2dc0ffd3b}{converter}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$typename To , auto Function\+Ptr = nullptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ad38064f71f01bec2ce9be6fb8df9745f}{converter}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Alias of Register\+Converter function. \end{DoxyCompactList}\item 
-{\footnotesize template$<$auto Function\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ad84a8c1bf76b6760de05a975f3f6e3d5}{function}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$auto Function\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a5a4aef465abe90f200a8c4249a0974ad}{function}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Alias of Register\+Function function. \end{DoxyCompactList}\item 
-{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr = nullptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a47f3d5365b8ed002e0d319db6246bf7a}{data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a079f01d6aa4548f361405fd5d5b27949}{signal}}=\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}()) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr, auto Signal\+Ptr = nullptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a9d955d4e5eaaf0bf90424c4b86d39d78}{data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} signal\+Name=0u) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Alias of Register\+Data function. \end{DoxyCompactList}\item 
-{\footnotesize template$<$auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a079f01d6aa4548f361405fd5d5b27949}{signal}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
-\begin{DoxyCompactList}\small\item\em Alias of Register\+Signal function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr, auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a0c92b8f1004d7600f7ab1c2b0c493773}{data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} signal\+Name=0u) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Alias of Register\+Data function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_af98cfc55b746b53456f72686909126d4}{signal}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Alias of Register\+Signal function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{k\+F\+::\+Meta\+::\+Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aab321baf5f8a38d695b7435673e565d1}{Register\+Constructor}} (void) noexcept \+\_\+ndebug
+\item 
+{\footnotesize template$<$typename To , auto Function\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{k\+F\+::\+Meta\+::\+Converter}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a781c1c2ced3d2d2784b1d208bc8957ec}{Register\+Converter}} (void) noexcept \+\_\+ndebug
+\item 
+{\footnotesize template$<$auto Function\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{k\+F\+::\+Meta\+::\+Function}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a4bf4989180361da8cae35f760bfe03c9}{Register\+Function}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept \+\_\+ndebug
+\item 
+{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr, auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{k\+F\+::\+Meta\+::\+Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a5048dd276040b0eeb4fbde9dbe1a8f3b}{Register\+Data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} signal\+Name) noexcept \+\_\+ndebug
+\item 
+{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr, auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{k\+F\+::\+Meta\+::\+Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aa8f89b1bca42284aeb2fc09f480f173e}{Register\+Data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} signal\+Name) noexcept \+\_\+ndebug
+\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{k\+F\+::\+Meta\+::\+Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ab9604caedc37b31fe09841e0b0fc35ab}{Register\+Signal}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept \+\_\+ndebug
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a73a5a8e39b58aaddd9a39de671e60e4a}{Register}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ad3bdb5f3c8cfd2016c1e101072c70efb}{Resolve}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Resolve the templated type\textquotesingle{}s meta descriptor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_adb3ed289a06c3655f17461ea5f86ced8}{Register}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const std\+::string\+\_\+view \&literal=std\+::string\+\_\+view()) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Register templated type\textquotesingle{}s hashed name. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Base $>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a39a93a90d923b08cae35cdf8ace25c7e}{Register\+Base}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aba058dbb91aecf93d1edaf40621c5785}{Register}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} specialization, const std\+::string\+\_\+view \&literal=std\+::string\+\_\+view()) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Register templated type\textquotesingle{}s hashed name with a specialization. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Base $>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aa875a7a89af7353e13d1a8c43ceb045c}{Register\+Base}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Register a base of templated type. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename ... Args$>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a50c99f7d2e9e6e9c40149e5e7a49f6d1}{Register\+Constructor}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$typename ... Args$>$ }\\static \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_af19afc1c4167132af93af532c1840b80}{Register\+Constructor}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Register a custom constructor (not a default / copy / move constructor) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename To , auto Function\+Ptr = nullptr$>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a093a0c5312dbe35e4cac756b1225b425}{Register\+Converter}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$typename To , auto Function\+Ptr = nullptr$>$ }\\static \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aac41cadd8d1268a9a660917bb59c1508}{Register\+Converter}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Register a converter of templated type. \end{DoxyCompactList}\item 
-{\footnotesize template$<$auto Function\+Ptr$>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ab747ba26d33183c58c2bfe6e4e705dad}{Register\+Function}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+{\footnotesize template$<$auto Function\+Ptr$>$ }\\static \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a8de74264e2b4a793f1fa1a1f7ee1325b}{Register\+Function}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
 \begin{DoxyCompactList}\small\item\em Register a function of templated type. \end{DoxyCompactList}\item 
-{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr = nullptr$>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a3ac1f177b732219f492c35b19d0addae}{Register\+Data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a079f01d6aa4548f361405fd5d5b27949}{signal}}=\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}()) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
-\begin{DoxyCompactList}\small\item\em Register a data of templated type. \end{DoxyCompactList}\item 
-{\footnotesize template$<$auto Signal\+Ptr$>$ }\\static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a0716f265b69e33dd69656d1ccf661a32}{Register\+Signal}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
-\begin{DoxyCompactList}\small\item\em Register a signal of templated type. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a57305e73c72c4a0940eb85e21650c7fb}{Resolve}} (void) noexcept
-\begin{DoxyCompactList}\small\item\em Resolve the templated type\textquotesingle{}s meta descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Member Functions}
+{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr, auto Signal\+Ptr = nullptr$>$ }\\static \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a95266818c62114f32606001df3360027}{Register\+Data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} signal\+Name=0u) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Register a data of templated type with a single setter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr, auto Signal\+Ptr$>$ }\\static \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a837a64e9b40e6fc3aefddccdcc34c43d}{Register\+Data}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} signal\+Name=0u) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Register a data of templated type with a copy and a move setter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Signal\+Ptr$>$ }\\static \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_acebfa3c8c5fcda7171fd948280c8596c}{Register\+Signal}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} name) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Register a signal of templated type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Meta\+::\+Type\+::\+Descriptor}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_aed0141a70c73073787fbc02dee04ea86}{Get\+Descriptor}} (void)
+static \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Type\+::\+Descriptor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_ad15727bc10aafa5597c91d7f12ed3903}{\+\_\+\+Descriptor}} \{ \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor_aadcfacd6624ba188506d4a51538b8e6a}{Type\+::\+Descriptor\+::\+Construct}}$<$Registered\+Type$>$() \}
 \begin{DoxyCompactList}\small\item\em Static helper used to store the descriptor instance of the templated type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename Type$>$\newline
-class k\+F\+::\+Meta\+::\+Factory\+Base$<$ Type $>$}
+\subsubsection*{template$<$typename Registered\+Type$>$\newline
+class k\+F\+::\+Meta\+::\+Factory\+Base$<$ Registered\+Type $>$}
 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{Factory}} is used to instantiate meta-\/data of a given type. 
+Factory is used to instantiate meta-\/data of a given type. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} Factory 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a847b94640152a043a9a5347b6bcc028c}\label{classk_f_1_1_meta_1_1_factory_base_a847b94640152a043a9a5347b6bcc028c}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!FactoryBase@{FactoryBase}}
-\index{FactoryBase@{FactoryBase}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{FactoryBase()}{FactoryBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a9a93dfb9cc8cd1c90689034baa72bfd0}\label{classk_f_1_1_meta_1_1_factory_base_a9a93dfb9cc8cd1c90689034baa72bfd0}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!FactoryBase@{FactoryBase}}
+\index{FactoryBase@{FactoryBase}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{FactoryBase()}{FactoryBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
 
 
 
 Default construct. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ac650ff9b51c430ca8b3d1f187825fb2b}\label{classk_f_1_1_meta_1_1_factory_base_ac650ff9b51c430ca8b3d1f187825fb2b}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!FactoryBase@{FactoryBase}}
-\index{FactoryBase@{FactoryBase}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{FactoryBase()}{FactoryBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ac2dd3c04d32e3a1d1903eba9b6414aa5}\label{classk_f_1_1_meta_1_1_factory_base_ac2dd3c04d32e3a1d1903eba9b6414aa5}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!FactoryBase@{FactoryBase}}
+\index{FactoryBase@{FactoryBase}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{FactoryBase()}{FactoryBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const std\+::string\+\_\+view \&}]{literal = {\ttfamily std\+:\+:string\+\_\+view()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Alias of Register function. 
 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_acd534438fdbaff43ed58d1da6cc5309e}\label{classk_f_1_1_meta_1_1_factory_base_acd534438fdbaff43ed58d1da6cc5309e}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!FactoryBase@{FactoryBase}}
+\index{FactoryBase@{FactoryBase}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{FactoryBase()}{FactoryBase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{specialization,  }\item[{const std\+::string\+\_\+view \&}]{literal = {\ttfamily std\+:\+:string\+\_\+view()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alias of Register specialization function. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ae4c83a7a31759c7386285d37e773c557}\label{classk_f_1_1_meta_1_1_factory_base_ae4c83a7a31759c7386285d37e773c557}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!````~FactoryBase@{$\sim$FactoryBase}}
+\index{````~FactoryBase@{$\sim$FactoryBase}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$FactoryBase()}{~FactoryBase()}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ab6f75b7ca86da6a01a7368087d5badb5}\label{classk_f_1_1_meta_1_1_factory_base_ab6f75b7ca86da6a01a7368087d5badb5}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!base@{base}}
-\index{base@{base}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aa97193f064f07c749a7d796c711ad27b}\label{classk_f_1_1_meta_1_1_factory_base_aa97193f064f07c749a7d796c711ad27b}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!base@{base}}
+\index{base@{base}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{base()}{base()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$typename Base $>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::base (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::base (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register\+Base function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a2c70f198a7d26d123c512edb8e21a03f}\label{classk_f_1_1_meta_1_1_factory_base_a2c70f198a7d26d123c512edb8e21a03f}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!constructor@{constructor}}
-\index{constructor@{constructor}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a576193e46bddb4adc24eaf00d2e2d60a}\label{classk_f_1_1_meta_1_1_factory_base_a576193e46bddb4adc24eaf00d2e2d60a}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!constructor@{constructor}}
+\index{constructor@{constructor}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$typename ... Args$>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register\+Constructor function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a01288678246f494476d934a2dc0ffd3b}\label{classk_f_1_1_meta_1_1_factory_base_a01288678246f494476d934a2dc0ffd3b}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!converter@{converter}}
-\index{converter@{converter}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ad38064f71f01bec2ce9be6fb8df9745f}\label{classk_f_1_1_meta_1_1_factory_base_ad38064f71f01bec2ce9be6fb8df9745f}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!converter@{converter}}
+\index{converter@{converter}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{converter()}{converter()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$typename To , auto Function\+Ptr = nullptr$>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::converter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::converter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register\+Converter function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a47f3d5365b8ed002e0d319db6246bf7a}\label{classk_f_1_1_meta_1_1_factory_base_a47f3d5365b8ed002e0d319db6246bf7a}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!data@{data}}
-\index{data@{data}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{data()}{data()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr = nullptr$>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}}]{signal = {\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a9d955d4e5eaaf0bf90424c4b86d39d78}\label{classk_f_1_1_meta_1_1_factory_base_a9d955d4e5eaaf0bf90424c4b86d39d78}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!data@{data}}
+\index{data@{data}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr, auto Signal\+Ptr = nullptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{signal\+Name = {\ttfamily 0u} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register\+Data function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ad84a8c1bf76b6760de05a975f3f6e3d5}\label{classk_f_1_1_meta_1_1_factory_base_ad84a8c1bf76b6760de05a975f3f6e3d5}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!function@{function}}
-\index{function@{function}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a0c92b8f1004d7600f7ab1c2b0c493773}\label{classk_f_1_1_meta_1_1_factory_base_a0c92b8f1004d7600f7ab1c2b0c493773}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!data@{data}}
+\index{data@{data}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr, auto Signal\+Ptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{signal\+Name = {\ttfamily 0u} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Alias of Register\+Data function. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a5a4aef465abe90f200a8c4249a0974ad}\label{classk_f_1_1_meta_1_1_factory_base_a5a4aef465abe90f200a8c4249a0974ad}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!function@{function}}
+\index{function@{function}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{function()}{function()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$auto Function\+Ptr$>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register\+Function function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aed0141a70c73073787fbc02dee04ea86}\label{classk_f_1_1_meta_1_1_factory_base_aed0141a70c73073787fbc02dee04ea86}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!GetDescriptor@{GetDescriptor}}
-\index{GetDescriptor@{GetDescriptor}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{GetDescriptor()}{GetDescriptor()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-static \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Meta\+::\+Type\+::\+Descriptor}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Get\+Descriptor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_af8f387ac3b2d6282c14a074b64668e29}\label{classk_f_1_1_meta_1_1_factory_base_af8f387ac3b2d6282c14a074b64668e29}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!metaRegister@{metaRegister}}
+\index{metaRegister@{metaRegister}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{metaRegister()}{metaRegister()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::meta\+Register (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{specialization,  }\item[{const std\+::string\+\_\+view \&}]{literal = {\ttfamily std\+:\+:string\+\_\+view()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
-Static helper used to store the descriptor instance of the templated type. 
+Alias of Register specialization function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ae03bc892be1d404688586cc6124fcdd5}\label{classk_f_1_1_meta_1_1_factory_base_ae03bc892be1d404688586cc6124fcdd5}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!metaRegister@{metaRegister}}
-\index{metaRegister@{metaRegister}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{metaRegister()}{metaRegister()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::meta\+Register (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ab8bce886edcd0c6e76b2fced47c2fd0d}\label{classk_f_1_1_meta_1_1_factory_base_ab8bce886edcd0c6e76b2fced47c2fd0d}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!metaRegister@{metaRegister}}
+\index{metaRegister@{metaRegister}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{metaRegister()}{metaRegister()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::meta\+Register (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const std\+::string\+\_\+view \&}]{literal = {\ttfamily std\+:\+:string\+\_\+view()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register function. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a73a5a8e39b58aaddd9a39de671e60e4a}\label{classk_f_1_1_meta_1_1_factory_base_a73a5a8e39b58aaddd9a39de671e60e4a}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!Register@{Register}}
-\index{Register@{Register}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aba058dbb91aecf93d1edaf40621c5785}\label{classk_f_1_1_meta_1_1_factory_base_aba058dbb91aecf93d1edaf40621c5785}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!Register@{Register}}
+\index{Register@{Register}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{specialization,  }\item[{const std\+::string\+\_\+view \&}]{literal = {\ttfamily std\+:\+:string\+\_\+view()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Register templated type\textquotesingle{}s hashed name with a specialization. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} Factory \mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_adb3ed289a06c3655f17461ea5f86ced8}\label{classk_f_1_1_meta_1_1_factory_base_adb3ed289a06c3655f17461ea5f86ced8}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!Register@{Register}}
+\index{Register@{Register}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+static void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const std\+::string\+\_\+view \&}]{literal = {\ttfamily std\+:\+:string\+\_\+view()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Register templated type\textquotesingle{}s hashed name. 
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{Factory}} \mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a39a93a90d923b08cae35cdf8ace25c7e}\label{classk_f_1_1_meta_1_1_factory_base_a39a93a90d923b08cae35cdf8ace25c7e}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!RegisterBase@{RegisterBase}}
-\index{RegisterBase@{RegisterBase}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aa875a7a89af7353e13d1a8c43ceb045c}\label{classk_f_1_1_meta_1_1_factory_base_aa875a7a89af7353e13d1a8c43ceb045c}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterBase@{RegisterBase}}
+\index{RegisterBase@{RegisterBase}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{RegisterBase()}{RegisterBase()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$typename Base $>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register\+Base (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Base (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Register a base of templated type. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a50c99f7d2e9e6e9c40149e5e7a49f6d1}\label{classk_f_1_1_meta_1_1_factory_base_a50c99f7d2e9e6e9c40149e5e7a49f6d1}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!RegisterConstructor@{RegisterConstructor}}
-\index{RegisterConstructor@{RegisterConstructor}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{RegisterConstructor()}{RegisterConstructor()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aab321baf5f8a38d695b7435673e565d1}\label{classk_f_1_1_meta_1_1_factory_base_aab321baf5f8a38d695b7435673e565d1}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterConstructor@{RegisterConstructor}}
+\index{RegisterConstructor@{RegisterConstructor}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterConstructor()}{RegisterConstructor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$typename ... Args$>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{k\+F\+::\+Meta\+::\+Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_af19afc1c4167132af93af532c1840b80}\label{classk_f_1_1_meta_1_1_factory_base_af19afc1c4167132af93af532c1840b80}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterConstructor@{RegisterConstructor}}
+\index{RegisterConstructor@{RegisterConstructor}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterConstructor()}{RegisterConstructor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$typename ... Args$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_constructor}{Constructor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Register a custom constructor (not a default / copy / move constructor) 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a093a0c5312dbe35e4cac756b1225b425}\label{classk_f_1_1_meta_1_1_factory_base_a093a0c5312dbe35e4cac756b1225b425}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!RegisterConverter@{RegisterConverter}}
-\index{RegisterConverter@{RegisterConverter}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{RegisterConverter()}{RegisterConverter()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a781c1c2ced3d2d2784b1d208bc8957ec}\label{classk_f_1_1_meta_1_1_factory_base_a781c1c2ced3d2d2784b1d208bc8957ec}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterConverter@{RegisterConverter}}
+\index{RegisterConverter@{RegisterConverter}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterConverter()}{RegisterConverter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$typename To , auto Function\+Ptr$>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register\+Converter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{k\+F\+::\+Meta\+::\+Converter}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Converter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aac41cadd8d1268a9a660917bb59c1508}\label{classk_f_1_1_meta_1_1_factory_base_aac41cadd8d1268a9a660917bb59c1508}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterConverter@{RegisterConverter}}
+\index{RegisterConverter@{RegisterConverter}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterConverter()}{RegisterConverter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$typename To , auto Function\+Ptr = nullptr$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Converter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Register a converter of templated type. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a3ac1f177b732219f492c35b19d0addae}\label{classk_f_1_1_meta_1_1_factory_base_a3ac1f177b732219f492c35b19d0addae}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!RegisterData@{RegisterData}}
-\index{RegisterData@{RegisterData}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{RegisterData()}{RegisterData()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr$>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}}]{signal = {\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a5048dd276040b0eeb4fbde9dbe1a8f3b}\label{classk_f_1_1_meta_1_1_factory_base_a5048dd276040b0eeb4fbde9dbe1a8f3b}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterData@{RegisterData}}
+\index{RegisterData@{RegisterData}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterData()}{RegisterData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr, auto Signal\+Ptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{k\+F\+::\+Meta\+::\+Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{signal\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_aa8f89b1bca42284aeb2fc09f480f173e}\label{classk_f_1_1_meta_1_1_factory_base_aa8f89b1bca42284aeb2fc09f480f173e}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterData@{RegisterData}}
+\index{RegisterData@{RegisterData}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterData()}{RegisterData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr, auto Signal\+Ptr$>$ \\
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{k\+F\+::\+Meta\+::\+Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{signal\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a95266818c62114f32606001df3360027}\label{classk_f_1_1_meta_1_1_factory_base_a95266818c62114f32606001df3360027}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterData@{RegisterData}}
+\index{RegisterData@{RegisterData}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterData()}{RegisterData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Get\+Function\+Ptr, auto Set\+Function\+Ptr, auto Signal\+Ptr = nullptr$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{signal\+Name = {\ttfamily 0u} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
-Register a data of templated type. 
+Register a data of templated type with a single setter. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ab747ba26d33183c58c2bfe6e4e705dad}\label{classk_f_1_1_meta_1_1_factory_base_ab747ba26d33183c58c2bfe6e4e705dad}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!RegisterFunction@{RegisterFunction}}
-\index{RegisterFunction@{RegisterFunction}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{RegisterFunction()}{RegisterFunction()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a837a64e9b40e6fc3aefddccdcc34c43d}\label{classk_f_1_1_meta_1_1_factory_base_a837a64e9b40e6fc3aefddccdcc34c43d}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterData@{RegisterData}}
+\index{RegisterData@{RegisterData}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterData()}{RegisterData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr, auto Signal\+Ptr$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{signal\+Name = {\ttfamily 0u} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Register a data of templated type with a copy and a move setter. 
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a4bf4989180361da8cae35f760bfe03c9}\label{classk_f_1_1_meta_1_1_factory_base_a4bf4989180361da8cae35f760bfe03c9}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterFunction@{RegisterFunction}}
+\index{RegisterFunction@{RegisterFunction}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterFunction()}{RegisterFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$auto Function\+Ptr$>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{k\+F\+::\+Meta\+::\+Function}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a8de74264e2b4a793f1fa1a1f7ee1325b}\label{classk_f_1_1_meta_1_1_factory_base_a8de74264e2b4a793f1fa1a1f7ee1325b}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterFunction@{RegisterFunction}}
+\index{RegisterFunction@{RegisterFunction}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterFunction()}{RegisterFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Function\+Ptr$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Register a function of templated type. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a0716f265b69e33dd69656d1ccf661a32}\label{classk_f_1_1_meta_1_1_factory_base_a0716f265b69e33dd69656d1ccf661a32}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!RegisterSignal@{RegisterSignal}}
-\index{RegisterSignal@{RegisterSignal}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
-\doxysubsubsection{\texorpdfstring{RegisterSignal()}{RegisterSignal()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ab9604caedc37b31fe09841e0b0fc35ab}\label{classk_f_1_1_meta_1_1_factory_base_ab9604caedc37b31fe09841e0b0fc35ab}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterSignal@{RegisterSignal}}
+\index{RegisterSignal@{RegisterSignal}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterSignal()}{RegisterSignal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$auto Signal\+Ptr$>$ \\
-void \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Register\+Signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{k\+F\+::\+Meta\+::\+Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_acebfa3c8c5fcda7171fd948280c8596c}\label{classk_f_1_1_meta_1_1_factory_base_acebfa3c8c5fcda7171fd948280c8596c}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!RegisterSignal@{RegisterSignal}}
+\index{RegisterSignal@{RegisterSignal}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterSignal()}{RegisterSignal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+template$<$auto Signal\+Ptr$>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Register\+Signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
@@ -275,28 +396,42 @@ Register a signal of templated type.
 {\em arguments} & \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}\textquotesingle{}s hashed arguments names \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a57305e73c72c4a0940eb85e21650c7fb}\label{classk_f_1_1_meta_1_1_factory_base_a57305e73c72c4a0940eb85e21650c7fb}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!Resolve@{Resolve}}
-\index{Resolve@{Resolve}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ad3bdb5f3c8cfd2016c1e101072c70efb}\label{classk_f_1_1_meta_1_1_factory_base_ad3bdb5f3c8cfd2016c1e101072c70efb}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!Resolve@{Resolve}}
+\index{Resolve@{Resolve}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{Resolve()}{Resolve()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
-static \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Meta\+::\+Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::Resolve (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+static \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::Resolve (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Resolve the templated type\textquotesingle{}s meta descriptor. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_a079f01d6aa4548f361405fd5d5b27949}\label{classk_f_1_1_meta_1_1_factory_base_a079f01d6aa4548f361405fd5d5b27949}} 
-\index{kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}!signal@{signal}}
-\index{signal@{signal}!kF::Meta::FactoryBase$<$ Type $>$@{kF::Meta::FactoryBase$<$ Type $>$}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_af98cfc55b746b53456f72686909126d4}\label{classk_f_1_1_meta_1_1_factory_base_af98cfc55b746b53456f72686909126d4}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!signal@{signal}}
+\index{signal@{signal}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
 \doxysubsubsection{\texorpdfstring{signal()}{signal()}}
-{\footnotesize\ttfamily template$<$typename Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
 template$<$auto Signal\+Ptr$>$ \\
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$\+::signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}\& \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::signal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
 Alias of Register\+Signal function. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_factory_base_ad15727bc10aafa5597c91d7f12ed3903}\label{classk_f_1_1_meta_1_1_factory_base_ad15727bc10aafa5597c91d7f12ed3903}} 
+\index{kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}!\_Descriptor@{\_Descriptor}}
+\index{\_Descriptor@{\_Descriptor}!kF::Meta::FactoryBase$<$ RegisteredType $>$@{kF::Meta::FactoryBase$<$ RegisteredType $>$}}
+\doxysubsubsection{\texorpdfstring{\_Descriptor}{\_Descriptor}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+\mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor}{Type\+::\+Descriptor}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{k\+F\+::\+Meta\+::\+Factory\+Base}}$<$ Registered\+Type $>$\+::\+\_\+\+Descriptor \{ \mbox{\hyperlink{structk_f_1_1_meta_1_1_type_1_1_descriptor_aadcfacd6624ba188506d4a51538b8e6a}{Type\+::\+Descriptor\+::\+Construct}}$<$Registered\+Type$>$() \}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Static helper used to store the descriptor instance of the templated type. 
 
 
 

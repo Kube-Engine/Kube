@@ -10,6 +10,8 @@
 \item 
 struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_arrange_type}{Arrange\+Type}}
 \begin{DoxyCompactList}\small\item\em Helper used to format specific types to other. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_meta_1_1_internal_1_1_descriptor_instance}{Descriptor\+Instance}}
+\begin{DoxyCompactList}\small\item\em This class should be instantiated for each meta descriptor to provide a globally re-\/initializable instance. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer}{Function\+Decomposer}}
 \item 
 struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_return_07_args_8_8_8_08_4}{Function\+Decomposer$<$ Return(\+Args...)$>$}}
@@ -20,8 +22,14 @@ struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_
 \begin{DoxyCompactList}\small\item\em Describes a member function. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_type_00_01decltype_07void_07_6_type_1_1operator_07_08_08_08_4}{Function\+Decomposer$<$ Type, decltype(void(\&\+Type\+::operator()))$>$}}
 \begin{DoxyCompactList}\small\item\em Describes an std\+::function. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_function_identifier}{Function\+Identifier}}
+class \mbox{\hyperlink{classk_f_1_1_meta_1_1_internal_1_1_function_identifier}{Function\+Identifier}}
 \begin{DoxyCompactList}\small\item\em Helper function used to instantiate a dummy variable for a given function. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}
+\begin{DoxyCompactList}\small\item\em Deduce a non template type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_types_8_8_8_01_4_01_4}{Template\+Decomposer$<$ Class$<$ Types... $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Deduce a variadic list of template types. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_vars_8_8_8_01_4_01_4}{Template\+Decomposer$<$ Class$<$ Vars... $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Deduce a variadic list of template arguments. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_type_holder}{Type\+Holder}}
 \begin{DoxyCompactList}\small\item\em Simple structure that holds a type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
@@ -54,6 +62,8 @@ using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4ec95d1ae5959403a81db
 {\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a237ee2f389de9dc9f38752ae43f47f9b}{Assignment\+Division\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$()/=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
 \item 
 {\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a91e0f3cadad88fdc0ecc81fc6c9b1497}{Assignment\+Modulo\+Check}} = decltype(std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \& $>$() \%=std\+::declval$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$())
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a84e39972cd3e87f3e06875686a8c0928}{Types\+Tuple}} = std\+::tuple$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -72,23 +82,23 @@ constexpr void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a1004016e1f33
 \begin{DoxyCompactList}\small\item\em Helper used to retreive a function identifier. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a2802ba836e767f434245932e7574f5c4}{Make\+Default\+Constructor}} (void $\ast$instance) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$)
 \item 
-{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a363b8f0f8c9f430ac13340fae71c91fe}{Make\+Copy\+Constructor}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a363b8f0f8c9f430ac13340fae71c91fe}{Make\+Copy\+Constructor}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
 \item 
-{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aaeb481c9a295f651f261264f533ff470}{Make\+Move\+Constructor}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aaeb481c9a295f651f261264f533ff470}{Make\+Move\+Constructor}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
 \item 
-{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a3b2fa2833e15e4f4d97ca55c7802a566}{Make\+Copy\+Assignment}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a3b2fa2833e15e4f4d97ca55c7802a566}{Make\+Copy\+Assignment}} (void $\ast$instance, const void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
 \begin{DoxyCompactList}\small\item\em Helpers used to generate opaque assignment functions. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_acad3ef0a0a0cc8c2d8aca0ae9eeec138}{Make\+Move\+Assignment}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_acad3ef0a0a0cc8c2d8aca0ae9eeec138}{Make\+Move\+Assignment}} (void $\ast$instance, void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
 \item 
-{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad0b44c926da1747413c211f76ebc4984}{Make\+Destructor}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad0b44c926da1747413c211f76ebc4984}{Make\+Destructor}} (void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} $>$)
 \begin{DoxyCompactList}\small\item\em Helper used to generate opaque destructor functions. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ Type, bool $>$$>$ $\ast$  = nullptr$>$ }\\bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae0537eda52eac7f65253d0f8bb55476b}{Make\+To\+Bool}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+convertible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, bool $>$)
+{\footnotesize template$<$typename Type , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible\+\_\+v$<$ Type, bool $>$$>$ $\ast$  = nullptr$>$ }\\bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae0537eda52eac7f65253d0f8bb55476b}{Make\+To\+Bool}} (const void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept(std\+::is\+\_\+nothrow\+\_\+convertible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, bool $>$)
 \begin{DoxyCompactList}\small\item\em Helpers used to generate opaque primitive functions. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Type , auto Operator\+Func, Unary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a499b1c6387b505eacfd088089f2965dc}{Make\+Unary\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}})
+{\footnotesize template$<$typename Type , auto Operator\+Func, Unary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a499b1c6387b505eacfd088089f2965dc}{Make\+Unary\+Operator}} (const void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}})
 \begin{DoxyCompactList}\small\item\em Helpers used to generate opaque operators functions. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Type , auto Operator\+Func, Binary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad5144a9e2b55534ec80648c5684e651a}{Make\+Binary\+Operator}} (const void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
+{\footnotesize template$<$typename Type , auto Operator\+Func, Binary\+Operator Operator$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad5144a9e2b55534ec80648c5684e651a}{Make\+Binary\+Operator}} (const void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
 \item 
-{\footnotesize template$<$typename Type , auto Operator\+Func, Assignment\+Operator Operator$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a94e06818e5d5a67751c846d196907237}{Make\+Assignment\+Operator}} (void $\ast$\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
+{\footnotesize template$<$typename Type , auto Operator\+Func, Assignment\+Operator Operator$>$ }\\void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a94e06818e5d5a67751c846d196907237}{Make\+Assignment\+Operator}} (void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}, const \mbox{\hyperlink{classk_f_1_1_var}{Var}} \&var)
 \item 
 {\footnotesize template$<$typename Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ab95549118c4a235c6164e75525815718}{Unary\+Minus}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&var) noexcept(noexcept(-\/var))
 \begin{DoxyCompactList}\small\item\em Helpers to generate unary operator functions. \end{DoxyCompactList}\item 
@@ -127,18 +137,60 @@ constexpr void \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a1004016e1f33
 {\footnotesize template$<$typename Type , bool Allow\+Implicit\+Move, typename Decomposer , typename Functor , std\+::size\+\_\+t ... Indexes$>$ }\\\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ab63ae81b6fdf73b0fadf254c3329ed75}{Invoke}} (Functor \&functor, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const void $\ast$instance, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$args, std\+::index\+\_\+sequence$<$ Indexes... $>$)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} functor invoker. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type $>$ }\\static constexpr const void $\ast$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a114adac5953deb8c342152c4f62d0c74}{Retreive\+Opaque\+Ptr}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \&input) noexcept
-\begin{DoxyCompactList}\small\item\em Helper used to retreive a void pointer from a reference (either a reference to nullptr or a variable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Helper used to retreive a void pointer from a reference (either a reference to nullptr or a variable) \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, auto ... $>$ typename Class, typename Type , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4fba613c6b3308a091a7f7a6eb36a2ec}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}
+\begin{DoxyCompactList}\small\item\em Deduce a single template type followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a13da3837a18f96ee7ad5a18ce7d3af21}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ Type1
+\begin{DoxyCompactList}\small\item\em Deduce two template types followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , typename Type3 , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a642c581964a8d7968d5929c453bc0d7b}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ Type1
+\begin{DoxyCompactList}\small\item\em Deduce three template types followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename, typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , typename Type3 , typename Type4 , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a6aefa21903e3645fe3aeea47d935d0ad}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ Type1
+\begin{DoxyCompactList}\small\item\em Deduce four template types followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, typename ... $>$ typename Class, auto Var, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8233076e77a502cbdfd3a19452725a98}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ \mbox{\hyperlink{classk_f_1_1_var}{Var}}
+\begin{DoxyCompactList}\small\item\em Deduce a single template variable followed by a variadic list of template types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7d3f602906cf99ecf3aefc3a4ac309b6}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ Var1
+\begin{DoxyCompactList}\small\item\em Deduce two template variables followed by a variadic list of template types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, auto Var3, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aeac3bf3f074cde893bc807163c77dac7}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ Var1
+\begin{DoxyCompactList}\small\item\em Deduce three template variables followed by a variadic list of template types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, auto, auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, auto Var3, auto Var4, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae0b738d207cccc4b1f9c0a48b93ddbe6}{requires}} (sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !=0ul) struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}}$<$ Class$<$ Var1
+\begin{DoxyCompactList}\small\item\em Deduce four template variables followed by a variadic list of template types. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 constexpr auto \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}{Var\+Small\+Optimization\+Size}} = 16ul
 \item 
 {\footnotesize template$<$typename Type $>$ }\\constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7e32ddf900e1a8b24b567613fc603114}{Is\+Var\+Small\+Optimized}} = \mbox{[}$\,$\mbox{]} \{ \mbox{\hyperlink{_s_p_s_c_queue_8ipp_af1aa37c9cca3f3871a4261496ee67520}{if}} constexpr ( (std\+::is\+\_\+same\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}, void$>$) ) \{ return false ; \} else \{ return sizeof(\mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}) $<$= \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}{Var\+Small\+Optimization\+Size}} ; \} \}()
-\begin{DoxyCompactList}\small\item\em Helper to know if a type is trivial or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Helper to know if a type is trivial or not. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}
+\item 
+static constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a1cbe2d4235968799ab2077525c517258}{Has\+Types}} = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+static constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aebbab8499a62cb712b1c77fa18188346}{Has\+Variables}} = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+static constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a72a66f7f8f875d30f0303cee3ae84e8a}{Types\+Before\+Arguments}} = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+static constexpr auto \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ab80f747e11aabd62c27fd11e72dea1e3}{Vars\+Tuple}} = std\+::make\+\_\+tuple$<$decltype(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}})...$>$(Vars...)
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4cfe38e37ac18a11f499a25a00bb6c44}{Type2}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aa17d2a6f90de6e0d60ac5a99f1c9c94b}{Type3}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a2412c2fc811e788a3c49d3d3c46ca08b}{Type4}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_af580f64b716166f94b3c1c75c6c52be5}{Var2}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aea44f7642e60aa27ad32925eb4bb3c04}{Var3}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a99926b01bac2e156d51ffc2624b1664e}{Var4}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal}{Internal}} type resolvers and helpers. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{Template\+Decomposer}} 
 
 \doxysubsection{Typedef Documentation}
 \mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a83beab20b303a2ba0cd3ccf059f46663}\label{namespacek_f_1_1_meta_1_1_internal_a83beab20b303a2ba0cd3ccf059f46663}} 
@@ -242,6 +294,12 @@ Helper that retreive Decomposer of any function signature.
 
 
 Opaque function type. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a84e39972cd3e87f3e06875686a8c0928}\label{namespacek_f_1_1_meta_1_1_internal_a84e39972cd3e87f3e06875686a8c0928}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!TypesTuple@{TypesTuple}}
+\index{TypesTuple@{TypesTuple}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{TypesTuple}{TypesTuple}}
+{\footnotesize\ttfamily typedef std\+::tuple$<$ Types... $>$ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a84e39972cd3e87f3e06875686a8c0928}{k\+F\+::\+Meta\+::\+Internal\+::\+Types\+Tuple}}}
 
 \mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a04cffcd7121af00d292078d8fb16079b}\label{namespacek_f_1_1_meta_1_1_internal_a04cffcd7121af00d292078d8fb16079b}} 
 \index{kF::Meta::Internal@{kF::Meta::Internal}!UnaryMinusCheck@{UnaryMinusCheck}}
@@ -493,6 +551,94 @@ Helpers used to generate opaque primitive functions.
 
 Helpers used to generate opaque operators functions. 
 
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a8233076e77a502cbdfd3a19452725a98}\label{namespacek_f_1_1_meta_1_1_internal_a8233076e77a502cbdfd3a19452725a98}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$template$<$ auto, typename ... $>$ typename Class, auto Var, typename ... Types$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce a single template variable followed by a variadic list of template types. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a7d3f602906cf99ecf3aefc3a4ac309b6}\label{namespacek_f_1_1_meta_1_1_internal_a7d3f602906cf99ecf3aefc3a4ac309b6}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$template$<$ auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, typename ... Types$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce two template variables followed by a variadic list of template types. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aeac3bf3f074cde893bc807163c77dac7}\label{namespacek_f_1_1_meta_1_1_internal_aeac3bf3f074cde893bc807163c77dac7}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$template$<$ auto, auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, auto Var3, typename ... Types$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce three template variables followed by a variadic list of template types. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ae0b738d207cccc4b1f9c0a48b93ddbe6}\label{namespacek_f_1_1_meta_1_1_internal_ae0b738d207cccc4b1f9c0a48b93ddbe6}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$template$<$ auto, auto, auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, auto Var3, auto Var4, typename ... Types$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{Types}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce four template variables followed by a variadic list of template types. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a4fba613c6b3308a091a7f7a6eb36a2ec}\label{namespacek_f_1_1_meta_1_1_internal_a4fba613c6b3308a091a7f7a6eb36a2ec}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$template$<$ typename, auto ... $>$ typename Class, typename Type , auto ... Vars$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce a single template type followed by a variadic list of template arguments. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a13da3837a18f96ee7ad5a18ce7d3af21}\label{namespacek_f_1_1_meta_1_1_internal_a13da3837a18f96ee7ad5a18ce7d3af21}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$template$<$ typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , auto ... Vars$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce two template types followed by a variadic list of template arguments. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a642c581964a8d7968d5929c453bc0d7b}\label{namespacek_f_1_1_meta_1_1_internal_a642c581964a8d7968d5929c453bc0d7b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$template$<$ typename, typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , typename Type3 , auto ... Vars$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce three template types followed by a variadic list of template arguments. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a6aefa21903e3645fe3aeea47d935d0ad}\label{namespacek_f_1_1_meta_1_1_internal_a6aefa21903e3645fe3aeea47d935d0ad}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!requires@{requires}}
+\index{requires@{requires}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$template$<$ typename, typename, typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , typename Type3 , typename Type4 , auto ... Vars$>$ \\
+k\+F\+::\+Meta\+::\+Internal\+::requires (\begin{DoxyParamCaption}\item[{sizeof...(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}}) !}]{ = {\ttfamily 0ul} }\end{DoxyParamCaption})}
+
+
+
+Deduce four template types followed by a variadic list of template arguments. 
+
 \mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a114adac5953deb8c342152c4f62d0c74}\label{namespacek_f_1_1_meta_1_1_internal_a114adac5953deb8c342152c4f62d0c74}} 
 \index{kF::Meta::Internal@{kF::Meta::Internal}!RetreiveOpaquePtr@{RetreiveOpaquePtr}}
 \index{RetreiveOpaquePtr@{RetreiveOpaquePtr}!kF::Meta::Internal@{kF::Meta::Internal}}
@@ -568,6 +714,18 @@ Helpers to generate unary operator functions.
 
 
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a1cbe2d4235968799ab2077525c517258}\label{namespacek_f_1_1_meta_1_1_internal_a1cbe2d4235968799ab2077525c517258}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!HasTypes@{HasTypes}}
+\index{HasTypes@{HasTypes}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{HasTypes}{HasTypes}}
+{\footnotesize\ttfamily static constexpr bool k\+F\+::\+Meta\+::\+Internal\+::\+Has\+Types = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aebbab8499a62cb712b1c77fa18188346}\label{namespacek_f_1_1_meta_1_1_internal_aebbab8499a62cb712b1c77fa18188346}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!HasVariables@{HasVariables}}
+\index{HasVariables@{HasVariables}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{HasVariables}{HasVariables}}
+{\footnotesize\ttfamily static constexpr bool k\+F\+::\+Meta\+::\+Internal\+::\+Has\+Variables = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
 \mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a7e32ddf900e1a8b24b567613fc603114}\label{namespacek_f_1_1_meta_1_1_internal_a7e32ddf900e1a8b24b567613fc603114}} 
 \index{kF::Meta::Internal@{kF::Meta::Internal}!IsVarSmallOptimized@{IsVarSmallOptimized}}
 \index{IsVarSmallOptimized@{IsVarSmallOptimized}!kF::Meta::Internal@{kF::Meta::Internal}}
@@ -579,9 +737,81 @@ constexpr bool k\+F\+::\+Meta\+::\+Internal\+::\+Is\+Var\+Small\+Optimized = \mb
 
 Helper to know if a type is trivial or not. 
 
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a4cfe38e37ac18a11f499a25a00bb6c44}\label{namespacek_f_1_1_meta_1_1_internal_a4cfe38e37ac18a11f499a25a00bb6c44}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Type2@{Type2}}
+\index{Type2@{Type2}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Type2}{Type2}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Type2}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aa17d2a6f90de6e0d60ac5a99f1c9c94b}\label{namespacek_f_1_1_meta_1_1_internal_aa17d2a6f90de6e0d60ac5a99f1c9c94b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Type3@{Type3}}
+\index{Type3@{Type3}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Type3}{Type3}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Type3}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a2412c2fc811e788a3c49d3d3c46ca08b}\label{namespacek_f_1_1_meta_1_1_internal_a2412c2fc811e788a3c49d3d3c46ca08b}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Type4@{Type4}}
+\index{Type4@{Type4}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Type4}{Type4}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Type4}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}\label{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Types@{Types}}
+\index{Types@{Types}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Types}{Types}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Types}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{bool} IsTemplate = \textcolor{keyword}{true}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a72a66f7f8f875d30f0303cee3ae84e8a}\label{namespacek_f_1_1_meta_1_1_internal_a72a66f7f8f875d30f0303cee3ae84e8a}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!TypesBeforeArguments@{TypesBeforeArguments}}
+\index{TypesBeforeArguments@{TypesBeforeArguments}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{TypesBeforeArguments}{TypesBeforeArguments}}
+{\footnotesize\ttfamily static constexpr bool k\+F\+::\+Meta\+::\+Internal\+::\+Types\+Before\+Arguments = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_af580f64b716166f94b3c1c75c6c52be5}\label{namespacek_f_1_1_meta_1_1_internal_af580f64b716166f94b3c1c75c6c52be5}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Var2@{Var2}}
+\index{Var2@{Var2}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Var2}{Var2}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Var2}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_aea44f7642e60aa27ad32925eb4bb3c04}\label{namespacek_f_1_1_meta_1_1_internal_aea44f7642e60aa27ad32925eb4bb3c04}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Var3@{Var3}}
+\index{Var3@{Var3}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Var3}{Var3}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Var3}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a99926b01bac2e156d51ffc2624b1664e}\label{namespacek_f_1_1_meta_1_1_internal_a99926b01bac2e156d51ffc2624b1664e}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Var4@{Var4}}
+\index{Var4@{Var4}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Var4}{Var4}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Var4}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}\label{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!Vars@{Vars}}
+\index{Vars@{Vars}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{Vars}{Vars}}
+{\footnotesize\ttfamily k\+F\+::\+Meta\+::\+Internal\+::\+Vars}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keyword}{static} constexpr \textcolor{keywordtype}{bool} IsTemplate = \textcolor{keyword}{true}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}\label{namespacek_f_1_1_meta_1_1_internal_ad4f0f57c57a3de6c94c9cbb9e1921580}} 
 \index{kF::Meta::Internal@{kF::Meta::Internal}!VarSmallOptimizationSize@{VarSmallOptimizationSize}}
 \index{VarSmallOptimizationSize@{VarSmallOptimizationSize}!kF::Meta::Internal@{kF::Meta::Internal}}
 \doxysubsubsection{\texorpdfstring{VarSmallOptimizationSize}{VarSmallOptimizationSize}}
 {\footnotesize\ttfamily constexpr auto k\+F\+::\+Meta\+::\+Internal\+::\+Var\+Small\+Optimization\+Size = 16ul\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_meta_1_1_internal_ab80f747e11aabd62c27fd11e72dea1e3}\label{namespacek_f_1_1_meta_1_1_internal_ab80f747e11aabd62c27fd11e72dea1e3}} 
+\index{kF::Meta::Internal@{kF::Meta::Internal}!VarsTuple@{VarsTuple}}
+\index{VarsTuple@{VarsTuple}!kF::Meta::Internal@{kF::Meta::Internal}}
+\doxysubsubsection{\texorpdfstring{VarsTuple}{VarsTuple}}
+{\footnotesize\ttfamily static constexpr auto k\+F\+::\+Meta\+::\+Internal\+::\+Vars\+Tuple = std\+::make\+\_\+tuple$<$decltype(\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{Vars}})...$>$(Vars...)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
 

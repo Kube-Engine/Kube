@@ -14,12 +14,14 @@ class \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_converter}{Converter}} is used to store meta-\/data about a type converter. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} is used to store meta-\/data about a getter and a setter used like a property. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{Factory}}
-\item 
 class \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{Factory}} is used to instantiate meta-\/data of a given type. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Factory is used to instantiate meta-\/data of a given type. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_function}{Function}} is used to store meta-\/data about a free / member / static function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}} is used to store types that need their meta data to be registered. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_meta_1_1_register_later}{Register\+Later}}
+\begin{DoxyCompactList}\small\item\em Helper used to register a class later in registerer. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_resolver}{Resolver}} is used to store and retreive meta-\/data at runtime. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}
@@ -28,6 +30,11 @@ class \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}} stores all slots in pages of stable addresses. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} is used to store meta-\/data about a type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Registered\+Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_meta_a8b51a58af861cae4a74f89cefd2a899a}{Factory}} = \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ Registered\+Type $>$ $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,7 +70,17 @@ void \mbox{\hyperlink{namespacek_f_1_1_meta_aaf6fda97518179111170b8ee78bb475e}{R
 
 
 \doxysubsection{Detailed Description}
-@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory}{Factory}} 
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_meta_1_1_registerer}{Registerer}} 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_meta_a8b51a58af861cae4a74f89cefd2a899a}\label{namespacek_f_1_1_meta_a8b51a58af861cae4a74f89cefd2a899a}} 
+\index{kF::Meta@{kF::Meta}!Factory@{Factory}}
+\index{Factory@{Factory}!kF::Meta@{kF::Meta}}
+\doxysubsubsection{\texorpdfstring{Factory}{Factory}}
+{\footnotesize\ttfamily template$<$typename Registered\+Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_meta_a8b51a58af861cae4a74f89cefd2a899a}{k\+F\+::\+Meta\+::\+Factory}} = typedef \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base}{Factory\+Base}}$<$std\+::remove\+\_\+cvref\+\_\+t$<$Registered\+Type$>$ $>$}
+
+
 
 \doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{namespacek_f_1_1_meta_a46f6fb79d8219cbacee1b500b3406fb5}\label{namespacek_f_1_1_meta_a46f6fb79d8219cbacee1b500b3406fb5}} 

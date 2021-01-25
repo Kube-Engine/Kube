@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -112,10 +112,20 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad8c10a6972dae1716ad03436d47f11e6"><td class="memTemplParams" colspan="2">template&lt;std::size_t RequiredAlignment&gt; </td></tr>
-<tr class="memitem:ad8c10a6972dae1716ad03436d47f11e6"><td class="memTemplItemLeft" align="right" valign="top">void *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core_1_1_utils.html#ad8c10a6972dae1716ad03436d47f11e6">AlignedAlloc</a> (const std::size_t bytes) noexcept</td></tr>
-<tr class="memdesc:ad8c10a6972dae1716ad03436d47f11e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards to std::aligned_alloc, but ensure arguments.  <a href="namespacek_f_1_1_core_1_1_utils.html#ad8c10a6972dae1716ad03436d47f11e6">More...</a><br /></td></tr>
-<tr class="separator:ad8c10a6972dae1716ad03436d47f11e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41544a0893eaafb61541e99348644410"><td class="memTemplParams" colspan="2">template&lt;std::size_t RequiredAlignment, typename Cast  = void&gt; </td></tr>
+<tr class="memitem:a41544a0893eaafb61541e99348644410"><td class="memTemplItemLeft" align="right" valign="top">Cast *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core_1_1_utils.html#a41544a0893eaafb61541e99348644410">AlignedAlloc</a> (const std::size_t bytes) noexcept</td></tr>
+<tr class="memdesc:a41544a0893eaafb61541e99348644410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to std::aligned_alloc, but ensure arguments, you must use AlignedFree to free the memory.  <a href="namespacek_f_1_1_core_1_1_utils.html#a41544a0893eaafb61541e99348644410">More...</a><br /></td></tr>
+<tr class="separator:a41544a0893eaafb61541e99348644410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd6078cbaf1adc56948ed8a476f0034"><td class="memTemplParams" colspan="2">template&lt;typename Cast  = void&gt; </td></tr>
+<tr class="memitem:aedd6078cbaf1adc56948ed8a476f0034"><td class="memTemplItemLeft" align="right" valign="top">Cast *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core_1_1_utils.html#aedd6078cbaf1adc56948ed8a476f0034">AlignedAlloc</a> (const std::size_t bytes, const std::size_t alignment) noexcept</td></tr>
+<tr class="separator:aedd6078cbaf1adc56948ed8a476f0034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2444c3bb58a23dfe866d50ceadf3148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core_1_1_utils.html#ad2444c3bb58a23dfe866d50ceadf3148">AlignedFree</a> (void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept</td></tr>
+<tr class="memdesc:ad2444c3bb58a23dfe866d50ceadf3148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a pointer allocated with AlignedAlloc.  <a href="namespacek_f_1_1_core_1_1_utils.html#ad2444c3bb58a23dfe866d50ceadf3148">More...</a><br /></td></tr>
+<tr class="separator:ad2444c3bb58a23dfe866d50ceadf3148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe841dfef86b0430cd9d469308367349"><td class="memTemplParams" colspan="2">template&lt;std::integral Unit&gt; </td></tr>
+<tr class="memitem:afe841dfef86b0430cd9d469308367349"><td class="memTemplItemLeft" align="right" valign="top">constexpr Unit&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core_1_1_utils.html#afe841dfef86b0430cd9d469308367349">NextPowerOf2</a> (Unit value)</td></tr>
+<tr class="memdesc:afe841dfef86b0430cd9d469308367349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the closest power of 2 of value.  <a href="namespacek_f_1_1_core_1_1_utils.html#afe841dfef86b0430cd9d469308367349">More...</a><br /></td></tr>
+<tr class="separator:afe841dfef86b0430cd9d469308367349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -170,19 +180,19 @@ template&lt;template&lt; typename... &gt; class Op, typename... Args&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad8c10a6972dae1716ad03436d47f11e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8c10a6972dae1716ad03436d47f11e6">&#9670;&nbsp;</a></span>AlignedAlloc()</h2>
+<a id="a41544a0893eaafb61541e99348644410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41544a0893eaafb61541e99348644410">&#9670;&nbsp;</a></span>AlignedAlloc() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;std::size_t RequiredAlignment&gt; </div>
+template&lt;std::size_t RequiredAlignment, typename Cast  = void&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void * kF::Core::Utils::AlignedAlloc </td>
+          <td class="memname">Cast * kF::Core::Utils::AlignedAlloc </td>
           <td>(</td>
           <td class="paramtype">const std::size_t&#160;</td>
           <td class="paramname"><em>bytes</em></td><td>)</td>
@@ -196,8 +206,104 @@ template&lt;std::size_t RequiredAlignment&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Forwards to std::aligned_alloc, but ensure arguments. </p>
+<p>Similar to std::aligned_alloc, but ensure arguments, you must use AlignedFree to free the memory. </p>
 <p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="namespacek_f_1_1_core_1_1_utils.html">Utils</a> </p>
+
+</div>
+</div>
+<a id="aedd6078cbaf1adc56948ed8a476f0034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd6078cbaf1adc56948ed8a476f0034">&#9670;&nbsp;</a></span>AlignedAlloc() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Cast  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cast* kF::Core::Utils::AlignedAlloc </td>
+          <td>(</td>
+          <td class="paramtype">const std::size_t&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2444c3bb58a23dfe866d50ceadf3148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2444c3bb58a23dfe866d50ceadf3148">&#9670;&nbsp;</a></span>AlignedFree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kF::Core::Utils::AlignedFree </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Free a pointer allocated with AlignedAlloc. </p>
+
+</div>
+</div>
+<a id="afe841dfef86b0430cd9d469308367349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe841dfef86b0430cd9d469308367349">&#9670;&nbsp;</a></span>NextPowerOf2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::integral Unit&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr Unit kF::Core::Utils::NextPowerOf2 </td>
+          <td>(</td>
+          <td class="paramtype">Unit&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find the closest power of 2 of value. </p>
 
 </div>
 </div>

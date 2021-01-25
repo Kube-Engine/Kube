@@ -49,13 +49,13 @@ void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a11968cfc67c0c36d70e1fc2d0485
 \begin{DoxyCompactList}\small\item\em Work untile given graph finished. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aa48367501beb213a8a0a8aa1093c76cf}{schedule\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
 \begin{DoxyCompactList}\small\item\em Tries to schedule a single node. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a0abc37221e20d541fbd27247c79c2548}{dispatch\+Static\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+std\+::uint32\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a4bb5aa69a9f14aedc335081333e9dc2c}{dispatch\+Static\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
 \begin{DoxyCompactList}\small\item\em Helper used to process a Static node. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aec2c001f54cac6321adba63fd5721933}{dispatch\+Dynamic\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+std\+::uint32\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ad3631e996f6376af6be4b1e97011f86a}{dispatch\+Dynamic\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
 \begin{DoxyCompactList}\small\item\em Helper used to process a Dynamic node. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_aab9732d611b1c0a5f42d584f1de32aec}{dispatch\+Switch\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+std\+::uint32\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_ac717fc37e79835e0af92d26d0291df27}{dispatch\+Switch\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
 \begin{DoxyCompactList}\small\item\em Helper used to process a Switch node. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a11fd6d3aae06e8cb3fa45e57a1fa39e2}{dispatch\+Graph\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
+std\+::uint32\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_worker_a9b8675df9fd1a7986d299a5f47deedbf}{dispatch\+Graph\+Node}} (\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const node)
 \begin{DoxyCompactList}\small\item\em Helper used to process a \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -129,41 +129,41 @@ Destroy the worker without stopping it !
 
 Work untile given graph finished. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_aec2c001f54cac6321adba63fd5721933}\label{classk_f_1_1_flow_1_1_worker_aec2c001f54cac6321adba63fd5721933}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ad3631e996f6376af6be4b1e97011f86a}\label{classk_f_1_1_flow_1_1_worker_ad3631e996f6376af6be4b1e97011f86a}} 
 \index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchDynamicNode@{dispatchDynamicNode}}
 \index{dispatchDynamicNode@{dispatchDynamicNode}!kF::Flow::Worker@{kF::Flow::Worker}}
 \doxysubsubsection{\texorpdfstring{dispatchDynamicNode()}{dispatchDynamicNode()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Dynamic\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Dynamic\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 
 Helper used to process a Dynamic node. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a11fd6d3aae06e8cb3fa45e57a1fa39e2}\label{classk_f_1_1_flow_1_1_worker_a11fd6d3aae06e8cb3fa45e57a1fa39e2}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a9b8675df9fd1a7986d299a5f47deedbf}\label{classk_f_1_1_flow_1_1_worker_a9b8675df9fd1a7986d299a5f47deedbf}} 
 \index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchGraphNode@{dispatchGraphNode}}
 \index{dispatchGraphNode@{dispatchGraphNode}!kF::Flow::Worker@{kF::Flow::Worker}}
 \doxysubsubsection{\texorpdfstring{dispatchGraphNode()}{dispatchGraphNode()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Graph\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Graph\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 
 Helper used to process a \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} node. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a0abc37221e20d541fbd27247c79c2548}\label{classk_f_1_1_flow_1_1_worker_a0abc37221e20d541fbd27247c79c2548}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_a4bb5aa69a9f14aedc335081333e9dc2c}\label{classk_f_1_1_flow_1_1_worker_a4bb5aa69a9f14aedc335081333e9dc2c}} 
 \index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchStaticNode@{dispatchStaticNode}}
 \index{dispatchStaticNode@{dispatchStaticNode}!kF::Flow::Worker@{kF::Flow::Worker}}
 \doxysubsubsection{\texorpdfstring{dispatchStaticNode()}{dispatchStaticNode()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Static\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Static\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 
 Helper used to process a Static node. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_aab9732d611b1c0a5f42d584f1de32aec}\label{classk_f_1_1_flow_1_1_worker_aab9732d611b1c0a5f42d584f1de32aec}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_worker_ac717fc37e79835e0af92d26d0291df27}\label{classk_f_1_1_flow_1_1_worker_ac717fc37e79835e0af92d26d0291df27}} 
 \index{kF::Flow::Worker@{kF::Flow::Worker}!dispatchSwitchNode@{dispatchSwitchNode}}
 \index{dispatchSwitchNode@{dispatchSwitchNode}!kF::Flow::Worker@{kF::Flow::Worker}}
 \doxysubsubsection{\texorpdfstring{dispatchSwitchNode()}{dispatchSwitchNode()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Switch\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t k\+F\+::\+Flow\+::\+Worker\+::dispatch\+Switch\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
 
 

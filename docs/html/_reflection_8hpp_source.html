@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -75,63 +75,66 @@ $(function() {
 <a href="_reflection_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_meta_8hpp.html">Kube/Meta/Meta.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_registerer_8hpp.html">Kube/Meta/Registerer.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_make_8hpp.html">Make.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_register_8hpp.html">Register.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a8858fa8b15a469e5c1350c13f637af58">   14</a></span>&#160;<span class="preprocessor">#define K_OBJECT(ClassType, ...) \</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">private: \</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">    using _MetaType = ClassType; \</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">protected: \</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    [[nodiscard]] virtual kF::Var getTypeHandle(void) noexcept { return kF::Var::Assign(*this); } \</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    [[nodiscard]] virtual kF::Var getTypeHandle(void) const noexcept { return kF::Var::Assign(*this); } \</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">public: \</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    [[nodiscard]] virtual kF::Meta::Type getMetaType(void) const noexcept { return kF::Meta::Factory&lt;_MetaType&gt;::Resolve(); } \</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    static void RegisterMetadata(void) noexcept { KUBE_REGISTER_TYPE(ClassType) ADD_PREFIX_EACH(KUBE_REGISTER_, __VA_ARGS__) ; } \</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    ADD_PREFIX_EACH(KUBE_MAKE_, __VA_ARGS__) \</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">private:</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#abff105fe0202054303b362b4a9d0e6b1">   29</a></span>&#160;<span class="preprocessor">#define K_BASE(BaseType) BASE(BaseType)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ae618b70bbe9f83cc8ce3d77078c44907">   14</a></span>&#160;<span class="preprocessor">#define K_CONCRETE(ClassType, ...) \</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">    KUBE_REGISTER_LATER(ClassType __VA_OPT__(,) __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">    KUBE_MAKE_META_TYPE_GETTER \</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">private:</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a7aa70c1f5bb75e4b05b9b6c8820043a5">   20</a></span>&#160;<span class="preprocessor">#define K_ABSTRACT(ClassType, ...) \</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    KUBE_REGISTER_LATER(ClassType __VA_OPT__(,) __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">    KUBE_MAKE_VIRTUAL_META_TYPE_GETTER \</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">private:</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a15841b59d5f46522c5a4f90740b89e1e">   26</a></span>&#160;<span class="preprocessor">#define K_DERIVED(ClassType, BaseType, ...) \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    KUBE_REGISTER_LATER(ClassType, K_BASE(BaseType) __VA_OPT__(,) __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    KUBE_MAKE_VIRTUAL_META_TYPE_GETTER \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">private:</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a29cae1c0660e0708efea16982dfb0d1b">   34</a></span>&#160;<span class="preprocessor">#define K_CONSTRUCTOR(...)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#abff105fe0202054303b362b4a9d0e6b1">   34</a></span>&#160;<span class="preprocessor">#define K_BASE(BaseType) BASE(BaseType)</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a8b62b2c838fba23f5f0cb629de867898">   47</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_COPY(PropertyType, name, ...)                PROPERTY_COPY(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a64e19d88d6b1a3d8ef4ad5edc4ddca66">   48</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_COPY_READONLY(PropertyType, name, ...)       PROPERTY_COPY_READONLY(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a31110e90788fb18924d379bb3f8a1c1d">   49</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_COPY_REF(PropertyType, name, ...)            PROPERTY_COPY_REF(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ad9e269c72ef2563822e8aaf2f83555c6">   50</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_MOVE(PropertyType, name, ...)                PROPERTY_MOVE(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a7e29af08a66cbd533cf5a2f0ac2fd380">   51</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_MOVE_READONLY(PropertyType, name, ...)       PROPERTY_MOVE_READONLY(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ac26b52e07eb1b7b2a1d014e1f28f59e6">   52</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_MOVE_REF(PropertyType, name, ...)            PROPERTY_MOVE_REF(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ab063b4c6249817d65dd68566092a5163">   62</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM(PropertyType, name, getter, setter) PROPERTY_CUSTOM(PropertyType, name, getter, setter)</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a46c09cb35a0f6c54462889bbf614fb12">   63</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_READONLY(PropertyType, name, getter) PROPERTY_CUSTOM(PropertyType, name, getter, nullptr)</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ab9f8e01712b0411c5215c8f68e2bdd78">   73</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, setter) PROPERTY_CUSTOM(PropertyType, name, getter, setter)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ab28a1d81b1263f6c275eab6878120670">   79</a></span>&#160;<span class="preprocessor">#define K_SIGNAL(name, ...) SIGNAL(name __VA_OPT__(, __VA_ARGS__))</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ad4d4dd71d12cb694f5b1340f020862eb">   84</a></span>&#160;<span class="preprocessor">#define K_FUNCTION(name) FUNCTION(name)</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a467276a949f1726f3c5b62d502b0813a">   90</a></span>&#160;<span class="preprocessor">#define K_FUNCTION_OVERLOAD(name, FunctionType) FUNCTION_OVERLOAD(name, FunctionType)</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f.html">kF</a></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="namespacek_f.html#a942f746884b429de999e3a1d8ee044e1">   94</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_var.html">TypeHandle</a> = <a class="code" href="classk_f_1_1_var.html">Var</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="namespacek_f.html#a7fb97731993ca42eb836a3ea64d68870">   97</a></span>&#160;    constexpr <a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="code" href="namespacek_f.html#a7fb97731993ca42eb836a3ea64d68870">MakeInstanceFunctionName</a> = <a class="code" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(<span class="stringliteral">&quot;__makePtr__&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a29cae1c0660e0708efea16982dfb0d1b">   39</a></span>&#160;<span class="preprocessor">#define K_CONSTRUCTOR(...) CONSTRUCTOR(__VA_ARGS__)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a6d91f8069f1dc3df92c11b2f8e46def4">   51</a></span>&#160;<span class="preprocessor">#define K_PROPERTY(PropertyType, name, ...)                             PROPERTY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a2524c3dac1e4196bb11399f8568e59a8">   52</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_SIGLESS(PropertyType, name, ...)                     PROPERTY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a613f4bd54bfeb04882122f8ca2cdf362">   53</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_VOLATILE(PropertyType, name, ...)                    PROPERTY_VOLATILE(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#acdf1af1f8948aa64072a92c3814f8048">   54</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_VOLATILE_SIGLESS(PropertyType, name, ...)            PROPERTY_VOLATILE_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ace3b57d2c81828a60629e7aaa2ebfa2e">   55</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_GETONLY(PropertyType, name, ...)                     PROPERTY_GETONLY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#af9006d803352261d86dc22cd37f04ec9">   56</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_GETONLY_SIGLESS(PropertyType, name, ...)             PROPERTY_GETONLY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a8936e1908ae51eb2255e181175898a6d">   57</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_VOLATILE_GETONLY(PropertyType, name, ...)            PROPERTY_VOLATILE_GETONLY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a195dfc1d60e2f24da169ccaf38e1b6d9">   58</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_VOLATILE_GETONLY_SIGLESS(PropertyType, name, ...)    PROPERTY_VOLATILE_GETONLY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#aba22c4ddaac8953891145afb03bc10fd">   73</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, moveSetter)           PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, moveSetter)</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#aa5e455b521549a66bae280a11f2dbe11">   74</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, moveSetter)   PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, moveSetter)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ade53d415106c9f7e8ae2b68780e24eae">   75</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_COPY(PropertyType, name, getter, copySetter)                  PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, nullptr)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#abc183dc156db1f34fa50e2d5990a2ff8">   76</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_COPY_SIGLESS(PropertyType, name, getter, copySetter)          PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, nullptr)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ae7d1aeb85e9f1fd53f05a410f62227ab">   77</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_MOVE(PropertyType, name, getter, moveSetter)                  PROPERTY_CUSTOM(PropertyType, name, getter, nullptr, moveSetter)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a94ffb1764ff06367fd18c1cfd8c5563b">   78</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_MOVE_SIGLESS(PropertyType, name, getter, moveSetter)          PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, nullptr, moveSetter)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a75aab8047e73c4b215e849afbf936db8">   79</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_GETONLY(PropertyType, name, getter)                           PROPERTY_CUSTOM(PropertyType, name, getter, nullptr, nullptr)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a7a439fa4bc86b1dd530152806e18e0b2">   80</a></span>&#160;<span class="preprocessor">#define K_PROPERTY_CUSTOM_GETONLY_SIGLESS(PropertyType, name, getter)                   PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, nullptr, nullptr)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ab28a1d81b1263f6c275eab6878120670">   86</a></span>&#160;<span class="preprocessor">#define K_SIGNAL(name, ...) SIGNAL(name __VA_OPT__(, __VA_ARGS__))</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ad4d4dd71d12cb694f5b1340f020862eb">   91</a></span>&#160;<span class="preprocessor">#define K_FUNCTION(name) FUNCTION(name)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#a467276a949f1726f3c5b62d502b0813a">   97</a></span>&#160;<span class="preprocessor">#define K_FUNCTION_OVERLOAD(name, FunctionType) FUNCTION_OVERLOAD(name, FunctionType)</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespacek_f.html#a4958e74fb6e0fcf0c0075c34b5bcd17f">RegisterMetadata</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="_reflection_8hpp.html#ac622150996edd734a10f229eb381a53f">  100</a></span>&#160;<span class="preprocessor">#define emit</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f.html">kF</a></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespacek_f.html#ada55779a15615bb4c7ce6ab6d5b352b7">RegisterMetadata</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacek_f_html_a3425eef9b8c0f48a05a0481820112bd4"><div class="ttname"><a href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">kF::HashedName</a></div><div class="ttdeci">std::uint32_t HashedName</div><div class="ttdoc">The result type of the hash function.</div><div class="ttdef"><b>Definition:</b> Hash.hpp:13</div></div>
 <div class="ttc" id="a_register_8hpp_html"><div class="ttname"><a href="_register_8hpp.html">Register.hpp</a></div></div>
-<div class="ttc" id="anamespacek_f_html_a7fb97731993ca42eb836a3ea64d68870"><div class="ttname"><a href="namespacek_f.html#a7fb97731993ca42eb836a3ea64d68870">kF::MakeInstanceFunctionName</a></div><div class="ttdeci">constexpr HashedName MakeInstanceFunctionName</div><div class="ttdoc">The named used to register Item instantiation helper.</div><div class="ttdef"><b>Definition:</b> Reflection.hpp:97</div></div>
-<div class="ttc" id="anamespacek_f_html_a4958e74fb6e0fcf0c0075c34b5bcd17f"><div class="ttname"><a href="namespacek_f.html#a4958e74fb6e0fcf0c0075c34b5bcd17f">kF::RegisterMetadata</a></div><div class="ttdeci">void RegisterMetadata(void)</div><div class="ttdoc">Registers all base types.</div><div class="ttdef"><b>Definition:</b> Reflection.cpp:11</div></div>
+<div class="ttc" id="a_registerer_8hpp_html"><div class="ttname"><a href="_registerer_8hpp.html">Registerer.hpp</a></div></div>
 <div class="ttc" id="a_make_8hpp_html"><div class="ttname"><a href="_make_8hpp.html">Make.hpp</a></div></div>
-<div class="ttc" id="anamespacek_f_html_a185a3d851d86ffeee71fdf2523d792ef"><div class="ttname"><a href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a></div><div class="ttdeci">constexpr HashedName Hash(char const *str, std::size_t len) noexcept</div><div class="ttdoc">Compile-time string hashing.</div><div class="ttdef"><b>Definition:</b> Hash.hpp:18</div></div>
+<div class="ttc" id="anamespacek_f_html_ada55779a15615bb4c7ce6ab6d5b352b7"><div class="ttname"><a href="namespacek_f.html#ada55779a15615bb4c7ce6ab6d5b352b7">kF::RegisterMetadata</a></div><div class="ttdeci">void RegisterMetadata(void)</div><div class="ttdoc">Registers all base types.</div><div class="ttdef"><b>Definition:</b> Reflection.cpp:8</div></div>
 <div class="ttc" id="anamespacek_f_html"><div class="ttname"><a href="namespacek_f.html">kF</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:16</div></div>
-<div class="ttc" id="aclassk_f_1_1_var_html"><div class="ttname"><a href="classk_f_1_1_var.html">kF::Var</a></div><div class="ttdoc">Var is used as a wrapper for any type.</div><div class="ttdef"><b>Definition:</b> Var.hpp:20</div></div>
-<div class="ttc" id="a_meta_8hpp_html"><div class="ttname"><a href="_meta_8hpp.html">Meta.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

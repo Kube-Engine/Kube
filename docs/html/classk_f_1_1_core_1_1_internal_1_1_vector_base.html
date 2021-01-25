@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -82,7 +82,7 @@ $(function() {
 <p>Base implementation of a vector with size and capacity cached.  
  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_vector_8hpp_source.html">Vector.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_vector_base_8hpp_source.html">VectorBase.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab81d90d40c91e0272a1da6f3555288c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca18360ec4d321f767c764a7dd03be0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#aab6cf693855a336b04ce67587a3241af">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#adca18360ec4d321f767c764a7dd03be0">end</a> (void) const noexcept</td></tr>
 <tr class="separator:adca18360ec4d321f767c764a7dd03be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c44cb50ce1f8c1d4584cb844ca40789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a1c44cb50ce1f8c1d4584cb844ca40789">steal</a> (<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">VectorBase</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a1c44cb50ce1f8c1d4584cb844ca40789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steal another instance.  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a1c44cb50ce1f8c1d4584cb844ca40789">More...</a><br /></td></tr>
+<tr class="separator:a1c44cb50ce1f8c1d4584cb844ca40789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42df9504ac34321f2c1e4f622eaa0d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a42df9504ac34321f2c1e4f622eaa0d60">swap</a> (<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">VectorBase</a> &amp;other) noexcept</td></tr>
 <tr class="memdesc:a42df9504ac34321f2c1e4f622eaa0d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap two instances.  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a42df9504ac34321f2c1e4f622eaa0d60">More...</a><br /></td></tr>
 <tr class="separator:a42df9504ac34321f2c1e4f622eaa0d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,9 +159,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7c74b3f3281b46b73b2b1c69d9a41fe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a7c74b3f3281b46b73b2b1c69d9a41fe9">allocate</a> (const Range <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#aca6c209c71a914b1c8a98b6d88ce7c32">capacity</a>) noexcept</td></tr>
 <tr class="memdesc:a7c74b3f3281b46b73b2b1c69d9a41fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a new buffer.  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a7c74b3f3281b46b73b2b1c69d9a41fe9">More...</a><br /></td></tr>
 <tr class="separator:a7c74b3f3281b46b73b2b1c69d9a41fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4039b9a59abc0f6c1457792d7f3c3749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a4039b9a59abc0f6c1457792d7f3c3749">deallocate</a> (<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> *<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a82b9436014d43a210a35dab464fa6123">data</a>) noexcept</td></tr>
-<tr class="memdesc:a4039b9a59abc0f6c1457792d7f3c3749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates a buffer.  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a4039b9a59abc0f6c1457792d7f3c3749">More...</a><br /></td></tr>
-<tr class="separator:a4039b9a59abc0f6c1457792d7f3c3749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b2af93f282097b1617ccbc35b9bf58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#ae0b2af93f282097b1617ccbc35b9bf58">deallocate</a> (<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> *const <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#a82b9436014d43a210a35dab464fa6123">data</a>, const Range) noexcept</td></tr>
+<tr class="memdesc:ae0b2af93f282097b1617ccbc35b9bf58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates a buffer.  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#ae0b2af93f282097b1617ccbc35b9bf58">More...</a><br /></td></tr>
+<tr class="separator:ae0b2af93f282097b1617ccbc35b9bf58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -534,8 +537,8 @@ template&lt;typename Type , std::integral Range&gt; </div>
 
 </div>
 </div>
-<a id="a4039b9a59abc0f6c1457792d7f3c3749"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4039b9a59abc0f6c1457792d7f3c3749">&#9670;&nbsp;</a></span>deallocate()</h2>
+<a id="ae0b2af93f282097b1617ccbc35b9bf58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b2af93f282097b1617ccbc35b9bf58">&#9670;&nbsp;</a></span>deallocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -548,9 +551,19 @@ template&lt;typename Type , std::integral Range&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">kF::Core::Internal::VectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;::deallocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> *const&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const&#160;</td>
+          <td class="paramname"><em>Range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -856,6 +869,37 @@ template&lt;typename Type , std::integral Range&gt; </div>
 
 </div>
 </div>
+<a id="a1c44cb50ce1f8c1d4584cb844ca40789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c44cb50ce1f8c1d4584cb844ca40789">&#9670;&nbsp;</a></span>steal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::integral Range&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">kF::Core::Internal::VectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;::steal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">VectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Steal another instance. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Vector </p>
+
+</div>
+</div>
 <a id="a42df9504ac34321f2c1e4f622eaa0d60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42df9504ac34321f2c1e4f622eaa0d60">&#9670;&nbsp;</a></span>swap()</h2>
 
@@ -883,7 +927,6 @@ template&lt;typename Type , std::integral Range&gt; </div>
 </div><div class="memdoc">
 
 <p>Swap two instances. </p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Vector </p>
 
 </div>
 </div>
@@ -961,8 +1004,8 @@ template&lt;typename Type , std::integral Range&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Kube/Core/<a class="el" href="_vector_8hpp_source.html">Vector.hpp</a></li>
-<li>Kube/Core/<a class="el" href="_vector_8ipp.html">Vector.ipp</a></li>
+<li>Kube/Core/<a class="el" href="_vector_base_8hpp_source.html">VectorBase.hpp</a></li>
+<li>Kube/Core/<a class="el" href="_vector_base_8ipp.html">VectorBase.ipp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

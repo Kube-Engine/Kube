@@ -21,7 +21,7 @@ struct \mbox{\hyperlink{structk_f_1_1_flow_1_1_scheduler_1_1_cache}{Cache}}
 \begin{DoxyCompactList}\small\item\em Construct a set of workers and start scheduler. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a8081d195d572434c444e7f5e1993bdc2}{$\sim$\+Scheduler}} (void)
 \begin{DoxyCompactList}\small\item\em Destroy and join all workers. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_ae4749851d01b8001b7c39b9e17629934}{schedule}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&task)
+{\footnotesize template$<$bool Is\+Repeating = false$>$ }\\void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a5453e4a46d271f034735b73a48de3cf2}{schedule}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&task)
 \begin{DoxyCompactList}\small\item\em Schedule a graph of tasks. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler_a4fdf6dd6ee4b7a905dd669e71c169f56}{schedule}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} task) noexcept
 \begin{DoxyCompactList}\small\item\em Schedule a task. \end{DoxyCompactList}\item 
@@ -114,11 +114,12 @@ Process all pending notifications on the current thread.
 
 Schedule a task. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_ae4749851d01b8001b7c39b9e17629934}\label{classk_f_1_1_flow_1_1_scheduler_ae4749851d01b8001b7c39b9e17629934}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_scheduler_a5453e4a46d271f034735b73a48de3cf2}\label{classk_f_1_1_flow_1_1_scheduler_a5453e4a46d271f034735b73a48de3cf2}} 
 \index{kF::Flow::Scheduler@{kF::Flow::Scheduler}!schedule@{schedule}}
 \index{schedule@{schedule}!kF::Flow::Scheduler@{kF::Flow::Scheduler}}
 \doxysubsubsection{\texorpdfstring{schedule()}{schedule()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Scheduler\+::schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$bool Is\+Repeating$>$ \\
+void k\+F\+::\+Flow\+::\+Scheduler\+::schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

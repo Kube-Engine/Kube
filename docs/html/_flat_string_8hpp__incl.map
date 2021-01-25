@@ -1,21 +1,24 @@
 <map id="Kube/Core/FlatString.hpp" name="Kube/Core/FlatString.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="125,5,294,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="80,229,149,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="28,80,116,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="141,80,195,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="220,80,281,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="305,80,380,107"/>
-<area shape="rect" id="node7" href="$_flat_vector_8hpp.html" title=" " alt="" coords="404,80,511,107"/>
-<area shape="rect" id="node8" href="$_vector_details_8hpp.html" title=" " alt="" coords="332,155,457,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="235,229,333,256"/>
-<area shape="rect" id="node10" href="$_utils_8hpp.html" title=" " alt="" coords="357,229,432,256"/>
-<area shape="rect" id="node19" href="$_vector_details_8ipp.html" title=" " alt="" coords="457,229,578,256"/>
-<area shape="rect" id="node11" title=" " alt="" coords="13,304,96,331"/>
-<area shape="rect" id="node12" title=" " alt="" coords="120,304,195,331"/>
-<area shape="rect" id="node13" title=" " alt="" coords="219,304,293,331"/>
-<area shape="rect" id="node14" title=" " alt="" coords="318,304,383,331"/>
-<area shape="rect" id="node15" title=" " alt="" coords="407,304,470,331"/>
-<area shape="rect" id="node16" title=" " alt="" coords="495,304,548,331"/>
-<area shape="rect" id="node17" title=" " alt="" coords="573,304,633,331"/>
-<area shape="rect" id="node18" href="$_utils_8ipp.html" title=" " alt="" coords="657,304,727,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,386,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,229,75,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="319,80,407,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="431,80,486,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="511,80,572,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="99,229,173,256"/>
+<area shape="rect" id="node7" href="$_flat_vector_8hpp.html" title=" " alt="" coords="188,80,295,107"/>
+<area shape="rect" id="node8" href="$_vector_details_8hpp.html" title=" " alt="" coords="184,155,309,181"/>
+<area shape="rect" id="node21" href="$_flat_vector_base_8hpp.html" title=" " alt="" coords="545,155,681,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="198,229,295,256"/>
+<area shape="rect" id="node10" href="$_assert_8hpp.html" title=" " alt="" coords="320,229,405,256"/>
+<area shape="rect" id="node11" href="$_utils_8hpp.html" title=" " alt="" coords="576,229,651,256"/>
+<area shape="rect" id="node20" href="$_vector_details_8ipp.html" title=" " alt="" coords="430,229,551,256"/>
+<area shape="rect" id="node12" title=" " alt="" coords="232,304,315,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="339,304,413,331"/>
+<area shape="rect" id="node14" title=" " alt="" coords="437,304,512,331"/>
+<area shape="rect" id="node15" title=" " alt="" coords="537,304,602,331"/>
+<area shape="rect" id="node16" title=" " alt="" coords="626,304,689,331"/>
+<area shape="rect" id="node17" title=" " alt="" coords="713,304,767,331"/>
+<area shape="rect" id="node18" title=" " alt="" coords="791,304,851,331"/>
+<area shape="rect" id="node19" href="$_utils_8ipp.html" title=" " alt="" coords="875,304,946,331"/>
+<area shape="rect" id="node22" href="$_flat_vector_base_8ipp.html" title=" " alt="" coords="675,229,807,256"/>
 </map>

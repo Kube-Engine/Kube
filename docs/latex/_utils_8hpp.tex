@@ -8,8 +8,7 @@
 {\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include $<$cstdlib$>$}\newline
 {\ttfamily \#include \char`\"{}Utils.\+ipp\char`\"{}}\newline
-Include dependency graph for Utils.\+hpp\+:
-\nopagebreak
+Include dependency graph for Utils.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -53,19 +52,21 @@ struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector_3_01_default_0
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_abd902f238f0abea10cbc16f6db441886}{T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+T\+Y\+PE}}(Class, ...)~decltype(std\+::declval$<$Class$<$\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$$>$())
 \begin{DoxyCompactList}\small\item\em Helper used to pass template into macro. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{_utils_8hpp_ab41f7dbae1155c4c8e532849b3b5875a}{nothrow\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, ...)~std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$
+\#define \mbox{\hyperlink{_utils_8hpp_ad4abf2f6194c47f3b1bc2d7f91535a28}{nothrow\+\_\+default\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$
 \begin{DoxyCompactList}\small\item\em Various exception helpers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_utils_8hpp_ab41f7dbae1155c4c8e532849b3b5875a}{nothrow\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, ...)~std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$
+\item 
 \#define \mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\+\_\+copy\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_a19f280b842195eeb3c608d0a78bbd0d2}{nothrow\+\_\+move\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$
 \item 
-\#define \mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ ? \mbox{\hyperlink{_utils_8hpp_a19f280b842195eeb3c608d0a78bbd0d2}{nothrow\+\_\+move\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \+: \mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\+\_\+copy\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
+\#define \mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_a58e95c4e6e12c6ccf0b796580ede2b11}{nothrow\+\_\+copy\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_a43b47d28c45dd6bdca3d3746cdb3b118}{nothrow\+\_\+move\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$
 \item 
-\#define \mbox{\hyperlink{_utils_8hpp_ac3aa033c57c8da9ea6325293df73d7f8}{nothrow\+\_\+forward\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ ? \mbox{\hyperlink{_utils_8hpp_a43b47d28c45dd6bdca3d3746cdb3b118}{nothrow\+\_\+move\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \+: \mbox{\hyperlink{_utils_8hpp_a58e95c4e6e12c6ccf0b796580ede2b11}{nothrow\+\_\+copy\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
+\#define \mbox{\hyperlink{_utils_8hpp_ac3aa033c57c8da9ea6325293df73d7f8}{nothrow\+\_\+forward\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}{nothrow\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$
 \item 
@@ -77,8 +78,10 @@ struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector_3_01_default_0
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_a2c1f70068d10c31431fdb83899c486b3}{nothrow\+\_\+expr}}(Expression)~noexcept(Expression)
 \item 
-\#define \mbox{\hyperlink{_utils_8hpp_ab9cf068fa663d547b324875ae0f6cd1a}{noexcept\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, ...)~noexcept(\mbox{\hyperlink{_utils_8hpp_ab41f7dbae1155c4c8e532849b3b5875a}{nothrow\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+))
+\#define \mbox{\hyperlink{_utils_8hpp_af75f6563a2dfb12f0a995cd775440c48}{noexcept\+\_\+default\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~noexcept(\mbox{\hyperlink{_utils_8hpp_ad4abf2f6194c47f3b1bc2d7f91535a28}{nothrow\+\_\+default\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
 \begin{DoxyCompactList}\small\item\em Various noexcept helpers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_utils_8hpp_ab9cf068fa663d547b324875ae0f6cd1a}{noexcept\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, ...)~noexcept(\mbox{\hyperlink{_utils_8hpp_ab41f7dbae1155c4c8e532849b3b5875a}{nothrow\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+))
+\item 
 \#define \mbox{\hyperlink{_utils_8hpp_a3af63d1c24188133edd8218a786b7cff}{noexcept\+\_\+copy\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~noexcept(\mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\+\_\+copy\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_aa4e0de49dc336ffe9e1966fb62533e9b}{noexcept\+\_\+move\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~noexcept(\mbox{\hyperlink{_utils_8hpp_a19f280b842195eeb3c608d0a78bbd0d2}{nothrow\+\_\+move\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
@@ -93,7 +96,11 @@ struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector_3_01_default_0
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_a8a24593c518598a38dea47cdd95ec02b}{noexcept\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~noexcept(\mbox{\hyperlink{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}{nothrow\+\_\+destructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
 \item 
+\#define \mbox{\hyperlink{_utils_8hpp_ab884caa010a014ebd2edcccabe83df43}{noexcept\+\_\+default\+\_\+invocable}}(Function)~noexcept(\mbox{\hyperlink{_utils_8hpp_a1083b58d72217086b8b6c7928dbf7619}{nothrow\+\_\+invocable}}(Function))
+\item 
 \#define \mbox{\hyperlink{_utils_8hpp_a2a18f1026f3acfed434657ca34f9a79d}{noexcept\+\_\+invocable}}(Function, ...)~noexcept(\mbox{\hyperlink{_utils_8hpp_a1083b58d72217086b8b6c7928dbf7619}{nothrow\+\_\+invocable}}(Function \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+))
+\item 
+\#define \mbox{\hyperlink{_utils_8hpp_af104b97f69a222d9d2a11ff9a5949327}{noexcept\+\_\+forward\+\_\+iterator\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}})~noexcept(\mbox{\hyperlink{_utils_8hpp_ac151f42074dd177d7bee208295f9da1a}{nothrow\+\_\+forward\+\_\+iterator\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))
 \item 
 \#define \mbox{\hyperlink{_utils_8hpp_ac2d9ffc66aacfb18c1ecf2958e0279fb}{noexcept\+\_\+convertible}}(From,  To)~noexcept(\mbox{\hyperlink{_utils_8hpp_adc74d77c3aa8429b8d9be94a89c132bc}{nothrow\+\_\+convertible}}(From, To))
 \item 
@@ -161,8 +168,14 @@ struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_detector_3_01_default_0
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$std\+::size\+\_\+t Required\+Alignment$>$ }\\void $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}{k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc}} (const std\+::size\+\_\+t bytes) noexcept
-\begin{DoxyCompactList}\small\item\em Forwards to std\+::aligned\+\_\+alloc, but ensure arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$std\+::size\+\_\+t Required\+Alignment, typename Cast  = void$>$ }\\Cast $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a41544a0893eaafb61541e99348644410}{k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc}} (const std\+::size\+\_\+t bytes) noexcept
+\begin{DoxyCompactList}\small\item\em Similar to std\+::aligned\+\_\+alloc, but ensure arguments, you must use Aligned\+Free to free the memory. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Cast  = void$>$ }\\Cast $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_aedd6078cbaf1adc56948ed8a476f0034}{k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc}} (const std\+::size\+\_\+t bytes, const std\+::size\+\_\+t alignment) noexcept
+\item 
+void \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_ad2444c3bb58a23dfe866d50ceadf3148}{k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Free}} (void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept
+\begin{DoxyCompactList}\small\item\em Free a pointer allocated with Aligned\+Alloc. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::integral Unit$>$ }\\constexpr Unit \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_afe841dfef86b0430cd9d469308367349}{k\+F\+::\+Core\+::\+Utils\+::\+Next\+Power\+Of2}} (Unit value)
+\begin{DoxyCompactList}\small\item\em Find the closest power of 2 of value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -255,10 +268,6 @@ Compile-\/time ternary expression with runtime reference capture.
 \doxysubsubsection{\texorpdfstring{noexcept\_constructible}{noexcept\_constructible}}
 {\footnotesize\ttfamily \#define noexcept\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{... }\end{DoxyParamCaption})~noexcept(\mbox{\hyperlink{_utils_8hpp_ab41f7dbae1155c4c8e532849b3b5875a}{nothrow\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+))}
 
-
-
-Various noexcept helpers. 
-
 \mbox{\Hypertarget{_utils_8hpp_ac2d9ffc66aacfb18c1ecf2958e0279fb}\label{_utils_8hpp_ac2d9ffc66aacfb18c1ecf2958e0279fb}} 
 \index{Utils.hpp@{Utils.hpp}!noexcept\_convertible@{noexcept\_convertible}}
 \index{noexcept\_convertible@{noexcept\_convertible}!Utils.hpp@{Utils.hpp}}
@@ -276,6 +285,22 @@ Various noexcept helpers.
 \index{noexcept\_copy\_constructible@{noexcept\_copy\_constructible}!Utils.hpp@{Utils.hpp}}
 \doxysubsubsection{\texorpdfstring{noexcept\_copy\_constructible}{noexcept\_copy\_constructible}}
 {\footnotesize\ttfamily \#define noexcept\+\_\+copy\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~noexcept(\mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\+\_\+copy\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))}
+
+\mbox{\Hypertarget{_utils_8hpp_af75f6563a2dfb12f0a995cd775440c48}\label{_utils_8hpp_af75f6563a2dfb12f0a995cd775440c48}} 
+\index{Utils.hpp@{Utils.hpp}!noexcept\_default\_constructible@{noexcept\_default\_constructible}}
+\index{noexcept\_default\_constructible@{noexcept\_default\_constructible}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{noexcept\_default\_constructible}{noexcept\_default\_constructible}}
+{\footnotesize\ttfamily \#define noexcept\+\_\+default\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~noexcept(\mbox{\hyperlink{_utils_8hpp_ad4abf2f6194c47f3b1bc2d7f91535a28}{nothrow\+\_\+default\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))}
+
+
+
+Various noexcept helpers. 
+
+\mbox{\Hypertarget{_utils_8hpp_ab884caa010a014ebd2edcccabe83df43}\label{_utils_8hpp_ab884caa010a014ebd2edcccabe83df43}} 
+\index{Utils.hpp@{Utils.hpp}!noexcept\_default\_invocable@{noexcept\_default\_invocable}}
+\index{noexcept\_default\_invocable@{noexcept\_default\_invocable}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{noexcept\_default\_invocable}{noexcept\_default\_invocable}}
+{\footnotesize\ttfamily \#define noexcept\+\_\+default\+\_\+invocable(\begin{DoxyParamCaption}\item[{}]{Function }\end{DoxyParamCaption})~noexcept(\mbox{\hyperlink{_utils_8hpp_a1083b58d72217086b8b6c7928dbf7619}{nothrow\+\_\+invocable}}(Function))}
 
 \mbox{\Hypertarget{_utils_8hpp_a8a24593c518598a38dea47cdd95ec02b}\label{_utils_8hpp_a8a24593c518598a38dea47cdd95ec02b}} 
 \index{Utils.hpp@{Utils.hpp}!noexcept\_destructible@{noexcept\_destructible}}
@@ -301,6 +326,12 @@ Various noexcept helpers.
 \doxysubsubsection{\texorpdfstring{noexcept\_forward\_constructible}{noexcept\_forward\_constructible}}
 {\footnotesize\ttfamily \#define noexcept\+\_\+forward\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~noexcept(\mbox{\hyperlink{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}{nothrow\+\_\+forward\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))}
 
+\mbox{\Hypertarget{_utils_8hpp_af104b97f69a222d9d2a11ff9a5949327}\label{_utils_8hpp_af104b97f69a222d9d2a11ff9a5949327}} 
+\index{Utils.hpp@{Utils.hpp}!noexcept\_forward\_iterator\_constructible@{noexcept\_forward\_iterator\_constructible}}
+\index{noexcept\_forward\_iterator\_constructible@{noexcept\_forward\_iterator\_constructible}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{noexcept\_forward\_iterator\_constructible}{noexcept\_forward\_iterator\_constructible}}
+{\footnotesize\ttfamily \#define noexcept\+\_\+forward\+\_\+iterator\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~noexcept(\mbox{\hyperlink{_utils_8hpp_ac151f42074dd177d7bee208295f9da1a}{nothrow\+\_\+forward\+\_\+iterator\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))}
+
 \mbox{\Hypertarget{_utils_8hpp_a2a18f1026f3acfed434657ca34f9a79d}\label{_utils_8hpp_a2a18f1026f3acfed434657ca34f9a79d}} 
 \index{Utils.hpp@{Utils.hpp}!noexcept\_invocable@{noexcept\_invocable}}
 \index{noexcept\_invocable@{noexcept\_invocable}!Utils.hpp@{Utils.hpp}}
@@ -325,10 +356,6 @@ Various noexcept helpers.
 \doxysubsubsection{\texorpdfstring{nothrow\_constructible}{nothrow\_constructible}}
 {\footnotesize\ttfamily \#define nothrow\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}},  }\item[{}]{... }\end{DoxyParamCaption})~std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+$>$}
 
-
-
-Various exception helpers. 
-
 \mbox{\Hypertarget{_utils_8hpp_adc74d77c3aa8429b8d9be94a89c132bc}\label{_utils_8hpp_adc74d77c3aa8429b8d9be94a89c132bc}} 
 \index{Utils.hpp@{Utils.hpp}!nothrow\_convertible@{nothrow\_convertible}}
 \index{nothrow\_convertible@{nothrow\_convertible}!Utils.hpp@{Utils.hpp}}
@@ -347,6 +374,16 @@ Various exception helpers.
 \doxysubsubsection{\texorpdfstring{nothrow\_copy\_constructible}{nothrow\_copy\_constructible}}
 {\footnotesize\ttfamily \#define nothrow\+\_\+copy\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$}
 
+\mbox{\Hypertarget{_utils_8hpp_ad4abf2f6194c47f3b1bc2d7f91535a28}\label{_utils_8hpp_ad4abf2f6194c47f3b1bc2d7f91535a28}} 
+\index{Utils.hpp@{Utils.hpp}!nothrow\_default\_constructible@{nothrow\_default\_constructible}}
+\index{nothrow\_default\_constructible@{nothrow\_default\_constructible}!Utils.hpp@{Utils.hpp}}
+\doxysubsubsection{\texorpdfstring{nothrow\_default\_constructible}{nothrow\_default\_constructible}}
+{\footnotesize\ttfamily \#define nothrow\+\_\+default\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$}
+
+
+
+Various exception helpers. 
+
 \mbox{\Hypertarget{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}\label{_utils_8hpp_aa2babe131038aacb6bd3ceb1353dcc9e}} 
 \index{Utils.hpp@{Utils.hpp}!nothrow\_destructible@{nothrow\_destructible}}
 \index{nothrow\_destructible@{nothrow\_destructible}!Utils.hpp@{Utils.hpp}}
@@ -363,14 +400,34 @@ Various exception helpers.
 \index{Utils.hpp@{Utils.hpp}!nothrow\_forward\_assignable@{nothrow\_forward\_assignable}}
 \index{nothrow\_forward\_assignable@{nothrow\_forward\_assignable}!Utils.hpp@{Utils.hpp}}
 \doxysubsubsection{\texorpdfstring{nothrow\_forward\_assignable}{nothrow\_forward\_assignable}}
-{\footnotesize\ttfamily \#define nothrow\+\_\+forward\+\_\+assignable(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~(std\+::is\+\_\+move\+\_\+assignable\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ ? \mbox{\hyperlink{_utils_8hpp_a43b47d28c45dd6bdca3d3746cdb3b118}{nothrow\+\_\+move\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \+: \mbox{\hyperlink{_utils_8hpp_a58e95c4e6e12c6ccf0b796580ede2b11}{nothrow\+\_\+copy\+\_\+assignable}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))}
+{\footnotesize\ttfamily \#define nothrow\+\_\+forward\+\_\+assignable(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    ( \(\backslash\)}
+\DoxyCodeLine{    std::is\_lvalue\_reference\_v<Type> ? \mbox{\hyperlink{_utils_8hpp_a58e95c4e6e12c6ccf0b796580ede2b11}{nothrow\_copy\_assignable}}(std::remove\_cvref\_t<Type>) : \(\backslash\)}
+\DoxyCodeLine{    std::is\_rvalue\_reference\_v<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}> ? \mbox{\hyperlink{_utils_8hpp_a43b47d28c45dd6bdca3d3746cdb3b118}{nothrow\_move\_assignable}}(std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>) : \(\backslash\)}
+\DoxyCodeLine{    std::is\_move\_assignable\_v<std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>> ? \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a43b47d28c45dd6bdca3d3746cdb3b118}{nothrow\_move\_assignable}}(std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>) : \mbox{\hyperlink{_utils_8hpp_a58e95c4e6e12c6ccf0b796580ede2b11}{nothrow\_copy\_assignable}}(std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>) \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}\label{_utils_8hpp_a5151c5a3687d95b4b4e533a605c600c4}} 
 \index{Utils.hpp@{Utils.hpp}!nothrow\_forward\_constructible@{nothrow\_forward\_constructible}}
 \index{nothrow\_forward\_constructible@{nothrow\_forward\_constructible}!Utils.hpp@{Utils.hpp}}
 \doxysubsubsection{\texorpdfstring{nothrow\_forward\_constructible}{nothrow\_forward\_constructible}}
-{\footnotesize\ttfamily \#define nothrow\+\_\+forward\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})~(std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ ? \mbox{\hyperlink{_utils_8hpp_a19f280b842195eeb3c608d0a78bbd0d2}{nothrow\+\_\+move\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}) \+: \mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\+\_\+copy\+\_\+constructible}}(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}))}
+{\footnotesize\ttfamily \#define nothrow\+\_\+forward\+\_\+constructible(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} }\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    ( \(\backslash\)}
+\DoxyCodeLine{    std::is\_lvalue\_reference\_v<Type> ? \mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\_copy\_constructible}}(std::remove\_cvref\_t<Type>) : \(\backslash\)}
+\DoxyCodeLine{    std::is\_rvalue\_reference\_v<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}> ? \mbox{\hyperlink{_utils_8hpp_a19f280b842195eeb3c608d0a78bbd0d2}{nothrow\_move\_constructible}}(std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>) : \(\backslash\)}
+\DoxyCodeLine{    std::is\_move\_constructible\_v<std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>> ? \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{_utils_8hpp_a19f280b842195eeb3c608d0a78bbd0d2}{nothrow\_move\_constructible}}(std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>) : \mbox{\hyperlink{_utils_8hpp_aa192af70ec196c3c5112b0c8d427cfba}{nothrow\_copy\_constructible}}(std::remove\_cvref\_t<\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}>) \(\backslash\)}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{_utils_8hpp_ac151f42074dd177d7bee208295f9da1a}\label{_utils_8hpp_ac151f42074dd177d7bee208295f9da1a}} 
 \index{Utils.hpp@{Utils.hpp}!nothrow\_forward\_iterator\_constructible@{nothrow\_forward\_iterator\_constructible}}
 \index{nothrow\_forward\_iterator\_constructible@{nothrow\_forward\_iterator\_constructible}!Utils.hpp@{Utils.hpp}}

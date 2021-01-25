@@ -1,7 +1,8 @@
 \hypertarget{_register_8cpp}{}\doxysection{Kube/\+Meta/\+Register.cpp File Reference}
 \label{_register_8cpp}\index{Kube/Meta/Register.cpp@{Kube/Meta/Register.cpp}}
 {\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include \char`\"{}Meta.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Registerer.\+hpp\char`\"{}}\newline
 Include dependency graph for Register.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -47,7 +48,8 @@ struct \mbox{\hyperlink{struct_is_static_castable_3_01_from_00_01_to_00_01declty
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_a73a5a8e39b58aaddd9a39de671e60e4a}{kF::Meta::Factory<Type>::Register}}(\mbox{\hyperlink{namespacek_f_a185a3d851d86ffeee71fdf2523d792ef}{Hash}}(Alias)); \(\backslash\)}
+\DoxyCodeLine{    std::cout << \textcolor{stringliteral}{"{}[ Registering base meta-\/type '"{}} << Alias << \textcolor{stringliteral}{"{}' ]"{}} << std::endl; \mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_adb3ed289a06c3655f17461ea5f86ced8}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{classk_f_1_1_meta_1_1_factory_base_adb3ed289a06c3655f17461ea5f86ced8}{    kF::Meta::Factory<Type>::Register}}(\mbox{\hyperlink{namespacek_f_aeeaa391fe205daf7beabbeddc3f28c0a}{Hash}}(Alias), Alias); \(\backslash\)}
 \DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, \textcolor{keywordtype}{bool}); \(\backslash\)}
 \DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::int8\_t); \(\backslash\)}
 \DoxyCodeLine{    RegisterConverterHelper(\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std::int16\_t); \(\backslash\)}

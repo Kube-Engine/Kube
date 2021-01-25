@@ -1,0 +1,62 @@
+This section will explain the context and motivations behind the creation of the Kube framework. We will take a tour of the different software development environments before concluding what this framework aims to be good at. Please note that everything is {\bfseries{only my opinion}} and my perception of the software engine market.\hypertarget{md__c_o_n_t_e_x_t_autotoc_md1}{}\doxysection{Inspiration}\label{md__c_o_n_t_e_x_t_autotoc_md1}
+After working for 3 years as a software architect, I was very used to \href{https://doc.qt.io/qt-5/qtquick-index.html}{\texttt{ Qt Quick}} and its \href{https://doc.qt.io/qt-5/qtqml-index.html}{\texttt{ Q\+ML language}} in my daily job. Qt is an awesome framework but have too many weakness on intrusiveness, performance and its wide range of ways to accomplish simple tasks. After 3 attempts to re-\/create a Qt-\/\+Quick-\/like framework (\href{https://github.com/MatthieuMv/openApp}{\texttt{ here is the last}}) from scratch, I finally got the necessary metaprogramming, multithreading and data-\/oriented design skills to make a real-\/world framework using an interpreted language that would mix perfectly with C++.\hypertarget{md__c_o_n_t_e_x_t_autotoc_md2}{}\doxysection{Types of software development environments}\label{md__c_o_n_t_e_x_t_autotoc_md2}
+\hypertarget{md__c_o_n_t_e_x_t_autotoc_md3}{}\doxysubsection{Middle-\/level frameworks}\label{md__c_o_n_t_e_x_t_autotoc_md3}
+These frameworks are often simple, efficient and allow you to control the architecture of your software.\hypertarget{md__c_o_n_t_e_x_t_autotoc_md4}{}\doxysubsubsection{$<$strong$>$\+S\+D\+L$<$/strong$>$, for 2\+D applications and games\+:}\label{md__c_o_n_t_e_x_t_autotoc_md4}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pros  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Cons   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pros  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Cons   }\\\cline{1-2}
+\endhead
+Easy to learn and master  &C code isn\textquotesingle{}t safe but still easy to encapsulate   \\\cline{1-2}
+Lowest abstraction cost  &You will have to code a lot more to get modern features   \\\cline{1-2}
+No specific I\+DE / editor  &For 3D, you must deal with an A\+PI like Open\+GL / Vulkan   \\\cline{1-2}
+You control the game architecture  &\\\cline{1-2}
+Very efficient  &\\\cline{1-2}
+You can code on anything that can compile C and run a text editor  &\\\cline{1-2}
+Runs on everything capable of 2D graphics on earth  &\\\cline{1-2}
+Good documentation and quality online contents  &\\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__c_o_n_t_e_x_t_autotoc_md5}{}\doxysubsection{High-\/level frameworks}\label{md__c_o_n_t_e_x_t_autotoc_md5}
+These frameworks are often a huge collection of high-\/level systems and classes in order to make developper\textquotesingle{}s job easier for any aspect of a software.\hypertarget{md__c_o_n_t_e_x_t_autotoc_md6}{}\doxysubsubsection{$<$strong$>$\+Qt Quick$<$/strong$>$, for 2\+D applications and games\+:}\label{md__c_o_n_t_e_x_t_autotoc_md6}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pros  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Cons   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pros  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Cons   }\\\cline{1-2}
+\endhead
+Intuitive abstractions  &Easy to mess, hard to master   \\\cline{1-2}
+Abstract most common parts of any software  &Abstractions doesn\textquotesingle{}t let much control to the user   \\\cline{1-2}
+You can code in your favorite setup since you can avoid Qt\+Creator to compile  &Qt\+Creator is buggy and has a very poor user experience compared to V\+S\+Code   \\\cline{1-2}
+Can release for a very large variety of old and new devices  &User is forced to adopt event driven development pattern for its architecture   \\\cline{1-2}
+Q\+ML is very good to manage user interface / inputs and non-\/critical event binding; it also allow a clear separation between front-\/end, middle-\/end and back-\/end  &Gigabytes of libraries to download   \\\cline{1-2}
+Signal / Slot is a great pattern to expose functionalities of a class without adding dependencies (only for non-\/critical paths)  &Q\+ML\textquotesingle{}s Java\+Script engine is very confusing when dealing with C++ code and classes   \\\cline{1-2}
+Best documentation and a lot of quality online contents  &Few unexpected behaviors from an user perspective that slow you down   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__c_o_n_t_e_x_t_autotoc_md7}{}\doxysubsection{High level environments}\label{md__c_o_n_t_e_x_t_autotoc_md7}
+These environments are often the combination of a framework and an editor. The framework tries to abstract as many features related to software / game development.\hypertarget{md__c_o_n_t_e_x_t_autotoc_md8}{}\doxysubsubsection{$<$strong$>$\+Unreal engine$<$/strong$>$, for 3\+D games only}\label{md__c_o_n_t_e_x_t_autotoc_md8}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pros  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Cons   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pros  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Cons   }\\\cline{1-2}
+\endhead
+Good for beginners who wish to have quick results  &Easy to mess, hard to master   \\\cline{1-2}
+Abstract most common parts of any 3D game  &Very poor editor user experience\+: crashs, features poorly implemented (ex\+: global undo), a pain to get it running on linux and don\textquotesingle{}t expect it to run on low-\/spec computers   \\\cline{1-2}
+Great cross-\/platform capabilities  &You must use a lot of high-\/level / high-\/cost intrusive abstractions and have not much control over the architecture of your game   \\\cline{1-2}
+&Very bad for 2D graphics and UI design compared to S\+DL and Qt Quick   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__c_o_n_t_e_x_t_autotoc_md9}{}\doxysection{What to conclude ?}\label{md__c_o_n_t_e_x_t_autotoc_md9}
+T\+O\+DO 

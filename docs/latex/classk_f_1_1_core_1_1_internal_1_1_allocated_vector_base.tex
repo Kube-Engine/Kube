@@ -1,0 +1,54 @@
+\hypertarget{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{}\doxysection{kF\+::Core\+::Internal\+::Allocated\+Vector\+Base$<$ Type, Range, Allocate\+Func, Deallocate\+Func $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}\index{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$@{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$}}
+
+
+Base implementation of a vector with size and capacity cached.  
+
+
+
+
+{\ttfamily \#include $<$Allocated\+Vector\+Base.\+hpp$>$}
+
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base_ad01ea44178fc21b8730cec05dfda9688}{allocate}} (const Range capacity) noexcept
+\begin{DoxyCompactList}\small\item\em Allocates a new buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base_a2a85f64c42c3d01d0ce40e608016cf53}{deallocate}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}, const Range capacity) noexcept
+\begin{DoxyCompactList}\small\item\em Deallocates a buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type, std\+::integral Range, auto Allocate\+Func, auto Deallocate\+Func$>$\newline
+class k\+F\+::\+Core\+::\+Internal\+::\+Allocated\+Vector\+Base$<$ Type, Range, Allocate\+Func, Deallocate\+Func $>$}
+
+Base implementation of a vector with size and capacity cached. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base_ad01ea44178fc21b8730cec05dfda9688}\label{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base_ad01ea44178fc21b8730cec05dfda9688}} 
+\index{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$@{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$}!allocate@{allocate}}
+\index{allocate@{allocate}!kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$@{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range, auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{k\+F\+::\+Core\+::\+Internal\+::\+Allocated\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$\+::allocate (\begin{DoxyParamCaption}\item[{const Range}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+Allocates a new buffer. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base_a2a85f64c42c3d01d0ce40e608016cf53}\label{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base_a2a85f64c42c3d01d0ce40e608016cf53}} 
+\index{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$@{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$@{kF::Core::Internal::AllocatedVectorBase$<$ Type, Range, AllocateFunc, DeallocateFunc $>$}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range, auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{k\+F\+::\+Core\+::\+Internal\+::\+Allocated\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$\+::deallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$const}]{data,  }\item[{const Range}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+
+
+
+Deallocates a buffer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_allocated_vector_base_8hpp}{Allocated\+Vector\+Base.\+hpp}}\end{DoxyCompactItemize}

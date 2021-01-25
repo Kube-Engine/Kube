@@ -3,13 +3,133 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Allocated\+Flat\+Vector\+Base}}
+\begin{DoxyCompactList}\small\item\em Base implementation of a vector with size and capacity allocated with data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Allocated\+Small\+Vector\+Base}}
+\begin{DoxyCompactList}\small\item\em Base implementation of a vector with size and capacity cached. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Allocated\+Vector\+Base}}
+\begin{DoxyCompactList}\small\item\em Base implementation of a vector with size and capacity cached. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Flat\+Vector\+Base}}
 \begin{DoxyCompactList}\small\item\em Base implementation of a vector with size and capacity allocated with data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Small\+Vector\+Base}}
+\begin{DoxyCompactList}\small\item\em Base implementation of a vector with size and capacity cached. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}
+\item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Vector\+Base}}
 \begin{DoxyCompactList}\small\item\em Base implementation of a vector with size and capacity cached. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a68d97a682f3c10cafb023f96bd375845}{Functor\+Cache\+Requirements}} = std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$>$ \&\& sizeof(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}) $<$= Cache\+Size
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}{Functor\+No\+Cache\+Requirements}} = (std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$>$ ? sizeof(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}) $>$ Cache\+Size \+: \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor D\+O\+ES N\+OT met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Functor\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor / function is callable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member, typename Class\+Type , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}{Functor\+Member\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, decltype(Member), Class\+Type \&, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given member function is callable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_afaf76f06dddbd6461cee14246cca1c7f}{Trivial\+Functor\+Requirements}}
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_aa53c8e89fddf989b6d9563bb340c6a67}{Trivial\+Functor\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor / function is callable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member, typename Class\+Type , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a356adb30ad27fd49589142ec7ca583c6}{Trivial\+Functor\+Member\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, decltype(Member), Class\+Type \&, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given member function is callable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+@ Author\+: Matthieu Moinvaziri @ Description\+: Flat\+Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Small Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Base data of a vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Sorted\+Vector\+Details}}
+
 @ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Vector\+Details}} 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_a68d97a682f3c10cafb023f96bd375845}\label{namespacek_f_1_1_core_1_1_internal_a68d97a682f3c10cafb023f96bd375845}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!FunctorCacheRequirements@{FunctorCacheRequirements}}
+\index{FunctorCacheRequirements@{FunctorCacheRequirements}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{FunctorCacheRequirements}{FunctorCacheRequirements}}
+{\footnotesize\ttfamily template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Functor\+Cache\+Requirements = std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$>$ \&\& sizeof(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}) $<$= Cache\+Size}
+
+
+
+Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}\label{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!FunctorInvocable@{FunctorInvocable}}
+\index{FunctorInvocable@{FunctorInvocable}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{FunctorInvocable}{FunctorInvocable}}
+{\footnotesize\ttfamily template$<$typename Functor , typename Return , typename ... Args$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Functor\+Invocable = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}, Args...$>$}
+
+
+
+Ensure that a given functor / function is callable. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}\label{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!FunctorMemberInvocable@{FunctorMemberInvocable}}
+\index{FunctorMemberInvocable@{FunctorMemberInvocable}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{FunctorMemberInvocable}{FunctorMemberInvocable}}
+{\footnotesize\ttfamily template$<$auto Member, typename Class\+Type , typename Return , typename ... Args$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Functor\+Member\+Invocable = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, decltype(Member), Class\+Type \&, Args...$>$}
+
+
+
+Ensure that a given member function is callable. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}\label{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!FunctorNoCacheRequirements@{FunctorNoCacheRequirements}}
+\index{FunctorNoCacheRequirements@{FunctorNoCacheRequirements}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{FunctorNoCacheRequirements}{FunctorNoCacheRequirements}}
+{\footnotesize\ttfamily template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Functor\+No\+Cache\+Requirements = (std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible\+\_\+v$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$>$ ? sizeof(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}) $>$ Cache\+Size \+: \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})}
+
+
+
+Ensure that a given functor D\+O\+ES N\+OT met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_aa53c8e89fddf989b6d9563bb340c6a67}\label{namespacek_f_1_1_core_1_1_internal_aa53c8e89fddf989b6d9563bb340c6a67}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!TrivialFunctorInvocable@{TrivialFunctorInvocable}}
+\index{TrivialFunctorInvocable@{TrivialFunctorInvocable}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{TrivialFunctorInvocable}{TrivialFunctorInvocable}}
+{\footnotesize\ttfamily template$<$typename Functor , typename Return , typename ... Args$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Trivial\+Functor\+Invocable = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}, Args...$>$}
+
+
+
+Ensure that a given functor / function is callable. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_a356adb30ad27fd49589142ec7ca583c6}\label{namespacek_f_1_1_core_1_1_internal_a356adb30ad27fd49589142ec7ca583c6}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!TrivialFunctorMemberInvocable@{TrivialFunctorMemberInvocable}}
+\index{TrivialFunctorMemberInvocable@{TrivialFunctorMemberInvocable}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{TrivialFunctorMemberInvocable}{TrivialFunctorMemberInvocable}}
+{\footnotesize\ttfamily template$<$auto Member, typename Class\+Type , typename Return , typename ... Args$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Trivial\+Functor\+Member\+Invocable = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, decltype(Member), Class\+Type \&, Args...$>$}
+
+
+
+Ensure that a given member function is callable. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_internal_afaf76f06dddbd6461cee14246cca1c7f}\label{namespacek_f_1_1_core_1_1_internal_afaf76f06dddbd6461cee14246cca1c7f}} 
+\index{kF::Core::Internal@{kF::Core::Internal}!TrivialFunctorRequirements@{TrivialFunctorRequirements}}
+\index{TrivialFunctorRequirements@{TrivialFunctorRequirements}!kF::Core::Internal@{kF::Core::Internal}}
+\doxysubsubsection{\texorpdfstring{TrivialFunctorRequirements}{TrivialFunctorRequirements}}
+{\footnotesize\ttfamily template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ \\
+concept k\+F\+::\+Core\+::\+Internal\+::\+Trivial\+Functor\+Requirements}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            std::conjunction\_v<std::is\_trivially\_copy\_constructible<Functor>, std::bool\_constant<\textcolor{keyword}{sizeof}(Functor) <= CacheSize>>}
+
+\end{DoxyCode}
+
+
+Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. 
+

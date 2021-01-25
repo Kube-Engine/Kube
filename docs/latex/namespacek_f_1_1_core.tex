@@ -16,6 +16,10 @@ class \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_a
 \begin{DoxyCompactList}\small\item\em Fast event dispatcher. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}
 \begin{DoxyCompactList}\small\item\em Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4}{Functor$<$ Return(\+Args...), Cache\+Size $>$}}
+\begin{DoxyCompactList}\small\item\em Very fast opaque functor but only takes trivial types less or equal sized than cacheline eighth. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_heap_array}{Heap\+Array}}
 \item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_m_p_m_c_queue}{M\+P\+M\+C\+Queue}}
@@ -29,9 +33,49 @@ class \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{Allocated\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{Allocated\+Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}{Allocated\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}{Allocated\+Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
+\item 
+{\footnotesize template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Quarter\+Size$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}{Dispatcher}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$ Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} $>$
+\begin{DoxyCompactList}\small\item\em Specialization of dispatcher with trivial functors. \end{DoxyCompactList}\item 
 using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{Flat\+String}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ char $>$
 \item 
 {\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}{Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t $>$
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{Sorted\+Allocated\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}{Sorted\+Allocated\+Tiny\+Flat\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{Sorted\+Allocated\+Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{Sorted\+Allocated\+Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}{Sorted\+Allocated\+Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{Sorted\+Allocated\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{Sorted\+Allocated\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}{Sorted\+Allocated\+Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{Sorted\+Allocated\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{Sorted\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}{Sorted\+Tiny\+Flat\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{Sorted\+Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{Sorted\+Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}{Sorted\+Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{Sorted\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{Sorted\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
+\item 
+{\footnotesize template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}{Sorted\+Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{Sorted\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare $>$
 \item 
 {\footnotesize template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Eighth\+Size$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Trivial\+Dispatcher}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$ Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}} $>$
 \begin{DoxyCompactList}\small\item\em Specialization of dispatcher with trivial functors. \end{DoxyCompactList}\item 
@@ -42,8 +86,6 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}{Trivial\+Functor\+Requirements}}
-\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. \end{DoxyCompactList}\item 
 constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} = sizeof(std\+::size\+\_\+t) $\ast$ 8
 \begin{DoxyCompactList}\small\item\em Theorical cacheline size. \end{DoxyCompactList}\item 
 constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_abb5b5db4b3b817aaab1aea3c64523dd5}{Cache\+Line\+Double\+Size}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa1f35d7f50ec7928ea8e42e01493e2e1}{Cache\+Line\+Size}} $\ast$ 2
@@ -57,25 +99,81 @@ constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c
 
 
 \doxysubsection{Detailed Description}
+@ Author\+: Matthieu Moinvaziri @ Description\+: Flat\+Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Small Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Trivial dispatcher
+
 @ Author\+: Matthieu Moinvaziri @ Description\+: Dispatcher
 
 @ Author\+: Matthieu Moinvaziri @ Description\+: Flat\+String
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: Flat\+Vector @ Author\+: Matthieu Moinvaziri @ Description\+: Vector
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}
 
 @ Author\+: Matthieu Moinvaziri @ Description\+: A dead simple runtime array
 
 @ Author\+: Matthieu Moinvaziri @ Description\+: M\+P\+MC Queue
 
+@ Author\+: Matthieu Moinvaziri @ Description\+: Sorted Flat\+Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Sorted Small\+Vector
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Sorted Vector
+
 @ Author\+: Matthieu Moinvaziri @ Description\+: S\+P\+SC Queue
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: Trivial dispatcher
-
-@ Author\+: Matthieu Moinvaziri @ Description\+: Trivial opaque functor holder
-
-@ Author\+: Matthieu Moinvaziri @ Description\+: Vector 
+@ Author\+: Matthieu Moinvaziri @ Description\+: Trivial opaque functor holder 
 
 \doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}\label{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}} 
+\index{kF::Core@{kF::Core}!AllocatedFlatVector@{AllocatedFlatVector}}
+\index{AllocatedFlatVector@{AllocatedFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedFlatVector}{AllocatedFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{k\+F\+::\+Core\+::\+Allocated\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}\label{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}} 
+\index{kF::Core@{kF::Core}!AllocatedSmallVector@{AllocatedSmallVector}}
+\index{AllocatedSmallVector@{AllocatedSmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedSmallVector}{AllocatedSmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{k\+F\+::\+Core\+::\+Allocated\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}\label{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}} 
+\index{kF::Core@{kF::Core}!AllocatedTinySmallVector@{AllocatedTinySmallVector}}
+\index{AllocatedTinySmallVector@{AllocatedTinySmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinySmallVector}{AllocatedTinySmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}\label{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}} 
+\index{kF::Core@{kF::Core}!AllocatedTinyVector@{AllocatedTinyVector}}
+\index{AllocatedTinyVector@{AllocatedTinyVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinyVector}{AllocatedTinyVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}\label{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}} 
+\index{kF::Core@{kF::Core}!AllocatedVector@{AllocatedVector}}
+\index{AllocatedVector@{AllocatedVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedVector}{AllocatedVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}{k\+F\+::\+Core\+::\+Allocated\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}\label{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}} 
+\index{kF::Core@{kF::Core}!Dispatcher@{Dispatcher}}
+\index{Dispatcher@{Dispatcher}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{Dispatcher}{Dispatcher}}
+{\footnotesize\ttfamily template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Quarter\+Size$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}{k\+F\+::\+Core\+::\+Dispatcher}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$>$}
+
+
+
+Specialization of dispatcher with trivial functors. 
+
 \mbox{\Hypertarget{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}\label{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}} 
 \index{kF::Core@{kF::Core}!FlatString@{FlatString}}
 \index{FlatString@{FlatString}!kF::Core@{kF::Core}}
@@ -88,6 +186,104 @@ constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c
 \doxysubsubsection{\texorpdfstring{FlatVector}{FlatVector}}
 {\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{k\+F\+::\+Core\+::\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}\label{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}} 
+\index{kF::Core@{kF::Core}!SmallVector@{SmallVector}}
+\index{SmallVector@{SmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SmallVector}{SmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{k\+F\+::\+Core\+::\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}\label{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}} 
+\index{kF::Core@{kF::Core}!SortedAllocatedFlatVector@{SortedAllocatedFlatVector}}
+\index{SortedAllocatedFlatVector@{SortedAllocatedFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedAllocatedFlatVector}{SortedAllocatedFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}\label{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}} 
+\index{kF::Core@{kF::Core}!SortedAllocatedSmallVector@{SortedAllocatedSmallVector}}
+\index{SortedAllocatedSmallVector@{SortedAllocatedSmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedAllocatedSmallVector}{SortedAllocatedSmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}\label{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}} 
+\index{kF::Core@{kF::Core}!SortedAllocatedTinyFlatVector@{SortedAllocatedTinyFlatVector}}
+\index{SortedAllocatedTinyFlatVector@{SortedAllocatedTinyFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedAllocatedTinyFlatVector}{SortedAllocatedTinyFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Tiny\+Flat\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{Sorted\+Allocated\+Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}\label{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}} 
+\index{kF::Core@{kF::Core}!SortedAllocatedTinySmallVector@{SortedAllocatedTinySmallVector}}
+\index{SortedAllocatedTinySmallVector@{SortedAllocatedTinySmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedAllocatedTinySmallVector}{SortedAllocatedTinySmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{Sorted\+Allocated\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}\label{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}} 
+\index{kF::Core@{kF::Core}!SortedAllocatedTinyVector@{SortedAllocatedTinyVector}}
+\index{SortedAllocatedTinyVector@{SortedAllocatedTinyVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedAllocatedTinyVector}{SortedAllocatedTinyVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{Sorted\+Allocated\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}\label{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}} 
+\index{kF::Core@{kF::Core}!SortedAllocatedVector@{SortedAllocatedVector}}
+\index{SortedAllocatedVector@{SortedAllocatedVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedAllocatedVector}{SortedAllocatedVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}\label{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}} 
+\index{kF::Core@{kF::Core}!SortedFlatVector@{SortedFlatVector}}
+\index{SortedFlatVector@{SortedFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedFlatVector}{SortedFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{k\+F\+::\+Core\+::\+Sorted\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}\label{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}} 
+\index{kF::Core@{kF::Core}!SortedSmallVector@{SortedSmallVector}}
+\index{SortedSmallVector@{SortedSmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedSmallVector}{SortedSmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{k\+F\+::\+Core\+::\+Sorted\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}\label{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}} 
+\index{kF::Core@{kF::Core}!SortedTinyFlatVector@{SortedTinyFlatVector}}
+\index{SortedTinyFlatVector@{SortedTinyFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedTinyFlatVector}{SortedTinyFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}{k\+F\+::\+Core\+::\+Sorted\+Tiny\+Flat\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{Sorted\+Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}\label{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}} 
+\index{kF::Core@{kF::Core}!SortedTinySmallVector@{SortedTinySmallVector}}
+\index{SortedTinySmallVector@{SortedTinySmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedTinySmallVector}{SortedTinySmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}{k\+F\+::\+Core\+::\+Sorted\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{Sorted\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}\label{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}} 
+\index{kF::Core@{kF::Core}!SortedTinyVector@{SortedTinyVector}}
+\index{SortedTinyVector@{SortedTinyVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedTinyVector}{SortedTinyVector}}
+{\footnotesize\ttfamily template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}{k\+F\+::\+Core\+::\+Sorted\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{Sorted\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}\label{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}} 
+\index{kF::Core@{kF::Core}!SortedVector@{SortedVector}}
+\index{SortedVector@{SortedVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SortedVector}{SortedVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{k\+F\+::\+Core\+::\+Sorted\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}\label{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}} 
+\index{kF::Core@{kF::Core}!TinySmallVector@{TinySmallVector}}
+\index{TinySmallVector@{TinySmallVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinySmallVector}{TinySmallVector}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}{k\+F\+::\+Core\+::\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t$>$}
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}\label{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}} 
 \index{kF::Core@{kF::Core}!TinyVector@{TinyVector}}
@@ -150,21 +346,4 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{
 
 
 Theorical cacheline size. 
-
-\mbox{\Hypertarget{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}\label{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}} 
-\index{kF::Core@{kF::Core}!TrivialFunctorRequirements@{TrivialFunctorRequirements}}
-\index{TrivialFunctorRequirements@{TrivialFunctorRequirements}!kF::Core@{kF::Core}}
-\doxysubsubsection{\texorpdfstring{TrivialFunctorRequirements}{TrivialFunctorRequirements}}
-{\footnotesize\ttfamily template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ \\
-concept k\+F\+::\+Core\+::\+Trivial\+Functor\+Requirements}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{=}
-\DoxyCodeLine{        std::conjunction\_v<std::is\_trivial<Functor>, std::bool\_constant<\textcolor{keyword}{sizeof}(Functor) <= CacheSize>>}
-
-\end{DoxyCode}
-
-
-Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. 
 

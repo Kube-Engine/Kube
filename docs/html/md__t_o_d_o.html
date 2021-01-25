@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -68,31 +68,40 @@ $(function() {
 <div class="title">Non-exhaustive list of things to do in the engine </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md9"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md22"></a>
+Object</h1>
+<p>Proxy for structures that doesn't need Better use a single signal for multiple data, ex: (x, y, w, h) -&gt; reduce signal explosion</p>
+<h1><a class="anchor" id="autotoc_md23"></a>
+KML</h1>
+<p>Each property / function is not stored in the object but as a form of a temporary expression that is inlined where used A function is an syntaxic sugar for an expression with local variables</p>
+<h1><a class="anchor" id="autotoc_md24"></a>
 Core</h1>
-<h2><a class="anchor" id="autotoc_md10"></a>
-Vectors alignments</h2>
-<p>All vectors must align malloc to type alignment</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
+Allocator functor</h1>
+<p>Make allocator for functors such as they are passed either at emplace (destructor is guessed and stored perfectly !)</p>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Allocator vectors</h2>
 <p>Make allocator vectors</p>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
+Vector shrink</h2>
+<p>Add vector shrink function &amp;&amp; add shrink in meta registerer</p>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Meta</h1>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 STATIC STORAGE !</h2>
 <p>We MUST test static storage though different translation units</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 Type system</h2>
 <p>We can reduce type look-up time by having a second vector holding each index or name of all registered types so we lookup on a flat vector instead of dereferencing each type descriptor.</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Type specific static variables</h2>
 <p>We must implement runtime static variables to every meta type.</p>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Enums</h2>
 <p>We must implement enum registeration.</p>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md33"></a>
 Flow</h1>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 Tasking API</h2>
 <p>The API proposes a DynamicNode to generate on runtime tasks during the graph execution, this node is not implemented. We must have a way to bypass node of a graph if a flag is set </p>
 </div></div><!-- contents -->

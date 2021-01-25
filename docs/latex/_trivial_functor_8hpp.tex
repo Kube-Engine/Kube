@@ -2,8 +2,7 @@
 \label{_trivial_functor_8hpp}\index{Kube/Core/TrivialFunctor.hpp@{Kube/Core/TrivialFunctor.hpp}}
 {\ttfamily \#include $<$array$>$}\newline
 {\ttfamily \#include \char`\"{}Utils.\+hpp\char`\"{}}\newline
-Include dependency graph for Trivial\+Functor.\+hpp\+:
-\nopagebreak
+Include dependency graph for Trivial\+Functor.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,9 +28,15 @@ class \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args
  \mbox{\hyperlink{namespacek_f}{kF}}
 \item 
  \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{k\+F\+::\+Core\+::\+Internal}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_a1bd36cf682b0dbce3338a171245f182f}{k\+F\+::\+Core\+::\+Trivial\+Functor\+Requirements}}
-\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_afaf76f06dddbd6461cee14246cca1c7f}{k\+F\+::\+Core\+::\+Internal\+::\+Trivial\+Functor\+Requirements}}
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_aa53c8e89fddf989b6d9563bb340c6a67}{k\+F\+::\+Core\+::\+Internal\+::\+Trivial\+Functor\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, Functor, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor / function is callable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member, typename Class\+Type , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a356adb30ad27fd49589142ec7ca583c6}{k\+F\+::\+Core\+::\+Internal\+::\+Trivial\+Functor\+Member\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, decltype(Member), Class\+Type \&, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given member function is callable. \end{DoxyCompactList}\end{DoxyCompactItemize}

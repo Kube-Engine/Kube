@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -75,58 +75,264 @@ $(function() {
 <a href="_register_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_macro_utils_8hpp.html">Kube/Core/MacroUtils.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// This header must no be directly included, include &#39;Reflection&#39; instead</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a2840fe5dd98eebd57318a7bf86267f38">   11</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_TYPE(ClassType, ...) \</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">    kF::Meta::Factory&lt;ClassType&gt;(kF::Hash(#ClassType))</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_macro_utils_8hpp.html">Kube/Core/MacroUtils.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aaaef9b32aefdfb2d178d9d1dabe833e4">   15</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_BASE(BaseType) \</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">    .base&lt;BaseType&gt;()</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a012403d8461b9d617e84ba08f9477bbf">   19</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_CONSTRUCTOR(...) \</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    .constructor&lt;__VA_ARGS__&gt;();</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_register_8hpp.html#ada09df313433c110ac78e8674448ae63">   23</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_COPY(PropertyType, name, ...) \</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">        static_cast&lt;const PropertyType &amp;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">        static_cast&lt;bool(_MetaType::*)(const PropertyType &amp;)&gt;(&amp;_MetaType::name) \</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    ) \</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    KUBE_REGISTER_SIGNAL(name##Changed)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aa84883be05e17cf4e9a29180fb23e6d1">   29</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_COPY_REF(PropertyType, name, ...) \</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_COPY(PropertyType, name, __VA_ARGS__)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">   15</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_LATER(ClassType, ...) \</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">private: \</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    using _MetaType = ClassType; \</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    ADD_PREFIX_EACH(KUBE_MAKE_, __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    [[nodiscard]] static inline kF::Meta::RegisterLater RegisterMetaData(void) \</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    { \</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">        return kF::Meta::RegisterLater::Make&lt;_MetaType&gt;( \</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">            [] { \</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">                std::string literal = kF::Internal::GetTemplateSpecializedLiterals&lt;_MetaType&gt;(#ClassType); \</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">                std::cout &lt;&lt; &quot;[ Registering meta-type &#39;&quot; &lt;&lt; literal &lt;&lt; &quot;&#39; ]&quot; &lt;&lt; std::endl; \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">                KUBE_REGISTER_TYPE(ClassType, literal) \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">                    ADD_PREFIX_EACH(KUBE_REGISTER_, __VA_ARGS__) ; \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">            } \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">        ); \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    } \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    static inline kF::Meta::RegisterLater _RegisterLaterInstance { RegisterMetaData() };</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_register_8hpp.html#ae13315d37e3b7f5b7ec87f925d08789c">   33</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_COPY_READONLY(PropertyType, name, ...) \</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        static_cast&lt;const PropertyType &amp;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">        nullptr \</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">    ) \</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    KUBE_REGISTER_SIGNAL(name##Changed)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a8e25b73d3592f894548130de25c00722">   33</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_TYPE(ClassType, ClassLiteral) \</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    kF::Meta::Factory&lt;_MetaType&gt;( \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        kF::Hash(#ClassType), \</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">        kF::Internal::GetTemplateSpecializedName&lt;_MetaType&gt;(kF::Hash(#ClassType)), \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">        ClassLiteral \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    )</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a5ec91758e51b7038fe91154ed75d7196">   41</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_MOVE(PropertyType, name, ...) \</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">        static_cast&lt;const PropertyType &amp;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">        static_cast&lt;bool(_MetaType::*)(PropertyType &amp;&amp;)&gt;(&amp;_MetaType::name) \</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    ) \</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    KUBE_REGISTER_SIGNAL(name##Changed)</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aa6a36c1b8795d30da9a0542d516b0e24">   47</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_MOVE_REF(PropertyType, name, ...) \</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_MOVE(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a7fee9d445af8e917d989a5f79ed00621">   51</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_MOVE_READONLY(PropertyType, name, ...) \</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_COPY_READONLY(PropertyType, name, __VA_ARGS__)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">   55</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, getter, setter) \</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    .data&lt;getter, setter&gt;(kF::Hash(#name))</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aadb6dd3997c8c57762752de387bc64bf">   59</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_FUNCTION(name) \</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    .function&lt;&amp;_MetaType::name&gt;(kF::Hash(#name))</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a62fa2da6537423bfea1902984dcecdc9">   63</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_FUNCTION_OVERLOAD(name, FuncType) \</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">    .function&lt;static_cast&lt;FuncType&gt;(&amp;_MetaType::name)&gt;(kF::Hash(#name))</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a9d1444e9f1a4258d8b336584443a3cf4">   66</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_SIGNAL(name, ...) \</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    .signal&lt;&amp;_MetaType::name&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aaaef9b32aefdfb2d178d9d1dabe833e4">   41</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_BASE(BaseType) \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    .template base&lt;BaseType&gt;()</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a012403d8461b9d617e84ba08f9477bbf">   45</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_CONSTRUCTOR(...) \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    .template constructor&lt;__VA_ARGS__&gt;();</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="_register_8hpp.html#abcb841ec4d7fb41eff911ab59f846788">   49</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        static_cast&lt;kF::Internal::ToConstReference&lt;PropertyType&gt;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, nullptr), \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, nullptr) \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a692c8562c92a48071bf8b87ae0c0ee0b">   57</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_SIGLESS(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">        static_cast&lt;kF::Internal::ToConstReference&lt;PropertyType&gt;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, nullptr), \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, nullptr) \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a0ec54663fd735cc9b4c353c0cae68fda">   65</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_VOLATILE(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">        static_cast&lt;PropertyType &amp;(_MetaType::*)(void) noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, nullptr), \</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, nullptr) \</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_register_8hpp.html#ab0f13b54e7948394f0c7f0d876da6c6c">   73</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_VOLATILE_SIGLESS(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, \</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">        static_cast&lt;PropertyType &amp;(_MetaType::*)(void) noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, nullptr), \</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">        ConstexprTernary(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, nullptr) \</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a0561ddb66ff2f07852eaae76e01d0c53">   81</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_GETONLY(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">        static_cast&lt;kF::Internal::ToConstReference&lt;PropertyType&gt;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">        nullptr, \</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">        nullptr \</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a102935aea36a2e06a2ab288e9071e668">   89</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_GETONLY_SIGLESS(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        static_cast&lt;kF::Internal::ToConstReference&lt;PropertyType&gt;(_MetaType::*)(void) const noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">        nullptr, \</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">        nullptr \</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="_register_8hpp.html#ab6e6f0afd2f0b823d4f626fab852add1">   97</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, \</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">        static_cast&lt;PropertyType &amp;(_MetaType::*)(void) noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">        nullptr, \</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">        nullptr \</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a0ce2ba50f4f13dcc9b42d6954aa80a87">  105</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY_SIGLESS(PropertyType, name, ...) \</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">    KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, \</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">        static_cast&lt;PropertyType &amp;(_MetaType::*)(void) noexcept&gt;(&amp;_MetaType::name), \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">        nullptr, \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">        nullptr \</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    )</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">  113</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, moveSetter) \</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">    .template data&lt;getter, copySetter, moveSetter, &amp;_MetaType::name##Changed&gt;(kF::Hash(#name), kF::Hash(_STRINGIFY(name##Changed)))</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">  117</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, moveSetter) \</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">    .template data&lt;getter, copySetter, moveSetter, nullptr&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a7a72433cd2cb6969c08ee8e0d98b574d">  121</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_COPY(PropertyType, name, getter, copySetter) \</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">    .template data&lt;getter, copySetter, nullptr, &amp;_MetaType::name##Changed&gt;(kF::Hash(#name), kF::Hash(_STRINGIFY(name##Changed)))</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a7ae4fba9b9684a494baba8460e04fcaa">  125</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_COPY_SIGLESS(PropertyType, name, getter, copySetter) \</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">    .template data&lt;getter, copySetter, nullptr&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a74dff32de2208139396eb6b3fd0a046f">  129</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_MOVE(PropertyType, name, getter, moveSetter) \</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">    .template data&lt;getter, nullptr, moveSetter, &amp;_MetaType::name##Changed&gt;(kF::Hash(#name), kF::Hash(_STRINGIFY(name##Changed)))</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="_register_8hpp.html#acfd84122c8bf54ef3ab70d77e3c51331">  133</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_MOVE_SIGLESS(PropertyType, name, getter, moveSetter) \</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">    .template data&lt;getter, nullptr, moveSetter, nullptr&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a71cec8ed7f1387ed0adfebe4f81cbb51">  137</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_READONLY(PropertyType, name, getter) \</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">    .template data&lt;getter, nullptr, nullptr, &amp;_MetaType::name##Changed&gt;(kF::Hash(#name), kF::Hash(_STRINGIFY(name##Changed)))</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a3dfaf8d4cd1c847fa104b9a4b49bee06">  141</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_PROPERTY_CUSTOM_READONLY_SIGLESS(PropertyType, name, getter) \</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">    .template data&lt;getter, nullptr, nullptr, nullptr&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="_register_8hpp.html#aadb6dd3997c8c57762752de387bc64bf">  145</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_FUNCTION(name) \</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">    .template function&lt;&amp;_MetaType::name&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a62fa2da6537423bfea1902984dcecdc9">  149</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_FUNCTION_OVERLOAD(name, FuncType) \</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">    .template function&lt;static_cast&lt;FuncType&gt;(&amp;_MetaType::name)&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="_register_8hpp.html#a9d1444e9f1a4258d8b336584443a3cf4">  153</a></span>&#160;<span class="preprocessor">#define KUBE_REGISTER_SIGNAL(name, ...) \</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">    .template signal&lt;&amp;_MetaType::name&gt;(kF::Hash(#name))</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html">  156</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f_1_1_internal.html">kF::Internal</a></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TemplateType&gt;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#a41c39a4ec21dec5eee44f98a93030c3a">  160</a></span>&#160;    [[nodiscard]] <a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="code" href="namespacek_f_1_1_internal.html#a41c39a4ec21dec5eee44f98a93030c3a">GetTemplateSpecializedName</a>(<a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> hash)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keyword">using</span> Decomposer = <a class="code" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">Meta::Internal::TemplateDecomposer&lt;TemplateType&gt;</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span> constexpr (Decomposer::IsTemplate) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">if</span> constexpr (<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#a1cbe2d4235968799ab2077525c517258">Decomposer::HasTypes</a> &amp;&amp; !<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#aebbab8499a62cb712b1c77fa18188346">Decomposer::HasVariables</a>)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordflow">return</span> GetTemplateTypeNames&lt;typename Decomposer::TypesTuple&gt;(hash);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (!<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#a1cbe2d4235968799ab2077525c517258">Decomposer::HasTypes</a> &amp;&amp; <a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#aebbab8499a62cb712b1c77fa18188346">Decomposer::HasVariables</a>)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">return</span> GetTemplateVariableNames&lt;Decomposer::VarsTuple&gt;(hash);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#a72a66f7f8f875d30f0303cee3ae84e8a">Decomposer::TypesBeforeArguments</a>)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">return</span> GetTemplateVariableNames&lt;Decomposer::VarsTuple&gt;(</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    GetTemplateTypeNames&lt;typename Decomposer::TypesTuple&gt;(hash)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">return</span> GetTemplateTypeNames&lt;typename Decomposer::TypesTuple&gt;(</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    GetTemplateVariableNames&lt;Decomposer::VarsTuple&gt;(hash)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        } <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TypesTuple, std::<span class="keywordtype">size_t</span> Index = 0ul&gt;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#acc50d3bf6390006adad08fe8e0ffb57e">  183</a></span>&#160;    [[nodiscard]] <a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="code" href="namespacek_f_1_1_internal.html#acc50d3bf6390006adad08fe8e0ffb57e">GetTemplateTypeNames</a>(<a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> hash)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> name = <a class="code" href="classk_f_1_1_meta_1_1_factory_base.html">Meta::Factory&lt;std::tuple_element_t&lt;Index, TypesTuple&gt;</a>&gt;::Resolve().name();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="_assert_8hpp.html#a7c3ac9bc75d48b084396788b131b14e7">kFAssert</a>(name,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;GetTemplateTypeNames: Couldn&#39;t register a template specialization of unregistered parameter type&quot;</span>));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        hash += name;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span> constexpr (Index + 1 == std::tuple_size_v&lt;TypesTuple&gt;)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">return</span> GetTemplateTypeNames&lt;TypesTuple, Index + 1&gt;(hash);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">template</span>&lt;auto VarsTuple, std::<span class="keywordtype">size_t</span> Index = 0ul&gt;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#a40c2e6d12ef8bb180a45895b36f89740">  197</a></span>&#160;    [[nodiscard]] <a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="code" href="namespacek_f_1_1_internal.html#a40c2e6d12ef8bb180a45895b36f89740">GetTemplateVariableNames</a>(<a class="code" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> hash)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keyword">using</span> Tuple = decltype(<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#ab80f747e11aabd62c27fd11e72dea1e3">VarsTuple</a>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        hash += <a class="code" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">Hash</a>(std::to_string(std::get&lt;Index&gt;(<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#ab80f747e11aabd62c27fd11e72dea1e3">VarsTuple</a>)));</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span> constexpr (Index + 1 == std::tuple_size_v&lt;Tuple&gt;)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">return</span> GetTemplateVariableNames&lt;VarsTuple, Index + 1&gt;(hash);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TemplateType&gt;</div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#a7968ca965c3e473c772de75570da2efa">  210</a></span>&#160;    [[nodiscard]] std::string <a class="code" href="namespacek_f_1_1_internal.html#a7968ca965c3e473c772de75570da2efa">GetTemplateSpecializedLiterals</a>(<span class="keyword">const</span> std::string_view &amp;literal)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keyword">using</span> Decomposer = <a class="code" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">Meta::Internal::TemplateDecomposer&lt;TemplateType&gt;</a>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        std::string name(literal);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> constexpr (Decomposer::IsTemplate) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            name += <span class="charliteral">&#39;&lt;&#39;</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">if</span> constexpr (<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#a1cbe2d4235968799ab2077525c517258">Decomposer::HasTypes</a> &amp;&amp; !<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#aebbab8499a62cb712b1c77fa18188346">Decomposer::HasVariables</a>)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                GetTemplateTypeLiterals&lt;typename Decomposer::TypesTuple&gt;(name);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (!<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#a1cbe2d4235968799ab2077525c517258">Decomposer::HasTypes</a> &amp;&amp; <a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#aebbab8499a62cb712b1c77fa18188346">Decomposer::HasVariables</a>)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                GetTemplateVariableLiterals&lt;Decomposer::VarsTuple&gt;(name);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#a72a66f7f8f875d30f0303cee3ae84e8a">Decomposer::TypesBeforeArguments</a>) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                GetTemplateVariableLiterals&lt;Decomposer::VarsTuple&gt;(name);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                name += <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                GetTemplateTypeLiterals&lt;typename Decomposer::TypesTuple&gt;(name);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                GetTemplateTypeLiterals&lt;typename Decomposer::TypesTuple&gt;(name);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                name += <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                GetTemplateVariableLiterals&lt;Decomposer::VarsTuple&gt;(name);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            name += <span class="charliteral">&#39;&gt;&#39;</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">return</span> name;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TypesTuple, std::<span class="keywordtype">size_t</span> Index = 0ul&gt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#a74bc39bea41655ae499b768012588a6f">  238</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespacek_f_1_1_internal.html#a74bc39bea41655ae499b768012588a6f">GetTemplateTypeLiterals</a>(std::string &amp;name)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keyword">auto</span> literal = <a class="code" href="classk_f_1_1_meta_1_1_factory_base.html">Meta::Factory&lt;std::tuple_element_t&lt;Index, TypesTuple&gt;</a>&gt;::Resolve().literal();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span> (literal.empty())</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            name += <span class="stringliteral">&quot;???&quot;</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            name += literal;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> constexpr (Index + 1 == std::tuple_size_v&lt;TypesTuple&gt;)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            name += <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">return</span> GetTemplateVariableLiterals&lt;TypesTuple, Index + 1&gt;(name);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">template</span>&lt;auto VarsTuple, std::<span class="keywordtype">size_t</span> Index = 0ul&gt;</div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#a7cdf21ba885462f78db55aab7fc98cb0">  255</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespacek_f_1_1_internal.html#a7cdf21ba885462f78db55aab7fc98cb0">GetTemplateVariableLiterals</a>(std::string &amp;name)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keyword">using</span> Tuple = decltype(<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#ab80f747e11aabd62c27fd11e72dea1e3">VarsTuple</a>);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        name += std::to_string(std::get&lt;Index&gt;(<a class="code" href="namespacek_f_1_1_meta_1_1_internal.html#ab80f747e11aabd62c27fd11e72dea1e3">VarsTuple</a>));</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">if</span> constexpr (Index + 1 == std::tuple_size_v&lt;Tuple&gt;)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            name += <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">return</span> GetTemplateVariableLiterals&lt;VarsTuple, Index + 1&gt;(name);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00270"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">  270</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">ToConstReference</a> = std::conditional_t&lt;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        std::is_pointer_v&lt;Type&gt;,</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> std::add_const_t&lt;Type&gt; &amp;,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keyword">const</span> <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    &gt;;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacek_f_html_a3425eef9b8c0f48a05a0481820112bd4"><div class="ttname"><a href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">kF::HashedName</a></div><div class="ttdeci">std::uint32_t HashedName</div><div class="ttdoc">The result type of the hash function.</div><div class="ttdef"><b>Definition:</b> Hash.hpp:13</div></div>
+<div class="ttc" id="a_m_p_m_c_queue_8ipp_html_a781fc8e643f4d363e38b43d82c1862d3"><div class="ttname"><a href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a></div><div class="ttdeci">else new cell Type(std::forward&lt; Args &gt;(args)...)</div></div>
+<div class="ttc" id="anamespacek_f_html_aeeaa391fe205daf7beabbeddc3f28c0a"><div class="ttname"><a href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a></div><div class="ttdeci">constexpr HashedName Hash(char const *const str, const std::size_t len) noexcept</div><div class="ttdoc">Compile-time string hashing.</div><div class="ttdef"><b>Definition:</b> Hash.hpp:19</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a74bc39bea41655ae499b768012588a6f"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a74bc39bea41655ae499b768012588a6f">kF::Internal::GetTemplateTypeLiterals</a></div><div class="ttdeci">void GetTemplateTypeLiterals(std::string &amp;name)</div><div class="ttdoc">Helper used internally to query the template type literal name of a specialized template type.</div><div class="ttdef"><b>Definition:</b> Register.hpp:238</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a41c39a4ec21dec5eee44f98a93030c3a"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a41c39a4ec21dec5eee44f98a93030c3a">kF::Internal::GetTemplateSpecializedName</a></div><div class="ttdeci">HashedName GetTemplateSpecializedName(HashedName hash)</div><div class="ttdoc">Helper used internally to query the name of a specialized template type.</div><div class="ttdef"><b>Definition:</b> Register.hpp:160</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a7cdf21ba885462f78db55aab7fc98cb0"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a7cdf21ba885462f78db55aab7fc98cb0">kF::Internal::GetTemplateVariableLiterals</a></div><div class="ttdeci">void GetTemplateVariableLiterals(std::string &amp;name)</div><div class="ttdoc">Helper used internally to query the template variable literal name of a specialized template type.</div><div class="ttdef"><b>Definition:</b> Register.hpp:255</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a40c2e6d12ef8bb180a45895b36f89740"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a40c2e6d12ef8bb180a45895b36f89740">kF::Internal::GetTemplateVariableNames</a></div><div class="ttdeci">HashedName GetTemplateVariableNames(HashedName hash)</div><div class="ttdoc">Helper used internall to query the sum of parameter template variable value names of a specialized te...</div><div class="ttdef"><b>Definition:</b> Register.hpp:197</div></div>
+<div class="ttc" id="aclassk_f_1_1_meta_1_1_factory_base_html"><div class="ttname"><a href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a></div><div class="ttdoc">Factory is used to instantiate meta-data of a given type.</div><div class="ttdef"><b>Definition:</b> Factory.hpp:15</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a6607241a8415b6e82d1e7c0818255b53"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference</a></div><div class="ttdeci">std::conditional_t&lt; std::is_pointer_v&lt; Type &gt;, const std::add_const_t&lt; Type &gt; &amp;, const Type &amp; &gt; ToConstReference</div><div class="ttdoc">Transform a type to a constant reference (add constant tag to pointers)</div><div class="ttdef"><b>Definition:</b> Register.hpp:274</div></div>
 <div class="ttc" id="a_macro_utils_8hpp_html"><div class="ttname"><a href="_macro_utils_8hpp.html">MacroUtils.hpp</a></div></div>
+<div class="ttc" id="anamespacek_f_1_1_meta_1_1_internal_html_aebbab8499a62cb712b1c77fa18188346"><div class="ttname"><a href="namespacek_f_1_1_meta_1_1_internal.html#aebbab8499a62cb712b1c77fa18188346">kF::Meta::Internal::HasVariables</a></div><div class="ttdeci">static constexpr bool HasVariables</div><div class="ttdef"><b>Definition:</b> TemplateDecomposer.hpp:58</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a7968ca965c3e473c772de75570da2efa"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a7968ca965c3e473c772de75570da2efa">kF::Internal::GetTemplateSpecializedLiterals</a></div><div class="ttdeci">std::string GetTemplateSpecializedLiterals(const std::string_view &amp;literal)</div><div class="ttdoc">Helper used internally to query the name of a specialized template type.</div><div class="ttdef"><b>Definition:</b> Register.hpp:210</div></div>
+<div class="ttc" id="anamespacek_f_1_1_meta_1_1_internal_html_a72a66f7f8f875d30f0303cee3ae84e8a"><div class="ttname"><a href="namespacek_f_1_1_meta_1_1_internal.html#a72a66f7f8f875d30f0303cee3ae84e8a">kF::Meta::Internal::TypesBeforeArguments</a></div><div class="ttdeci">static constexpr bool TypesBeforeArguments</div><div class="ttdef"><b>Definition:</b> TemplateDecomposer.hpp:59</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_acc50d3bf6390006adad08fe8e0ffb57e"><div class="ttname"><a href="namespacek_f_1_1_internal.html#acc50d3bf6390006adad08fe8e0ffb57e">kF::Internal::GetTemplateTypeNames</a></div><div class="ttdeci">HashedName GetTemplateTypeNames(HashedName hash)</div><div class="ttdoc">Helper used internally to query the sum of parameter template type names of a specialized template ty...</div><div class="ttdef"><b>Definition:</b> Register.hpp:183</div></div>
+<div class="ttc" id="anamespacek_f_1_1_meta_1_1_internal_html_a1cbe2d4235968799ab2077525c517258"><div class="ttname"><a href="namespacek_f_1_1_meta_1_1_internal.html#a1cbe2d4235968799ab2077525c517258">kF::Meta::Internal::HasTypes</a></div><div class="ttdeci">static constexpr bool HasTypes</div><div class="ttdef"><b>Definition:</b> TemplateDecomposer.hpp:57</div></div>
+<div class="ttc" id="anamespacek_f_1_1_meta_1_1_internal_html_ab80f747e11aabd62c27fd11e72dea1e3"><div class="ttname"><a href="namespacek_f_1_1_meta_1_1_internal.html#ab80f747e11aabd62c27fd11e72dea1e3">kF::Meta::Internal::VarsTuple</a></div><div class="ttdeci">static constexpr auto VarsTuple</div><div class="ttdef"><b>Definition:</b> TemplateDecomposer.hpp:62</div></div>
+<div class="ttc" id="astructk_f_1_1_meta_1_1_internal_1_1_template_decomposer_html"><div class="ttname"><a href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">kF::Meta::Internal::TemplateDecomposer</a></div><div class="ttdoc">Deduce a non template type.</div><div class="ttdef"><b>Definition:</b> TemplateDecomposer.hpp:18</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html"><div class="ttname"><a href="namespacek_f_1_1_internal.html">kF::Internal</a></div><div class="ttdef"><b>Definition:</b> Register.hpp:157</div></div>
+<div class="ttc" id="a_assert_8hpp_html_a7c3ac9bc75d48b084396788b131b14e7"><div class="ttname"><a href="_assert_8hpp.html#a7c3ac9bc75d48b084396788b131b14e7">kFAssert</a></div><div class="ttdeci">#define kFAssert(expression, onError)</div><div class="ttdef"><b>Definition:</b> Assert.hpp:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

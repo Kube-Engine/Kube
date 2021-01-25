@@ -1,11 +1,14 @@
-\hypertarget{md__t_o_d_o_autotoc_md9}{}\doxysection{Core}\label{md__t_o_d_o_autotoc_md9}
-\hypertarget{md__t_o_d_o_autotoc_md10}{}\doxysubsection{Vectors alignments}\label{md__t_o_d_o_autotoc_md10}
-All vectors must align malloc to type alignment\hypertarget{md__t_o_d_o_autotoc_md11}{}\doxysubsection{Allocator vectors}\label{md__t_o_d_o_autotoc_md11}
-Make allocator vectors\hypertarget{md__t_o_d_o_autotoc_md12}{}\doxysection{Meta}\label{md__t_o_d_o_autotoc_md12}
-\hypertarget{md__t_o_d_o_autotoc_md13}{}\doxysubsection{S\+T\+A\+T\+I\+C S\+T\+O\+R\+A\+G\+E !}\label{md__t_o_d_o_autotoc_md13}
-We M\+U\+ST test static storage though different translation units\hypertarget{md__t_o_d_o_autotoc_md14}{}\doxysubsection{Type system}\label{md__t_o_d_o_autotoc_md14}
-We can reduce type look-\/up time by having a second vector holding each index or name of all registered types so we lookup on a flat vector instead of dereferencing each type descriptor.\hypertarget{md__t_o_d_o_autotoc_md15}{}\doxysubsection{Type specific static variables}\label{md__t_o_d_o_autotoc_md15}
-We must implement runtime static variables to every meta type.\hypertarget{md__t_o_d_o_autotoc_md16}{}\doxysubsection{Enums}\label{md__t_o_d_o_autotoc_md16}
-We must implement enum registeration.\hypertarget{md__t_o_d_o_autotoc_md17}{}\doxysection{Flow}\label{md__t_o_d_o_autotoc_md17}
-\hypertarget{md__t_o_d_o_autotoc_md18}{}\doxysubsection{Tasking A\+PI}\label{md__t_o_d_o_autotoc_md18}
+\hypertarget{md__t_o_d_o_autotoc_md22}{}\doxysection{Object}\label{md__t_o_d_o_autotoc_md22}
+Proxy for structures that doesn\textquotesingle{}t need Better use a single signal for multiple data, ex\+: (x, y, w, h) -\/$>$ reduce signal explosion\hypertarget{md__t_o_d_o_autotoc_md23}{}\doxysection{K\+ML}\label{md__t_o_d_o_autotoc_md23}
+Each property / function is not stored in the object but as a form of a temporary expression that is inlined where used A function is an syntaxic sugar for an expression with local variables\hypertarget{md__t_o_d_o_autotoc_md24}{}\doxysection{Core}\label{md__t_o_d_o_autotoc_md24}
+\hypertarget{md__t_o_d_o_autotoc_md25}{}\doxysection{Allocator functor}\label{md__t_o_d_o_autotoc_md25}
+Make allocator for functors such as they are passed either at emplace (destructor is guessed and stored perfectly !)\hypertarget{md__t_o_d_o_autotoc_md26}{}\doxysubsection{Allocator vectors}\label{md__t_o_d_o_autotoc_md26}
+Make allocator vectors\hypertarget{md__t_o_d_o_autotoc_md27}{}\doxysubsection{Vector shrink}\label{md__t_o_d_o_autotoc_md27}
+Add vector shrink function \&\& add shrink in meta registerer\hypertarget{md__t_o_d_o_autotoc_md28}{}\doxysection{Meta}\label{md__t_o_d_o_autotoc_md28}
+\hypertarget{md__t_o_d_o_autotoc_md29}{}\doxysubsection{S\+T\+A\+T\+I\+C S\+T\+O\+R\+A\+G\+E !}\label{md__t_o_d_o_autotoc_md29}
+We M\+U\+ST test static storage though different translation units\hypertarget{md__t_o_d_o_autotoc_md30}{}\doxysubsection{Type system}\label{md__t_o_d_o_autotoc_md30}
+We can reduce type look-\/up time by having a second vector holding each index or name of all registered types so we lookup on a flat vector instead of dereferencing each type descriptor.\hypertarget{md__t_o_d_o_autotoc_md31}{}\doxysubsection{Type specific static variables}\label{md__t_o_d_o_autotoc_md31}
+We must implement runtime static variables to every meta type.\hypertarget{md__t_o_d_o_autotoc_md32}{}\doxysubsection{Enums}\label{md__t_o_d_o_autotoc_md32}
+We must implement enum registeration.\hypertarget{md__t_o_d_o_autotoc_md33}{}\doxysection{Flow}\label{md__t_o_d_o_autotoc_md33}
+\hypertarget{md__t_o_d_o_autotoc_md34}{}\doxysubsection{Tasking A\+PI}\label{md__t_o_d_o_autotoc_md34}
 The A\+PI proposes a Dynamic\+Node to generate on runtime tasks during the graph execution, this node is not implemented. We must have a way to bypass node of a graph if a flag is set 

@@ -1,0 +1,47 @@
+\hypertarget{_functor_8hpp}{}\doxysection{Kube/\+Core/\+Functor.hpp File Reference}
+\label{_functor_8hpp}\index{Kube/Core/Functor.hpp@{Kube/Core/Functor.hpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}Utils.\+hpp\char`\"{}}\newline
+Include dependency graph for Functor.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_functor_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_functor_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4}{k\+F\+::\+Core\+::\+Functor$<$ Return(\+Args...), Cache\+Size $>$}}
+\begin{DoxyCompactList}\small\item\em Very fast opaque functor but only takes trivial types less or equal sized than cacheline eighth. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_1_1_runtime_allocation}{k\+F\+::\+Core\+::\+Functor$<$ Return(\+Args...), Cache\+Size $>$\+::\+Runtime\+Allocation}}
+\begin{DoxyCompactList}\small\item\em Structure describing a runtime allocation inside the functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{k\+F\+::\+Core\+::\+Internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a68d97a682f3c10cafb023f96bd375845}{k\+F\+::\+Core\+::\+Internal\+::\+Functor\+Cache\+Requirements}} = std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible\+\_\+v$<$Functor$>$ \&\& sizeof(Functor) $<$= Cache\+Size
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , std\+::size\+\_\+t Cache\+Size$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}{k\+F\+::\+Core\+::\+Internal\+::\+Functor\+No\+Cache\+Requirements}} = (std\+::is\+\_\+trivially\+\_\+copy\+\_\+constructible\+\_\+v$<$Functor$>$ ? sizeof(Functor) $>$ Cache\+Size \+: \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor D\+O\+ES N\+OT met the trivial requirements of \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Functor , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{k\+F\+::\+Core\+::\+Internal\+::\+Functor\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, Functor, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given functor / function is callable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member, typename Class\+Type , typename Return , typename ... Args$>$ }\\concept \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}{k\+F\+::\+Core\+::\+Internal\+::\+Functor\+Member\+Invocable}} = std\+::is\+\_\+invocable\+\_\+r\+\_\+v$<$Return, decltype(Member), Class\+Type \&, Args...$>$
+\begin{DoxyCompactList}\small\item\em Ensure that a given member function is callable. \end{DoxyCompactList}\end{DoxyCompactItemize}

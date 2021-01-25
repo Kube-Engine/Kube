@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -88,7 +88,7 @@ $(function() {
 Inheritance diagram for kF::Core::MPMCQueue&lt; Type &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classk_f_1_1_core_1_1_m_p_m_c_queue__inherit__graph.png" border="0" usemap="#ak_f_1_1_core_1_1_m_p_m_c_queue_3_01_type_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="k_f_1_1_core_1_1_m_p_m_c_queue_3_01_type_01_4_inherit__map" id="ak_f_1_1_core_1_1_m_p_m_c_queue_3_01_type_01_4_inherit__map">
+<map name="k_f_1_1_core_1_1_m_p_m_c_queue_3_01_type_01_4_inherit__map" id="k_f_1_1_core_1_1_m_p_m_c_queue_3_01_type_01_4_inherit__map">
 <area shape="rect" title="The MPMC queue is a lock&#45;free queue that only supports a Single Producer but Multiple Consumers." alt="" coords="5,5,165,244"/>
 <area shape="rect" href="classk_f_1_1_core_1_1_m_p_m_c_queue.html" title=" " alt="" coords="5,307,165,545"/>
 </map>
@@ -126,10 +126,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac4ddf6a237c53e57ee562fc9ae78dbf4"><td class="memTemplParams" colspan="2">template&lt;bool MoveOnSuccess = false, typename ... Args&gt; </td></tr>
-<tr class="memitem:ac4ddf6a237c53e57ee562fc9ae78dbf4"><td class="memTemplItemLeft" align="right" valign="top">bool push(Args &amp;&amp;...args) noexcept(std::is_nothrow_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> __VA_OPT__(,) Args... __VA_OPT__(,) &gt;) <a class="el" href="_command_pool_8ipp.html#a2ed3d04a1b0fbdb28fbf648c6faaf995">requires</a> std bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_m_p_m_c_queue.html#ac4ddf6a237c53e57ee562fc9ae78dbf4">pop</a> (<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;value) noexcept(std::is_nothrow_destructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &amp;&amp;(std::is_move_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; ? std::is_nothrow_move_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; :std::is_nothrow_copy_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;))</td></tr>
-<tr class="memdesc:ac4ddf6a237c53e57ee562fc9ae78dbf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a single element into the queue.  <a href="classk_f_1_1_core_1_1_m_p_m_c_queue.html#ac4ddf6a237c53e57ee562fc9ae78dbf4">More...</a><br /></td></tr>
-<tr class="separator:ac4ddf6a237c53e57ee562fc9ae78dbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436ceb4e7f79a1c73da070dae3dd8520"><td class="memTemplParams" colspan="2">template&lt;bool MoveOnSuccess = false, typename ... Args&gt; </td></tr>
+<tr class="memitem:a436ceb4e7f79a1c73da070dae3dd8520"><td class="memTemplItemLeft" align="right" valign="top">bool push(Args &amp;&amp;...args) noexcept(std::is_nothrow_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> __VA_OPT__(,) Args... __VA_OPT__(,) &gt;) <a class="el" href="_command_pool_8ipp.html#a2ed3d04a1b0fbdb28fbf648c6faaf995">requires</a> std bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_m_p_m_c_queue.html#a436ceb4e7f79a1c73da070dae3dd8520">pop</a> (<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;value) noexcept(std::is_nothrow_destructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &amp;&amp;(std::is_lvalue_reference_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; ? std::is_nothrow_copy_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt; :std::is_rvalue_reference_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; ? std::is_nothrow_move_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt; :std::is_move_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;&gt; ? std::is_nothrow_move_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt; :std::is_nothrow_copy_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt;))</td></tr>
+<tr class="memdesc:a436ceb4e7f79a1c73da070dae3dd8520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a single element into the queue.  <a href="classk_f_1_1_core_1_1_m_p_m_c_queue.html#a436ceb4e7f79a1c73da070dae3dd8520">More...</a><br /></td></tr>
+<tr class="separator:a436ceb4e7f79a1c73da070dae3dd8520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -461,8 +461,8 @@ template&lt;typename Type &gt; </div>
 
 </div>
 </div>
-<a id="ac4ddf6a237c53e57ee562fc9ae78dbf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4ddf6a237c53e57ee562fc9ae78dbf4">&#9670;&nbsp;</a></span>pop</h2>
+<a id="a436ceb4e7f79a1c73da070dae3dd8520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436ceb4e7f79a1c73da070dae3dd8520">&#9670;&nbsp;</a></span>pop</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +475,7 @@ template&lt;bool MoveOnSuccess = false, typename ... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool push (Args &amp;&amp;...args) noexcept(std::is_nothrow_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> __VA_OPT__(,) Args... __VA_OPT__(,) &gt;) <a class="el" href="_command_pool_8ipp.html#a2ed3d04a1b0fbdb28fbf648c6faaf995">requires</a> std bool <a class="el" href="classk_f_1_1_core_1_1_m_p_m_c_queue.html">kF::Core::MPMCQueue</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;::pop(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;value) noexcept(std::is_nothrow_destructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &amp;&amp;(std::is_move_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; ? std::is_nothrow_move_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; :std::is_nothrow_copy_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;))</td>
+          <td class="memname">bool push (Args &amp;&amp;...args) noexcept(std::is_nothrow_constructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> __VA_OPT__(,) Args... __VA_OPT__(,) &gt;) <a class="el" href="_command_pool_8ipp.html#a2ed3d04a1b0fbdb28fbf648c6faaf995">requires</a> std bool <a class="el" href="classk_f_1_1_core_1_1_m_p_m_c_queue.html">kF::Core::MPMCQueue</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;::pop(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;value) noexcept(std::is_nothrow_destructible_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &amp;&amp;( std::is_lvalue_reference_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; ? std::is_nothrow_copy_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt; : std::is_rvalue_reference_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; ? std::is_nothrow_move_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt; : std::is_move_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;&gt; ? std::is_nothrow_move_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt; :std::is_nothrow_copy_constructible_v&lt; std::remove_cvref_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &gt;))</td>
         </tr>
       </table>
   </td>

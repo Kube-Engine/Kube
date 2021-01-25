@@ -1,0 +1,358 @@
+\hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4}{}\doxysection{kF\+::Core\+::Functor$<$ Return(Args...), Cache\+Size $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4}\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+
+
+Very fast opaque functor but only takes trivial types less or equal sized than cacheline eighth.  
+
+
+
+
+{\ttfamily \#include $<$Functor.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_1_1_runtime_allocation}{Runtime\+Allocation}}
+\begin{DoxyCompactList}\small\item\em Structure describing a runtime allocation inside the functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} = std\+::byte\mbox{[}Cache\+Size\mbox{]}
+\begin{DoxyCompactList}\small\item\em Byte cache. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a0ab48702a80583933dc6c5c502af101f}{Opaque\+Invoke}} = Return($\ast$)(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&cache, Args...\+args)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} signature. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6077c482e921d6b183c847c2aa37c1e2}{Opaque\+Destructor}} = void($\ast$)(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&cache, const bool deallocate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6513744e0346bcbd1c58aa4f47e0ec02}{Functor}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_af1f46fff9009016d94c238404b03deab}{Functor}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Class\+Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} (!std\+::is\+\_\+same\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}, std\+::remove\+\_\+cvref\+\_\+t$<$ Class\+Functor $>$$>$) \&\&Internal
+\begin{DoxyCompactList}\small\item\em Prepare constructor, limited to runtime functors due to template constructor restrictions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a590e86d3494470d473de33d534d03d18}{$\sim$\+Functor}} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6f8b90f176ad046e1458106db6ec79ea}{operator=}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Class\+Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} (!std\+::is\+\_\+same\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}, std\+::remove\+\_\+cvref\+\_\+t$<$ Class\+Functor $>$$>$) \&\&Internal
+\begin{DoxyCompactList}\small\item\em Prepare constructor, limited to runtime functors due to template constructor restrictions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$bool Is\+Destruct\+Safe = false$>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a21e5ad47f9fd979cb9583511eac88d8d}{destroy}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the holded instance if it isn\textquotesingle{}t trivial, without freeing memory. \end{DoxyCompactList}\item 
+{\footnotesize template$<$bool Reset\+Members = true$>$ }\\void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a1fa405dca7df210038ac0103828deddb}{release}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the functor and free its allocated memory Note that releasing without reseting members is not safe ! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ab1ff862db03df0c04ec8abb062ab27f0}{operator bool}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the functor is prepared. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Class\+Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a68d97a682f3c10cafb023f96bd375845}{Internal\+::\+Functor\+Cache\+Requirements}}$<$ Class\+Functor, Cache\+Size $>$ \&\&\mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$ Class\+Functor, Return, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a778442f95e320f60017583592e084c96}{prepare}} (Class\+Functor \&\&functor) noexcept
+\begin{DoxyCompactList}\small\item\em Prepare a trivial functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Class\+Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}{Internal\+::\+Functor\+No\+Cache\+Requirements}}$<$ Class\+Functor, Cache\+Size $>$ \&\&\mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$ Class\+Functor, Return, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ac6e919100debef516bd2cf2d03ca501c}{prepare}} (Class\+Functor \&\&functor) noexcept((std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$))
+\begin{DoxyCompactList}\small\item\em Prepare a non-\/trivial functor with an allocator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member\+Function, typename Class\+Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}{Internal\+::\+Functor\+Member\+Invocable}}$<$ Member\+Function, Class\+Type, Return, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ab0c11b9a150d31d049c4313b9f1ecff4}{prepare}} (Class\+Type $\ast$const instance) noexcept
+\begin{DoxyCompactList}\small\item\em Prepare a volatile member function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Member\+Function, typename Class\+Type $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}{Internal\+::\+Functor\+Member\+Invocable}}$<$ Member\+Function, const Class\+Type, Return, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae71404b3c02fff9c6006051280f81bb8}{prepare}} (const Class\+Type $\ast$const instance) noexcept
+\begin{DoxyCompactList}\small\item\em Prepare a const member function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Function$>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$ decltype(Function), Return, Args... $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a91788e78f57cc22738bcc27a01b24f84}{prepare}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Prepare a free function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Deleter, typename Class\+Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}{Internal\+::\+Functor\+No\+Cache\+Requirements}}$<$ Class\+Functor, Cache\+Size $>$ \&\&\mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$ Class\+Functor, Return, Args... $>$ \&\&\mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$ decltype(Deleter), void, Class\+Functor $\ast$ $>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_addce17acdf1e3b963212c5fa9a2f2ded}{prepare}} (Class\+Functor $\ast$const functor\+Ptr) noexcept
+\begin{DoxyCompactList}\small\item\em Prepare a pointer to functor using a custom deleter. \end{DoxyCompactList}\item 
+Return \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a48a71d66e482e2175f1959f59e3113eb}{operator()}} (Args ...args) const
+\begin{DoxyCompactList}\small\item\em Invoke internal functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename As $>$ }\\static As \& \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_af3ce35a6d8f26ba1b05a81e9be007690}{Cache\+As}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&cache) noexcept
+\begin{DoxyCompactList}\small\item\em Cast a cache into a given type. \end{DoxyCompactList}\item 
+static std\+::size\+\_\+t \& \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae1f39f23d4a010c52759c7036d8a0b4c}{Cache\+Capacity}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&cache) noexcept
+\begin{DoxyCompactList}\small\item\em Cast a cache into an allocation capacity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a0ab48702a80583933dc6c5c502af101f}{Opaque\+Invoke}} \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aea1e6f2ad162660f76f630d2be6848aa}{\+\_\+invoke}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6077c482e921d6b183c847c2aa37c1e2}{Opaque\+Destructor}} \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae9a1b056dd4db9b2f348ad0facb25191}{\+\_\+destruct}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a2053f10e2a950337e8369862fe9ddb41}{\+\_\+cache}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Return, typename ... Args, std\+::size\+\_\+t Cache\+Size$>$\newline
+class k\+F\+::\+Core\+::\+Functor$<$ Return(\+Args...), Cache\+Size $>$}
+
+Very fast opaque functor but only takes trivial types less or equal sized than cacheline eighth. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!Cache@{Cache}}
+\index{Cache@{Cache}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{Cache}{Cache}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} =  std\+::byte\mbox{[}Cache\+Size\mbox{]}}
+
+
+
+Byte cache. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6077c482e921d6b183c847c2aa37c1e2}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6077c482e921d6b183c847c2aa37c1e2}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!OpaqueDestructor@{OpaqueDestructor}}
+\index{OpaqueDestructor@{OpaqueDestructor}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{OpaqueDestructor}{OpaqueDestructor}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6077c482e921d6b183c847c2aa37c1e2}{Opaque\+Destructor}} =  void($\ast$)(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&cache, const bool deallocate)}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a0ab48702a80583933dc6c5c502af101f}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a0ab48702a80583933dc6c5c502af101f}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!OpaqueInvoke@{OpaqueInvoke}}
+\index{OpaqueInvoke@{OpaqueInvoke}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{OpaqueInvoke}{OpaqueInvoke}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+using \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a0ab48702a80583933dc6c5c502af101f}{Opaque\+Invoke}} =  Return($\ast$)(\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&cache, Args...\+args)}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} signature. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6513744e0346bcbd1c58aa4f47e0ec02}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6513744e0346bcbd1c58aa4f47e0ec02}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!Functor@{Functor}}
+\index{Functor@{Functor}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{Functor()}{Functor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_af1f46fff9009016d94c238404b03deab}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_af1f46fff9009016d94c238404b03deab}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!Functor@{Functor}}
+\index{Functor@{Functor}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{Functor()}{Functor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$<$ Return(Args...), Cache\+Size $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a590e86d3494470d473de33d534d03d18}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a590e86d3494470d473de33d534d03d18}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!````~Functor@{$\sim$Functor}}
+\index{````~Functor@{$\sim$Functor}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Functor()}{~Functor()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_af3ce35a6d8f26ba1b05a81e9be007690}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_af3ce35a6d8f26ba1b05a81e9be007690}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!CacheAs@{CacheAs}}
+\index{CacheAs@{CacheAs}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{CacheAs()}{CacheAs()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$typename As $>$ \\
+static As\& \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::Cache\+As (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&}]{cache }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Cast a cache into a given type. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae1f39f23d4a010c52759c7036d8a0b4c}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae1f39f23d4a010c52759c7036d8a0b4c}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!CacheCapacity@{CacheCapacity}}
+\index{CacheCapacity@{CacheCapacity}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{CacheCapacity()}{CacheCapacity()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+static std\+::size\+\_\+t\& \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::Cache\+Capacity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \&}]{cache }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Cast a cache into an allocation capacity. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a21e5ad47f9fd979cb9583511eac88d8d}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a21e5ad47f9fd979cb9583511eac88d8d}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$bool Is\+Destruct\+Safe = false$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the holded instance if it isn\textquotesingle{}t trivial, without freeing memory. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ab1ff862db03df0c04ec8abb062ab27f0}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ab1ff862db03df0c04ec8abb062ab27f0}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::operator bool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the functor is prepared. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a48a71d66e482e2175f1959f59e3113eb}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a48a71d66e482e2175f1959f59e3113eb}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+Return \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::operator() (\begin{DoxyParamCaption}\item[{Args ...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invoke internal functor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6f8b90f176ad046e1458106db6ec79ea}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6f8b90f176ad046e1458106db6ec79ea}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$<$ Return(Args...), Cache\+Size $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a778442f95e320f60017583592e084c96}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a778442f95e320f60017583592e084c96}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!prepare@{prepare}}
+\index{prepare@{prepare}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$typename Class\+Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a68d97a682f3c10cafb023f96bd375845}{Internal\+::\+Functor\+Cache\+Requirements}}$<$Class\+Functor, Cache\+Size$>$\&\& \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$Class\+Functor, Return, Args...$>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::prepare (\begin{DoxyParamCaption}\item[{Class\+Functor$<$ Return(Args...), Cache\+Size $>$ \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Prepare a trivial functor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ac6e919100debef516bd2cf2d03ca501c}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ac6e919100debef516bd2cf2d03ca501c}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!prepare@{prepare}}
+\index{prepare@{prepare}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$typename Class\+Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}{Internal\+::\+Functor\+No\+Cache\+Requirements}}$<$Class\+Functor, Cache\+Size$>$\&\& \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$Class\+Functor, Return, Args...$>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::prepare (\begin{DoxyParamCaption}\item[{Class\+Functor$<$ Return(Args...), Cache\+Size $>$ \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Prepare a non-\/trivial functor with an allocator. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_addce17acdf1e3b963212c5fa9a2f2ded}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_addce17acdf1e3b963212c5fa9a2f2ded}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!prepare@{prepare}}
+\index{prepare@{prepare}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$auto Deleter, typename Class\+Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a3ef710dd9769ad56fe5c359d699f491f}{Internal\+::\+Functor\+No\+Cache\+Requirements}}$<$Class\+Functor, Cache\+Size$>$\&\& \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$Class\+Functor, Return, Args...$>$\&\& \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$decltype(Deleter), void, Class\+Functor $\ast$$>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::prepare (\begin{DoxyParamCaption}\item[{Class\+Functor$<$ Return(Args...), Cache\+Size $>$ $\ast$const}]{functor\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Prepare a pointer to functor using a custom deleter. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ab0c11b9a150d31d049c4313b9f1ecff4}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ab0c11b9a150d31d049c4313b9f1ecff4}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!prepare@{prepare}}
+\index{prepare@{prepare}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$auto Member\+Function, typename Class\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}{Internal\+::\+Functor\+Member\+Invocable}}$<$Member\+Function, Class\+Type, Return, Args...$>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::prepare (\begin{DoxyParamCaption}\item[{Class\+Type $\ast$const}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Prepare a volatile member function. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae71404b3c02fff9c6006051280f81bb8}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae71404b3c02fff9c6006051280f81bb8}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!prepare@{prepare}}
+\index{prepare@{prepare}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$auto Member\+Function, typename Class\+Type $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a304095c341aa5fd1505b9b5df5f30ef9}{Internal\+::\+Functor\+Member\+Invocable}}$<$Member\+Function, const Class\+Type, Return, Args...$>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::prepare (\begin{DoxyParamCaption}\item[{const Class\+Type $\ast$const}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Prepare a const member function. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a91788e78f57cc22738bcc27a01b24f84}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a91788e78f57cc22738bcc27a01b24f84}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!prepare@{prepare}}
+\index{prepare@{prepare}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$auto Function$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}{requires}} \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal_a25eaca649313537ef3daefd329937ce4}{Internal\+::\+Functor\+Invocable}}$<$decltype(Function), Return, Args...$>$ void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::prepare (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Prepare a free function. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a1fa405dca7df210038ac0103828deddb}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a1fa405dca7df210038ac0103828deddb}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!release@{release}}
+\index{release@{release}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$bool Reset\+Members = true$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the functor and free its allocated memory Note that releasing without reseting members is not safe ! 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!requires@{requires}}
+\index{requires@{requires}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$typename Class\+Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::requires (\begin{DoxyParamCaption}\item[{!std\+::is\+\_\+same\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$<$ Return(Args...), Cache\+Size $>$, std\+::remove\+\_\+cvref\+\_\+t$<$ Class\+Functor$<$ Return(Args...), Cache\+Size $>$ $>$$>$}]{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prepare constructor, limited to runtime functors due to template constructor restrictions. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a838e06d1b282a05c823fba5bfcbc1c3c}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!requires@{requires}}
+\index{requires@{requires}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{requires()}{requires()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+template$<$typename Class\+Functor $>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::requires (\begin{DoxyParamCaption}\item[{!std\+::is\+\_\+same\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}$<$ Return(Args...), Cache\+Size $>$, std\+::remove\+\_\+cvref\+\_\+t$<$ Class\+Functor$<$ Return(Args...), Cache\+Size $>$ $>$$>$}]{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prepare constructor, limited to runtime functors due to template constructor restrictions. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a2053f10e2a950337e8369862fe9ddb41}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a2053f10e2a950337e8369862fe9ddb41}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!\_cache@{\_cache}}
+\index{\_cache@{\_cache}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{\_cache}{\_cache}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aac21caaa2265183430ee3f2d4cd961cf}{Cache}} \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\+\_\+cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae9a1b056dd4db9b2f348ad0facb25191}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_ae9a1b056dd4db9b2f348ad0facb25191}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!\_destruct@{\_destruct}}
+\index{\_destruct@{\_destruct}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{\_destruct}{\_destruct}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a6077c482e921d6b183c847c2aa37c1e2}{Opaque\+Destructor}} \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\+\_\+destruct \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aea1e6f2ad162660f76f630d2be6848aa}\label{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_aea1e6f2ad162660f76f630d2be6848aa}} 
+\index{kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}!\_invoke@{\_invoke}}
+\index{\_invoke@{\_invoke}!kF::Core::Functor$<$ Return(Args...), CacheSize $>$@{kF::Core::Functor$<$ Return(Args...), CacheSize $>$}}
+\doxysubsubsection{\texorpdfstring{\_invoke}{\_invoke}}
+{\footnotesize\ttfamily template$<$typename Return , typename ... Args, std\+::size\+\_\+t Cache\+Size$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4_a0ab48702a80583933dc6c5c502af101f}{Opaque\+Invoke}} \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{k\+F\+::\+Core\+::\+Functor}}$<$ Return(Args...), Cache\+Size $>$\+::\+\_\+invoke \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_functor_8hpp}{Functor.\+hpp}}\end{DoxyCompactItemize}

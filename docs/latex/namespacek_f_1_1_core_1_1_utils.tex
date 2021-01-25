@@ -25,8 +25,14 @@ struct \mbox{\hyperlink{structk_f_1_1_core_1_1_utils_1_1_none_such}{None\+Such}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$std\+::size\+\_\+t Required\+Alignment$>$ }\\void $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}{Aligned\+Alloc}} (const std\+::size\+\_\+t bytes) noexcept
-\begin{DoxyCompactList}\small\item\em Forwards to std\+::aligned\+\_\+alloc, but ensure arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$std\+::size\+\_\+t Required\+Alignment, typename Cast  = void$>$ }\\Cast $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_a41544a0893eaafb61541e99348644410}{Aligned\+Alloc}} (const std\+::size\+\_\+t bytes) noexcept
+\begin{DoxyCompactList}\small\item\em Similar to std\+::aligned\+\_\+alloc, but ensure arguments, you must use Aligned\+Free to free the memory. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Cast  = void$>$ }\\Cast $\ast$ \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_aedd6078cbaf1adc56948ed8a476f0034}{Aligned\+Alloc}} (const std\+::size\+\_\+t bytes, const std\+::size\+\_\+t alignment) noexcept
+\item 
+void \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_ad2444c3bb58a23dfe866d50ceadf3148}{Aligned\+Free}} (void $\ast$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}) noexcept
+\begin{DoxyCompactList}\small\item\em Free a pointer allocated with Aligned\+Alloc. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::integral Unit$>$ }\\constexpr Unit \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils_afe841dfef86b0430cd9d469308367349}{Next\+Power\+Of2}} (Unit value)
+\begin{DoxyCompactList}\small\item\em Find the closest power of 2 of value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,18 +70,46 @@ Type of the detected expression, if the detection failed returns \mbox{\hyperlin
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}\label{namespacek_f_1_1_core_1_1_utils_ad8c10a6972dae1716ad03436d47f11e6}} 
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a41544a0893eaafb61541e99348644410}\label{namespacek_f_1_1_core_1_1_utils_a41544a0893eaafb61541e99348644410}} 
 \index{kF::Core::Utils@{kF::Core::Utils}!AlignedAlloc@{AlignedAlloc}}
 \index{AlignedAlloc@{AlignedAlloc}!kF::Core::Utils@{kF::Core::Utils}}
-\doxysubsubsection{\texorpdfstring{AlignedAlloc()}{AlignedAlloc()}}
-{\footnotesize\ttfamily template$<$std\+::size\+\_\+t Required\+Alignment$>$ \\
-void $\ast$ k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\doxysubsubsection{\texorpdfstring{AlignedAlloc()}{AlignedAlloc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t Required\+Alignment, typename Cast  = void$>$ \\
+Cast $\ast$ k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
-Forwards to std\+::aligned\+\_\+alloc, but ensure arguments. 
+Similar to std\+::aligned\+\_\+alloc, but ensure arguments, you must use Aligned\+Free to free the memory. 
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils}{Utils}} 
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_core_1_1_utils}{Utils}} \mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_aedd6078cbaf1adc56948ed8a476f0034}\label{namespacek_f_1_1_core_1_1_utils_aedd6078cbaf1adc56948ed8a476f0034}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!AlignedAlloc@{AlignedAlloc}}
+\index{AlignedAlloc@{AlignedAlloc}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{AlignedAlloc()}{AlignedAlloc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Cast  = void$>$ \\
+Cast$\ast$ k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Alloc (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{bytes,  }\item[{const std\+::size\+\_\+t}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_ad2444c3bb58a23dfe866d50ceadf3148}\label{namespacek_f_1_1_core_1_1_utils_ad2444c3bb58a23dfe866d50ceadf3148}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!AlignedFree@{AlignedFree}}
+\index{AlignedFree@{AlignedFree}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{AlignedFree()}{AlignedFree()}}
+{\footnotesize\ttfamily void k\+F\+::\+Core\+::\+Utils\+::\+Aligned\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Free a pointer allocated with Aligned\+Alloc. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_afe841dfef86b0430cd9d469308367349}\label{namespacek_f_1_1_core_1_1_utils_afe841dfef86b0430cd9d469308367349}} 
+\index{kF::Core::Utils@{kF::Core::Utils}!NextPowerOf2@{NextPowerOf2}}
+\index{NextPowerOf2@{NextPowerOf2}!kF::Core::Utils@{kF::Core::Utils}}
+\doxysubsubsection{\texorpdfstring{NextPowerOf2()}{NextPowerOf2()}}
+{\footnotesize\ttfamily template$<$std\+::integral Unit$>$ \\
+constexpr Unit k\+F\+::\+Core\+::\+Utils\+::\+Next\+Power\+Of2 (\begin{DoxyParamCaption}\item[{Unit}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Find the closest power of 2 of value. 
+
+
 
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{namespacek_f_1_1_core_1_1_utils_a0843b6e9d17aa25716002200860d5785}\label{namespacek_f_1_1_core_1_1_utils_a0843b6e9d17aa25716002200860d5785}} 

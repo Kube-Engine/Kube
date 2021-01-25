@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -71,14 +71,12 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Reflection.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_meta_8hpp_source.html">Kube/Meta/Meta.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_registerer_8hpp_source.html">Kube/Meta/Registerer.hpp</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="_make_8hpp_source.html">Make.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_register_8hpp_source.html">Register.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -86,56 +84,56 @@ Include dependency graph for Reflection.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_reflection_8hpp__incl.png" border="0" usemap="#a_kube_2_object_2_reflection_8hpp" alt=""/></div>
 <map name="_kube_2_object_2_reflection_8hpp" id="a_kube_2_object_2_reflection_8hpp">
-<area shape="rect" title=" " alt="" coords="1753,5,1936,32"/>
-<area shape="rect" href="_meta_8hpp.html" title=" " alt="" coords="699,80,841,107"/>
-<area shape="rect" href="_make_8hpp.html" title=" " alt="" coords="1805,80,1884,107"/>
-<area shape="rect" href="_register_8hpp.html" title=" " alt="" coords="1915,80,2011,107"/>
-<area shape="rect" href="_meta_2_base_8hpp.html" title=" " alt="" coords="1121,528,1198,555"/>
-<area shape="rect" href="_type_8hpp.html" title=" " alt="" coords="482,453,557,480"/>
-<area shape="rect" href="_constructor_8hpp.html" title=" " alt="" coords="666,229,781,256"/>
-<area shape="rect" href="_converter_8hpp.html" title=" " alt="" coords="21,304,125,331"/>
-<area shape="rect" href="_var_8hpp.html" title=" " alt="" coords="39,379,106,405"/>
-<area shape="rect" href="_function_8hpp.html" title=" " alt="" coords="371,229,468,256"/>
-<area shape="rect" href="_slot_table_8hpp.html" title=" " alt="" coords="205,304,306,331"/>
-<area shape="rect" href="_signal_8hpp.html" title=" " alt="" coords="146,229,229,256"/>
-<area shape="rect" href="_data_8hpp.html" title=" " alt="" coords="170,155,245,181"/>
-<area shape="rect" href="_factory_8hpp.html" title=" " alt="" coords="474,304,565,331"/>
-<area shape="rect" href="_resolver_8hpp.html" title=" " alt="" coords="543,229,642,256"/>
-<area shape="rect" href="_base_8ipp.html" title=" " alt="" coords="523,155,596,181"/>
-<area shape="rect" href="_type_8ipp.html" title=" " alt="" coords="620,155,691,181"/>
-<area shape="rect" href="_constructor_8ipp.html" title=" " alt="" coords="715,155,825,181"/>
-<area shape="rect" href="_converter_8ipp.html" title=" " alt="" coords="849,155,949,181"/>
-<area shape="rect" href="_function_8ipp.html" title=" " alt="" coords="974,155,1067,181"/>
-<area shape="rect" href="_slot_table_8ipp.html" title=" " alt="" coords="1092,155,1189,181"/>
-<area shape="rect" href="_signal_8ipp.html" title=" " alt="" coords="1213,155,1292,181"/>
-<area shape="rect" href="_data_8ipp.html" title=" " alt="" coords="1316,155,1387,181"/>
-<area shape="rect" href="_factory_8ipp.html" title=" " alt="" coords="1411,155,1497,181"/>
-<area shape="rect" href="_resolver_8ipp.html" title=" " alt="" coords="1521,155,1616,181"/>
-<area shape="rect" href="_var_8ipp.html" title=" " alt="" coords="1640,155,1703,181"/>
-<area shape="rect" title=" " alt="" coords="1250,752,1333,779"/>
-<area shape="rect" title=" " alt="" coords="1355,603,1516,629"/>
-<area shape="rect" title=" " alt="" coords="1540,603,1619,629"/>
-<area shape="rect" title=" " alt="" coords="583,752,637,779"/>
-<area shape="rect" title=" " alt="" coords="714,603,765,629"/>
-<area shape="rect" title=" " alt="" coords="1744,603,1823,629"/>
-<area shape="rect" href="_hash_8hpp.html" title=" " alt="" coords="1015,603,1159,629"/>
-<area shape="rect" href="_assert_8hpp.html" title=" " alt="" coords="840,603,991,629"/>
-<area shape="rect" href="_utils_8hpp.html" title=" " alt="" coords="767,677,907,704"/>
-<area shape="rect" href="_forward_8hpp.html" title=" " alt="" coords="1184,603,1279,629"/>
-<area shape="rect" title=" " alt="" coords="1043,677,1131,704"/>
-<area shape="rect" title=" " alt="" coords="1115,752,1190,779"/>
-<area shape="rect" title=" " alt="" coords="661,752,735,779"/>
-<area shape="rect" title=" " alt="" coords="760,752,825,779"/>
-<area shape="rect" title=" " alt="" coords="849,752,912,779"/>
-<area shape="rect" title=" " alt="" coords="936,752,996,779"/>
-<area shape="rect" href="_utils_8ipp.html" title=" " alt="" coords="1020,752,1091,779"/>
-<area shape="rect" href="_flat_vector_8hpp.html" title=" " alt="" coords="232,528,404,555"/>
-<area shape="rect" href="_vector_details_8hpp.html" title=" " alt="" coords="255,603,381,629"/>
-<area shape="rect" title=" " alt="" coords="222,677,291,704"/>
-<area shape="rect" title=" " alt="" coords="42,453,103,480"/>
-<area shape="rect" title=" " alt="" coords="314,379,365,405"/>
-<area shape="rect" title=" " alt="" coords="231,379,290,405"/>
-<area shape="rect" href="_macro_utils_8hpp.html" title=" " alt="" coords="1879,155,2055,181"/>
+<area shape="rect" title=" " alt="" coords="2303,5,2485,32"/>
+<area shape="rect" href="_registerer_8hpp.html" title=" " alt="" coords="1688,80,1863,107"/>
+<area shape="rect" href="_make_8hpp.html" title=" " alt="" coords="2355,80,2433,107"/>
+<area shape="rect" href="_register_8hpp.html" title=" " alt="" coords="2465,80,2561,107"/>
+<area shape="rect" href="_trivial_dispatcher_8hpp.html" title=" " alt="" coords="97,304,307,331"/>
+<area shape="rect" href="_meta_8hpp.html" title=" " alt="" coords="1229,155,1305,181"/>
+<area shape="rect" href="_template_decomposer_8hpp.html" title=" " alt="" coords="2155,528,2329,555"/>
+<area shape="rect" href="_trivial_functor_8hpp.html" title=" " alt="" coords="5,379,132,405"/>
+<area shape="rect" href="_dispatcher_details_8hpp.html" title=" " alt="" coords="156,379,307,405"/>
+<area shape="rect" title=" " alt="" coords="43,453,94,480"/>
+<area shape="rect" href="_utils_8hpp.html" title=" " alt="" coords="611,677,686,704"/>
+<area shape="rect" title=" " alt="" coords="967,752,1050,779"/>
+<area shape="rect" title=" " alt="" coords="1254,752,1307,779"/>
+<area shape="rect" href="_vector_8hpp.html" title=" " alt="" coords="513,453,597,480"/>
+<area shape="rect" href="_meta_2_base_8hpp.html" title=" " alt="" coords="1423,603,1501,629"/>
+<area shape="rect" href="_type_8hpp.html" title=" " alt="" coords="838,528,913,555"/>
+<area shape="rect" href="_constructor_8hpp.html" title=" " alt="" coords="2185,304,2299,331"/>
+<area shape="rect" href="_converter_8hpp.html" title=" " alt="" coords="382,304,486,331"/>
+<area shape="rect" href="_var_8hpp.html" title=" " alt="" coords="371,453,438,480"/>
+<area shape="rect" href="_function_8hpp.html" title=" " alt="" coords="719,304,816,331"/>
+<area shape="rect" href="_slot_table_8hpp.html" title=" " alt="" coords="473,379,574,405"/>
+<area shape="rect" href="_signal_8hpp.html" title=" " alt="" coords="561,304,643,331"/>
+<area shape="rect" href="_data_8hpp.html" title=" " alt="" coords="639,229,714,256"/>
+<area shape="rect" href="_factory_8hpp.html" title=" " alt="" coords="799,379,890,405"/>
+<area shape="rect" href="_resolver_8hpp.html" title=" " alt="" coords="914,379,1013,405"/>
+<area shape="rect" href="_base_8ipp.html" title=" " alt="" coords="891,229,964,256"/>
+<area shape="rect" href="_type_8ipp.html" title=" " alt="" coords="988,229,1059,256"/>
+<area shape="rect" href="_constructor_8ipp.html" title=" " alt="" coords="1083,229,1193,256"/>
+<area shape="rect" href="_converter_8ipp.html" title=" " alt="" coords="1217,229,1317,256"/>
+<area shape="rect" href="_function_8ipp.html" title=" " alt="" coords="1342,229,1435,256"/>
+<area shape="rect" href="_slot_table_8ipp.html" title=" " alt="" coords="1460,229,1557,256"/>
+<area shape="rect" href="_signal_8ipp.html" title=" " alt="" coords="1581,229,1660,256"/>
+<area shape="rect" href="_data_8ipp.html" title=" " alt="" coords="1684,229,1755,256"/>
+<area shape="rect" href="_factory_8ipp.html" title=" " alt="" coords="1779,229,1865,256"/>
+<area shape="rect" href="_resolver_8ipp.html" title=" " alt="" coords="1889,229,1984,256"/>
+<area shape="rect" href="_var_8ipp.html" title=" " alt="" coords="2008,229,2071,256"/>
+<area shape="rect" title=" " alt="" coords="1500,677,1661,704"/>
+<area shape="rect" title=" " alt="" coords="1685,677,1764,704"/>
+<area shape="rect" title=" " alt="" coords="1977,677,2027,704"/>
+<area shape="rect" title=" " alt="" coords="2200,677,2279,704"/>
+<area shape="rect" title=" " alt="" coords="1789,677,1855,704"/>
+<area shape="rect" href="_hash_8hpp.html" title=" " alt="" coords="1001,677,1145,704"/>
+<area shape="rect" href="_assert_8hpp.html" title=" " alt="" coords="1169,677,1254,704"/>
+<area shape="rect" href="_forward_8hpp.html" title=" " alt="" coords="1279,677,1373,704"/>
+<area shape="rect" href="_flat_vector_8hpp.html" title=" " alt="" coords="804,677,976,704"/>
+<area shape="rect" href="_flat_string_8hpp.html" title=" " alt="" coords="683,603,852,629"/>
+<area shape="rect" title=" " alt="" coords="710,677,779,704"/>
+<area shape="rect" href="_functor_8hpp.html" title=" " alt="" coords="419,528,577,555"/>
+<area shape="rect" href="_macro_utils_8hpp.html" title=" " alt="" coords="2425,155,2601,181"/>
+<area shape="rect" title=" " alt="" coords="2625,155,2697,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -143,11 +141,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_reflection_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_object_2_reflection_8hppdep" alt=""/></div>
 <map name="_kube_2_object_2_reflection_8hppdep" id="a_kube_2_object_2_reflection_8hppdep">
-<area shape="rect" title=" " alt="" coords="175,5,357,32"/>
-<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="185,80,347,107"/>
-<area shape="rect" href="_object_8cpp.html" title=" " alt="" coords="5,155,167,181"/>
-<area shape="rect" href="_item_8hpp.html" title=" " alt="" coords="191,155,341,181"/>
-<area shape="rect" href="_reflection_8cpp.html" title=" " alt="" coords="365,155,548,181"/>
+<area shape="rect" title=" " alt="" coords="103,5,285,32"/>
+<area shape="rect" href="_reflection_8cpp.html" title=" " alt="" coords="5,80,188,107"/>
+<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="212,80,373,107"/>
 </map>
 </div>
 </div>
@@ -160,36 +156,55 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8858fa8b15a469e5c1350c13f637af58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a8858fa8b15a469e5c1350c13f637af58">K_OBJECT</a>(ClassType, ...)</td></tr>
-<tr class="memdesc:a8858fa8b15a469e5c1350c13f637af58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an object derivd type to the reflection system.  <a href="_reflection_8hpp.html#a8858fa8b15a469e5c1350c13f637af58">More...</a><br /></td></tr>
-<tr class="separator:a8858fa8b15a469e5c1350c13f637af58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae618b70bbe9f83cc8ce3d77078c44907"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ae618b70bbe9f83cc8ce3d77078c44907">K_CONCRETE</a>(ClassType, ...)</td></tr>
+<tr class="memdesc:ae618b70bbe9f83cc8ce3d77078c44907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a concrete type (no virtual functions) to the reflection system.  <a href="_reflection_8hpp.html#ae618b70bbe9f83cc8ce3d77078c44907">More...</a><br /></td></tr>
+<tr class="separator:ae618b70bbe9f83cc8ce3d77078c44907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa70c1f5bb75e4b05b9b6c8820043a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a7aa70c1f5bb75e4b05b9b6c8820043a5">K_ABSTRACT</a>(ClassType, ...)</td></tr>
+<tr class="memdesc:a7aa70c1f5bb75e4b05b9b6c8820043a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a virtual base type (no parent class) to the reflection system.  <a href="_reflection_8hpp.html#a7aa70c1f5bb75e4b05b9b6c8820043a5">More...</a><br /></td></tr>
+<tr class="separator:a7aa70c1f5bb75e4b05b9b6c8820043a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15841b59d5f46522c5a4f90740b89e1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a15841b59d5f46522c5a4f90740b89e1e">K_DERIVED</a>(ClassType,  BaseType, ...)</td></tr>
+<tr class="memdesc:a15841b59d5f46522c5a4f90740b89e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a virtual derived type to the reflection system.  <a href="_reflection_8hpp.html#a15841b59d5f46522c5a4f90740b89e1e">More...</a><br /></td></tr>
+<tr class="separator:a15841b59d5f46522c5a4f90740b89e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abff105fe0202054303b362b4a9d0e6b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#abff105fe0202054303b362b4a9d0e6b1">K_BASE</a>(BaseType)&#160;&#160;&#160;BASE(BaseType)</td></tr>
 <tr class="memdesc:abff105fe0202054303b362b4a9d0e6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this macro to register a base to a meta type.  <a href="_reflection_8hpp.html#abff105fe0202054303b362b4a9d0e6b1">More...</a><br /></td></tr>
 <tr class="separator:abff105fe0202054303b362b4a9d0e6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29cae1c0660e0708efea16982dfb0d1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a29cae1c0660e0708efea16982dfb0d1b">K_CONSTRUCTOR</a>(...)</td></tr>
+<tr class="memitem:a29cae1c0660e0708efea16982dfb0d1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a29cae1c0660e0708efea16982dfb0d1b">K_CONSTRUCTOR</a>(...)&#160;&#160;&#160;CONSTRUCTOR(__VA_ARGS__)</td></tr>
 <tr class="memdesc:a29cae1c0660e0708efea16982dfb0d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this macro to register a custom constructor to a meta type.  <a href="_reflection_8hpp.html#a29cae1c0660e0708efea16982dfb0d1b">More...</a><br /></td></tr>
 <tr class="separator:a29cae1c0660e0708efea16982dfb0d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b62b2c838fba23f5f0cb629de867898"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a8b62b2c838fba23f5f0cb629de867898">K_PROPERTY_COPY</a>(PropertyType,  name, ...)&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#aa86caac3884dc6f00a163017ca022733">PROPERTY_COPY</a>(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:a8b62b2c838fba23f5f0cb629de867898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use these macros to generate a new property and register it to a meta type The property can have several tags used to generate an optimal getter and setter.  <a href="_reflection_8hpp.html#a8b62b2c838fba23f5f0cb629de867898">More...</a><br /></td></tr>
-<tr class="separator:a8b62b2c838fba23f5f0cb629de867898"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e19d88d6b1a3d8ef4ad5edc4ddca66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a64e19d88d6b1a3d8ef4ad5edc4ddca66">K_PROPERTY_COPY_READONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_COPY_READONLY(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:a64e19d88d6b1a3d8ef4ad5edc4ddca66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31110e90788fb18924d379bb3f8a1c1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a31110e90788fb18924d379bb3f8a1c1d">K_PROPERTY_COPY_REF</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_COPY_REF(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:a31110e90788fb18924d379bb3f8a1c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e269c72ef2563822e8aaf2f83555c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ad9e269c72ef2563822e8aaf2f83555c6">K_PROPERTY_MOVE</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_MOVE(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:ad9e269c72ef2563822e8aaf2f83555c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e29af08a66cbd533cf5a2f0ac2fd380"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a7e29af08a66cbd533cf5a2f0ac2fd380">K_PROPERTY_MOVE_READONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_MOVE_READONLY(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:a7e29af08a66cbd533cf5a2f0ac2fd380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac26b52e07eb1b7b2a1d014e1f28f59e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ac26b52e07eb1b7b2a1d014e1f28f59e6">K_PROPERTY_MOVE_REF</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_MOVE_REF(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:ac26b52e07eb1b7b2a1d014e1f28f59e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab063b4c6249817d65dd68566092a5163"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ab063b4c6249817d65dd68566092a5163">K_PROPERTY_CUSTOM</a>(PropertyType,  name,  getter,  setter)&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#a3f14700a52a5e7c2e19438780a3a6727">PROPERTY_CUSTOM</a>(PropertyType, name, getter, setter)</td></tr>
-<tr class="memdesc:ab063b4c6249817d65dd68566092a5163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this macro to register a meta property using custom getter and setter This macro will generate and register a SIGNAL called 'name##Changed', the user is in charge of emiting it in setter.  <a href="_reflection_8hpp.html#ab063b4c6249817d65dd68566092a5163">More...</a><br /></td></tr>
-<tr class="separator:ab063b4c6249817d65dd68566092a5163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46c09cb35a0f6c54462889bbf614fb12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a46c09cb35a0f6c54462889bbf614fb12">K_PROPERTY_CUSTOM_READONLY</a>(PropertyType,  name,  getter)&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#a3f14700a52a5e7c2e19438780a3a6727">PROPERTY_CUSTOM</a>(PropertyType, name, getter, nullptr)</td></tr>
-<tr class="separator:a46c09cb35a0f6c54462889bbf614fb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9f8e01712b0411c5215c8f68e2bdd78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ab9f8e01712b0411c5215c8f68e2bdd78">K_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType,  name,  getter,  setter)&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#a3f14700a52a5e7c2e19438780a3a6727">PROPERTY_CUSTOM</a>(PropertyType, name, getter, setter)</td></tr>
-<tr class="memdesc:ab9f8e01712b0411c5215c8f68e2bdd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this macro to register a meta property using custom getter and setter This macro will NOT generate NOR register a SIGNAL, the user is in charge of doing it manually.  <a href="_reflection_8hpp.html#ab9f8e01712b0411c5215c8f68e2bdd78">More...</a><br /></td></tr>
-<tr class="separator:ab9f8e01712b0411c5215c8f68e2bdd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d91f8069f1dc3df92c11b2f8e46def4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a6d91f8069f1dc3df92c11b2f8e46def4">K_PROPERTY</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="memdesc:a6d91f8069f1dc3df92c11b2f8e46def4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use these macros to generate a new property (getter / setter / signal) and register it The property can have several tags used to generate an optimal getter and setter.  <a href="_reflection_8hpp.html#a6d91f8069f1dc3df92c11b2f8e46def4">More...</a><br /></td></tr>
+<tr class="separator:a6d91f8069f1dc3df92c11b2f8e46def4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2524c3dac1e4196bb11399f8568e59a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a2524c3dac1e4196bb11399f8568e59a8">K_PROPERTY_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:a2524c3dac1e4196bb11399f8568e59a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613f4bd54bfeb04882122f8ca2cdf362"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a613f4bd54bfeb04882122f8ca2cdf362">K_PROPERTY_VOLATILE</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_VOLATILE(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:a613f4bd54bfeb04882122f8ca2cdf362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf1af1f8948aa64072a92c3814f8048"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#acdf1af1f8948aa64072a92c3814f8048">K_PROPERTY_VOLATILE_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_VOLATILE_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:acdf1af1f8948aa64072a92c3814f8048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3b57d2c81828a60629e7aaa2ebfa2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ace3b57d2c81828a60629e7aaa2ebfa2e">K_PROPERTY_GETONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_GETONLY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:ace3b57d2c81828a60629e7aaa2ebfa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9006d803352261d86dc22cd37f04ec9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#af9006d803352261d86dc22cd37f04ec9">K_PROPERTY_GETONLY_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_GETONLY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:af9006d803352261d86dc22cd37f04ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8936e1908ae51eb2255e181175898a6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a8936e1908ae51eb2255e181175898a6d">K_PROPERTY_VOLATILE_GETONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_VOLATILE_GETONLY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:a8936e1908ae51eb2255e181175898a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195dfc1d60e2f24da169ccaf38e1b6d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a195dfc1d60e2f24da169ccaf38e1b6d9">K_PROPERTY_VOLATILE_GETONLY_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;PROPERTY_VOLATILE_GETONLY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td></tr>
+<tr class="separator:a195dfc1d60e2f24da169ccaf38e1b6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba22c4ddaac8953891145afb03bc10fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#aba22c4ddaac8953891145afb03bc10fd">K_PROPERTY_CUSTOM</a>(PropertyType,  name,  getter,  copySetter,  moveSetter)&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, moveSetter)</td></tr>
+<tr class="memdesc:aba22c4ddaac8953891145afb03bc10fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use these macros to register a custom property and generate a signal The property can have several tags used to generate an optimal getter and setter.  <a href="_reflection_8hpp.html#aba22c4ddaac8953891145afb03bc10fd">More...</a><br /></td></tr>
+<tr class="separator:aba22c4ddaac8953891145afb03bc10fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e455b521549a66bae280a11f2dbe11"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#aa5e455b521549a66bae280a11f2dbe11">K_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType,  name,  getter,  copySetter,  moveSetter)&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, moveSetter)</td></tr>
+<tr class="separator:aa5e455b521549a66bae280a11f2dbe11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade53d415106c9f7e8ae2b68780e24eae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ade53d415106c9f7e8ae2b68780e24eae">K_PROPERTY_CUSTOM_COPY</a>(PropertyType,  name,  getter,  copySetter)&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, nullptr)</td></tr>
+<tr class="separator:ade53d415106c9f7e8ae2b68780e24eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc183dc156db1f34fa50e2d5990a2ff8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#abc183dc156db1f34fa50e2d5990a2ff8">K_PROPERTY_CUSTOM_COPY_SIGLESS</a>(PropertyType,  name,  getter,  copySetter)&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, nullptr)</td></tr>
+<tr class="separator:abc183dc156db1f34fa50e2d5990a2ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d1aeb85e9f1fd53f05a410f62227ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ae7d1aeb85e9f1fd53f05a410f62227ab">K_PROPERTY_CUSTOM_MOVE</a>(PropertyType,  name,  getter,  moveSetter)&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, nullptr, moveSetter)</td></tr>
+<tr class="separator:ae7d1aeb85e9f1fd53f05a410f62227ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ffb1764ff06367fd18c1cfd8c5563b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a94ffb1764ff06367fd18c1cfd8c5563b">K_PROPERTY_CUSTOM_MOVE_SIGLESS</a>(PropertyType,  name,  getter,  moveSetter)&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, nullptr, moveSetter)</td></tr>
+<tr class="separator:a94ffb1764ff06367fd18c1cfd8c5563b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75aab8047e73c4b215e849afbf936db8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a75aab8047e73c4b215e849afbf936db8">K_PROPERTY_CUSTOM_GETONLY</a>(PropertyType,  name,  getter)&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, nullptr, nullptr)</td></tr>
+<tr class="separator:a75aab8047e73c4b215e849afbf936db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a439fa4bc86b1dd530152806e18e0b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a7a439fa4bc86b1dd530152806e18e0b2">K_PROPERTY_CUSTOM_GETONLY_SIGLESS</a>(PropertyType,  name,  getter)&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, nullptr, nullptr)</td></tr>
+<tr class="separator:a7a439fa4bc86b1dd530152806e18e0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab28a1d81b1263f6c275eab6878120670"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ab28a1d81b1263f6c275eab6878120670">K_SIGNAL</a>(name, ...)&#160;&#160;&#160;SIGNAL(name __VA_OPT__(, __VA_ARGS__))</td></tr>
 <tr class="memdesc:ab28a1d81b1263f6c275eab6878120670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this macro to generate a new signal and register it to a meta type.  <a href="_reflection_8hpp.html#ab28a1d81b1263f6c275eab6878120670">More...</a><br /></td></tr>
 <tr class="separator:ab28a1d81b1263f6c275eab6878120670"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,25 +214,66 @@ Macros</h2></td></tr>
 <tr class="memitem:a467276a949f1726f3c5b62d502b0813a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#a467276a949f1726f3c5b62d502b0813a">K_FUNCTION_OVERLOAD</a>(name,  FunctionType)&#160;&#160;&#160;FUNCTION_OVERLOAD(name, FunctionType)</td></tr>
 <tr class="memdesc:a467276a949f1726f3c5b62d502b0813a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this macro to register a new function to a meta type.  <a href="_reflection_8hpp.html#a467276a949f1726f3c5b62d502b0813a">More...</a><br /></td></tr>
 <tr class="separator:a467276a949f1726f3c5b62d502b0813a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a942f746884b429de999e3a1d8ee044e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f.html#a942f746884b429de999e3a1d8ee044e1">kF::TypeHandle</a> = Var</td></tr>
-<tr class="separator:a942f746884b429de999e3a1d8ee044e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac622150996edd734a10f229eb381a53f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_reflection_8hpp.html#ac622150996edd734a10f229eb381a53f">emit</a></td></tr>
+<tr class="memdesc:ac622150996edd734a10f229eb381a53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The emit macro, totally useless but adds clarity to differentiate functions calls and signal emition.  <a href="_reflection_8hpp.html#ac622150996edd734a10f229eb381a53f">More...</a><br /></td></tr>
+<tr class="separator:ac622150996edd734a10f229eb381a53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4958e74fb6e0fcf0c0075c34b5bcd17f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f.html#a4958e74fb6e0fcf0c0075c34b5bcd17f">kF::RegisterMetadata</a> (void)</td></tr>
-<tr class="memdesc:a4958e74fb6e0fcf0c0075c34b5bcd17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers all base types.  <a href="namespacek_f.html#a4958e74fb6e0fcf0c0075c34b5bcd17f">More...</a><br /></td></tr>
-<tr class="separator:a4958e74fb6e0fcf0c0075c34b5bcd17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a7fb97731993ca42eb836a3ea64d68870"><td class="memItemLeft" align="right" valign="top">constexpr HashedName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f.html#a7fb97731993ca42eb836a3ea64d68870">kF::MakeInstanceFunctionName</a> = <a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(&quot;__makePtr__&quot;)</td></tr>
-<tr class="memdesc:a7fb97731993ca42eb836a3ea64d68870"><td class="mdescLeft">&#160;</td><td class="mdescRight">The named used to register <a class="el" href="classk_f_1_1_item.html">Item</a> instantiation helper.  <a href="namespacek_f.html#a7fb97731993ca42eb836a3ea64d68870">More...</a><br /></td></tr>
-<tr class="separator:a7fb97731993ca42eb836a3ea64d68870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada55779a15615bb4c7ce6ab6d5b352b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f.html#ada55779a15615bb4c7ce6ab6d5b352b7">kF::RegisterMetadata</a> (void)</td></tr>
+<tr class="memdesc:ada55779a15615bb4c7ce6ab6d5b352b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers all base types.  <a href="namespacek_f.html#ada55779a15615bb4c7ce6ab6d5b352b7">More...</a><br /></td></tr>
+<tr class="separator:ada55779a15615bb4c7ce6ab6d5b352b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ac622150996edd734a10f229eb381a53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac622150996edd734a10f229eb381a53f">&#9670;&nbsp;</a></span>emit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define emit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The emit macro, totally useless but adds clarity to differentiate functions calls and signal emition. </p>
+
+</div>
+</div>
+<a id="a7aa70c1f5bb75e4b05b9b6c8820043a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa70c1f5bb75e4b05b9b6c8820043a5">&#9670;&nbsp;</a></span>K_ABSTRACT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_ABSTRACT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ClassType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">KUBE_REGISTER_LATER</a>(ClassType __VA_OPT__(,) __VA_ARGS__) \</div>
+<div class="line">    KUBE_MAKE_VIRTUAL_META_TYPE_GETTER \</div>
+<div class="line">private:</div>
+</div><!-- fragment -->
+<p>Register a virtual base type (no parent class) to the reflection system. </p>
+
+</div>
+</div>
 <a id="abff105fe0202054303b362b4a9d0e6b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abff105fe0202054303b362b4a9d0e6b1">&#9670;&nbsp;</a></span>K_BASE</h2>
 
@@ -244,6 +300,40 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae618b70bbe9f83cc8ce3d77078c44907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae618b70bbe9f83cc8ce3d77078c44907">&#9670;&nbsp;</a></span>K_CONCRETE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_CONCRETE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ClassType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">KUBE_REGISTER_LATER</a>(ClassType __VA_OPT__(,) __VA_ARGS__) \</div>
+<div class="line">    KUBE_MAKE_META_TYPE_GETTER \</div>
+<div class="line">private:</div>
+</div><!-- fragment -->
+<p>Register a concrete type (no virtual functions) to the reflection system. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Reflection interface for KUBE </p>
+
+</div>
+</div>
 <a id="a29cae1c0660e0708efea16982dfb0d1b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29cae1c0660e0708efea16982dfb0d1b">&#9670;&nbsp;</a></span>K_CONSTRUCTOR</h2>
 
@@ -255,7 +345,7 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;CONSTRUCTOR(__VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -267,6 +357,45 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a15841b59d5f46522c5a4f90740b89e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15841b59d5f46522c5a4f90740b89e1e">&#9670;&nbsp;</a></span>K_DERIVED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_DERIVED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ClassType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BaseType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">KUBE_REGISTER_LATER</a>(ClassType, <a class="code" href="_reflection_8hpp.html#abff105fe0202054303b362b4a9d0e6b1">K_BASE</a>(BaseType) __VA_OPT__(,) __VA_ARGS__) \</div>
+<div class="line">    KUBE_MAKE_VIRTUAL_META_TYPE_GETTER \</div>
+<div class="line">private:</div>
+</div><!-- fragment -->
+<p>Register a virtual derived type to the reflection system. </p>
 
 </div>
 </div>
@@ -333,55 +462,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8858fa8b15a469e5c1350c13f637af58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8858fa8b15a469e5c1350c13f637af58">&#9670;&nbsp;</a></span>K_OBJECT</h2>
+<a id="a6d91f8069f1dc3df92c11b2f8e46def4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d91f8069f1dc3df92c11b2f8e46def4">&#9670;&nbsp;</a></span>K_PROPERTY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define K_OBJECT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ClassType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">private</span>: \</div>
-<div class="line">    using _MetaType = ClassType; \</div>
-<div class="line">protected: \</div>
-<div class="line">    [[nodiscard]] <span class="keyword">virtual</span> <a class="code" href="classk_f_1_1_var.html">kF::Var</a> getTypeHandle(<span class="keywordtype">void</span>) noexcept { <span class="keywordflow">return</span> <a class="code" href="classk_f_1_1_var.html#a68d55a87fb41aa83001617bc9a6e08e6">kF::Var::Assign</a>(*<span class="keyword">this</span>); } \</div>
-<div class="line">    [[nodiscard]] <span class="keyword">virtual</span> <a class="code" href="classk_f_1_1_var.html">kF::Var</a> getTypeHandle(<span class="keywordtype">void</span>) <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> <a class="code" href="classk_f_1_1_var.html#a68d55a87fb41aa83001617bc9a6e08e6">kF::Var::Assign</a>(*<span class="keyword">this</span>); } \</div>
-<div class="line">public: \</div>
-<div class="line">    [[nodiscard]] <span class="keyword">virtual</span> <a class="code" href="classk_f_1_1_meta_1_1_type.html">kF::Meta::Type</a> getMetaType(<span class="keywordtype">void</span>) <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> <a class="code" href="classk_f_1_1_meta_1_1_factory_base.html#a57305e73c72c4a0940eb85e21650c7fb">kF::Meta::Factory&lt;_MetaType&gt;::Resolve</a>(); } \</div>
-<div class="line">    static <span class="keywordtype">void</span> <a class="code" href="namespacek_f.html#a4958e74fb6e0fcf0c0075c34b5bcd17f">RegisterMetadata</a>(<span class="keywordtype">void</span>) noexcept { <a class="code" href="_reflection2_8hpp.html#a2840fe5dd98eebd57318a7bf86267f38">KUBE_REGISTER_TYPE</a>(ClassType) <a class="code" href="_macro_utils_8hpp.html#ab3475bb88fdc8c31d2da033516c61d8e">ADD_PREFIX_EACH</a>(KUBE_REGISTER_, __VA_ARGS__) ; } \</div>
-<div class="line">    ADD_PREFIX_EACH(KUBE_MAKE_, __VA_ARGS__) \</div>
-<div class="line">private:</div>
-</div><!-- fragment -->
-<p>Register an object derivd type to the reflection system. </p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Reflection interface for KUBE </p>
-
-</div>
-</div>
-<a id="a8b62b2c838fba23f5f0cb629de867898"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b62b2c838fba23f5f0cb629de867898">&#9670;&nbsp;</a></span>K_PROPERTY_COPY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define K_PROPERTY_COPY</td>
+          <td class="memname">#define K_PROPERTY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -401,17 +489,16 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#aa86caac3884dc6f00a163017ca022733">PROPERTY_COPY</a>(PropertyType, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Use these macros to generate a new property and register it to a meta type The property can have several tags used to generate an optimal getter and setter. </p>
+<p>Use these macros to generate a new property (getter / setter / signal) and register it The property can have several tags used to generate an optimal getter and setter. </p>
 <ul>
-<li>COPY: the property will have a copy setter</li>
-<li>MOVE: the property will have a move setter</li>
-<li>REF: the property will have a volatile getter that will not trigger the property signal on change</li>
-<li>READONLY: the property will have a protected setter not registered to the meta type</li>
+<li>VOLATILE: the property has a protected setter not registered to the meta type</li>
+<li>SIGLESS: Will prevent generation of a signal</li>
+<li>GETONLY: Will generate a private setter and not register it</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -424,76 +511,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a64e19d88d6b1a3d8ef4ad5edc4ddca66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64e19d88d6b1a3d8ef4ad5edc4ddca66">&#9670;&nbsp;</a></span>K_PROPERTY_COPY_READONLY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define K_PROPERTY_COPY_READONLY</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">PropertyType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;PROPERTY_COPY_READONLY(PropertyType, name, __VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a31110e90788fb18924d379bb3f8a1c1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31110e90788fb18924d379bb3f8a1c1d">&#9670;&nbsp;</a></span>K_PROPERTY_COPY_REF</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define K_PROPERTY_COPY_REF</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">PropertyType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;PROPERTY_COPY_REF(PropertyType, name, __VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab063b4c6249817d65dd68566092a5163"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab063b4c6249817d65dd68566092a5163">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM</h2>
+<a id="aba22c4ddaac8953891145afb03bc10fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba22c4ddaac8953891145afb03bc10fd">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,37 +539,130 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">setter&#160;</td>
+          <td class="paramname">copySetter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#a3f14700a52a5e7c2e19438780a3a6727">PROPERTY_CUSTOM</a>(PropertyType, name, getter, setter)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, moveSetter)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Use this macro to register a meta property using custom getter and setter This macro will generate and register a SIGNAL called 'name##Changed', the user is in charge of emiting it in setter. </p>
+<p>Use these macros to register a custom property and generate a signal The property can have several tags used to generate an optimal getter and setter. </p>
+<ul>
+<li>COPY: Will discard copy setter</li>
+<li>MOVE: Will discard move setter</li>
+<li>SIGLESS: Will prevent generation of a signal</li>
+<li>GETONLY: Will not register setters</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">PropertyType</td><td>is the property type </td></tr>
-    <tr><td class="paramname">name</td><td>is the property name </td></tr>
-    <tr><td class="paramname">getter</td><td>is the property getter pointer </td></tr>
-    <tr><td class="paramname">setter</td><td>is the property setter pointer </td></tr>
+    <tr><td class="paramname">name</td><td>is the name of the property </td></tr>
+    <tr><td class="paramname">getter</td><td>is the pointer to the getter function </td></tr>
+    <tr><td class="paramname">copySetter</td><td>is the pointer to the copy setter function (nullptr for none) </td></tr>
+    <tr><td class="paramname">moveSetter</td><td>is the pointer to the move setter function (nullptr for none) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a46c09cb35a0f6c54462889bbf614fb12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46c09cb35a0f6c54462889bbf614fb12">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_READONLY</h2>
+<a id="ade53d415106c9f7e8ae2b68780e24eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade53d415106c9f7e8ae2b68780e24eae">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_COPY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define K_PROPERTY_CUSTOM_READONLY</td>
+          <td class="memname">#define K_PROPERTY_CUSTOM_COPY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">copySetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, nullptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc183dc156db1f34fa50e2d5990a2ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc183dc156db1f34fa50e2d5990a2ff8">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_COPY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_CUSTOM_COPY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">copySetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, nullptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75aab8047e73c4b215e849afbf936db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75aab8047e73c4b215e849afbf936db8">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_GETONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_CUSTOM_GETONLY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -570,15 +682,129 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#a3f14700a52a5e7c2e19438780a3a6727">PROPERTY_CUSTOM</a>(PropertyType, name, getter, nullptr)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, nullptr, nullptr)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ab9f8e01712b0411c5215c8f68e2bdd78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9f8e01712b0411c5215c8f68e2bdd78">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_SIGLESS</h2>
+<a id="a7a439fa4bc86b1dd530152806e18e0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a439fa4bc86b1dd530152806e18e0b2">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_GETONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_CUSTOM_GETONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, nullptr, nullptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7d1aeb85e9f1fd53f05a410f62227ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d1aeb85e9f1fd53f05a410f62227ab">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_MOVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_CUSTOM_MOVE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM(PropertyType, name, getter, nullptr, moveSetter)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94ffb1764ff06367fd18c1cfd8c5563b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ffb1764ff06367fd18c1cfd8c5563b">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_MOVE_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_CUSTOM_MOVE_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, nullptr, moveSetter)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5e455b521549a66bae280a11f2dbe11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e455b521549a66bae280a11f2dbe11">&#9670;&nbsp;</a></span>K_PROPERTY_CUSTOM_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,37 +831,32 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">setter&#160;</td>
+          <td class="paramname">copySetter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_item_8hpp.html#a3f14700a52a5e7c2e19438780a3a6727">PROPERTY_CUSTOM</a>(PropertyType, name, getter, setter)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, moveSetter)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Use this macro to register a meta property using custom getter and setter This macro will NOT generate NOR register a SIGNAL, the user is in charge of doing it manually. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">PropertyType</td><td>is the property type </td></tr>
-    <tr><td class="paramname">name</td><td>is the property name </td></tr>
-    <tr><td class="paramname">getter</td><td>is the property getter pointer </td></tr>
-    <tr><td class="paramname">setter</td><td>is the property setter pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="ad9e269c72ef2563822e8aaf2f83555c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9e269c72ef2563822e8aaf2f83555c6">&#9670;&nbsp;</a></span>K_PROPERTY_MOVE</h2>
+<a id="ace3b57d2c81828a60629e7aaa2ebfa2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3b57d2c81828a60629e7aaa2ebfa2e">&#9670;&nbsp;</a></span>K_PROPERTY_GETONLY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define K_PROPERTY_MOVE</td>
+          <td class="memname">#define K_PROPERTY_GETONLY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -655,21 +876,21 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;PROPERTY_MOVE(PropertyType, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_GETONLY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a7e29af08a66cbd533cf5a2f0ac2fd380"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e29af08a66cbd533cf5a2f0ac2fd380">&#9670;&nbsp;</a></span>K_PROPERTY_MOVE_READONLY</h2>
+<a id="af9006d803352261d86dc22cd37f04ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9006d803352261d86dc22cd37f04ec9">&#9670;&nbsp;</a></span>K_PROPERTY_GETONLY_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define K_PROPERTY_MOVE_READONLY</td>
+          <td class="memname">#define K_PROPERTY_GETONLY_SIGLESS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -689,21 +910,21 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;PROPERTY_MOVE_READONLY(PropertyType, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_GETONLY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac26b52e07eb1b7b2a1d014e1f28f59e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac26b52e07eb1b7b2a1d014e1f28f59e6">&#9670;&nbsp;</a></span>K_PROPERTY_MOVE_REF</h2>
+<a id="a2524c3dac1e4196bb11399f8568e59a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2524c3dac1e4196bb11399f8568e59a8">&#9670;&nbsp;</a></span>K_PROPERTY_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define K_PROPERTY_MOVE_REF</td>
+          <td class="memname">#define K_PROPERTY_SIGLESS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -723,7 +944,143 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;PROPERTY_MOVE_REF(PropertyType, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a613f4bd54bfeb04882122f8ca2cdf362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613f4bd54bfeb04882122f8ca2cdf362">&#9670;&nbsp;</a></span>K_PROPERTY_VOLATILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_VOLATILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_VOLATILE(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8936e1908ae51eb2255e181175898a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8936e1908ae51eb2255e181175898a6d">&#9670;&nbsp;</a></span>K_PROPERTY_VOLATILE_GETONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_VOLATILE_GETONLY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_VOLATILE_GETONLY(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a195dfc1d60e2f24da169ccaf38e1b6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195dfc1d60e2f24da169ccaf38e1b6d9">&#9670;&nbsp;</a></span>K_PROPERTY_VOLATILE_GETONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_VOLATILE_GETONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_VOLATILE_GETONLY_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdf1af1f8948aa64072a92c3814f8048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf1af1f8948aa64072a92c3814f8048">&#9670;&nbsp;</a></span>K_PROPERTY_VOLATILE_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define K_PROPERTY_VOLATILE_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;PROPERTY_VOLATILE_SIGLESS(PropertyType, name __VA_OPT__(,) __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -768,13 +1125,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="a_macro_utils_8hpp_html_ab3475bb88fdc8c31d2da033516c61d8e"><div class="ttname"><a href="_macro_utils_8hpp.html#ab3475bb88fdc8c31d2da033516c61d8e">ADD_PREFIX_EACH</a></div><div class="ttdeci">#define ADD_PREFIX_EACH(prefix,...)</div><div class="ttdef"><b>Definition:</b> MacroUtils.hpp:106</div></div>
-<div class="ttc" id="a_reflection2_8hpp_html_a2840fe5dd98eebd57318a7bf86267f38"><div class="ttname"><a href="_reflection2_8hpp.html#a2840fe5dd98eebd57318a7bf86267f38">KUBE_REGISTER_TYPE</a></div><div class="ttdeci">#define KUBE_REGISTER_TYPE(ClassType,...)</div><div class="ttdoc">Register a new type (already used by 'KUBE_REGISTER' and 'KUBE_REGISTER_INSTANTIABLE')</div><div class="ttdef"><b>Definition:</b> Reflection2.hpp:33</div></div>
-<div class="ttc" id="aclassk_f_1_1_meta_1_1_type_html"><div class="ttname"><a href="classk_f_1_1_meta_1_1_type.html">kF::Meta::Type</a></div><div class="ttdoc">Type is used to store meta-data about a type.</div><div class="ttdef"><b>Definition:</b> Type.hpp:16</div></div>
-<div class="ttc" id="anamespacek_f_html_a4958e74fb6e0fcf0c0075c34b5bcd17f"><div class="ttname"><a href="namespacek_f.html#a4958e74fb6e0fcf0c0075c34b5bcd17f">kF::RegisterMetadata</a></div><div class="ttdeci">void RegisterMetadata(void)</div><div class="ttdoc">Registers all base types.</div><div class="ttdef"><b>Definition:</b> Reflection.cpp:11</div></div>
-<div class="ttc" id="aclassk_f_1_1_meta_1_1_factory_base_html_a57305e73c72c4a0940eb85e21650c7fb"><div class="ttname"><a href="classk_f_1_1_meta_1_1_factory_base.html#a57305e73c72c4a0940eb85e21650c7fb">kF::Meta::FactoryBase&lt; std::remove_cvref_t&lt; Type &gt; &gt;::Resolve</a></div><div class="ttdeci">static Meta::Type Resolve(void) noexcept</div><div class="ttdoc">Resolve the templated type's meta descriptor.</div><div class="ttdef"><b>Definition:</b> Factory.hpp:57</div></div>
-<div class="ttc" id="aclassk_f_1_1_var_html"><div class="ttname"><a href="classk_f_1_1_var.html">kF::Var</a></div><div class="ttdoc">Var is used as a wrapper for any type.</div><div class="ttdef"><b>Definition:</b> Var.hpp:20</div></div>
-<div class="ttc" id="aclassk_f_1_1_var_html_a68d55a87fb41aa83001617bc9a6e08e6"><div class="ttname"><a href="classk_f_1_1_var.html#a68d55a87fb41aa83001617bc9a6e08e6">kF::Var::Assign</a></div><div class="ttdeci">static Var Assign(Type &amp;&amp;type)</div><div class="ttdoc">Assigns a type value to a Var.</div><div class="ttdef"><b>Definition:</b> Var.hpp:51</div></div>
+<div class="ttc" id="a_register_8hpp_html_a2cb079b1b575cc68cc64fd240e239b07"><div class="ttname"><a href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">KUBE_REGISTER_LATER</a></div><div class="ttdeci">#define KUBE_REGISTER_LATER(ClassType,...)</div><div class="ttdoc">Add static registerer for automatic registeration.</div><div class="ttdef"><b>Definition:</b> Register.hpp:15</div></div>
+<div class="ttc" id="a_reflection_8hpp_html_abff105fe0202054303b362b4a9d0e6b1"><div class="ttname"><a href="_reflection_8hpp.html#abff105fe0202054303b362b4a9d0e6b1">K_BASE</a></div><div class="ttdeci">#define K_BASE(BaseType)</div><div class="ttdoc">Use this macro to register a base to a meta type.</div><div class="ttdef"><b>Definition:</b> Reflection.hpp:34</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

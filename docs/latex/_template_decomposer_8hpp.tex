@@ -1,0 +1,88 @@
+\hypertarget{_template_decomposer_8hpp}{}\doxysection{Kube/\+Meta/\+Template\+Decomposer.hpp File Reference}
+\label{_template_decomposer_8hpp}\index{Kube/Meta/TemplateDecomposer.hpp@{Kube/Meta/TemplateDecomposer.hpp}}
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for Template\+Decomposer.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{_template_decomposer_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_template_decomposer_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer}{k\+F\+::\+Meta\+::\+Internal\+::\+Template\+Decomposer$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em Deduce a non template type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_types_8_8_8_01_4_01_4}{k\+F\+::\+Meta\+::\+Internal\+::\+Template\+Decomposer$<$ Class$<$ Types... $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Deduce a variadic list of template types. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_vars_8_8_8_01_4_01_4}{k\+F\+::\+Meta\+::\+Internal\+::\+Template\+Decomposer$<$ Class$<$ Vars... $>$ $>$}}
+\begin{DoxyCompactList}\small\item\em Deduce a variadic list of template arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_meta}{k\+F\+::\+Meta}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal}{k\+F\+::\+Meta\+::\+Internal}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal}{Internal}} type resolvers and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a84e39972cd3e87f3e06875686a8c0928}{k\+F\+::\+Meta\+::\+Internal\+::\+Types\+Tuple}} = std\+::tuple$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename, auto ... $>$ typename Class, typename Type , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4fba613c6b3308a091a7f7a6eb36a2ec}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Vars) !=0ul) struct Template\+Decomposer$<$ Class$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}
+\begin{DoxyCompactList}\small\item\em Deduce a single template type followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a13da3837a18f96ee7ad5a18ce7d3af21}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Vars) !=0ul) struct Template\+Decomposer$<$ Class$<$ Type1
+\begin{DoxyCompactList}\small\item\em Deduce two template types followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , typename Type3 , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a642c581964a8d7968d5929c453bc0d7b}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Vars) !=0ul) struct Template\+Decomposer$<$ Class$<$ Type1
+\begin{DoxyCompactList}\small\item\em Deduce three template types followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename, typename, typename, auto ... $>$ typename Class, typename Type1 , typename Type2 , typename Type3 , typename Type4 , auto ... Vars$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a6aefa21903e3645fe3aeea47d935d0ad}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Vars) !=0ul) struct Template\+Decomposer$<$ Class$<$ Type1
+\begin{DoxyCompactList}\small\item\em Deduce four template types followed by a variadic list of template arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, typename ... $>$ typename Class, auto Var, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8233076e77a502cbdfd3a19452725a98}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Types) !=0ul) struct Template\+Decomposer$<$ Class$<$ Var
+\begin{DoxyCompactList}\small\item\em Deduce a single template variable followed by a variadic list of template types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a7d3f602906cf99ecf3aefc3a4ac309b6}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Types) !=0ul) struct Template\+Decomposer$<$ Class$<$ Var1
+\begin{DoxyCompactList}\small\item\em Deduce two template variables followed by a variadic list of template types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, auto Var3, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aeac3bf3f074cde893bc807163c77dac7}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Types) !=0ul) struct Template\+Decomposer$<$ Class$<$ Var1
+\begin{DoxyCompactList}\small\item\em Deduce three template variables followed by a variadic list of template types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ auto, auto, auto, auto, typename ... $>$ typename Class, auto Var1, auto Var2, auto Var3, auto Var4, typename ... Types$>$ }\\\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ae0b738d207cccc4b1f9c0a48b93ddbe6}{k\+F\+::\+Meta\+::\+Internal\+::requires}} (sizeof...(Types) !=0ul) struct Template\+Decomposer$<$ Class$<$ Var1
+\begin{DoxyCompactList}\small\item\em Deduce four template variables followed by a variadic list of template types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a8edded6a63822988d17981f69e645a6a}{k\+F\+::\+Meta\+::\+Internal\+::\+Vars}}
+\item 
+static constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a1cbe2d4235968799ab2077525c517258}{k\+F\+::\+Meta\+::\+Internal\+::\+Has\+Types}} = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+static constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aebbab8499a62cb712b1c77fa18188346}{k\+F\+::\+Meta\+::\+Internal\+::\+Has\+Variables}} = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+static constexpr bool \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a72a66f7f8f875d30f0303cee3ae84e8a}{k\+F\+::\+Meta\+::\+Internal\+::\+Types\+Before\+Arguments}} = \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}
+\item 
+static constexpr auto \mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ab80f747e11aabd62c27fd11e72dea1e3}{k\+F\+::\+Meta\+::\+Internal\+::\+Vars\+Tuple}} = std\+::make\+\_\+tuple$<$decltype(Vars)...$>$(Vars...)
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a4cfe38e37ac18a11f499a25a00bb6c44}{k\+F\+::\+Meta\+::\+Internal\+::\+Type2}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aa17d2a6f90de6e0d60ac5a99f1c9c94b}{k\+F\+::\+Meta\+::\+Internal\+::\+Type3}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a2412c2fc811e788a3c49d3d3c46ca08b}{k\+F\+::\+Meta\+::\+Internal\+::\+Type4}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_ad1a3b98a80455971a5e8b3e42695d54f}{k\+F\+::\+Meta\+::\+Internal\+::\+Types}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_af580f64b716166f94b3c1c75c6c52be5}{k\+F\+::\+Meta\+::\+Internal\+::\+Var2}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_aea44f7642e60aa27ad32925eb4bb3c04}{k\+F\+::\+Meta\+::\+Internal\+::\+Var3}}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_meta_1_1_internal_a99926b01bac2e156d51ffc2624b1664e}{k\+F\+::\+Meta\+::\+Internal\+::\+Var4}}
+\end{DoxyCompactItemize}

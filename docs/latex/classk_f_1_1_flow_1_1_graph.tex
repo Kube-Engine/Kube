@@ -14,9 +14,9 @@ struct \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data}{Data}}
 \item 
 using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a25377120dd4dcf00d49c19f4918c9d89}{Data\+Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data}{Data}} $>$
 \begin{DoxyCompactList}\small\item\em Shared pointer to data structure. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}{Iterator}} = decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}{Data\+::children}})\+::iterator
+using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}} = decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}{Data\+::children}})\+::\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}}
 \begin{DoxyCompactList}\small\item\em Children iterator. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}{Const\+Iterator}} = decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}{Data\+::children}})\+::const\+\_\+iterator
+using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}} = decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}{Data\+::children}})\+::\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -27,7 +27,7 @@ using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a799cf6e39b6d3323402f683d485d5bf4}{Graph}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&\&other) noexcept
 \begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a419b2d7d2c106819fe8727a547f6f9a7}{$\sim$\+Graph}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data}{Data}} $>$)
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0a4871b8079cee4d18ac336e6a59b7d6}{$\sim$\+Graph}} (void)
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \& \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_aa9a9caa161dc966b56b5f37dda93a261}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
@@ -39,24 +39,16 @@ void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a9d9a82d120bd2f18bfdda6ce1b1b6
 \begin{DoxyCompactList}\small\item\em Swap two graph. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a25df35119161d6c43e76c85a7e884753}{acquire}} (const \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph}{Graph}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Acquire a reference to another graph. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_af9a044859477bba823b43df08de30523}{release}} (void) noexcept(std\+::is\+\_\+nothrow\+\_\+destructible\+\_\+v$<$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data}{Data}} $>$)
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a7b20c8b6536656d26654234c13196284}{release}} (void)
 \begin{DoxyCompactList}\small\item\em Release the instance. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ae4e99a6cef00386e96a1199cba19e2e1}{construct}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Construct an instance if not already done. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a392ddba74c53c5f946464d6957038b4c}{repeat}} (void) const noexcept
-\begin{DoxyCompactList}\small\item\em Get / Set the repeat property. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a16669e09ec91768c3ee4823f8f7761f4}{set\+Repeat}} (const bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a392ddba74c53c5f946464d6957038b4c}{repeat}}) noexcept
-\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ac51f397d6e1233aa7f03de5747a216cc}{joined}} (void) const noexcept
-\begin{DoxyCompactList}\small\item\em Get the joined property. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a5e3ff3fc0bf6d5b21b38125f6b88c16a}{child\+Joined}} (void) noexcept
-\begin{DoxyCompactList}\small\item\em Callback that increment join count (to know when graph is done) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_af3a61f3424b28cfea7d7085823e76b25}{children\+Joined}} (const std\+::size\+\_\+t children\+Joined) noexcept
-\item 
 bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8961e1c1f4a310ba6f8fd07967cbfc8f}{running}} (void) const noexcept
-\begin{DoxyCompactList}\small\item\em Get / Set the running property. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a90b105f7201b7249560c587c35293cc1}{set\+Running}} (const bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8961e1c1f4a310ba6f8fd07967cbfc8f}{running}}) noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Get the running property. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ad888007a469596c54d51579a29efd9ec}{has\+Repeat\+Callback}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the graph has a repeat callback. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Callback $>$ }\\void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_aad4ea634e7c4c06da9d4fff159988c5e}{set\+Repeat\+Callback}} (Callback \&\&callback) noexcept
+\begin{DoxyCompactList}\small\item\em Set the notify functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{Task}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ac7d9292802bb80091989ae0bd1cafa58}{emplace}} (Args \&\&...args)
 \begin{DoxyCompactList}\small\item\em Emplace a node in the graph. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a7c76100248504a3d7c2cd94883989f7c}{wait}} (void) noexcept(! \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}})
@@ -65,16 +57,26 @@ void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a83ff5beddae60acd8538825a49226
 \begin{DoxyCompactList}\small\item\em Clear every node link (node are still valid) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a4afff5d404c04456029e9de94b4fe8c5}{clear}} (void)
 \begin{DoxyCompactList}\small\item\em Clear the graph children. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a4218ade54399fba4983fd07c519a485f}{size}} (void) const noexcept
+auto \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8b08c40d50cf11b518effe0f5ce1433a}{size}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Get the number of owned nodes. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}{Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_afe257d191db19619f33adf587b825c67}{begin}} (void) noexcept
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_afe257d191db19619f33adf587b825c67}{begin}} (void) noexcept
 \begin{DoxyCompactList}\small\item\em Begin / end iterators to iterate over children nodes. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}{Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a87aa63438d27397d1b560494fdee85a4}{begin}} (void) const noexcept
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a87aa63438d27397d1b560494fdee85a4}{begin}} (void) const noexcept
 \item 
-\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a2a45b95f6a9c4cb0e4f6233e275fc067}{end}} (void) noexcept
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a2a45b95f6a9c4cb0e4f6233e275fc067}{end}} (void) noexcept
 \item 
-\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8071e665fda6d6533a9d75c506e35e37}{end}} (void) const noexcept
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8071e665fda6d6533a9d75c506e35e37}{end}} (void) const noexcept
 \item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a90b105f7201b7249560c587c35293cc1}{set\+Running}} (const bool \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8961e1c1f4a310ba6f8fd07967cbfc8f}{running}}) noexcept
+\begin{DoxyCompactList}\small\item\em Set the running property Reserved for internal use ! \end{DoxyCompactList}\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a6c90f94484b3d0297462dea2e58295a8}{joined}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the joined property Reserved for internal use ! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a5e3ff3fc0bf6d5b21b38125f6b88c16a}{child\+Joined}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Callback that increment join count (to know when graph is done) Reserved for internal use ! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a17fc148ecd3991783a10773980febeca}{children\+Joined}} (const std\+::uint32\+\_\+t children\+Joined) noexcept
+\item 
+void \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a987c3b6bcf5890af13bd85904cbcb7d2}{set\+Scheduler}} (\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} $\ast$const scheduler) noexcept
+\begin{DoxyCompactList}\small\item\em Set the scheduler property Reserved for internal use ! \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_flow_1_1_task}{k\+F\+::\+Flow\+::\+Task}} \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a95be67a12795d3deaf5b8f1c4c85e683}{emplace}} (Args \&\&...args)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
@@ -90,11 +92,11 @@ static std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource \mbox{\hyperlink{class
 
 
 \doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}\label{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}\label{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!ConstIterator@{ConstIterator}}
 \index{ConstIterator@{ConstIterator}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{ConstIterator}{ConstIterator}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}{k\+F\+::\+Flow\+::\+Graph\+::\+Const\+Iterator}} =  decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}{Data\+::children}})\+::const\+\_\+iterator}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{k\+F\+::\+Flow\+::\+Graph\+::\+Const\+Iterator}} =  decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}{Data\+::children}})\+::\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}}}
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a25377120dd4dcf00d49c19f4918c9d89}\label{classk_f_1_1_flow_1_1_graph_a25377120dd4dcf00d49c19f4918c9d89}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!DataPtr@{DataPtr}}
@@ -106,11 +108,11 @@ static std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource \mbox{\hyperlink{class
 
 Shared pointer to data structure. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}\label{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}\label{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!Iterator@{Iterator}}
 \index{Iterator@{Iterator}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{Iterator}{Iterator}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}{k\+F\+::\+Flow\+::\+Graph\+::\+Iterator}} =  decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}{Data\+::children}})\+::iterator}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{k\+F\+::\+Flow\+::\+Graph\+::\+Iterator}} =  decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}{Data\+::children}})\+::\mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}}}
 
 
 
@@ -149,11 +151,11 @@ Copy constructor.
 
 Move constructor. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a419b2d7d2c106819fe8727a547f6f9a7}\label{classk_f_1_1_flow_1_1_graph_a419b2d7d2c106819fe8727a547f6f9a7}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a0a4871b8079cee4d18ac336e6a59b7d6}\label{classk_f_1_1_flow_1_1_graph_a0a4871b8079cee4d18ac336e6a59b7d6}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!````~Graph@{$\sim$Graph}}
 \index{````~Graph@{$\sim$Graph}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{$\sim$Graph()}{~Graph()}}
-{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Graph\+::$\sim$\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily k\+F\+::\+Flow\+::\+Graph\+::$\sim$\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -176,13 +178,13 @@ Acquire a reference to another graph.
 \index{kF::Flow::Graph@{kF::Flow::Graph}!begin@{begin}}
 \index{begin@{begin}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}{Iterator}} k\+F\+::\+Flow\+::\+Graph\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}} k\+F\+::\+Flow\+::\+Graph\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_afe257d191db19619f33adf587b825c67}\label{classk_f_1_1_flow_1_1_graph_afe257d191db19619f33adf587b825c67}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!begin@{begin}}
 \index{begin@{begin}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a92a02e358de6eb574fea66ff4bafcaaf}{Iterator}} k\+F\+::\+Flow\+::\+Graph\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a0d5578813b5511d7e6d75e4dcefe9924}{Iterator}} k\+F\+::\+Flow\+::\+Graph\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -196,13 +198,13 @@ Begin / end iterators to iterate over children nodes.
 
 
 
-Callback that increment join count (to know when graph is done) 
+Callback that increment join count (to know when graph is done) Reserved for internal use ! 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_af3a61f3424b28cfea7d7085823e76b25}\label{classk_f_1_1_flow_1_1_graph_af3a61f3424b28cfea7d7085823e76b25}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a17fc148ecd3991783a10773980febeca}\label{classk_f_1_1_flow_1_1_graph_a17fc148ecd3991783a10773980febeca}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!childrenJoined@{childrenJoined}}
 \index{childrenJoined@{childrenJoined}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{childrenJoined()}{childrenJoined()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Graph\+::children\+Joined (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{children\+Joined }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void Flow\+::\+Graph\+::children\+Joined (\begin{DoxyParamCaption}\item[{const std\+::uint32\+\_\+t}]{children\+Joined }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a4afff5d404c04456029e9de94b4fe8c5}\label{classk_f_1_1_flow_1_1_graph_a4afff5d404c04456029e9de94b4fe8c5}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!clear@{clear}}
@@ -256,23 +258,33 @@ Emplace a node in the graph.
 \index{kF::Flow::Graph@{kF::Flow::Graph}!end@{end}}
 \index{end@{end}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}{Const\+Iterator}} k\+F\+::\+Flow\+::\+Graph\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}} k\+F\+::\+Flow\+::\+Graph\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a2a45b95f6a9c4cb0e4f6233e275fc067}\label{classk_f_1_1_flow_1_1_graph_a2a45b95f6a9c4cb0e4f6233e275fc067}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!end@{end}}
 \index{end@{end}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_ab02d2f376eadea39671dd6d517ea60d1}{Const\+Iterator}} k\+F\+::\+Flow\+::\+Graph\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_graph_a8f3097bebd1597d137e12c164db474ea}{Const\+Iterator}} k\+F\+::\+Flow\+::\+Graph\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_ac51f397d6e1233aa7f03de5747a216cc}\label{classk_f_1_1_flow_1_1_graph_ac51f397d6e1233aa7f03de5747a216cc}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_ad888007a469596c54d51579a29efd9ec}\label{classk_f_1_1_flow_1_1_graph_ad888007a469596c54d51579a29efd9ec}} 
+\index{kF::Flow::Graph@{kF::Flow::Graph}!hasRepeatCallback@{hasRepeatCallback}}
+\index{hasRepeatCallback@{hasRepeatCallback}!kF::Flow::Graph@{kF::Flow::Graph}}
+\doxysubsubsection{\texorpdfstring{hasRepeatCallback()}{hasRepeatCallback()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Graph\+::has\+Repeat\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the graph has a repeat callback. 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a6c90f94484b3d0297462dea2e58295a8}\label{classk_f_1_1_flow_1_1_graph_a6c90f94484b3d0297462dea2e58295a8}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!joined@{joined}}
 \index{joined@{joined}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{joined()}{joined()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Graph\+::joined (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t k\+F\+::\+Flow\+::\+Graph\+::joined (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
-Get the joined property. 
+Get the joined property Reserved for internal use ! 
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a36e161c986e53bdbb608afe4f101b6e3}\label{classk_f_1_1_flow_1_1_graph_a36e161c986e53bdbb608afe4f101b6e3}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!operator bool@{operator bool}}
@@ -304,25 +316,15 @@ Copy assignment.
 
 Move assignment. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_af9a044859477bba823b43df08de30523}\label{classk_f_1_1_flow_1_1_graph_af9a044859477bba823b43df08de30523}} 
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a7b20c8b6536656d26654234c13196284}\label{classk_f_1_1_flow_1_1_graph_a7b20c8b6536656d26654234c13196284}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!release@{release}}
 \index{release@{release}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{release()}{release()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Graph\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Graph\+::release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Release the instance. 
-
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a392ddba74c53c5f946464d6957038b4c}\label{classk_f_1_1_flow_1_1_graph_a392ddba74c53c5f946464d6957038b4c}} 
-\index{kF::Flow::Graph@{kF::Flow::Graph}!repeat@{repeat}}
-\index{repeat@{repeat}!kF::Flow::Graph@{kF::Flow::Graph}}
-\doxysubsubsection{\texorpdfstring{repeat()}{repeat()}}
-{\footnotesize\ttfamily bool k\+F\+::\+Flow\+::\+Graph\+::repeat (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
-
-
-
-Get / Set the repeat property. 
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a8961e1c1f4a310ba6f8fd07967cbfc8f}\label{classk_f_1_1_flow_1_1_graph_a8961e1c1f4a310ba6f8fd07967cbfc8f}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!running@{running}}
@@ -332,13 +334,18 @@ Get / Set the repeat property.
 
 
 
-Get / Set the running property. 
+Get the running property. 
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a16669e09ec91768c3ee4823f8f7761f4}\label{classk_f_1_1_flow_1_1_graph_a16669e09ec91768c3ee4823f8f7761f4}} 
-\index{kF::Flow::Graph@{kF::Flow::Graph}!setRepeat@{setRepeat}}
-\index{setRepeat@{setRepeat}!kF::Flow::Graph@{kF::Flow::Graph}}
-\doxysubsubsection{\texorpdfstring{setRepeat()}{setRepeat()}}
-{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Graph\+::set\+Repeat (\begin{DoxyParamCaption}\item[{const bool}]{repeat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_aad4ea634e7c4c06da9d4fff159988c5e}\label{classk_f_1_1_flow_1_1_graph_aad4ea634e7c4c06da9d4fff159988c5e}} 
+\index{kF::Flow::Graph@{kF::Flow::Graph}!setRepeatCallback@{setRepeatCallback}}
+\index{setRepeatCallback@{setRepeatCallback}!kF::Flow::Graph@{kF::Flow::Graph}}
+\doxysubsubsection{\texorpdfstring{setRepeatCallback()}{setRepeatCallback()}}
+{\footnotesize\ttfamily template$<$typename Callback $>$ \\
+void k\+F\+::\+Flow\+::\+Graph\+::set\+Repeat\+Callback (\begin{DoxyParamCaption}\item[{Callback \&\&}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the notify functor. 
 
 \mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a90b105f7201b7249560c587c35293cc1}\label{classk_f_1_1_flow_1_1_graph_a90b105f7201b7249560c587c35293cc1}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!setRunning@{setRunning}}
@@ -346,11 +353,25 @@ Get / Set the running property.
 \doxysubsubsection{\texorpdfstring{setRunning()}{setRunning()}}
 {\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Graph\+::set\+Running (\begin{DoxyParamCaption}\item[{const bool}]{running }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a4218ade54399fba4983fd07c519a485f}\label{classk_f_1_1_flow_1_1_graph_a4218ade54399fba4983fd07c519a485f}} 
+
+
+Set the running property Reserved for internal use ! 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a987c3b6bcf5890af13bd85904cbcb7d2}\label{classk_f_1_1_flow_1_1_graph_a987c3b6bcf5890af13bd85904cbcb7d2}} 
+\index{kF::Flow::Graph@{kF::Flow::Graph}!setScheduler@{setScheduler}}
+\index{setScheduler@{setScheduler}!kF::Flow::Graph@{kF::Flow::Graph}}
+\doxysubsubsection{\texorpdfstring{setScheduler()}{setScheduler()}}
+{\footnotesize\ttfamily void k\+F\+::\+Flow\+::\+Graph\+::set\+Scheduler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} $\ast$const}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the scheduler property Reserved for internal use ! 
+
+\mbox{\Hypertarget{classk_f_1_1_flow_1_1_graph_a8b08c40d50cf11b518effe0f5ce1433a}\label{classk_f_1_1_flow_1_1_graph_a8b08c40d50cf11b518effe0f5ce1433a}} 
 \index{kF::Flow::Graph@{kF::Flow::Graph}!size@{size}}
 \index{size@{size}!kF::Flow::Graph@{kF::Flow::Graph}}
 \doxysubsubsection{\texorpdfstring{size()}{size()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Flow\+::\+Graph\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily auto k\+F\+::\+Flow\+::\+Graph\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -396,4 +417,5 @@ Wait for the graph to be executed.
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Kube/\+Flow/\mbox{\hyperlink{_graph_8hpp}{Graph.\+hpp}}\item 
+Kube/\+Flow/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\item 
 Kube/\+Flow/\mbox{\hyperlink{_graph_8ipp}{Graph.\+ipp}}\end{DoxyCompactItemize}

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -86,6 +86,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_arrange_type.html">ArrangeType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used to format specific types to other.  <a href="structk_f_1_1_meta_1_1_internal_1_1_arrange_type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_internal_1_1_descriptor_instance.html">DescriptorInstance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class should be instantiated for each meta descriptor to provide a globally re-initializable instance.  <a href="classk_f_1_1_meta_1_1_internal_1_1_descriptor_instance.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_function_decomposer.html">FunctionDecomposer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_return_07_args_8_8_8_08_4.html">FunctionDecomposer&lt; Return(Args...)&gt;</a></td></tr>
@@ -100,8 +103,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_type_00_01decltype_07void_07_6_type_1_1operator_07_08_08_08_4.html">FunctionDecomposer&lt; Type, decltype(void(&amp;Type::operator()))&gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes an std::function.  <a href="structk_f_1_1_meta_1_1_internal_1_1_function_decomposer_3_01_type_00_01decltype_07void_07_6_type_1_1operator_07_08_08_08_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_function_identifier.html">FunctionIdentifier</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function used to instantiate a dummy variable for a given function.  <a href="structk_f_1_1_meta_1_1_internal_1_1_function_identifier.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_internal_1_1_function_identifier.html">FunctionIdentifier</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function used to instantiate a dummy variable for a given function.  <a href="classk_f_1_1_meta_1_1_internal_1_1_function_identifier.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce a non template type.  <a href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_types_8_8_8_01_4_01_4.html">TemplateDecomposer&lt; Class&lt; Types... &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce a variadic list of template types.  <a href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_types_8_8_8_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_vars_8_8_8_01_4_01_4.html">TemplateDecomposer&lt; Class&lt; Vars... &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce a variadic list of template arguments.  <a href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer_3_01_class_3_01_vars_8_8_8_01_4_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_type_holder.html">TypeHolder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple structure that holds a type.  <a href="structk_f_1_1_meta_1_1_internal_1_1_type_holder.html#details">More...</a><br /></td></tr>
@@ -153,6 +165,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a91e0f3cadad88fdc0ecc81fc6c9b1497"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:a91e0f3cadad88fdc0ecc81fc6c9b1497"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a91e0f3cadad88fdc0ecc81fc6c9b1497">AssignmentModuloCheck</a> = decltype(std::declval&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp; &gt;() %=std::declval&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;())</td></tr>
 <tr class="separator:a91e0f3cadad88fdc0ecc81fc6c9b1497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e39972cd3e87f3e06875686a8c0928"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a84e39972cd3e87f3e06875686a8c0928">TypesTuple</a> = std::tuple&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;</td></tr>
+<tr class="separator:a84e39972cd3e87f3e06875686a8c0928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -182,35 +196,35 @@ Functions</h2></td></tr>
 <tr class="memitem:a2802ba836e767f434245932e7574f5c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a2802ba836e767f434245932e7574f5c4">MakeDefaultConstructor</a> (void *instance) noexcept(std::is_nothrow_constructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> __VA_OPT__(,) __VA_OPT__(,) &gt;)</td></tr>
 <tr class="separator:a2802ba836e767f434245932e7574f5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a363b8f0f8c9f430ac13340fae71c91fe"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a363b8f0f8c9f430ac13340fae71c91fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a363b8f0f8c9f430ac13340fae71c91fe">MakeCopyConstructor</a> (void *instance, const void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>) noexcept(std::is_nothrow_copy_constructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
+<tr class="memitem:a363b8f0f8c9f430ac13340fae71c91fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a363b8f0f8c9f430ac13340fae71c91fe">MakeCopyConstructor</a> (void *instance, const void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept(std::is_nothrow_copy_constructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
 <tr class="separator:a363b8f0f8c9f430ac13340fae71c91fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeb481c9a295f651f261264f533ff470"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:aaeb481c9a295f651f261264f533ff470"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#aaeb481c9a295f651f261264f533ff470">MakeMoveConstructor</a> (void *instance, void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>) noexcept(std::is_nothrow_move_constructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
+<tr class="memitem:aaeb481c9a295f651f261264f533ff470"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#aaeb481c9a295f651f261264f533ff470">MakeMoveConstructor</a> (void *instance, void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept(std::is_nothrow_move_constructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
 <tr class="separator:aaeb481c9a295f651f261264f533ff470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b2fa2833e15e4f4d97ca55c7802a566"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a3b2fa2833e15e4f4d97ca55c7802a566"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a3b2fa2833e15e4f4d97ca55c7802a566">MakeCopyAssignment</a> (void *instance, const void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>) noexcept(std::is_nothrow_copy_assignable_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
+<tr class="memitem:a3b2fa2833e15e4f4d97ca55c7802a566"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a3b2fa2833e15e4f4d97ca55c7802a566">MakeCopyAssignment</a> (void *instance, const void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept(std::is_nothrow_copy_assignable_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
 <tr class="memdesc:a3b2fa2833e15e4f4d97ca55c7802a566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers used to generate opaque assignment functions.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a3b2fa2833e15e4f4d97ca55c7802a566">More...</a><br /></td></tr>
 <tr class="separator:a3b2fa2833e15e4f4d97ca55c7802a566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acad3ef0a0a0cc8c2d8aca0ae9eeec138"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:acad3ef0a0a0cc8c2d8aca0ae9eeec138"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#acad3ef0a0a0cc8c2d8aca0ae9eeec138">MakeMoveAssignment</a> (void *instance, void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>) noexcept(std::is_nothrow_move_assignable_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
+<tr class="memitem:acad3ef0a0a0cc8c2d8aca0ae9eeec138"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#acad3ef0a0a0cc8c2d8aca0ae9eeec138">MakeMoveAssignment</a> (void *instance, void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept(std::is_nothrow_move_assignable_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
 <tr class="separator:acad3ef0a0a0cc8c2d8aca0ae9eeec138"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0b44c926da1747413c211f76ebc4984"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:ad0b44c926da1747413c211f76ebc4984"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad0b44c926da1747413c211f76ebc4984">MakeDestructor</a> (void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>) noexcept(std::is_nothrow_destructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
+<tr class="memitem:ad0b44c926da1747413c211f76ebc4984"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad0b44c926da1747413c211f76ebc4984">MakeDestructor</a> (void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept(std::is_nothrow_destructible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;)</td></tr>
 <tr class="memdesc:ad0b44c926da1747413c211f76ebc4984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used to generate opaque destructor functions.  <a href="namespacek_f_1_1_meta_1_1_internal.html#ad0b44c926da1747413c211f76ebc4984">More...</a><br /></td></tr>
 <tr class="separator:ad0b44c926da1747413c211f76ebc4984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0537eda52eac7f65253d0f8bb55476b"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::enable_if_t&lt; std::is_convertible_v&lt; Type, bool &gt;&gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:ae0537eda52eac7f65253d0f8bb55476b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ae0537eda52eac7f65253d0f8bb55476b">MakeToBool</a> (const void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>) noexcept(std::is_nothrow_convertible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>, bool &gt;)</td></tr>
+<tr class="memitem:ae0537eda52eac7f65253d0f8bb55476b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ae0537eda52eac7f65253d0f8bb55476b">MakeToBool</a> (const void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>) noexcept(std::is_nothrow_convertible_v&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>, bool &gt;)</td></tr>
 <tr class="memdesc:ae0537eda52eac7f65253d0f8bb55476b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers used to generate opaque primitive functions.  <a href="namespacek_f_1_1_meta_1_1_internal.html#ae0537eda52eac7f65253d0f8bb55476b">More...</a><br /></td></tr>
 <tr class="separator:ae0537eda52eac7f65253d0f8bb55476b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499b1c6387b505eacfd088089f2965dc"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto OperatorFunc, UnaryOperator Operator&gt; </td></tr>
-<tr class="memitem:a499b1c6387b505eacfd088089f2965dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a499b1c6387b505eacfd088089f2965dc">MakeUnaryOperator</a> (const void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>)</td></tr>
+<tr class="memitem:a499b1c6387b505eacfd088089f2965dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a499b1c6387b505eacfd088089f2965dc">MakeUnaryOperator</a> (const void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>)</td></tr>
 <tr class="memdesc:a499b1c6387b505eacfd088089f2965dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helpers used to generate opaque operators functions.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a499b1c6387b505eacfd088089f2965dc">More...</a><br /></td></tr>
 <tr class="separator:a499b1c6387b505eacfd088089f2965dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5144a9e2b55534ec80648c5684e651a"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto OperatorFunc, BinaryOperator Operator&gt; </td></tr>
-<tr class="memitem:ad5144a9e2b55534ec80648c5684e651a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad5144a9e2b55534ec80648c5684e651a">MakeBinaryOperator</a> (const void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>, const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;var)</td></tr>
+<tr class="memitem:ad5144a9e2b55534ec80648c5684e651a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad5144a9e2b55534ec80648c5684e651a">MakeBinaryOperator</a> (const void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>, const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;var)</td></tr>
 <tr class="separator:ad5144a9e2b55534ec80648c5684e651a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e06818e5d5a67751c846d196907237"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto OperatorFunc, AssignmentOperator Operator&gt; </td></tr>
-<tr class="memitem:a94e06818e5d5a67751c846d196907237"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a94e06818e5d5a67751c846d196907237">MakeAssignmentOperator</a> (void *<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>, const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;var)</td></tr>
+<tr class="memitem:a94e06818e5d5a67751c846d196907237"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a94e06818e5d5a67751c846d196907237">MakeAssignmentOperator</a> (void *<a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>, const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;var)</td></tr>
 <tr class="separator:a94e06818e5d5a67751c846d196907237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab95549118c4a235c6164e75525815718"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:ab95549118c4a235c6164e75525815718"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ab95549118c4a235c6164e75525815718">UnaryMinus</a> (const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;var) noexcept(noexcept(-var))</td></tr>
@@ -277,6 +291,38 @@ Functions</h2></td></tr>
 <tr class="memitem:a114adac5953deb8c342152c4f62d0c74"><td class="memTemplItemLeft" align="right" valign="top">static constexpr const void *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a114adac5953deb8c342152c4f62d0c74">RetreiveOpaquePtr</a> (const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;input) noexcept</td></tr>
 <tr class="memdesc:a114adac5953deb8c342152c4f62d0c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used to retreive a void pointer from a reference (either a reference to nullptr or a variable)  <a href="namespacek_f_1_1_meta_1_1_internal.html#a114adac5953deb8c342152c4f62d0c74">More...</a><br /></td></tr>
 <tr class="separator:a114adac5953deb8c342152c4f62d0c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fba613c6b3308a091a7f7a6eb36a2ec"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, auto ... &gt; typename Class, typename Type , auto ... Vars&gt; </td></tr>
+<tr class="memitem:a4fba613c6b3308a091a7f7a6eb36a2ec"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a4fba613c6b3308a091a7f7a6eb36a2ec">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a></td></tr>
+<tr class="memdesc:a4fba613c6b3308a091a7f7a6eb36a2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce a single template type followed by a variadic list of template arguments.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a4fba613c6b3308a091a7f7a6eb36a2ec">More...</a><br /></td></tr>
+<tr class="separator:a4fba613c6b3308a091a7f7a6eb36a2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13da3837a18f96ee7ad5a18ce7d3af21"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename, auto ... &gt; typename Class, typename Type1 , typename Type2 , auto ... Vars&gt; </td></tr>
+<tr class="memitem:a13da3837a18f96ee7ad5a18ce7d3af21"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a13da3837a18f96ee7ad5a18ce7d3af21">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; Type1</td></tr>
+<tr class="memdesc:a13da3837a18f96ee7ad5a18ce7d3af21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce two template types followed by a variadic list of template arguments.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a13da3837a18f96ee7ad5a18ce7d3af21">More...</a><br /></td></tr>
+<tr class="separator:a13da3837a18f96ee7ad5a18ce7d3af21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a642c581964a8d7968d5929c453bc0d7b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename, typename, auto ... &gt; typename Class, typename Type1 , typename Type2 , typename Type3 , auto ... Vars&gt; </td></tr>
+<tr class="memitem:a642c581964a8d7968d5929c453bc0d7b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a642c581964a8d7968d5929c453bc0d7b">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; Type1</td></tr>
+<tr class="memdesc:a642c581964a8d7968d5929c453bc0d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce three template types followed by a variadic list of template arguments.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a642c581964a8d7968d5929c453bc0d7b">More...</a><br /></td></tr>
+<tr class="separator:a642c581964a8d7968d5929c453bc0d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aefa21903e3645fe3aeea47d935d0ad"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename, typename, typename, auto ... &gt; typename Class, typename Type1 , typename Type2 , typename Type3 , typename Type4 , auto ... Vars&gt; </td></tr>
+<tr class="memitem:a6aefa21903e3645fe3aeea47d935d0ad"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a6aefa21903e3645fe3aeea47d935d0ad">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; Type1</td></tr>
+<tr class="memdesc:a6aefa21903e3645fe3aeea47d935d0ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce four template types followed by a variadic list of template arguments.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a6aefa21903e3645fe3aeea47d935d0ad">More...</a><br /></td></tr>
+<tr class="separator:a6aefa21903e3645fe3aeea47d935d0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8233076e77a502cbdfd3a19452725a98"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto, typename ... &gt; typename Class, auto Var, typename ... Types&gt; </td></tr>
+<tr class="memitem:a8233076e77a502cbdfd3a19452725a98"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8233076e77a502cbdfd3a19452725a98">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; <a class="el" href="classk_f_1_1_var.html">Var</a></td></tr>
+<tr class="memdesc:a8233076e77a502cbdfd3a19452725a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce a single template variable followed by a variadic list of template types.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a8233076e77a502cbdfd3a19452725a98">More...</a><br /></td></tr>
+<tr class="separator:a8233076e77a502cbdfd3a19452725a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3f602906cf99ecf3aefc3a4ac309b6"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto, auto, typename ... &gt; typename Class, auto Var1, auto Var2, typename ... Types&gt; </td></tr>
+<tr class="memitem:a7d3f602906cf99ecf3aefc3a4ac309b6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a7d3f602906cf99ecf3aefc3a4ac309b6">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; Var1</td></tr>
+<tr class="memdesc:a7d3f602906cf99ecf3aefc3a4ac309b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce two template variables followed by a variadic list of template types.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a7d3f602906cf99ecf3aefc3a4ac309b6">More...</a><br /></td></tr>
+<tr class="separator:a7d3f602906cf99ecf3aefc3a4ac309b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac3bf3f074cde893bc807163c77dac7"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto, auto, auto, typename ... &gt; typename Class, auto Var1, auto Var2, auto Var3, typename ... Types&gt; </td></tr>
+<tr class="memitem:aeac3bf3f074cde893bc807163c77dac7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#aeac3bf3f074cde893bc807163c77dac7">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; Var1</td></tr>
+<tr class="memdesc:aeac3bf3f074cde893bc807163c77dac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce three template variables followed by a variadic list of template types.  <a href="namespacek_f_1_1_meta_1_1_internal.html#aeac3bf3f074cde893bc807163c77dac7">More...</a><br /></td></tr>
+<tr class="separator:aeac3bf3f074cde893bc807163c77dac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b738d207cccc4b1f9c0a48b93ddbe6"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto, auto, auto, auto, typename ... &gt; typename Class, auto Var1, auto Var2, auto Var3, auto Var4, typename ... Types&gt; </td></tr>
+<tr class="memitem:ae0b738d207cccc4b1f9c0a48b93ddbe6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ae0b738d207cccc4b1f9c0a48b93ddbe6">requires</a> (sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !=0ul) struct <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html">TemplateDecomposer</a>&lt; Class&lt; Var1</td></tr>
+<tr class="memdesc:ae0b738d207cccc4b1f9c0a48b93ddbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce four template variables followed by a variadic list of template types.  <a href="namespacek_f_1_1_meta_1_1_internal.html#ae0b738d207cccc4b1f9c0a48b93ddbe6">More...</a><br /></td></tr>
+<tr class="separator:ae0b738d207cccc4b1f9c0a48b93ddbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -286,9 +332,34 @@ Variables</h2></td></tr>
 <tr class="memitem:a7e32ddf900e1a8b24b567613fc603114"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a7e32ddf900e1a8b24b567613fc603114">IsVarSmallOptimized</a> = [] { <a class="el" href="_s_p_s_c_queue_8ipp.html#af1aa37c9cca3f3871a4261496ee67520">if</a> constexpr ( (std::is_same_v&lt;<a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>, void&gt;) ) { return false ; } else { return sizeof(<a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>) &lt;= <a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad4f0f57c57a3de6c94c9cbb9e1921580">VarSmallOptimizationSize</a> ; } }()</td></tr>
 <tr class="memdesc:a7e32ddf900e1a8b24b567613fc603114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to know if a type is trivial or not.  <a href="namespacek_f_1_1_meta_1_1_internal.html#a7e32ddf900e1a8b24b567613fc603114">More...</a><br /></td></tr>
 <tr class="separator:a7e32ddf900e1a8b24b567613fc603114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edded6a63822988d17981f69e645a6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a></td></tr>
+<tr class="separator:a8edded6a63822988d17981f69e645a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cbe2d4235968799ab2077525c517258"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a1cbe2d4235968799ab2077525c517258">HasTypes</a> = <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a></td></tr>
+<tr class="separator:a1cbe2d4235968799ab2077525c517258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebbab8499a62cb712b1c77fa18188346"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#aebbab8499a62cb712b1c77fa18188346">HasVariables</a> = <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a></td></tr>
+<tr class="separator:aebbab8499a62cb712b1c77fa18188346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a66f7f8f875d30f0303cee3ae84e8a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a72a66f7f8f875d30f0303cee3ae84e8a">TypesBeforeArguments</a> = <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a></td></tr>
+<tr class="separator:a72a66f7f8f875d30f0303cee3ae84e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80f747e11aabd62c27fd11e72dea1e3"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ab80f747e11aabd62c27fd11e72dea1e3">VarsTuple</a> = std::make_tuple&lt;decltype(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>)...&gt;(Vars...)</td></tr>
+<tr class="separator:ab80f747e11aabd62c27fd11e72dea1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cfe38e37ac18a11f499a25a00bb6c44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a4cfe38e37ac18a11f499a25a00bb6c44">Type2</a></td></tr>
+<tr class="separator:a4cfe38e37ac18a11f499a25a00bb6c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17d2a6f90de6e0d60ac5a99f1c9c94b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#aa17d2a6f90de6e0d60ac5a99f1c9c94b">Type3</a></td></tr>
+<tr class="separator:aa17d2a6f90de6e0d60ac5a99f1c9c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2412c2fc811e788a3c49d3d3c46ca08b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a2412c2fc811e788a3c49d3d3c46ca08b">Type4</a></td></tr>
+<tr class="separator:a2412c2fc811e788a3c49d3d3c46ca08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a3b98a80455971a5e8b3e42695d54f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a></td></tr>
+<tr class="separator:ad1a3b98a80455971a5e8b3e42695d54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af580f64b716166f94b3c1c75c6c52be5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#af580f64b716166f94b3c1c75c6c52be5">Var2</a></td></tr>
+<tr class="separator:af580f64b716166f94b3c1c75c6c52be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea44f7642e60aa27ad32925eb4bb3c04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#aea44f7642e60aa27ad32925eb4bb3c04">Var3</a></td></tr>
+<tr class="separator:aea44f7642e60aa27ad32925eb4bb3c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99926b01bac2e156d51ffc2624b1664e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a99926b01bac2e156d51ffc2624b1664e">Var4</a></td></tr>
+<tr class="separator:a99926b01bac2e156d51ffc2624b1664e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespacek_f_1_1_meta_1_1_internal.html" title="Internal type resolvers and helpers.">Internal</a> type resolvers and helpers. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="structk_f_1_1_meta_1_1_internal_1_1_template_decomposer.html" title="Deduce a non template type.">TemplateDecomposer</a> </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="a83beab20b303a2ba0cd3ccf059f46663"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83beab20b303a2ba0cd3ccf059f46663">&#9670;&nbsp;</a></span>AssignmentAdditionCheck</h2>
@@ -499,6 +570,20 @@ template&lt;typename FunctionType &gt; </div>
 </div><div class="memdoc">
 
 <p>Opaque function type. </p>
+
+</div>
+</div>
+<a id="a84e39972cd3e87f3e06875686a8c0928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e39972cd3e87f3e06875686a8c0928">&#9670;&nbsp;</a></span>TypesTuple</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::tuple&lt; Types... &gt; <a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a84e39972cd3e87f3e06875686a8c0928">kF::Meta::Internal::TypesTuple</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1524,6 +1609,182 @@ template&lt;typename Type , auto OperatorFunc, UnaryOperator Operator&gt; </div>
 
 </div>
 </div>
+<a id="a8233076e77a502cbdfd3a19452725a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8233076e77a502cbdfd3a19452725a98">&#9670;&nbsp;</a></span>requires() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; auto, typename ... &gt; typename Class, auto Var, typename ... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce a single template variable followed by a variadic list of template types. </p>
+
+</div>
+</div>
+<a id="a7d3f602906cf99ecf3aefc3a4ac309b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3f602906cf99ecf3aefc3a4ac309b6">&#9670;&nbsp;</a></span>requires() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; auto, auto, typename ... &gt; typename Class, auto Var1, auto Var2, typename ... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce two template variables followed by a variadic list of template types. </p>
+
+</div>
+</div>
+<a id="aeac3bf3f074cde893bc807163c77dac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac3bf3f074cde893bc807163c77dac7">&#9670;&nbsp;</a></span>requires() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; auto, auto, auto, typename ... &gt; typename Class, auto Var1, auto Var2, auto Var3, typename ... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce three template variables followed by a variadic list of template types. </p>
+
+</div>
+</div>
+<a id="ae0b738d207cccc4b1f9c0a48b93ddbe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b738d207cccc4b1f9c0a48b93ddbe6">&#9670;&nbsp;</a></span>requires() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; auto, auto, auto, auto, typename ... &gt; typename Class, auto Var1, auto Var2, auto Var3, auto Var4, typename ... Types&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#ad1a3b98a80455971a5e8b3e42695d54f">Types</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce four template variables followed by a variadic list of template types. </p>
+
+</div>
+</div>
+<a id="a4fba613c6b3308a091a7f7a6eb36a2ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fba613c6b3308a091a7f7a6eb36a2ec">&#9670;&nbsp;</a></span>requires() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, auto ... &gt; typename Class, typename Type , auto ... Vars&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce a single template type followed by a variadic list of template arguments. </p>
+
+</div>
+</div>
+<a id="a13da3837a18f96ee7ad5a18ce7d3af21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13da3837a18f96ee7ad5a18ce7d3af21">&#9670;&nbsp;</a></span>requires() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, typename, auto ... &gt; typename Class, typename Type1 , typename Type2 , auto ... Vars&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce two template types followed by a variadic list of template arguments. </p>
+
+</div>
+</div>
+<a id="a642c581964a8d7968d5929c453bc0d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a642c581964a8d7968d5929c453bc0d7b">&#9670;&nbsp;</a></span>requires() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, typename, typename, auto ... &gt; typename Class, typename Type1 , typename Type2 , typename Type3 , auto ... Vars&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce three template types followed by a variadic list of template arguments. </p>
+
+</div>
+</div>
+<a id="a6aefa21903e3645fe3aeea47d935d0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aefa21903e3645fe3aeea47d935d0ad">&#9670;&nbsp;</a></span>requires() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;template&lt; typename, typename, typename, typename, auto ... &gt; typename Class, typename Type1 , typename Type2 , typename Type3 , typename Type4 , auto ... Vars&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::requires </td>
+          <td>(</td>
+          <td class="paramtype">sizeof...(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>) !&#160;</td>
+          <td class="paramname"> = <code>0ul</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deduce four template types followed by a variadic list of template arguments. </p>
+
+</div>
+</div>
 <a id="a114adac5953deb8c342152c4f62d0c74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a114adac5953deb8c342152c4f62d0c74">&#9670;&nbsp;</a></span>RetreiveOpaquePtr()</h2>
 
@@ -1731,6 +1992,50 @@ template&lt;typename Type &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a1cbe2d4235968799ab2077525c517258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cbe2d4235968799ab2077525c517258">&#9670;&nbsp;</a></span>HasTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool kF::Meta::Internal::HasTypes = <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebbab8499a62cb712b1c77fa18188346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebbab8499a62cb712b1c77fa18188346">&#9670;&nbsp;</a></span>HasVariables</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool kF::Meta::Internal::HasVariables = <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7e32ddf900e1a8b24b567613fc603114"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e32ddf900e1a8b24b567613fc603114">&#9670;&nbsp;</a></span>IsVarSmallOptimized</h2>
 
@@ -1757,6 +2062,144 @@ template&lt;typename Type &gt; </div>
 
 </div>
 </div>
+<a id="a4cfe38e37ac18a11f499a25a00bb6c44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfe38e37ac18a11f499a25a00bb6c44">&#9670;&nbsp;</a></span>Type2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Type2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa17d2a6f90de6e0d60ac5a99f1c9c94b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17d2a6f90de6e0d60ac5a99f1c9c94b">&#9670;&nbsp;</a></span>Type3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Type3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2412c2fc811e788a3c49d3d3c46ca08b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2412c2fc811e788a3c49d3d3c46ca08b">&#9670;&nbsp;</a></span>Type4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Type4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1a3b98a80455971a5e8b3e42695d54f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a3b98a80455971a5e8b3e42695d54f">&#9670;&nbsp;</a></span>Types</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Types</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> IsTemplate = <span class="keyword">true</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a72a66f7f8f875d30f0303cee3ae84e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a66f7f8f875d30f0303cee3ae84e8a">&#9670;&nbsp;</a></span>TypesBeforeArguments</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool kF::Meta::Internal::TypesBeforeArguments = <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af580f64b716166f94b3c1c75c6c52be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af580f64b716166f94b3c1c75c6c52be5">&#9670;&nbsp;</a></span>Var2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Var2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea44f7642e60aa27ad32925eb4bb3c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea44f7642e60aa27ad32925eb4bb3c04">&#9670;&nbsp;</a></span>Var3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Var3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99926b01bac2e156d51ffc2624b1664e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99926b01bac2e156d51ffc2624b1664e">&#9670;&nbsp;</a></span>Var4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Var4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8edded6a63822988d17981f69e645a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edded6a63822988d17981f69e645a6a">&#9670;&nbsp;</a></span>Vars</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kF::Meta::Internal::Vars</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> IsTemplate = <span class="keyword">true</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad4f0f57c57a3de6c94c9cbb9e1921580"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4f0f57c57a3de6c94c9cbb9e1921580">&#9670;&nbsp;</a></span>VarSmallOptimizationSize</h2>
 
@@ -1773,6 +2216,28 @@ template&lt;typename Type &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab80f747e11aabd62c27fd11e72dea1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80f747e11aabd62c27fd11e72dea1e3">&#9670;&nbsp;</a></span>VarsTuple</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr auto kF::Meta::Internal::VarsTuple = std::make_tuple&lt;decltype(<a class="el" href="namespacek_f_1_1_meta_1_1_internal.html#a8edded6a63822988d17981f69e645a6a">Vars</a>)...&gt;(Vars...)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

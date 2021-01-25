@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -80,7 +80,7 @@ $(function() {
 Include dependency graph for Make.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_make_8hpp__incl.png" border="0" usemap="#a_kube_2_object_2_make_8hpp" alt=""/></div>
-<map name="_kube_2_object_2_make_8hpp" id="a_kube_2_object_2_make_8hpp">
+<map name="_kube_2_object_2_make_8hpp" id="_kube_2_object_2_make_8hpp">
 <area shape="rect" title=" " alt="" coords="43,5,198,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,84,107"/>
 <area shape="rect" href="_macro_utils_8hpp.html" title=" " alt="" coords="109,80,285,107"/>
@@ -91,13 +91,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_make_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_object_2_make_8hppdep" alt=""/></div>
 <map name="_kube_2_object_2_make_8hppdep" id="a_kube_2_object_2_make_8hppdep">
-<area shape="rect" title=" " alt="" coords="128,5,283,32"/>
-<area shape="rect" href="_reflection2_8hpp.html" title=" " alt="" coords="5,80,195,107"/>
-<area shape="rect" href="_reflection_8hpp.html" title=" " alt="" coords="219,80,402,107"/>
-<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="230,155,391,181"/>
-<area shape="rect" href="_object_8cpp.html" title=" " alt="" coords="50,229,211,256"/>
-<area shape="rect" href="_item_8hpp.html" title=" " alt="" coords="236,229,385,256"/>
-<area shape="rect" href="_reflection_8cpp.html" title=" " alt="" coords="410,229,593,256"/>
+<area shape="rect" title=" " alt="" coords="117,5,271,32"/>
+<area shape="rect" href="_reflection_8hpp.html" title=" " alt="" coords="103,80,285,107"/>
+<area shape="rect" href="_reflection_8cpp.html" title=" " alt="" coords="5,155,188,181"/>
+<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="212,155,373,181"/>
 </map>
 </div>
 </div>
@@ -105,6 +102,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:aa4048547e8dde2c289c7c769790f687d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#aa4048547e8dde2c289c7c769790f687d">KUBE_MAKE_META_TYPE_GETTER</a></td></tr>
+<tr class="memdesc:aa4048547e8dde2c289c7c769790f687d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Meta type getter generator.  <a href="_make_8hpp.html#aa4048547e8dde2c289c7c769790f687d">More...</a><br /></td></tr>
+<tr class="separator:aa4048547e8dde2c289c7c769790f687d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8eab59e7a4127369ddf80807507434"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#abd8eab59e7a4127369ddf80807507434">KUBE_MAKE_VIRTUAL_META_TYPE_GETTER</a></td></tr>
+<tr class="memdesc:abd8eab59e7a4127369ddf80807507434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual meta type getter generator.  <a href="_make_8hpp.html#abd8eab59e7a4127369ddf80807507434">More...</a><br /></td></tr>
+<tr class="separator:abd8eab59e7a4127369ddf80807507434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51bf2d0968998483154a1cbdf052bb35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a51bf2d0968998483154a1cbdf052bb35">KUBE_MAKE_BASE</a>(...)</td></tr>
 <tr class="memdesc:a51bf2d0968998483154a1cbdf052bb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy generators, not used.  <a href="_make_8hpp.html#a51bf2d0968998483154a1cbdf052bb35">More...</a><br /></td></tr>
 <tr class="separator:a51bf2d0968998483154a1cbdf052bb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,51 +119,70 @@ Macros</h2></td></tr>
 <tr class="separator:a87dede3820285e815688f7e96ed39c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4525330fd77caf803006df3c89c39eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ae4525330fd77caf803006df3c89c39eb">KUBE_MAKE_PROPERTY_CUSTOM_SIGLESS</a>(...)</td></tr>
 <tr class="separator:ae4525330fd77caf803006df3c89c39eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a9bdb6248660d5ec68862c448dba439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(GETTER_SCOPE,  GETTER_TYPE,  SETTER_SCOPE,  SETTER_TYPE,  SIGNAL_SCOPE,  <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)</td></tr>
-<tr class="memdesc:a3a9bdb6248660d5ec68862c448dba439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with given parameters (used internally)  <a href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">More...</a><br /></td></tr>
-<tr class="separator:a3a9bdb6248660d5ec68862c448dba439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53ecfa3840452f128fbb76075bef0606"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a53ecfa3840452f128fbb76075bef0606">KUBE_MAKE_PROPERTY_COPY</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, public, SETTER_COPY, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:a53ecfa3840452f128fbb76075bef0606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with a move setter.  <a href="_make_8hpp.html#a53ecfa3840452f128fbb76075bef0606">More...</a><br /></td></tr>
-<tr class="separator:a53ecfa3840452f128fbb76075bef0606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc468236b2e7c79e1f372d2f762e4345"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#abc468236b2e7c79e1f372d2f762e4345">KUBE_MAKE_PROPERTY_COPY_REF</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, public, SETTER_COPY, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:abc468236b2e7c79e1f372d2f762e4345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with a volatile reference getter and a move setter.  <a href="_make_8hpp.html#abc468236b2e7c79e1f372d2f762e4345">More...</a><br /></td></tr>
-<tr class="separator:abc468236b2e7c79e1f372d2f762e4345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cd98cd8cd2b0467f54393a727a3e606"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a5cd98cd8cd2b0467f54393a727a3e606">KUBE_MAKE_PROPERTY_COPY_READONLY</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, private, SETTER_COPY, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:a5cd98cd8cd2b0467f54393a727a3e606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a readonly property with a copy setter.  <a href="_make_8hpp.html#a5cd98cd8cd2b0467f54393a727a3e606">More...</a><br /></td></tr>
-<tr class="separator:a5cd98cd8cd2b0467f54393a727a3e606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a702eaf24351caeab1afe532ba7e35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ae6a702eaf24351caeab1afe532ba7e35">KUBE_MAKE_PROPERTY_MOVE</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, public, SETTER_MOVE, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ae6a702eaf24351caeab1afe532ba7e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with a move setter.  <a href="_make_8hpp.html#ae6a702eaf24351caeab1afe532ba7e35">More...</a><br /></td></tr>
-<tr class="separator:ae6a702eaf24351caeab1afe532ba7e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c3daf9164192cf07c1f937b0bdc5705"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a3c3daf9164192cf07c1f937b0bdc5705">KUBE_MAKE_PROPERTY_MOVE_REF</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, public, SETTER_MOVE, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:a3c3daf9164192cf07c1f937b0bdc5705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with a volatile reference getter and a move setter.  <a href="_make_8hpp.html#a3c3daf9164192cf07c1f937b0bdc5705">More...</a><br /></td></tr>
-<tr class="separator:a3c3daf9164192cf07c1f937b0bdc5705"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9864d301c9272db12c68475d2a61b59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ae9864d301c9272db12c68475d2a61b59">KUBE_MAKE_PROPERTY_MOVE_READONLY</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, private, SETTER_MOVE, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:ae9864d301c9272db12c68475d2a61b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a readonly property with a move setter.  <a href="_make_8hpp.html#ae9864d301c9272db12c68475d2a61b59">More...</a><br /></td></tr>
-<tr class="separator:ae9864d301c9272db12c68475d2a61b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5047935933ce37499bb50547efcdcf27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a5047935933ce37499bb50547efcdcf27">KUBE_MAKE_PROPERTY_CUSTOM</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a7aec4c9a2d8c81fe828c2771badb81b4">KUBE_MAKE_SIGNAL</a>(name##Changed)</td></tr>
-<tr class="memdesc:a5047935933ce37499bb50547efcdcf27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the signal of a custom property.  <a href="_make_8hpp.html#a5047935933ce37499bb50547efcdcf27">More...</a><br /></td></tr>
-<tr class="separator:a5047935933ce37499bb50547efcdcf27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdb659d6fad86b79bb27f3fcf2e949d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#abdb659d6fad86b79bb27f3fcf2e949d4">KUBE_MAKE_GETTER</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name)&#160;&#160;&#160;    [[nodiscard]] const <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;name(void) const noexcept { return _##name; }</td></tr>
-<tr class="memdesc:abdb659d6fad86b79bb27f3fcf2e949d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const reference getter for any type.  <a href="_make_8hpp.html#abdb659d6fad86b79bb27f3fcf2e949d4">More...</a><br /></td></tr>
-<tr class="separator:abdb659d6fad86b79bb27f3fcf2e949d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace72c37732310411d2a5206f5e3669e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ace72c37732310411d2a5206f5e3669e8">KUBE_MAKE_GETTER_REF</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name)</td></tr>
-<tr class="memdesc:ace72c37732310411d2a5206f5e3669e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Either const and volatiele getter for any type.  <a href="_make_8hpp.html#ace72c37732310411d2a5206f5e3669e8">More...</a><br /></td></tr>
-<tr class="separator:ace72c37732310411d2a5206f5e3669e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ff0521f37eb6ae86a1514126c09a17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ad9ff0521f37eb6ae86a1514126c09a17">KUBE_MAKE_SETTER_COPY</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name)</td></tr>
-<tr class="memdesc:ad9ff0521f37eb6ae86a1514126c09a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy setter for any type.  <a href="_make_8hpp.html#ad9ff0521f37eb6ae86a1514126c09a17">More...</a><br /></td></tr>
-<tr class="separator:ad9ff0521f37eb6ae86a1514126c09a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac60294bd9dd096ce7873ba6d6a56bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a3ac60294bd9dd096ce7873ba6d6a56bc">KUBE_MAKE_SETTER_MOVE</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name)</td></tr>
-<tr class="memdesc:a3ac60294bd9dd096ce7873ba6d6a56bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move setter for any type.  <a href="_make_8hpp.html#a3ac60294bd9dd096ce7873ba6d6a56bc">More...</a><br /></td></tr>
-<tr class="separator:a3ac60294bd9dd096ce7873ba6d6a56bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6bb5ed595d3591b038e5386b7ee083"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a8e6bb5ed595d3591b038e5386b7ee083">KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_SIGLESS</a>(...)</td></tr>
+<tr class="separator:a8e6bb5ed595d3591b038e5386b7ee083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334c24c9deb553f823e29107ea0b0bde"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a334c24c9deb553f823e29107ea0b0bde">KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_GETONLY_SIGLESS</a>(...)</td></tr>
+<tr class="separator:a334c24c9deb553f823e29107ea0b0bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f156d43d05670afaa67bfbddfbf635"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(GETTER_SCOPE,  GETTER_TYPE,  SETTER_SCOPE,  SETTER_TYPE,  SIGNAL_SCOPE,  PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:ab4f156d43d05670afaa67bfbddfbf635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with given parameters (used internally)  <a href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">More...</a><br /></td></tr>
+<tr class="separator:ab4f156d43d05670afaa67bfbddfbf635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e2bf83b87f45872393f362a784fafd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(GETTER_SCOPE,  GETTER_TYPE,  SETTER_SCOPE,  SETTER_TYPE,  SIGNAL_SCOPE,  PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:a3e2bf83b87f45872393f362a784fafd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a property with given parameters (used internally)  <a href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">More...</a><br /></td></tr>
+<tr class="separator:a3e2bf83b87f45872393f362a784fafd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3f5e95fa191936eb7ccac06cd70696c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#aa3f5e95fa191936eb7ccac06cd70696c">KUBE_MAKE_PROPERTY</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, public, SETTER, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:aa3f5e95fa191936eb7ccac06cd70696c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a constant getter, copy / move (if supported) setter(s) and a signal.  <a href="_make_8hpp.html#aa3f5e95fa191936eb7ccac06cd70696c">More...</a><br /></td></tr>
+<tr class="separator:aa3f5e95fa191936eb7ccac06cd70696c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f0836edeaa5b822fe7d519678d79f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ac6f0836edeaa5b822fe7d519678d79f6">KUBE_MAKE_PROPERTY_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER, public, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ac6f0836edeaa5b822fe7d519678d79f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a constant getter, copy / move (if supported) setter(s)  <a href="_make_8hpp.html#ac6f0836edeaa5b822fe7d519678d79f6">More...</a><br /></td></tr>
+<tr class="separator:ac6f0836edeaa5b822fe7d519678d79f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84b841ce0919ce64bf569ca01359414"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ab84b841ce0919ce64bf569ca01359414">KUBE_MAKE_PROPERTY_VOLATILE</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, public, SETTER, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ab84b841ce0919ce64bf569ca01359414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a volatile getter, copy / move (if supported) setter(s) and a signal.  <a href="_make_8hpp.html#ab84b841ce0919ce64bf569ca01359414">More...</a><br /></td></tr>
+<tr class="separator:ab84b841ce0919ce64bf569ca01359414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609ad8ebecbc027d0fb38a628399f448"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a609ad8ebecbc027d0fb38a628399f448">KUBE_MAKE_PROPERTY_VOLATILE_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER_REF, public, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:a609ad8ebecbc027d0fb38a628399f448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a volatile getter, copy / move (if supported) setter(s)  <a href="_make_8hpp.html#a609ad8ebecbc027d0fb38a628399f448">More...</a><br /></td></tr>
+<tr class="separator:a609ad8ebecbc027d0fb38a628399f448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0145052ac18c0e6d71377953bdc96bac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a0145052ac18c0e6d71377953bdc96bac">KUBE_MAKE_PROPERTY_GETONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, private, SETTER, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:a0145052ac18c0e6d71377953bdc96bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a constant getter, private copy / move (if supported) setter(s) and a signal.  <a href="_make_8hpp.html#a0145052ac18c0e6d71377953bdc96bac">More...</a><br /></td></tr>
+<tr class="separator:a0145052ac18c0e6d71377953bdc96bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c54aaa9f7a7e4fc17ed2c16fa26028c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a9c54aaa9f7a7e4fc17ed2c16fa26028c">KUBE_MAKE_PROPERTY_GETONLY_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER, private, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:a9c54aaa9f7a7e4fc17ed2c16fa26028c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a constant getter, private copy / move (if supported) setter(s)  <a href="_make_8hpp.html#a9c54aaa9f7a7e4fc17ed2c16fa26028c">More...</a><br /></td></tr>
+<tr class="separator:a9c54aaa9f7a7e4fc17ed2c16fa26028c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5cf668ecaa3e4815fa126cebbe11df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#aaf5cf668ecaa3e4815fa126cebbe11df">KUBE_MAKE_PROPERTY_VOLATILE_GETONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, private, SETTER, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:aaf5cf668ecaa3e4815fa126cebbe11df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a volatile getter, private copy / move (if supported) setter(s) and a signal.  <a href="_make_8hpp.html#aaf5cf668ecaa3e4815fa126cebbe11df">More...</a><br /></td></tr>
+<tr class="separator:aaf5cf668ecaa3e4815fa126cebbe11df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98fc8d145fe9a6e7a1b099277dda540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ae98fc8d145fe9a6e7a1b099277dda540">KUBE_MAKE_PROPERTY_VOLATILE_GETONLY_SIGLESS</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER_REF, private, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ae98fc8d145fe9a6e7a1b099277dda540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a volatile getter, private copy / move (if supported) setter(s)  <a href="_make_8hpp.html#ae98fc8d145fe9a6e7a1b099277dda540">More...</a><br /></td></tr>
+<tr class="separator:ae98fc8d145fe9a6e7a1b099277dda540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07e672cf3d2d27403dcb797e54c63eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ac07e672cf3d2d27403dcb797e54c63eb">KUBE_MAKE_PROPERTY_CUSTOM</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a7aec4c9a2d8c81fe828c2771badb81b4">KUBE_MAKE_SIGNAL</a>(name##Changed)</td></tr>
+<tr class="memdesc:ac07e672cf3d2d27403dcb797e54c63eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the signal of a custom property.  <a href="_make_8hpp.html#ac07e672cf3d2d27403dcb797e54c63eb">More...</a><br /></td></tr>
+<tr class="separator:ac07e672cf3d2d27403dcb797e54c63eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1e600618a8673ec0c0352878855ac8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a1e1e600618a8673ec0c0352878855ac8">KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ac07e672cf3d2d27403dcb797e54c63eb">KUBE_MAKE_PROPERTY_CUSTOM</a>(PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:a1e1e600618a8673ec0c0352878855ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the signal of a custom property.  <a href="_make_8hpp.html#a1e1e600618a8673ec0c0352878855ac8">More...</a><br /></td></tr>
+<tr class="separator:a1e1e600618a8673ec0c0352878855ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2887fe4b46dad6c39a9759456b7f97d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ac2887fe4b46dad6c39a9759456b7f97d">KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_GETONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ac07e672cf3d2d27403dcb797e54c63eb">KUBE_MAKE_PROPERTY_CUSTOM</a>(PropertyType, name, __VA_ARGS__)</td></tr>
+<tr class="memdesc:ac2887fe4b46dad6c39a9759456b7f97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the signal of a custom property.  <a href="_make_8hpp.html#ac2887fe4b46dad6c39a9759456b7f97d">More...</a><br /></td></tr>
+<tr class="separator:ac2887fe4b46dad6c39a9759456b7f97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df6fa0b74b5a6e648e3ee71bd4ad249"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a6df6fa0b74b5a6e648e3ee71bd4ad249">KUBE_MAKE_GETTER</a>(PropertyType,  name)&#160;&#160;&#160;    [[nodiscard]] inline <a class="el" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference</a>&lt;PropertyType&gt; name(void) const noexcept { return _##name; }</td></tr>
+<tr class="memdesc:a6df6fa0b74b5a6e648e3ee71bd4ad249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const reference getter for any type.  <a href="_make_8hpp.html#a6df6fa0b74b5a6e648e3ee71bd4ad249">More...</a><br /></td></tr>
+<tr class="separator:a6df6fa0b74b5a6e648e3ee71bd4ad249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ca4ffd37dfa4537c0c3029acee8389"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a76ca4ffd37dfa4537c0c3029acee8389">KUBE_MAKE_GETTER_REF</a>(PropertyType,  name)</td></tr>
+<tr class="memdesc:a76ca4ffd37dfa4537c0c3029acee8389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Either const and volatiele getter for any type.  <a href="_make_8hpp.html#a76ca4ffd37dfa4537c0c3029acee8389">More...</a><br /></td></tr>
+<tr class="separator:a76ca4ffd37dfa4537c0c3029acee8389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae819c0fcb2ddf62c5fff56e9a3a66c54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ae819c0fcb2ddf62c5fff56e9a3a66c54">KUBE_MAKE_SETTER</a>(PropertyType,  name)</td></tr>
+<tr class="memdesc:ae819c0fcb2ddf62c5fff56e9a3a66c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy setter for any type (with signal emition)  <a href="_make_8hpp.html#ae819c0fcb2ddf62c5fff56e9a3a66c54">More...</a><br /></td></tr>
+<tr class="separator:ae819c0fcb2ddf62c5fff56e9a3a66c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79eefec41e154b96e95002a62c27d2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#ac79eefec41e154b96e95002a62c27d2e">KUBE_MAKE_SETTER_SIGLESS</a>(PropertyType,  name)</td></tr>
+<tr class="memdesc:ac79eefec41e154b96e95002a62c27d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy / Move setter for any type (without signal emition)  <a href="_make_8hpp.html#ac79eefec41e154b96e95002a62c27d2e">More...</a><br /></td></tr>
+<tr class="separator:ac79eefec41e154b96e95002a62c27d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5349a3cb0fbdf8fdc8af4c78e7966a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#aa5349a3cb0fbdf8fdc8af4c78e7966a5">KUBE_MAKE_SIGNAL_IMPL</a>(SCOPE,  name, ...)</td></tr>
 <tr class="memdesc:aa5349a3cb0fbdf8fdc8af4c78e7966a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a signal (used internal)  <a href="_make_8hpp.html#aa5349a3cb0fbdf8fdc8af4c78e7966a5">More...</a><br /></td></tr>
 <tr class="separator:aa5349a3cb0fbdf8fdc8af4c78e7966a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aec4c9a2d8c81fe828c2771badb81b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a7aec4c9a2d8c81fe828c2771badb81b4">KUBE_MAKE_SIGNAL</a>(name, ...)&#160;&#160;&#160;<a class="el" href="_make_8hpp.html#aa5349a3cb0fbdf8fdc8af4c78e7966a5">KUBE_MAKE_SIGNAL_IMPL</a>(public, name, __VA_ARGS__)</td></tr>
 <tr class="memdesc:a7aec4c9a2d8c81fe828c2771badb81b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare a public signal.  <a href="_make_8hpp.html#a7aec4c9a2d8c81fe828c2771badb81b4">More...</a><br /></td></tr>
 <tr class="separator:a7aec4c9a2d8c81fe828c2771badb81b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf9c42c42aaf20a0f9cde9983ef72f9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#aaf9c42c42aaf20a0f9cde9983ef72f9b">KUBE_MAKE_VARIABLE</a>(<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>,  name, ...)&#160;&#160;&#160;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> _##name { __VA_ARGS__ };</td></tr>
-<tr class="memdesc:aaf9c42c42aaf20a0f9cde9983ef72f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a variable and initialize it with variadic arguments.  <a href="_make_8hpp.html#aaf9c42c42aaf20a0f9cde9983ef72f9b">More...</a><br /></td></tr>
-<tr class="separator:aaf9c42c42aaf20a0f9cde9983ef72f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643c498391b980fb65bd96bfcc03650f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_make_8hpp.html#a643c498391b980fb65bd96bfcc03650f">KUBE_MAKE_VARIABLE</a>(PropertyType,  name, ...)&#160;&#160;&#160;PropertyType _##name { __VA_ARGS__ };</td></tr>
+<tr class="memdesc:a643c498391b980fb65bd96bfcc03650f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a variable and initialize it with variadic arguments.  <a href="_make_8hpp.html#a643c498391b980fb65bd96bfcc03650f">More...</a><br /></td></tr>
+<tr class="separator:a643c498391b980fb65bd96bfcc03650f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a51bf2d0968998483154a1cbdf052bb35"></a>
@@ -180,7 +202,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Dummy generators, not used. </p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Code generation helpers </p>
 
 </div>
 </div>
@@ -238,8 +259,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="abdb659d6fad86b79bb27f3fcf2e949d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdb659d6fad86b79bb27f3fcf2e949d4">&#9670;&nbsp;</a></span>KUBE_MAKE_GETTER</h2>
+<a id="a6df6fa0b74b5a6e648e3ee71bd4ad249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df6fa0b74b5a6e648e3ee71bd4ad249">&#9670;&nbsp;</a></span>KUBE_MAKE_GETTER</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +269,7 @@ Macros</h2></td></tr>
           <td class="memname">#define KUBE_MAKE_GETTER</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -259,7 +280,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    [[nodiscard]] const <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;name(void) const noexcept { return _##name; }</td>
+          <td></td><td>&#160;&#160;&#160;    [[nodiscard]] inline <a class="el" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference</a>&lt;PropertyType&gt; name(void) const noexcept { return _##name; }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,8 +289,8 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ace72c37732310411d2a5206f5e3669e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace72c37732310411d2a5206f5e3669e8">&#9670;&nbsp;</a></span>KUBE_MAKE_GETTER_REF</h2>
+<a id="a76ca4ffd37dfa4537c0c3029acee8389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ca4ffd37dfa4537c0c3029acee8389">&#9670;&nbsp;</a></span>KUBE_MAKE_GETTER_REF</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +299,7 @@ Macros</h2></td></tr>
           <td class="memname">#define KUBE_MAKE_GETTER_REF</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -293,24 +314,43 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_make_8hpp.html#abdb659d6fad86b79bb27f3fcf2e949d4">KUBE_MAKE_GETTER</a>(<a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name) \</div>
-<div class="line">    [[nodiscard]] <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;name(<span class="keywordtype">void</span>) noexcept { <span class="keywordflow">return</span> _##name; }</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_make_8hpp.html#a6df6fa0b74b5a6e648e3ee71bd4ad249">KUBE_MAKE_GETTER</a>(PropertyType, name) \</div>
+<div class="line">    [[nodiscard]] <span class="keyword">inline</span> PropertyType &amp;name(<span class="keywordtype">void</span>) noexcept { <span class="keywordflow">return</span> _##name; }</div>
 </div><!-- fragment -->
 <p>Either const and volatiele getter for any type. </p>
 
 </div>
 </div>
-<a id="a53ecfa3840452f128fbb76075bef0606"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53ecfa3840452f128fbb76075bef0606">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_COPY</h2>
+<a id="aa4048547e8dde2c289c7c769790f687d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4048547e8dde2c289c7c769790f687d">&#9670;&nbsp;</a></span>KUBE_MAKE_META_TYPE_GETTER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_MAKE_PROPERTY_COPY</td>
+          <td class="memname">#define KUBE_MAKE_META_TYPE_GETTER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>: <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">\</a></div>
+<div class="line"><a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">    kF::Meta::Type</a> getMetaType(<span class="keywordtype">void</span>) <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> <a class="code" href="classk_f_1_1_meta_1_1_factory_base.html#ad3bdb5f3c8cfd2016c1e101072c70efb">kF::Meta::Factory&lt;_MetaType&gt;::Resolve</a>(); }</div>
+</div><!-- fragment -->
+<p>Meta type getter generator. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Code generation helpers </p>
+
+</div>
+</div>
+<a id="aa3f5e95fa191936eb7ccac06cd70696c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f5e95fa191936eb7ccac06cd70696c">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -327,89 +367,17 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, public, SETTER_COPY, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, public, SETTER, public, PropertyType, name, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate a property with a move setter. </p>
+<p>Generate a constant getter, copy / move (if supported) setter(s) and a signal. </p>
 
 </div>
 </div>
-<a id="a5cd98cd8cd2b0467f54393a727a3e606"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cd98cd8cd2b0467f54393a727a3e606">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_COPY_READONLY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define KUBE_MAKE_PROPERTY_COPY_READONLY</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, private, SETTER_COPY, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generate a readonly property with a copy setter. </p>
-
-</div>
-</div>
-<a id="abc468236b2e7c79e1f372d2f762e4345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc468236b2e7c79e1f372d2f762e4345">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_COPY_REF</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define KUBE_MAKE_PROPERTY_COPY_REF</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, public, SETTER_COPY, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generate a property with a volatile reference getter and a move setter. </p>
-
-</div>
-</div>
-<a id="a5047935933ce37499bb50547efcdcf27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5047935933ce37499bb50547efcdcf27">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_CUSTOM</h2>
+<a id="ac07e672cf3d2d27403dcb797e54c63eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac07e672cf3d2d27403dcb797e54c63eb">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_CUSTOM</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,7 +386,7 @@ Macros</h2></td></tr>
           <td class="memname">#define KUBE_MAKE_PROPERTY_CUSTOM</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -462,8 +430,188 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a3a9bdb6248660d5ec68862c448dba439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a9bdb6248660d5ec68862c448dba439">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_IMPL</h2>
+<a id="a1e1e600618a8673ec0c0352878855ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1e600618a8673ec0c0352878855ac8">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ac07e672cf3d2d27403dcb797e54c63eb">KUBE_MAKE_PROPERTY_CUSTOM</a>(PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate the signal of a custom property. </p>
+
+</div>
+</div>
+<a id="ac2887fe4b46dad6c39a9759456b7f97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2887fe4b46dad6c39a9759456b7f97d">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_GETONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_GETONLY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ac07e672cf3d2d27403dcb797e54c63eb">KUBE_MAKE_PROPERTY_CUSTOM</a>(PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate the signal of a custom property. </p>
+
+</div>
+</div>
+<a id="a334c24c9deb553f823e29107ea0b0bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334c24c9deb553f823e29107ea0b0bde">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_GETONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_GETONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e6bb5ed595d3591b038e5386b7ee083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6bb5ed595d3591b038e5386b7ee083">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_CUSTOM_VOLATILE_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0145052ac18c0e6d71377953bdc96bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0145052ac18c0e6d71377953bdc96bac">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_GETONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_GETONLY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, private, SETTER, public, PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a constant getter, private copy / move (if supported) setter(s) and a signal. </p>
+
+</div>
+</div>
+<a id="a9c54aaa9f7a7e4fc17ed2c16fa26028c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c54aaa9f7a7e4fc17ed2c16fa26028c">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_GETONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_GETONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER, private, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a constant getter, private copy / move (if supported) setter(s) </p>
+
+</div>
+</div>
+<a id="ab4f156d43d05670afaa67bfbddfbf635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f156d43d05670afaa67bfbddfbf635">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_IMPL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +650,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -525,27 +673,27 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_make_8hpp.html#aa5349a3cb0fbdf8fdc8af4c78e7966a5">KUBE_MAKE_SIGNAL_IMPL</a>(SIGNAL_SCOPE, name##Changed) \</div>
 <div class="line">GETTER_SCOPE: \</div>
-<div class="line">    KUBE_MAKE_##GETTER_TYPE(<a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name) \</div>
+<div class="line">    KUBE_MAKE_##GETTER_TYPE(PropertyType, name) \</div>
 <div class="line">SETTER_SCOPE: \</div>
-<div class="line">    KUBE_MAKE_##SETTER_TYPE(<a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name) \</div>
+<div class="line">    KUBE_MAKE_##SETTER_TYPE(PropertyType, name) \</div>
 <div class="line">private: \</div>
-<div class="line">    KUBE_MAKE_VARIABLE(<a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__) \</div>
+<div class="line">    KUBE_MAKE_VARIABLE(PropertyType, name, __VA_ARGS__) \</div>
 </div><!-- fragment -->
 <p>Generate a property with given parameters (used internally) </p>
 
 </div>
 </div>
-<a id="ae6a702eaf24351caeab1afe532ba7e35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6a702eaf24351caeab1afe532ba7e35">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_MOVE</h2>
+<a id="ac6f0836edeaa5b822fe7d519678d79f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f0836edeaa5b822fe7d519678d79f6">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_MAKE_PROPERTY_MOVE</td>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_SIGLESS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -562,26 +710,56 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, public, SETTER_MOVE, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER, public, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate a property with a move setter. </p>
+<p>Generate a constant getter, copy / move (if supported) setter(s) </p>
 
 </div>
 </div>
-<a id="ae9864d301c9272db12c68475d2a61b59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9864d301c9272db12c68475d2a61b59">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_MOVE_READONLY</h2>
+<a id="a3e2bf83b87f45872393f362a784fafd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2bf83b87f45872393f362a784fafd8">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_SIGLESS_IMPL</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_MAKE_PROPERTY_MOVE_READONLY</td>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_SIGLESS_IMPL</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">GETTER_SCOPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">GETTER_TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SETTER_SCOPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SETTER_TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">SIGNAL_SCOPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -598,26 +776,32 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER, private, SETTER_MOVE, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Generate a readonly property with a move setter. </p>
+<b>Value:</b><div class="fragment"><div class="line">GETTER_SCOPE: \</div>
+<div class="line">    KUBE_MAKE_##GETTER_TYPE(PropertyType, name) \</div>
+<div class="line">SETTER_SCOPE: \</div>
+<div class="line">    KUBE_MAKE_##SETTER_TYPE(PropertyType, name) \</div>
+<div class="line">private: \</div>
+<div class="line">    KUBE_MAKE_VARIABLE(PropertyType, name, __VA_ARGS__) \</div>
+</div><!-- fragment -->
+<p>Generate a property with given parameters (used internally) </p>
 
 </div>
 </div>
-<a id="a3c3daf9164192cf07c1f937b0bdc5705"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c3daf9164192cf07c1f937b0bdc5705">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_MOVE_REF</h2>
+<a id="ab84b841ce0919ce64bf569ca01359414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84b841ce0919ce64bf569ca01359414">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_VOLATILE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_MAKE_PROPERTY_MOVE_REF</td>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_VOLATILE</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -634,26 +818,134 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3a9bdb6248660d5ec68862c448dba439">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, public, SETTER_MOVE, public, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, name, __VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, public, SETTER, public, PropertyType, name, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate a property with a volatile reference getter and a move setter. </p>
+<p>Generate a volatile getter, copy / move (if supported) setter(s) and a signal. </p>
 
 </div>
 </div>
-<a id="ad9ff0521f37eb6ae86a1514126c09a17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9ff0521f37eb6ae86a1514126c09a17">&#9670;&nbsp;</a></span>KUBE_MAKE_SETTER_COPY</h2>
+<a id="aaf5cf668ecaa3e4815fa126cebbe11df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5cf668ecaa3e4815fa126cebbe11df">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_VOLATILE_GETONLY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_MAKE_SETTER_COPY</td>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_VOLATILE_GETONLY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#ab4f156d43d05670afaa67bfbddfbf635">KUBE_MAKE_PROPERTY_IMPL</a>(public, GETTER_REF, private, SETTER, public, PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a volatile getter, private copy / move (if supported) setter(s) and a signal. </p>
+
+</div>
+</div>
+<a id="ae98fc8d145fe9a6e7a1b099277dda540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98fc8d145fe9a6e7a1b099277dda540">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_VOLATILE_GETONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_VOLATILE_GETONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER_REF, private, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a volatile getter, private copy / move (if supported) setter(s) </p>
+
+</div>
+</div>
+<a id="a609ad8ebecbc027d0fb38a628399f448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609ad8ebecbc027d0fb38a628399f448">&#9670;&nbsp;</a></span>KUBE_MAKE_PROPERTY_VOLATILE_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_PROPERTY_VOLATILE_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_make_8hpp.html#a3e2bf83b87f45872393f362a784fafd8">KUBE_MAKE_PROPERTY_SIGLESS_IMPL</a>(public, GETTER_REF, public, SETTER_SIGLESS, public, PropertyType, name, __VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a volatile getter, copy / move (if supported) setter(s) </p>
+
+</div>
+</div>
+<a id="ae819c0fcb2ddf62c5fff56e9a3a66c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae819c0fcb2ddf62c5fff56e9a3a66c54">&#9670;&nbsp;</a></span>KUBE_MAKE_SETTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_SETTER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -668,29 +960,31 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordtype">bool</span> name(<span class="keyword">const</span> <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;value) { \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> _PropertyType&gt; <a class="code" href="namespacek_f_1_1_graphics.html#a5fa832f919b799e3af3ba761acdbfc10">requires</a> (std::is_same_v&lt;std::remove_cvref_t&lt;_PropertyType&gt;, PropertyType&gt;) \</div>
+<div class="line">    inline <span class="keywordtype">bool</span> name(_PropertyType &amp;&amp;value) <a class="code" href="_utils_8hpp.html#aa2bb7ca43fd5832c0c7ab8faed7bce01">noexcept_forward_assignable</a>(decltype(value)) \</div>
+<div class="line">    { \</div>
 <div class="line">        if (_##name == value) \</div>
 <div class="line">            return <span class="keyword">false</span>; \</div>
-<div class="line">        _##name = value; \</div>
-<div class="line">        emit&lt;&amp;_MetaType::name##Changed&gt;(); \</div>
+<div class="line">        _##name = std::forward&lt;_PropertyType&gt;(value); \</div>
+<div class="line">        name##Changed(); \</div>
 <div class="line">        return <span class="keyword">true</span>; \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p>Copy setter for any type. </p>
+<p>Copy setter for any type (with signal emition) </p>
 
 </div>
 </div>
-<a id="a3ac60294bd9dd096ce7873ba6d6a56bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ac60294bd9dd096ce7873ba6d6a56bc">&#9670;&nbsp;</a></span>KUBE_MAKE_SETTER_MOVE</h2>
+<a id="ac79eefec41e154b96e95002a62c27d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79eefec41e154b96e95002a62c27d2e">&#9670;&nbsp;</a></span>KUBE_MAKE_SETTER_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_MAKE_SETTER_MOVE</td>
+          <td class="memname">#define KUBE_MAKE_SETTER_SIGLESS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -705,15 +999,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordtype">bool</span> name(<a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp;&amp;value) { \</div>
-<div class="line">        if (_##name == value) \</div>
-<div class="line">            return <span class="keyword">false</span>; \</div>
-<div class="line">        _##name = std::move(value); \</div>
-<div class="line">        emit&lt;&amp;_MetaType::name##Changed&gt;(); \</div>
-<div class="line">        return <span class="keyword">true</span>; \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> _PropertyType&gt; <a class="code" href="namespacek_f_1_1_graphics.html#a5fa832f919b799e3af3ba761acdbfc10">requires</a> (std::is_same_v&lt;std::remove_cvref_t&lt;_PropertyType&gt;, PropertyType&gt;) \</div>
+<div class="line">    inline <span class="keywordtype">void</span> name(_PropertyType &amp;&amp;value) <a class="code" href="_utils_8hpp.html#aa2bb7ca43fd5832c0c7ab8faed7bce01">noexcept_forward_assignable</a>(decltype(value))  \</div>
+<div class="line">    { \</div>
+<div class="line">        _##name = std::forward&lt;_PropertyType&gt;(value); \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p>Move setter for any type. </p>
+<p>Copy / Move setter for any type (without signal emition) </p>
 
 </div>
 </div>
@@ -779,14 +1071,20 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">SCOPE: \</div>
-<div class="line">    void name(<a class="code" href="_macro_utils_8hpp.html#ab5134c3c067af7ca2ecfe47d549e144c">NAME_EACH</a>(__VA_ARGS__)) { emit&lt;&amp;_MetaType::name&gt;(<a class="code" href="_macro_utils_8hpp.html#a1eedbb3a91bd5581279e8a3a25f41244">FORWARD_NAME_EACH</a>(__VA_ARGS__)); }</div>
+<div class="line">    inline <span class="keywordtype">void</span> name(<a class="code" href="_macro_utils_8hpp.html#ab5134c3c067af7ca2ecfe47d549e144c">NAME_EACH</a>(__VA_ARGS__)) \</div>
+<div class="line">    { \</div>
+<div class="line">        static <a class="code" href="classk_f_1_1_meta_1_1_signal.html">kF::Meta::Signal</a> Cache; \</div>
+<div class="line">        if (!Cache) [[unlikely]] \</div>
+<div class="line">            Cache = getMetaType().findSignal&lt;&amp;_MetaType::name&gt;(); \</div>
+<div class="line">        emitSignal(Cache __VA_OPT__(, <a class="code" href="_macro_utils_8hpp.html#a1eedbb3a91bd5581279e8a3a25f41244">FORWARD_NAME_EACH</a>(__VA_ARGS__))); \</div>
+<div class="line">    } \</div>
 </div><!-- fragment -->
 <p>Declare a signal (used internal) </p>
 
 </div>
 </div>
-<a id="aaf9c42c42aaf20a0f9cde9983ef72f9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf9c42c42aaf20a0f9cde9983ef72f9b">&#9670;&nbsp;</a></span>KUBE_MAKE_VARIABLE</h2>
+<a id="a643c498391b980fb65bd96bfcc03650f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643c498391b980fb65bd96bfcc03650f">&#9670;&nbsp;</a></span>KUBE_MAKE_VARIABLE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +1093,7 @@ Macros</h2></td></tr>
           <td class="memname">#define KUBE_MAKE_VARIABLE</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, </td>
+          <td class="paramname">PropertyType, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -812,7 +1110,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> _##name { __VA_ARGS__ };</td>
+          <td></td><td>&#160;&#160;&#160;PropertyType _##name { __VA_ARGS__ };</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -821,12 +1119,35 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="abd8eab59e7a4127369ddf80807507434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8eab59e7a4127369ddf80807507434">&#9670;&nbsp;</a></span>KUBE_MAKE_VIRTUAL_META_TYPE_GETTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_MAKE_VIRTUAL_META_TYPE_GETTER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">public</span>: \</div>
+<div class="line">    virtual <a class="code" href="classk_f_1_1_meta_1_1_type.html">kF::Meta::Type</a> getMetaType(<span class="keywordtype">void</span>) <span class="keyword">const</span> noexcept { <span class="keywordflow">return</span> <a class="code" href="classk_f_1_1_meta_1_1_factory_base.html#ad3bdb5f3c8cfd2016c1e101072c70efb">kF::Meta::Factory&lt;_MetaType&gt;::Resolve</a>(); }</div>
+</div><!-- fragment -->
+<p>Virtual meta type getter generator. </p>
+
+</div>
+</div>
 </div><!-- contents -->
+<div class="ttc" id="anamespacek_f_1_1_graphics_html_a5fa832f919b799e3af3ba761acdbfc10"><div class="ttname"><a href="namespacek_f_1_1_graphics.html#a5fa832f919b799e3af3ba761acdbfc10">kF::Graphics::requires</a></div><div class="ttdeci">requires requires</div><div class="ttdoc">Helper used to combine protected enum flags.</div><div class="ttdef"><b>Definition:</b> VulkanFlags.hpp:22</div></div>
 <div class="ttc" id="a_m_p_m_c_queue_8ipp_html_a781fc8e643f4d363e38b43d82c1862d3"><div class="ttname"><a href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a></div><div class="ttdeci">else new cell Type(std::forward&lt; Args &gt;(args)...)</div></div>
-<div class="ttc" id="a_make_8hpp_html_aa5349a3cb0fbdf8fdc8af4c78e7966a5"><div class="ttname"><a href="_make_8hpp.html#aa5349a3cb0fbdf8fdc8af4c78e7966a5">KUBE_MAKE_SIGNAL_IMPL</a></div><div class="ttdeci">#define KUBE_MAKE_SIGNAL_IMPL(SCOPE, name,...)</div><div class="ttdoc">Declare a signal (used internal)</div><div class="ttdef"><b>Definition:</b> Make.hpp:87</div></div>
-<div class="ttc" id="a_macro_utils_8hpp_html_ab5134c3c067af7ca2ecfe47d549e144c"><div class="ttname"><a href="_macro_utils_8hpp.html#ab5134c3c067af7ca2ecfe47d549e144c">NAME_EACH</a></div><div class="ttdeci">#define NAME_EACH(...)</div><div class="ttdef"><b>Definition:</b> MacroUtils.hpp:64</div></div>
-<div class="ttc" id="a_macro_utils_8hpp_html_a1eedbb3a91bd5581279e8a3a25f41244"><div class="ttname"><a href="_macro_utils_8hpp.html#a1eedbb3a91bd5581279e8a3a25f41244">FORWARD_NAME_EACH</a></div><div class="ttdeci">#define FORWARD_NAME_EACH(...)</div><div class="ttdef"><b>Definition:</b> MacroUtils.hpp:85</div></div>
-<div class="ttc" id="a_make_8hpp_html_abdb659d6fad86b79bb27f3fcf2e949d4"><div class="ttname"><a href="_make_8hpp.html#abdb659d6fad86b79bb27f3fcf2e949d4">KUBE_MAKE_GETTER</a></div><div class="ttdeci">#define KUBE_MAKE_GETTER(Type, name)</div><div class="ttdoc">Const reference getter for any type.</div><div class="ttdef"><b>Definition:</b> Make.hpp:58</div></div>
+<div class="ttc" id="a_utils_8hpp_html_aa2bb7ca43fd5832c0c7ab8faed7bce01"><div class="ttname"><a href="_utils_8hpp.html#aa2bb7ca43fd5832c0c7ab8faed7bce01">noexcept_forward_assignable</a></div><div class="ttdeci">#define noexcept_forward_assignable(Type)</div><div class="ttdef"><b>Definition:</b> Utils.hpp:52</div></div>
+<div class="ttc" id="a_make_8hpp_html_aa5349a3cb0fbdf8fdc8af4c78e7966a5"><div class="ttname"><a href="_make_8hpp.html#aa5349a3cb0fbdf8fdc8af4c78e7966a5">KUBE_MAKE_SIGNAL_IMPL</a></div><div class="ttdeci">#define KUBE_MAKE_SIGNAL_IMPL(SCOPE, name,...)</div><div class="ttdoc">Declare a signal (used internal)</div><div class="ttdef"><b>Definition:</b> Make.hpp:127</div></div>
+<div class="ttc" id="a_macro_utils_8hpp_html_ab5134c3c067af7ca2ecfe47d549e144c"><div class="ttname"><a href="_macro_utils_8hpp.html#ab5134c3c067af7ca2ecfe47d549e144c">NAME_EACH</a></div><div class="ttdeci">#define NAME_EACH(...)</div><div class="ttdef"><b>Definition:</b> MacroUtils.hpp:67</div></div>
+<div class="ttc" id="a_macro_utils_8hpp_html_a1eedbb3a91bd5581279e8a3a25f41244"><div class="ttname"><a href="_macro_utils_8hpp.html#a1eedbb3a91bd5581279e8a3a25f41244">FORWARD_NAME_EACH</a></div><div class="ttdeci">#define FORWARD_NAME_EACH(...)</div><div class="ttdef"><b>Definition:</b> MacroUtils.hpp:88</div></div>
+<div class="ttc" id="a_make_8hpp_html_a6df6fa0b74b5a6e648e3ee71bd4ad249"><div class="ttname"><a href="_make_8hpp.html#a6df6fa0b74b5a6e648e3ee71bd4ad249">KUBE_MAKE_GETTER</a></div><div class="ttdeci">#define KUBE_MAKE_GETTER(PropertyType, name)</div><div class="ttdoc">Const reference getter for any type.</div><div class="ttdef"><b>Definition:</b> Make.hpp:98</div></div>
+<div class="ttc" id="aclassk_f_1_1_meta_1_1_signal_html"><div class="ttname"><a href="classk_f_1_1_meta_1_1_signal.html">kF::Meta::Signal</a></div><div class="ttdoc">Signal is used to store meta-data about a free / member / static function.</div><div class="ttdef"><b>Definition:</b> Signal.hpp:19</div></div>
+<div class="ttc" id="aclassk_f_1_1_meta_1_1_type_html"><div class="ttname"><a href="classk_f_1_1_meta_1_1_type.html">kF::Meta::Type</a></div><div class="ttdoc">Type is used to store meta-data about a type.</div><div class="ttdef"><b>Definition:</b> Type.hpp:17</div></div>
+<div class="ttc" id="aclassk_f_1_1_meta_1_1_factory_base_html_ad3bdb5f3c8cfd2016c1e101072c70efb"><div class="ttname"><a href="classk_f_1_1_meta_1_1_factory_base.html#ad3bdb5f3c8cfd2016c1e101072c70efb">kF::Meta::FactoryBase::Resolve</a></div><div class="ttdeci">static Type Resolve(void) noexcept</div><div class="ttdoc">Resolve the templated type's meta descriptor.</div><div class="ttdef"><b>Definition:</b> Factory.hpp:18</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

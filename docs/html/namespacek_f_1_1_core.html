@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -95,6 +95,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_flat_string_base.html">FlatStringBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flat string is pointer-sized std::string alternative that is NOT NULL TERMINATED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness : Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don't have small optimization, it will perform worse than an std::string with short strings.  <a href="classk_f_1_1_core_1_1_flat_string_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_functor.html">Functor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html">Functor&lt; Return(Args...), CacheSize &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Very fast opaque functor but only takes trivial types less or equal sized than cacheline eighth.  <a href="classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_heap_array.html">HeapArray</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_m_p_m_c_queue.html">MPMCQueue</a></td></tr>
@@ -111,11 +116,72 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a12de8ce24a8396324a46bf9fe5db0c51"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </td></tr>
+<tr class="memitem:a12de8ce24a8396324a46bf9fe5db0c51"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a12de8ce24a8396324a46bf9fe5db0c51">AllocatedFlatVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base.html">Internal::AllocatedFlatVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;</td></tr>
+<tr class="separator:a12de8ce24a8396324a46bf9fe5db0c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a034302506ea04126325184782373e6"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </td></tr>
+<tr class="memitem:a3a034302506ea04126325184782373e6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a3a034302506ea04126325184782373e6">AllocatedSmallVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base.html">Internal::AllocatedSmallVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a> &gt;</td></tr>
+<tr class="separator:a3a034302506ea04126325184782373e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36b2fa8958efee5996c310b24653c662"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc&gt; </td></tr>
+<tr class="memitem:a36b2fa8958efee5996c310b24653c662"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a36b2fa8958efee5996c310b24653c662">AllocatedTinySmallVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a3a034302506ea04126325184782373e6">AllocatedSmallVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, std::uint32_t &gt;</td></tr>
+<tr class="separator:a36b2fa8958efee5996c310b24653c662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871bc78ce110157ca20fc4cccc5c4a27"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </td></tr>
+<tr class="memitem:a871bc78ce110157ca20fc4cccc5c4a27"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a871bc78ce110157ca20fc4cccc5c4a27">AllocatedVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base.html">Internal::AllocatedVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;</td></tr>
+<tr class="separator:a871bc78ce110157ca20fc4cccc5c4a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1089aee11ddcf7200743aaa46303d08"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc&gt; </td></tr>
+<tr class="memitem:af1089aee11ddcf7200743aaa46303d08"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#af1089aee11ddcf7200743aaa46303d08">AllocatedTinyVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a5a34083f574656e84e168943e48ddcd6">Vector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t &gt;</td></tr>
+<tr class="separator:af1089aee11ddcf7200743aaa46303d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244fb0432908602d5ab4f7d03bda32ab"><td class="memTemplParams" colspan="2">template&lt;typename Signature , std::size_t CacheSize = CacheLineQuarterSize&gt; </td></tr>
+<tr class="memitem:a244fb0432908602d5ab4f7d03bda32ab"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a244fb0432908602d5ab4f7d03bda32ab">Dispatcher</a> = <a class="el" href="classk_f_1_1_core_1_1_dispatcher_details.html">DispatcherDetails</a>&lt; Signature, CacheSize, <a class="el" href="classk_f_1_1_core_1_1_functor.html">Functor</a> &gt;</td></tr>
+<tr class="memdesc:a244fb0432908602d5ab4f7d03bda32ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of dispatcher with trivial functors.  <a href="namespacek_f_1_1_core.html#a244fb0432908602d5ab4f7d03bda32ab">More...</a><br /></td></tr>
+<tr class="separator:a244fb0432908602d5ab4f7d03bda32ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bae58209dceb86f95befc2a55871133"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a5bae58209dceb86f95befc2a55871133">FlatString</a> = <a class="el" href="classk_f_1_1_core_1_1_flat_string_base.html">FlatStringBase</a>&lt; char &gt;</td></tr>
 <tr class="separator:a5bae58209dceb86f95befc2a55871133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a301d08d1cc73382fcecd499df46b58a1"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::integral Range = std::size_t&gt; </td></tr>
 <tr class="memitem:a301d08d1cc73382fcecd499df46b58a1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a301d08d1cc73382fcecd499df46b58a1">FlatVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_flat_vector_base.html">Internal::FlatVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;</td></tr>
 <tr class="separator:a301d08d1cc73382fcecd499df46b58a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3542d788593e97956f44550001f0bc"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, std::integral Range = std::size_t&gt; </td></tr>
+<tr class="memitem:a0a3542d788593e97956f44550001f0bc"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a0a3542d788593e97956f44550001f0bc">SmallVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_small_vector_base.html">Internal::SmallVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a> &gt;</td></tr>
+<tr class="separator:a0a3542d788593e97956f44550001f0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492bd9e9a0db0fa9247ea76ebe4de4b7"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity&gt; </td></tr>
+<tr class="memitem:a492bd9e9a0db0fa9247ea76ebe4de4b7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a492bd9e9a0db0fa9247ea76ebe4de4b7">TinySmallVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a0a3542d788593e97956f44550001f0bc">SmallVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, std::uint32_t &gt;</td></tr>
+<tr class="separator:a492bd9e9a0db0fa9247ea76ebe4de4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bbecb820e5bdb0c690f8043eea9ecf"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a22bbecb820e5bdb0c690f8043eea9ecf"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a22bbecb820e5bdb0c690f8043eea9ecf">SortedAllocatedFlatVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base.html">Internal::AllocatedFlatVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare &gt;</td></tr>
+<tr class="separator:a22bbecb820e5bdb0c690f8043eea9ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0245adb4a1745d61e753dc4f5fe1ca9"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:af0245adb4a1745d61e753dc4f5fe1ca9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#af0245adb4a1745d61e753dc4f5fe1ca9">SortedAllocatedTinyFlatVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a22bbecb820e5bdb0c690f8043eea9ecf">SortedAllocatedFlatVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, AllocateFunc, DeallocateFunc, std::uint32_t, Compare &gt;</td></tr>
+<tr class="separator:af0245adb4a1745d61e753dc4f5fe1ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6712c52c2190eabcf1389128c1437d2d"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a6712c52c2190eabcf1389128c1437d2d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a6712c52c2190eabcf1389128c1437d2d">SortedAllocatedSmallVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base.html">Internal::AllocatedSmallVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a> &gt;</td></tr>
+<tr class="separator:a6712c52c2190eabcf1389128c1437d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0eb5f0e2428f0ec3f9c62b790fde5af"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:ae0eb5f0e2428f0ec3f9c62b790fde5af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#ae0eb5f0e2428f0ec3f9c62b790fde5af">SortedAllocatedTinySmallVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a6712c52c2190eabcf1389128c1437d2d">SortedAllocatedSmallVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, std::uint32_t, Compare &gt;</td></tr>
+<tr class="separator:ae0eb5f0e2428f0ec3f9c62b790fde5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa366db7ce42c4be8651a49971c99a1b7"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:aa366db7ce42c4be8651a49971c99a1b7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#aa366db7ce42c4be8651a49971c99a1b7">SortedAllocatedVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base.html">Internal::AllocatedVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare &gt;</td></tr>
+<tr class="separator:aa366db7ce42c4be8651a49971c99a1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7763ef0b0b70d6da970f8124d8927b"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a2a7763ef0b0b70d6da970f8124d8927b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a2a7763ef0b0b70d6da970f8124d8927b">SortedAllocatedTinyVector</a> = <a class="el" href="namespacek_f_1_1_core.html#aa366db7ce42c4be8651a49971c99a1b7">SortedAllocatedVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, AllocateFunc, DeallocateFunc, std::uint32_t, Compare &gt;</td></tr>
+<tr class="separator:a2a7763ef0b0b70d6da970f8124d8927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187021a3073707e705800f9bf41d192b"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a187021a3073707e705800f9bf41d192b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a187021a3073707e705800f9bf41d192b">SortedFlatVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_flat_vector_base.html">Internal::FlatVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare &gt;</td></tr>
+<tr class="separator:a187021a3073707e705800f9bf41d192b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38df1cbee5f11530875724f383ed15e7"><td class="memTemplParams" colspan="2">template&lt;typename Type , typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a38df1cbee5f11530875724f383ed15e7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a38df1cbee5f11530875724f383ed15e7">SortedTinyFlatVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a187021a3073707e705800f9bf41d192b">SortedFlatVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t, Compare &gt;</td></tr>
+<tr class="separator:a38df1cbee5f11530875724f383ed15e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2545bf104317cf4c0cc0eec735d4ba8f"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a2545bf104317cf4c0cc0eec735d4ba8f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a2545bf104317cf4c0cc0eec735d4ba8f">SortedSmallVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_small_vector_base.html">Internal::SmallVectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a> &gt;</td></tr>
+<tr class="separator:a2545bf104317cf4c0cc0eec735d4ba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf18cff6e761a027d99fcbf47f017b6"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:acdf18cff6e761a027d99fcbf47f017b6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#acdf18cff6e761a027d99fcbf47f017b6">SortedTinySmallVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a2545bf104317cf4c0cc0eec735d4ba8f">SortedSmallVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, std::uint32_t, Compare &gt;</td></tr>
+<tr class="separator:acdf18cff6e761a027d99fcbf47f017b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a150c19fa10df80a89445118b5fca18"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:a5a150c19fa10df80a89445118b5fca18"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a5a150c19fa10df80a89445118b5fca18">SortedVector</a> = <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt; <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">Internal::VectorBase</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare &gt;</td></tr>
+<tr class="separator:a5a150c19fa10df80a89445118b5fca18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4e10fdf1d95e98085d52c078654516"><td class="memTemplParams" colspan="2">template&lt;typename Type , typename Compare  = std::less&lt;Type&gt;&gt; </td></tr>
+<tr class="memitem:ace4e10fdf1d95e98085d52c078654516"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#ace4e10fdf1d95e98085d52c078654516">SortedTinyVector</a> = <a class="el" href="namespacek_f_1_1_core.html#a5a150c19fa10df80a89445118b5fca18">SortedVector</a>&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t, Compare &gt;</td></tr>
+<tr class="separator:ace4e10fdf1d95e98085d52c078654516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab87463c4c51236e14eb4caf724d46e98"><td class="memTemplParams" colspan="2">template&lt;typename Signature , std::size_t CacheSize = CacheLineEighthSize&gt; </td></tr>
 <tr class="memitem:ab87463c4c51236e14eb4caf724d46e98"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#ab87463c4c51236e14eb4caf724d46e98">TrivialDispatcher</a> = <a class="el" href="classk_f_1_1_core_1_1_dispatcher_details.html">DispatcherDetails</a>&lt; Signature, CacheSize, <a class="el" href="classk_f_1_1_core_1_1_trivial_functor.html">TrivialFunctor</a> &gt;</td></tr>
 <tr class="memdesc:ab87463c4c51236e14eb4caf724d46e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of dispatcher with trivial functors.  <a href="namespacek_f_1_1_core.html#ab87463c4c51236e14eb4caf724d46e98">More...</a><br /></td></tr>
@@ -129,10 +195,6 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1bd36cf682b0dbce3338a171245f182f"><td class="memTemplParams" colspan="2">template&lt;typename Functor , std::size_t CacheSize&gt; </td></tr>
-<tr class="memitem:a1bd36cf682b0dbce3338a171245f182f"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a1bd36cf682b0dbce3338a171245f182f">TrivialFunctorRequirements</a></td></tr>
-<tr class="memdesc:a1bd36cf682b0dbce3338a171245f182f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that a given functor met the trivial requirements of <a class="el" href="classk_f_1_1_core_1_1_trivial_functor.html">TrivialFunctor</a>.  <a href="namespacek_f_1_1_core.html#a1bd36cf682b0dbce3338a171245f182f">More...</a><br /></td></tr>
-<tr class="separator:a1bd36cf682b0dbce3338a171245f182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f35d7f50ec7928ea8e42e01493e2e1"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#aa1f35d7f50ec7928ea8e42e01493e2e1">CacheLineSize</a> = sizeof(std::size_t) * 8</td></tr>
 <tr class="memdesc:aa1f35d7f50ec7928ea8e42e01493e2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Theorical cacheline size.  <a href="namespacek_f_1_1_core.html#aa1f35d7f50ec7928ea8e42e01493e2e1">More...</a><br /></td></tr>
 <tr class="separator:aa1f35d7f50ec7928ea8e42e01493e2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,16 +208,119 @@ Variables</h2></td></tr>
 <tr class="separator:a3737452225c53c00a3dc3932a009e952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>@ Author: Matthieu Moinvaziri @ Description: Dispatcher</p>
+<div class="textblock"><p>@ Author: Matthieu Moinvaziri @ Description: FlatVector</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Small Vector</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Vector</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Trivial dispatcher</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Dispatcher</p>
 <p>@ Author: Matthieu Moinvaziri @ Description: FlatString</p>
-<p>@ Author: Matthieu Moinvaziri @ Description: FlatVector @ Author: Matthieu Moinvaziri @ Description: Vector</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="classk_f_1_1_core_1_1_functor.html">Functor</a></p>
 <p>@ Author: Matthieu Moinvaziri @ Description: A dead simple runtime array</p>
 <p>@ Author: Matthieu Moinvaziri @ Description: MPMC Queue</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Sorted FlatVector</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Sorted SmallVector</p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Sorted Vector</p>
 <p>@ Author: Matthieu Moinvaziri @ Description: SPSC Queue</p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Trivial dispatcher</p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Trivial opaque functor holder</p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Vector </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Trivial opaque functor holder </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a12de8ce24a8396324a46bf9fe5db0c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12de8ce24a8396324a46bf9fe5db0c51">&#9670;&nbsp;</a></span>AllocatedFlatVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a12de8ce24a8396324a46bf9fe5db0c51">kF::Core::AllocatedFlatVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base.html">Internal::AllocatedFlatVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a034302506ea04126325184782373e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a034302506ea04126325184782373e6">&#9670;&nbsp;</a></span>AllocatedSmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a3a034302506ea04126325184782373e6">kF::Core::AllocatedSmallVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base.html">Internal::AllocatedSmallVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36b2fa8958efee5996c310b24653c662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36b2fa8958efee5996c310b24653c662">&#9670;&nbsp;</a></span>AllocatedTinySmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a36b2fa8958efee5996c310b24653c662">kF::Core::AllocatedTinySmallVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a3a034302506ea04126325184782373e6">AllocatedSmallVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, std::uint32_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1089aee11ddcf7200743aaa46303d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1089aee11ddcf7200743aaa46303d08">&#9670;&nbsp;</a></span>AllocatedTinyVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#af1089aee11ddcf7200743aaa46303d08">kF::Core::AllocatedTinyVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a5a34083f574656e84e168943e48ddcd6">Vector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a871bc78ce110157ca20fc4cccc5c4a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871bc78ce110157ca20fc4cccc5c4a27">&#9670;&nbsp;</a></span>AllocatedVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a871bc78ce110157ca20fc4cccc5c4a27">kF::Core::AllocatedVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base.html">Internal::AllocatedVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a244fb0432908602d5ab4f7d03bda32ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244fb0432908602d5ab4f7d03bda32ab">&#9670;&nbsp;</a></span>Dispatcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Signature , std::size_t CacheSize = CacheLineQuarterSize&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a244fb0432908602d5ab4f7d03bda32ab">kF::Core::Dispatcher</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_dispatcher_details.html">DispatcherDetails</a>&lt;Signature, CacheSize, <a class="el" href="classk_f_1_1_core_1_1_functor.html">Functor</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specialization of dispatcher with trivial functors. </p>
+
+</div>
+</div>
 <a id="a5bae58209dceb86f95befc2a55871133"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bae58209dceb86f95befc2a55871133">&#9670;&nbsp;</a></span>FlatString</h2>
 
@@ -180,6 +345,230 @@ template&lt;typename Type , std::integral Range = std::size_t&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a301d08d1cc73382fcecd499df46b58a1">kF::Core::FlatVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_flat_vector_base.html">Internal::FlatVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a3542d788593e97956f44550001f0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3542d788593e97956f44550001f0bc">&#9670;&nbsp;</a></span>SmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, std::integral Range = std::size_t&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a0a3542d788593e97956f44550001f0bc">kF::Core::SmallVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_small_vector_base.html">Internal::SmallVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22bbecb820e5bdb0c690f8043eea9ecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22bbecb820e5bdb0c690f8043eea9ecf">&#9670;&nbsp;</a></span>SortedAllocatedFlatVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a22bbecb820e5bdb0c690f8043eea9ecf">kF::Core::SortedAllocatedFlatVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base.html">Internal::AllocatedFlatVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6712c52c2190eabcf1389128c1437d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6712c52c2190eabcf1389128c1437d2d">&#9670;&nbsp;</a></span>SortedAllocatedSmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a6712c52c2190eabcf1389128c1437d2d">kF::Core::SortedAllocatedSmallVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base.html">Internal::AllocatedSmallVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0245adb4a1745d61e753dc4f5fe1ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0245adb4a1745d61e753dc4f5fe1ca9">&#9670;&nbsp;</a></span>SortedAllocatedTinyFlatVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#af0245adb4a1745d61e753dc4f5fe1ca9">kF::Core::SortedAllocatedTinyFlatVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a22bbecb820e5bdb0c690f8043eea9ecf">SortedAllocatedFlatVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, AllocateFunc, DeallocateFunc, std::uint32_t, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0eb5f0e2428f0ec3f9c62b790fde5af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0eb5f0e2428f0ec3f9c62b790fde5af">&#9670;&nbsp;</a></span>SortedAllocatedTinySmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#ae0eb5f0e2428f0ec3f9c62b790fde5af">kF::Core::SortedAllocatedTinySmallVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a6712c52c2190eabcf1389128c1437d2d">SortedAllocatedSmallVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, std::uint32_t, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a7763ef0b0b70d6da970f8124d8927b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a7763ef0b0b70d6da970f8124d8927b">&#9670;&nbsp;</a></span>SortedAllocatedTinyVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a2a7763ef0b0b70d6da970f8124d8927b">kF::Core::SortedAllocatedTinyVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#aa366db7ce42c4be8651a49971c99a1b7">SortedAllocatedVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, AllocateFunc, DeallocateFunc, std::uint32_t, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa366db7ce42c4be8651a49971c99a1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa366db7ce42c4be8651a49971c99a1b7">&#9670;&nbsp;</a></span>SortedAllocatedVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#aa366db7ce42c4be8651a49971c99a1b7">kF::Core::SortedAllocatedVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base.html">Internal::AllocatedVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a187021a3073707e705800f9bf41d192b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a187021a3073707e705800f9bf41d192b">&#9670;&nbsp;</a></span>SortedFlatVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a187021a3073707e705800f9bf41d192b">kF::Core::SortedFlatVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_flat_vector_base.html">Internal::FlatVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2545bf104317cf4c0cc0eec735d4ba8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2545bf104317cf4c0cc0eec735d4ba8f">&#9670;&nbsp;</a></span>SortedSmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a2545bf104317cf4c0cc0eec735d4ba8f">kF::Core::SortedSmallVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_small_vector_base.html">Internal::SmallVectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38df1cbee5f11530875724f383ed15e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38df1cbee5f11530875724f383ed15e7">&#9670;&nbsp;</a></span>SortedTinyFlatVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a38df1cbee5f11530875724f383ed15e7">kF::Core::SortedTinyFlatVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a187021a3073707e705800f9bf41d192b">SortedFlatVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdf18cff6e761a027d99fcbf47f017b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdf18cff6e761a027d99fcbf47f017b6">&#9670;&nbsp;</a></span>SortedTinySmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#acdf18cff6e761a027d99fcbf47f017b6">kF::Core::SortedTinySmallVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a2545bf104317cf4c0cc0eec735d4ba8f">SortedSmallVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, std::uint32_t, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace4e10fdf1d95e98085d52c078654516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace4e10fdf1d95e98085d52c078654516">&#9670;&nbsp;</a></span>SortedTinyVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#ace4e10fdf1d95e98085d52c078654516">kF::Core::SortedTinyVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a5a150c19fa10df80a89445118b5fca18">SortedVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a150c19fa10df80a89445118b5fca18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a150c19fa10df80a89445118b5fca18">&#9670;&nbsp;</a></span>SortedVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::integral Range = std::size_t, typename Compare  = std::less&lt;Type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a5a150c19fa10df80a89445118b5fca18">kF::Core::SortedVector</a> = typedef <a class="el" href="classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details.html">Internal::SortedVectorDetails</a>&lt;<a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">Internal::VectorBase</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, Compare&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a492bd9e9a0db0fa9247ea76ebe4de4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492bd9e9a0db0fa9247ea76ebe4de4b7">&#9670;&nbsp;</a></span>TinySmallVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , std::size_t OptimizedCapacity&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacek_f_1_1_core.html#a492bd9e9a0db0fa9247ea76ebe4de4b7">kF::Core::TinySmallVector</a> = typedef <a class="el" href="namespacek_f_1_1_core.html#a0a3542d788593e97956f44550001f0bc">SmallVector</a>&lt;<a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, std::uint32_t&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -346,26 +735,6 @@ template&lt;typename Type , std::integral Range = std::size_t&gt; </div>
 </div><div class="memdoc">
 
 <p>Theorical cacheline size. </p>
-
-</div>
-</div>
-<a id="a1bd36cf682b0dbce3338a171245f182f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bd36cf682b0dbce3338a171245f182f">&#9670;&nbsp;</a></span>TrivialFunctorRequirements</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Functor , std::size_t CacheSize&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">concept kF::Core::TrivialFunctorRequirements</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">        std::conjunction_v&lt;std::is_trivial&lt;Functor&gt;, std::bool_constant&lt;<span class="keyword">sizeof</span>(Functor) &lt;= CacheSize&gt;&gt;</div>
-</div><!-- fragment -->
-<p>Ensure that a given functor met the trivial requirements of <a class="el" href="classk_f_1_1_core_1_1_trivial_functor.html">TrivialFunctor</a>. </p>
 
 </div>
 </div>

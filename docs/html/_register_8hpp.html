@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -69,19 +69,24 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Register.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_macro_utils_8hpp_source.html">Kube/Core/MacroUtils.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;<a class="el" href="_macro_utils_8hpp_source.html">Kube/Core/MacroUtils.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Register.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_register_8hpp__incl.png" border="0" usemap="#a_kube_2_object_2_register_8hpp" alt=""/></div>
 <map name="_kube_2_object_2_register_8hpp" id="a_kube_2_object_2_register_8hpp">
-<area shape="rect" title=" " alt="" coords="7,5,179,32"/>
-<area shape="rect" href="_macro_utils_8hpp.html" title=" " alt="" coords="5,80,181,107"/>
+<area shape="rect" title=" " alt="" coords="29,5,201,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,77,107"/>
+<area shape="rect" href="_macro_utils_8hpp.html" title=" " alt="" coords="101,80,277,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -89,55 +94,127 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_register_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_object_2_register_8hppdep" alt=""/></div>
 <map name="_kube_2_object_2_register_8hppdep" id="a_kube_2_object_2_register_8hppdep">
-<area shape="rect" title=" " alt="" coords="180,5,352,32"/>
-<area shape="rect" href="_reflection_8hpp.html" title=" " alt="" coords="175,80,357,107"/>
-<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="185,155,347,181"/>
-<area shape="rect" href="_object_8cpp.html" title=" " alt="" coords="5,229,167,256"/>
-<area shape="rect" href="_item_8hpp.html" title=" " alt="" coords="191,229,341,256"/>
-<area shape="rect" href="_reflection_8cpp.html" title=" " alt="" coords="365,229,548,256"/>
+<area shape="rect" title=" " alt="" coords="108,5,280,32"/>
+<area shape="rect" href="_reflection_8hpp.html" title=" " alt="" coords="103,80,285,107"/>
+<area shape="rect" href="_reflection_8cpp.html" title=" " alt="" coords="5,155,188,181"/>
+<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="212,155,373,181"/>
 </map>
 </div>
 </div>
 <p><a href="_register_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacek_f"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f.html">kF</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacek_f_1_1_internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html">kF::Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a2840fe5dd98eebd57318a7bf86267f38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a2840fe5dd98eebd57318a7bf86267f38">KUBE_REGISTER_TYPE</a>(ClassType, ...)&#160;&#160;&#160;    <a class="el" href="classk_f_1_1_meta_1_1_factory.html">kF::Meta::Factory</a>&lt;ClassType&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#ClassType))</td></tr>
-<tr class="memdesc:a2840fe5dd98eebd57318a7bf86267f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new type (already used by 'KUBE_REGISTER' and 'KUBE_REGISTER_INSTANTIABLE')  <a href="_register_8hpp.html#a2840fe5dd98eebd57318a7bf86267f38">More...</a><br /></td></tr>
-<tr class="separator:a2840fe5dd98eebd57318a7bf86267f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaef9b32aefdfb2d178d9d1dabe833e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aaaef9b32aefdfb2d178d9d1dabe833e4">KUBE_REGISTER_BASE</a>(BaseType)&#160;&#160;&#160;    .base&lt;BaseType&gt;()</td></tr>
+<tr class="memitem:a2cb079b1b575cc68cc64fd240e239b07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">KUBE_REGISTER_LATER</a>(ClassType, ...)</td></tr>
+<tr class="memdesc:a2cb079b1b575cc68cc64fd240e239b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add static registerer for automatic registeration.  <a href="_register_8hpp.html#a2cb079b1b575cc68cc64fd240e239b07">More...</a><br /></td></tr>
+<tr class="separator:a2cb079b1b575cc68cc64fd240e239b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e25b73d3592f894548130de25c00722"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a8e25b73d3592f894548130de25c00722">KUBE_REGISTER_TYPE</a>(ClassType,  ClassLiteral)</td></tr>
+<tr class="memdesc:a8e25b73d3592f894548130de25c00722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new type (already used by 'KUBE_REGISTER' and 'KUBE_REGISTER_INSTANTIABLE')  <a href="_register_8hpp.html#a8e25b73d3592f894548130de25c00722">More...</a><br /></td></tr>
+<tr class="separator:a8e25b73d3592f894548130de25c00722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaef9b32aefdfb2d178d9d1dabe833e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aaaef9b32aefdfb2d178d9d1dabe833e4">KUBE_REGISTER_BASE</a>(BaseType)&#160;&#160;&#160;    .template base&lt;BaseType&gt;()</td></tr>
 <tr class="memdesc:aaaef9b32aefdfb2d178d9d1dabe833e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a base type.  <a href="_register_8hpp.html#aaaef9b32aefdfb2d178d9d1dabe833e4">More...</a><br /></td></tr>
 <tr class="separator:aaaef9b32aefdfb2d178d9d1dabe833e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a012403d8461b9d617e84ba08f9477bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a012403d8461b9d617e84ba08f9477bbf">KUBE_REGISTER_CONSTRUCTOR</a>(...)&#160;&#160;&#160;    .constructor&lt;__VA_ARGS__&gt;();</td></tr>
+<tr class="memitem:a012403d8461b9d617e84ba08f9477bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a012403d8461b9d617e84ba08f9477bbf">KUBE_REGISTER_CONSTRUCTOR</a>(...)&#160;&#160;&#160;    .template constructor&lt;__VA_ARGS__&gt;();</td></tr>
 <tr class="memdesc:a012403d8461b9d617e84ba08f9477bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom constructor (not default / copy / move)  <a href="_register_8hpp.html#a012403d8461b9d617e84ba08f9477bbf">More...</a><br /></td></tr>
 <tr class="separator:a012403d8461b9d617e84ba08f9477bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada09df313433c110ac78e8674448ae63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#ada09df313433c110ac78e8674448ae63">KUBE_REGISTER_PROPERTY_COPY</a>(PropertyType,  name, ...)</td></tr>
-<tr class="memdesc:ada09df313433c110ac78e8674448ae63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a copy only property.  <a href="_register_8hpp.html#ada09df313433c110ac78e8674448ae63">More...</a><br /></td></tr>
-<tr class="separator:ada09df313433c110ac78e8674448ae63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa84883be05e17cf4e9a29180fb23e6d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aa84883be05e17cf4e9a29180fb23e6d1">KUBE_REGISTER_PROPERTY_COPY_REF</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_register_8hpp.html#ada09df313433c110ac78e8674448ae63">KUBE_REGISTER_PROPERTY_COPY</a>(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:aa84883be05e17cf4e9a29180fb23e6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae13315d37e3b7f5b7ec87f925d08789c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#ae13315d37e3b7f5b7ec87f925d08789c">KUBE_REGISTER_PROPERTY_COPY_READONLY</a>(PropertyType,  name, ...)</td></tr>
-<tr class="memdesc:ae13315d37e3b7f5b7ec87f925d08789c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a read and copy only property.  <a href="_register_8hpp.html#ae13315d37e3b7f5b7ec87f925d08789c">More...</a><br /></td></tr>
-<tr class="separator:ae13315d37e3b7f5b7ec87f925d08789c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec91758e51b7038fe91154ed75d7196"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a5ec91758e51b7038fe91154ed75d7196">KUBE_REGISTER_PROPERTY_MOVE</a>(PropertyType,  name, ...)</td></tr>
-<tr class="memdesc:a5ec91758e51b7038fe91154ed75d7196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a move only property.  <a href="_register_8hpp.html#a5ec91758e51b7038fe91154ed75d7196">More...</a><br /></td></tr>
-<tr class="separator:a5ec91758e51b7038fe91154ed75d7196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6a36c1b8795d30da9a0542d516b0e24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aa6a36c1b8795d30da9a0542d516b0e24">KUBE_REGISTER_PROPERTY_MOVE_REF</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_register_8hpp.html#a5ec91758e51b7038fe91154ed75d7196">KUBE_REGISTER_PROPERTY_MOVE</a>(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="separator:aa6a36c1b8795d30da9a0542d516b0e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fee9d445af8e917d989a5f79ed00621"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a7fee9d445af8e917d989a5f79ed00621">KUBE_REGISTER_PROPERTY_MOVE_READONLY</a>(PropertyType,  name, ...)&#160;&#160;&#160;    <a class="el" href="_register_8hpp.html#ae13315d37e3b7f5b7ec87f925d08789c">KUBE_REGISTER_PROPERTY_COPY_READONLY</a>(PropertyType, name, __VA_ARGS__)</td></tr>
-<tr class="memdesc:a7fee9d445af8e917d989a5f79ed00621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a read and move only property.  <a href="_register_8hpp.html#a7fee9d445af8e917d989a5f79ed00621">More...</a><br /></td></tr>
-<tr class="separator:a7fee9d445af8e917d989a5f79ed00621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a333ea323efaa841907c188cb1decacb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType,  name,  getter,  setter)&#160;&#160;&#160;    .<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>&lt;getter, setter&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td></tr>
-<tr class="memdesc:a333ea323efaa841907c188cb1decacb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter and setter.  <a href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">More...</a><br /></td></tr>
-<tr class="separator:a333ea323efaa841907c188cb1decacb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb6dd3997c8c57762752de387bc64bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aadb6dd3997c8c57762752de387bc64bf">KUBE_REGISTER_FUNCTION</a>(name)&#160;&#160;&#160;    .function&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td></tr>
+<tr class="memitem:abcb841ec4d7fb41eff911ab59f846788"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#abcb841ec4d7fb41eff911ab59f846788">KUBE_REGISTER_PROPERTY</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:abcb841ec4d7fb41eff911ab59f846788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a constant readable, writable and signalable property.  <a href="_register_8hpp.html#abcb841ec4d7fb41eff911ab59f846788">More...</a><br /></td></tr>
+<tr class="separator:abcb841ec4d7fb41eff911ab59f846788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692c8562c92a48071bf8b87ae0c0ee0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a692c8562c92a48071bf8b87ae0c0ee0b">KUBE_REGISTER_PROPERTY_SIGLESS</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:a692c8562c92a48071bf8b87ae0c0ee0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a constant readable and writable property (no signal)  <a href="_register_8hpp.html#a692c8562c92a48071bf8b87ae0c0ee0b">More...</a><br /></td></tr>
+<tr class="separator:a692c8562c92a48071bf8b87ae0c0ee0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec54663fd735cc9b4c353c0cae68fda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a0ec54663fd735cc9b4c353c0cae68fda">KUBE_REGISTER_PROPERTY_VOLATILE</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:a0ec54663fd735cc9b4c353c0cae68fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a volatile readable, writable and signalable property.  <a href="_register_8hpp.html#a0ec54663fd735cc9b4c353c0cae68fda">More...</a><br /></td></tr>
+<tr class="separator:a0ec54663fd735cc9b4c353c0cae68fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f13b54e7948394f0c7f0d876da6c6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#ab0f13b54e7948394f0c7f0d876da6c6c">KUBE_REGISTER_PROPERTY_VOLATILE_SIGLESS</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:ab0f13b54e7948394f0c7f0d876da6c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a volatile readable and writable property (no signal)  <a href="_register_8hpp.html#ab0f13b54e7948394f0c7f0d876da6c6c">More...</a><br /></td></tr>
+<tr class="separator:ab0f13b54e7948394f0c7f0d876da6c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0561ddb66ff2f07852eaae76e01d0c53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a0561ddb66ff2f07852eaae76e01d0c53">KUBE_REGISTER_PROPERTY_GETONLY</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:a0561ddb66ff2f07852eaae76e01d0c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a const readable and signalable property.  <a href="_register_8hpp.html#a0561ddb66ff2f07852eaae76e01d0c53">More...</a><br /></td></tr>
+<tr class="separator:a0561ddb66ff2f07852eaae76e01d0c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a102935aea36a2e06a2ab288e9071e668"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a102935aea36a2e06a2ab288e9071e668">KUBE_REGISTER_PROPERTY_GETONLY_SIGLESS</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:a102935aea36a2e06a2ab288e9071e668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a const readable property (no signal)  <a href="_register_8hpp.html#a102935aea36a2e06a2ab288e9071e668">More...</a><br /></td></tr>
+<tr class="separator:a102935aea36a2e06a2ab288e9071e668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e6f0afd2f0b823d4f626fab852add1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#ab6e6f0afd2f0b823d4f626fab852add1">KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:ab6e6f0afd2f0b823d4f626fab852add1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a const readable and signalable property.  <a href="_register_8hpp.html#ab6e6f0afd2f0b823d4f626fab852add1">More...</a><br /></td></tr>
+<tr class="separator:ab6e6f0afd2f0b823d4f626fab852add1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ce2ba50f4f13dcc9b42d6954aa80a87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a0ce2ba50f4f13dcc9b42d6954aa80a87">KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY_SIGLESS</a>(PropertyType,  name, ...)</td></tr>
+<tr class="memdesc:a0ce2ba50f4f13dcc9b42d6954aa80a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a const readable property (no signal)  <a href="_register_8hpp.html#a0ce2ba50f4f13dcc9b42d6954aa80a87">More...</a><br /></td></tr>
+<tr class="separator:a0ce2ba50f4f13dcc9b42d6954aa80a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ccf37f7f77ccec29b6db530d484764"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType,  name,  getter,  copySetter,  moveSetter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, moveSetter, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td></tr>
+<tr class="memdesc:aa4ccf37f7f77ccec29b6db530d484764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter, copy setter, move setter and a signal.  <a href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">More...</a><br /></td></tr>
+<tr class="separator:aa4ccf37f7f77ccec29b6db530d484764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4ee1e2dc5b094096fcda720337208a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType,  name,  getter,  copySetter,  moveSetter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, moveSetter, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
+<tr class="memdesc:aef4ee1e2dc5b094096fcda720337208a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter, copy setter and move setter (no signal)  <a href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">More...</a><br /></td></tr>
+<tr class="separator:aef4ee1e2dc5b094096fcda720337208a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a72433cd2cb6969c08ee8e0d98b574d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a7a72433cd2cb6969c08ee8e0d98b574d">KUBE_REGISTER_PROPERTY_CUSTOM_COPY</a>(PropertyType,  name,  getter,  copySetter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, nullptr, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td></tr>
+<tr class="memdesc:a7a72433cd2cb6969c08ee8e0d98b574d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter, copy setter and a signal.  <a href="_register_8hpp.html#a7a72433cd2cb6969c08ee8e0d98b574d">More...</a><br /></td></tr>
+<tr class="separator:a7a72433cd2cb6969c08ee8e0d98b574d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ae4fba9b9684a494baba8460e04fcaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a7ae4fba9b9684a494baba8460e04fcaa">KUBE_REGISTER_PROPERTY_CUSTOM_COPY_SIGLESS</a>(PropertyType,  name,  getter,  copySetter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
+<tr class="memdesc:a7ae4fba9b9684a494baba8460e04fcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter and copy setter (no signal)  <a href="_register_8hpp.html#a7ae4fba9b9684a494baba8460e04fcaa">More...</a><br /></td></tr>
+<tr class="separator:a7ae4fba9b9684a494baba8460e04fcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74dff32de2208139396eb6b3fd0a046f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a74dff32de2208139396eb6b3fd0a046f">KUBE_REGISTER_PROPERTY_CUSTOM_MOVE</a>(PropertyType,  name,  getter,  moveSetter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, moveSetter, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td></tr>
+<tr class="memdesc:a74dff32de2208139396eb6b3fd0a046f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter, move setter and a signal.  <a href="_register_8hpp.html#a74dff32de2208139396eb6b3fd0a046f">More...</a><br /></td></tr>
+<tr class="separator:a74dff32de2208139396eb6b3fd0a046f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd84122c8bf54ef3ab70d77e3c51331"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#acfd84122c8bf54ef3ab70d77e3c51331">KUBE_REGISTER_PROPERTY_CUSTOM_MOVE_SIGLESS</a>(PropertyType,  name,  getter,  moveSetter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, moveSetter, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
+<tr class="memdesc:acfd84122c8bf54ef3ab70d77e3c51331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter and move setter (no signal)  <a href="_register_8hpp.html#acfd84122c8bf54ef3ab70d77e3c51331">More...</a><br /></td></tr>
+<tr class="separator:acfd84122c8bf54ef3ab70d77e3c51331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71cec8ed7f1387ed0adfebe4f81cbb51"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a71cec8ed7f1387ed0adfebe4f81cbb51">KUBE_REGISTER_PROPERTY_CUSTOM_READONLY</a>(PropertyType,  name,  getter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, nullptr, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td></tr>
+<tr class="memdesc:a71cec8ed7f1387ed0adfebe4f81cbb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter and signal.  <a href="_register_8hpp.html#a71cec8ed7f1387ed0adfebe4f81cbb51">More...</a><br /></td></tr>
+<tr class="separator:a71cec8ed7f1387ed0adfebe4f81cbb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dfaf8d4cd1c847fa104b9a4b49bee06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a3dfaf8d4cd1c847fa104b9a4b49bee06">KUBE_REGISTER_PROPERTY_CUSTOM_READONLY_SIGLESS</a>(PropertyType,  name,  getter)&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, nullptr, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
+<tr class="memdesc:a3dfaf8d4cd1c847fa104b9a4b49bee06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a custom property using getter (no signal)  <a href="_register_8hpp.html#a3dfaf8d4cd1c847fa104b9a4b49bee06">More...</a><br /></td></tr>
+<tr class="separator:a3dfaf8d4cd1c847fa104b9a4b49bee06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb6dd3997c8c57762752de387bc64bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#aadb6dd3997c8c57762752de387bc64bf">KUBE_REGISTER_FUNCTION</a>(name)&#160;&#160;&#160;    .template function&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
 <tr class="memdesc:aadb6dd3997c8c57762752de387bc64bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a function.  <a href="_register_8hpp.html#aadb6dd3997c8c57762752de387bc64bf">More...</a><br /></td></tr>
 <tr class="separator:aadb6dd3997c8c57762752de387bc64bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62fa2da6537423bfea1902984dcecdc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a62fa2da6537423bfea1902984dcecdc9">KUBE_REGISTER_FUNCTION_OVERLOAD</a>(name,  FuncType)&#160;&#160;&#160;    .function&lt;static_cast&lt;FuncType&gt;(&amp;_MetaType::name)&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td></tr>
+<tr class="memitem:a62fa2da6537423bfea1902984dcecdc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a62fa2da6537423bfea1902984dcecdc9">KUBE_REGISTER_FUNCTION_OVERLOAD</a>(name,  FuncType)&#160;&#160;&#160;    .template function&lt;static_cast&lt;FuncType&gt;(&amp;_MetaType::name)&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
 <tr class="memdesc:a62fa2da6537423bfea1902984dcecdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an overloaded function.  <a href="_register_8hpp.html#a62fa2da6537423bfea1902984dcecdc9">More...</a><br /></td></tr>
 <tr class="separator:a62fa2da6537423bfea1902984dcecdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d1444e9f1a4258d8b336584443a3cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a9d1444e9f1a4258d8b336584443a3cf4">KUBE_REGISTER_SIGNAL</a>(name, ...)&#160;&#160;&#160;    .signal&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td></tr>
+<tr class="memitem:a9d1444e9f1a4258d8b336584443a3cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_register_8hpp.html#a9d1444e9f1a4258d8b336584443a3cf4">KUBE_REGISTER_SIGNAL</a>(name, ...)&#160;&#160;&#160;    .template signal&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td></tr>
+<tr class="memdesc:a9d1444e9f1a4258d8b336584443a3cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a non-property bound signal.  <a href="_register_8hpp.html#a9d1444e9f1a4258d8b336584443a3cf4">More...</a><br /></td></tr>
 <tr class="separator:a9d1444e9f1a4258d8b336584443a3cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a6607241a8415b6e82d1e7c0818255b53"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a6607241a8415b6e82d1e7c0818255b53"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference</a> = std::conditional_t&lt; std::is_pointer_v&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt;, const std::add_const_t&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &gt; &amp;, const <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a> &amp; &gt;</td></tr>
+<tr class="memdesc:a6607241a8415b6e82d1e7c0818255b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a type to a constant reference (add constant tag to pointers)  <a href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">More...</a><br /></td></tr>
+<tr class="separator:a6607241a8415b6e82d1e7c0818255b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a41c39a4ec21dec5eee44f98a93030c3a"><td class="memTemplParams" colspan="2">template&lt;typename TemplateType &gt; </td></tr>
+<tr class="memitem:a41c39a4ec21dec5eee44f98a93030c3a"><td class="memTemplItemLeft" align="right" valign="top">HashedName&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#a41c39a4ec21dec5eee44f98a93030c3a">kF::Internal::GetTemplateSpecializedName</a> (HashedName hash)</td></tr>
+<tr class="memdesc:a41c39a4ec21dec5eee44f98a93030c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used internally to query the name of a specialized template type.  <a href="namespacek_f_1_1_internal.html#a41c39a4ec21dec5eee44f98a93030c3a">More...</a><br /></td></tr>
+<tr class="separator:a41c39a4ec21dec5eee44f98a93030c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc50d3bf6390006adad08fe8e0ffb57e"><td class="memTemplParams" colspan="2">template&lt;typename TypesTuple , std::size_t Index = 0ul&gt; </td></tr>
+<tr class="memitem:acc50d3bf6390006adad08fe8e0ffb57e"><td class="memTemplItemLeft" align="right" valign="top">HashedName&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#acc50d3bf6390006adad08fe8e0ffb57e">kF::Internal::GetTemplateTypeNames</a> (HashedName hash)</td></tr>
+<tr class="memdesc:acc50d3bf6390006adad08fe8e0ffb57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used internally to query the sum of parameter template type names of a specialized template type.  <a href="namespacek_f_1_1_internal.html#acc50d3bf6390006adad08fe8e0ffb57e">More...</a><br /></td></tr>
+<tr class="separator:acc50d3bf6390006adad08fe8e0ffb57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c2e6d12ef8bb180a45895b36f89740"><td class="memTemplParams" colspan="2">template&lt;auto VarsTuple, std::size_t Index = 0ul&gt; </td></tr>
+<tr class="memitem:a40c2e6d12ef8bb180a45895b36f89740"><td class="memTemplItemLeft" align="right" valign="top">HashedName&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#a40c2e6d12ef8bb180a45895b36f89740">kF::Internal::GetTemplateVariableNames</a> (HashedName hash)</td></tr>
+<tr class="memdesc:a40c2e6d12ef8bb180a45895b36f89740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used internall to query the sum of parameter template variable value names of a specialized template type.  <a href="namespacek_f_1_1_internal.html#a40c2e6d12ef8bb180a45895b36f89740">More...</a><br /></td></tr>
+<tr class="separator:a40c2e6d12ef8bb180a45895b36f89740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7968ca965c3e473c772de75570da2efa"><td class="memTemplParams" colspan="2">template&lt;typename TemplateType &gt; </td></tr>
+<tr class="memitem:a7968ca965c3e473c772de75570da2efa"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#a7968ca965c3e473c772de75570da2efa">kF::Internal::GetTemplateSpecializedLiterals</a> (const std::string_view &amp;literal)</td></tr>
+<tr class="memdesc:a7968ca965c3e473c772de75570da2efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used internally to query the name of a specialized template type.  <a href="namespacek_f_1_1_internal.html#a7968ca965c3e473c772de75570da2efa">More...</a><br /></td></tr>
+<tr class="separator:a7968ca965c3e473c772de75570da2efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bc39bea41655ae499b768012588a6f"><td class="memTemplParams" colspan="2">template&lt;typename TypesTuple , std::size_t Index = 0ul&gt; </td></tr>
+<tr class="memitem:a74bc39bea41655ae499b768012588a6f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#a74bc39bea41655ae499b768012588a6f">kF::Internal::GetTemplateTypeLiterals</a> (std::string &amp;name)</td></tr>
+<tr class="memdesc:a74bc39bea41655ae499b768012588a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used internally to query the template type literal name of a specialized template type.  <a href="namespacek_f_1_1_internal.html#a74bc39bea41655ae499b768012588a6f">More...</a><br /></td></tr>
+<tr class="separator:a74bc39bea41655ae499b768012588a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cdf21ba885462f78db55aab7fc98cb0"><td class="memTemplParams" colspan="2">template&lt;auto VarsTuple, std::size_t Index = 0ul&gt; </td></tr>
+<tr class="memitem:a7cdf21ba885462f78db55aab7fc98cb0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_internal.html#a7cdf21ba885462f78db55aab7fc98cb0">kF::Internal::GetTemplateVariableLiterals</a> (std::string &amp;name)</td></tr>
+<tr class="memdesc:a7cdf21ba885462f78db55aab7fc98cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper used internally to query the template variable literal name of a specialized template type.  <a href="namespacek_f_1_1_internal.html#a7cdf21ba885462f78db55aab7fc98cb0">More...</a><br /></td></tr>
+<tr class="separator:a7cdf21ba885462f78db55aab7fc98cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aaaef9b32aefdfb2d178d9d1dabe833e4"></a>
@@ -151,7 +228,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">BaseType</td><td>)</td>
-          <td>&#160;&#160;&#160;    .base&lt;BaseType&gt;()</td>
+          <td>&#160;&#160;&#160;    .template base&lt;BaseType&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -171,7 +248,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;    .constructor&lt;__VA_ARGS__&gt;();</td>
+          <td>&#160;&#160;&#160;    .template constructor&lt;__VA_ARGS__&gt;();</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -191,7 +268,7 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">name</td><td>)</td>
-          <td>&#160;&#160;&#160;    .function&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td>
+          <td>&#160;&#160;&#160;    .template function&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -221,7 +298,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    .function&lt;static_cast&lt;FuncType&gt;(&amp;_MetaType::name)&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td>
+          <td></td><td>&#160;&#160;&#160;    .template function&lt;static_cast&lt;FuncType&gt;(&amp;_MetaType::name)&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -230,14 +307,60 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ada09df313433c110ac78e8674448ae63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada09df313433c110ac78e8674448ae63">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_COPY</h2>
+<a id="a2cb079b1b575cc68cc64fd240e239b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb079b1b575cc68cc64fd240e239b07">&#9670;&nbsp;</a></span>KUBE_REGISTER_LATER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_REGISTER_PROPERTY_COPY</td>
+          <td class="memname">#define KUBE_REGISTER_LATER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ClassType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">private</span>: \</div>
+<div class="line">    using _MetaType = ClassType; \</div>
+<div class="line">    ADD_PREFIX_EACH(KUBE_MAKE_, __VA_ARGS__) \</div>
+<div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="classk_f_1_1_meta_1_1_register_later.html">kF::Meta::RegisterLater</a> RegisterMetaData(<span class="keywordtype">void</span>) \</div>
+<div class="line">    { \</div>
+<div class="line">        return kF::Meta::RegisterLater::Make&lt;_MetaType&gt;( \</div>
+<div class="line">            [] { \</div>
+<div class="line">                std::string literal = kF::Internal::GetTemplateSpecializedLiterals&lt;_MetaType&gt;(#ClassType); \</div>
+<div class="line">                std::cout &lt;&lt; <span class="stringliteral">&quot;[ Registering meta-type &#39;&quot;</span> &lt;&lt; literal &lt;&lt; <span class="stringliteral">&quot;&#39; ]&quot;</span> &lt;&lt; std::endl; \</div>
+<div class="line">                KUBE_REGISTER_TYPE(ClassType, literal) \</div>
+<div class="line">                    ADD_PREFIX_EACH(KUBE_REGISTER_, __VA_ARGS__) ; \</div>
+<div class="line">            } \</div>
+<div class="line">        ); \</div>
+<div class="line">    } \</div>
+<div class="line">    static <span class="keyword">inline</span> <a class="code" href="classk_f_1_1_meta_1_1_register_later.html">kF::Meta::RegisterLater</a> _RegisterLaterInstance { RegisterMetaData() };</div>
+</div><!-- fragment -->
+<p>Add static registerer for automatic registeration. </p>
+<p>@ Author: Matthieu Moinvaziri @ Description: Registeres generation helpers </p>
+
+</div>
+</div>
+<a id="abcb841ec4d7fb41eff911ab59f846788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb841ec4d7fb41eff911ab59f846788">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -261,93 +384,18 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
-<div class="line">        <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
-<div class="line">        <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span>(_MetaType::*)(<span class="keyword">const </span>PropertyType &amp;)<span class="keyword">&gt;</span>(&amp;_MetaType::name) \</div>
-<div class="line">    ) \</div>
-<div class="line">    KUBE_REGISTER_SIGNAL(name##Changed)</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span><a class="code" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference&lt;PropertyType&gt;</a>(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, <span class="keyword">nullptr</span>), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, <span class="keyword">nullptr</span>) \</div>
+<div class="line">    )</div>
 </div><!-- fragment -->
-<p>Register a copy only property. </p>
+<p>Register a constant readable, writable and signalable property. </p>
 
 </div>
 </div>
-<a id="ae13315d37e3b7f5b7ec87f925d08789c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae13315d37e3b7f5b7ec87f925d08789c">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_COPY_READONLY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define KUBE_REGISTER_PROPERTY_COPY_READONLY</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">PropertyType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
-<div class="line">        <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
-<div class="line">        <span class="keyword">nullptr</span> \</div>
-<div class="line">    ) \</div>
-<div class="line">    KUBE_REGISTER_SIGNAL(name##Changed)</div>
-</div><!-- fragment -->
-<p>Register a read and copy only property. </p>
-
-</div>
-</div>
-<a id="aa84883be05e17cf4e9a29180fb23e6d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa84883be05e17cf4e9a29180fb23e6d1">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_COPY_REF</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define KUBE_REGISTER_PROPERTY_COPY_REF</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">PropertyType, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">name, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_register_8hpp.html#ada09df313433c110ac78e8674448ae63">KUBE_REGISTER_PROPERTY_COPY</a>(PropertyType, name, __VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a333ea323efaa841907c188cb1decacb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a333ea323efaa841907c188cb1decacb7">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM</h2>
+<a id="aa4ccf37f7f77ccec29b6db530d484764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ccf37f7f77ccec29b6db530d484764">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,28 +422,322 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">setter&#160;</td>
+          <td class="paramname">copySetter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    .<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>&lt;getter, setter&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, moveSetter, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Register a custom property using getter and setter. </p>
+<p>Register a custom property using getter, copy setter, move setter and a signal. </p>
 
 </div>
 </div>
-<a id="a5ec91758e51b7038fe91154ed75d7196"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ec91758e51b7038fe91154ed75d7196">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_MOVE</h2>
+<a id="a7a72433cd2cb6969c08ee8e0d98b574d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a72433cd2cb6969c08ee8e0d98b574d">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_COPY</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_REGISTER_PROPERTY_MOVE</td>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_COPY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">copySetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, nullptr, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter, copy setter and a signal. </p>
+
+</div>
+</div>
+<a id="a7ae4fba9b9684a494baba8460e04fcaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae4fba9b9684a494baba8460e04fcaa">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_COPY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_COPY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">copySetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter and copy setter (no signal) </p>
+
+</div>
+</div>
+<a id="a74dff32de2208139396eb6b3fd0a046f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74dff32de2208139396eb6b3fd0a046f">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_MOVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_MOVE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, moveSetter, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter, move setter and a signal. </p>
+
+</div>
+</div>
+<a id="acfd84122c8bf54ef3ab70d77e3c51331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd84122c8bf54ef3ab70d77e3c51331">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_MOVE_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_MOVE_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, moveSetter, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter and move setter (no signal) </p>
+
+</div>
+</div>
+<a id="a71cec8ed7f1387ed0adfebe4f81cbb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71cec8ed7f1387ed0adfebe4f81cbb51">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_READONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_READONLY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, nullptr, &amp;_MetaType::name##Changed&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name), <a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(<a class="el" href="_macro_utils_8hpp.html#a210176ec504fd9aa2393fa727fabf965">_STRINGIFY</a>(name##Changed)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter and signal. </p>
+
+</div>
+</div>
+<a id="a3dfaf8d4cd1c847fa104b9a4b49bee06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dfaf8d4cd1c847fa104b9a4b49bee06">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_READONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_READONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, nullptr, nullptr, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter (no signal) </p>
+
+</div>
+</div>
+<a id="aef4ee1e2dc5b094096fcda720337208a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4ee1e2dc5b094096fcda720337208a">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">getter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">copySetter, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">moveSetter&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    .template <a class="el" href="_m_p_m_c_queue_8ipp.html#abff670b1cad9d3a3050db076dc0f4365">data</a>&lt;getter, copySetter, moveSetter, nullptr&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a custom property using getter, copy setter and move setter (no signal) </p>
+
+</div>
+</div>
+<a id="a0561ddb66ff2f07852eaae76e01d0c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0561ddb66ff2f07852eaae76e01d0c53">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_GETONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_GETONLY</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -419,24 +761,24 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
-<div class="line">        <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
-<div class="line">        <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span>(_MetaType::*)(PropertyType &amp;&amp;)<span class="keyword">&gt;</span>(&amp;_MetaType::name) \</div>
-<div class="line">    ) \</div>
-<div class="line">    KUBE_REGISTER_SIGNAL(name##Changed)</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span><a class="code" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference&lt;PropertyType&gt;</a>(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <span class="keyword">nullptr</span>, \</div>
+<div class="line">        <span class="keyword">nullptr</span> \</div>
+<div class="line">    )</div>
 </div><!-- fragment -->
-<p>Register a move only property. </p>
+<p>Register a const readable and signalable property. </p>
 
 </div>
 </div>
-<a id="a7fee9d445af8e917d989a5f79ed00621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fee9d445af8e917d989a5f79ed00621">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_MOVE_READONLY</h2>
+<a id="a102935aea36a2e06a2ab288e9071e668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102935aea36a2e06a2ab288e9071e668">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_GETONLY_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_REGISTER_PROPERTY_MOVE_READONLY</td>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_GETONLY_SIGLESS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -456,23 +798,28 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_register_8hpp.html#ae13315d37e3b7f5b7ec87f925d08789c">KUBE_REGISTER_PROPERTY_COPY_READONLY</a>(PropertyType, name, __VA_ARGS__)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Register a read and move only property. </p>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span><a class="code" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference&lt;PropertyType&gt;</a>(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <span class="keyword">nullptr</span>, \</div>
+<div class="line">        <span class="keyword">nullptr</span> \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
+<p>Register a const readable property (no signal) </p>
 
 </div>
 </div>
-<a id="aa6a36c1b8795d30da9a0542d516b0e24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6a36c1b8795d30da9a0542d516b0e24">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_MOVE_REF</h2>
+<a id="a692c8562c92a48071bf8b87ae0c0ee0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692c8562c92a48071bf8b87ae0c0ee0b">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_SIGLESS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KUBE_REGISTER_PROPERTY_MOVE_REF</td>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_SIGLESS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">PropertyType, </td>
@@ -492,10 +839,181 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="_register_8hpp.html#a5ec91758e51b7038fe91154ed75d7196">KUBE_REGISTER_PROPERTY_MOVE</a>(PropertyType, name, __VA_ARGS__)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span><a class="code" href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference&lt;PropertyType&gt;</a>(_MetaType::*)(<span class="keywordtype">void</span>) <span class="keyword">const </span>noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, <span class="keyword">nullptr</span>), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, <span class="keyword">nullptr</span>) \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
+<p>Register a constant readable and writable property (no signal) </p>
+
+</div>
+</div>
+<a id="a0ec54663fd735cc9b4c353c0cae68fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec54663fd735cc9b4c353c0cae68fda">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_VOLATILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_VOLATILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, <span class="keyword">nullptr</span>), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, <span class="keyword">nullptr</span>) \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
+<p>Register a volatile readable, writable and signalable property. </p>
+
+</div>
+</div>
+<a id="ab6e6f0afd2f0b823d4f626fab852add1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e6f0afd2f0b823d4f626fab852add1">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">KUBE_REGISTER_PROPERTY_CUSTOM</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <span class="keyword">nullptr</span>, \</div>
+<div class="line">        <span class="keyword">nullptr</span> \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
+<p>Register a const readable and signalable property. </p>
+
+</div>
+</div>
+<a id="a0ce2ba50f4f13dcc9b42d6954aa80a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce2ba50f4f13dcc9b42d6954aa80a87">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_VOLATILE_GETONLY_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <span class="keyword">nullptr</span>, \</div>
+<div class="line">        <span class="keyword">nullptr</span> \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
+<p>Register a const readable property (no signal) </p>
+
+</div>
+</div>
+<a id="ab0f13b54e7948394f0c7f0d876da6c6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f13b54e7948394f0c7f0d876da6c6c">&#9670;&nbsp;</a></span>KUBE_REGISTER_PROPERTY_VOLATILE_SIGLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KUBE_REGISTER_PROPERTY_VOLATILE_SIGLESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PropertyType, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</a>(PropertyType, name, \</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span>PropertyType &amp;(_MetaType::*)(<span class="keywordtype">void</span>) noexcept<span class="keyword">&gt;</span>(&amp;_MetaType::name), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_copy_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;const PropertyType &amp;&gt;, <span class="keyword">nullptr</span>), \</div>
+<div class="line">        <a class="code" href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a>(std::is_move_assignable_v&lt;PropertyType&gt;, &amp;_MetaType::name&lt;PropertyType &amp;&amp;&gt;, <span class="keyword">nullptr</span>) \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
+<p>Register a volatile readable and writable property (no signal) </p>
 
 </div>
 </div>
@@ -520,15 +1038,17 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    .signal&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#name))</td>
+          <td></td><td>&#160;&#160;&#160;    .template signal&lt;&amp;_MetaType::name&gt;(<a class="el" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#name))</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Register a non-property bound signal. </p>
+
 </div>
 </div>
-<a id="a2840fe5dd98eebd57318a7bf86267f38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2840fe5dd98eebd57318a7bf86267f38">&#9670;&nbsp;</a></span>KUBE_REGISTER_TYPE</h2>
+<a id="a8e25b73d3592f894548130de25c00722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e25b73d3592f894548130de25c00722">&#9670;&nbsp;</a></span>KUBE_REGISTER_TYPE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,23 +1063,33 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
+          <td class="paramname">ClassLiteral&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;    <a class="el" href="classk_f_1_1_meta_1_1_factory.html">kF::Meta::Factory</a>&lt;ClassType&gt;(<a class="el" href="namespacek_f.html#a185a3d851d86ffeee71fdf2523d792ef">kF::Hash</a>(#ClassType))</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::Factory&lt;_MetaType&gt;</a>( \</div>
+<div class="line">        <a class="code" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#ClassType), \</div>
+<div class="line">        kF::Internal::GetTemplateSpecializedName&lt;_MetaType&gt;(<a class="code" href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a>(#ClassType)), \</div>
+<div class="line">        ClassLiteral \</div>
+<div class="line">    )</div>
+</div><!-- fragment -->
 <p>Register a new type (already used by 'KUBE_REGISTER' and 'KUBE_REGISTER_INSTANTIABLE') </p>
-<p>@ Author: Matthieu Moinvaziri @ Description: Registeres generation helpers </p>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="a_register_8hpp_html_a333ea323efaa841907c188cb1decacb7"><div class="ttname"><a href="_register_8hpp.html#a333ea323efaa841907c188cb1decacb7">KUBE_REGISTER_PROPERTY_CUSTOM</a></div><div class="ttdeci">#define KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, getter, setter)</div><div class="ttdoc">Register a custom property using getter and setter.</div><div class="ttdef"><b>Definition:</b> Register.hpp:55</div></div>
+<div class="ttc" id="anamespacek_f_html_aeeaa391fe205daf7beabbeddc3f28c0a"><div class="ttname"><a href="namespacek_f.html#aeeaa391fe205daf7beabbeddc3f28c0a">kF::Hash</a></div><div class="ttdeci">constexpr HashedName Hash(char const *const str, const std::size_t len) noexcept</div><div class="ttdoc">Compile-time string hashing.</div><div class="ttdef"><b>Definition:</b> Hash.hpp:19</div></div>
+<div class="ttc" id="aclassk_f_1_1_meta_1_1_factory_base_html"><div class="ttname"><a href="classk_f_1_1_meta_1_1_factory_base.html">kF::Meta::FactoryBase</a></div><div class="ttdoc">Factory is used to instantiate meta-data of a given type.</div><div class="ttdef"><b>Definition:</b> Factory.hpp:15</div></div>
+<div class="ttc" id="aclassk_f_1_1_meta_1_1_register_later_html"><div class="ttname"><a href="classk_f_1_1_meta_1_1_register_later.html">kF::Meta::RegisterLater</a></div><div class="ttdoc">Helper used to register a class later in registerer.</div><div class="ttdef"><b>Definition:</b> Registerer.hpp:61</div></div>
+<div class="ttc" id="anamespacek_f_1_1_internal_html_a6607241a8415b6e82d1e7c0818255b53"><div class="ttname"><a href="namespacek_f_1_1_internal.html#a6607241a8415b6e82d1e7c0818255b53">kF::Internal::ToConstReference</a></div><div class="ttdeci">std::conditional_t&lt; std::is_pointer_v&lt; Type &gt;, const std::add_const_t&lt; Type &gt; &amp;, const Type &amp; &gt; ToConstReference</div><div class="ttdoc">Transform a type to a constant reference (add constant tag to pointers)</div><div class="ttdef"><b>Definition:</b> Register.hpp:274</div></div>
+<div class="ttc" id="a_register_8hpp_html_aa4ccf37f7f77ccec29b6db530d484764"><div class="ttname"><a href="_register_8hpp.html#aa4ccf37f7f77ccec29b6db530d484764">KUBE_REGISTER_PROPERTY_CUSTOM</a></div><div class="ttdeci">#define KUBE_REGISTER_PROPERTY_CUSTOM(PropertyType, name, getter, copySetter, moveSetter)</div><div class="ttdoc">Register a custom property using getter, copy setter, move setter and a signal.</div><div class="ttdef"><b>Definition:</b> Register.hpp:113</div></div>
+<div class="ttc" id="a_register_8hpp_html_aef4ee1e2dc5b094096fcda720337208a"><div class="ttname"><a href="_register_8hpp.html#aef4ee1e2dc5b094096fcda720337208a">KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS</a></div><div class="ttdeci">#define KUBE_REGISTER_PROPERTY_CUSTOM_SIGLESS(PropertyType, name, getter, copySetter, moveSetter)</div><div class="ttdoc">Register a custom property using getter, copy setter and move setter (no signal)</div><div class="ttdef"><b>Definition:</b> Register.hpp:117</div></div>
+<div class="ttc" id="a_utils_8hpp_html_a5a4725accd3b34da6c550210adaff352"><div class="ttname"><a href="_utils_8hpp.html#a5a4725accd3b34da6c550210adaff352">ConstexprTernary</a></div><div class="ttdeci">#define ConstexprTernary(condition, body, elseBody)</div><div class="ttdoc">Compile-time ternary expression.</div><div class="ttdef"><b>Definition:</b> Utils.hpp:95</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

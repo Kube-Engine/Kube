@@ -21,7 +21,7 @@ using \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_ac2a0fbfbe02031ed3a117a6c4dd6
 \begin{DoxyCompactList}\small\item\em Construct a node with a work functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Work , typename Literal $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_node_ae2c5a630f69c92f5e946c418441a80f3}{Node\+::name}}), Literal $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_aa84643bcf8ea26f4f76169d1948b8faf}{Node}} (Work \&\&work, Literal \&\&node\+Name) noexcept
 \begin{DoxyCompactList}\small\item\em Construct a node with a work functor and a name. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Work , typename Notify $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}}, Notify $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_aa8c6db47ece4d8a85db98310fd27761d}{Node}} (Work \&\&work, Notify \&\&notify) noexcept
+{\footnotesize template$<$typename Work , typename Notify $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ \mbox{\hyperlink{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}{Notify\+Func}}, Notify $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_aa8c6db47ece4d8a85db98310fd27761d}{Node}} (Work \&\&work, Notify \&\&notify) noexcept
 \begin{DoxyCompactList}\small\item\em Construct a node with a work and a notification functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Work , typename Notify , typename Literal $>$ }\\\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$ decltype(\mbox{\hyperlink{structk_f_1_1_flow_1_1_node_ae2c5a630f69c92f5e946c418441a80f3}{Node\+::name}}), Literal $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_aeeaf576d7b3579ab683c870d8e867031}{Node}} (Work \&\&work, Notify \&\&notify, Literal \&\&node\+Name) noexcept
 \begin{DoxyCompactList}\small\item\em Construct a node with a work and a notification functor and a name. \end{DoxyCompactList}\item 
@@ -41,7 +41,7 @@ using \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_ac2a0fbfbe02031ed3a117a6c4dd6
 \item 
 \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Core\+::\+Flat\+Vector}}$<$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node}{Node}} $\ast$ $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_a7b7470b2507d93212fdf4dc1be86075f}{linked\+From}} \{\}
 \item 
-\mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}} \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_a6bcf7ea51ef4ff6c0a6da244d4d200bc}{notify\+Func}} \{\}
+\mbox{\hyperlink{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}{Notify\+Func}} \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_a6bcf7ea51ef4ff6c0a6da244d4d200bc}{notify\+Func}} \{\}
 \item 
 \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{Core\+::\+Flat\+String}} \mbox{\hyperlink{structk_f_1_1_flow_1_1_node_ae2c5a630f69c92f5e946c418441a80f3}{name}}
 \item 
@@ -97,7 +97,7 @@ Construct a node with a work functor and a name.
 \index{Node@{Node}!kF::Flow::Node@{kF::Flow::Node}}
 \doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename Work , typename Notify $>$ \\
-\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$\mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}}, Notify$>$ k\+F\+::\+Flow\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{Work \&\&}]{work,  }\item[{Notify \&\&}]{notify }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{_command_pool_8ipp_a2ed3d04a1b0fbdb28fbf648c6faaf995}{requires}} std\+::constructible\+\_\+from$<$\mbox{\hyperlink{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}{Notify\+Func}}, Notify$>$ k\+F\+::\+Flow\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{Work \&\&}]{work,  }\item[{Notify \&\&}]{notify }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -175,7 +175,7 @@ Helper to return the good workdata type from templated one.
 \index{kF::Flow::Node@{kF::Flow::Node}!notifyFunc@{notifyFunc}}
 \index{notifyFunc@{notifyFunc}!kF::Flow::Node@{kF::Flow::Node}}
 \doxysubsubsection{\texorpdfstring{notifyFunc}{notifyFunc}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_flow_ab614af0b6eb145d96ed5c089dd300e22}{Notify\+Func}} k\+F\+::\+Flow\+::\+Node\+::notify\+Func \{\}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_flow_add5b34d1e31da545cc260d8dca5373e6}{Notify\+Func}} k\+F\+::\+Flow\+::\+Node\+::notify\+Func \{\}}
 
 \mbox{\Hypertarget{structk_f_1_1_flow_1_1_node_a422e9499214ae00603cf9a7c5e5ede4e}\label{structk_f_1_1_flow_1_1_node_a422e9499214ae00603cf9a7c5e5ede4e}} 
 \index{kF::Flow::Node@{kF::Flow::Node}!root@{root}}

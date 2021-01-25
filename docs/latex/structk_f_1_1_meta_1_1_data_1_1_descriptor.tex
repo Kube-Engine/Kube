@@ -12,29 +12,27 @@ Describe a meta data.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Function\+Ptr$>$ }\\\mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{k\+F\+::\+Meta\+::\+Data\+::\+Descriptor}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a65cab21748ce9776c9329664ee51ff44}{Construct}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2ffa3298094a39a558ba4e2c6728da59}{name}}, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}{signal}}) noexcept
+{\footnotesize template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr$>$ }\\\mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{k\+F\+::\+Meta\+::\+Data\+::\+Descriptor}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_abe88de5fa256603fa8bcf66e91af7e8b}{Construct}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2ffa3298094a39a558ba4e2c6728da59}{name}}, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}{signal}}) noexcept
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Function\+Ptr$>$ }\\static \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab8e56290153e0cfa92b7edd78a5b55bd}{Construct}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2ffa3298094a39a558ba4e2c6728da59}{name}}, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}{signal}}=\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}()) noexcept
+{\footnotesize template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr$>$ }\\static \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a09e3532438786c193d56b66848d710fe}{Construct}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2ffa3298094a39a558ba4e2c6728da59}{name}}, const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}{signal}}) noexcept
 \begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2ffa3298094a39a558ba4e2c6728da59}{name}}
 \item 
-const bool \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab5e082a92a11d406a637881a6fcc3737}{is\+Static}}
-\item 
-const bool \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a3595b6e618517c062d4e930a9bc04ec3}{is\+Move\+Only}}
-\item 
-const char \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab94e67d66dc149609796692b9f648b76}{\+\_\+padding}} \mbox{[}2\mbox{]}
+const bool \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab5e082a92a11d406a637881a6fcc3737}{is\+Static}}\+: 4
 \item 
 const \mbox{\hyperlink{classk_f_1_1_meta_1_1_type}{Type}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a18b48ade23e6ffda52498fe37f696770}{type}}
 \item 
 const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_ae27b66b3fb9d2b0c0792d37382d2cf16}{Get\+Func}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_abb7f228b1732a9b99afaac995a302b4b}{get\+Func}}
 \item 
-const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_aa919372b33e17d81b6801cfbc0efe63a}{Set\+Func}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a6ba1d1efe1c9808929d5451929a6c808}{set\+Func}}
+const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a61223a7c9c36c16a0f0bc3dd84a91f82}{Set\+Copy\+Func}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab07b911a3bebabae36efe453132eea6d}{set\+Copy\+Func}}
+\item 
+const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a47769497beccd8ef928fe9a7198f633a}{Set\+Move\+Func}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2575165a1e6fb3438f3a6063a905f383}{set\+Move\+Func}}
 \item 
 const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}{signal}}
 \end{DoxyCompactItemize}
@@ -44,44 +42,32 @@ const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}} \mbox{\hyperlink{s
 Describe a meta data. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_a65cab21748ce9776c9329664ee51ff44}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_a65cab21748ce9776c9329664ee51ff44}} 
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_a09e3532438786c193d56b66848d710fe}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_a09e3532438786c193d56b66848d710fe}} 
 \index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!Construct@{Construct}}
 \index{Construct@{Construct}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
 \doxysubsubsection{\texorpdfstring{Construct()}{Construct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Function\+Ptr$>$ \\
-\mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{k\+F\+::\+Meta\+::\+Data\+::\+Descriptor}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::\+Construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
-
-@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} \mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab8e56290153e0cfa92b7edd78a5b55bd}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab8e56290153e0cfa92b7edd78a5b55bd}} 
-\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!Construct@{Construct}}
-\index{Construct@{Construct}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
-\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Function\+Ptr$>$ \\
-static \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::\+Construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}}]{signal = {\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr$>$ \\
+static \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::\+Construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
 
 
 
 Construct a \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descriptor}}. 
 
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_abe88de5fa256603fa8bcf66e91af7e8b}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_abe88de5fa256603fa8bcf66e91af7e8b}} 
+\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!Construct@{Construct}}
+\index{Construct@{Construct}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type , auto Get\+Function\+Ptr, auto Set\+Copy\+Function\+Ptr, auto Set\+Move\+Function\+Ptr$>$ \\
+\mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{k\+F\+::\+Meta\+::\+Data\+::\+Descriptor}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::\+Construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{name,  }\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Signal}}}]{signal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{namespacek_f_1_1_meta}{Meta}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_data}{Data}} 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab94e67d66dc149609796692b9f648b76}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab94e67d66dc149609796692b9f648b76}} 
-\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!\_padding@{\_padding}}
-\index{\_padding@{\_padding}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
-\doxysubsubsection{\texorpdfstring{\_padding}{\_padding}}
-{\footnotesize\ttfamily const char k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::\+\_\+padding\mbox{[}2\mbox{]}}
-
 \mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_abb7f228b1732a9b99afaac995a302b4b}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_abb7f228b1732a9b99afaac995a302b4b}} 
 \index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!getFunc@{getFunc}}
 \index{getFunc@{getFunc}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
 \doxysubsubsection{\texorpdfstring{getFunc}{getFunc}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_ae27b66b3fb9d2b0c0792d37382d2cf16}{Get\+Func}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::get\+Func}
-
-\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_a3595b6e618517c062d4e930a9bc04ec3}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_a3595b6e618517c062d4e930a9bc04ec3}} 
-\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!isMoveOnly@{isMoveOnly}}
-\index{isMoveOnly@{isMoveOnly}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
-\doxysubsubsection{\texorpdfstring{isMoveOnly}{isMoveOnly}}
-{\footnotesize\ttfamily const bool k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::is\+Move\+Only}
 
 \mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab5e082a92a11d406a637881a6fcc3737}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab5e082a92a11d406a637881a6fcc3737}} 
 \index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!isStatic@{isStatic}}
@@ -95,11 +81,17 @@ Construct a \mbox{\hyperlink{structk_f_1_1_meta_1_1_data_1_1_descriptor}{Descrip
 \doxysubsubsection{\texorpdfstring{name}{name}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::name}
 
-\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_a6ba1d1efe1c9808929d5451929a6c808}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_a6ba1d1efe1c9808929d5451929a6c808}} 
-\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!setFunc@{setFunc}}
-\index{setFunc@{setFunc}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
-\doxysubsubsection{\texorpdfstring{setFunc}{setFunc}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_aa919372b33e17d81b6801cfbc0efe63a}{Set\+Func}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::set\+Func}
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab07b911a3bebabae36efe453132eea6d}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_ab07b911a3bebabae36efe453132eea6d}} 
+\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!setCopyFunc@{setCopyFunc}}
+\index{setCopyFunc@{setCopyFunc}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
+\doxysubsubsection{\texorpdfstring{setCopyFunc}{setCopyFunc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a61223a7c9c36c16a0f0bc3dd84a91f82}{Set\+Copy\+Func}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::set\+Copy\+Func}
+
+\mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2575165a1e6fb3438f3a6063a905f383}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_a2575165a1e6fb3438f3a6063a905f383}} 
+\index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!setMoveFunc@{setMoveFunc}}
+\index{setMoveFunc@{setMoveFunc}!kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}}
+\doxysubsubsection{\texorpdfstring{setMoveFunc}{setMoveFunc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classk_f_1_1_meta_1_1_data_a47769497beccd8ef928fe9a7198f633a}{Set\+Move\+Func}} k\+F\+::\+Meta\+::\+Data\+::\+Descriptor\+::set\+Move\+Func}
 
 \mbox{\Hypertarget{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}\label{structk_f_1_1_meta_1_1_data_1_1_descriptor_aa5c3d6ebdd97a3137a786783a46c8a4b}} 
 \index{kF::Meta::Data::Descriptor@{kF::Meta::Data::Descriptor}!signal@{signal}}

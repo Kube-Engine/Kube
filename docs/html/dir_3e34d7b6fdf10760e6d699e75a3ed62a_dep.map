@@ -1,9 +1,9 @@
 <map id="Kube/Object" name="Kube/Object">
 <area shape="rect" id="node1" href="dir_3e34d7b6fdf10760e6d699e75a3ed62a.html" title="Object" alt="" coords="27,52,99,100"/>
 <area shape="rect" id="node2" href="dir_98e7589bda38723ce9d1fe3da064b24d.html" title="Core" alt="" coords="25,244,97,292"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000008_000002.html" title="3" alt="" coords="58,217,66,232"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000017_000013.html" title="5" alt="" coords="58,217,66,232"/>
 <area shape="rect" id="node3" href="dir_1ef41dd32963d68b50ec8c17ef83edea.html" title="Meta" alt="" coords="63,148,135,196"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000008_000004.html" title="2" alt="" coords="87,121,95,135"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000004_000002.html" title="5" alt="" coords="81,223,89,238"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000017_000014.html" title="1" alt="" coords="87,121,95,135"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000014_000013.html" title="10" alt="" coords="78,223,92,238"/>
 <area shape="rect" id="clust1" href="dir_32e452c6ba32911300cdb32a0c937173.html" title="Kube" alt="" coords="16,16,109,111"/>
 </map>

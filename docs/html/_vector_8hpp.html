@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -69,7 +69,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
@@ -77,27 +76,30 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_vector_details_8hpp_source.html">VectorDetails.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_vector_8ipp.html">Vector.ipp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_vector_base_8hpp_source.html">VectorBase.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Vector.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_vector_8hpp__incl.png" border="0" usemap="#a_kube_2_core_2_vector_8hpp" alt=""/></div>
 <map name="_kube_2_core_2_vector_8hpp" id="a_kube_2_core_2_vector_8hpp">
-<area shape="rect" title=" " alt="" coords="326,5,477,32"/>
-<area shape="rect" href="_vector_details_8hpp.html" title=" " alt="" coords="276,80,401,107"/>
-<area shape="rect" href="_vector_8ipp.html" title=" " alt="" coords="425,80,505,107"/>
-<area shape="rect" title=" " alt="" coords="134,155,231,181"/>
-<area shape="rect" title=" " alt="" coords="256,155,325,181"/>
-<area shape="rect" href="_utils_8hpp.html" title=" " alt="" coords="349,155,424,181"/>
-<area shape="rect" href="_vector_details_8ipp.html" title=" " alt="" coords="449,155,570,181"/>
-<area shape="rect" title=" " alt="" coords="5,229,88,256"/>
-<area shape="rect" title=" " alt="" coords="112,229,187,256"/>
-<area shape="rect" title=" " alt="" coords="211,229,285,256"/>
-<area shape="rect" title=" " alt="" coords="310,229,375,256"/>
-<area shape="rect" title=" " alt="" coords="399,229,462,256"/>
-<area shape="rect" title=" " alt="" coords="487,229,540,256"/>
-<area shape="rect" title=" " alt="" coords="565,229,625,256"/>
-<area shape="rect" href="_utils_8ipp.html" title=" " alt="" coords="649,229,719,256"/>
+<area shape="rect" title=" " alt="" coords="413,5,563,32"/>
+<area shape="rect" href="_vector_details_8hpp.html" title=" " alt="" coords="300,80,425,107"/>
+<area shape="rect" href="_vector_base_8hpp.html" title=" " alt="" coords="556,80,671,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,80,181"/>
+<area shape="rect" title=" " alt="" coords="105,155,202,181"/>
+<area shape="rect" title=" " alt="" coords="227,155,296,181"/>
+<area shape="rect" href="_assert_8hpp.html" title=" " alt="" coords="320,155,405,181"/>
+<area shape="rect" href="_utils_8hpp.html" title=" " alt="" coords="576,155,651,181"/>
+<area shape="rect" href="_vector_details_8ipp.html" title=" " alt="" coords="430,155,551,181"/>
+<area shape="rect" title=" " alt="" coords="232,229,315,256"/>
+<area shape="rect" title=" " alt="" coords="339,229,413,256"/>
+<area shape="rect" title=" " alt="" coords="437,229,512,256"/>
+<area shape="rect" title=" " alt="" coords="537,229,602,256"/>
+<area shape="rect" title=" " alt="" coords="626,229,689,256"/>
+<area shape="rect" title=" " alt="" coords="713,229,767,256"/>
+<area shape="rect" title=" " alt="" coords="791,229,851,256"/>
+<area shape="rect" href="_utils_8ipp.html" title=" " alt="" coords="875,229,946,256"/>
+<area shape="rect" href="_vector_base_8ipp.html" title=" " alt="" coords="675,155,786,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -105,74 +107,66 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_vector_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_core_2_vector_8hppdep" alt=""/></div>
 <map name="_kube_2_core_2_vector_8hppdep" id="a_kube_2_core_2_vector_8hppdep">
-<area shape="rect" title=" " alt="" coords="3162,5,3313,32"/>
-<area shape="rect" href="_dispatcher_details_8hpp.html" title=" " alt="" coords="2601,80,2818,107"/>
-<area shape="rect" href="_component_tables_8hpp.html" title=" " alt="" coords="5,408,224,435"/>
-<area shape="rect" href="_sparse_entity_set_8hpp.html" title=" " alt="" coords="2319,80,2527,107"/>
-<area shape="rect" href="_logical_device_8hpp.html" title=" " alt="" coords="3319,162,3537,189"/>
-<area shape="rect" href="_per_frame_cache_8hpp.html" title=" " alt="" coords="2867,80,3099,107"/>
-<area shape="rect" href="_physical_device_8hpp.html" title=" " alt="" coords="3562,162,3790,189"/>
-<area shape="rect" href="_queue_manager_8hpp.html" title=" " alt="" coords="3814,162,4039,189"/>
-<area shape="rect" href="_shader_8hpp.html" title=" " alt="" coords="5955,244,6133,271"/>
-<area shape="rect" href="_trivial_dispatcher_8hpp.html" title=" " alt="" coords="2371,162,2581,189"/>
-<area shape="rect" href="_component_table_8hpp.html" title=" " alt="" coords="751,244,961,271"/>
-<area shape="rect" href="_renderer_8hpp.html" title=" " alt="" coords="3333,244,3523,271"/>
-<area shape="rect" href="_opaque_table_8hpp.html" title=" " alt="" coords="56,326,245,353"/>
-<area shape="rect" href="_view_8hpp.html" title=" " alt="" coords="248,408,389,435"/>
-<area shape="rect" href="_registry_8hpp.html" title=" " alt="" coords="238,483,399,509"/>
-<area shape="rect" href="_application_8hpp.html" title=" " alt="" coords="1582,557,1754,584"/>
-<area shape="rect" href="_e_c_s_2_dummy_8cpp.html" title=" " alt="" coords="239,557,398,584"/>
-<area shape="rect" href="_buffer_8cpp.html" title=" " alt="" coords="2900,326,3071,353"/>
-<area shape="rect" href="_command_dispatcher_8cpp.html" title=" " alt="" coords="749,326,1009,353"/>
-<area shape="rect" href="_command_pool_8cpp.html" title=" " alt="" coords="3095,326,3318,353"/>
-<area shape="rect" href="_command_pool_manager_8cpp.html" title=" " alt="" coords="319,319,518,360"/>
-<area shape="rect" href="_descriptor_pool_8cpp.html" title=" " alt="" coords="3342,319,3514,360"/>
-<area shape="rect" href="_descriptor_set_layout_8cpp.html" title=" " alt="" coords="3538,319,3710,360"/>
-<area shape="rect" href="_descriptor_set_update_8cpp.html" title=" " alt="" coords="3734,319,3906,360"/>
-<area shape="rect" href="_fence_8cpp.html" title=" " alt="" coords="3931,326,4104,353"/>
-<area shape="rect" href="_event_8cpp.html" title=" " alt="" coords="4128,326,4299,353"/>
-<area shape="rect" href="_framebuffer_8cpp.html" title=" " alt="" coords="4323,326,4530,353"/>
-<area shape="rect" href="_framebuffer_manager_8cpp.html" title=" " alt="" coords="543,319,724,360"/>
-<area shape="rect" href="_image_8cpp.html" title=" " alt="" coords="4555,326,4728,353"/>
-<area shape="rect" href="_image_view_8cpp.html" title=" " alt="" coords="4753,326,4954,353"/>
-<area shape="rect" href="_instance_8cpp.html" title=" " alt="" coords="4979,326,5165,353"/>
-<area shape="rect" href="_memory_allocation_8cpp.html" title=" " alt="" coords="5190,326,5431,353"/>
-<area shape="rect" href="_memory_allocator_8cpp.html" title=" " alt="" coords="5456,326,5691,353"/>
-<area shape="rect" href="_physical_device_8cpp.html" title=" " alt="" coords="6381,326,6609,353"/>
-<area shape="rect" href="_logical_device_8cpp.html" title=" " alt="" coords="6137,326,6356,353"/>
-<area shape="rect" href="_pipeline_8cpp.html" title=" " alt="" coords="5715,326,5898,353"/>
-<area shape="rect" href="_pipeline2_8cpp.html" title=" " alt="" coords="5922,326,6113,353"/>
-<area shape="rect" href="_pipeline_layout_8cpp.html" title=" " alt="" coords="1033,326,1255,353"/>
-<area shape="rect" href="_queue_manager_8cpp.html" title=" " alt="" coords="6633,326,6858,353"/>
-<area shape="rect" href="_renderer_8cpp.html" title=" " alt="" coords="1279,326,1470,353"/>
-<area shape="rect" href="_renderer_object_8cpp.html" title=" " alt="" coords="1494,326,1722,353"/>
-<area shape="rect" href="_render_pass_8cpp.html" title=" " alt="" coords="1746,326,1955,353"/>
-<area shape="rect" href="_sampler_8cpp.html" title=" " alt="" coords="1979,326,2165,353"/>
-<area shape="rect" href="_semaphore_8cpp.html" title=" " alt="" coords="2189,326,2392,353"/>
-<area shape="rect" href="_shader_8cpp.html" title=" " alt="" coords="6883,326,7061,353"/>
-<area shape="rect" href="_swapchain_8cpp.html" title=" " alt="" coords="2417,326,2618,353"/>
-<area shape="rect" href="_surface_8cpp.html" title=" " alt="" coords="2642,326,2825,353"/>
-<area shape="rect" href="_command_dispatcher_8hpp.html" title=" " alt="" coords="3034,162,3294,189"/>
-<area shape="rect" href="_command_pool_manager_8hpp.html" title=" " alt="" coords="2605,155,2803,196"/>
-<area shape="rect" href="_framebuffer_manager_8hpp.html" title=" " alt="" coords="2828,155,3009,196"/>
+<area shape="rect" title=" " alt="" coords="1485,5,1635,32"/>
+<area shape="rect" href="_dispatcher_details_8hpp.html" title=" " alt="" coords="901,80,1118,107"/>
+<area shape="rect" href="_component_tables_8hpp.html" title=" " alt="" coords="527,408,745,435"/>
+<area shape="rect" href="_sparse_entity_set_8hpp.html" title=" " alt="" coords="421,80,629,107"/>
+<area shape="rect" href="_graph_8hpp.html" title=" " alt="" coords="231,80,379,107"/>
+<area shape="rect" href="_logical_device_8hpp.html" title=" " alt="" coords="1416,162,1635,189"/>
+<area shape="rect" href="_per_frame_cache_8hpp.html" title=" " alt="" coords="1643,80,1875,107"/>
+<area shape="rect" href="_physical_device_8hpp.html" title=" " alt="" coords="2373,162,2601,189"/>
+<area shape="rect" href="_queue_manager_8hpp.html" title=" " alt="" coords="2625,162,2850,189"/>
+<area shape="rect" href="_shader_8hpp.html" title=" " alt="" coords="3432,244,3611,271"/>
+<area shape="rect" href="_lexer_8hpp.html" title=" " alt="" coords="1949,80,2125,107"/>
+<area shape="rect" href="_resolver_8hpp.html" title=" " alt="" coords="1355,80,1522,107"/>
+<area shape="rect" href="_slot_table_8hpp.html" title=" " alt="" coords="1163,80,1331,107"/>
+<area shape="rect" href="_tree_8hpp.html" title=" " alt="" coords="2927,80,3076,107"/>
+<area shape="rect" href="_dispatcher_8hpp.html" title=" " alt="" coords="704,162,880,189"/>
+<area shape="rect" href="_trivial_dispatcher_8hpp.html" title=" " alt="" coords="904,162,1115,189"/>
+<area shape="rect" href="_component_table_8hpp.html" title=" " alt="" coords="419,244,629,271"/>
+<area shape="rect" href="_renderer_8hpp.html" title=" " alt="" coords="2162,244,2353,271"/>
+<area shape="rect" href="_registerer_8hpp.html" title=" " alt="" coords="705,326,879,353"/>
+<area shape="rect" href="_opaque_table_8hpp.html" title=" " alt="" coords="440,326,629,353"/>
+<area shape="rect" href="_view_8hpp.html" title=" " alt="" coords="361,408,503,435"/>
+<area shape="rect" href="_registry_8hpp.html" title=" " alt="" coords="453,483,614,509"/>
+<area shape="rect" href="_application_8hpp.html" title=" " alt="" coords="1561,557,1733,584"/>
+<area shape="rect" href="_e_c_s_2_dummy_8cpp.html" title=" " alt="" coords="454,557,613,584"/>
+<area shape="rect" href="_buffer_8cpp.html" title=" " alt="" coords="2633,326,2804,353"/>
+<area shape="rect" href="_command_dispatcher_8cpp.html" title=" " alt="" coords="3075,326,3335,353"/>
+<area shape="rect" href="_command_pool_8cpp.html" title=" " alt="" coords="2829,326,3051,353"/>
+<area shape="rect" href="_command_pool_manager_8cpp.html" title=" " alt="" coords="1147,319,1346,360"/>
+<area shape="rect" href="_descriptor_pool_8cpp.html" title=" " alt="" coords="1370,319,1542,360"/>
+<area shape="rect" href="_descriptor_set_layout_8cpp.html" title=" " alt="" coords="1566,319,1738,360"/>
+<area shape="rect" href="_descriptor_set_update_8cpp.html" title=" " alt="" coords="1762,319,1934,360"/>
+<area shape="rect" href="_event_8cpp.html" title=" " alt="" coords="1959,326,2129,353"/>
+<area shape="rect" href="_fence_8cpp.html" title=" " alt="" coords="2153,326,2327,353"/>
+<area shape="rect" href="_framebuffer_8cpp.html" title=" " alt="" coords="2351,326,2558,353"/>
+<area shape="rect" href="_framebuffer_manager_8cpp.html" title=" " alt="" coords="3360,319,3541,360"/>
+<area shape="rect" href="_logical_device_8cpp.html" title=" " alt="" coords="904,326,1123,353"/>
+<area shape="rect" href="_physical_device_8cpp.html" title=" " alt="" coords="3566,326,3794,353"/>
+<area shape="rect" href="_queue_manager_8cpp.html" title=" " alt="" coords="3818,326,4043,353"/>
+<area shape="rect" href="_shader_8cpp.html" title=" " alt="" coords="4068,326,4247,353"/>
+<area shape="rect" href="_a_system_8hpp.html" title=" " alt="" coords="203,162,370,189"/>
+<area shape="rect" href="_system_graph_8hpp.html" title=" " alt="" coords="201,244,394,271"/>
+<area shape="rect" href="_worker_8hpp.html" title=" " alt="" coords="19,162,173,189"/>
+<area shape="rect" href="_system_graph_8cpp.html" title=" " alt="" coords="93,326,286,353"/>
+<area shape="rect" href="_scheduler_8hpp.html" title=" " alt="" coords="5,244,176,271"/>
+<area shape="rect" href="_command_pool_manager_8hpp.html" title=" " alt="" coords="1659,155,1858,196"/>
+<area shape="rect" href="_command_dispatcher_8hpp.html" title=" " alt="" coords="1882,162,2142,189"/>
+<area shape="rect" href="_framebuffer_manager_8hpp.html" title=" " alt="" coords="2167,155,2348,196"/>
+<area shape="rect" href="_meta_8hpp.html" title=" " alt="" coords="1138,244,1281,271"/>
+<area shape="rect" href="_signal_8hpp.html" title=" " alt="" coords="1190,162,1341,189"/>
+<area shape="rect" href="_object_8hpp.html" title=" " alt="" coords="2925,162,3086,189"/>
 </map>
 </div>
 </div>
 <p><a href="_vector_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html">kF::Core::Internal::VectorBase&lt; Type, Range &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base implementation of a vector with size and capacity cached.  <a href="classk_f_1_1_core_1_1_internal_1_1_vector_base.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacek_f"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f.html">kF</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacek_f_1_1_core"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html">kF::Core</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacek_f_1_1_core_1_1_internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core_1_1_internal.html">kF::Core::Internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>

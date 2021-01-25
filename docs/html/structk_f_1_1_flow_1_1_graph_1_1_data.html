@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -83,56 +83,58 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1e1d572e6960d008d21ee9116b99d467"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classk_f_1_1_flow_1_1_node_instance.html">NodeInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a1e1d572e6960d008d21ee9116b99d467">children</a></td></tr>
-<tr class="separator:a1e1d572e6960d008d21ee9116b99d467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06068b3c7e162661da01a80d12e91a32"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a06068b3c7e162661da01a80d12e91a32">sharedCount</a> { 1 }</td></tr>
-<tr class="separator:a06068b3c7e162661da01a80d12e91a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3962d56148e1f9b6e086a9ab0b42687"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#ac3962d56148e1f9b6e086a9ab0b42687">joined</a> { 0 }</td></tr>
-<tr class="separator:ac3962d56148e1f9b6e086a9ab0b42687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b02418a34f346addb34bae90887f20"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a14b02418a34f346addb34bae90887f20">repeat</a> { false }</td></tr>
-<tr class="separator:a14b02418a34f346addb34bae90887f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424fe71482caa2e48c2f8616c35abffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacek_f_1_1_core.html#a9afb4d5554aba95a7ec6819977b10abc">Core::TinyVector</a>&lt; <a class="el" href="classk_f_1_1_flow_1_1_node_instance.html">NodeInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a424fe71482caa2e48c2f8616c35abffd">children</a></td></tr>
+<tr class="separator:a424fe71482caa2e48c2f8616c35abffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac855dd385721e296c10a487a1cf58f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a1ac855dd385721e296c10a487a1cf58f">joined</a> { 0 }</td></tr>
+<tr class="separator:a1ac855dd385721e296c10a487a1cf58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95aba9ee1e0214694c39faf775932dd4"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a95aba9ee1e0214694c39faf775932dd4">sharedCount</a> { 1 }</td></tr>
+<tr class="separator:a95aba9ee1e0214694c39faf775932dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e1c94d64b465b79bbe8a6a489c6bac9"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a0e1c94d64b465b79bbe8a6a489c6bac9">running</a> { false }</td></tr>
 <tr class="separator:a0e1c94d64b465b79bbe8a6a489c6bac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af244c340a45d1a3dbd9e1880dd881c54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_flow_1_1_scheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#af244c340a45d1a3dbd9e1880dd881c54">scheduler</a> { nullptr }</td></tr>
+<tr class="separator:af244c340a45d1a3dbd9e1880dd881c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e3212aea9c5b2897d7f85c0bee1539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt; bool(void)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html#a39e3212aea9c5b2897d7f85c0bee1539">repeatCallback</a> {}</td></tr>
+<tr class="separator:a39e3212aea9c5b2897d7f85c0bee1539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structk_f_1_1_flow_1_1_graph_1_1_data.html" title="Data of the task graph.">Data</a> of the task graph. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a1e1d572e6960d008d21ee9116b99d467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e1d572e6960d008d21ee9116b99d467">&#9670;&nbsp;</a></span>children</h2>
+<a id="a424fe71482caa2e48c2f8616c35abffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424fe71482caa2e48c2f8616c35abffd">&#9670;&nbsp;</a></span>children</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classk_f_1_1_flow_1_1_node_instance.html">NodeInstance</a>&gt; kF::Flow::Graph::Data::children</td>
+          <td class="memname"><a class="el" href="namespacek_f_1_1_core.html#a9afb4d5554aba95a7ec6819977b10abc">Core::TinyVector</a>&lt;<a class="el" href="classk_f_1_1_flow_1_1_node_instance.html">NodeInstance</a>&gt; kF::Flow::Graph::Data::children</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac3962d56148e1f9b6e086a9ab0b42687"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3962d56148e1f9b6e086a9ab0b42687">&#9670;&nbsp;</a></span>joined</h2>
+<a id="a1ac855dd385721e296c10a487a1cf58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac855dd385721e296c10a487a1cf58f">&#9670;&nbsp;</a></span>joined</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;std::size_t&gt; kF::Flow::Graph::Data::joined { 0 }</td>
+          <td class="memname">std::atomic&lt;std::uint32_t&gt; kF::Flow::Graph::Data::joined { 0 }</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a14b02418a34f346addb34bae90887f20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14b02418a34f346addb34bae90887f20">&#9670;&nbsp;</a></span>repeat</h2>
+<a id="a39e3212aea9c5b2897d7f85c0bee1539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e3212aea9c5b2897d7f85c0bee1539">&#9670;&nbsp;</a></span>repeatCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;bool&gt; kF::Flow::Graph::Data::repeat { false }</td>
+          <td class="memname"><a class="el" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt;bool(void)&gt; kF::Flow::Graph::Data::repeatCallback {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -153,14 +155,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a06068b3c7e162661da01a80d12e91a32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06068b3c7e162661da01a80d12e91a32">&#9670;&nbsp;</a></span>sharedCount</h2>
+<a id="af244c340a45d1a3dbd9e1880dd881c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af244c340a45d1a3dbd9e1880dd881c54">&#9670;&nbsp;</a></span>scheduler</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;std::size_t&gt; kF::Flow::Graph::Data::sharedCount { 1 }</td>
+          <td class="memname"><a class="el" href="classk_f_1_1_flow_1_1_scheduler.html">Scheduler</a>* kF::Flow::Graph::Data::scheduler { nullptr }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95aba9ee1e0214694c39faf775932dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95aba9ee1e0214694c39faf775932dd4">&#9670;&nbsp;</a></span>sharedCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::uint16_t&gt; kF::Flow::Graph::Data::sharedCount { 1 }</td>
         </tr>
       </table>
 </div><div class="memdoc">

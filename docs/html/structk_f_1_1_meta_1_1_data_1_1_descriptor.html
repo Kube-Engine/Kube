@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -85,46 +85,84 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a65cab21748ce9776c9329664ee51ff44"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </td></tr>
-<tr class="memitem:a65cab21748ce9776c9329664ee51ff44"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html">kF::Meta::Data::Descriptor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a65cab21748ce9776c9329664ee51ff44">Construct</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a2ffa3298094a39a558ba4e2c6728da59">name</a>, const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#aa5c3d6ebdd97a3137a786783a46c8a4b">signal</a>) noexcept</td></tr>
-<tr class="separator:a65cab21748ce9776c9329664ee51ff44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe88de5fa256603fa8bcf66e91af7e8b"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr&gt; </td></tr>
+<tr class="memitem:abe88de5fa256603fa8bcf66e91af7e8b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html">kF::Meta::Data::Descriptor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#abe88de5fa256603fa8bcf66e91af7e8b">Construct</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a2ffa3298094a39a558ba4e2c6728da59">name</a>, const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#aa5c3d6ebdd97a3137a786783a46c8a4b">signal</a>) noexcept</td></tr>
+<tr class="separator:abe88de5fa256603fa8bcf66e91af7e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab8e56290153e0cfa92b7edd78a5b55bd"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </td></tr>
-<tr class="memitem:ab8e56290153e0cfa92b7edd78a5b55bd"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html">Descriptor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#ab8e56290153e0cfa92b7edd78a5b55bd">Construct</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a2ffa3298094a39a558ba4e2c6728da59">name</a>, const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#aa5c3d6ebdd97a3137a786783a46c8a4b">signal</a>=<a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>()) noexcept</td></tr>
-<tr class="memdesc:ab8e56290153e0cfa92b7edd78a5b55bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html" title="Describe a meta data.">Descriptor</a>.  <a href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#ab8e56290153e0cfa92b7edd78a5b55bd">More...</a><br /></td></tr>
-<tr class="separator:ab8e56290153e0cfa92b7edd78a5b55bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e3532438786c193d56b66848d710fe"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr&gt; </td></tr>
+<tr class="memitem:a09e3532438786c193d56b66848d710fe"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html">Descriptor</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a09e3532438786c193d56b66848d710fe">Construct</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a2ffa3298094a39a558ba4e2c6728da59">name</a>, const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#aa5c3d6ebdd97a3137a786783a46c8a4b">signal</a>) noexcept</td></tr>
+<tr class="memdesc:a09e3532438786c193d56b66848d710fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html" title="Describe a meta data.">Descriptor</a>.  <a href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a09e3532438786c193d56b66848d710fe">More...</a><br /></td></tr>
+<tr class="separator:a09e3532438786c193d56b66848d710fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2ffa3298094a39a558ba4e2c6728da59"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a2ffa3298094a39a558ba4e2c6728da59">name</a></td></tr>
 <tr class="separator:a2ffa3298094a39a558ba4e2c6728da59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5e082a92a11d406a637881a6fcc3737"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#ab5e082a92a11d406a637881a6fcc3737">isStatic</a></td></tr>
+<tr class="memitem:ab5e082a92a11d406a637881a6fcc3737"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#ab5e082a92a11d406a637881a6fcc3737">isStatic</a>: 4</td></tr>
 <tr class="separator:ab5e082a92a11d406a637881a6fcc3737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3595b6e618517c062d4e930a9bc04ec3"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a3595b6e618517c062d4e930a9bc04ec3">isMoveOnly</a></td></tr>
-<tr class="separator:a3595b6e618517c062d4e930a9bc04ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab94e67d66dc149609796692b9f648b76"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#ab94e67d66dc149609796692b9f648b76">_padding</a> [2]</td></tr>
-<tr class="separator:ab94e67d66dc149609796692b9f648b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b48ade23e6ffda52498fe37f696770"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a18b48ade23e6ffda52498fe37f696770">type</a></td></tr>
 <tr class="separator:a18b48ade23e6ffda52498fe37f696770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb7f228b1732a9b99afaac995a302b4b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#ae27b66b3fb9d2b0c0792d37382d2cf16">GetFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#abb7f228b1732a9b99afaac995a302b4b">getFunc</a></td></tr>
 <tr class="separator:abb7f228b1732a9b99afaac995a302b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba1d1efe1c9808929d5451929a6c808"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#aa919372b33e17d81b6801cfbc0efe63a">SetFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a6ba1d1efe1c9808929d5451929a6c808">setFunc</a></td></tr>
-<tr class="separator:a6ba1d1efe1c9808929d5451929a6c808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07b911a3bebabae36efe453132eea6d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#a61223a7c9c36c16a0f0bc3dd84a91f82">SetCopyFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#ab07b911a3bebabae36efe453132eea6d">setCopyFunc</a></td></tr>
+<tr class="separator:ab07b911a3bebabae36efe453132eea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2575165a1e6fb3438f3a6063a905f383"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#a47769497beccd8ef928fe9a7198f633a">SetMoveFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#a2575165a1e6fb3438f3a6063a905f383">setMoveFunc</a></td></tr>
+<tr class="separator:a2575165a1e6fb3438f3a6063a905f383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5c3d6ebdd97a3137a786783a46c8a4b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html#aa5c3d6ebdd97a3137a786783a46c8a4b">signal</a></td></tr>
 <tr class="separator:aa5c3d6ebdd97a3137a786783a46c8a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describe a meta data. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a65cab21748ce9776c9329664ee51ff44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65cab21748ce9776c9329664ee51ff44">&#9670;&nbsp;</a></span>Construct() <span class="overload">[1/2]</span></h2>
+<a id="a09e3532438786c193d56b66848d710fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e3532438786c193d56b66848d710fe">&#9670;&nbsp;</a></span>Construct() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
+template&lt;typename Type , auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html">Descriptor</a> kF::Meta::Data::Descriptor::Construct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td>
+          <td class="paramname"><em>signal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html" title="Describe a meta data.">Descriptor</a>. </p>
+
+</div>
+</div>
+<a id="abe88de5fa256603fa8bcf66e91af7e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe88de5fa256603fa8bcf66e91af7e8b">&#9670;&nbsp;</a></span>Construct() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type , auto GetFunctionPtr, auto SetCopyFunctionPtr, auto SetMoveFunctionPtr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -157,61 +195,7 @@ template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
 
 </div>
 </div>
-<a id="ab8e56290153e0cfa92b7edd78a5b55bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8e56290153e0cfa92b7edd78a5b55bd">&#9670;&nbsp;</a></span>Construct() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html">Descriptor</a> kF::Meta::Data::Descriptor::Construct </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td>
-          <td class="paramname"><em>signal</em> = <code><a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Construct a <a class="el" href="structk_f_1_1_meta_1_1_data_1_1_descriptor.html" title="Describe a meta data.">Descriptor</a>. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab94e67d66dc149609796692b9f648b76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab94e67d66dc149609796692b9f648b76">&#9670;&nbsp;</a></span>_padding</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char kF::Meta::Data::Descriptor::_padding[2]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abb7f228b1732a9b99afaac995a302b4b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb7f228b1732a9b99afaac995a302b4b">&#9670;&nbsp;</a></span>getFunc</h2>
 
@@ -220,20 +204,6 @@ template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#ae27b66b3fb9d2b0c0792d37382d2cf16">GetFunc</a> kF::Meta::Data::Descriptor::getFunc</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3595b6e618517c062d4e930a9bc04ec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3595b6e618517c062d4e930a9bc04ec3">&#9670;&nbsp;</a></span>isMoveOnly</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool kF::Meta::Data::Descriptor::isMoveOnly</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,14 +238,28 @@ template&lt;typename Type , auto GetFunctionPtr, auto SetFunctionPtr&gt; </div>
 
 </div>
 </div>
-<a id="a6ba1d1efe1c9808929d5451929a6c808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ba1d1efe1c9808929d5451929a6c808">&#9670;&nbsp;</a></span>setFunc</h2>
+<a id="ab07b911a3bebabae36efe453132eea6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07b911a3bebabae36efe453132eea6d">&#9670;&nbsp;</a></span>setCopyFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#aa919372b33e17d81b6801cfbc0efe63a">SetFunc</a> kF::Meta::Data::Descriptor::setFunc</td>
+          <td class="memname">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#a61223a7c9c36c16a0f0bc3dd84a91f82">SetCopyFunc</a> kF::Meta::Data::Descriptor::setCopyFunc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2575165a1e6fb3438f3a6063a905f383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2575165a1e6fb3438f3a6063a905f383">&#9670;&nbsp;</a></span>setMoveFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classk_f_1_1_meta_1_1_data.html#a47769497beccd8ef928fe9a7198f633a">SetMoveFunc</a> kF::Meta::Data::Descriptor::setMoveFunc</td>
         </tr>
       </table>
 </div><div class="memdoc">

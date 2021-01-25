@@ -1,0 +1,469 @@
+\hypertarget{classk_f_1_1_object_utils_1_1_tree}{}\doxysection{kF\+::Object\+Utils\+::Tree Class Reference}
+\label{classk_f_1_1_object_utils_1_1_tree}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+
+
+A tree of objects which comes in form of a big array for fast search.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Represent an object in a node tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09}{Flags}} \+: std\+::uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a6adf97f83acf6453d4a6a4b1070f3754}{Flags\+::\+None}} = 0b0, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a891c7265c138b9f950047f7fa1355097}{Flags\+::\+Mouse\+Handler}} = 0b1, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09aa8305ec4b5161804db6400fa8bb2e1d7}{Flags\+::\+Key\+Handler}} = 0b10, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ac689673cdef9c4d31b47a04c8931d395}{Flags\+::\+Draw\+Handler}} = 0b100, 
+\newline
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ab62c390ccb56c9643f2924b59f9db274}{Flags\+::\+Reserved\+Flag0}} = 0b1000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a094a5c25f18fda7359490e50847e0891}{Flags\+::\+Reserved\+Flag1}} = 0b10000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ab9b2eba613fdb4a7fe7604e4d3880d6e}{Flags\+::\+Reserved\+Flag2}} = 0b100000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a04be005353185eef6174d4feda6be47f}{Flags\+::\+Custom\+Flag0}} = 0b1000000, 
+\newline
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09aa6fe53887c1a02d8d633cbc1ce3c9eb8}{Flags\+::\+Custom\+Flag1}} = 0b10000000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a21d2e79456c6358a007315e30bf07bad}{Flags\+::\+Custom\+Flag2}} = 0b100000000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09af74709d1ccb0a11ebfaff4eb1a074827}{Flags\+::\+Custom\+Flag3}} = 0b1000000000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a11d81073b6923c654fda9893992612e7}{Flags\+::\+Custom\+Flag4}} = 0b10000000000, 
+\newline
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a6800c1a252369bb0d05e9ea7af782fd9}{Flags\+::\+Custom\+Flag5}} = 0b100000000000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a3a7075c89288a4599a898035038d01cc}{Flags\+::\+Custom\+Flag6}} = 0b1000000000000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a8feca93bee8e52464bfafe5d8d3f55c0}{Flags\+::\+Custom\+Flag7}} = 0b10000000000000, 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a020025d1ad827568517b98d464117589}{Flags\+::\+Custom\+Flag8}} = 0b100000000000000, 
+\newline
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a0912c9f951aea0bdf6d9d59fe11867f8}{Flags\+::\+Custom\+Flag9}} = 0b1000000000000000
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_object}{Object}} flags that can be used to perform. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} = std\+::uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Index of a node in the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_aa0cf6aad16a610d2790550528154d4a0}{Tree}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_ace8d07937bf0bd0a379635a5f0600e46}{Tree}} (\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Tree}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a07b6330f30b01f9c61d00a6746dec928}{$\sim$\+Tree}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Tree}} \& \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_ac47c0b1be97a9835277fa3b3e7b26a98}{operator=}} (\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Tree}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}} \& \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_aa53a6618af56d598e667537734a1a513}{get}} (const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} index) noexcept
+\begin{DoxyCompactList}\small\item\em Get a node of the tree using its index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}} \& \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_ad312472960f9c95ec38e153ed6dce124}{get}} (const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} index) const noexcept
+\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a3078d9defea7b55d3a6e4983e6452aa5}{add}} (const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} parent\+Index, \mbox{\hyperlink{classk_f_1_1_object}{Object}} $\ast$const object, const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} id, const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09}{Flags}} flags) noexcept
+\begin{DoxyCompactList}\small\item\em Adds a node into the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a55fe84e23610bf6990f93a3959476cd3}{remove}} (const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} index) noexcept
+\begin{DoxyCompactList}\small\item\em Removes a node from the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a69fd4a8b38ebaa98cd5bc71c84fd2c85}{set\+Parent}} (const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} index, const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} parent\+Index) noexcept
+\begin{DoxyCompactList}\small\item\em Replace index of a node for another existing one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a6e3bf6be162906fba6745c3d58a74cc9}{find}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} id) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a node using its hashed name Be aware that id can collide and thus, the function will return the first match. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a244e26a2ac28153129819f71b3875e1f}{find\+In\+Scope}} (const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}} id, const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} from) const noexcept
+\begin{DoxyCompactList}\small\item\em Find a node using its hashed name and a starting point This function will search in \textquotesingle{}from\textquotesingle{} close children then in every parent and their close children This mean you can\textquotesingle{}t access a sub-\/child or the sub-\/child of a parent Be aware that id can collide and thus, the function will return the first match. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a22ff733168c5cdaf28632dcda411b2fb}{is\+Tree\+Dirty}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the tree has changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a7039599ce10c0f33299c3a66ef613c9a}{set\+Tree\+Dirty\+Flag}} (const bool value) noexcept
+\begin{DoxyCompactList}\small\item\em Set the tree dirty flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_aa5fe911b118f47187aea96b434f9b170}{is\+Enabled\+Dirty}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the tree event-\/ability has changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a95268c7849959c2109d8ff641346dba6}{set\+Enabled\+Dirty\+Flag}} (const bool value) noexcept
+\begin{DoxyCompactList}\small\item\em Set the tree event-\/ability dirty flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a11bfe02d1a8763c953984c2807ad7646}{is\+Visible\+Dirty}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Check if the tree visibility has changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a6cd245121c96901fc9b309fb31a15936}{set\+Visible\+Dirty\+Flag}} (const bool value) noexcept
+\begin{DoxyCompactList}\small\item\em Set the tree event-\/ability dirty flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a1a16ed814d689938cbe829cb6e2f9638}{Root\+Index}} = 0u
+\begin{DoxyCompactList}\small\item\em The root index (which is a non-\/object) \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}{Null\+Index}} = std\+::numeric\+\_\+limits$<$\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}$>$\+::max()
+\begin{DoxyCompactList}\small\item\em The null index. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_ab501ec02c7fd43a2f9c63cfc6f1254aa}{Default\+Table\+Size}} = 4096u
+\begin{DoxyCompactList}\small\item\em Number of nodes in the table on startup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a6cb91dc330c915cb2e354e16a9dc5c73}{set\+All\+Dirty\+Flags}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Set every dirty flags to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}}, \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} $>$ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a02e1f0e4e6e531b9f1bf1205bc9409d9}{\+\_\+nodes}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}, \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} $>$ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a972eeb61015fc2442732b76c7e45d799}{\+\_\+free\+List}} \{\}
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a007a6b1f81413dd3895e30b1bbb87979}{\+\_\+tree\+Dirty}} \{ false \}
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a6b49d023e4b9418685eef94d51511607}{\+\_\+enabled\+Dirty}} \{ false \}
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a6a62a78615475bbb7ea0e2d254a060c2}{\+\_\+visible\+Dirty}} \{ false \}
+\item 
+std\+::byte \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_ad76058e62b089b3bdf1fc9e7377e063a}{\+\_\+padding}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A tree of objects which comes in form of a big array for fast search. 
+
+This class provides stable indexing (nodes\textquotesingle{} indexes) but N\+OT stable addressing (nodes\textquotesingle{} pointers) This class is not thread safe at all 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}\label{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!Index@{Index}}
+\index{Index@{Index}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Index}} =  std\+::uint32\+\_\+t}
+
+
+
+Index of a node in the tree. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!Flags@{Flags}}
+\index{Flags@{Flags}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09}{k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Flags}} \+: std\+::uint16\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_object}{Object}} flags that can be used to perform. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!None@{None}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a6adf97f83acf6453d4a6a4b1070f3754}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MouseHandler@{MouseHandler}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!MouseHandler@{MouseHandler}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a891c7265c138b9f950047f7fa1355097}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a891c7265c138b9f950047f7fa1355097}} 
+Mouse\+Handler&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KeyHandler@{KeyHandler}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!KeyHandler@{KeyHandler}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09aa8305ec4b5161804db6400fa8bb2e1d7}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09aa8305ec4b5161804db6400fa8bb2e1d7}} 
+Key\+Handler&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DrawHandler@{DrawHandler}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!DrawHandler@{DrawHandler}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ac689673cdef9c4d31b47a04c8931d395}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ac689673cdef9c4d31b47a04c8931d395}} 
+Draw\+Handler&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReservedFlag0@{ReservedFlag0}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!ReservedFlag0@{ReservedFlag0}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ab62c390ccb56c9643f2924b59f9db274}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ab62c390ccb56c9643f2924b59f9db274}} 
+Reserved\+Flag0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReservedFlag1@{ReservedFlag1}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!ReservedFlag1@{ReservedFlag1}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a094a5c25f18fda7359490e50847e0891}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a094a5c25f18fda7359490e50847e0891}} 
+Reserved\+Flag1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReservedFlag2@{ReservedFlag2}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!ReservedFlag2@{ReservedFlag2}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ab9b2eba613fdb4a7fe7604e4d3880d6e}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09ab9b2eba613fdb4a7fe7604e4d3880d6e}} 
+Reserved\+Flag2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag0@{CustomFlag0}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag0@{CustomFlag0}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a04be005353185eef6174d4feda6be47f}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a04be005353185eef6174d4feda6be47f}} 
+Custom\+Flag0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag1@{CustomFlag1}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag1@{CustomFlag1}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09aa6fe53887c1a02d8d633cbc1ce3c9eb8}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09aa6fe53887c1a02d8d633cbc1ce3c9eb8}} 
+Custom\+Flag1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag2@{CustomFlag2}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag2@{CustomFlag2}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a21d2e79456c6358a007315e30bf07bad}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a21d2e79456c6358a007315e30bf07bad}} 
+Custom\+Flag2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag3@{CustomFlag3}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag3@{CustomFlag3}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09af74709d1ccb0a11ebfaff4eb1a074827}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09af74709d1ccb0a11ebfaff4eb1a074827}} 
+Custom\+Flag3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag4@{CustomFlag4}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag4@{CustomFlag4}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a11d81073b6923c654fda9893992612e7}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a11d81073b6923c654fda9893992612e7}} 
+Custom\+Flag4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag5@{CustomFlag5}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag5@{CustomFlag5}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a6800c1a252369bb0d05e9ea7af782fd9}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a6800c1a252369bb0d05e9ea7af782fd9}} 
+Custom\+Flag5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag6@{CustomFlag6}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag6@{CustomFlag6}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a3a7075c89288a4599a898035038d01cc}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a3a7075c89288a4599a898035038d01cc}} 
+Custom\+Flag6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag7@{CustomFlag7}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag7@{CustomFlag7}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a8feca93bee8e52464bfafe5d8d3f55c0}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a8feca93bee8e52464bfafe5d8d3f55c0}} 
+Custom\+Flag7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag8@{CustomFlag8}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag8@{CustomFlag8}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a020025d1ad827568517b98d464117589}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a020025d1ad827568517b98d464117589}} 
+Custom\+Flag8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CustomFlag9@{CustomFlag9}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!CustomFlag9@{CustomFlag9}}}\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a0912c9f951aea0bdf6d9d59fe11867f8}\label{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09a0912c9f951aea0bdf6d9d59fe11867f8}} 
+Custom\+Flag9&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_aa0cf6aad16a610d2790550528154d4a0}\label{classk_f_1_1_object_utils_1_1_tree_aa0cf6aad16a610d2790550528154d4a0}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: A tree of objects \mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_ace8d07937bf0bd0a379635a5f0600e46}\label{classk_f_1_1_object_utils_1_1_tree_ace8d07937bf0bd0a379635a5f0600e46}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Tree}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a07b6330f30b01f9c61d00a6746dec928}\label{classk_f_1_1_object_utils_1_1_tree_a07b6330f30b01f9c61d00a6746dec928}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!````~Tree@{$\sim$Tree}}
+\index{````~Tree@{$\sim$Tree}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{$\sim$Tree()}{~Tree()}}
+{\footnotesize\ttfamily k\+F\+::\+Object\+Utils\+::\+Tree\+::$\sim$\+Tree (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a3078d9defea7b55d3a6e4983e6452aa5}\label{classk_f_1_1_object_utils_1_1_tree_a3078d9defea7b55d3a6e4983e6452aa5}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!add@{add}}
+\index{add@{add}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Index}} k\+F\+::\+Object\+Utils\+::\+Tree\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{parent\+Index,  }\item[{\mbox{\hyperlink{classk_f_1_1_object}{Object}} $\ast$const}]{object,  }\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{id,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a2bd010ef6aebec972138ebf44e6aad09}{Flags}}}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Adds a node into the tree. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a6e3bf6be162906fba6745c3d58a74cc9}\label{classk_f_1_1_object_utils_1_1_tree_a6e3bf6be162906fba6745c3d58a74cc9}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!find@{find}}
+\index{find@{find}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Index}} k\+F\+::\+Object\+Utils\+::\+Tree\+::find (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a node using its hashed name Be aware that id can collide and thus, the function will return the first match. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a244e26a2ac28153129819f71b3875e1f}\label{classk_f_1_1_object_utils_1_1_tree_a244e26a2ac28153129819f71b3875e1f}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!findInScope@{findInScope}}
+\index{findInScope@{findInScope}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{findInScope()}{findInScope()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Index}} k\+F\+::\+Object\+Utils\+::\+Tree\+::find\+In\+Scope (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_a3425eef9b8c0f48a05a0481820112bd4}{Hashed\+Name}}}]{id,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{from }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Find a node using its hashed name and a starting point This function will search in \textquotesingle{}from\textquotesingle{} close children then in every parent and their close children This mean you can\textquotesingle{}t access a sub-\/child or the sub-\/child of a parent Be aware that id can collide and thus, the function will return the first match. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_ad312472960f9c95ec38e153ed6dce124}\label{classk_f_1_1_object_utils_1_1_tree_ad312472960f9c95ec38e153ed6dce124}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!get@{get}}
+\index{get@{get}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}}\& k\+F\+::\+Object\+Utils\+::\+Tree\+::get (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_aa53a6618af56d598e667537734a1a513}\label{classk_f_1_1_object_utils_1_1_tree_aa53a6618af56d598e667537734a1a513}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!get@{get}}
+\index{get@{get}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}}\& k\+F\+::\+Object\+Utils\+::\+Tree\+::get (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get a node of the tree using its index. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_aa5fe911b118f47187aea96b434f9b170}\label{classk_f_1_1_object_utils_1_1_tree_aa5fe911b118f47187aea96b434f9b170}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!isEnabledDirty@{isEnabledDirty}}
+\index{isEnabledDirty@{isEnabledDirty}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{isEnabledDirty()}{isEnabledDirty()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Object\+Utils\+::\+Tree\+::is\+Enabled\+Dirty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the tree event-\/ability has changed. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a22ff733168c5cdaf28632dcda411b2fb}\label{classk_f_1_1_object_utils_1_1_tree_a22ff733168c5cdaf28632dcda411b2fb}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!isTreeDirty@{isTreeDirty}}
+\index{isTreeDirty@{isTreeDirty}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{isTreeDirty()}{isTreeDirty()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Object\+Utils\+::\+Tree\+::is\+Tree\+Dirty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the tree has changed. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a11bfe02d1a8763c953984c2807ad7646}\label{classk_f_1_1_object_utils_1_1_tree_a11bfe02d1a8763c953984c2807ad7646}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!isVisibleDirty@{isVisibleDirty}}
+\index{isVisibleDirty@{isVisibleDirty}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{isVisibleDirty()}{isVisibleDirty()}}
+{\footnotesize\ttfamily bool k\+F\+::\+Object\+Utils\+::\+Tree\+::is\+Visible\+Dirty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Check if the tree visibility has changed. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_ac47c0b1be97a9835277fa3b3e7b26a98}\label{classk_f_1_1_object_utils_1_1_tree_ac47c0b1be97a9835277fa3b3e7b26a98}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Tree}}\& k\+F\+::\+Object\+Utils\+::\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Tree}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a55fe84e23610bf6990f93a3959476cd3}\label{classk_f_1_1_object_utils_1_1_tree_a55fe84e23610bf6990f93a3959476cd3}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!remove@{remove}}
+\index{remove@{remove}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+Utils\+::\+Tree\+::remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Removes a node from the tree. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a6cb91dc330c915cb2e354e16a9dc5c73}\label{classk_f_1_1_object_utils_1_1_tree_a6cb91dc330c915cb2e354e16a9dc5c73}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!setAllDirtyFlags@{setAllDirtyFlags}}
+\index{setAllDirtyFlags@{setAllDirtyFlags}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{setAllDirtyFlags()}{setAllDirtyFlags()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+Utils\+::\+Tree\+::set\+All\+Dirty\+Flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Set every dirty flags to true. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a95268c7849959c2109d8ff641346dba6}\label{classk_f_1_1_object_utils_1_1_tree_a95268c7849959c2109d8ff641346dba6}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!setEnabledDirtyFlag@{setEnabledDirtyFlag}}
+\index{setEnabledDirtyFlag@{setEnabledDirtyFlag}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{setEnabledDirtyFlag()}{setEnabledDirtyFlag()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+Utils\+::\+Tree\+::set\+Enabled\+Dirty\+Flag (\begin{DoxyParamCaption}\item[{const bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the tree event-\/ability dirty flag. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a69fd4a8b38ebaa98cd5bc71c84fd2c85}\label{classk_f_1_1_object_utils_1_1_tree_a69fd4a8b38ebaa98cd5bc71c84fd2c85}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!setParent@{setParent}}
+\index{setParent@{setParent}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+Utils\+::\+Tree\+::set\+Parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{index,  }\item[{const \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}}]{parent\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Replace index of a node for another existing one. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a7039599ce10c0f33299c3a66ef613c9a}\label{classk_f_1_1_object_utils_1_1_tree_a7039599ce10c0f33299c3a66ef613c9a}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!setTreeDirtyFlag@{setTreeDirtyFlag}}
+\index{setTreeDirtyFlag@{setTreeDirtyFlag}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{setTreeDirtyFlag()}{setTreeDirtyFlag()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+Utils\+::\+Tree\+::set\+Tree\+Dirty\+Flag (\begin{DoxyParamCaption}\item[{const bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the tree dirty flag. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a6cd245121c96901fc9b309fb31a15936}\label{classk_f_1_1_object_utils_1_1_tree_a6cd245121c96901fc9b309fb31a15936}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!setVisibleDirtyFlag@{setVisibleDirtyFlag}}
+\index{setVisibleDirtyFlag@{setVisibleDirtyFlag}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{setVisibleDirtyFlag()}{setVisibleDirtyFlag()}}
+{\footnotesize\ttfamily void k\+F\+::\+Object\+Utils\+::\+Tree\+::set\+Visible\+Dirty\+Flag (\begin{DoxyParamCaption}\item[{const bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Set the tree event-\/ability dirty flag. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a6b49d023e4b9418685eef94d51511607}\label{classk_f_1_1_object_utils_1_1_tree_a6b49d023e4b9418685eef94d51511607}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!\_enabledDirty@{\_enabledDirty}}
+\index{\_enabledDirty@{\_enabledDirty}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{\_enabledDirty}{\_enabledDirty}}
+{\footnotesize\ttfamily bool k\+F\+::\+Object\+Utils\+::\+Tree\+::\+\_\+enabled\+Dirty \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a972eeb61015fc2442732b76c7e45d799}\label{classk_f_1_1_object_utils_1_1_tree_a972eeb61015fc2442732b76c7e45d799}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!\_freeList@{\_freeList}}
+\index{\_freeList@{\_freeList}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{\_freeList}{\_freeList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}, \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}$>$ k\+F\+::\+Object\+Utils\+::\+Tree\+::\+\_\+free\+List \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a02e1f0e4e6e531b9f1bf1205bc9409d9}\label{classk_f_1_1_object_utils_1_1_tree_a02e1f0e4e6e531b9f1bf1205bc9409d9}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!\_nodes@{\_nodes}}
+\index{\_nodes@{\_nodes}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{\_nodes}{\_nodes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{structk_f_1_1_object_utils_1_1_tree_1_1_node}{Node}}, \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}$>$ k\+F\+::\+Object\+Utils\+::\+Tree\+::\+\_\+nodes \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_ad76058e62b089b3bdf1fc9e7377e063a}\label{classk_f_1_1_object_utils_1_1_tree_ad76058e62b089b3bdf1fc9e7377e063a}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!\_padding@{\_padding}}
+\index{\_padding@{\_padding}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{\_padding}{\_padding}}
+{\footnotesize\ttfamily std\+::byte k\+F\+::\+Object\+Utils\+::\+Tree\+::\+\_\+padding \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a007a6b1f81413dd3895e30b1bbb87979}\label{classk_f_1_1_object_utils_1_1_tree_a007a6b1f81413dd3895e30b1bbb87979}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!\_treeDirty@{\_treeDirty}}
+\index{\_treeDirty@{\_treeDirty}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{\_treeDirty}{\_treeDirty}}
+{\footnotesize\ttfamily bool k\+F\+::\+Object\+Utils\+::\+Tree\+::\+\_\+tree\+Dirty \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a6a62a78615475bbb7ea0e2d254a060c2}\label{classk_f_1_1_object_utils_1_1_tree_a6a62a78615475bbb7ea0e2d254a060c2}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!\_visibleDirty@{\_visibleDirty}}
+\index{\_visibleDirty@{\_visibleDirty}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{\_visibleDirty}{\_visibleDirty}}
+{\footnotesize\ttfamily bool k\+F\+::\+Object\+Utils\+::\+Tree\+::\+\_\+visible\+Dirty \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_ab501ec02c7fd43a2f9c63cfc6f1254aa}\label{classk_f_1_1_object_utils_1_1_tree_ab501ec02c7fd43a2f9c63cfc6f1254aa}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!DefaultTableSize@{DefaultTableSize}}
+\index{DefaultTableSize@{DefaultTableSize}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{DefaultTableSize}{DefaultTableSize}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Default\+Table\+Size = 4096u\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Number of nodes in the table on startup. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}\label{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!NullIndex@{NullIndex}}
+\index{NullIndex@{NullIndex}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{NullIndex}{NullIndex}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Null\+Index = std\+::numeric\+\_\+limits$<$\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}}$>$\+::max()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The null index. 
+
+\mbox{\Hypertarget{classk_f_1_1_object_utils_1_1_tree_a1a16ed814d689938cbe829cb6e2f9638}\label{classk_f_1_1_object_utils_1_1_tree_a1a16ed814d689938cbe829cb6e2f9638}} 
+\index{kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}!RootIndex@{RootIndex}}
+\index{RootIndex@{RootIndex}!kF::ObjectUtils::Tree@{kF::ObjectUtils::Tree}}
+\doxysubsubsection{\texorpdfstring{RootIndex}{RootIndex}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a65d176ae7b6404751122029543308efd}{Index}} k\+F\+::\+Object\+Utils\+::\+Tree\+::\+Root\+Index = 0u\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The root index (which is a non-\/object) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Object/\mbox{\hyperlink{_tree_8hpp}{Tree.\+hpp}}\item 
+Kube/\+Object/\mbox{\hyperlink{_tree_8ipp}{Tree.\+ipp}}\end{DoxyCompactItemize}

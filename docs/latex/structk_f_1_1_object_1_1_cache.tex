@@ -1,0 +1,73 @@
+\hypertarget{structk_f_1_1_object_1_1_cache}{}\doxysection{kF\+::Object\+::Cache Struct Reference}
+\label{structk_f_1_1_object_1_1_cache}\index{kF::Object::Cache@{kF::Object::Cache}}
+
+
+Connection table of an object.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Object\+Utils\+::\+Tree}} $\ast$ \mbox{\hyperlink{structk_f_1_1_object_1_1_cache_a38ed18994b9b872ff44b4a6fa4c897b4}{tree}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_object_ab21c8e0e21ee3f05c23d831f492f91ef}{Object\+Index}} \mbox{\hyperlink{structk_f_1_1_object_1_1_cache_a1588fc47b853015c35b8cfa0c5a25c78}{index}} \{ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}{Object\+Utils\+::\+Tree\+::\+Null\+Index}} \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_object_ab21c8e0e21ee3f05c23d831f492f91ef}{Object\+Index}} \mbox{\hyperlink{structk_f_1_1_object_1_1_cache_a7102fb3fe3c446b3613455c0fd859bf2}{parent\+Index}} \{ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}{Object\+Utils\+::\+Tree\+::\+Null\+Index}} \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}} $\ast$ \mbox{\hyperlink{structk_f_1_1_object_1_1_cache_ae7baf4c98a76931085e4b782b2375502}{slot\+Table}} \{ \&\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_ac52ba037a1f1f2833f5af85ee5d4c3ed}{Meta\+::\+Signal\+::\+Get\+Slot\+Table}}() \}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ std\+::pair$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}, \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} $>$ $>$ \mbox{\hyperlink{structk_f_1_1_object_1_1_cache_a910dd13247b2738e15a127893f7767a6}{registered\+Slots}} \{\}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}} $>$ \mbox{\hyperlink{structk_f_1_1_object_1_1_cache_a965c48d7f0f4ccfb957badea870f905c}{owned\+Slots}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Connection table of an object. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structk_f_1_1_object_1_1_cache_a1588fc47b853015c35b8cfa0c5a25c78}\label{structk_f_1_1_object_1_1_cache_a1588fc47b853015c35b8cfa0c5a25c78}} 
+\index{kF::Object::Cache@{kF::Object::Cache}!index@{index}}
+\index{index@{index}!kF::Object::Cache@{kF::Object::Cache}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_ab21c8e0e21ee3f05c23d831f492f91ef}{Object\+Index}} k\+F\+::\+Object\+::\+Cache\+::index \{ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}{Object\+Utils\+::\+Tree\+::\+Null\+Index}} \}}
+
+\mbox{\Hypertarget{structk_f_1_1_object_1_1_cache_a965c48d7f0f4ccfb957badea870f905c}\label{structk_f_1_1_object_1_1_cache_a965c48d7f0f4ccfb957badea870f905c}} 
+\index{kF::Object::Cache@{kF::Object::Cache}!ownedSlots@{ownedSlots}}
+\index{ownedSlots@{ownedSlots}!kF::Object::Cache@{kF::Object::Cache}}
+\doxysubsubsection{\texorpdfstring{ownedSlots}{ownedSlots}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}$>$ k\+F\+::\+Object\+::\+Cache\+::owned\+Slots \{\}}
+
+\mbox{\Hypertarget{structk_f_1_1_object_1_1_cache_a7102fb3fe3c446b3613455c0fd859bf2}\label{structk_f_1_1_object_1_1_cache_a7102fb3fe3c446b3613455c0fd859bf2}} 
+\index{kF::Object::Cache@{kF::Object::Cache}!parentIndex@{parentIndex}}
+\index{parentIndex@{parentIndex}!kF::Object::Cache@{kF::Object::Cache}}
+\doxysubsubsection{\texorpdfstring{parentIndex}{parentIndex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_ab21c8e0e21ee3f05c23d831f492f91ef}{Object\+Index}} k\+F\+::\+Object\+::\+Cache\+::parent\+Index \{ \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree_a66d05eac2fea0aa604cacd5f0d14f66e}{Object\+Utils\+::\+Tree\+::\+Null\+Index}} \}}
+
+\mbox{\Hypertarget{structk_f_1_1_object_1_1_cache_a910dd13247b2738e15a127893f7767a6}\label{structk_f_1_1_object_1_1_cache_a910dd13247b2738e15a127893f7767a6}} 
+\index{kF::Object::Cache@{kF::Object::Cache}!registeredSlots@{registeredSlots}}
+\index{registeredSlots@{registeredSlots}!kF::Object::Cache@{kF::Object::Cache}}
+\doxysubsubsection{\texorpdfstring{registeredSlots}{registeredSlots}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$std\+::pair$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal}{Meta\+::\+Signal}}, \mbox{\hyperlink{classk_f_1_1_object_a56863aaebff597001625a659b046228c}{Connection\+Handle}}$>$ $>$ k\+F\+::\+Object\+::\+Cache\+::registered\+Slots \{\}}
+
+\mbox{\Hypertarget{structk_f_1_1_object_1_1_cache_ae7baf4c98a76931085e4b782b2375502}\label{structk_f_1_1_object_1_1_cache_ae7baf4c98a76931085e4b782b2375502}} 
+\index{kF::Object::Cache@{kF::Object::Cache}!slotTable@{slotTable}}
+\index{slotTable@{slotTable}!kF::Object::Cache@{kF::Object::Cache}}
+\doxysubsubsection{\texorpdfstring{slotTable}{slotTable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Meta\+::\+Slot\+Table}}$\ast$ k\+F\+::\+Object\+::\+Cache\+::slot\+Table \{ \&\mbox{\hyperlink{classk_f_1_1_meta_1_1_signal_ac52ba037a1f1f2833f5af85ee5d4c3ed}{Meta\+::\+Signal\+::\+Get\+Slot\+Table}}() \}}
+
+\mbox{\Hypertarget{structk_f_1_1_object_1_1_cache_a38ed18994b9b872ff44b4a6fa4c897b4}\label{structk_f_1_1_object_1_1_cache_a38ed18994b9b872ff44b4a6fa4c897b4}} 
+\index{kF::Object::Cache@{kF::Object::Cache}!tree@{tree}}
+\index{tree@{tree}!kF::Object::Cache@{kF::Object::Cache}}
+\doxysubsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_object_utils_1_1_tree}{Object\+Utils\+::\+Tree}}$\ast$ k\+F\+::\+Object\+::\+Cache\+::tree \{ nullptr \}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Object/\mbox{\hyperlink{_object_8hpp}{Object.\+hpp}}\end{DoxyCompactItemize}

@@ -7,7 +7,7 @@ Base implementation of a vector with size and capacity cached.
 
 
 
-{\ttfamily \#include $<$Vector.\+hpp$>$}
+{\ttfamily \#include $<$Vector\+Base.\+hpp$>$}
 
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
@@ -37,6 +37,8 @@ Range \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_aca6c209c7
 \item 
 \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_aab6cf693855a336b04ce67587a3241af}{Const\+Iterator}} \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_adca18360ec4d321f767c764a7dd03be0}{end}} (void) const noexcept
 \item 
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_a1c44cb50ce1f8c1d4584cb844ca40789}{steal}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Vector\+Base}} \&other) noexcept
+\begin{DoxyCompactList}\small\item\em Steal another instance. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_a42df9504ac34321f2c1e4f622eaa0d60}{swap}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Vector\+Base}} \&other) noexcept
 \begin{DoxyCompactList}\small\item\em Swap two instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
@@ -66,7 +68,7 @@ const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Ty
 \item 
 \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_a7c74b3f3281b46b73b2b1c69d9a41fe9}{allocate}} (const Range \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_aca6c209c71a914b1c8a98b6d88ce7c32}{capacity}}) noexcept
 \begin{DoxyCompactList}\small\item\em Allocates a new buffer. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_a4039b9a59abc0f6c1457792d7f3c3749}{deallocate}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_a82b9436014d43a210a35dab464fa6123}{data}}) noexcept
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_ae0b2af93f282097b1617ccbc35b9bf58}{deallocate}} (\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base_a82b9436014d43a210a35dab464fa6123}{data}}, const Range) noexcept
 \begin{DoxyCompactList}\small\item\em Deallocates a buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -216,12 +218,12 @@ const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Ty
 
 Unsafe data. 
 
-\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_base_a4039b9a59abc0f6c1457792d7f3c3749}\label{classk_f_1_1_core_1_1_internal_1_1_vector_base_a4039b9a59abc0f6c1457792d7f3c3749}} 
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_base_ae0b2af93f282097b1617ccbc35b9bf58}\label{classk_f_1_1_core_1_1_internal_1_1_vector_base_ae0b2af93f282097b1617ccbc35b9bf58}} 
 \index{kF::Core::Internal::VectorBase$<$ Type, Range $>$@{kF::Core::Internal::VectorBase$<$ Type, Range $>$}!deallocate@{deallocate}}
 \index{deallocate@{deallocate}!kF::Core::Internal::VectorBase$<$ Type, Range $>$@{kF::Core::Internal::VectorBase$<$ Type, Range $>$}}
 \doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
 {\footnotesize\ttfamily template$<$typename Type , std\+::integral Range$>$ \\
-void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::deallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::deallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $\ast$const}]{data,  }\item[{const}]{Range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [noexcept]}}
 
 
 
@@ -321,7 +323,18 @@ Range \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{k\+F\+::\
 
 Unsafe size getter. 
 
-\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_base_a42df9504ac34321f2c1e4f622eaa0d60}\label{classk_f_1_1_core_1_1_internal_1_1_vector_base_a42df9504ac34321f2c1e4f622eaa0d60}} 
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_base_a1c44cb50ce1f8c1d4584cb844ca40789}\label{classk_f_1_1_core_1_1_internal_1_1_vector_base_a1c44cb50ce1f8c1d4584cb844ca40789}} 
+\index{kF::Core::Internal::VectorBase$<$ Type, Range $>$@{kF::Core::Internal::VectorBase$<$ Type, Range $>$}!steal@{steal}}
+\index{steal@{steal}!kF::Core::Internal::VectorBase$<$ Type, Range $>$@{kF::Core::Internal::VectorBase$<$ Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{steal()}{steal()}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range$>$ \\
+void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{k\+F\+::\+Core\+::\+Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::steal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Steal another instance. 
+
+@ Author\+: Matthieu Moinvaziri @ Description\+: Vector \mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_base_a42df9504ac34321f2c1e4f622eaa0d60}\label{classk_f_1_1_core_1_1_internal_1_1_vector_base_a42df9504ac34321f2c1e4f622eaa0d60}} 
 \index{kF::Core::Internal::VectorBase$<$ Type, Range $>$@{kF::Core::Internal::VectorBase$<$ Type, Range $>$}!swap@{swap}}
 \index{swap@{swap}!kF::Core::Internal::VectorBase$<$ Type, Range $>$@{kF::Core::Internal::VectorBase$<$ Type, Range $>$}}
 \doxysubsubsection{\texorpdfstring{swap()}{swap()}}
@@ -332,7 +345,7 @@ void \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{k\+F\+::\+
 
 Swap two instances. 
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: Vector 
+
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_vector_base_a073702b79ddac605a222d97c0465f20e}\label{classk_f_1_1_core_1_1_internal_1_1_vector_base_a073702b79ddac605a222d97c0465f20e}} 
@@ -360,5 +373,5 @@ Range \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{k\+F\+::\
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Kube/\+Core/\mbox{\hyperlink{_vector_8hpp}{Vector.\+hpp}}\item 
-Kube/\+Core/\mbox{\hyperlink{_vector_8ipp}{Vector.\+ipp}}\end{DoxyCompactItemize}
+Kube/\+Core/\mbox{\hyperlink{_vector_base_8hpp}{Vector\+Base.\+hpp}}\item 
+Kube/\+Core/\mbox{\hyperlink{_vector_base_8ipp}{Vector\+Base.\+ipp}}\end{DoxyCompactItemize}

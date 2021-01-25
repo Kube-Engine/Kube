@@ -1,0 +1,198 @@
+\hypertarget{classk_f_1_1_lang_1_1_expression}{}\doxysection{kF\+::Lang\+::Expression Class Reference}
+\label{classk_f_1_1_lang_1_1_expression}\index{kF::Lang::Expression@{kF::Lang::Expression}}
+
+
+An expression is an opaque accesser that implement execution of expressions You should call \textquotesingle{}Construct\textquotesingle{} static member function to create a pointer to expression.  
+
+
+
+
+{\ttfamily \#include $<$Expression.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a9f7f8f0641940f3c518295376b18a0c5}{$\sim$\+Expression}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default destructor, does nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}{Expression\+Ptr}} \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a60cde72975a8a16d2be47626af4bd4ad}{Construct}} (void)
+\begin{DoxyCompactList}\small\item\em Build an expression out of an. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a6c14f79fc5abb4b85ddceea4d8ce2418}{Release}} (const \mbox{\hyperlink{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}{Expression\+Ptr}} instance) noexcept
+\begin{DoxyCompactList}\small\item\em Release an expression aquired before with \textquotesingle{}Construct\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a4ee74d9907fc2e4399c3914e06a62ca1}{Expression}} (const std\+::size\+\_\+t size) noexcept
+\begin{DoxyCompactList}\small\item\em Construct an expression so it occupies a given size in bytes. \end{DoxyCompactList}\item 
+std\+::byte $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a31661396edd3c83a3665851e2c3aaefe}{raw\+Data}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the internal node data (itself) as raw data. \end{DoxyCompactList}\item 
+const std\+::byte $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a86c46de55f20b7e3d77224932b1ec964}{raw\+Data}} (void) const noexcept
+\item 
+\mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}} $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_afa864f8032f06889be39172074397364}{data}} (void) noexcept
+\begin{DoxyCompactList}\small\item\em Get the internal node data (itself) as node. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}} $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_accb0723da8830a33c672c3691333b45a}{data}} (void) const noexcept
+\item 
+\mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}} $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_af6bde67d8a8e0dc2ad44ce11dd32e5e5}{at}} (const \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{Byte\+Index}} byte\+Index) noexcept
+\begin{DoxyCompactList}\small\item\em Access a node at byte index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}} $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a7036376d83905961d38bc9ef72b58418}{at}} (const \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{Byte\+Index}} byte\+Index) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a5f0069aff189a8d79cf9237f1b3678df}{Allocate}} (const std\+::size\+\_\+t size) noexcept
+\begin{DoxyCompactList}\small\item\em Allocate using the allocator. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a3b4f10e843a84a787acb65e4a1e55adf}{Deallocate}} (void $\ast$\mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_afa864f8032f06889be39172074397364}{data}}, const std\+::size\+\_\+t size) noexcept
+\begin{DoxyCompactList}\small\item\em Allocate using the allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a8e7451e801e5a4dc9e482be10e250e42}{\+\_\+size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource \mbox{\hyperlink{classk_f_1_1_lang_1_1_expression_a6c36f305ea1b1b1d6693798583ad1534}{\+\_\+\+Allocator}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An expression is an opaque accesser that implement execution of expressions You should call \textquotesingle{}Construct\textquotesingle{} static member function to create a pointer to expression. 
+
+This class is a view that has ownership over itself, \textquotesingle{}this\textquotesingle{} pointer is the beginning of the node data Once built cannot be nor moved as its pointer is where is the data
+
+Why such an obscure pattern ? Because it removes a level of indirection when calling a slot 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a9f7f8f0641940f3c518295376b18a0c5}\label{classk_f_1_1_lang_1_1_expression_a9f7f8f0641940f3c518295376b18a0c5}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!````~Expression@{$\sim$Expression}}
+\index{````~Expression@{$\sim$Expression}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{$\sim$Expression()}{~Expression()}}
+{\footnotesize\ttfamily k\+F\+::\+Lang\+::\+Expression\+::$\sim$\+Expression (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default destructor, does nothing. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a4ee74d9907fc2e4399c3914e06a62ca1}\label{classk_f_1_1_lang_1_1_expression_a4ee74d9907fc2e4399c3914e06a62ca1}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!Expression@{Expression}}
+\index{Expression@{Expression}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{Expression()}{Expression()}}
+{\footnotesize\ttfamily k\+F\+::\+Lang\+::\+Expression\+::\+Expression (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an expression so it occupies a given size in bytes. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a5f0069aff189a8d79cf9237f1b3678df}\label{classk_f_1_1_lang_1_1_expression_a5f0069aff189a8d79cf9237f1b3678df}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily static void$\ast$ k\+F\+::\+Lang\+::\+Expression\+::\+Allocate (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Allocate using the allocator. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a7036376d83905961d38bc9ef72b58418}\label{classk_f_1_1_lang_1_1_expression_a7036376d83905961d38bc9ef72b58418}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!at@{at}}
+\index{at@{at}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}}$\ast$ k\+F\+::\+Lang\+::\+Expression\+::at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{Byte\+Index}}}]{byte\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_af6bde67d8a8e0dc2ad44ce11dd32e5e5}\label{classk_f_1_1_lang_1_1_expression_af6bde67d8a8e0dc2ad44ce11dd32e5e5}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!at@{at}}
+\index{at@{at}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}}$\ast$ k\+F\+::\+Lang\+::\+Expression\+::at (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_lang_a3ad7d7aedea1bb54057fce7cedce1dce}{Byte\+Index}}}]{byte\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Access a node at byte index. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a60cde72975a8a16d2be47626af4bd4ad}\label{classk_f_1_1_lang_1_1_expression_a60cde72975a8a16d2be47626af4bd4ad}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!Construct@{Construct}}
+\index{Construct@{Construct}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}{Expression\+Ptr}} k\+F\+::\+Lang\+::\+Expression\+::\+Construct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Build an expression out of an. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_accb0723da8830a33c672c3691333b45a}\label{classk_f_1_1_lang_1_1_expression_accb0723da8830a33c672c3691333b45a}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!data@{data}}
+\index{data@{data}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}}$\ast$ k\+F\+::\+Lang\+::\+Expression\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_afa864f8032f06889be39172074397364}\label{classk_f_1_1_lang_1_1_expression_afa864f8032f06889be39172074397364}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!data@{data}}
+\index{data@{data}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structk_f_1_1_lang_1_1_instruction}{Instruction}}$\ast$ k\+F\+::\+Lang\+::\+Expression\+::data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Get the internal node data (itself) as node. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a3b4f10e843a84a787acb65e4a1e55adf}\label{classk_f_1_1_lang_1_1_expression_a3b4f10e843a84a787acb65e4a1e55adf}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!Deallocate@{Deallocate}}
+\index{Deallocate@{Deallocate}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{Deallocate()}{Deallocate()}}
+{\footnotesize\ttfamily static void k\+F\+::\+Lang\+::\+Expression\+::\+Deallocate (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{const std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Allocate using the allocator. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a86c46de55f20b7e3d77224932b1ec964}\label{classk_f_1_1_lang_1_1_expression_a86c46de55f20b7e3d77224932b1ec964}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!rawData@{rawData}}
+\index{rawData@{rawData}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{rawData()}{rawData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::byte$\ast$ k\+F\+::\+Lang\+::\+Expression\+::raw\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a31661396edd3c83a3665851e2c3aaefe}\label{classk_f_1_1_lang_1_1_expression_a31661396edd3c83a3665851e2c3aaefe}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!rawData@{rawData}}
+\index{rawData@{rawData}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{rawData()}{rawData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::byte$\ast$ k\+F\+::\+Lang\+::\+Expression\+::raw\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Get the internal node data (itself) as raw data. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a6c14f79fc5abb4b85ddceea4d8ce2418}\label{classk_f_1_1_lang_1_1_expression_a6c14f79fc5abb4b85ddceea4d8ce2418}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!Release@{Release}}
+\index{Release@{Release}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily static void k\+F\+::\+Lang\+::\+Expression\+::\+Release (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacek_f_1_1_lang_a7db6ff4395ffcbbc6f60a8a1116df3ae}{Expression\+Ptr}}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Release an expression aquired before with \textquotesingle{}Construct\textquotesingle{}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a6c36f305ea1b1b1d6693798583ad1534}\label{classk_f_1_1_lang_1_1_expression_a6c36f305ea1b1b1d6693798583ad1534}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!\_Allocator@{\_Allocator}}
+\index{\_Allocator@{\_Allocator}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{\_Allocator}{\_Allocator}}
+{\footnotesize\ttfamily std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource k\+F\+::\+Lang\+::\+Expression\+::\+\_\+\+Allocator \{\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_expression_a8e7451e801e5a4dc9e482be10e250e42}\label{classk_f_1_1_lang_1_1_expression_a8e7451e801e5a4dc9e482be10e250e42}} 
+\index{kF::Lang::Expression@{kF::Lang::Expression}!\_size@{\_size}}
+\index{\_size@{\_size}!kF::Lang::Expression@{kF::Lang::Expression}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily std\+::size\+\_\+t k\+F\+::\+Lang\+::\+Expression\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Interpreter/\mbox{\hyperlink{_expression_8hpp}{Expression.\+hpp}}\end{DoxyCompactItemize}

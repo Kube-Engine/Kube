@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -94,8 +94,10 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:ae27b66b3fb9d2b0c0792d37382d2cf16"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#ae27b66b3fb9d2b0c0792d37382d2cf16">GetFunc</a> = <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *)</td></tr>
 <tr class="separator:ae27b66b3fb9d2b0c0792d37382d2cf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa919372b33e17d81b6801cfbc0efe63a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#aa919372b33e17d81b6801cfbc0efe63a">SetFunc</a> = <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *, <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;)</td></tr>
-<tr class="separator:aa919372b33e17d81b6801cfbc0efe63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61223a7c9c36c16a0f0bc3dd84a91f82"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a61223a7c9c36c16a0f0bc3dd84a91f82">SetCopyFunc</a> = <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *, const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;)</td></tr>
+<tr class="separator:a61223a7c9c36c16a0f0bc3dd84a91f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47769497beccd8ef928fe9a7198f633a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a47769497beccd8ef928fe9a7198f633a">SetMoveFunc</a> = <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *, <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;&amp;)</td></tr>
+<tr class="separator:a47769497beccd8ef928fe9a7198f633a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -122,12 +124,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a21db184769aa2e2a76b589f302d7001c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a21db184769aa2e2a76b589f302d7001c">isStatic</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a21db184769aa2e2a76b589f302d7001c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the data is static.  <a href="classk_f_1_1_meta_1_1_data.html#a21db184769aa2e2a76b589f302d7001c">More...</a><br /></td></tr>
 <tr class="separator:a21db184769aa2e2a76b589f302d7001c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b3f974e6d949526ae94eef81428e6a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a1b3f974e6d949526ae94eef81428e6a0">type</a> (void) const noexcept</td></tr>
-<tr class="memdesc:a1b3f974e6d949526ae94eef81428e6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying data type.  <a href="classk_f_1_1_meta_1_1_data.html#a1b3f974e6d949526ae94eef81428e6a0">More...</a><br /></td></tr>
-<tr class="separator:a1b3f974e6d949526ae94eef81428e6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85562d27ae8297799e0fc20572da2c6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a85562d27ae8297799e0fc20572da2c6b">isReadOnly</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a85562d27ae8297799e0fc20572da2c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the variable is read-only.  <a href="classk_f_1_1_meta_1_1_data.html#a85562d27ae8297799e0fc20572da2c6b">More...</a><br /></td></tr>
 <tr class="separator:a85562d27ae8297799e0fc20572da2c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec44d07507874d1d5fe7d262a47c40d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#aeec44d07507874d1d5fe7d262a47c40d">isCopySettable</a> (void) const noexcept</td></tr>
+<tr class="memdesc:aeec44d07507874d1d5fe7d262a47c40d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the variable is copy settable.  <a href="classk_f_1_1_meta_1_1_data.html#aeec44d07507874d1d5fe7d262a47c40d">More...</a><br /></td></tr>
+<tr class="separator:aeec44d07507874d1d5fe7d262a47c40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab26082317f39bb02c329760e89a482"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#abab26082317f39bb02c329760e89a482">isMoveSettable</a> (void) const noexcept</td></tr>
+<tr class="memdesc:abab26082317f39bb02c329760e89a482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the variable is move settable.  <a href="classk_f_1_1_meta_1_1_data.html#abab26082317f39bb02c329760e89a482">More...</a><br /></td></tr>
+<tr class="separator:abab26082317f39bb02c329760e89a482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3f974e6d949526ae94eef81428e6a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a1b3f974e6d949526ae94eef81428e6a0">type</a> (void) const noexcept</td></tr>
+<tr class="memdesc:a1b3f974e6d949526ae94eef81428e6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying data type.  <a href="classk_f_1_1_meta_1_1_data.html#a1b3f974e6d949526ae94eef81428e6a0">More...</a><br /></td></tr>
+<tr class="separator:a1b3f974e6d949526ae94eef81428e6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd3bd498228ed474c36af50aa1a9133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a2cd3bd498228ed474c36af50aa1a9133">signal</a> (void) const noexcept</td></tr>
+<tr class="memdesc:a2cd3bd498228ed474c36af50aa1a9133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get underlying signal.  <a href="classk_f_1_1_meta_1_1_data.html#a2cd3bd498228ed474c36af50aa1a9133">More...</a><br /></td></tr>
+<tr class="separator:a2cd3bd498228ed474c36af50aa1a9133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61cc3c7359cb0f3408ce53e4c264be10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a61cc3c7359cb0f3408ce53e4c264be10">get</a> (const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;instance) const</td></tr>
 <tr class="memdesc:a61cc3c7359cb0f3408ce53e4c264be10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the underlying instance.  <a href="classk_f_1_1_meta_1_1_data.html#a61cc3c7359cb0f3408ce53e4c264be10">More...</a><br /></td></tr>
 <tr class="separator:a61cc3c7359cb0f3408ce53e4c264be10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,14 +146,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a93fd76b08cbf43fdd0c8b66e172ffadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c7983a5a85aab25727f4096405263d"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:ab7c7983a5a85aab25727f4096405263d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#ab7c7983a5a85aab25727f4096405263d">set</a> (const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;instance, <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;&amp;value) const</td></tr>
-<tr class="memdesc:ab7c7983a5a85aab25727f4096405263d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the underlying instance.  <a href="classk_f_1_1_meta_1_1_data.html#ab7c7983a5a85aab25727f4096405263d">More...</a><br /></td></tr>
+<tr class="memdesc:ab7c7983a5a85aab25727f4096405263d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call member setter using a opaque variable.  <a href="classk_f_1_1_meta_1_1_data.html#ab7c7983a5a85aab25727f4096405263d">More...</a><br /></td></tr>
 <tr class="separator:ab7c7983a5a85aab25727f4096405263d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a697c9109c0063f61448c052cd52cf8dc"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a697c9109c0063f61448c052cd52cf8dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a697c9109c0063f61448c052cd52cf8dc">set</a> (<a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;&amp;value) const</td></tr>
-<tr class="separator:a697c9109c0063f61448c052cd52cf8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b0840fcbafcdc4d290ace4206fd07fe"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:a1b0840fcbafcdc4d290ace4206fd07fe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a1b0840fcbafcdc4d290ace4206fd07fe">set</a> (const void *instance, <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;&amp;value) const</td></tr>
+<tr class="memdesc:a1b0840fcbafcdc4d290ace4206fd07fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call member setter using a opaque pointer.  <a href="classk_f_1_1_meta_1_1_data.html#a1b0840fcbafcdc4d290ace4206fd07fe">More...</a><br /></td></tr>
 <tr class="separator:a1b0840fcbafcdc4d290ace4206fd07fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697c9109c0063f61448c052cd52cf8dc"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a697c9109c0063f61448c052cd52cf8dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#a697c9109c0063f61448c052cd52cf8dc">set</a> (<a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;&amp;value) const</td></tr>
+<tr class="memdesc:a697c9109c0063f61448c052cd52cf8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call static setter.  <a href="classk_f_1_1_meta_1_1_data.html#a697c9109c0063f61448c052cd52cf8dc">More...</a><br /></td></tr>
+<tr class="separator:a697c9109c0063f61448c052cd52cf8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab76425542e95075e25cf850822f04409"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:ab76425542e95075e25cf850822f04409"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">kF::Var</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_data.html#ab76425542e95075e25cf850822f04409">set</a> (const void *instance, <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &amp;&amp;value) const</td></tr>
 <tr class="separator:ab76425542e95075e25cf850822f04409"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,14 +183,28 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa919372b33e17d81b6801cfbc0efe63a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa919372b33e17d81b6801cfbc0efe63a">&#9670;&nbsp;</a></span>SetFunc</h2>
+<a id="a61223a7c9c36c16a0f0bc3dd84a91f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61223a7c9c36c16a0f0bc3dd84a91f82">&#9670;&nbsp;</a></span>SetCopyFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classk_f_1_1_meta_1_1_data.html#aa919372b33e17d81b6801cfbc0efe63a">kF::Meta::Data::SetFunc</a> =  <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *, <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;)</td>
+          <td class="memname">using <a class="el" href="classk_f_1_1_meta_1_1_data.html#a61223a7c9c36c16a0f0bc3dd84a91f82">kF::Meta::Data::SetCopyFunc</a> =  <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *, const <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47769497beccd8ef928fe9a7198f633a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47769497beccd8ef928fe9a7198f633a">&#9670;&nbsp;</a></span>SetMoveFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classk_f_1_1_meta_1_1_data.html#a47769497beccd8ef928fe9a7198f633a">kF::Meta::Data::SetMoveFunc</a> =  <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(const void *, <a class="el" href="classk_f_1_1_var.html">Var</a> &amp;&amp;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,6 +320,62 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeec44d07507874d1d5fe7d262a47c40d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec44d07507874d1d5fe7d262a47c40d">&#9670;&nbsp;</a></span>isCopySettable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kF::Meta::Data::isCopySettable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the variable is copy settable. </p>
+
+</div>
+</div>
+<a id="abab26082317f39bb02c329760e89a482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab26082317f39bb02c329760e89a482">&#9670;&nbsp;</a></span>isMoveSettable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kF::Meta::Data::isMoveSettable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the variable is move settable. </p>
 
 </div>
 </div>
@@ -526,7 +609,7 @@ template&lt;typename Type &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the underlying instance. </p>
+<p>Call member setter using a opaque variable. </p>
 
 </div>
 </div>
@@ -557,6 +640,8 @@ template&lt;typename Type &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Call member setter using a opaque pointer. </p>
 
 </div>
 </div>
@@ -623,6 +708,36 @@ template&lt;typename Type &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Call static setter. </p>
+
+</div>
+</div>
+<a id="a2cd3bd498228ed474c36af50aa1a9133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd3bd498228ed474c36af50aa1a9133">&#9670;&nbsp;</a></span>signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_signal.html">Signal</a> kF::Meta::Data::signal </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get underlying signal. </p>
 
 </div>
 </div>

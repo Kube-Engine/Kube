@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -77,37 +77,37 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f_1_1_flow.html">kF::Flow</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span><a class="code" href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6a84a8921b25f505d0d2077aeb5db4bc16">Graph</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a52ad24b8e31aa1630b59a4f4972c8ffa">   15</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacek_f_1_1_flow.html#a52ad24b8e31aa1630b59a4f4972c8ffa">StaticFunc</a> = std::function&lt;void(<span class="keywordtype">void</span>)&gt;;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a0aac085b5c9217a543ed0df0b0dbce24">   18</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacek_f_1_1_flow.html#a0aac085b5c9217a543ed0df0b0dbce24">SwitchFunc</a> = std::function&lt;std::size_t(<span class="keywordtype">void</span>)&gt;;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a49630518815a2370c7a668c3d9e620ca">   21</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacek_f_1_1_flow.html#a49630518815a2370c7a668c3d9e620ca">DynamicFunc</a> = std::function&lt;void(<a class="code" href="classk_f_1_1_flow_1_1_graph.html">Graph</a> &amp;)&gt;;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#ab614af0b6eb145d96ed5c089dd300e22">   24</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="namespacek_f_1_1_flow.html#ab614af0b6eb145d96ed5c089dd300e22">NotifyFunc</a> = std::function&lt;void(<span class="keywordtype">void</span>)&gt;;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6">   27</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6">NodeType</a> : std::size_t {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        Static = 0ul,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Dynamic,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        Switch,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classk_f_1_1_flow_1_1_graph.html">Graph</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a528048a7dac8d1111758eda21ef2e663">   35</a></span>&#160;    constexpr <span class="keyword">auto</span> <a class="code" href="namespacek_f_1_1_flow.html#a528048a7dac8d1111758eda21ef2e663">EmptyWork</a> = []{};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_functor_8hpp.html">Kube/Core/Functor.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f_1_1_flow.html">kF::Flow</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">class </span><a class="code" href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6a84a8921b25f505d0d2077aeb5db4bc16">Graph</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a5fe9c6c68c26e28d8d9c892119c0b308">   17</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_functor.html">StaticFunc</a> = <a class="code" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt;void(<span class="keywordtype">void</span>)&gt;;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a6076cd2de6905c90897505be3c178081">   20</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_functor.html">SwitchFunc</a> = <a class="code" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt;std::size_t(<span class="keywordtype">void</span>)&gt;;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a9ecd56b8632ccbed164c5e294bf0bd0f">   23</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_functor.html">DynamicFunc</a> = <a class="code" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt;void(<a class="code" href="classk_f_1_1_flow_1_1_graph.html">Graph</a> &amp;)&gt;;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#add5b34d1e31da545cc260d8dca5373e6">   26</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_functor.html">NotifyFunc</a> = <a class="code" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt;void(<span class="keywordtype">void</span>)&gt;;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6">   29</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6">NodeType</a> : std::size_t {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        Static = 0ul,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        Dynamic,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        Switch,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classk_f_1_1_flow_1_1_graph.html">Graph</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_flow.html#a528048a7dac8d1111758eda21ef2e663">   37</a></span>&#160;    constexpr <span class="keyword">auto</span> <a class="code" href="namespacek_f_1_1_flow.html#a528048a7dac8d1111758eda21ef2e663">EmptyWork</a> = []{};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacek_f_1_1_flow_html_a528048a7dac8d1111758eda21ef2e663"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a528048a7dac8d1111758eda21ef2e663">kF::Flow::EmptyWork</a></div><div class="ttdeci">constexpr auto EmptyWork</div><div class="ttdoc">Empty work placeholder.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:35</div></div>
-<div class="ttc" id="anamespacek_f_1_1_flow_html"><div class="ttname"><a href="namespacek_f_1_1_flow.html">kF::Flow</a></div><div class="ttdef"><b>Definition:</b> Graph.hpp:20</div></div>
-<div class="ttc" id="anamespacek_f_1_1_flow_html_a52ad24b8e31aa1630b59a4f4972c8ffa"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a52ad24b8e31aa1630b59a4f4972c8ffa">kF::Flow::StaticFunc</a></div><div class="ttdeci">std::function&lt; void(void)&gt; StaticFunc</div><div class="ttdoc">Static functor.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:15</div></div>
-<div class="ttc" id="anamespacek_f_1_1_flow_html_a0aac085b5c9217a543ed0df0b0dbce24"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a0aac085b5c9217a543ed0df0b0dbce24">kF::Flow::SwitchFunc</a></div><div class="ttdeci">std::function&lt; std::size_t(void)&gt; SwitchFunc</div><div class="ttdoc">Switch functor.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:18</div></div>
+<div class="ttc" id="anamespacek_f_1_1_flow_html_a528048a7dac8d1111758eda21ef2e663"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a528048a7dac8d1111758eda21ef2e663">kF::Flow::EmptyWork</a></div><div class="ttdeci">constexpr auto EmptyWork</div><div class="ttdoc">Empty work placeholder.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:37</div></div>
+<div class="ttc" id="anamespacek_f_1_1_flow_html"><div class="ttname"><a href="namespacek_f_1_1_flow.html">kF::Flow</a></div><div class="ttdef"><b>Definition:</b> Graph.hpp:18</div></div>
 <div class="ttc" id="anamespacek_f_1_1_flow_html_a8510ae421b52c6182e9cafea1468fda6a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6a84a8921b25f505d0d2077aeb5db4bc16">kF::Flow::NodeType::Static</a></div><div class="ttdeci">@ Static</div></div>
-<div class="ttc" id="anamespacek_f_1_1_flow_html_a8510ae421b52c6182e9cafea1468fda6"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6">kF::Flow::NodeType</a></div><div class="ttdeci">NodeType</div><div class="ttdoc">Different types of nodes.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:27</div></div>
-<div class="ttc" id="anamespacek_f_1_1_flow_html_a49630518815a2370c7a668c3d9e620ca"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a49630518815a2370c7a668c3d9e620ca">kF::Flow::DynamicFunc</a></div><div class="ttdeci">std::function&lt; void(Graph &amp;)&gt; DynamicFunc</div><div class="ttdoc">Dynamic functor.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:21</div></div>
+<div class="ttc" id="anamespacek_f_1_1_flow_html_a8510ae421b52c6182e9cafea1468fda6"><div class="ttname"><a href="namespacek_f_1_1_flow.html#a8510ae421b52c6182e9cafea1468fda6">kF::Flow::NodeType</a></div><div class="ttdeci">NodeType</div><div class="ttdoc">Different types of nodes.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:29</div></div>
 <div class="ttc" id="aclassk_f_1_1_flow_1_1_graph_html"><div class="ttname"><a href="classk_f_1_1_flow_1_1_graph.html">kF::Flow::Graph</a></div><div class="ttdef"><b>Definition:</b> Graph.hpp:26</div></div>
-<div class="ttc" id="anamespacek_f_1_1_flow_html_ab614af0b6eb145d96ed5c089dd300e22"><div class="ttname"><a href="namespacek_f_1_1_flow.html#ab614af0b6eb145d96ed5c089dd300e22">kF::Flow::NotifyFunc</a></div><div class="ttdeci">std::function&lt; void(void)&gt; NotifyFunc</div><div class="ttdoc">Notify functor to be called on the event thread.</div><div class="ttdef"><b>Definition:</b> NodeType.hpp:24</div></div>
+<div class="ttc" id="a_functor_8hpp_html"><div class="ttname"><a href="_functor_8hpp.html">Functor.hpp</a></div></div>
+<div class="ttc" id="aclassk_f_1_1_core_1_1_functor_html"><div class="ttname"><a href="classk_f_1_1_core_1_1_functor.html">kF::Core::Functor&lt; void(void)&gt;</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

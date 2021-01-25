@@ -1,0 +1,124 @@
+\hypertarget{classk_f_1_1_lang_1_1_a_s_t}{}\doxysection{kF\+::Lang\+::A\+ST Class Reference}
+\label{classk_f_1_1_lang_1_1_a_s_t}\index{kF::Lang::AST@{kF::Lang::AST}}
+
+
+{\ttfamily \#include $<$A\+S\+T.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structk_f_1_1_lang_1_1_a_s_t_1_1_deleter}{Deleter}}
+\begin{DoxyCompactList}\small\item\em Destruct and deallocate a node using memory pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}{Ptr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}}, \mbox{\hyperlink{structk_f_1_1_lang_1_1_a_s_t_1_1_deleter}{Deleter}} $>$
+\begin{DoxyCompactList}\small\item\em An unique pointer using the custom deleter class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}{Ptr}} \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a0d960bd1a443bdb72744dd2ec34f234a}{Make}} (Args \&\&...args) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible\+\_\+v$<$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}} \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) Args... \+\_\+\+\_\+\+V\+A\+\_\+\+O\+P\+T\+\_\+\+\_\+(,) $>$)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}} node pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a751b34118076644447226153f47565e6}{A\+ST}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void $\ast$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a1dd381b7d3e7029ba13dbc83b2c59bc6}{Allocate}} (const std\+::size\+\_\+t bytes, const std\+::size\+\_\+t alignment) noexcept
+\begin{DoxyCompactList}\small\item\em Allocate memory using memory pool. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a7396f456a63f856d3ec20d78b15f4b59}{Deallocate}} (void $\ast$const \mbox{\hyperlink{_m_p_m_c_queue_8ipp_abff670b1cad9d3a3050db076dc0f4365}{data}}, const std\+::size\+\_\+t bytes, const std\+::size\+\_\+t alignment) noexcept
+\begin{DoxyCompactList}\small\item\em Deallocate memory using memory pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{Core\+::\+Allocated\+Tiny\+Small\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}{Ptr}}, 4, \&\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a1dd381b7d3e7029ba13dbc83b2c59bc6}{Allocate}}, \&\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a7396f456a63f856d3ec20d78b15f4b59}{Deallocate}} $>$ \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a49859dcdf78d101913e84ce1ff2fd226}{\+\_\+children}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_aa82fc0575e0e54c891f5a2d3b174b9a5}{\+\_\+\+Pool}} \{\}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}} node allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}\label{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}{k\+F\+::\+Lang\+::\+A\+S\+T\+::\+Ptr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}}, \mbox{\hyperlink{structk_f_1_1_lang_1_1_a_s_t_1_1_deleter}{Deleter}}$>$}
+
+
+
+An unique pointer using the custom deleter class. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_a751b34118076644447226153f47565e6}\label{classk_f_1_1_lang_1_1_a_s_t_a751b34118076644447226153f47565e6}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!AST@{AST}}
+\index{AST@{AST}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{AST()}{AST()}}
+{\footnotesize\ttfamily k\+F\+::\+Lang\+::\+A\+S\+T\+::\+A\+ST (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_a1dd381b7d3e7029ba13dbc83b2c59bc6}\label{classk_f_1_1_lang_1_1_a_s_t_a1dd381b7d3e7029ba13dbc83b2c59bc6}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily static void$\ast$ k\+F\+::\+Lang\+::\+A\+S\+T\+::\+Allocate (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{bytes,  }\item[{const std\+::size\+\_\+t}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Allocate memory using memory pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_a7396f456a63f856d3ec20d78b15f4b59}\label{classk_f_1_1_lang_1_1_a_s_t_a7396f456a63f856d3ec20d78b15f4b59}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!Deallocate@{Deallocate}}
+\index{Deallocate@{Deallocate}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{Deallocate()}{Deallocate()}}
+{\footnotesize\ttfamily static void k\+F\+::\+Lang\+::\+A\+S\+T\+::\+Deallocate (\begin{DoxyParamCaption}\item[{void $\ast$const}]{data,  }\item[{const std\+::size\+\_\+t}]{bytes,  }\item[{const std\+::size\+\_\+t}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Deallocate memory using memory pool. 
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_a0d960bd1a443bdb72744dd2ec34f234a}\label{classk_f_1_1_lang_1_1_a_s_t_a0d960bd1a443bdb72744dd2ec34f234a}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!Make@{Make}}
+\index{Make@{Make}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{Make()}{Make()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}{Ptr}} k\+F\+::\+Lang\+::\+A\+S\+T\+::\+Make (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Create a new \mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}} node pointer. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_a49859dcdf78d101913e84ce1ff2fd226}\label{classk_f_1_1_lang_1_1_a_s_t_a49859dcdf78d101913e84ce1ff2fd226}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!\_children@{\_children}}
+\index{\_children@{\_children}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{\_children}{\_children}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{Core\+::\+Allocated\+Tiny\+Small\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a4653190c0c22661a8ab30d7cc5fca278}{Ptr}}, 4, \&\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a1dd381b7d3e7029ba13dbc83b2c59bc6}{Allocate}}, \&\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t_a7396f456a63f856d3ec20d78b15f4b59}{Deallocate}}$>$ k\+F\+::\+Lang\+::\+A\+S\+T\+::\+\_\+children \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classk_f_1_1_lang_1_1_a_s_t_aa82fc0575e0e54c891f5a2d3b174b9a5}\label{classk_f_1_1_lang_1_1_a_s_t_aa82fc0575e0e54c891f5a2d3b174b9a5}} 
+\index{kF::Lang::AST@{kF::Lang::AST}!\_Pool@{\_Pool}}
+\index{\_Pool@{\_Pool}!kF::Lang::AST@{kF::Lang::AST}}
+\doxysubsubsection{\texorpdfstring{\_Pool}{\_Pool}}
+{\footnotesize\ttfamily std\+::pmr\+::synchronized\+\_\+pool\+\_\+resource k\+F\+::\+Lang\+::\+A\+S\+T\+::\+\_\+\+Pool \{\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classk_f_1_1_lang_1_1_a_s_t}{A\+ST}} node allocator. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Interpreter/\mbox{\hyperlink{_a_s_t_8hpp}{A\+S\+T.\+hpp}}\end{DoxyCompactItemize}

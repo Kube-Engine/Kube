@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classk_f_1_1_meta_1_1_resolver.html" title="Resolver is used to store and retreive meta&#45;data at runtime." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node1" href="$classk_f_1_1_graphics_1_1_vulkan_handle_base.html" title=" " alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node2" href="$structk_f_1_1_graphics_1_1_vulkan_handle.html" title=" " alt="" coords="279,5,464,47"/>
+<area shape="rect" id="node3" href="$classk_f_1_1_graphics_1_1_event.html" title="Abstraction of an event." alt="" coords="512,13,651,39"/>
 </map>

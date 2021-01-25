@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -69,10 +69,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classk_f_1_1_meta_1_1_resolver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kF::Meta::Resolver Class Reference</div>  </div>
@@ -84,22 +84,38 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_resolver_8hpp_source.html">Resolver.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a849dfc4c03893b360091a280c9c6b1cc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a849dfc4c03893b360091a280c9c6b1cc">Descriptors</a> = std::vector&lt; <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> &gt;</td></tr>
-<tr class="separator:a849dfc4c03893b360091a280c9c6b1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_cache.html">Cache</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_cache.html" title="Cache stored in static memory.">Cache</a> stored in static memory.  <a href="structk_f_1_1_meta_1_1_resolver_1_1_cache.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_template_descriptor.html">TemplateDescriptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe a template class.  <a href="structk_f_1_1_meta_1_1_resolver_1_1_template_descriptor.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b8ab347fdfb45c2fa71c6617b1373b7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a9b8ab347fdfb45c2fa71c6617b1373b7">RegisterMetaType</a> (<a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> type) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
-<tr class="memdesc:a9b8ab347fdfb45c2fa71c6617b1373b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new type into the resolver.  <a href="classk_f_1_1_meta_1_1_resolver.html#a9b8ab347fdfb45c2fa71c6617b1373b7">More...</a><br /></td></tr>
-<tr class="separator:a9b8ab347fdfb45c2fa71c6617b1373b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add61193b8669561f9ba8e3b06f4f1e00"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#add61193b8669561f9ba8e3b06f4f1e00">RegisterMetaType</a> (const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> type) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:add61193b8669561f9ba8e3b06f4f1e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new type into the resolver.  <a href="classk_f_1_1_meta_1_1_resolver.html#add61193b8669561f9ba8e3b06f4f1e00">More...</a><br /></td></tr>
+<tr class="separator:add61193b8669561f9ba8e3b06f4f1e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64f528a3220cfbd2538fa951643b3c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#ab64f528a3220cfbd2538fa951643b3c2">RegisterMetaTemplateSpecialization</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a> specialization) noexcept(! <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a>)</td></tr>
+<tr class="memdesc:ab64f528a3220cfbd2538fa951643b3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new type into the resolver.  <a href="classk_f_1_1_meta_1_1_resolver.html#ab64f528a3220cfbd2538fa951643b3c2">More...</a><br /></td></tr>
+<tr class="separator:ab64f528a3220cfbd2538fa951643b3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02099b9d9f7194b8d0e05dd55a6ae282"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a02099b9d9f7194b8d0e05dd55a6ae282">FindType</a> (const <a class="el" href="classk_f_1_1_meta_1_1_type.html#a7cf110a99a0df5df270a5a047ca25040">Type::TypeID</a> id) noexcept</td></tr>
 <tr class="memdesc:a02099b9d9f7194b8d0e05dd55a6ae282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a type with its ID.  <a href="classk_f_1_1_meta_1_1_resolver.html#a02099b9d9f7194b8d0e05dd55a6ae282">More...</a><br /></td></tr>
 <tr class="separator:a02099b9d9f7194b8d0e05dd55a6ae282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cf0da91d46eaa7e96735d9721df50d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a9cf0da91d46eaa7e96735d9721df50d7">FindType</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept</td></tr>
 <tr class="memdesc:a9cf0da91d46eaa7e96735d9721df50d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a type with its name.  <a href="classk_f_1_1_meta_1_1_resolver.html#a9cf0da91d46eaa7e96735d9721df50d7">More...</a><br /></td></tr>
 <tr class="separator:a9cf0da91d46eaa7e96735d9721df50d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e69c8c7b47d2431f45b360e5776d317"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_template_descriptor.html">TemplateDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a7e69c8c7b47d2431f45b360e5776d317">FindTemplate</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name) noexcept</td></tr>
+<tr class="memdesc:a7e69c8c7b47d2431f45b360e5776d317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a template type with its name.  <a href="classk_f_1_1_meta_1_1_resolver.html#a7e69c8c7b47d2431f45b360e5776d317">More...</a><br /></td></tr>
+<tr class="separator:a7e69c8c7b47d2431f45b360e5776d317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634ba6dd9e676824d4726ce28465c423"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a634ba6dd9e676824d4726ce28465c423">FindTemplateSpecialization</a> (const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> name, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> specializationName) noexcept</td></tr>
+<tr class="memdesc:a634ba6dd9e676824d4726ce28465c423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a template specialization with its name and specialization name.  <a href="classk_f_1_1_meta_1_1_resolver.html#a634ba6dd9e676824d4726ce28465c423">More...</a><br /></td></tr>
+<tr class="separator:a634ba6dd9e676824d4726ce28465c423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a02f6c49cd60436ef880bbff062a075"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a6a02f6c49cd60436ef880bbff062a075">FindTemplateSpecialization</a> (const <a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_template_descriptor.html">TemplateDescriptor</a> *descriptor, const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a> specializationName) noexcept</td></tr>
+<tr class="memdesc:a6a02f6c49cd60436ef880bbff062a075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve a template specialization with its descriptor and specialization name.  <a href="classk_f_1_1_meta_1_1_resolver.html#a6a02f6c49cd60436ef880bbff062a075">More...</a><br /></td></tr>
+<tr class="separator:a6a02f6c49cd60436ef880bbff062a075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae63abe521e7b6428d2d9fc04a3fda8b7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#ae63abe521e7b6428d2d9fc04a3fda8b7">Clear</a> (void) noexcept</td></tr>
 <tr class="memdesc:ae63abe521e7b6428d2d9fc04a3fda8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all stored types.  <a href="classk_f_1_1_meta_1_1_resolver.html#ae63abe521e7b6428d2d9fc04a3fda8b7">More...</a><br /></td></tr>
 <tr class="separator:ae63abe521e7b6428d2d9fc04a3fda8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,31 +126,15 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a2b01805a63b323f2609788975cddf35b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html" title="Resolver is used to store and retreive meta-data at runtime.">Resolver</a> is a singleton.  <a href="classk_f_1_1_meta_1_1_resolver.html#a2b01805a63b323f2609788975cddf35b">More...</a><br /></td></tr>
 <tr class="separator:a2b01805a63b323f2609788975cddf35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:ae8e17299f81cc127353f7c22b4edafd2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a849dfc4c03893b360091a280c9c6b1cc">Descriptors</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#ae8e17299f81cc127353f7c22b4edafd2">GetDescriptors</a> (void) noexcept</td></tr>
-<tr class="memdesc:ae8e17299f81cc127353f7c22b4edafd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get internal list of descriptors.  <a href="classk_f_1_1_meta_1_1_resolver.html#ae8e17299f81cc127353f7c22b4edafd2">More...</a><br /></td></tr>
-<tr class="separator:ae8e17299f81cc127353f7c22b4edafd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a6b175479750d95a309dc9b241d7346d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_cache.html">Cache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a6b175479750d95a309dc9b241d7346d0">_Cache</a> {}</td></tr>
+<tr class="separator:a6b175479750d95a309dc9b241d7346d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classk_f_1_1_meta_1_1_resolver.html" title="Resolver is used to store and retreive meta-data at runtime.">Resolver</a> is used to store and retreive meta-data at runtime. </p>
 <p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="namespacek_f_1_1_meta.html">Meta</a> <a class="el" href="classk_f_1_1_meta_1_1_resolver.html" title="Resolver is used to store and retreive meta-data at runtime.">Resolver</a> </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a849dfc4c03893b360091a280c9c6b1cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a849dfc4c03893b360091a280c9c6b1cc">&#9670;&nbsp;</a></span>Descriptors</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a849dfc4c03893b360091a280c9c6b1cc">kF::Meta::Resolver::Descriptors</a> =  std::vector&lt;<a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2b01805a63b323f2609788975cddf35b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b01805a63b323f2609788975cddf35b">&#9670;&nbsp;</a></span>Resolver()</h2>
 
@@ -189,6 +189,110 @@ Static Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clear all stored types. </p>
+
+</div>
+</div>
+<a id="a7e69c8c7b47d2431f45b360e5776d317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e69c8c7b47d2431f45b360e5776d317">&#9670;&nbsp;</a></span>FindTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_template_descriptor.html">kF::Meta::Resolver::TemplateDescriptor</a> * kF::Meta::Resolver::FindTemplate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve a template type with its name. </p>
+
+</div>
+</div>
+<a id="a634ba6dd9e676824d4726ce28465c423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634ba6dd9e676824d4726ce28465c423">&#9670;&nbsp;</a></span>FindTemplateSpecialization() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_type.html">kF::Meta::Type</a> kF::Meta::Resolver::FindTemplateSpecialization </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>specializationName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve a template specialization with its name and specialization name. </p>
+
+</div>
+</div>
+<a id="a6a02f6c49cd60436ef880bbff062a075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a02f6c49cd60436ef880bbff062a075">&#9670;&nbsp;</a></span>FindTemplateSpecialization() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_type.html">kF::Meta::Type</a> kF::Meta::Resolver::FindTemplateSpecialization </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_template_descriptor.html">TemplateDescriptor</a> *&#160;</td>
+          <td class="paramname"><em>descriptor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>specializationName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve a template specialization with its descriptor and specialization name. </p>
 
 </div>
 </div>
@@ -248,8 +352,8 @@ Static Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae8e17299f81cc127353f7c22b4edafd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8e17299f81cc127353f7c22b4edafd2">&#9670;&nbsp;</a></span>GetDescriptors()</h2>
+<a id="ab64f528a3220cfbd2538fa951643b3c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64f528a3220cfbd2538fa951643b3c2">&#9670;&nbsp;</a></span>RegisterMetaTemplateSpecialization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,26 +362,36 @@ Static Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classk_f_1_1_meta_1_1_resolver.html#a849dfc4c03893b360091a280c9c6b1cc">Descriptors</a>&amp; kF::Meta::Resolver::GetDescriptors </td>
+          <td class="memname">void kF::Meta::Resolver::RegisterMetaTemplateSpecialization </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacek_f.html#a3425eef9b8c0f48a05a0481820112bd4">HashedName</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td>
+          <td class="paramname"><em>specialization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get internal list of descriptors. </p>
+<p>Register a new type into the resolver. </p>
 
 </div>
 </div>
-<a id="a9b8ab347fdfb45c2fa71c6617b1373b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b8ab347fdfb45c2fa71c6617b1373b7">&#9670;&nbsp;</a></span>RegisterMetaType()</h2>
+<a id="add61193b8669561f9ba8e3b06f4f1e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add61193b8669561f9ba8e3b06f4f1e00">&#9670;&nbsp;</a></span>RegisterMetaType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +402,7 @@ Static Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void kF::Meta::Resolver::RegisterMetaType </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_type.html">Type</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -302,6 +416,29 @@ Static Private Member Functions</h2></td></tr>
 
 <p>Register a new type into the resolver. </p>
 <p>@ Author: Matthieu Moinvaziri @ Description: <a class="el" href="classk_f_1_1_meta_1_1_resolver.html" title="Resolver is used to store and retreive meta-data at runtime.">Resolver</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6b175479750d95a309dc9b241d7346d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b175479750d95a309dc9b241d7346d0">&#9670;&nbsp;</a></span>_Cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structk_f_1_1_meta_1_1_resolver_1_1_cache.html">Cache</a> kF::Meta::Resolver::_Cache {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

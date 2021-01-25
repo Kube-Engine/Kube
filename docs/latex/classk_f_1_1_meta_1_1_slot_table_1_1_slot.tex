@@ -12,33 +12,29 @@
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_ad1b6d8035ff05a662b9b5b0a6701e64f}{Invoke\+Func}} = \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const void $\ast$const receiver, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)
-\begin{DoxyCompactList}\small\item\em Signature of the invoke helper. \end{DoxyCompactList}\item 
 using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} = std\+::uint16\+\_\+t
 \begin{DoxyCompactList}\small\item\em Generation count used to know validity of a slot. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7b48c258ad2577531177bf0caea8ec2b}{assign}} (const void $\ast$const receiver, Functor \&\&functor) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Functor $>$))
+{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a1e301ade53c8b88c00affa5f6ea6dafa}{assign}} (const void $\ast$const receiver, Functor \&\&functor) noexcept((std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$))
 \begin{DoxyCompactList}\small\item\em Assign the slot from any functor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_abd6e216d65e5dc8e09b6dfdd00704b49}{release}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} generation)
 \begin{DoxyCompactList}\small\item\em Release the slot. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a1a264c2602914a75ca0565753be00e81}{is\+Invokable}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} generation) const noexcept
 \begin{DoxyCompactList}\small\item\em Checks if the slot can be safely invoked with a given generation. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a8eaf6dc68be4a765e807b9ef49f7beb6}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} generation, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a887a68d875d8614781ac64bc86df4c6b}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} generation, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)
 \begin{DoxyCompactList}\small\item\em Invoke the opaque functor. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_aca837331ff43699952d150d53f878a93}{assign}} (const void $\ast$const receiver, Functor \&\&functor) noexcept \+\_\+forward\+\_\+constructible(Functor)
+{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_aa9f4434c4a9c2a4a1068fc7da6d780a2}{assign}} (const void $\ast$const receiver, Functor \&\&functor) noexcept \+\_\+forward\+\_\+constructible(decltype(functor))
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a9efd19f5895b8f340de4aa37c3f7dcb7}{\+\_\+data}} \{\}
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$ bool(const void $\ast$const, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$), \mbox{\hyperlink{namespacek_f_1_1_core_a8dc49a6577816ab36a507d1b268b83df}{Core\+::\+Cache\+Line\+Half\+Size}} $>$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a5ca5cedd5ce94c05f42d1336e7c15126}{\+\_\+functor}} \{\}
 \item 
 const void $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7f6eb935272196de342713818fd7e046}{\+\_\+receiver}} \{ nullptr \}
 \item 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_ad1b6d8035ff05a662b9b5b0a6701e64f}{Invoke\+Func}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a419181842995fcfc5731ff00854c501e}{\+\_\+invoke\+Func}} \{ nullptr \}
-\item 
-\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_afec32edb9e29c920af50a49245a2a7c9}{\+\_\+generation}} \{ 0 \}
+\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_afec32edb9e29c920af50a49245a2a7c9}{\+\_\+generation}} \{ 0u \}
 \end{DoxyCompactItemize}
 
 
@@ -56,27 +52,17 @@ const void $\ast$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7f
 
 Generation count used to know validity of a slot. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_ad1b6d8035ff05a662b9b5b0a6701e64f}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_ad1b6d8035ff05a662b9b5b0a6701e64f}} 
-\index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!InvokeFunc@{InvokeFunc}}
-\index{InvokeFunc@{InvokeFunc}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
-\doxysubsubsection{\texorpdfstring{InvokeFunc}{InvokeFunc}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_ad1b6d8035ff05a662b9b5b0a6701e64f}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+Invoke\+Func}} =  \mbox{\hyperlink{classk_f_1_1_var}{Var}}($\ast$)(\mbox{\hyperlink{classk_f_1_1_var}{Var}} \&\mbox{\hyperlink{_item_8hpp_a14daa076c7b211481a71809e6c36a79f}{data}}, const void $\ast$ const receiver, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)}
-
-
-
-Signature of the invoke helper. 
-
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_aca837331ff43699952d150d53f878a93}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_aca837331ff43699952d150d53f878a93}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_aa9f4434c4a9c2a4a1068fc7da6d780a2}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_aa9f4434c4a9c2a4a1068fc7da6d780a2}} 
 \index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!assign@{assign}}
 \index{assign@{assign}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
 \doxysubsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Receiver , typename Functor $>$ \\
 \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::assign (\begin{DoxyParamCaption}\item[{const void $\ast$const}]{receiver,  }\item[{Functor \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot}{Slot}} table \mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7b48c258ad2577531177bf0caea8ec2b}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7b48c258ad2577531177bf0caea8ec2b}} 
+@ Author\+: Matthieu Moinvaziri @ Description\+: \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot}{Slot}} table \mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a1e301ade53c8b88c00affa5f6ea6dafa}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a1e301ade53c8b88c00affa5f6ea6dafa}} 
 \index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!assign@{assign}}
 \index{assign@{assign}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
 \doxysubsubsection{\texorpdfstring{assign()}{assign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -87,11 +73,11 @@ Signature of the invoke helper.
 
 Assign the slot from any functor. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a8eaf6dc68be4a765e807b9ef49f7beb6}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a8eaf6dc68be4a765e807b9ef49f7beb6}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a887a68d875d8614781ac64bc86df4c6b}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a887a68d875d8614781ac64bc86df4c6b}} 
 \index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!invoke@{invoke}}
 \index{invoke@{invoke}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
 \doxysubsubsection{\texorpdfstring{invoke()}{invoke()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}}}]{generation,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}}}]{generation,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -120,23 +106,17 @@ Release the slot.
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a9efd19f5895b8f340de4aa37c3f7dcb7}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a9efd19f5895b8f340de4aa37c3f7dcb7}} 
-\index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!\_data@{\_data}}
-\index{\_data@{\_data}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
-\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{Var}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+\_\+data \{\}\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a5ca5cedd5ce94c05f42d1336e7c15126}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a5ca5cedd5ce94c05f42d1336e7c15126}} 
+\index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!\_functor@{\_functor}}
+\index{\_functor@{\_functor}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
+\doxysubsubsection{\texorpdfstring{\_functor}{\_functor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$bool(const void $\ast$ const, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$), \mbox{\hyperlink{namespacek_f_1_1_core_a8dc49a6577816ab36a507d1b268b83df}{Core\+::\+Cache\+Line\+Half\+Size}}$>$ k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+\_\+functor \{\}\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_afec32edb9e29c920af50a49245a2a7c9}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_afec32edb9e29c920af50a49245a2a7c9}} 
 \index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!\_generation@{\_generation}}
 \index{\_generation@{\_generation}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
 \doxysubsubsection{\texorpdfstring{\_generation}{\_generation}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+\_\+generation \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a419181842995fcfc5731ff00854c501e}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a419181842995fcfc5731ff00854c501e}} 
-\index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!\_invokeFunc@{\_invokeFunc}}
-\index{\_invokeFunc@{\_invokeFunc}!kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}}
-\doxysubsubsection{\texorpdfstring{\_invokeFunc}{\_invokeFunc}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_ad1b6d8035ff05a662b9b5b0a6701e64f}{Invoke\+Func}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+\_\+invoke\+Func \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a4b6fd144b5ee157d492016e18b4c6b0e}{Generation}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Slot\+::\+\_\+generation \{ 0u \}\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7f6eb935272196de342713818fd7e046}\label{classk_f_1_1_meta_1_1_slot_table_1_1_slot_a7f6eb935272196de342713818fd7e046}} 
 \index{kF::Meta::SlotTable::Slot@{kF::Meta::SlotTable::Slot}!\_receiver@{\_receiver}}

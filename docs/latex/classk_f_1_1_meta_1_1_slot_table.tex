@@ -34,15 +34,15 @@ using \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c
 \begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}} \& \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a1f0f9d4dcb7a2d686ab2e239048a02c6}{operator=}} (\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table}{Slot\+Table}} \&\&other) noexcept=default
 \begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a4cb9792e36c26a4a5e462d3400d7d042}{insert}} (const void $\ast$const receiver, Functor \&\&functor) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Functor $>$))
+{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_ad0769249c042d6409630b8d9e1f26c4f}{insert}} (const void $\ast$const receiver, Functor \&\&functor) noexcept((std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$))
 \begin{DoxyCompactList}\small\item\em Insert a slot in the table (Receiver type must be set to void if no receiver is passed) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a6f03f9ec65cba0d3535c62630ae2a863}{insert}} (Functor \&\&functor) noexcept((std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ Functor $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ Functor $>$))
+{\footnotesize template$<$typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a07d32204c2dac3bc8c5288ec8e348359}{insert}} (Functor \&\&functor) noexcept((std\+::is\+\_\+lvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+rvalue\+\_\+reference\+\_\+v$<$ decltype(functor) $>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$$>$ ? std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$ \+:std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible\+\_\+v$<$ std\+::remove\+\_\+cvref\+\_\+t$<$ decltype(functor) $>$ $>$))
 \begin{DoxyCompactList}\small\item\em Helper to insert non member slots. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aa418501ed3400abb46b133aa63762e49}{remove}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} opaque\+Index)
 \begin{DoxyCompactList}\small\item\em Remove a slot from the table. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classk_f_1_1_var}{Var}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a9510c8d74d1f89081235dcb2a1658854}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} opaque\+Index, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)
+bool \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aa76e29c0f586a1b2f7735931d2e7a53a}{invoke}} (const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}} opaque\+Index, \mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$arguments)
 \begin{DoxyCompactList}\small\item\em Invoke a slot. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Opaque\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a39cfbd8a0d6dc31a2384766ea0d5eb52}{insert}} (const void $\ast$const receiver, Functor \&\&functor) noexcept \+\_\+forward\+\_\+constructible(Functor)
+{\footnotesize template$<$typename Receiver , typename Functor $>$ }\\\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Opaque\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_abb4cd8ec4aca45b2c96d92c3f331f42a}{insert}} (const void $\ast$const receiver, Functor \&\&functor) noexcept \+\_\+forward\+\_\+constructible(decltype(functor))
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -61,7 +61,7 @@ static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} $>$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a82d5ad93af317559479adb1060ee12d3}{\+\_\+pages}} \{\}
+\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}} $>$ \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a9dbbb0fec8b2104ce0a0e7342d610a46}{\+\_\+pages}} \{\}
 \item 
 \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a6a50de0a7d3b6df170f84b479573bf04}{Page\+Index}} \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a1e0762321457ffd64311850d496fdf37}{\+\_\+last\+Available\+Page}} \{ 0 \}
 \end{DoxyCompactItemize}
@@ -147,14 +147,14 @@ Get a packet slot index and generation from an opaque index.
 
 Get a page index from an opaque index. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a39cfbd8a0d6dc31a2384766ea0d5eb52}\label{classk_f_1_1_meta_1_1_slot_table_a39cfbd8a0d6dc31a2384766ea0d5eb52}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_abb4cd8ec4aca45b2c96d92c3f331f42a}\label{classk_f_1_1_meta_1_1_slot_table_abb4cd8ec4aca45b2c96d92c3f331f42a}} 
 \index{kF::Meta::SlotTable@{kF::Meta::SlotTable}!insert@{insert}}
 \index{insert@{insert}!kF::Meta::SlotTable@{kF::Meta::SlotTable}}
 \doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily template$<$typename Receiver , typename Functor $>$ \\
 \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{k\+F\+::\+Meta\+::\+Slot\+Table\+::\+Opaque\+Index}} k\+F\+::\+Meta\+::\+Slot\+Table\+::insert (\begin{DoxyParamCaption}\item[{const void $\ast$const}]{receiver,  }\item[{Functor \&\&}]{functor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a4cb9792e36c26a4a5e462d3400d7d042}\label{classk_f_1_1_meta_1_1_slot_table_a4cb9792e36c26a4a5e462d3400d7d042}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_ad0769249c042d6409630b8d9e1f26c4f}\label{classk_f_1_1_meta_1_1_slot_table_ad0769249c042d6409630b8d9e1f26c4f}} 
 \index{kF::Meta::SlotTable@{kF::Meta::SlotTable}!insert@{insert}}
 \index{insert@{insert}!kF::Meta::SlotTable@{kF::Meta::SlotTable}}
 \doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
@@ -165,7 +165,7 @@ Get a page index from an opaque index.
 
 Insert a slot in the table (Receiver type must be set to void if no receiver is passed) 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a6f03f9ec65cba0d3535c62630ae2a863}\label{classk_f_1_1_meta_1_1_slot_table_a6f03f9ec65cba0d3535c62630ae2a863}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a07d32204c2dac3bc8c5288ec8e348359}\label{classk_f_1_1_meta_1_1_slot_table_a07d32204c2dac3bc8c5288ec8e348359}} 
 \index{kF::Meta::SlotTable@{kF::Meta::SlotTable}!insert@{insert}}
 \index{insert@{insert}!kF::Meta::SlotTable@{kF::Meta::SlotTable}}
 \doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
@@ -176,11 +176,11 @@ Insert a slot in the table (Receiver type must be set to void if no receiver is 
 
 Helper to insert non member slots. 
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a9510c8d74d1f89081235dcb2a1658854}\label{classk_f_1_1_meta_1_1_slot_table_a9510c8d74d1f89081235dcb2a1658854}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_aa76e29c0f586a1b2f7735931d2e7a53a}\label{classk_f_1_1_meta_1_1_slot_table_aa76e29c0f586a1b2f7735931d2e7a53a}} 
 \index{kF::Meta::SlotTable@{kF::Meta::SlotTable}!invoke@{invoke}}
 \index{invoke@{invoke}!kF::Meta::SlotTable@{kF::Meta::SlotTable}}
 \doxysubsubsection{\texorpdfstring{invoke()}{invoke()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_var}{k\+F\+::\+Var}} k\+F\+::\+Meta\+::\+Slot\+Table\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}}}]{opaque\+Index,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool k\+F\+::\+Meta\+::\+Slot\+Table\+::invoke (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_aac45a1de8006b1c0121c12c6f17787fa}{Opaque\+Index}}}]{opaque\+Index,  }\item[{\mbox{\hyperlink{classk_f_1_1_var}{Var}} $\ast$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -221,11 +221,11 @@ Remove a slot from the table.
 \doxysubsubsection{\texorpdfstring{\_lastAvailablePage}{\_lastAvailablePage}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_a6a50de0a7d3b6df170f84b479573bf04}{Page\+Index}} k\+F\+::\+Meta\+::\+Slot\+Table\+::\+\_\+last\+Available\+Page \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a82d5ad93af317559479adb1060ee12d3}\label{classk_f_1_1_meta_1_1_slot_table_a82d5ad93af317559479adb1060ee12d3}} 
+\mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_a9dbbb0fec8b2104ce0a0e7342d610a46}\label{classk_f_1_1_meta_1_1_slot_table_a9dbbb0fec8b2104ce0a0e7342d610a46}} 
 \index{kF::Meta::SlotTable@{kF::Meta::SlotTable}!\_pages@{\_pages}}
 \index{\_pages@{\_pages}!kF::Meta::SlotTable@{kF::Meta::SlotTable}}
 \doxysubsubsection{\texorpdfstring{\_pages}{\_pages}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}}$>$ k\+F\+::\+Meta\+::\+Slot\+Table\+::\+\_\+pages \{\}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Core\+::\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_meta_1_1_slot_table_1_1_page}{Page}}$>$ k\+F\+::\+Meta\+::\+Slot\+Table\+::\+\_\+pages \{\}\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classk_f_1_1_meta_1_1_slot_table_acda1a2a93c910688baec0333d6d97933}\label{classk_f_1_1_meta_1_1_slot_table_acda1a2a93c910688baec0333d6d97933}} 
 \index{kF::Meta::SlotTable@{kF::Meta::SlotTable}!PageSize@{PageSize}}

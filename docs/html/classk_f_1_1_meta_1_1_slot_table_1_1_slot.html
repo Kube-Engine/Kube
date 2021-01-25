@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -85,41 +85,36 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ad1b6d8035ff05a662b9b5b0a6701e64f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#ad1b6d8035ff05a662b9b5b0a6701e64f">InvokeFunc</a> = <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(<a class="el" href="classk_f_1_1_var.html">Var</a> &amp;<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>, const void *const receiver, <a class="el" href="classk_f_1_1_var.html">Var</a> *arguments)</td></tr>
-<tr class="memdesc:ad1b6d8035ff05a662b9b5b0a6701e64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of the invoke helper.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#ad1b6d8035ff05a662b9b5b0a6701e64f">More...</a><br /></td></tr>
-<tr class="separator:ad1b6d8035ff05a662b9b5b0a6701e64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b6fd144b5ee157d492016e18b4c6b0e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> = std::uint16_t</td></tr>
 <tr class="memdesc:a4b6fd144b5ee157d492016e18b4c6b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generation count used to know validity of a slot.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">More...</a><br /></td></tr>
 <tr class="separator:a4b6fd144b5ee157d492016e18b4c6b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b48c258ad2577531177bf0caea8ec2b"><td class="memTemplParams" colspan="2">template&lt;typename Receiver , typename Functor &gt; </td></tr>
-<tr class="memitem:a7b48c258ad2577531177bf0caea8ec2b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a7b48c258ad2577531177bf0caea8ec2b">assign</a> (const void *const receiver, Functor &amp;&amp;functor) noexcept((std::is_move_constructible_v&lt; Functor &gt; ? std::is_nothrow_move_constructible_v&lt; Functor &gt; :std::is_nothrow_copy_constructible_v&lt; Functor &gt;))</td></tr>
-<tr class="memdesc:a7b48c258ad2577531177bf0caea8ec2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign the slot from any functor.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a7b48c258ad2577531177bf0caea8ec2b">More...</a><br /></td></tr>
-<tr class="separator:a7b48c258ad2577531177bf0caea8ec2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e301ade53c8b88c00affa5f6ea6dafa"><td class="memTemplParams" colspan="2">template&lt;typename Receiver , typename Functor &gt; </td></tr>
+<tr class="memitem:a1e301ade53c8b88c00affa5f6ea6dafa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a1e301ade53c8b88c00affa5f6ea6dafa">assign</a> (const void *const receiver, Functor &amp;&amp;functor) noexcept((std::is_lvalue_reference_v&lt; decltype(functor) &gt; ? std::is_nothrow_copy_constructible_v&lt; std::remove_cvref_t&lt; decltype(functor) &gt; &gt; :std::is_rvalue_reference_v&lt; decltype(functor) &gt; ? std::is_nothrow_move_constructible_v&lt; std::remove_cvref_t&lt; decltype(functor) &gt; &gt; :std::is_move_constructible_v&lt; std::remove_cvref_t&lt; decltype(functor) &gt;&gt; ? std::is_nothrow_move_constructible_v&lt; std::remove_cvref_t&lt; decltype(functor) &gt; &gt; :std::is_nothrow_copy_constructible_v&lt; std::remove_cvref_t&lt; decltype(functor) &gt; &gt;))</td></tr>
+<tr class="memdesc:a1e301ade53c8b88c00affa5f6ea6dafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign the slot from any functor.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a1e301ade53c8b88c00affa5f6ea6dafa">More...</a><br /></td></tr>
+<tr class="separator:a1e301ade53c8b88c00affa5f6ea6dafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6e216d65e5dc8e09b6dfdd00704b49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#abd6e216d65e5dc8e09b6dfdd00704b49">release</a> (const <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> generation)</td></tr>
 <tr class="memdesc:abd6e216d65e5dc8e09b6dfdd00704b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the slot.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#abd6e216d65e5dc8e09b6dfdd00704b49">More...</a><br /></td></tr>
 <tr class="separator:abd6e216d65e5dc8e09b6dfdd00704b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a264c2602914a75ca0565753be00e81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a1a264c2602914a75ca0565753be00e81">isInvokable</a> (const <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> generation) const noexcept</td></tr>
 <tr class="memdesc:a1a264c2602914a75ca0565753be00e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the slot can be safely invoked with a given generation.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a1a264c2602914a75ca0565753be00e81">More...</a><br /></td></tr>
 <tr class="separator:a1a264c2602914a75ca0565753be00e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eaf6dc68be4a765e807b9ef49f7beb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a8eaf6dc68be4a765e807b9ef49f7beb6">invoke</a> (const <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> generation, <a class="el" href="classk_f_1_1_var.html">Var</a> *arguments)</td></tr>
-<tr class="memdesc:a8eaf6dc68be4a765e807b9ef49f7beb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the opaque functor.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a8eaf6dc68be4a765e807b9ef49f7beb6">More...</a><br /></td></tr>
-<tr class="separator:a8eaf6dc68be4a765e807b9ef49f7beb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca837331ff43699952d150d53f878a93"><td class="memTemplParams" colspan="2">template&lt;typename Receiver , typename Functor &gt; </td></tr>
-<tr class="memitem:aca837331ff43699952d150d53f878a93"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">kF::Meta::SlotTable::Slot::Generation</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#aca837331ff43699952d150d53f878a93">assign</a> (const void *const receiver, Functor &amp;&amp;functor) noexcept _forward_constructible(Functor)</td></tr>
-<tr class="separator:aca837331ff43699952d150d53f878a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887a68d875d8614781ac64bc86df4c6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a887a68d875d8614781ac64bc86df4c6b">invoke</a> (const <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> generation, <a class="el" href="classk_f_1_1_var.html">Var</a> *arguments)</td></tr>
+<tr class="memdesc:a887a68d875d8614781ac64bc86df4c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the opaque functor.  <a href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a887a68d875d8614781ac64bc86df4c6b">More...</a><br /></td></tr>
+<tr class="separator:a887a68d875d8614781ac64bc86df4c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f4434c4a9c2a4a1068fc7da6d780a2"><td class="memTemplParams" colspan="2">template&lt;typename Receiver , typename Functor &gt; </td></tr>
+<tr class="memitem:aa9f4434c4a9c2a4a1068fc7da6d780a2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">kF::Meta::SlotTable::Slot::Generation</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#aa9f4434c4a9c2a4a1068fc7da6d780a2">assign</a> (const void *const receiver, Functor &amp;&amp;functor) noexcept _forward_constructible(decltype(functor))</td></tr>
+<tr class="separator:aa9f4434c4a9c2a4a1068fc7da6d780a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9efd19f5895b8f340de4aa37c3f7dcb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_var.html">Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a9efd19f5895b8f340de4aa37c3f7dcb7">_data</a> {}</td></tr>
-<tr class="separator:a9efd19f5895b8f340de4aa37c3f7dcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca5cedd5ce94c05f42d1336e7c15126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt; bool(const void *const, <a class="el" href="classk_f_1_1_var.html">Var</a> *), <a class="el" href="namespacek_f_1_1_core.html#a8dc49a6577816ab36a507d1b268b83df">Core::CacheLineHalfSize</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a5ca5cedd5ce94c05f42d1336e7c15126">_functor</a> {}</td></tr>
+<tr class="separator:a5ca5cedd5ce94c05f42d1336e7c15126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f6eb935272196de342713818fd7e046"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a7f6eb935272196de342713818fd7e046">_receiver</a> { nullptr }</td></tr>
 <tr class="separator:a7f6eb935272196de342713818fd7e046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a419181842995fcfc5731ff00854c501e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#ad1b6d8035ff05a662b9b5b0a6701e64f">InvokeFunc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a419181842995fcfc5731ff00854c501e">_invokeFunc</a> { nullptr }</td></tr>
-<tr class="separator:a419181842995fcfc5731ff00854c501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec32edb9e29c920af50a49245a2a7c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#afec32edb9e29c920af50a49245a2a7c9">_generation</a> { 0 }</td></tr>
+<tr class="memitem:afec32edb9e29c920af50a49245a2a7c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#afec32edb9e29c920af50a49245a2a7c9">_generation</a> { 0u }</td></tr>
 <tr class="separator:afec32edb9e29c920af50a49245a2a7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -141,25 +136,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad1b6d8035ff05a662b9b5b0a6701e64f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1b6d8035ff05a662b9b5b0a6701e64f">&#9670;&nbsp;</a></span>InvokeFunc</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#ad1b6d8035ff05a662b9b5b0a6701e64f">kF::Meta::SlotTable::Slot::InvokeFunc</a> =  <a class="el" href="classk_f_1_1_var.html">Var</a>(*)(<a class="el" href="classk_f_1_1_var.html">Var</a> &amp;<a class="el" href="_item_8hpp.html#a14daa076c7b211481a71809e6c36a79f">data</a>, const void * const receiver, <a class="el" href="classk_f_1_1_var.html">Var</a> *arguments)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Signature of the invoke helper. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aca837331ff43699952d150d53f878a93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca837331ff43699952d150d53f878a93">&#9670;&nbsp;</a></span>assign() <span class="overload">[1/2]</span></h2>
+<a id="aa9f4434c4a9c2a4a1068fc7da6d780a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f4434c4a9c2a4a1068fc7da6d780a2">&#9670;&nbsp;</a></span>assign() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,8 +176,8 @@ template&lt;typename Receiver , typename Functor &gt; </div>
 
 </div>
 </div>
-<a id="a7b48c258ad2577531177bf0caea8ec2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b48c258ad2577531177bf0caea8ec2b">&#9670;&nbsp;</a></span>assign() <span class="overload">[2/2]</span></h2>
+<a id="a1e301ade53c8b88c00affa5f6ea6dafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e301ade53c8b88c00affa5f6ea6dafa">&#9670;&nbsp;</a></span>assign() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,8 +216,8 @@ template&lt;typename Receiver , typename Functor &gt; </div>
 
 </div>
 </div>
-<a id="a8eaf6dc68be4a765e807b9ef49f7beb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eaf6dc68be4a765e807b9ef49f7beb6">&#9670;&nbsp;</a></span>invoke()</h2>
+<a id="a887a68d875d8614781ac64bc86df4c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a887a68d875d8614781ac64bc86df4c6b">&#9670;&nbsp;</a></span>invoke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +226,7 @@ template&lt;typename Receiver , typename Functor &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_var.html">kF::Var</a> kF::Meta::SlotTable::Slot::invoke </td>
+          <td class="memname">bool kF::Meta::SlotTable::Slot::invoke </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a>&#160;</td>
           <td class="paramname"><em>generation</em>, </td>
@@ -332,8 +311,8 @@ template&lt;typename Receiver , typename Functor &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9efd19f5895b8f340de4aa37c3f7dcb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9efd19f5895b8f340de4aa37c3f7dcb7">&#9670;&nbsp;</a></span>_data</h2>
+<a id="a5ca5cedd5ce94c05f42d1336e7c15126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca5cedd5ce94c05f42d1336e7c15126">&#9670;&nbsp;</a></span>_functor</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,7 +321,7 @@ template&lt;typename Receiver , typename Functor &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_var.html">Var</a> kF::Meta::SlotTable::Slot::_data {}</td>
+          <td class="memname"><a class="el" href="classk_f_1_1_core_1_1_functor.html">Core::Functor</a>&lt;bool(const void * const, <a class="el" href="classk_f_1_1_var.html">Var</a> *), <a class="el" href="namespacek_f_1_1_core.html#a8dc49a6577816ab36a507d1b268b83df">Core::CacheLineHalfSize</a>&gt; kF::Meta::SlotTable::Slot::_functor {}</td>
         </tr>
       </table>
   </td>
@@ -364,29 +343,7 @@ template&lt;typename Receiver , typename Functor &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> kF::Meta::SlotTable::Slot::_generation { 0 }</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a419181842995fcfc5731ff00854c501e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a419181842995fcfc5731ff00854c501e">&#9670;&nbsp;</a></span>_invokeFunc</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#ad1b6d8035ff05a662b9b5b0a6701e64f">InvokeFunc</a> kF::Meta::SlotTable::Slot::_invokeFunc { nullptr }</td>
+          <td class="memname"><a class="el" href="classk_f_1_1_meta_1_1_slot_table_1_1_slot.html#a4b6fd144b5ee157d492016e18b4c6b0e">Generation</a> kF::Meta::SlotTable::Slot::_generation { 0u }</td>
         </tr>
       </table>
   </td>

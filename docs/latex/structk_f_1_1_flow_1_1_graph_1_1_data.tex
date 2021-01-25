@@ -12,15 +12,17 @@
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}{children}}
+\mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$ \mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}} $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}{children}}
 \item 
-std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a06068b3c7e162661da01a80d12e91a32}{shared\+Count}} \{ 1 \}
+std\+::atomic$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a1ac855dd385721e296c10a487a1cf58f}{joined}} \{ 0 \}
 \item 
-std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_ac3962d56148e1f9b6e086a9ab0b42687}{joined}} \{ 0 \}
-\item 
-std\+::atomic$<$ bool $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a14b02418a34f346addb34bae90887f20}{repeat}} \{ false \}
+std\+::atomic$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a95aba9ee1e0214694c39faf775932dd4}{shared\+Count}} \{ 1 \}
 \item 
 std\+::atomic$<$ bool $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a0e1c94d64b465b79bbe8a6a489c6bac9}{running}} \{ false \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}} $\ast$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_af244c340a45d1a3dbd9e1880dd881c54}{scheduler}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$ bool(void)$>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data_a39e3212aea9c5b2897d7f85c0bee1539}{repeat\+Callback}} \{\}
 \end{DoxyCompactItemize}
 
 
@@ -28,23 +30,23 @@ std\+::atomic$<$ bool $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data
 \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data}{Data}} of the task graph. 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a1e1d572e6960d008d21ee9116b99d467}} 
+\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a424fe71482caa2e48c2f8616c35abffd}} 
 \index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!children@{children}}
 \index{children@{children}!kF::Flow::Graph::Data@{kF::Flow::Graph::Data}}
 \doxysubsubsection{\texorpdfstring{children}{children}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}}$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::children}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Core\+::\+Tiny\+Vector}}$<$\mbox{\hyperlink{classk_f_1_1_flow_1_1_node_instance}{Node\+Instance}}$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::children}
 
-\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_ac3962d56148e1f9b6e086a9ab0b42687}\label{structk_f_1_1_flow_1_1_graph_1_1_data_ac3962d56148e1f9b6e086a9ab0b42687}} 
+\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a1ac855dd385721e296c10a487a1cf58f}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a1ac855dd385721e296c10a487a1cf58f}} 
 \index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!joined@{joined}}
 \index{joined@{joined}!kF::Flow::Graph::Data@{kF::Flow::Graph::Data}}
 \doxysubsubsection{\texorpdfstring{joined}{joined}}
-{\footnotesize\ttfamily std\+::atomic$<$std\+::size\+\_\+t$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::joined \{ 0 \}}
+{\footnotesize\ttfamily std\+::atomic$<$std\+::uint32\+\_\+t$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::joined \{ 0 \}}
 
-\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a14b02418a34f346addb34bae90887f20}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a14b02418a34f346addb34bae90887f20}} 
-\index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!repeat@{repeat}}
-\index{repeat@{repeat}!kF::Flow::Graph::Data@{kF::Flow::Graph::Data}}
-\doxysubsubsection{\texorpdfstring{repeat}{repeat}}
-{\footnotesize\ttfamily std\+::atomic$<$bool$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::repeat \{ false \}}
+\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a39e3212aea9c5b2897d7f85c0bee1539}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a39e3212aea9c5b2897d7f85c0bee1539}} 
+\index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!repeatCallback@{repeatCallback}}
+\index{repeatCallback@{repeatCallback}!kF::Flow::Graph::Data@{kF::Flow::Graph::Data}}
+\doxysubsubsection{\texorpdfstring{repeatCallback}{repeatCallback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Core\+::\+Functor}}$<$bool(void)$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::repeat\+Callback \{\}}
 
 \mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a0e1c94d64b465b79bbe8a6a489c6bac9}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a0e1c94d64b465b79bbe8a6a489c6bac9}} 
 \index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!running@{running}}
@@ -52,11 +54,17 @@ std\+::atomic$<$ bool $>$ \mbox{\hyperlink{structk_f_1_1_flow_1_1_graph_1_1_data
 \doxysubsubsection{\texorpdfstring{running}{running}}
 {\footnotesize\ttfamily std\+::atomic$<$bool$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::running \{ false \}}
 
-\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a06068b3c7e162661da01a80d12e91a32}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a06068b3c7e162661da01a80d12e91a32}} 
+\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_af244c340a45d1a3dbd9e1880dd881c54}\label{structk_f_1_1_flow_1_1_graph_1_1_data_af244c340a45d1a3dbd9e1880dd881c54}} 
+\index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!scheduler@{scheduler}}
+\index{scheduler@{scheduler}!kF::Flow::Graph::Data@{kF::Flow::Graph::Data}}
+\doxysubsubsection{\texorpdfstring{scheduler}{scheduler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classk_f_1_1_flow_1_1_scheduler}{Scheduler}}$\ast$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::scheduler \{ nullptr \}}
+
+\mbox{\Hypertarget{structk_f_1_1_flow_1_1_graph_1_1_data_a95aba9ee1e0214694c39faf775932dd4}\label{structk_f_1_1_flow_1_1_graph_1_1_data_a95aba9ee1e0214694c39faf775932dd4}} 
 \index{kF::Flow::Graph::Data@{kF::Flow::Graph::Data}!sharedCount@{sharedCount}}
 \index{sharedCount@{sharedCount}!kF::Flow::Graph::Data@{kF::Flow::Graph::Data}}
 \doxysubsubsection{\texorpdfstring{sharedCount}{sharedCount}}
-{\footnotesize\ttfamily std\+::atomic$<$std\+::size\+\_\+t$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::shared\+Count \{ 1 \}}
+{\footnotesize\ttfamily std\+::atomic$<$std\+::uint16\+\_\+t$>$ k\+F\+::\+Flow\+::\+Graph\+::\+Data\+::shared\+Count \{ 1 \}}
 
 
 

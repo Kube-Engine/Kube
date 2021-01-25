@@ -1,15 +1,13 @@
 <map id="Kube/Meta/Var.hpp" name="Kube/Meta/Var.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="169,5,303,32"/>
-<area shape="rect" id="node2" href="$_converter_8hpp.html" title=" " alt="" coords="28,155,199,181"/>
-<area shape="rect" id="node3" href="$_meta_8hpp.html" title=" " alt="" coords="215,304,358,331"/>
-<area shape="rect" id="node11" href="$_slot_table_8hpp.html" title=" " alt="" coords="273,80,441,107"/>
-<area shape="rect" id="node4" href="$_register_8cpp.html" title=" " alt="" coords="5,379,168,405"/>
-<area shape="rect" id="node5" href="$_reflection2_8hpp.html" title=" " alt="" coords="192,379,381,405"/>
-<area shape="rect" id="node6" href="$_reflection_8hpp.html" title=" " alt="" coords="406,379,589,405"/>
-<area shape="rect" id="node7" href="$_object_8hpp.html" title=" " alt="" coords="417,453,578,480"/>
-<area shape="rect" id="node8" href="$_object_8cpp.html" title=" " alt="" coords="237,528,398,555"/>
-<area shape="rect" id="node9" href="$_item_8hpp.html" title=" " alt="" coords="423,528,572,555"/>
-<area shape="rect" id="node10" href="$_reflection_8cpp.html" title=" " alt="" coords="597,528,779,555"/>
-<area shape="rect" id="node12" href="$_signal_8hpp.html" title=" " alt="" coords="325,155,475,181"/>
-<area shape="rect" id="node13" href="$_data_8hpp.html" title=" " alt="" coords="375,229,518,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="147,5,280,32"/>
+<area shape="rect" id="node2" href="$_converter_8hpp.html" title=" " alt="" coords="5,155,176,181"/>
+<area shape="rect" id="node3" href="$_meta_8hpp.html" title=" " alt="" coords="193,304,335,331"/>
+<area shape="rect" id="node9" href="$_slot_table_8hpp.html" title=" " alt="" coords="251,80,419,107"/>
+<area shape="rect" id="node4" href="$_registerer_8hpp.html" title=" " alt="" coords="177,379,351,405"/>
+<area shape="rect" id="node5" href="$_register_8cpp.html" title=" " alt="" coords="84,453,247,480"/>
+<area shape="rect" id="node6" href="$_reflection_8hpp.html" title=" " alt="" coords="271,453,454,480"/>
+<area shape="rect" id="node7" href="$_reflection_8cpp.html" title=" " alt="" coords="174,528,357,555"/>
+<area shape="rect" id="node8" href="$_object_8hpp.html" title=" " alt="" coords="381,528,542,555"/>
+<area shape="rect" id="node10" href="$_signal_8hpp.html" title=" " alt="" coords="302,155,453,181"/>
+<area shape="rect" id="node11" href="$_data_8hpp.html" title=" " alt="" coords="353,229,495,256"/>
 </map>
