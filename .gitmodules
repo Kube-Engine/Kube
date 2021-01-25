@@ -34,3 +34,6 @@
 [submodule "Kube/Voxel"]
 	path = Kube/Voxel
 	url = git@github.com:Kube-Engine/Voxel.git
+[submodule "Kube/Audio"]
+	path = Kube/Audio
+	url = git@github.com:Kube-Engine/Audio.git
