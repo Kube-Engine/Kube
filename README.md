@@ -23,15 +23,19 @@ After 3 attempts to re-create a Qt-Quick-like framework ([here is the last](http
 Kube framework is divided into modules that encapsulate specific parts of the engine.
 |Name|Description|Version|Test Coverage|
 |-|-|-|-|
-|**Core**|Contains over-optimized basic classes used in multiples modules|0.2|![](https://byob.yarr.is/Kube-Engine/Kube/CoreCoverage)|
-|**Meta**|Implementation of non-intrusive runtime reflection with supports of signal / slots|0.2||
-|**Flow**|A high frequency multithreading task scheduler|0.1||
-|**ECS**|An Entity Component System designed to fit in Flow's multithreaded task graph|0.1||
-|**Interpreter**|Kube's language interpreter|WIP, early stage||
-|**App**|Kube cross-platform window, inputs and events handling|WIP, early stage||
-|**Graphics**|Low level graphic engine|0.1||
-|**Voxel**|A renderer optimized for voxel graphics|Not started yiet||
-|**Audio**|A 3D audio scene processor|Not started yiet||
+|**Core**|Introduce low-level independent classes and language concepts to be used across the whole framework|0.0.3|![](https://byob.yarr.is/Kube-Engine/Kube/CoreCoverage)|
+|**Flow**|A high frequency multithreading task scheduler|0.0.2|![](https://byob.yarr.is/Kube-Engine/Kube/FlowCoverage)|
+|**Graphics**|Low level graphic engine|0.0.2|![](https://byob.yarr.is/Kube-Engine/Kube/GraphicsCoverage)|
+|**Meta**|Implementation of non-intrusive runtime reflection with supports of signal / slots|0.0.3|![](https://byob.yarr.is/Kube-Engine/Kube/MetaCoverage)|
+|**ECS**|An Entity Component System designed to fit in Flow's multithreaded task graph|0.0.2|![](https://byob.yarr.is/Kube-Engine/Kube/ECSCoverage)|
+|**Object**|A high level base class used to bring reflection, signals and object-trees in any custom class|0.0.1|![](https://byob.yarr.is/Kube-Engine/Kube/ObjectCoverage)|
+|**Interpreter**|Kube's language interpreter|WIP, early stage|![](https://byob.yarr.is/Kube-Engine/Kube/InterpreterCoverage)|
+|**App**|Kube cross-platform window, inputs and events handling|WIP, early stage|![](https://byob.yarr.is/Kube-Engine/Kube/AppCoverage)|
+|**UI**|A renderer optimized for 2D graphics|Not started yiet|![](https://byob.yarr.is/Kube-Engine/Kube/UICoverage)|
+|**Voxel**|A graphics renderer optimized for voxel graphics|Not started yiet|![](https://byob.yarr.is/Kube-Engine/Kube/VoxelCoverage)|
+|**Widgets**|High level objects used to abstract most common widgets for UI programming|Not started yiet|![](https://byob.yarr.is/Kube-Engine/Kube/WidgetsCoverage)|
+|**Audio**|A 3D audio scene processor|Not started yiet|![](https://byob.yarr.is/Kube-Engine/Kube/AudioCoverage)|
+
 
 ## The Kube language
 The Kube language can be seen like a remaster of the [QML language](https://doc.qt.io/qt-5/qtqml-index.html) language implemented in raw C++ for a much better code integration.

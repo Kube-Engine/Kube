@@ -13,14 +13,14 @@ These frameworks are often simple, efficient and allow you to control the archit
 |-|-|-|
 | Good for beginners and advanced programmers: easy to learn, easy to master | C code is old and not safe but encapsulation is very easy | You code more |
 | Build highly efficient 2D application | | For 3D, you must deal with an API like OpenGL / Vulkan which are way harder to learn and master) |
-| You control the game architecture | | |
+| You control the game architecture | | You are left to implement a lot of specific / modern features |
 | No specific IDE is required | | |
 | Runs on anything | | |
 | You don't have to understand everthing (even if you can easily) to get great performances | | |
 
 ## High-level frameworks
 
-These frameworks are often a huge collection of high-level systems and classes
+These frameworks are often a huge collection of high-level systems and classes in order to make developper's job easier for any aspect of a software.
 
 ### **Qt Quick**, for 2D applications and games:
 | Pros | Warning | Cons |
