@@ -29,13 +29,13 @@ jobs:
     - name: Install Vulkan
       run: sudo apt-get install -y libvulkan-dev libvulkan1 mesa-vulkan-drivers vulkan-tools vulkan-utils vulkan-validationlayers vulkan-validationlayers-dev
 
-    - name: Build
-      working-directory: ${{github.workspace}}
-      shell: bash
-      env:
-        CC:  gcc-10
-        CXX: g++-10
-      run: make coverage
+    # - name: Build
+    #   working-directory: ${{github.workspace}}
+    #   shell: bash
+    #   env:
+    #     CC:  gcc-10
+    #     CXX: g++-10
+    #   run: make coverage
 
     # Core
     - name: Run Core tests
@@ -54,7 +54,6 @@ jobs:
         NAME: CoreCoverage
         LABEL: 'Coverage'
         STATUS: ${{ steps.coverage.outputs.core }}
-        COLOR: blue
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Meta
