@@ -14,8 +14,8 @@ These frameworks are often simple, efficient and allow you to control the archit
 | Good for beginners and advanced programmers: easy to learn, easy to master | C code is old and not safe but encapsulation is very easy | You code more |
 | Build highly efficient 2D application | | For 3D, you must deal with an API like OpenGL / Vulkan which are way harder to learn and master) |
 | You control the game architecture | | |
-| No specific IDE required | | |
-| Run on anything | | |
+| No specific IDE is required | | |
+| Runs on anything | | |
 | You don't have to understand everthing (even if you can easily) to get great performances | | |
 
 ## High-level frameworks

@@ -39,6 +39,7 @@ jobs:
 
     # Core
     - name: Run Core tests
+      id: CoreTests
       working-directory: ${{github.workspace}}
       shell: bash
       env:
@@ -46,14 +47,15 @@ jobs:
         CXX: g++-10
       run: |
         make run_core_coverage
-        echo "##[set-output name=core;]$(coverage)"
+        echo "::set-output name=Coverage::$(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' ')"
 
     - name: Upload Core coverage
       uses: RubbaBoy/BYOB@v1.2.0
       with:
         NAME: CoreCoverage
         LABEL: 'Coverage'
-        STATUS: ${{ steps.coverage.outputs.core }}
+        STATUS: ${{ steps.CoreTests.outputs.Coverage }}
+        COLOR: blue
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Meta
