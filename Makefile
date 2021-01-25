@@ -80,6 +80,39 @@ examples_debug:
 	$(MAKE) debug CMAKE_ARGS+=-DKF_EXAMPLES=TRUE
 
 
+# Audio
+AUDIO_ARGS = CMAKE_ARGS+=-DKF_AUDIO=TRUE
+audio:
+	$(MAKE) release $(AUDIO_ARGS)
+
+audio_debug:
+	$(MAKE) debug $(AUDIO_ARGS)
+
+audio_tests:
+	$(MAKE) tests $(AUDIO_ARGS)
+
+audio_tests:
+	$(MAKE) run_tests $(AUDIO_ARGS)
+
+audio_tests_debug:
+	$(MAKE) tests_debug $(AUDIO_ARGS)
+
+run_audio_tests_debug:
+	$(MAKE) run_tests_debug $(AUDIO_ARGS)
+
+audio_coverage:
+	$(MAKE) coverage $(AUDIO_ARGS)
+
+run_audio_coverage:
+	$(MAKE) run_coverage_extract $(AUDIO_ARGS) COVERAGE_EXTRACT="Audio"
+
+audio_benchmarks:
+	$(MAKE) benchmarks $(AUDIO_ARGS)
+
+audio_benchmarks_debug:
+	$(MAKE) benchmarks_debug $(AUDIO_ARGS)
+
+
 # App
 APP_ARGS = CMAKE_ARGS+=-DKF_APP=TRUE
 app:
@@ -97,7 +130,7 @@ run_app_tests:
 app_tests_debug:
 	$(MAKE) tests_debug $(APP_ARGS)
 
-run_app_tests_debug: app_tests_debug
+run_app_tests_debug:
 	$(MAKE) run_tests_debug $(APP_ARGS)
 
 app_coverage:
@@ -130,7 +163,7 @@ run_core_tests:
 core_tests_debug:
 	$(MAKE) tests_debug $(CORE_ARGS)
 
-run_core_tests_debug: core_tests_debug
+run_core_tests_debug:
 	$(MAKE) run_tests_debug $(CORE_ARGS)
 
 core_coverage:
@@ -163,7 +196,7 @@ run_ecs_tests:
 ecs_tests_debug:
 	$(MAKE) tests_debug $(ECS_ARGS)
 
-run_ecs_tests_debug: ecs_tests_debug
+run_ecs_tests_debug:
 	$(MAKE) run_tests_debug $(ECS_ARGS)
 
 ecs_coverage:
@@ -196,7 +229,7 @@ run_graphics_tests:
 graphics_tests_debug:
 	$(MAKE) tests_debug $(GRAPHICS_ARGS)
 
-run_graphics_tests_debug: graphics_tests_debug
+run_graphics_tests_debug:
 	$(MAKE) run_tests_debug $(GRAPHICS_ARGS)
 
 graphics_coverage:
@@ -229,7 +262,7 @@ run_interpreter_tests:
 interpreter_tests_debug:
 	$(MAKE) tests_debug $(INTERPRETER_ARGS)
 
-run_interpreter_tests_debug: interpreter_tests_debug
+run_interpreter_tests_debug:
 	$(MAKE) run_tests_debug $(INTERPRETER_ARGS)
 
 interpreter_coverage:
@@ -262,7 +295,7 @@ run_meta_tests:
 meta_tests_debug:
 	$(MAKE) tests_debug $(META_ARGS)
 
-run_meta_tests_debug: meta_tests_debug
+run_meta_tests_debug:
 	$(MAKE) run_tests_debug $(META_ARGS)
 
 meta_coverage:
@@ -295,7 +328,7 @@ run_object_tests:
 object_tests_debug:
 	$(MAKE) tests_debug $(OBJECT_ARGS)
 
-run_object_tests_debug: object_tests_debug
+run_object_tests_debug:
 	$(MAKE) run_tests_debug $(OBJECT_ARGS)
 
 object_coverage:
@@ -327,7 +360,7 @@ run_ui_tests:
 ui_tests_debug:
 	$(MAKE) tests_debug $(UI_ARGS)
 
-run_ui_tests_debug: ui_tests_debug
+run_ui_tests_debug:
 	$(MAKE) run_tests_debug $(UI_ARGS)
 
 ui_coverage:
@@ -360,7 +393,7 @@ run_flow_tests:
 flow_tests_debug:
 	$(MAKE) tests_debug $(FLOW_ARGS)
 
-run_flow_tests_debug: flow_tests_debug
+run_flow_tests_debug:
 	$(MAKE) run_tests_debug $(FLOW_ARGS)
 
 flow_coverage:
@@ -392,7 +425,7 @@ run_voxel_tests:
 voxel_tests_debug:
 	$(MAKE) tests_debug $(VOXEL_ARGS)
 
-run_voxel_tests_debug: voxel_tests_debug
+run_voxel_tests_debug:
 	$(MAKE) run_tests_debug $(VOXEL_ARGS)
 
 voxel_coverage:
@@ -425,7 +458,7 @@ run_widgets_tests:
 widgets_tests_debug:
 	$(MAKE) tests_debug $(WIDGETS_ARGS)
 
-run_widgets_tests_debug: widgets_tests_debug
+run_widgets_tests_debug:
 	$(MAKE) run_tests_debug $(WIDGETS_ARGS)
 
 widgets_coverage:
@@ -455,6 +488,7 @@ re: clean all
 	examples examples_debug \
 	tests tests_debug run_tests run_tests_debug \
 	benchmarks benchmarks_debug \
+	audio audio_debug audio_tests run_audio_tests audio_tests_debug run_audio_tests_debug audio_coverage run_audio_coverage audio_benchmarks audio_benchmarks_debug \
 	app app_debug app_tests run_app_tests app_tests_debug run_app_tests_debug app_coverage run_app_coverage app_benchmarks app_benchmarks_debug \
 	core core_debug core_tests run_core_tests core_tests_debug run_core_tests_debug core_coverage run_core_coverage core_benchmarks core_benchmarks_debug \
 	graphics graphics_debug graphics_tests run_graphics_tests graphics_tests_debug run_graphics_tests_debug graphics_coverage run_graphics_coverage graphics_benchmarks graphics_benchmarks_debug \

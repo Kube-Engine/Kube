@@ -73,30 +73,32 @@ endif()
 kube_setup_module(KF_CORE Core)
 
 # Level 1: Low level high performance backends
-kube_setup_module(KF_GRAPHICS Graphics          KF_CORE)
-kube_setup_module(KF_META Meta                  KF_CORE)
-kube_setup_module(KF_FLOW Flow                  KF_CORE)
+kube_setup_module(KF_AUDIO          Audio       KF_CORE)
+kube_setup_module(KF_GRAPHICS       Graphics    KF_CORE)
+kube_setup_module(KF_META           Meta        KF_CORE)
+kube_setup_module(KF_FLOW           Flow        KF_CORE)
 
 # Level 2: Higher level objects and concepts
-kube_setup_module(KF_ECS ECS                    KF_FLOW)
-kube_setup_module(KF_OBJECT Object              KF_META)
+kube_setup_module(KF_ECS            ECS         KF_FLOW)
+kube_setup_module(KF_OBJECT         Object      KF_META)
 
 # Level 3: Implementation of general utiliies using L2 concepts
-kube_setup_module(KF_INTERPRETER Interpreter    KF_OBJECT)
-kube_setup_module(KF_VOXEL Voxel                KF_GRAPHICS KF_ECS)
-kube_setup_module(KF_UI UI                      KF_GRAPHICS KF_ECS)
+kube_setup_module(KF_INTERPRETER    Interpreter KF_OBJECT)
+kube_setup_module(KF_VOXEL          Voxel       KF_GRAPHICS KF_ECS)
+kube_setup_module(KF_UI             UI          KF_GRAPHICS KF_ECS)
 
 # Level 4: Implementation of specific utilities using L3 concepts
-kube_setup_module(KF_WIDGETS Widgets            KF_OBJECT KF_UI)
+kube_setup_module(KF_WIDGETS        Widgets     KF_OBJECT KF_UI)
 
 # Level 5: Application level
-kube_setup_module(KF_APP App                    KF_WIDGETS KF_INTERPRETER)
+kube_setup_module(KF_APP            App         KF_WIDGETS KF_INTERPRETER)
 
 # Level 6: Specialized applications
 # kube_setup_module(KF_APP VoxelApp               KF_APP KF_VOXEL)
 
 # Include each module and check if they should be compiled (will recurse on dependencies)
 kube_include_module(KF_CORE)
+kube_include_module(KF_AUDIO)
 kube_include_module(KF_GRAPHICS)
 kube_include_module(KF_META)
 kube_include_module(KF_FLOW)
