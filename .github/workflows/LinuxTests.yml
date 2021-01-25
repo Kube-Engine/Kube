@@ -40,27 +40,30 @@ jobs:
     # Core
     - name: Run Core tests
       id: CoreTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_core_coverage
+        make run_core_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Core coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: CoreCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.CoreTests.outputs.Coverage }}
         COLOR: ${{ steps.CoreTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -68,27 +71,30 @@ jobs:
     # Meta
     - name: Run Meta tests
       id: MetaTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_meta_coverage
+        make run_meta_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Meta coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: MetaCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.MetaTests.outputs.Coverage }}
         COLOR: ${{ steps.MetaTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -96,27 +102,30 @@ jobs:
     # Flow
     - name: Run Flow tests
       id: FlowTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_flow_coverage
+        make run_flow_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Flow coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: FlowCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.FlowTests.outputs.Coverage }}
         COLOR: ${{ steps.FlowTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -124,27 +133,30 @@ jobs:
     # Graphics
     - name: Run Graphics tests
       id: GraphicsTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_graphics_coverage
+        make run_graphics_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Graphics coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: GraphicsCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.GraphicsTests.outputs.Coverage }}
         COLOR: ${{ steps.GraphicsTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -152,27 +164,30 @@ jobs:
     # Object
     - name: Run Object tests
       id: ObjectTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_object_coverage
+        make run_object_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Object coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: ObjectCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.ObjectTests.outputs.Coverage }}
         COLOR: ${{ steps.ObjectTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -181,27 +196,30 @@ jobs:
     # Interpreter
     - name: Run Interpreter tests
       id: InterpreterTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_interpreter_coverage
+        make run_interpreter_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Interpreter coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: InterpreterCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.InterpreterTests.outputs.Coverage }}
         COLOR: ${{ steps.InterpreterTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -209,27 +227,30 @@ jobs:
     # ECS
     - name: Run ECS tests
       id: ECSTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_ecs_coverage
+        make run_ecs_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload ECS coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: ECSCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.ECSTests.outputs.Coverage }}
         COLOR: ${{ steps.ECSTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -237,27 +258,30 @@ jobs:
     # UI
     - name: Run UI tests
       id: UITests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_ui_coverage
+        make run_ui_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload UI coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: UICoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.UITests.outputs.Coverage }}
         COLOR: ${{ steps.UITests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -265,27 +289,30 @@ jobs:
     # Widgets
     - name: Run Widgets tests
       id: WidgetsTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_widgets_coverage
+        make run_widgets_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Widgets coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: WidgetsCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.WidgetsTests.outputs.Coverage }}
         COLOR: ${{ steps.WidgetsTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -293,27 +320,30 @@ jobs:
     # Voxel
     - name: Run Voxel tests
       id: VoxelTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_voxel_coverage
+        make run_voxel_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload Voxel coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: VoxelCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.VoxelTests.outputs.Coverage }}
         COLOR: ${{ steps.VoxelTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -321,27 +351,30 @@ jobs:
     # App
     - name: Run App tests
       id: AppTests
+      if: ${{ always() }}
       working-directory: ${{github.workspace}}
       shell: bash
       env:
         CC:  gcc-10
         CXX: g++-10
-      continue-on-error: true
       run: |
-        make run_app_coverage
+        make run_app_coverage || echo "Failed to run coverage tests"
         if [ $? = 0 ]; then
           echo "::set-output name=Coverage::$(echo $(lcov -l coverage.info | tail -n 1 | cut -f2 -d '|' | awk '{$1=$1;print}' | cut -f1 -d ' '))"
           echo "::set-output name=Color::green"
+          exit 0
         else
           echo "::set-output name=Coverage::Failure"
           echo "::set-output name=Color::red"
+          exit 1
         fi
 
     - name: Upload App coverage
       uses: RubbaBoy/BYOB@v1.2.0
+      if: ${{ always() }}
       with:
         NAME: AppCoverage
-        LABEL: 'Linux Tests Coverage'
+        LABEL: 'Linux'
         STATUS: ${{ steps.AppTests.outputs.Coverage }}
         COLOR: ${{ steps.AppTests.outputs.Color }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
