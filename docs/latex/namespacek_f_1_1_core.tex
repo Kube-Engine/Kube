@@ -14,8 +14,6 @@ class \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Det
 \item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details_3_01_return_07_args_8_8_8_08_00_01_cache_size_00_01_template_functor_01_4}{Dispatcher\+Details$<$ Return(\+Args...), Cache\+Size, Template\+Functor $>$}}
 \begin{DoxyCompactList}\small\item\em Fast event dispatcher. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}
-\begin{DoxyCompactList}\small\item\em Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}}
 \item 
 class \mbox{\hyperlink{classk_f_1_1_core_1_1_functor_3_01_return_07_args_8_8_8_08_00_01_cache_size_01_4}{Functor$<$ Return(\+Args...), Cache\+Size $>$}}
@@ -33,56 +31,102 @@ class \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor_3_01_return_07_args
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{Allocated\+Flat\+String\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$ \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{Allocated\+Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a63bb2e6ee1d5de03492baa02b4805581}{Allocated\+Flat\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{Allocated\+Flat\+String\+Base}}$<$ char, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char and size\+\_\+t range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a98189209bf825328ce1b7905c80555fb}{Allocated\+Tiny\+Flat\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{Allocated\+Flat\+String\+Base}}$<$ char, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{Allocated\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The vector must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aea6a5e2ae9a3a69e46ffe2a8cd1776da}{Allocated\+Tiny\+Flat\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{Allocated\+Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector using signed char with a reduced range The vector must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{Allocated\+Small\+String\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$ \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated The string must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}{Allocated\+Tiny\+Small\+String\+Base}} = \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{Allocated\+Small\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Small optimized string with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a98a2ac3890558735215fcbc860724784}{Allocated\+Small\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{Allocated\+Small\+String\+Base}}$<$ char, \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}{Cache\+Line\+Eighth\+Size}}, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 8 bytes) The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aa7547a542ede3e1032b93903f6f2053d}{Allocated\+Tiny\+Small\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}{Allocated\+Tiny\+Small\+String\+Base}}$<$ char, \mbox{\hyperlink{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}{Cache\+Line\+Quarter\+Size}}, Allocate\+Func, Deallocate\+Func $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 16 bytes) with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size, capacity and a small cache close to the data pointer The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{Allocated\+Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Small optimized vector with a reduced range The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{Allocated\+String\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$ \mbox{\hyperlink{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}{Allocated\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated The string must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}{Allocated\+Tiny\+String\+Base}} = \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{Allocated\+String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 16 bytes String with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a484ea81896183b1ffea440bcfa1f2a73}{Allocated\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{Allocated\+String\+Base}}$<$ char, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 24 bytes string The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac15206cd1515bfaa88076f791053f41e}{Allocated\+Tiny\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}{Allocated\+Tiny\+String\+Base}}$<$ char, Allocate\+Func, Deallocate\+Func $>$
+\begin{DoxyCompactList}\small\item\em 16 bytes string with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}{Allocated\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}{Allocated\+Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 16 bytes vector with a reduced range The vector must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Quarter\+Size$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}{Dispatcher}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$ Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_functor}{Functor}} $>$
 \begin{DoxyCompactList}\small\item\em Specialization of dispatcher with trivial functors. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{Flat\+String}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$ char $>$
-\item 
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{Flat\+String\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$ \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_add655c2b8906beafd62a7efd317e182d}{Flat\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{Flat\+String\+Base}}$<$ char, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char and size\+\_\+t range The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_aed470f91c055859e8aadf7873ee86507}{Tiny\+Flat\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{Flat\+String\+Base}}$<$ char, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char with a reduced range The string is non-\/null terminated \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a369cc7880dba7794da862cd1b66531cc}{Tiny\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector using signed char with a reduced range \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}{Small\+String\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$ \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}{Tiny\+Small\+String\+Base}} = \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Small optimized string with a reduced range The string is non-\/null terminated. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_a35706fc0f34b14c1a6b3687e086f5ba5}{Small\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}{Small\+String\+Base}}$<$ char, \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}{Cache\+Line\+Eighth\+Size}}, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 8 bytes) The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_ace5513c19298d552839cc1943f57b144}{Tiny\+Small\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}{Tiny\+Small\+String\+Base}}$<$ char, \mbox{\hyperlink{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}{Cache\+Line\+Quarter\+Size}} $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 16 bytes) with a reduced range The string is non-\/null terminated \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size, capacity and a small cache close to the data pointer. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}{Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Small optimized vector with a reduced range. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{Sorted\+Allocated\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}{Sorted\+Allocated\+Tiny\+Flat\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{Sorted\+Allocated\+Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 8 bytes vector using signed char with a reduced range The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{Sorted\+Allocated\+Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size, capacity and a small cache close to the data pointer The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}{Sorted\+Allocated\+Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{Sorted\+Allocated\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Small optimized vector with a reduced range The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{Sorted\+Allocated\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}{Sorted\+Allocated\+Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{Sorted\+Allocated\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 16 bytes vector with a reduced range The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{Sorted\+Flat\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The vector guarantee that it will be sorted at any given time \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}{Sorted\+Tiny\+Flat\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{Sorted\+Flat\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 8 bytes vector using signed char with a reduced range The vector guarantee that it will be sorted at any given time \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{Sorted\+Small\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size, capacity and a small cache close to the data pointer The vector guarantee that it will be sorted at any given time. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}{Sorted\+Tiny\+Small\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{Sorted\+Small\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Small optimized vector with a reduced range The vector guarantee that it will be sorted at any given time. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{Sorted\+Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes The vector guarantee that it will be sorted at any given time. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}{Sorted\+Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{Sorted\+Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare $>$
-\item 
+\begin{DoxyCompactList}\small\item\em 16 bytes vector with a reduced range The vector guarantee that it will be sorted at any given time \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}{String\+Base}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$ \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size and capacity close to the data pointer The string is non-\/null terminated. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac2ec1cd44d09b016d9928b688e58fe71}{Tiny\+String\+Base}} = \mbox{\hyperlink{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}{String\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 16 bytes string with a reduced range The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_aa7601c7d7ff316dccc5ae14d7134ad10}{String}} = \mbox{\hyperlink{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}{String\+Base}}$<$ char, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 24 bytes string using signed char The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_a32fef719112e39ca7728610d49e31050}{Tiny\+String}} = \mbox{\hyperlink{namespacek_f_1_1_core_ac2ec1cd44d09b016d9928b688e58fe71}{Tiny\+String\+Base}}$<$ char $>$
+\begin{DoxyCompactList}\small\item\em 16 bytes string using signed char with a reduced range The string is non-\/null terminated \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Signature , std\+::size\+\_\+t Cache\+Size = Cache\+Line\+Eighth\+Size$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}{Trivial\+Dispatcher}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_dispatcher_details}{Dispatcher\+Details}}$<$ Signature, Cache\+Size, \mbox{\hyperlink{classk_f_1_1_core_1_1_trivial_functor}{Trivial\+Functor}} $>$
 \begin{DoxyCompactList}\small\item\em Specialization of dispatcher with trivial functors. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}} = \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{Tiny\+Vector}} = \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 16 bytes vector with a reduced range \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -117,6 +161,8 @@ constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c
 
 @ Author\+: Matthieu Moinvaziri @ Description\+: M\+P\+MC Queue
 
+@ Author\+: Matthieu Moinvaziri @ Description\+: Small String
+
 @ Author\+: Matthieu Moinvaziri @ Description\+: Sorted Flat\+Vector
 
 @ Author\+: Matthieu Moinvaziri @ Description\+: Sorted Small\+Vector
@@ -125,9 +171,44 @@ constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c
 
 @ Author\+: Matthieu Moinvaziri @ Description\+: S\+P\+SC Queue
 
+@ Author\+: Matthieu Moinvaziri @ Description\+: String
+
 @ Author\+: Matthieu Moinvaziri @ Description\+: Trivial opaque functor holder 
 
 \doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a63bb2e6ee1d5de03492baa02b4805581}\label{namespacek_f_1_1_core_a63bb2e6ee1d5de03492baa02b4805581}} 
+\index{kF::Core@{kF::Core}!AllocatedFlatString@{AllocatedFlatString}}
+\index{AllocatedFlatString@{AllocatedFlatString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedFlatString}{AllocatedFlatString}}
+{\footnotesize\ttfamily template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a63bb2e6ee1d5de03492baa02b4805581}{k\+F\+::\+Core\+::\+Allocated\+Flat\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{Allocated\+Flat\+String\+Base}}$<$char, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t$>$}
+
+
+
+8 bytes string using signed char and size\+\_\+t range The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}\label{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}} 
+\index{kF::Core@{kF::Core}!AllocatedFlatStringBase@{AllocatedFlatStringBase}}
+\index{AllocatedFlatStringBase@{AllocatedFlatStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedFlatStringBase}{AllocatedFlatStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{k\+F\+::\+Core\+::\+Allocated\+Flat\+String\+Base}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$\mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{Allocated\+Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+8 bytes vector that allocates its size and capacity on the heap The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}\label{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}} 
 \index{kF::Core@{kF::Core}!AllocatedFlatVector@{AllocatedFlatVector}}
 \index{AllocatedFlatVector@{AllocatedFlatVector}!kF::Core@{kF::Core}}
@@ -135,12 +216,156 @@ constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{k\+F\+::\+Core\+::\+Allocated\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
 
+
+
+8 bytes vector that allocates its size and capacity on the heap The vector must take an allocator and a deallocator functor 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a98a2ac3890558735215fcbc860724784}\label{namespacek_f_1_1_core_a98a2ac3890558735215fcbc860724784}} 
+\index{kF::Core@{kF::Core}!AllocatedSmallString@{AllocatedSmallString}}
+\index{AllocatedSmallString@{AllocatedSmallString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedSmallString}{AllocatedSmallString}}
+{\footnotesize\ttfamily template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a98a2ac3890558735215fcbc860724784}{k\+F\+::\+Core\+::\+Allocated\+Small\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{Allocated\+Small\+String\+Base}}$<$char, \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}{Cache\+Line\+Eighth\+Size}}, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t$>$}
+
+
+
+32 bytes small optimized string (cache of 8 bytes) The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}\label{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}} 
+\index{kF::Core@{kF::Core}!AllocatedSmallStringBase@{AllocatedSmallStringBase}}
+\index{AllocatedSmallStringBase@{AllocatedSmallStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedSmallStringBase}{AllocatedSmallStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{k\+F\+::\+Core\+::\+Allocated\+Small\+String\+Base}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$\mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated The string must take an allocator and a deallocator functor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & Type of character \\
+\hline
+{\em Optimized\+Capacity} & Count of element in the optimized cache \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}\label{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}} 
 \index{kF::Core@{kF::Core}!AllocatedSmallVector@{AllocatedSmallVector}}
 \index{AllocatedSmallVector@{AllocatedSmallVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{AllocatedSmallVector}{AllocatedSmallVector}}
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{k\+F\+::\+Core\+::\+Allocated\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
+
+
+
+Vector that has its size, capacity and a small cache close to the data pointer The vector must take an allocator and a deallocator functor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Optimized\+Capacity} & Count of element in the optimized cache \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a484ea81896183b1ffea440bcfa1f2a73}\label{namespacek_f_1_1_core_a484ea81896183b1ffea440bcfa1f2a73}} 
+\index{kF::Core@{kF::Core}!AllocatedString@{AllocatedString}}
+\index{AllocatedString@{AllocatedString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedString}{AllocatedString}}
+{\footnotesize\ttfamily template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a484ea81896183b1ffea440bcfa1f2a73}{k\+F\+::\+Core\+::\+Allocated\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{Allocated\+String\+Base}}$<$char, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t$>$}
+
+
+
+24 bytes string The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}\label{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}} 
+\index{kF::Core@{kF::Core}!AllocatedStringBase@{AllocatedStringBase}}
+\index{AllocatedStringBase@{AllocatedStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedStringBase}{AllocatedStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{k\+F\+::\+Core\+::\+Allocated\+String\+Base}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$\mbox{\hyperlink{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}{Allocated\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated The string must take an allocator and a deallocator functor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & Type of character \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a98189209bf825328ce1b7905c80555fb}\label{namespacek_f_1_1_core_a98189209bf825328ce1b7905c80555fb}} 
+\index{kF::Core@{kF::Core}!AllocatedTinyFlatString@{AllocatedTinyFlatString}}
+\index{AllocatedTinyFlatString@{AllocatedTinyFlatString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinyFlatString}{AllocatedTinyFlatString}}
+{\footnotesize\ttfamily template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a98189209bf825328ce1b7905c80555fb}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Flat\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{Allocated\+Flat\+String\+Base}}$<$char, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t$>$}
+
+
+
+8 bytes string using signed char with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_aea6a5e2ae9a3a69e46ffe2a8cd1776da}\label{namespacek_f_1_1_core_aea6a5e2ae9a3a69e46ffe2a8cd1776da}} 
+\index{kF::Core@{kF::Core}!AllocatedTinyFlatVector@{AllocatedTinyFlatVector}}
+\index{AllocatedTinyFlatVector@{AllocatedTinyFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinyFlatVector}{AllocatedTinyFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_aea6a5e2ae9a3a69e46ffe2a8cd1776da}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Flat\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a12de8ce24a8396324a46bf9fe5db0c51}{Allocated\+Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t$>$}
+
+
+
+8 bytes vector using signed char with a reduced range The vector must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_aa7547a542ede3e1032b93903f6f2053d}\label{namespacek_f_1_1_core_aa7547a542ede3e1032b93903f6f2053d}} 
+\index{kF::Core@{kF::Core}!AllocatedTinySmallString@{AllocatedTinySmallString}}
+\index{AllocatedTinySmallString@{AllocatedTinySmallString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinySmallString}{AllocatedTinySmallString}}
+{\footnotesize\ttfamily template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_aa7547a542ede3e1032b93903f6f2053d}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}{Allocated\+Tiny\+Small\+String\+Base}}$<$char, \mbox{\hyperlink{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}{Cache\+Line\+Quarter\+Size}}, Allocate\+Func, Deallocate\+Func$>$}
+
+
+
+32 bytes small optimized string (cache of 16 bytes) with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}\label{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}} 
+\index{kF::Core@{kF::Core}!AllocatedTinySmallStringBase@{AllocatedTinySmallStringBase}}
+\index{AllocatedTinySmallStringBase@{AllocatedTinySmallStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinySmallStringBase}{AllocatedTinySmallStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+String\+Base}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{Allocated\+Small\+String\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t$>$}
+
+
+
+Small optimized string with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor. 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}\label{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}} 
 \index{kF::Core@{kF::Core}!AllocatedTinySmallVector@{AllocatedTinySmallVector}}
@@ -149,12 +374,42 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{Allocated\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t$>$}
 
+
+
+Small optimized vector with a reduced range The vector must take an allocator and a deallocator functor. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ac15206cd1515bfaa88076f791053f41e}\label{namespacek_f_1_1_core_ac15206cd1515bfaa88076f791053f41e}} 
+\index{kF::Core@{kF::Core}!AllocatedTinyString@{AllocatedTinyString}}
+\index{AllocatedTinyString@{AllocatedTinyString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinyString}{AllocatedTinyString}}
+{\footnotesize\ttfamily template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ac15206cd1515bfaa88076f791053f41e}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}{Allocated\+Tiny\+String\+Base}}$<$char, Allocate\+Func, Deallocate\+Func$>$}
+
+
+
+16 bytes string with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}\label{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}} 
+\index{kF::Core@{kF::Core}!AllocatedTinyStringBase@{AllocatedTinyStringBase}}
+\index{AllocatedTinyStringBase@{AllocatedTinyStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{AllocatedTinyStringBase}{AllocatedTinyStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+String\+Base}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{Allocated\+String\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t$>$}
+
+
+
+16 bytes String with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor 
+
 \mbox{\Hypertarget{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}\label{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}} 
 \index{kF::Core@{kF::Core}!AllocatedTinyVector@{AllocatedTinyVector}}
 \index{AllocatedTinyVector@{AllocatedTinyVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{AllocatedTinyVector}{AllocatedTinyVector}}
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$}
+
+
+
+16 bytes vector with a reduced range The vector must take an allocator and a deallocator functor 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}\label{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}} 
 \index{kF::Core@{kF::Core}!AllocatedVector@{AllocatedVector}}
@@ -163,6 +418,21 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_af1089aee11ddcf7200743aaa46303d08}{
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a871bc78ce110157ca20fc4cccc5c4a27}{k\+F\+::\+Core\+::\+Allocated\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
 
+
+
+Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes The vector must take an allocator and a deallocator functor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}\label{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}} 
 \index{kF::Core@{kF::Core}!Dispatcher@{Dispatcher}}
 \index{Dispatcher@{Dispatcher}!kF::Core@{kF::Core}}
@@ -174,12 +444,34 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a244fb0432908602d5ab4f7d03bda32ab}{
 
 Specialization of dispatcher with trivial functors. 
 
-\mbox{\Hypertarget{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}\label{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}} 
+\mbox{\Hypertarget{namespacek_f_1_1_core_add655c2b8906beafd62a7efd317e182d}\label{namespacek_f_1_1_core_add655c2b8906beafd62a7efd317e182d}} 
 \index{kF::Core@{kF::Core}!FlatString@{FlatString}}
 \index{FlatString@{FlatString}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{FlatString}{FlatString}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{k\+F\+::\+Core\+::\+Flat\+String}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{Flat\+String\+Base}}$<$char$>$}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_add655c2b8906beafd62a7efd317e182d}{k\+F\+::\+Core\+::\+Flat\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{Flat\+String\+Base}}$<$char, std\+::size\+\_\+t$>$}
 
+
+
+8 bytes string using signed char and size\+\_\+t range The string is non-\/null terminated 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}\label{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}} 
+\index{kF::Core@{kF::Core}!FlatStringBase@{FlatStringBase}}
+\index{FlatStringBase@{FlatStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{FlatStringBase}{FlatStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{k\+F\+::\+Core\+::\+Flat\+String\+Base}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$\mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+8 bytes vector that allocates its size and capacity on the heap The string is non-\/null terminated 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & Type of character \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}\label{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}} 
 \index{kF::Core@{kF::Core}!FlatVector@{FlatVector}}
 \index{FlatVector@{FlatVector}!kF::Core@{kF::Core}}
@@ -187,6 +479,47 @@ Specialization of dispatcher with trivial functors.
 {\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{k\+F\+::\+Core\+::\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
 
+
+
+8 bytes vector that allocates its size and capacity on the heap 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{namespacek_f_1_1_core_a35706fc0f34b14c1a6b3687e086f5ba5}\label{namespacek_f_1_1_core_a35706fc0f34b14c1a6b3687e086f5ba5}} 
+\index{kF::Core@{kF::Core}!SmallString@{SmallString}}
+\index{SmallString@{SmallString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SmallString}{SmallString}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_a35706fc0f34b14c1a6b3687e086f5ba5}{k\+F\+::\+Core\+::\+Small\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}{Small\+String\+Base}}$<$char, \mbox{\hyperlink{namespacek_f_1_1_core_a3737452225c53c00a3dc3932a009e952}{Cache\+Line\+Eighth\+Size}}, std\+::size\+\_\+t$>$}
+
+
+
+32 bytes small optimized string (cache of 8 bytes) The string is non-\/null terminated 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}\label{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}} 
+\index{kF::Core@{kF::Core}!SmallStringBase@{SmallStringBase}}
+\index{SmallStringBase@{SmallStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{SmallStringBase}{SmallStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}{k\+F\+::\+Core\+::\+Small\+String\+Base}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$\mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & Type of character \\
+\hline
+{\em Optimized\+Capacity} & Count of element in the optimized cache \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}\label{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}} 
 \index{kF::Core@{kF::Core}!SmallVector@{SmallVector}}
 \index{SmallVector@{SmallVector}!kF::Core@{kF::Core}}
@@ -194,6 +527,19 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{k\+F\+::\+Core\+::\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
 
+
+
+Vector that has its size, capacity and a small cache close to the data pointer. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Optimized\+Capacity} & Count of element in the optimized cache \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}\label{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}} 
 \index{kF::Core@{kF::Core}!SortedAllocatedFlatVector@{SortedAllocatedFlatVector}}
 \index{SortedAllocatedFlatVector@{SortedAllocatedFlatVector}!kF::Core@{kF::Core}}
@@ -201,6 +547,23 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_flat_vector_base}{Internal\+::\+Allocated\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
 
+
+
+8 bytes vector that allocates its size and capacity on the heap The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+{\em Compare} & Compare operator \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}\label{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}} 
 \index{kF::Core@{kF::Core}!SortedAllocatedSmallVector@{SortedAllocatedSmallVector}}
 \index{SortedAllocatedSmallVector@{SortedAllocatedSmallVector}!kF::Core@{kF::Core}}
@@ -208,12 +571,35 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_small_vector_base}{Internal\+::\+Allocated\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
 
+
+
+Vector that has its size, capacity and a small cache close to the data pointer The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Optimized\+Capacity} & Count of element in the optimized cache \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+{\em Compare} & Compare operator \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}\label{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}} 
 \index{kF::Core@{kF::Core}!SortedAllocatedTinyFlatVector@{SortedAllocatedTinyFlatVector}}
 \index{SortedAllocatedTinyFlatVector@{SortedAllocatedTinyFlatVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{SortedAllocatedTinyFlatVector}{SortedAllocatedTinyFlatVector}}
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Tiny\+Flat\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a22bbecb820e5bdb0c690f8043eea9ecf}{Sorted\+Allocated\+Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare$>$}
+
+
+
+8 bytes vector using signed char with a reduced range The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}\label{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}} 
 \index{kF::Core@{kF::Core}!SortedAllocatedTinySmallVector@{SortedAllocatedTinySmallVector}}
@@ -222,12 +608,20 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_af0245adb4a1745d61e753dc4f5fe1ca9}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_ae0eb5f0e2428f0ec3f9c62b790fde5af}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a6712c52c2190eabcf1389128c1437d2d}{Sorted\+Allocated\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare$>$}
 
+
+
+Small optimized vector with a reduced range The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor. 
+
 \mbox{\Hypertarget{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}\label{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}} 
 \index{kF::Core@{kF::Core}!SortedAllocatedTinyVector@{SortedAllocatedTinyVector}}
 \index{SortedAllocatedTinyVector@{SortedAllocatedTinyVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{SortedAllocatedTinyVector}{SortedAllocatedTinyVector}}
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{Sorted\+Allocated\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t, Compare$>$}
+
+
+
+16 bytes vector with a reduced range The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}\label{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}} 
 \index{kF::Core@{kF::Core}!SortedAllocatedVector@{SortedAllocatedVector}}
@@ -236,6 +630,23 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a2a7763ef0b0b70d6da970f8124d8927b}{
 {\footnotesize\ttfamily template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{k\+F\+::\+Core\+::\+Sorted\+Allocated\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_allocated_vector_base}{Internal\+::\+Allocated\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Allocate\+Func, Deallocate\+Func$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
 
+
+
+Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes The vector guarantee that it will be sorted at any given time The vector must take an allocator and a deallocator functor. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Allocate\+Func} & Allocator \\
+\hline
+{\em Deallocate\+Func} & Deallocator \\
+\hline
+{\em Range} & Range of container \\
+\hline
+{\em Compare} & Compare operator \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}\label{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}} 
 \index{kF::Core@{kF::Core}!SortedFlatVector@{SortedFlatVector}}
 \index{SortedFlatVector@{SortedFlatVector}!kF::Core@{kF::Core}}
@@ -243,6 +654,19 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_aa366db7ce42c4be8651a49971c99a1b7}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{k\+F\+::\+Core\+::\+Sorted\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
 
+
+
+8 bytes vector that allocates its size and capacity on the heap The vector guarantee that it will be sorted at any given time 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Range} & Range of container \\
+\hline
+{\em Compare} & Compare operator \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}\label{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}} 
 \index{kF::Core@{kF::Core}!SortedSmallVector@{SortedSmallVector}}
 \index{SortedSmallVector@{SortedSmallVector}!kF::Core@{kF::Core}}
@@ -250,12 +674,31 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{k\+F\+::\+Core\+::\+Sorted\+Small\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_small_vector_base}{Internal\+::\+Small\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}}$>$}
 
+
+
+Vector that has its size, capacity and a small cache close to the data pointer The vector guarantee that it will be sorted at any given time. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Optimized\+Capacity} & Count of element in the optimized cache \\
+\hline
+{\em Range} & Range of container \\
+\hline
+{\em Compare} & Compare operator \\
+\hline
+\end{DoxyTemplParams}
 \mbox{\Hypertarget{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}\label{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}} 
 \index{kF::Core@{kF::Core}!SortedTinyFlatVector@{SortedTinyFlatVector}}
 \index{SortedTinyFlatVector@{SortedTinyFlatVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{SortedTinyFlatVector}{SortedTinyFlatVector}}
 {\footnotesize\ttfamily template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}{k\+F\+::\+Core\+::\+Sorted\+Tiny\+Flat\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a187021a3073707e705800f9bf41d192b}{Sorted\+Flat\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare$>$}
+
+
+
+8 bytes vector using signed char with a reduced range The vector guarantee that it will be sorted at any given time 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}\label{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}} 
 \index{kF::Core@{kF::Core}!SortedTinySmallVector@{SortedTinySmallVector}}
@@ -264,12 +707,20 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a38df1cbee5f11530875724f383ed15e7}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_acdf18cff6e761a027d99fcbf47f017b6}{k\+F\+::\+Core\+::\+Sorted\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a2545bf104317cf4c0cc0eec735d4ba8f}{Sorted\+Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t, Compare$>$}
 
+
+
+Small optimized vector with a reduced range The vector guarantee that it will be sorted at any given time. 
+
 \mbox{\Hypertarget{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}\label{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}} 
 \index{kF::Core@{kF::Core}!SortedTinyVector@{SortedTinyVector}}
 \index{SortedTinyVector@{SortedTinyVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{SortedTinyVector}{SortedTinyVector}}
 {\footnotesize\ttfamily template$<$typename Type , typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}{k\+F\+::\+Core\+::\+Sorted\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{Sorted\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t, Compare$>$}
+
+
+
+16 bytes vector with a reduced range The vector guarantee that it will be sorted at any given time 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}\label{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}} 
 \index{kF::Core@{kF::Core}!SortedVector@{SortedVector}}
@@ -278,6 +729,89 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_ace4e10fdf1d95e98085d52c078654516}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t, typename Compare  = std\+::less$<$\+Type$>$$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{k\+F\+::\+Core\+::\+Sorted\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_sorted_vector_details}{Internal\+::\+Sorted\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, Compare$>$}
 
+
+
+Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes The vector guarantee that it will be sorted at any given time. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Range} & Range of container \\
+\hline
+{\em Compare} & Compare operator \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{namespacek_f_1_1_core_aa7601c7d7ff316dccc5ae14d7134ad10}\label{namespacek_f_1_1_core_aa7601c7d7ff316dccc5ae14d7134ad10}} 
+\index{kF::Core@{kF::Core}!String@{String}}
+\index{String@{String}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{String}{String}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_aa7601c7d7ff316dccc5ae14d7134ad10}{k\+F\+::\+Core\+::\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}{String\+Base}}$<$char, std\+::size\+\_\+t$>$}
+
+
+
+24 bytes string using signed char The string is non-\/null terminated 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}\label{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}} 
+\index{kF::Core@{kF::Core}!StringBase@{StringBase}}
+\index{StringBase@{StringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{StringBase}{StringBase}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}{k\+F\+::\+Core\+::\+String\+Base}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{Internal\+::\+String\+Details}}$<$\mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
+
+
+
+String that has its size and capacity close to the data pointer The string is non-\/null terminated. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & Type of character \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{namespacek_f_1_1_core_aed470f91c055859e8aadf7873ee86507}\label{namespacek_f_1_1_core_aed470f91c055859e8aadf7873ee86507}} 
+\index{kF::Core@{kF::Core}!TinyFlatString@{TinyFlatString}}
+\index{TinyFlatString@{TinyFlatString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinyFlatString}{TinyFlatString}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_aed470f91c055859e8aadf7873ee86507}{k\+F\+::\+Core\+::\+Tiny\+Flat\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{Flat\+String\+Base}}$<$char, std\+::uint32\+\_\+t$>$}
+
+
+
+8 bytes string using signed char with a reduced range The string is non-\/null terminated 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a369cc7880dba7794da862cd1b66531cc}\label{namespacek_f_1_1_core_a369cc7880dba7794da862cd1b66531cc}} 
+\index{kF::Core@{kF::Core}!TinyFlatVector@{TinyFlatVector}}
+\index{TinyFlatVector@{TinyFlatVector}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinyFlatVector}{TinyFlatVector}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_a369cc7880dba7794da862cd1b66531cc}{k\+F\+::\+Core\+::\+Tiny\+Flat\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_flat_vector_base}{Internal\+::\+Flat\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$}
+
+
+
+8 bytes vector using signed char with a reduced range 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ace5513c19298d552839cc1943f57b144}\label{namespacek_f_1_1_core_ace5513c19298d552839cc1943f57b144}} 
+\index{kF::Core@{kF::Core}!TinySmallString@{TinySmallString}}
+\index{TinySmallString@{TinySmallString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinySmallString}{TinySmallString}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_ace5513c19298d552839cc1943f57b144}{k\+F\+::\+Core\+::\+Tiny\+Small\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}{Tiny\+Small\+String\+Base}}$<$char, \mbox{\hyperlink{namespacek_f_1_1_core_a82f6b45cdffb871a4b53b279cb67fd5c}{Cache\+Line\+Quarter\+Size}}$>$}
+
+
+
+32 bytes small optimized string (cache of 16 bytes) with a reduced range The string is non-\/null terminated 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}\label{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}} 
+\index{kF::Core@{kF::Core}!TinySmallStringBase@{TinySmallStringBase}}
+\index{TinySmallStringBase@{TinySmallStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinySmallStringBase}{TinySmallStringBase}}
+{\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}{k\+F\+::\+Core\+::\+Tiny\+Small\+String\+Base}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t$>$}
+
+
+
+Small optimized string with a reduced range The string is non-\/null terminated. 
+
 \mbox{\Hypertarget{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}\label{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}} 
 \index{kF::Core@{kF::Core}!TinySmallVector@{TinySmallVector}}
 \index{TinySmallVector@{TinySmallVector}!kF::Core@{kF::Core}}
@@ -285,12 +819,41 @@ using \mbox{\hyperlink{namespacek_f_1_1_core_a5a150c19fa10df80a89445118b5fca18}{
 {\footnotesize\ttfamily template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a492bd9e9a0db0fa9247ea76ebe4de4b7}{k\+F\+::\+Core\+::\+Tiny\+Small\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a0a3542d788593e97956f44550001f0bc}{Small\+Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t$>$}
 
+
+
+Small optimized vector with a reduced range. 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_a32fef719112e39ca7728610d49e31050}\label{namespacek_f_1_1_core_a32fef719112e39ca7728610d49e31050}} 
+\index{kF::Core@{kF::Core}!TinyString@{TinyString}}
+\index{TinyString@{TinyString}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinyString}{TinyString}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacek_f_1_1_core_a32fef719112e39ca7728610d49e31050}{k\+F\+::\+Core\+::\+Tiny\+String}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_ac2ec1cd44d09b016d9928b688e58fe71}{Tiny\+String\+Base}}$<$char$>$}
+
+
+
+16 bytes string using signed char with a reduced range The string is non-\/null terminated 
+
+\mbox{\Hypertarget{namespacek_f_1_1_core_ac2ec1cd44d09b016d9928b688e58fe71}\label{namespacek_f_1_1_core_ac2ec1cd44d09b016d9928b688e58fe71}} 
+\index{kF::Core@{kF::Core}!TinyStringBase@{TinyStringBase}}
+\index{TinyStringBase@{TinyStringBase}!kF::Core@{kF::Core}}
+\doxysubsubsection{\texorpdfstring{TinyStringBase}{TinyStringBase}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+using \mbox{\hyperlink{namespacek_f_1_1_core_ac2ec1cd44d09b016d9928b688e58fe71}{k\+F\+::\+Core\+::\+Tiny\+String\+Base}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a074c73500607e25e08dd798f447e1af9}{String\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$}
+
+
+
+16 bytes string with a reduced range The string is non-\/null terminated 
+
 \mbox{\Hypertarget{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}\label{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}} 
 \index{kF::Core@{kF::Core}!TinyVector@{TinyVector}}
 \index{TinyVector@{TinyVector}!kF::Core@{kF::Core}}
 \doxysubsubsection{\texorpdfstring{TinyVector}{TinyVector}}
 {\footnotesize\ttfamily template$<$typename Type $>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a9afb4d5554aba95a7ec6819977b10abc}{k\+F\+::\+Core\+::\+Tiny\+Vector}} = typedef \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{Vector}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t$>$}
+
+
+
+16 bytes vector with a reduced range 
 
 \mbox{\Hypertarget{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}\label{namespacek_f_1_1_core_ab87463c4c51236e14eb4caf724d46e98}} 
 \index{kF::Core@{kF::Core}!TrivialDispatcher@{TrivialDispatcher}}
@@ -310,6 +873,17 @@ Specialization of dispatcher with trivial functors.
 {\footnotesize\ttfamily template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ \\
 using \mbox{\hyperlink{namespacek_f_1_1_core_a5a34083f574656e84e168943e48ddcd6}{k\+F\+::\+Core\+::\+Vector}} = typedef \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_details}{Internal\+::\+Vector\+Details}}$<$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_vector_base}{Internal\+::\+Vector\+Base}}$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range$>$}
 
+
+
+Vector that has its size and capacity close to the data pointer With default range (std\+::size\+\_\+t), the vector takes 24 bytes. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Type} & \mbox{\hyperlink{namespacek_f_1_1_core_1_1_internal}{Internal}} type in container \\
+\hline
+{\em Range} & Range of container \\
+\hline
+\end{DoxyTemplParams}
 
 
 \doxysubsection{Variable Documentation}

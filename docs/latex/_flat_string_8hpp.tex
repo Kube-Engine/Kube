@@ -1,10 +1,6 @@
 \hypertarget{_flat_string_8hpp}{}\doxysection{Kube/\+Core/\+Flat\+String.hpp File Reference}
 \label{_flat_string_8hpp}\index{Kube/Core/FlatString.hpp@{Kube/Core/FlatString.hpp}}
-{\ttfamily \#include $<$memory$>$}\newline
-{\ttfamily \#include $<$string\+\_\+view$>$}\newline
-{\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include $<$cstring$>$}\newline
-{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}String\+Details.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Flat\+Vector.\+hpp\char`\"{}}\newline
 Include dependency graph for Flat\+String.\+hpp\+:
 \nopagebreak
@@ -22,11 +18,6 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{_flat_string_8hpp__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+::\+Flat\+String\+Base$<$ Type $>$}}
-\begin{DoxyCompactList}\small\item\em Flat string is pointer-\/sized std\+::string alternative that is N\+OT N\+U\+LL T\+E\+R\+M\+I\+N\+A\+T\+ED The implementation assumes that given character Type will never throw while manipulating it The implementation comes with two weakness \+: Because the size and capacity are stored on the heap if you wish to get the vector size and not lookup after that it is slower due to memory indirection Because the string don\textquotesingle{}t have small optimization, it will perform worse than an std\+::string with short strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,5 +28,9 @@ class \mbox{\hyperlink{classk_f_1_1_core_1_1_flat_string_base}{k\+F\+::\+Core\+:
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespacek_f_1_1_core_a5bae58209dceb86f95befc2a55871133}{k\+F\+::\+Core\+::\+Flat\+String}} = Flat\+String\+Base$<$ char $>$
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_af5c5a4218b93b5ff78e6fb766056ee8f}{k\+F\+::\+Core\+::\+Flat\+String\+Base}} = Internal\+::\+String\+Details$<$ Flat\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_add655c2b8906beafd62a7efd317e182d}{k\+F\+::\+Core\+::\+Flat\+String}} = Flat\+String\+Base$<$ char, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char and size\+\_\+t range The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_aed470f91c055859e8aadf7873ee86507}{k\+F\+::\+Core\+::\+Tiny\+Flat\+String}} = Flat\+String\+Base$<$ char, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char with a reduced range The string is non-\/null terminated \end{DoxyCompactList}\end{DoxyCompactItemize}

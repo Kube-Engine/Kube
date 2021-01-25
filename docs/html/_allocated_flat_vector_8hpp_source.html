@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -78,16 +78,19 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_vector_details_8hpp.html">VectorDetails.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_allocated_flat_vector_base_8hpp.html">AllocatedFlatVectorBase.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html">   11</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f_1_1_core.html">kF::Core</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f_1_1_core.html">kF::Core</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, auto AllocateFunc, auto DeallocateFunc, std::<span class="keywordtype">int</span>egral Range = std::<span class="keywordtype">size_t</span>&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#a12de8ce24a8396324a46bf9fe5db0c51">   14</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">AllocatedFlatVector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails&lt;Internal::AllocatedFlatVectorBase&lt;Type, Range, AllocateFunc, DeallocateFunc&gt;</a>, <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, auto AllocateFunc, auto DeallocateFunc, std::<span class="keywordtype">int</span>egral Range = std::<span class="keywordtype">size_t</span>&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#a12de8ce24a8396324a46bf9fe5db0c51">   23</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">AllocatedFlatVector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails&lt;Internal::AllocatedFlatVectorBase&lt;Type, Range, AllocateFunc, DeallocateFunc&gt;</a>, <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, auto AllocateFunc, auto DeallocateFunc&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#aea6a5e2ae9a3a69e46ffe2a8cd1776da">   28</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">AllocatedTinyFlatVector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">AllocatedFlatVector&lt;Type, AllocateFunc, DeallocateFunc, std::uint32_t&gt;</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_m_p_m_c_queue_8ipp_html_a781fc8e643f4d363e38b43d82c1862d3"><div class="ttname"><a href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a></div><div class="ttdeci">else new cell Type(std::forward&lt; Args &gt;(args)...)</div></div>
 <div class="ttc" id="a_vector_details_8hpp_html"><div class="ttname"><a href="_vector_details_8hpp.html">VectorDetails.hpp</a></div></div>
 <div class="ttc" id="aclassk_f_1_1_core_1_1_internal_1_1_vector_details_html"><div class="ttname"><a href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">kF::Core::Internal::VectorDetails</a></div><div class="ttdef"><b>Definition:</b> VectorDetails.hpp:23</div></div>
-<div class="ttc" id="anamespacek_f_1_1_core_html"><div class="ttname"><a href="namespacek_f_1_1_core.html">kF::Core</a></div><div class="ttdef"><b>Definition:</b> AllocatedFlatVector.hpp:12</div></div>
+<div class="ttc" id="anamespacek_f_1_1_core_html"><div class="ttname"><a href="namespacek_f_1_1_core.html">kF::Core</a></div><div class="ttdef"><b>Definition:</b> AllocatedFlatString.hpp:12</div></div>
 <div class="ttc" id="a_allocated_flat_vector_base_8hpp_html"><div class="ttname"><a href="_allocated_flat_vector_base_8hpp.html">AllocatedFlatVectorBase.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

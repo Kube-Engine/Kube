@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -81,7 +81,7 @@ $(function() {
 Include dependency graph for AllocatedSmallVector.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_allocated_small_vector_8hpp__incl.png" border="0" usemap="#a_kube_2_core_2_allocated_small_vector_8hpp" alt=""/></div>
-<map name="_kube_2_core_2_allocated_small_vector_8hpp" id="a_kube_2_core_2_allocated_small_vector_8hpp">
+<map name="_kube_2_core_2_allocated_small_vector_8hpp" id="_kube_2_core_2_allocated_small_vector_8hpp">
 <area shape="rect" title=" " alt="" coords="369,5,543,47"/>
 <area shape="rect" href="_vector_details_8hpp.html" title=" " alt="" coords="300,95,425,121"/>
 <area shape="rect" href="_allocated_small_vector_base_8hpp.html" title=" " alt="" coords="525,95,726,121"/>
@@ -108,8 +108,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_allocated_small_vector_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_core_2_allocated_small_vector_8hppdep" alt=""/></div>
 <map name="_kube_2_core_2_allocated_small_vector_8hppdep" id="a_kube_2_core_2_allocated_small_vector_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,180,47"/>
-<area shape="rect" href="_a_s_t_8hpp.html" title=" " alt="" coords="8,95,177,121"/>
+<area shape="rect" title=" " alt="" coords="103,5,277,47"/>
+<area shape="rect" href="_allocated_small_string_8hpp.html" title=" " alt="" coords="5,95,180,136"/>
+<area shape="rect" href="_a_s_t_8hpp.html" title=" " alt="" coords="204,102,373,129"/>
 </map>
 </div>
 </div>
@@ -126,9 +127,11 @@ Namespaces</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a3a034302506ea04126325184782373e6"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </td></tr>
 <tr class="memitem:a3a034302506ea04126325184782373e6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a3a034302506ea04126325184782373e6">kF::Core::AllocatedSmallVector</a> = Internal::VectorDetails&lt; Internal::AllocatedSmallVectorBase&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, Range &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, <a class="el" href="_s_p_s_c_queue_8ipp.html#a930920b2bc42824a5c03be681830f4b2">true</a> &gt;</td></tr>
+<tr class="memdesc:a3a034302506ea04126325184782373e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector that has its size, capacity and a small cache close to the data pointer The vector must take an allocator and a deallocator functor.  <a href="namespacek_f_1_1_core.html#a3a034302506ea04126325184782373e6">More...</a><br /></td></tr>
 <tr class="separator:a3a034302506ea04126325184782373e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36b2fa8958efee5996c310b24653c662"><td class="memTemplParams" colspan="2">template&lt;typename Type , std::size_t OptimizedCapacity, auto AllocateFunc, auto DeallocateFunc&gt; </td></tr>
 <tr class="memitem:a36b2fa8958efee5996c310b24653c662"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a36b2fa8958efee5996c310b24653c662">kF::Core::AllocatedTinySmallVector</a> = AllocatedSmallVector&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, OptimizedCapacity, AllocateFunc, DeallocateFunc, std::uint32_t &gt;</td></tr>
+<tr class="memdesc:a36b2fa8958efee5996c310b24653c662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small optimized vector with a reduced range The vector must take an allocator and a deallocator functor.  <a href="namespacek_f_1_1_core.html#a36b2fa8958efee5996c310b24653c662">More...</a><br /></td></tr>
 <tr class="separator:a36b2fa8958efee5996c310b24653c662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

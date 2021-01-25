@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -81,7 +81,7 @@ $(function() {
 Include dependency graph for AllocatedVector.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_allocated_vector_8hpp__incl.png" border="0" usemap="#a_kube_2_core_2_allocated_vector_8hpp" alt=""/></div>
-<map name="_kube_2_core_2_allocated_vector_8hpp" id="a_kube_2_core_2_allocated_vector_8hpp">
+<map name="_kube_2_core_2_allocated_vector_8hpp" id="_kube_2_core_2_allocated_vector_8hpp">
 <area shape="rect" title=" " alt="" coords="346,5,550,32"/>
 <area shape="rect" href="_vector_details_8hpp.html" title=" " alt="" coords="300,80,425,107"/>
 <area shape="rect" href="_allocated_vector_base_8hpp.html" title=" " alt="" coords="524,80,692,107"/>
@@ -103,6 +103,15 @@ Include dependency graph for AllocatedVector.hpp:</div>
 <area shape="rect" href="_vector_base_8ipp.html" title=" " alt="" coords="629,229,739,256"/>
 </map>
 </div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="_allocated_vector_8hpp__dep__incl.png" border="0" usemap="#a_kube_2_core_2_allocated_vector_8hppdep" alt=""/></div>
+<map name="_kube_2_core_2_allocated_vector_8hppdep" id="a_kube_2_core_2_allocated_vector_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,209,32"/>
+<area shape="rect" href="_allocated_string_8hpp.html" title=" " alt="" coords="7,80,208,107"/>
+</map>
+</div>
 </div>
 <p><a href="_allocated_vector_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -117,9 +126,11 @@ Namespaces</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a871bc78ce110157ca20fc4cccc5c4a27"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc, std::integral Range = std::size_t&gt; </td></tr>
 <tr class="memitem:a871bc78ce110157ca20fc4cccc5c4a27"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#a871bc78ce110157ca20fc4cccc5c4a27">kF::Core::AllocatedVector</a> = Internal::VectorDetails&lt; Internal::AllocatedVectorBase&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range, AllocateFunc, DeallocateFunc &gt;, <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range &gt;</td></tr>
+<tr class="memdesc:a871bc78ce110157ca20fc4cccc5c4a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector that has its size and capacity close to the data pointer With default range (std::size_t), the vector takes 24 bytes The vector must take an allocator and a deallocator functor.  <a href="namespacek_f_1_1_core.html#a871bc78ce110157ca20fc4cccc5c4a27">More...</a><br /></td></tr>
 <tr class="separator:a871bc78ce110157ca20fc4cccc5c4a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1089aee11ddcf7200743aaa46303d08"><td class="memTemplParams" colspan="2">template&lt;typename Type , auto AllocateFunc, auto DeallocateFunc&gt; </td></tr>
 <tr class="memitem:af1089aee11ddcf7200743aaa46303d08"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacek_f_1_1_core.html#af1089aee11ddcf7200743aaa46303d08">kF::Core::AllocatedTinyVector</a> = Vector&lt; <a class="el" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, std::uint32_t &gt;</td></tr>
+<tr class="memdesc:af1089aee11ddcf7200743aaa46303d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bytes vector with a reduced range The vector must take an allocator and a deallocator functor  <a href="namespacek_f_1_1_core.html#af1089aee11ddcf7200743aaa46303d08">More...</a><br /></td></tr>
 <tr class="separator:af1089aee11ddcf7200743aaa46303d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

@@ -1,0 +1,30 @@
+\hypertarget{_small_string_8hpp}{}\doxysection{Kube/\+Core/\+Small\+String.hpp File Reference}
+\label{_small_string_8hpp}\index{Kube/Core/SmallString.hpp@{Kube/Core/SmallString.hpp}}
+{\ttfamily \#include \char`\"{}Small\+Vector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}String\+Details.\+hpp\char`\"{}}\newline
+Include dependency graph for Small\+String.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_small_string_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac349e835df77701db708973bd48cfa94}{k\+F\+::\+Core\+::\+Small\+String\+Base}} = Internal\+::\+String\+Details$<$ Small\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ae4de30a2b4d11c42a6e9a9ec55544aea}{k\+F\+::\+Core\+::\+Tiny\+Small\+String\+Base}} = Small\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Small optimized string with a reduced range The string is non-\/null terminated. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_a35706fc0f34b14c1a6b3687e086f5ba5}{k\+F\+::\+Core\+::\+Small\+String}} = Small\+String\+Base$<$ char, Cache\+Line\+Eighth\+Size, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 8 bytes) The string is non-\/null terminated \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacek_f_1_1_core_ace5513c19298d552839cc1943f57b144}{k\+F\+::\+Core\+::\+Tiny\+Small\+String}} = Tiny\+Small\+String\+Base$<$ char, Cache\+Line\+Quarter\+Size $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 16 bytes) with a reduced range The string is non-\/null terminated \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\hypertarget{_allocated_small_string_8hpp}{}\doxysection{Kube/\+Core/\+Allocated\+Small\+String.hpp File Reference}
+\label{_allocated_small_string_8hpp}\index{Kube/Core/AllocatedSmallString.hpp@{Kube/Core/AllocatedSmallString.hpp}}
+{\ttfamily \#include \char`\"{}Allocated\+Small\+Vector.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}String\+Details.\+hpp\char`\"{}}\newline
+Include dependency graph for Allocated\+Small\+String.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_allocated_small_string_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac3f863353b36c1fa1fc2581995fb1ae1}{k\+F\+::\+Core\+::\+Allocated\+Small\+String\+Base}} = Internal\+::\+String\+Details$<$ Allocated\+Small\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated The string must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aea0b910dced332632068b6060e866ed0}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+String\+Base}} = Allocated\+Small\+String\+Base$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Small optimized string with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a98a2ac3890558735215fcbc860724784}{k\+F\+::\+Core\+::\+Allocated\+Small\+String}} = Allocated\+Small\+String\+Base$<$ char, Cache\+Line\+Eighth\+Size, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 8 bytes) The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_aa7547a542ede3e1032b93903f6f2053d}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+String}} = Allocated\+Tiny\+Small\+String\+Base$<$ char, Cache\+Line\+Quarter\+Size, Allocate\+Func, Deallocate\+Func $>$
+\begin{DoxyCompactList}\small\item\em 32 bytes small optimized string (cache of 16 bytes) with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\end{DoxyCompactItemize}

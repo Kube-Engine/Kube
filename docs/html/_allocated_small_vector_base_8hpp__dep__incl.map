@@ -1,6 +1,7 @@
 <map id="Kube/Core/AllocatedSmallVectorBase.hpp" name="Kube/Core/AllocatedSmallVectorBase.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="105,5,280,47"/>
-<area shape="rect" id="node2" href="$_allocated_small_vector_8hpp.html" title=" " alt="" coords="5,95,180,136"/>
-<area shape="rect" id="node4" href="$_sorted_allocated_small_vector_8hpp.html" title=" " alt="" coords="204,95,384,136"/>
-<area shape="rect" id="node3" href="$_a_s_t_8hpp.html" title=" " alt="" coords="8,184,177,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="203,5,377,47"/>
+<area shape="rect" id="node2" href="$_allocated_small_vector_8hpp.html" title=" " alt="" coords="103,95,277,136"/>
+<area shape="rect" id="node5" href="$_sorted_allocated_small_vector_8hpp.html" title=" " alt="" coords="301,95,481,136"/>
+<area shape="rect" id="node3" href="$_allocated_small_string_8hpp.html" title=" " alt="" coords="5,184,180,225"/>
+<area shape="rect" id="node4" href="$_a_s_t_8hpp.html" title=" " alt="" coords="204,191,373,218"/>
 </map>

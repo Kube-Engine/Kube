@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="kube.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kube Framework
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">The next generation game engine</div>
   </td>
@@ -80,17 +80,17 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacek_f_1_1_core.html">kF::Core</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, std::<span class="keywordtype">int</span>egral Range = std::<span class="keywordtype">size_t</span>&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#a5a34083f574656e84e168943e48ddcd6">   14</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Vector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails&lt;Internal::VectorBase&lt;Type, Range&gt;</a>, <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#a9afb4d5554aba95a7ec6819977b10abc">   17</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">TinyVector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Vector&lt;Type, std::uint32_t&gt;</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, std::<span class="keywordtype">int</span>egral Range = std::<span class="keywordtype">size_t</span>&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#a5a34083f574656e84e168943e48ddcd6">   21</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Vector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Internal::VectorDetails&lt;Internal::VectorBase&lt;Type, Range&gt;</a>, <a class="code" href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a>, Range&gt;;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacek_f_1_1_core.html#a9afb4d5554aba95a7ec6819977b10abc">   25</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">TinyVector</a> = <a class="code" href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">Vector&lt;Type, std::uint32_t&gt;</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_m_p_m_c_queue_8ipp_html_a781fc8e643f4d363e38b43d82c1862d3"><div class="ttname"><a href="_m_p_m_c_queue_8ipp.html#a781fc8e643f4d363e38b43d82c1862d3">Type</a></div><div class="ttdeci">else new cell Type(std::forward&lt; Args &gt;(args)...)</div></div>
 <div class="ttc" id="a_vector_details_8hpp_html"><div class="ttname"><a href="_vector_details_8hpp.html">VectorDetails.hpp</a></div></div>
 <div class="ttc" id="aclassk_f_1_1_core_1_1_internal_1_1_vector_details_html"><div class="ttname"><a href="classk_f_1_1_core_1_1_internal_1_1_vector_details.html">kF::Core::Internal::VectorDetails</a></div><div class="ttdef"><b>Definition:</b> VectorDetails.hpp:23</div></div>
-<div class="ttc" id="anamespacek_f_1_1_core_html"><div class="ttname"><a href="namespacek_f_1_1_core.html">kF::Core</a></div><div class="ttdef"><b>Definition:</b> AllocatedFlatVector.hpp:12</div></div>
+<div class="ttc" id="anamespacek_f_1_1_core_html"><div class="ttname"><a href="namespacek_f_1_1_core.html">kF::Core</a></div><div class="ttdef"><b>Definition:</b> AllocatedFlatString.hpp:12</div></div>
 <div class="ttc" id="a_vector_base_8hpp_html"><div class="ttname"><a href="_vector_base_8hpp.html">VectorBase.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

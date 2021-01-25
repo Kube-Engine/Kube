@@ -1,0 +1,330 @@
+\hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details}{}\doxysection{kF\+::Core\+::Internal\+::String\+Details$<$ Base, Type, Range $>$ Class Template Reference}
+\label{classk_f_1_1_core_1_1_internal_1_1_string_details}\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+
+
+String details bring facilities to manipulate a vector as a string.  
+
+
+
+
+{\ttfamily \#include $<$String\+Details.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a39705d50b7bfa71f85941099fca81fdd}{String\+Details}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a0b6ebe326bf8ed17cc3702a43d13b040}{String\+Details}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a9adbf80218e3cd24cb9792fb10bc6454}{String\+Details}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a893444f389d1c9621d9e8608b9784136}{String\+Details}} (const char $\ast$const cstring) noexcept
+\begin{DoxyCompactList}\small\item\em C\+String constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ab6877719b0f116f99315915d25e763b2}{String\+Details}} (const char $\ast$const cstring, const std\+::size\+\_\+t length) noexcept
+\begin{DoxyCompactList}\small\item\em C\+String length constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_aa0a2581cd87e12a69a864183fec4772b}{String\+Details}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a4becad379093ef944e5d58cbdf7295a4}{String\+Details}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string\+\_\+view constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_aa7d997db3cf92326bed2a1d4e010dc6c}{$\sim$\+String\+Details}} (void) noexcept=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ab51eaf74d437db5f850a5f4da024b7cc}{operator=}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a7caafac2cdda495d2d5aab94dbea7f53}{operator=}} (\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a336e50acb065cd2bc1d09db2a040aea5}{operator=}} (const char $\ast$const cstring) noexcept
+\begin{DoxyCompactList}\small\item\em cstring assignment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ab3d23802396de559689faf5af2d1baef}{operator=}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string assignment \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ac63b4ac0c7186a10d62b3dc30184be8f}{operator=}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string\+\_\+view assignment \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a737fce72af7e8e2a0a3c3fc1916add83}{operator==}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ae24af09af7dc989f6b29f8b8d2114a49}{operator!=}} (const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} \&other) const noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_acbce3d6e12c957fbdfdc1c3ad4b014e1}{operator==}} (const char $\ast$const cstring) const noexcept
+\begin{DoxyCompactList}\small\item\em cstring comparison operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a7f219c6b63800d44dc5d0599fcdd9c69}{operator!=}} (const char $\ast$const cstring) const noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a8994bc205b867e058a4d5fefa698862a}{operator==}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string comparison operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ae8dc5bc362807cd478d5f96200f3fa8f}{operator!=}} (const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_acca27b610d18e48d440773449927d733}{operator==}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em std\+::string\+\_\+view comparison operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a8d6ec50e3b58ea57749548dcd341f7a3}{operator!=}} (const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&other) const noexcept
+\item 
+std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_aa10027dcb01739fb9814d5061322ccd0}{to\+Std\+View}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get a std\+::string from the object. \end{DoxyCompactList}\item 
+std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_ad69cad7f8271a1f4ca61ee9984a03871}{to\+Std\+String}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get a std\+::string\+\_\+view of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details_a582b5337ab0ab4821298743c3fb89126}{Safe\+Strlen}} (const char $\ast$const cstring) noexcept
+\begin{DoxyCompactList}\small\item\em Strlen but with null cstring check. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Base, typename Type, std\+::integral Range$>$\newline
+class k\+F\+::\+Core\+::\+Internal\+::\+String\+Details$<$ Base, Type, Range $>$}
+
+String details bring facilities to manipulate a vector as a string. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a39705d50b7bfa71f85941099fca81fdd}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a39705d50b7bfa71f85941099fca81fdd}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a0b6ebe326bf8ed17cc3702a43d13b040}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a0b6ebe326bf8ed17cc3702a43d13b040}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a9adbf80218e3cd24cb9792fb10bc6454}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a9adbf80218e3cd24cb9792fb10bc6454}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a893444f389d1c9621d9e8608b9784136}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a893444f389d1c9621d9e8608b9784136}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+C\+String constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ab6877719b0f116f99315915d25e763b2}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ab6877719b0f116f99315915d25e763b2}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring,  }\item[{const std\+::size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+C\+String length constructor. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_aa0a2581cd87e12a69a864183fec4772b}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_aa0a2581cd87e12a69a864183fec4772b}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string constructor 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a4becad379093ef944e5d58cbdf7295a4}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a4becad379093ef944e5d58cbdf7295a4}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!StringDetails@{StringDetails}}
+\index{StringDetails@{StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{StringDetails()}{StringDetails()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string\+\_\+view constructor 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_aa7d997db3cf92326bed2a1d4e010dc6c}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_aa7d997db3cf92326bed2a1d4e010dc6c}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!````~StringDetails@{$\sim$StringDetails}}
+\index{````~StringDetails@{$\sim$StringDetails}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$StringDetails()}{~StringDetails()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::$\sim$\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}} (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a7f219c6b63800d44dc5d0599fcdd9c69}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a7f219c6b63800d44dc5d0599fcdd9c69}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ae8dc5bc362807cd478d5f96200f3fa8f}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ae8dc5bc362807cd478d5f96200f3fa8f}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a8d6ec50e3b58ea57749548dcd341f7a3}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a8d6ec50e3b58ea57749548dcd341f7a3}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ae24af09af7dc989f6b29f8b8d2114a49}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ae24af09af7dc989f6b29f8b8d2114a49}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a336e50acb065cd2bc1d09db2a040aea5}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a336e50acb065cd2bc1d09db2a040aea5}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator= (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+cstring assignment 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ab3d23802396de559689faf5af2d1baef}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ab3d23802396de559689faf5af2d1baef}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string assignment 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ac63b4ac0c7186a10d62b3dc30184be8f}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ac63b4ac0c7186a10d62b3dc30184be8f}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string\+\_\+view assignment 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ab51eaf74d437db5f850a5f4da024b7cc}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ab51eaf74d437db5f850a5f4da024b7cc}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Copy assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a7caafac2cdda495d2d5aab94dbea7f53}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a7caafac2cdda495d2d5aab94dbea7f53}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}\& \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move assignment. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_acbce3d6e12c957fbdfdc1c3ad4b014e1}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_acbce3d6e12c957fbdfdc1c3ad4b014e1}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+cstring comparison operator 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a8994bc205b867e058a4d5fefa698862a}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a8994bc205b867e058a4d5fefa698862a}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string comparison operator 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_acca27b610d18e48d440773449927d733}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_acca27b610d18e48d440773449927d733}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator== (\begin{DoxyParamCaption}\item[{const std\+::basic\+\_\+string\+\_\+view$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}} $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+std\+::string\+\_\+view comparison operator 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a737fce72af7e8e2a0a3c3fc1916add83}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a737fce72af7e8e2a0a3c3fc1916add83}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+bool \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Comparison operator. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_a582b5337ab0ab4821298743c3fb89126}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_a582b5337ab0ab4821298743c3fb89126}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!SafeStrlen@{SafeStrlen}}
+\index{SafeStrlen@{SafeStrlen}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{SafeStrlen()}{SafeStrlen()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+static std\+::size\+\_\+t \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::Safe\+Strlen (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{cstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Strlen but with null cstring check. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_ad69cad7f8271a1f4ca61ee9984a03871}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_ad69cad7f8271a1f4ca61ee9984a03871}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!toStdString@{toStdString}}
+\index{toStdString@{toStdString}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{toStdString()}{toStdString()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+std\+::basic\+\_\+string\+\_\+view$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::to\+Std\+String (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get a std\+::string\+\_\+view of the object. 
+
+\mbox{\Hypertarget{classk_f_1_1_core_1_1_internal_1_1_string_details_aa10027dcb01739fb9814d5061322ccd0}\label{classk_f_1_1_core_1_1_internal_1_1_string_details_aa10027dcb01739fb9814d5061322ccd0}} 
+\index{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}!toStdView@{toStdView}}
+\index{toStdView@{toStdView}!kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$@{kF::Core::Internal::StringDetails$<$ Base, Type, Range $>$}}
+\doxysubsubsection{\texorpdfstring{toStdView()}{toStdView()}}
+{\footnotesize\ttfamily template$<$typename Base , typename Type , std\+::integral Range$>$ \\
+std\+::basic\+\_\+string$<$\mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}$>$ \mbox{\hyperlink{classk_f_1_1_core_1_1_internal_1_1_string_details}{k\+F\+::\+Core\+::\+Internal\+::\+String\+Details}}$<$ Base, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$\+::to\+Std\+View (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get a std\+::string from the object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kube/\+Core/\mbox{\hyperlink{_string_details_8hpp}{String\+Details.\+hpp}}\end{DoxyCompactItemize}

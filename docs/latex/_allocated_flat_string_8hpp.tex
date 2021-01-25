@@ -1,0 +1,28 @@
+\hypertarget{_allocated_flat_string_8hpp}{}\doxysection{Kube/\+Core/\+Allocated\+Flat\+String.hpp File Reference}
+\label{_allocated_flat_string_8hpp}\index{Kube/Core/AllocatedFlatString.hpp@{Kube/Core/AllocatedFlatString.hpp}}
+{\ttfamily \#include \char`\"{}Flat\+String.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Allocated\+Flat\+Vector.\+hpp\char`\"{}}\newline
+Include dependency graph for Allocated\+Flat\+String.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_allocated_flat_string_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a97cfe138ca5885b7348f0f6f3a6cc8a4}{k\+F\+::\+Core\+::\+Allocated\+Flat\+String\+Base}} = Internal\+::\+String\+Details$<$ Allocated\+Flat\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a63bb2e6ee1d5de03492baa02b4805581}{k\+F\+::\+Core\+::\+Allocated\+Flat\+String}} = Allocated\+Flat\+String\+Base$<$ char, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char and size\+\_\+t range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a98189209bf825328ce1b7905c80555fb}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Flat\+String}} = Allocated\+Flat\+String\+Base$<$ char, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes string using signed char with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\end{DoxyCompactItemize}

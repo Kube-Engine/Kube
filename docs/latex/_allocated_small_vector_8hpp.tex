@@ -2,8 +2,7 @@
 \label{_allocated_small_vector_8hpp}\index{Kube/Core/AllocatedSmallVector.hpp@{Kube/Core/AllocatedSmallVector.hpp}}
 {\ttfamily \#include \char`\"{}Vector\+Details.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Allocated\+Small\+Vector\+Base.\+hpp\char`\"{}}\newline
-Include dependency graph for Allocated\+Small\+Vector.\+hpp\+:
-\nopagebreak
+Include dependency graph for Allocated\+Small\+Vector.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +14,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=211pt]{_allocated_small_vector_8hpp__dep__incl}
+\includegraphics[width=350pt]{_allocated_small_vector_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Namespaces}
@@ -29,6 +28,6 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a3a034302506ea04126325184782373e6}{k\+F\+::\+Core\+::\+Allocated\+Small\+Vector}} = Internal\+::\+Vector\+Details$<$ Internal\+::\+Allocated\+Small\+Vector\+Base$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range, \mbox{\hyperlink{_s_p_s_c_queue_8ipp_a930920b2bc42824a5c03be681830f4b2}{true}} $>$
-\item 
+\begin{DoxyCompactList}\small\item\em Vector that has its size, capacity and a small cache close to the data pointer The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Type , std\+::size\+\_\+t Optimized\+Capacity, auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a36b2fa8958efee5996c310b24653c662}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+Small\+Vector}} = Allocated\+Small\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Optimized\+Capacity, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Small optimized vector with a reduced range The vector must take an allocator and a deallocator functor. \end{DoxyCompactList}\end{DoxyCompactItemize}

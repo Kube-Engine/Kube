@@ -2,8 +2,7 @@
 \label{_flat_vector_8hpp}\index{Kube/Core/FlatVector.hpp@{Kube/Core/FlatVector.hpp}}
 {\ttfamily \#include \char`\"{}Vector\+Details.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Flat\+Vector\+Base.\+hpp\char`\"{}}\newline
-Include dependency graph for Flat\+Vector.\+hpp\+:
-\nopagebreak
+Include dependency graph for Flat\+Vector.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,4 +28,6 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename Type , std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a301d08d1cc73382fcecd499df46b58a1}{k\+F\+::\+Core\+::\+Flat\+Vector}} = Internal\+::\+Vector\+Details$<$ Internal\+::\+Flat\+Vector\+Base$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 8 bytes vector that allocates its size and capacity on the heap \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a369cc7880dba7794da862cd1b66531cc}{k\+F\+::\+Core\+::\+Tiny\+Flat\+Vector}} = Internal\+::\+Vector\+Details$<$ Internal\+::\+Flat\+Vector\+Base$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 8 bytes vector using signed char with a reduced range \end{DoxyCompactList}\end{DoxyCompactItemize}

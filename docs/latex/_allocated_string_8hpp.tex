@@ -1,0 +1,30 @@
+\hypertarget{_allocated_string_8hpp}{}\doxysection{Kube/\+Core/\+Allocated\+String.hpp File Reference}
+\label{_allocated_string_8hpp}\index{Kube/Core/AllocatedString.hpp@{Kube/Core/AllocatedString.hpp}}
+{\ttfamily \#include \char`\"{}Vector\+Details.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Allocated\+Vector.\+hpp\char`\"{}}\newline
+Include dependency graph for Allocated\+String.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_allocated_string_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacek_f}{kF}}
+\item 
+ \mbox{\hyperlink{namespacek_f_1_1_core}{k\+F\+::\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func, std\+::integral Range = std\+::size\+\_\+t$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a0ee9b1eb25a550edac0b9c10811c994d}{k\+F\+::\+Core\+::\+Allocated\+String\+Base}} = Internal\+::\+String\+Details$<$ Allocated\+Vector$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, Range $>$, \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Range $>$
+\begin{DoxyCompactList}\small\item\em String that has its size, capacity and a small cache close to the data pointer The string is non-\/null terminated The string must take an allocator and a deallocator functor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type , auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac960d04c3763f400e870a8e6796b720f}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+String\+Base}} = Allocated\+String\+Base$<$ \mbox{\hyperlink{_m_p_m_c_queue_8ipp_a781fc8e643f4d363e38b43d82c1862d3}{Type}}, Allocate\+Func, Deallocate\+Func, std\+::uint32\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 16 bytes String with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_a484ea81896183b1ffea440bcfa1f2a73}{k\+F\+::\+Core\+::\+Allocated\+String}} = Allocated\+String\+Base$<$ char, Allocate\+Func, Deallocate\+Func, std\+::size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em 24 bytes string The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\item 
+{\footnotesize template$<$auto Allocate\+Func, auto Deallocate\+Func$>$ }\\using \mbox{\hyperlink{namespacek_f_1_1_core_ac15206cd1515bfaa88076f791053f41e}{k\+F\+::\+Core\+::\+Allocated\+Tiny\+String}} = Allocated\+Tiny\+String\+Base$<$ char, Allocate\+Func, Deallocate\+Func $>$
+\begin{DoxyCompactList}\small\item\em 16 bytes string with a reduced range The string is non-\/null terminated The string must take an allocator and a deallocator functor \end{DoxyCompactList}\end{DoxyCompactItemize}
