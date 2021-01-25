@@ -15,6 +15,11 @@ The philosophy keywords of the framework are:
 * Explicitness: the codebase is as readable and as explicit as possible
 * Data: Because of modern CPU weakness in memory IO, the best way to crank the speed up is though smart data modeling
 
+### Mindset
+* Kube's primary goal is to help progammers make **data-oriented** and **efficient** softwares.
+* Kube **does not** claim to have the quickest workflow: good software takes time to make.
+* Kube is **hard to learn** as you are required to understand the concepts behind its modules; but **easy to master** thanks to its low abstraction layers count.
+
 ## Modules
 Kube framework is divided into modules that encapsulate specific parts of the engine.
 |Name|Description|Version|Test Coverage|
