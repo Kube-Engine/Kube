@@ -37,10 +37,10 @@ debug:
 
 # General tests rules
 tests:
-	$(MAKE) release CMAKE_ARGS+=-DKF_TESTS=TRUE
+	$(MAKE) release CMAKE_ARGS+=-DKF_TESTS=ON
 
 tests_debug:
-	$(MAKE) debug CMAKE_ARGS+=-DKF_TESTS=TRUE
+	$(MAKE) debug CMAKE_ARGS+=-DKF_TESTS=ON
 
 run_tests: tests
 	ninja -C $(RELEASE_DIR) test
@@ -67,21 +67,21 @@ run_coverage_extract: coverage
 
 # General benchmarks rules
 benchmarks:
-	$(MAKE) release CMAKE_ARGS+=-DKF_BENCHMARKS=TRUE
+	$(MAKE) release CMAKE_ARGS+=-DKF_BENCHMARKS=ON
 
 benchmarks_debug:
-	$(MAKE) debug CMAKE_ARGS+=-DKF_BENCHMARKS=TRUE
+	$(MAKE) debug CMAKE_ARGS+=-DKF_BENCHMARKS=ON
 
 # Examples rules
 examples:
-	$(MAKE) release CMAKE_ARGS+=-DKF_EXAMPLES=TRUE
+	$(MAKE) release CMAKE_ARGS+=-DKF_EXAMPLES=ON
 
 examples_debug:
-	$(MAKE) debug CMAKE_ARGS+=-DKF_EXAMPLES=TRUE
+	$(MAKE) debug CMAKE_ARGS+=-DKF_EXAMPLES=ON
 
 
 # Audio
-AUDIO_ARGS = CMAKE_ARGS+=-DKF_AUDIO=TRUE
+AUDIO_ARGS = CMAKE_ARGS+=-DKF_AUDIO=ON
 audio:
 	$(MAKE) release $(AUDIO_ARGS)
 
@@ -114,7 +114,7 @@ audio_benchmarks_debug:
 
 
 # App
-APP_ARGS = CMAKE_ARGS+=-DKF_APP=TRUE
+APP_ARGS = CMAKE_ARGS+=-DKF_APP=ON
 app:
 	$(MAKE) release $(APP_ARGS)
 
@@ -147,7 +147,7 @@ app_benchmarks_debug:
 
 
 # Core
-CORE_ARGS = CMAKE_ARGS+=-DKF_CORE=TRUE
+CORE_ARGS = CMAKE_ARGS+=-DKF_CORE=ON
 core:
 	$(MAKE) release $(CORE_ARGS)
 
@@ -180,7 +180,7 @@ core_benchmarks_debug:
 
 
 # ECS
-ECS_ARGS = CMAKE_ARGS+=-DKF_ECS=TRUE
+ECS_ARGS = CMAKE_ARGS+=-DKF_ECS=ON
 ecs:
 	$(MAKE) release $(ECS_ARGS)
 
@@ -213,7 +213,7 @@ ecs_benchmarks_debug:
 
 
 # Graphics
-GRAPHICS_ARGS = CMAKE_ARGS+=-DKF_GRAPHICS=TRUE
+GRAPHICS_ARGS = CMAKE_ARGS+=-DKF_GRAPHICS=ON
 graphics:
 	$(MAKE) release $(GRAPHICS_ARGS)
 
@@ -246,7 +246,7 @@ graphics_benchmarks_debug:
 
 
 # Interpreter
-INTERPRETER_ARGS = CMAKE_ARGS+=-DKF_INTERPRETER=TRUE
+INTERPRETER_ARGS = CMAKE_ARGS+=-DKF_INTERPRETER=ON
 interpreter:
 	$(MAKE) release $(INTERPRETER_ARGS)
 
@@ -279,7 +279,7 @@ interpreter_benchmarks_debug:
 
 
 # Meta
-META_ARGS = CMAKE_ARGS+=-DKF_META=TRUE
+META_ARGS = CMAKE_ARGS+=-DKF_META=ON
 meta:
 	$(MAKE) release $(META_ARGS)
 
@@ -312,7 +312,7 @@ meta_benchmarks_debug:
 
 
 # Object
-OBJECT_ARGS = CMAKE_ARGS+=-DKF_OBJECT=TRUE
+OBJECT_ARGS = CMAKE_ARGS+=-DKF_OBJECT=ON
 object:
 	$(MAKE) release $(OBJECT_ARGS)
 
@@ -344,7 +344,7 @@ object_benchmarks_debug:
 	$(MAKE) benchmarks_debug $(OBJECT_ARGS)
 
 # UI
-UI_ARGS = CMAKE_ARGS+=-DKF_UI=TRUE
+UI_ARGS = CMAKE_ARGS+=-DKF_UI=ON
 ui:
 	$(MAKE) release $(UI_ARGS)
 
@@ -377,7 +377,7 @@ ui_benchmarks_debug:
 
 
 # Flow
-FLOW_ARGS = CMAKE_ARGS+=-DKF_FLOW=TRUE
+FLOW_ARGS = CMAKE_ARGS+=-DKF_FLOW=ON
 flow:
 	$(MAKE) release $(FLOW_ARGS)
 
@@ -409,7 +409,7 @@ flow_benchmarks_debug:
 	$(MAKE) benchmarks_debug $(FLOW_ARGS)
 
 # Voxel
-VOXEL_ARGS = CMAKE_ARGS+=-DKF_VOXEL=TRUE
+VOXEL_ARGS = CMAKE_ARGS+=-DKF_VOXEL=ON
 voxel:
 	$(MAKE) release $(VOXEL_ARGS)
 
@@ -442,7 +442,7 @@ voxel_benchmarks_debug:
 
 
 # Widgets
-WIDGETS_ARGS = CMAKE_ARGS+=-DKF_WIDGETS=TRUE
+WIDGETS_ARGS = CMAKE_ARGS+=-DKF_WIDGETS=ON
 widgets:
 	$(MAKE) release $(WIDGETS_ARGS)
 
