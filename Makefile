@@ -91,7 +91,7 @@ audio_debug:
 audio_tests:
 	$(MAKE) tests $(AUDIO_ARGS)
 
-audio_tests:
+run_audio_tests:
 	$(MAKE) run_tests $(AUDIO_ARGS)
 
 audio_tests_debug:
