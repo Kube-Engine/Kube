@@ -83,7 +83,7 @@ kube_setup_module(KF_ECS            ECS         KF_FLOW)
 kube_setup_module(KF_OBJECT         Object      KF_META)
 
 # Level 3: Implementation of general utiliies using L2 concepts
-kube_setup_module(KF_INTERPRETER    Interpreter KF_OBJECT)
+kube_setup_module(KF_INTERPRETER    Interpreter KF_OBJECT KF_FLOW)
 kube_setup_module(KF_VOXEL          Voxel       KF_GRAPHICS KF_ECS)
 kube_setup_module(KF_UI             UI          KF_GRAPHICS KF_ECS)
 
