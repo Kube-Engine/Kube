@@ -1,22 +1,11 @@
 Item {
-    //x: { parent.foo(x * 2, y * 2 + 3, z / 4); } property ZeraTor: foo();
-    //x: { 24; } y: { 42; }
+    property myProperty: foo();
 
-    property ZeraTor: foo();
-
-    on { x < 3; }: {
-        ((foo)());
+    function foo() {
+        return 42;
     }
 
-    on x < 3: foo();
+    x: myProperty * 2
 
-    //y: 32;
-
-
-    z: {
-        if (x < 3)
-            return 42;
-        else
-            return 43;
-    }
+    on x < 42: x = 42;
 }
