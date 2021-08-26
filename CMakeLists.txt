@@ -1,35 +1,39 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-# Search for a toolchain in environment if not explicitly set
-if(NOT DEFINED CMAKE_TOOLCHAIN_FILE AND DEFINED ENV{CMAKE_TOOLCHAIN_FILE})
-    message("CMAKE_TOOLCHAIN_FILE found in environment: " $ENV{CMAKE_TOOLCHAIN_FILE})
-    set(CMAKE_TOOLCHAIN_FILE $ENV{CMAKE_TOOLCHAIN_FILE})
-endif()
-
-project(Kube)
-
-if(NOT DEFINED KF_EXAMPLES)
-    set(KF_EXAMPLES FALSE)
-endif()
-
 get_filename_component(KubeRootDir ${CMAKE_CURRENT_LIST_FILE} PATH)
 
-# Add compiler specific flags
-if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    add_compile_options(
-        -Wall
-        -fdiagnostics-color=always
-    )
-elseif(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
-    add_compile_options(
-        /Zc:preprocessor
-    )
-endif()
+# Include toolchain options
+include(${KubeRootDir}/CompileOptions/ToolchainOptions.cmake)
 
+# Declare Kube project after toolchain options
+project(Kube)
+
+# Include compile options
+include(${KubeRootDir}/CompileOptions/CompileOptions.cmake)
+
+# Enable Werror
+option(KF_WERROR "Enable -Werror flag with GCC / Clang")
+
+# Enable examples
+option(KF_EXAMPLES "Build examples" OFF)
+
+# Enable unit testing
+option(KF_TESTS "Build tests" OFF)
+
+# Enable coverage over unit tests
+option(KF_COVERAGE "Enable coverage" OFF)
+
+# Enable benchmarking
+option(KF_BENCHMARKS "Build benchmarks" OFF)
+
+include_directories(${KubeRootDir})
+
+# Include external libraries
 include(${KubeRootDir}/External/External.cmake)
 
+# Include Kube framework
 include(${KubeRootDir}/Kube/Kube.cmake)
 
+# Build examples
 if(${KF_EXAMPLES})
     include(${KubeRootDir}/Examples/Examples.cmake)
 endif()
