@@ -3,8 +3,6 @@ project(Kube)
 
 get_filename_component(KubeSourcesDir ${CMAKE_CURRENT_LIST_FILE} PATH)
 
-include(${KubeSourcesDir}/CompileOptions.cmake)
-
 set(AtLeastOneManualTag FALSE)
 
 # Used to setup a kube module and its dependencies (VARGS)
