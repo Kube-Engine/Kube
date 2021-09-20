@@ -1,0 +1,37 @@
+Item {
+    //x: { parent.foo(x * 2, y * 2 + 3, z / 4); } property ZeraTor: foo();
+    //x: { 24; } y: { 42; }
+
+    property ZeraTor: foo();
+
+    on { x < 3; }: {
+        ((foo)());
+    }
+
+    on x < 3: foo();
+
+    //y: 32;
+
+
+    z: {
+        if (x < 3)
+            return 42;
+        else
+            return 43;
+    }
+
+    Widget {
+        width: 100;
+        height: 100;
+    }
+
+    Widget {
+        width: 100;
+        height: 100;
+    }
+
+    Widget {
+        width: 100;
+        height: 100;
+    }
+}

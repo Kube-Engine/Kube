@@ -5,7 +5,12 @@ Item {
         return 42;
     }
 
-    x: myProperty * 2
+    x: myProperty * 2;
 
     on x < 42: x = 42;
+}
+
+
+MouseArea {
+
 }
